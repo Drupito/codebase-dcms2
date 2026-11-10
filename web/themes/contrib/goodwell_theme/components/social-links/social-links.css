@@ -1,0 +1,99 @@
+/**
+ * @file social-links.css
+ * Social media icon links — circle or plain style, three sizes, three colour modes.
+ */
+
+/* ── Base ────────────────────────────────────────── */
+
+.social-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.social-links__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.social-links__link:hover {
+  transform: translateY(-2px);
+}
+
+.social-links__link svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ── Sizes ───────────────────────────────────────── */
+
+.social-links--sm .social-links__link { width: 2rem;   height: 2rem; }
+.social-links--md .social-links__link { width: 2.75rem; height: 2.75rem; }
+.social-links--lg .social-links__link { width: 3.5rem;  height: 3.5rem; }
+
+.social-links--sm .social-links__link svg { width: 1rem;    height: 1rem; }
+.social-links--md .social-links__link svg { width: 1.25rem; height: 1.25rem; }
+.social-links--lg .social-links__link svg { width: 1.625rem; height: 1.625rem; }
+
+/* ── Style: circle ───────────────────────────────── */
+
+.social-links--circle .social-links__link {
+  border-radius: 50%;
+}
+
+/* ── Style: plain (no background) ───────────────── */
+
+.social-links--plain .social-links__link {
+  width: auto;
+  height: auto;
+  background: transparent !important;
+}
+
+.social-links--plain .social-links__link svg {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+/* ── Colour: default ─────────────────────────────── */
+
+.social-links--default .social-links__link {
+  background: var(--muted);
+  color: var(--foreground);
+}
+
+.social-links--default .social-links__link:hover {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* ── Colour: light (for dark backgrounds) ────────── */
+
+.social-links--light .social-links__link {
+  background: var(--overlay-white-12);
+  color: var(--overlay-white-85);
+}
+
+.social-links--light .social-links__link:hover {
+  background: var(--overlay-white-20);
+  color: var(--color-white);
+}
+
+/* ── Colour: dark ────────────────────────────────── */
+
+.social-links--dark .social-links__link {
+  background: var(--overlay-black-08);
+  color: var(--foreground);
+}
+
+.social-links--dark .social-links__link:hover {
+  background: var(--foreground);
+  color: var(--color-white);
+}

@@ -1,0 +1,119 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: e2a4397a-b3f6-4cd5-a410-25d1c15284cd
+  default_langcode: en
+  depends:
+    34ff57f2-acd0-467f-b562-ef1003336dc9: file
+    77c7a3bc-5a94-4814-87fa-0d35022de356: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Blog Listing'
+  description:
+    -
+      value: 'Blog Listing'
+  components:
+    -
+      uuid: f70e00a7-57ab-4813-b043-9874b26696b7
+      component_id: sdc.hourglass.hero
+      inputs:
+        label: PERSPECTIVES
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 77c7a3bc-5a94-4814-87fa-0d35022de356
+            target_type: media
+        heading: 'Ideas Worth Thinking About.'
+        alignment: left
+        tall_image: false
+        description:
+          value: '<p>Perspectives on enterprise technology, operational efficiency, and the future of intelligent software, written by the people building it.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: 1a956937-cb93-4209-9358-47b0d3e6a019
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '64'
+    -
+      parent_uuid: 1a956937-cb93-4209-9358-47b0d3e6a019
+      slot: content
+      uuid: 47b76c64-719a-48e1-a03c-9c484b1b5156
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Read the latest articles on research and technology'
+        heading_tag: h5
+        heading_nowrap: false
+    -
+      uuid: 4d1f19c9-9f2a-4a97-9d11-cc4b43999567
+      component_id: sdc.hourglass.layout
+      inputs: {  }
+    -
+      parent_uuid: 4d1f19c9-9f2a-4a97-9d11-cc4b43999567
+      slot: content
+      uuid: ac336455-17eb-406e-8516-ee4a7e4adc37
+      component_id: sdc.hourglass.blog-listing
+      inputs: {  }
+    -
+      parent_uuid: 4d1f19c9-9f2a-4a97-9d11-cc4b43999567
+      slot: content
+      uuid: d3aba29d-a14b-4879-8b28-c9b35696208a
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: _none
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: d3aba29d-a14b-4879-8b28-c9b35696208a
+      slot: content
+      uuid: 5da72e54-ace8-4c6e-99fa-88075d95e334
+      component_id: sdc.hourglass.contact-cta
+      inputs:
+        cta_body:
+          value: '<p>Ready to optimize your operations? Our consultants work one-on-one with your team to audit your current stack and design a roadmap for the future.</p>'
+          format: canvas_html_block
+        section_title:
+          value: 'Your Needs, Our Expertise'
+          format: canvas_html_block
+        cta_button_url: /contact
+        cta_button_label: 'Request a Consult'
+    -
+      parent_uuid: 5da72e54-ace8-4c6e-99fa-88075d95e334
+      slot: form
+      uuid: 9f12a39d-7d54-4b26-bcb2-ab710646bd6d
+      component_id: block.webform_block
+      inputs:
+        lazy: false
+        label: Webform
+        redirect: false
+        webform_id: contact_cta
+        default_data: ''
+        label_display: '0'
+  path:
+    -
+      alias: /blogs
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

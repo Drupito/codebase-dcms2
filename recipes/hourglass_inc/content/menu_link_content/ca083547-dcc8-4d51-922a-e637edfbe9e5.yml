@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: ca083547-dcc8-4d51-922a-e637edfbe9e5
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    e2a4397a-b3f6-4cd5-a410-25d1c15284cd: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Blogs
+  menu_name:
+    -
+      value: footer-nav
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: e2a4397a-b3f6-4cd5-a410-25d1c15284cd
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -46
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

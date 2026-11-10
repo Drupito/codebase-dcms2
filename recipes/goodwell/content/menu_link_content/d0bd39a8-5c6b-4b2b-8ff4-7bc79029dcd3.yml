@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: d0bd39a8-5c6b-4b2b-8ff4-7bc79029dcd3
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    a7cfcd03-0b9e-44eb-8eec-92d2cfb72dde: menu_link_content
+    6cd61e13-6529-4221-a0b4-0a0fcad53af3: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Health Insurance'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 6cd61e13-6529-4221-a0b4-0a0fcad53af3
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:a7cfcd03-0b9e-44eb-8eec-92d2cfb72dde'
+  revision_translation_affected:
+    -
+      value: true

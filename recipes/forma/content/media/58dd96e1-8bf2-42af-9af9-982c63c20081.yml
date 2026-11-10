@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 58dd96e1-8bf2-42af-9af9-982c63c20081
+  bundle: image
+  default_langcode: en
+  depends:
+    530d9c04-6cdf-4d05-9119-c911c6658703: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: frankie-xjosJTK8u-c-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Futuristic white building with curved lines and large, geometric window panes.'
+      title: ''
+      width: 2048
+      height: 1536
+      entity: 530d9c04-6cdf-4d05-9119-c911c6658703

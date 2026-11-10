@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Blockquote
+group: Base
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: Quotation text
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>"Working with Forma Agency was a dream. They truly captured the essence of our brand and brought it to life!"</p>
+    cite_name:
+      type: string
+      title: Citation name
+      examples:
+        - "Thando"
+    cite_text:
+      type: string
+      title: Citation text
+      default: "CEO of Evano"
+      examples:
+        - "CEO of Evano"
+    cite_url:
+      type: string
+      title: Citation link
+      format: uri-reference

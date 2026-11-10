@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: e6cdfebd-8ae5-49de-b2fb-5ef03d7e0cfa
+  bundle: plans
+  default_langcode: en
+  depends:
+    050fc047-1c84-46ae-bc9d-75242d289e0a: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Industries Insurance'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /industries-insurance
+      langcode: en
+  field_body:
+    -
+      value: '<h2>About Industries Insurance</h2><p>Industries face a variety of risks every day, from property damage and equipment breakdowns to employee injuries and liability claims. Industries insurance helps businesses manage these risks by providing financial protection against unexpected events that could disrupt operations or result in significant losses.</p><p>At Goodwell Insurance, we offer industry-focused insurance solutions tailored to manufacturing facilities, warehouses, processing plants, logistics companies, and other commercial enterprises. Our coverage helps businesses operate with confidence while protecting valuable assets and investments.</p><h2>What''s Included</h2><ul><li data-list-item-id="e2e66e531fdab59368a1d1033f5aac508">Property and building coverage</li><li data-list-item-id="ea4665dfd291dc24f3cc0d0c0f28c8fe5">Machinery and equipment protection</li><li data-list-item-id="ed2f9a890402936d167813f263be7aa46">Fire and natural disaster coverage</li><li data-list-item-id="e4ebb170f8c0da9f11bcdaa72b946d145">Business interruption insurance</li><li data-list-item-id="e76d5dacbbb3c1d134c9b461c2c6bc056">Employee and workplace accident coverage</li><li data-list-item-id="e11fc06dca2dab652e3d615ce70ad5662">Public and product liability protection</li><li data-list-item-id="e6e23bf8212c40ab5fe15107a4ada447f">Inventory and stock coverage</li><li data-list-item-id="ece096545a401d54d75a5cbde91adfed7">Equipment breakdown protection</li><li data-list-item-id="ecb2e6e3bfb96d6d9d5bafb275035f881">Theft and vandalism coverage</li><li data-list-item-id="e367f7397a5cea75a2eb7c2740ea65dfa">Risk management support</li></ul><h2>How It Works</h2><ol><li data-list-item-id="e50c0e44bb96d9aeb82111b6a38a0df03">Assess your business operations and risk exposure.</li><li data-list-item-id="ee1b9b4cf1d97ef526f07b161844ce3e7">Choose coverage options that match your industry requirements.</li><li data-list-item-id="e5ff4086ca8f38b8fd8b46668a787afa4">Customize protection based on assets, employees, and operations.</li><li data-list-item-id="e1ef01c43446fa6a9f5544c62854b49d6">Activate your policy and receive ongoing support.</li><li data-list-item-id="e530d5b8bc3d37be79a23744a7b45167e">Access claims assistance whenever needed.</li></ol><h2>Why It Matters</h2><p>Industrial operations often involve significant investments in buildings, machinery, inventory, and workforce. A single incident such as a fire, equipment failure, or liability claim can result in substantial financial losses. Industries insurance helps protect your business from these risks and supports operational continuity.</p><h2>Why Choose Goodwell Insurance</h2><ul><li data-list-item-id="ecb63c300184c241d9fc8a4f03099e593">Tailored coverage for different industries</li><li data-list-item-id="e936e8110c7dbc82eeb612dbdf6c986da">Flexible policy options</li><li data-list-item-id="ee833b75301c239dc16f00f321f594f98">Comprehensive asset protection</li><li data-list-item-id="ebaf0c1567745ff5d2cbce3e75ef67031">Business continuity support</li><li data-list-item-id="e2a53777620826720ea7154da3a4089d7">Fast claims assistance</li><li data-list-item-id="e77c178bb26ba21cca44fcc6921f763f8">Experienced risk management guidance</li><li data-list-item-id="edfd78e458ca18a02a06e1ac9eb162015">Dedicated business insurance specialists</li></ul><h2>Industries We Cover</h2><ul><li data-list-item-id="e28619062f58b967c245f22120066fb85">Manufacturing</li><li data-list-item-id="efb990f2e59e4e85637e6a9e64e0cef64">Construction</li><li data-list-item-id="eb18b58a441e8ab694f4e917d6cfd51de">Warehousing and Distribution</li><li data-list-item-id="e45ace9baf44c9de1956b61da068bc251">Logistics and Transportation</li><li data-list-item-id="e05abc67c754126d8fd23c07278e2b06a">Food Processing</li><li data-list-item-id="ec8d39ba828d471af6379c4f52c23fb53">Engineering and Fabrication</li><li data-list-item-id="e6cacce31e1beba43240933bb18a378f8">Retail and Wholesale Operations</li><li data-list-item-id="e582fb7a9ca2922a2290f53d39bed7fac">Energy and Utilities</li><li data-list-item-id="ea8f48917195be159a87d7064d9e48ade">Technology and Industrial Services</li><li data-list-item-id="e1604348925016b66511c666fb16c00b7">Small and Large Enterprises</li></ul><h2>Get Started</h2><p>Protect your business with industry-specific insurance solutions from Goodwell Insurance. Explore coverage options designed to help your organization grow with confidence and security.</p>'
+      format: content_format
+      summary: 'Protect your business, assets, employees, and operations with insurance solutions designed for industrial and commercial risks.'
+  field_button:
+    -
+      uri: 'internal:/'
+      title: 'View Details'
+      options: {  }
+  field_featured_image:
+    -
+      entity: 050fc047-1c84-46ae-bc9d-75242d289e0a

@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Expertise Section — "Where Our Expertise is Applied".
+ * Static two-column card layout.
+ *
+ * Props:
+ * - heading:     Section heading text.
+ * - description: Intro paragraph below the heading.
+ * - cta_label:   Button label (default "Our Team").
+ * - cta_url:     Button href.
+ *
+ * Slots:
+ * - cards: Place two Expertise Card components here (one per column).
+ */
+#}
+{{ attach_library('hourglass/expertise-section') }}
+
+<section class="c-expertise-section {{ extra_classes|default('') }}">
+
+  {% if heading or description %}
+    <div class="c-expertise-section__header">
+      {% if heading %}
+        <h3 class="c-expertise-section__heading">{{ heading }}</h3>
+      {% endif %}
+      {% if description %}
+        <p class="c-expertise-section__description">{{ description }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="c-expertise-section__cards">
+    <div class="c-expertise-section__cards-indent" aria-hidden="true"></div>
+    {{ cards }}
+    <div class="c-expertise-section__cards-indent" aria-hidden="true"></div>
+  </div>
+
+  {% if cta_url %}
+    <div class="c-expertise-section__cta-wrap">
+      <a href="{{ cta_url }}" class="c-expertise-section__cta">
+        <span>{{ cta_label|default('Our Team') }}</span>
+        <svg class="c-expertise-section__cta-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  {% endif %}
+
+</section>

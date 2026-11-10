@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 3f975c92-c212-4b6f-b205-9d9564448947
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    470d32ad-9f27-4fd1-b1bc-704ad644c97b: file
+default:
+  entity_id:
+    -
+      uuid: 470d32ad-9f27-4fd1-b1bc-704ad644c97b
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://blog-images/blog-migration.jpg'
+  x:
+    -
+      value: 600
+  'y':
+    -
+      value: 337
+  revision_uid:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true

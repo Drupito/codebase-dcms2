@@ -1,0 +1,36 @@
+{% set bg     = background | default('dark') %}
+{% set shadow = shadow | default('none') %}
+
+{# Wrapper handles the green accent square behind the card #}
+<div class="dst-price-card-wrap">
+  <div class="dst-price-card dst-price-card--{{ bg }}{% if shadow != 'none' %} dst-price-card--shadow-{{ shadow }}{% endif %}">
+
+    {% if badge_text %}
+      <span class="dst-price-card__badge">{{ badge_text }}</span>
+    {% endif %}
+
+    {% if price_label %}
+      <p class="dst-price-card__label">{{ price_label }}</p>
+    {% endif %}
+
+    {% if price %}
+      <p class="dst-price-card__price">{{ price }}</p>
+    {% endif %}
+
+    {% if cta_label and cta_url %}
+      <a class="dst-price-card__cta" href="{{ cta_url }}">
+        {{ cta_label }}
+      </a>
+    {% endif %}
+
+    {% if secondary_label and secondary_url %}
+      <a class="dst-price-card__secondary" href="{{ secondary_url }}">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        {{ secondary_label }}
+      </a>
+    {% endif %}
+
+  </div>
+</div>

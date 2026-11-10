@@ -1,0 +1,22 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 2a482ab9-d527-4080-93ac-261cfb06407c
+  default_langcode: en
+default:
+  status:
+    -
+      value: false
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Untitled page'
+  path:
+    -
+      langcode: en
+      alias: null
+  revision_translation_affected:
+    -
+      value: true

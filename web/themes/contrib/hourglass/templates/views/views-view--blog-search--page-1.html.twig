@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Views page wrapper for the Blog Search view (/search).
+ *
+ * Variables:
+ * - rows:         The rendered list of rows.
+ * - pager:        Pager links.
+ * - search_query: Current search keyword (set by corporate_preprocess_views_view).
+ */
+#}
+{{ attach_library('hourglass/blog-search') }}
+
+<div class="c-blog-search">
+
+  <div class="c-blog-search__header">
+    {% if search_query %}
+      <p class="c-blog-search__label">Search results for</p>
+      <h1 class="c-blog-search__title">"{{ search_query }}"</h1>
+    {% else %}
+      <h1 class="c-blog-search__title">All Blog Posts</h1>
+    {% endif %}
+  </div>
+
+  {% if rows %}
+    <div class="c-blog-search__grid">
+      {{ rows }}
+    </div>
+  {% else %}
+    <div class="c-blog-search__empty">
+      {% if search_query %}
+        <p>No blog posts found for <strong>"{{ search_query }}"</strong>. Try a different keyword.</p>
+      {% else %}
+        <p>No blog posts found.</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if pager %}
+    <div class="c-blog-search__pager">
+      {{ pager }}
+    </div>
+  {% endif %}
+
+</div>

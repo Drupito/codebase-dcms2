@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: footer-nav
+label: 'Footer Navigation'
+description: 'Primary footer nav links.'
+locked: false

@@ -1,0 +1,56 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: f9da4557-6666-4977-bfaa-d8bfaece1a92
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Page Not Found'
+  description:
+    -
+      value: 'Page Not Found'
+  components:
+    -
+      uuid: 09654ff0-f806-4e0b-81db-3bc876e57ffe
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '40'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: 09654ff0-f806-4e0b-81db-3bc876e57ffe
+      slot: content
+      uuid: d2bd9a68-3983-4eb2-9db5-6f4e1ff38d55
+      component_id: sdc.hourglass.not-found
+      inputs:
+        message: "It seems the page you're looking for doesn't exist. Let's get you back on track."
+        home_url: /
+        back_label: 'Go Back'
+        error_code: '404'
+        home_label: 'Return to Homepage'
+  path:
+    -
+      alias: /page-not-found
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,12 @@
+{
+    "name": "drupal/canvas_translate",
+    "description": "World-class in-house translation of Drupal Canvas content, delivered as a Canvas page extension.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/canvas": "^1.11.0"
+    },
+    "require-dev": {
+        "drupal/ai": "^1.0"
+    }
+}

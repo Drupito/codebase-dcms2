@@ -1,0 +1,90 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Section
+group: Layout
+status: stable
+description: "Full-width page section wrapper. Controls background colour, vertical padding and max-width. Drop a Section Grid or other components inside."
+props:
+  type: object
+  properties:
+    background:
+      type: string
+      title: Background
+      enum:
+        - none
+        - light
+        - white
+        - primary
+        - teal
+        - accent
+        - gray-light
+        - black
+        - dark-gray
+      meta:enum:
+        none:       "None (transparent)"
+        light:      "Light (page background)"
+        white:      "White"
+        primary:    "Dark teal"
+        teal:       "Teal (medium)"
+        accent:     "Accent (bright green)"
+        gray-light: "Subtle teal (#EDF6F5)"
+        black:      "Dark teal (legacy)"
+        dark-gray:  "Dark teal (legacy)"
+      default: none
+    custom_bg_color:
+      type: string
+      title: Custom background colour
+      description: "Hex or CSS colour value. Only used when Background is set to Custom."
+      examples:
+        - "#f0f7f9"
+    padding:
+      type: string
+      title: Vertical padding
+      enum:
+        - none
+        - sm
+        - md
+        - lg
+        - xl
+      meta:enum:
+        none: None
+        sm:   Small (2rem)
+        md:   Medium (4rem)
+        lg:   Large (6rem)
+        xl:   XL (8rem)
+      default: lg
+    full_bleed:
+      type: boolean
+      title: Full bleed background
+      description: "When on, the background stretches edge-to-edge. Content still respects the max-width."
+      default: true
+    rounded:
+      type: string
+      title: Rounded corners
+      description: "Which corners to round. Use 'Top only' when the section flows into the next one."
+      enum:
+        - none
+        - all
+        - top
+        - bottom
+      meta:enum:
+        none:   "None"
+        all:    "All corners"
+        top:    "Top only"
+        bottom: "Bottom only"
+      default: none
+      examples:
+        - none
+    margin_top:
+      type: integer
+      title: Margin top
+      description: "Top margin as a multiple of 4px (e.g. 4 = 1rem). Use negative values to overlap the section above."
+      default: 0
+    margin_bottom:
+      type: integer
+      title: Margin bottom
+      description: "Bottom margin as a multiple of 4px (e.g. 4 = 1rem). Use negative values to pull the next section up."
+      default: 0
+slots:
+  content:
+    title: Content
+    description: "Place a Section Grid, Section Intro or any other component here."

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c3032d32-5ab1-444f-a3af-9bd9b7d6ffd5
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: couple_office.png
+  uri:
+    -
+      value: 'public://2026-06/couple_office.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 751450
+  status:
+    -
+      value: true

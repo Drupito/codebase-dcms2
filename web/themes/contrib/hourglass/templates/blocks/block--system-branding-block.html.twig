@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Site branding block.
+ *
+ * Logo image (custom or SVG fallback) + site name in one flex row.
+ * Slogan is positioned absolutely below the logo image.
+ */
+#}
+
+{% set logo_dark  = custom_logo_url       ?: '/themes/contrib/hourglass/images/logo-dark.svg' %}
+{% set logo_light = custom_logo_white_url ?: custom_logo_url ?: '/themes/contrib/hourglass/images/Logo.svg' %}
+
+<a href="{{ path('<front>') }}" class="site-header__logo" rel="home" aria-label="{{ (site_name ?: 'Home')|t }}">
+
+  <img
+    src="{{ logo_light }}"
+    alt="{{ site_name|t }}"
+    class="site-header__logo-img site-header__logo-img--white"
+    width="160"
+    height="40"
+    fetchpriority="high"
+  />
+  <img
+    src="{{ logo_dark }}"
+    alt="{{ site_name|t }}"
+    class="site-header__logo-img site-header__logo-img--black"
+    width="160"
+    height="40"
+    fetchpriority="high"
+  />
+
+  {% if site_name %}
+    <span class="site-header__logo-name">{{ site_name }}</span>
+  {% endif %}
+
+  {% if site_slogan %}
+    <span class="site-header__logo-slogan">{{ site_slogan }}</span>
+  {% endif %}
+
+</a>

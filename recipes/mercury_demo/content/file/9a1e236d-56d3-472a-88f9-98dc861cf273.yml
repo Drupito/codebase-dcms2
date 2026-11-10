@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 9a1e236d-56d3-472a-88f9-98dc861cf273
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: mixkit-aerial-view-of-waves-hitting-a-small-cliff-51455-hd-ready.mp4
+  uri:
+    -
+      value: 'public://2026-04/mixkit-aerial-view-of-waves-hitting-a-small-cliff-51455-hd-ready.mp4'
+  filemime:
+    -
+      value: video/mp4
+  filesize:
+    -
+      value: 10371779
+  status:
+    -
+      value: true

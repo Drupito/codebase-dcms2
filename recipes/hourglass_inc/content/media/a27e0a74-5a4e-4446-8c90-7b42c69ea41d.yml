@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: a27e0a74-5a4e-4446-8c90-7b42c69ea41d
+  bundle: image
+  default_langcode: en
+  depends:
+    514b9c70-60fb-498d-8d2c-e1da8eddb869: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: b4997a30c6b50fead9858dc3c4d773519711c2df.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: Compliance
+      title: ''
+      width: 100
+      height: 100
+      entity: 514b9c70-60fb-498d-8d2c-e1da8eddb869

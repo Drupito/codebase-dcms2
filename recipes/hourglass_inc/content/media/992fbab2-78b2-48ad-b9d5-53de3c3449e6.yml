@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 992fbab2-78b2-48ad-b9d5-53de3c3449e6
+  bundle: image
+  default_langcode: en
+  depends:
+    4c346b37-e76f-4700-9ec0-0a6d7da2b8bc: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Hero-(2).png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: Careers
+      title: ''
+      width: 1440
+      height: 600
+      entity: 4c346b37-e76f-4700-9ec0-0a6d7da2b8bc

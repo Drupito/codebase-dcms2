@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 45f3791c-8f32-4a67-84a2-c844f3bc12ad
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    08b9440e-5885-4a4a-8f61-dedbf423a095: file
+default:
+  entity_id:
+    -
+      uuid: 08b9440e-5885-4a4a-8f61-dedbf423a095
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/adam-winger-oh6FswCTTmY-unsplash.jpg'
+  x:
+    -
+      value: 960
+  'y':
+    -
+      value: 641
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

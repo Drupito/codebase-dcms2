@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4ba1963a-bb00-4783-adf4-6b9578af47e0
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: Frame-1261153004.png
+  uri:
+    -
+      value: 'public://2026-06/Frame-1261153004.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1923824
+  status:
+    -
+      value: true

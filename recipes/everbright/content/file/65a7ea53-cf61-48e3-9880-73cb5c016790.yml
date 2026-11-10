@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 65a7ea53-cf61-48e3-9880-73cb5c016790
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: eve-maier-P565kQ7vCaI-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-05/eve-maier-P565kQ7vCaI-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 403164
+  status:
+    -
+      value: true

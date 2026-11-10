@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: a50d4899-55b8-4740-9d54-9c1aba0174d0
+  bundle: image
+  default_langcode: en
+  depends:
+    2ef6eca6-b24e-4ef9-8894-227c514ad3b6: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 95a73b3616532edee43ae6a1f97a6a24912231f1.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'What Sets Nexus Apart'
+      title: ''
+      width: 1024
+      height: 1024
+      entity: 2ef6eca6-b24e-4ef9-8894-227c514ad3b6

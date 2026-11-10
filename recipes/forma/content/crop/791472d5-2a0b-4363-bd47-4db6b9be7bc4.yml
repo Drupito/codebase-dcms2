@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 791472d5-2a0b-4363-bd47-4db6b9be7bc4
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    530d9c04-6cdf-4d05-9119-c911c6658703: file
+default:
+  entity_id:
+    -
+      uuid: 530d9c04-6cdf-4d05-9119-c911c6658703
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/frankie-xjosJTK8u-c-unsplash.jpg'
+  x:
+    -
+      value: 1024
+  'y':
+    -
+      value: 768
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,45 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Article Feature
+group: Organisms
+status: stable
+description: 'Two-column featured article section. Two variants: blog (date + H4 + orange CTA) and feature (H2 + glass CTA). Image can be positioned left or right.'
+props:
+  type: object
+  properties:
+    variant:
+      type: string
+      title: 'Variant'
+      description: '"blog" = date + H4 heading + orange outline CTA. "feature" = H2 heading + glass CTA.'
+      default: blog
+      examples: [blog, feature]
+    image_position:
+      type: string
+      title: 'Image Position'
+      description: '"left" = image on left, text on right. "right" = text on left, image on right.'
+      default: left
+      examples: [left, right]
+    media:
+      $ref: 'json-schema-definitions://canvas.module/image'
+      title: 'Article Image'
+    heading:
+      type: string
+      title: 'Article Heading'
+      examples:
+        - 'Intelligent Resource Mapping'
+    description:
+      type: string
+      title: 'Article Description'
+      examples:
+        - 'Stop guessing bandwidth. Nexus uses real-time telemetry to track team availability.'
+    cta_text:
+      type: string
+      title: 'CTA Label'
+      default: 'Read Blog'
+    cta_url:
+      type: string
+      title: 'CTA URL'
+      examples:
+        - '/blog/article-slug'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

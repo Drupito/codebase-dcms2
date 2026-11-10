@@ -1,0 +1,41 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Footer
+group: Layout
+status: stable
+description: "Dark-background footer wrapper. Place a Section Grid inside for logo + nav columns."
+props:
+  type: object
+  properties:
+    tagline:
+      type: string
+      title: Tagline
+      description: "Short text shown below the logo."
+      default: "Empowering Your Peace of Mind"
+      examples:
+        - "Empowering Your Peace of Mind"
+    copyright:
+      type: string
+      title: Copyright text
+      default: "Copyright © 2026 Goodwell"
+      examples:
+        - "Copyright © 2026 Goodwell"
+    privacy_html:
+      type: string
+      title: Privacy & Terms HTML
+      description: "Raw HTML for the bottom bar — paste privacy policy link, terms of service link, cookie consent script, etc."
+      default: ""
+      examples:
+        - '<a href="/privacy-policy">Privacy &amp; Policy</a>'
+slots:
+  logo:
+    title: Logo
+    description: "Site logo image or branding block."
+  social:
+    title: Social icons
+    description: "Social media icon links."
+  columns:
+    title: Navigation columns
+    description: "Drop the Drupal menu block(s) here — they get styled as footer columns automatically."
+  legal:
+    title: Legal / Privacy
+    description: "Bottom-bar legal content. Drop any block here — HTML text, privacy links, cookie consent scripts, etc."

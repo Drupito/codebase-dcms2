@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: ad2991b6-b361-452c-90a3-203857bde3a9
+  bundle: image
+  default_langcode: en
+  depends:
+    1dcd6a95-9120-45a1-b937-50f7cc048b29: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Team Cheering'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Team Cheering'
+      title: ''
+      width: 800
+      height: 533
+      entity: 1dcd6a95-9120-45a1-b937-50f7cc048b29

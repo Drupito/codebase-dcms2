@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5c23f09f-941d-43e1-8e1f-3d1052d589d7
+  bundle: plans
+  default_langcode: en
+  depends:
+    cb622e01-aabf-478d-b020-d1c1cd0fb3dc: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Retirement
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /retirement
+      langcode: en
+  field_body:
+    -
+      value: '<h2>About Retirement Insurance</h2><p>Retirement insurance helps you prepare for the future by creating a steady financial foundation for your retirement years. As life expectancy increases and living costs continue to rise, having a dedicated retirement plan is essential to maintain your lifestyle and achieve your long-term financial goals.</p><p>At Goodwell Insurance, our retirement insurance solutions help you accumulate wealth over time while providing financial security when you stop working. Whether you''re just starting your career or approaching retirement, our plans are designed to help you build a brighter future.</p><h2>What''s Included</h2><ul><li data-list-item-id="eacb48894a65e8b29832cecfd7306d29a">Long-term retirement savings plans</li><li data-list-item-id="e51b9c828f3605c0e8e8eb0d24f0e13ed">Regular income options after retirement</li><li data-list-item-id="e58ab77cf6fc54fb761dfb386a522a96f">Flexible contribution choices</li><li data-list-item-id="ebd040e0dd7ea8ed38b21039fabc6c9d5">Wealth accumulation opportunities</li><li data-list-item-id="ec087f1e68aaef880472fec898c28288b">Tax-efficient planning benefits</li><li data-list-item-id="ef51388c35dea4da213e1e610c165b3b3">Financial protection for your future</li><li data-list-item-id="e1b4d47d333f000e3c7c2f88407656aea">Optional life coverage benefits</li><li data-list-item-id="e8e278621498ebdf3c60f61531cf84983">Retirement income planning support</li><li data-list-item-id="eb467f89f81c08887d5bd2fb1bb1ad46a">Flexible payout options</li><li data-list-item-id="ed22892c0ef3a98b1baf8aedfc99608b0">Professional guidance and support</li></ul><h2>How It Works</h2><ol><li data-list-item-id="e259bc26d4fc5fe15d0ddbd9381591206">Choose a retirement plan that matches your goals.</li><li data-list-item-id="e750bd2ce64d1c6bae798b9af95e31f54">Make regular contributions over your working years.</li><li data-list-item-id="ee97d711d0cfe05a2e2fd87693acb147f">Grow your retirement savings over time.</li><li data-list-item-id="e698a75a3df72ade2779a2c55b1614685">Select your preferred payout option at retirement.</li><li data-list-item-id="ea17aa81725baff2aa4422c1922c14b27">Enjoy a stable source of income during retirement.</li></ol><h2>Why It Matters</h2><p>Retirement should be a time to enjoy life, not worry about finances. A retirement insurance plan helps you prepare for future expenses, maintain your lifestyle, and achieve greater financial independence in your later years.</p><h2>Why Choose Goodwell Insurance</h2><ul><li data-list-item-id="e0753346391b910268300174106e9cd32">Flexible retirement solutions</li><li data-list-item-id="e86bb32980982fed2ee27cd258011f4c4">Long-term financial planning support</li><li data-list-item-id="e158962cad0d1fb139c1751bd6e22ffd0">Multiple payout options</li><li data-list-item-id="e7dfc5447b42d55c798be91f4096627c2">Easy policy management</li><li data-list-item-id="ec81d071142416e204bf79e6570d8b0de">Competitive returns and benefits</li><li data-list-item-id="efb4ffd19d12b3dccedbe6d614ebdfbe8">Trusted customer support</li><li data-list-item-id="e752f030b2ce6e342e758d85ca471f6d0">Plans designed for every stage of life</li></ul><h2>Get Started</h2><p>Start planning for tomorrow today with a retirement insurance plan from Goodwell Insurance and enjoy greater confidence about your future.</p>'
+      format: content_format
+      summary: 'Build a secure and comfortable future with retirement insurance designed to help you achieve financial independence after retirement.'
+  field_button:
+    -
+      uri: 'internal:/'
+      title: 'View Details'
+      options: {  }
+  field_featured_image:
+    -
+      entity: cb622e01-aabf-478d-b020-d1c1cd0fb3dc

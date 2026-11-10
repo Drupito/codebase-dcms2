@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: a367dfea-25f2-4165-974d-8e0e3c717b92
+  bundle: svg_image
+  default_langcode: en
+  depends:
+    ed48ccad-fdf5-49f4-b3c1-ac8b84fa6166: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: everbright-white.svg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_svg_image:
+    -
+      alt: 'Everbright logo'
+      title: ''
+      width: 0
+      height: 0
+      entity: ed48ccad-fdf5-49f4-b3c1-ac8b84fa6166

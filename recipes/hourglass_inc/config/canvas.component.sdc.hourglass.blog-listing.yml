@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: fa42207b56890f3d
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        section_title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Read the latest articles on research and technology'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  b721ead9879416d0:
+    settings:
+      prop_field_definitions:
+        section_title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Read the latest articles on research and technology'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+      slot_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        cards:
+          title: 'Blog Cards'
+          description: 'Place one Blog Card atom here and duplicate as needed.'
+label: 'Blog Listing'
+id: sdc.hourglass.blog-listing
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:blog-listing'

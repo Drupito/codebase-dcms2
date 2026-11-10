@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 72f642ec-6212-434e-9984-26ec3b4f11d8
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: sadiq-sonalkar-OcRG-NU8kbo-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-06/sadiq-sonalkar-OcRG-NU8kbo-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 475790
+  status:
+    -
+      value: true

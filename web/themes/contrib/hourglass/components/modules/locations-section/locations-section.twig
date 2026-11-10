@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Template for the Locations Section module.
+ *
+ * Props:
+ * - heading: Section heading (H3).
+ *
+ * Slots:
+ * - cards: Location Card atoms.
+ */
+#}
+{{ attach_library('hourglass/locations-section') }}
+
+<section class="c-locations-section {{ extra_classes|default('') }}">
+
+  {% if heading %}
+    <div class="c-locations-section__header">
+      <h2 class="c-locations-section__heading">{{ heading }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="c-locations-section__cards">
+    {{ cards }}
+  </div>
+
+</section>

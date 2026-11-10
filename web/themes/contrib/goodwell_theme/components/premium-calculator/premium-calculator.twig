@@ -1,0 +1,66 @@
+<div class="dst-calc" data-premium-calc>
+
+  {% if heading %}
+    <h3 class="dst-calc__heading">{{ heading }}</h3>
+  {% endif %}
+
+  {# ── Gender ────────────────────────────────────── #}
+  <div class="dst-calc__field">
+    <p class="dst-calc__label">I am <span class="dst-calc__required" aria-hidden="true">*</span></p>
+    <div class="dst-calc__radios">
+      <label class="dst-calc__radio-label">
+        <input class="dst-calc__radio-input" type="radio" name="dst_calc_gender" value="male" data-calc-gender checked>
+        <span>Male</span>
+      </label>
+      <label class="dst-calc__radio-label">
+        <input class="dst-calc__radio-input" type="radio" name="dst_calc_gender" value="female" data-calc-gender>
+        <span>Female</span>
+      </label>
+    </div>
+  </div>
+
+  {# ── Age ───────────────────────────────────────── #}
+  <div class="dst-calc__field">
+    <div class="dst-calc__label-row">
+      <p class="dst-calc__label">My Age <span class="dst-calc__required" aria-hidden="true">*</span></p>
+      <span class="dst-calc__slider-display"><span data-calc-age-display>25</span> years</span>
+    </div>
+    <input
+      class="dst-calc__slider"
+      type="range"
+      min="18" max="65" step="1" value="25"
+      data-calc-age
+      aria-label="My age in years"
+    >
+  </div>
+
+  {# ── Cover ─────────────────────────────────────── #}
+  <div class="dst-calc__field">
+    <div class="dst-calc__label-row">
+      <p class="dst-calc__label">I want cover of <span class="dst-calc__required" aria-hidden="true">*</span></p>
+      <span class="dst-calc__slider-display" data-calc-cover-display>$1M</span>
+    </div>
+    <input
+      class="dst-calc__slider"
+      type="range"
+      min="25" max="500" step="25" value="100"
+      data-calc-cover
+      aria-label="Cover amount in lakhs"
+    >
+  </div>
+
+  {# ── Live result ───────────────────────────────── #}
+  <div class="dst-calc__result">
+    <p class="dst-calc__result-label">Estimated monthly premium</p>
+    <p class="dst-calc__result-value" data-calc-result>$853</p>
+    <p class="dst-calc__result-note">Indicative only, subject to underwriting</p>
+  </div>
+
+  {# ── CTA ───────────────────────────────────────── #}
+  {% if cta_url %}
+    <a href="{{ cta_url }}" class="dst-calc__cta">
+      {{- cta_label | default('Get Full Quote') -}}
+    </a>
+  {% endif %}
+
+</div>

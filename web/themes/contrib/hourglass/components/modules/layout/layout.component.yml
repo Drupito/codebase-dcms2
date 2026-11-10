@@ -1,0 +1,164 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Layout
+group: Layout
+status: stable
+description: "Full-featured section wrapper — controls padding, margin, background, container width, and position. Mirrors MMI section-style utility system."
+props:
+  type: object
+  properties:
+    # ── Vertical padding ────────────────────────────────────────────────────
+    padding_top:
+      type: string
+      title: "Padding Top (px)"
+      examples:
+        [
+          "0",
+          "8",
+          "12",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "64",
+          "80",
+          "96",
+          "120",
+          "144",
+          "160",
+        ]
+
+    padding_bottom:
+      type: string
+      title: "Padding Bottom (px)"
+      examples:
+        [
+          "0",
+          "8",
+          "12",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "64",
+          "80",
+          "96",
+          "120",
+          "144",
+          "160",
+        ]
+
+    # ── Horizontal padding ──────────────────────────────────────────────────
+    padding_left:
+      type: string
+      title: "Padding Left (px)"
+      examples:
+        ["0", "8", "12", "16", "24", "32", "40", "48", "64", "80", "120", "148"]
+
+    padding_right:
+      type: string
+      title: "Padding Right (px)"
+      examples:
+        ["0", "8", "12", "16", "24", "32", "40", "48", "64", "80", "120", "148"]
+
+    # ── Margin ──────────────────────────────────────────────────────────────
+    margin_top:
+      type: string
+      title: "Margin Top (px)"
+      examples:
+        [
+          "0",
+          "8",
+          "12",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "64",
+          "80",
+          "96",
+          "120",
+          "144",
+        ]
+
+    margin_bottom:
+      type: string
+      title: "Margin Bottom (px)"
+      examples:
+        [
+          "0",
+          "8",
+          "12",
+          "16",
+          "24",
+          "32",
+          "40",
+          "48",
+          "64",
+          "80",
+          "96",
+          "120",
+          "144",
+        ]
+
+    # ── Background ──────────────────────────────────────────────────────────
+    background:
+      type: string
+      title: "Background"
+      examples:
+        [
+          "transparent",
+          "white",
+          "gray",
+          "dark",
+          "dark-gradient",
+          "gray-rounded",
+          "orange-rounded",
+          "white-translucent",
+        ]
+
+    # ── Container ───────────────────────────────────────────────────────────
+    container:
+      type: string
+      title: "Container"
+      description: "default = centred max-width box; full = no wrapper; carousel = left-aligned bleed."
+      examples: ["default", "full", "carousel"]
+
+    # ── Position ────────────────────────────────────────────────────────────
+    position:
+      type: string
+      title: "Position"
+      examples: ["static", "relative", "sticky"]
+
+    sticky_top:
+      type: string
+      title: "Sticky Top Offset"
+      examples: ["40", "80"]
+
+    # ── Misc ────────────────────────────────────────────────────────────────
+    rounded_top:
+      type: boolean
+      title: "Rounded Top Corners"
+      description: "Applies 32px border-radius to the top-left and top-right corners."
+      default: false
+
+    hidden:
+      type: boolean
+      title: "Hide Section"
+      default: false
+
+    anchor_id:
+      type: string
+      title: "Section ID"
+      description: "Sets the id attribute on this section — use this to target anchor navigation links (e.g. type 'about' and link to '#about')."
+
+    extra_classes:
+      type: string
+      title: "Extra CSS Classes"
+
+slots:
+  content:
+    title: Content
+    description: "Components placed inside this layout section."

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1d20ea07-f43e-4597-94c6-38652e700f19
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: girl_in_yellow.png
+  uri:
+    -
+      value: 'public://2026-06/girl_in_yellow.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 14323
+  status:
+    -
+      value: true

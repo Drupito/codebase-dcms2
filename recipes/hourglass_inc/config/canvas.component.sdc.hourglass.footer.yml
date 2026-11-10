@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: 8967fb01f47c566f
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        twitter_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        linkedin_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        youtube_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        nav_links:
+          title: 'Navigation Links'
+          description: 'Footer navigation menu block.'
+        legal_links:
+          title: 'Legal Links'
+          description: 'Footer legal menu block.'
+  ba396f8e3dda273b:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        nav_links:
+          title: 'Navigation Links'
+          description: 'Footer navigation menu block.'
+        legal_links:
+          title: 'Legal Links'
+          description: 'Footer legal menu block.'
+label: Footer
+id: sdc.hourglass.footer
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:footer'

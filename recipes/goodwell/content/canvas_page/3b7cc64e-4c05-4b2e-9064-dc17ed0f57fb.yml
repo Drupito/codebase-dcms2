@@ -1,0 +1,361 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 3b7cc64e-4c05-4b2e-9064-dc17ed0f57fb
+  default_langcode: en
+  depends:
+    fb701ba0-21b5-43d4-946b-87352a452c0c: file
+    d2520220-74f0-42ae-9687-7102a4dda6de: media
+    1d20ea07-f43e-4597-94c6-38652e700f19: file
+    3f176de1-4aa8-4cba-bc81-9d908e1f0f95: file
+    d7587f40-2398-4c6b-9e48-c2e9d9e203de: file
+    5935831b-9e6c-4edf-a68f-6028e2d0e0b6: media
+    c4119a9a-b82f-48b6-8be2-f897afe25d41: media
+    cedc939e-a075-47ad-b6a5-71356a4f5344: media
+    2ac40b91-7030-4f2b-acac-eb9a7f2c07e3: file
+    327f360a-7ea2-489a-af5a-5617e07a22c5: file
+    53445d17-807f-497a-a874-90520e4ab28c: file
+    78b332ff-5055-4214-ac96-6530bdc6e190: file
+    051f3800-935c-4e6d-8ef6-2a1ed06dc76d: media
+    2077454c-bb58-477d-84d7-5c0f83c65f5d: media
+    4d22e9f3-56f3-455f-b6c6-bfd6d61c8b4f: media
+    98b0ebd0-a065-45a7-a4a0-9e17697892eb: media
+    25d1817b-5f86-40b5-9544-b3e79bff7f4c: file
+    e9d80f15-7cdf-431e-abeb-12957a34e07b: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Insurance Plans'
+  components:
+    -
+      uuid: 3ff6ef7b-fdb3-4761-ab4d-cf34e651c196
+      component_id: sdc.goodwell_theme.hero-section
+      inputs:
+        heading:
+          value: 'INSURANCE PLANS'
+          format: canvas_html_inline
+        tagline: 'Fast, paperless, and trusted.'
+        background:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: d2520220-74f0-42ae-9687-7102a4dda6de
+            target_type: media
+        overlay_opacity: 50
+    -
+      uuid: 44582385-ef32-4765-9de4-56183ff8b8b2
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        rounded: none
+        background: gray-light
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 44582385-ef32-4765-9de4-56183ff8b8b2
+      slot: content
+      uuid: a35c21bf-7237-4639-8def-07a5321975d3
+      component_id: block.views_block.plans-block_1
+      inputs:
+        label: Plans
+        views_label: ''
+        label_display: '0'
+        items_per_page: 9
+    -
+      uuid: 597eaa3f-29d8-4dc3-a223-89b6be297c37
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        margin_bottom: 0
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 597eaa3f-29d8-4dc3-a223-89b6be297c37
+      slot: content
+      uuid: 665d65d3-6b1c-402c-8a71-22b901ffe5f1
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        alignment: center
+        grid_layout: 2_column_50_50
+        is_small_container: false
+    -
+      parent_uuid: 665d65d3-6b1c-402c-8a71-22b901ffe5f1
+      slot: slot_1
+      uuid: 0d65ade5-c052-4edd-8b6b-9eb76993f2c3
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        heading:
+          value: 'Trusted by thousands, proven by numbers'
+          format: canvas_html_inline
+        heading_level: 3
+    -
+      parent_uuid: 665d65d3-6b1c-402c-8a71-22b901ffe5f1
+      slot: slot_2
+      uuid: 0a2d0d89-37fe-4bb2-b5b0-e13e9e548126
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        grid_layout: 2_column_50_50
+        grid_row_gap: 4
+        is_small_container: false
+    -
+      parent_uuid: 0a2d0d89-37fe-4bb2-b5b0-e13e9e548126
+      slot: slot_1
+      uuid: 9d40d0d6-70f1-4ca7-b79a-39ab53e23f1f
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: 'Policies Issued'
+          format: canvas_html_inline
+        heading:
+          value: 20000+
+          format: canvas_html_inline
+        heading_level: 3
+    -
+      parent_uuid: 0a2d0d89-37fe-4bb2-b5b0-e13e9e548126
+      slot: slot_2
+      uuid: c609ac29-16ca-46fd-9bec-67430cb00f2f
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: 'Claim Approval Rate'
+          format: canvas_html_inline
+        heading:
+          value: 98%
+          format: canvas_html_inline
+        heading_level: 3
+    -
+      uuid: f2d957a5-77c3-465a-990d-3a727bb8acd3
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: f2d957a5-77c3-465a-990d-3a727bb8acd3
+      slot: content
+      uuid: 35b09bb2-9b29-4d92-b42c-ba5953e9daca
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 35b09bb2-9b29-4d92-b42c-ba5953e9daca
+      slot: content
+      uuid: fea6ebb1-737c-428a-9e7a-9447126fa4e0
+      component_id: sdc.goodwell_theme.testimonial-slider
+      inputs:
+        name_1: 'Emily R.'
+        name_2: 'Kate R'
+        name_3: 'Sandra K.'
+        role_1: 'Satisfied Client'
+        role_2: 'Satisfied Client'
+        role_3: 'Satisfied Client'
+        quote_1: 'Choosing Goodwell was the best decision for my family. The process was simple, and their support was outstanding during a tough time.'
+        quote_2: "I wasn't sure what to expect, but Goodwell exceeded every expectation. The paperwork was handled quickly, and someone was always available to answer my questions."
+        quote_3: 'Goodwell took an overwhelming situation and made it manageable. Their team was compassionate, patient, and incredibly thorough throughout the entire process.'
+        autoplay: false
+        avatar_1:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: c4119a9a-b82f-48b6-8be2-f897afe25d41
+            target_type: media
+        avatar_2:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: cedc939e-a075-47ad-b6a5-71356a4f5344
+            target_type: media
+        avatar_3:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 5935831b-9e6c-4edf-a68f-6028e2d0e0b6
+            target_type: media
+    -
+      uuid: a161e3e6-b13a-45f6-84c6-2d2b3e428745
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        margin_top: 0
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: a161e3e6-b13a-45f6-84c6-2d2b3e428745
+      slot: content
+      uuid: 7494df71-3cc9-4c49-9801-75f6c0f96758
+      component_id: sdc.goodwell_theme.brand-band
+      inputs:
+        gap: 6
+        brand_1:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 2077454c-bb58-477d-84d7-5c0f83c65f5d
+            target_type: media
+        brand_2:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 98b0ebd0-a065-45a7-a4a0-9e17697892eb
+            target_type: media
+        brand_3:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 051f3800-935c-4e6d-8ef6-2a1ed06dc76d
+            target_type: media
+        brand_4:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 4d22e9f3-56f3-455f-b6c6-bfd6d61c8b4f
+            target_type: media
+        brand_5:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 2077454c-bb58-477d-84d7-5c0f83c65f5d
+            target_type: media
+        marquee: false
+    -
+      uuid: 2dd6fbee-e270-45c0-8bd2-e9b2c27100f7
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        full_bleed: false
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 2dd6fbee-e270-45c0-8bd2-e9b2c27100f7
+      slot: content
+      uuid: 4bac376b-2539-4f21-bf64-6854c0b7b4e8
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        heading:
+          value: 'Frequently Asked Questions'
+          format: canvas_html_inline
+        tagline: 'OUR FAQS'
+        alignment: center
+        heading_level: 2
+    -
+      uuid: 42bc7e9a-9fe7-4235-be43-c8beb51edeac
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        full_bleed: false
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 42bc7e9a-9fe7-4235-be43-c8beb51edeac
+      slot: content
+      uuid: c0accf53-f25f-45b5-96e9-a07e1990b7bf
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'Life insurance is a financial protection plan that provides your loved ones with a lump-sum payment in case of your untimely death.'
+        question: 'What types of insurance do you offer?'
+        default_state: expanded
+    -
+      parent_uuid: 42bc7e9a-9fe7-4235-be43-c8beb51edeac
+      slot: content
+      uuid: 08d42b8b-3b55-4e8d-83f5-1992fc1de726
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'Life insurance is a financial protection plan that provides your loved ones with a lump-sum payment in case of your untimely death.'
+        question: 'Why do I need life insurance?'
+        default_state: collapsed
+    -
+      parent_uuid: 42bc7e9a-9fe7-4235-be43-c8beb51edeac
+      slot: content
+      uuid: ce12d191-d09a-45bd-ad28-97e3b3a3fd01
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'Life insurance is a financial protection plan that provides your loved ones with a lump-sum payment in case of your untimely death.'
+        question: 'How much life insurance coverage do I need?'
+        default_state: collapsed
+    -
+      parent_uuid: 42bc7e9a-9fe7-4235-be43-c8beb51edeac
+      slot: content
+      uuid: edaa7ffd-f4d8-463a-8229-ebdbd1f8e4e7
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'Life insurance is a financial protection plan that provides your loved ones with a lump-sum payment in case of your untimely death.'
+        question: 'How much does life insurance cost?'
+        default_state: collapsed
+    -
+      parent_uuid: 42bc7e9a-9fe7-4235-be43-c8beb51edeac
+      slot: content
+      uuid: 77f1b38c-a79d-48f4-920b-832cace824ac
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'Life insurance is a financial protection plan that provides your loved ones with a lump-sum payment in case of your untimely death.'
+        question: 'When does the coverage start?'
+        default_state: collapsed
+    -
+      uuid: 8368f315-2391-40b6-9636-1a52dc205924
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: top
+        background: teal
+        full_bleed: false
+        margin_top: 10
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 8368f315-2391-40b6-9636-1a52dc205924
+      slot: content
+      uuid: 4a3587a8-7753-4679-b255-120bc21bda82
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        alignment: center
+        grid_layout: 2_column_66_33
+        is_small_container: false
+    -
+      parent_uuid: 4a3587a8-7753-4679-b255-120bc21bda82
+      slot: slot_1
+      uuid: 3fb2ab46-d9ea-4ba8-a2a8-2dfd32a0961b
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: 'Get started with a personalized life insurance plan that meets your needs and protects your loved ones.'
+          format: canvas_html_inline
+        heading:
+          value: 'Secure your tomorrow, today'
+          format: canvas_html_inline
+        heading_level: 3
+    -
+      parent_uuid: 4a3587a8-7753-4679-b255-120bc21bda82
+      slot: slot_1
+      uuid: 8376034c-0786-4235-9034-07c9f5d17047
+      component_id: sdc.goodwell_theme.button
+      inputs:
+        href:
+          uri: 'internal:/get-a-quote'
+          options: {  }
+        size: md
+        label: 'Secure Your Family'
+        rounded: pill
+        variant: primary
+        disabled: false
+        full_width: false
+    -
+      parent_uuid: 4a3587a8-7753-4679-b255-120bc21bda82
+      slot: slot_2
+      uuid: 8f1f1280-2a4c-4809-aa89-d6fb17fa8aa5
+      component_id: sdc.goodwell_theme.image
+      inputs:
+        size: '1:1'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e9d80f15-7cdf-431e-abeb-12957a34e07b
+            target_type: media
+        shape: default
+        radius: extra-large
+        decoration: accent-br
+        border_radius: 0
+  path:
+    -
+      alias: /insurance-plans
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

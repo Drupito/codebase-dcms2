@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - forma_theme
+active_version: 661b2b993a7695d2
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        color:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: black
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: Divider
+id: sdc.forma_theme.divider
+provider: forma_theme
+source: sdc
+source_local_id: 'forma_theme:divider'

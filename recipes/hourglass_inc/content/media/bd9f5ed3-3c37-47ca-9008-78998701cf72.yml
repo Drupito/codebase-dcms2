@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: bd9f5ed3-3c37-47ca-9008-78998701cf72
+  bundle: image
+  default_langcode: en
+  depends:
+    7a24e187-36dd-4fbf-8760-1148a633ef98: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 3eb6e014c7360df364e62954e703159ef6ddd3fa.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Our Mission'
+      title: ''
+      width: 2752
+      height: 1536
+      entity: 7a24e187-36dd-4fbf-8760-1148a633ef98

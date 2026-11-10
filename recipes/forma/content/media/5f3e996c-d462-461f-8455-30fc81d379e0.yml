@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 5f3e996c-d462-461f-8455-30fc81d379e0
+  bundle: image
+  default_langcode: en
+  depends:
+    1e4ecc23-1add-40c6-9abe-dc18d16f551d: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Frame-1261153003.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Two modern looking towers connected by a bridge on the upper floors.'
+      title: ''
+      width: 1153
+      height: 1471
+      entity: 1e4ecc23-1add-40c6-9abe-dc18d16f551d

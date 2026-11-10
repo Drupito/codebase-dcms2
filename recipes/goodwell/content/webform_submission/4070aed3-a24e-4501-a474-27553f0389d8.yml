@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: webform_submission
+  uuid: 4070aed3-a24e-4501-a474-27553f0389d8
+  bundle: calculate_premium
+  default_langcode: en
+default:
+  serial:
+    -
+      value: 20
+  token:
+    -
+      value: 8TJ4u3c1QsmVUdCoWjN2X7rfqXV9eVvL59kWJesnMvQ
+  uri:
+    -
+      value: /home-insurance
+  completed:
+    -
+      value: 1781503664
+  in_draft:
+    -
+      value: false
+  remote_addr:
+    -
+      value: 172.19.0.2
+  uid:
+    -
+      target_id: 1
+  entity_type:
+    -
+      value: node
+  entity_id:
+    -
+      value: '21'
+  locked:
+    -
+      value: false
+  sticky:
+    -
+      value: false

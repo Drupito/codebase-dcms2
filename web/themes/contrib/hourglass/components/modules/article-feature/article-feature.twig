@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Template for the Article Feature module.
+ *
+ * Props:
+ * - variant:     "blog" (default) | "feature".
+ * - media:       Canvas image.
+ * - date:        Publication date string (blog variant only).
+ * - heading:     Article title.
+ * - description: Body text summary.
+ * - cta_text:    CTA button label.
+ * - cta_url:     CTA button URL.
+ */
+#}
+{{ attach_library('hourglass/article-feature') }}
+
+{% set _variant = variant|default('blog') %}
+{% set _img_pos = image_position|default('left') %}
+
+<div class="c-article-feature c-article-feature--{{ _variant }} c-article-feature--image-{{ _img_pos }} {{ extra_classes|default('') }}">
+  <div class="c-article-feature__inner">
+
+    {% if media %}
+      <div class="c-article-feature__image">
+        {% include 'hourglass:media' with { image: media, extra_classes: 'c-article-feature__media' } %}
+      </div>
+    {% endif %}
+
+    <div class="c-article-feature__body">
+
+      <div class="c-article-feature__text">
+        {% if heading %}
+          {% if _variant == 'feature' %}
+            <h2 class="c-article-feature__heading">{{ heading }}</h2>
+          {% else %}
+            <h2 class="c-article-feature__heading c-article-feature__heading--h4">{{ heading }}</h2>
+          {% endif %}
+        {% endif %}
+        {% if description %}
+          <p class="c-article-feature__description">{{ description }}</p>
+        {% endif %}
+      </div>
+
+      {% if cta_url %}
+        {% if _variant == 'feature' %}
+          <a href="{{ cta_url }}" class="c-article-feature__cta c-article-feature__cta--glass">
+            <span>{{ cta_text|default('Discover') }}</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        {% else %}
+          <a href="{{ cta_url }}" class="c-article-feature__cta">
+            <span>{{ cta_text|default('Read Blog') }}</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        {% endif %}
+      {% endif %}
+
+    </div>
+
+  </div>
+</div>

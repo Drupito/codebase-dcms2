@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 82b94e45-c3ab-4bdf-a1b8-bd52e08f2243
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: card-(4).png
+  uri:
+    -
+      value: 'public://2026-05/card-(4).png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 42030
+  status:
+    -
+      value: true

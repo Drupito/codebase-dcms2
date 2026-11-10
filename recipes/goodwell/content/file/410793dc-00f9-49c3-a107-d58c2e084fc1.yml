@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 410793dc-00f9-49c3-a107-d58c2e084fc1
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: man_signing.png
+  uri:
+    -
+      value: 'public://2026-06/man_signing.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 144370
+  status:
+    -
+      value: true

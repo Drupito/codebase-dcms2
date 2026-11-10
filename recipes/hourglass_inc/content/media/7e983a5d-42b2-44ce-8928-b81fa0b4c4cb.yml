@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 7e983a5d-42b2-44ce-8928-b81fa0b4c4cb
+  bundle: image
+  default_langcode: en
+  depends:
+    a97c2d93-9bb4-4350-8c8b-ba9631f40bc5: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Cybersecurity Solutions'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Cybersecurity Solutions'
+      title: ''
+      width: 1200
+      height: 801
+      entity: a97c2d93-9bb4-4350-8c8b-ba9631f40bc5

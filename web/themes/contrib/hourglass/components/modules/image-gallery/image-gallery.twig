@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Image Gallery module.
+ *
+ * Props: heading, extra_classes.
+ * Slots: items (Gallery Item cards).
+ *
+ * Gallery Items are rendered DIRECTLY in the visible sidebar strip.
+ * JS reads each item's [data-gallery-item-image] / [data-gallery-item-caption]
+ * and clones them into the main view as cross-fade slides.
+ */
+#}
+{{ attach_library('hourglass/image-gallery') }}
+
+<section class="c-image-gallery js-image-gallery {{ extra_classes|default('') }}" data-image-gallery>
+
+  {% if heading %}
+    <div class="c-image-gallery__header">
+      <h3 class="c-image-gallery__heading">{{ heading }}</h3>
+    </div>
+  {% endif %}
+
+  <div class="c-image-gallery__content">
+
+    {# Left: main image view (JS populated) + caption #}
+    <div class="c-image-gallery__main-col">
+      <div class="c-image-gallery__main-view js-gallery-main" aria-live="polite">
+        {# Slides injected by JS #}
+      </div>
+      <p class="c-image-gallery__caption js-gallery-caption"></p>
+    </div>
+
+    {# Right: thumbnail sidebar — items slot is VISIBLE here for Canvas #}
+    <div class="c-image-gallery__sidebar">
+      <div class="c-image-gallery__thumb-list js-gallery-thumbs">
+        {{ items }}
+      </div>
+      <div class="c-image-gallery__sidebar-fade" aria-hidden="true"></div>
+    </div>
+
+  </div>
+
+</section>

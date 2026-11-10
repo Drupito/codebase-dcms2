@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: d8c2663d-7932-484d-ac13-6053cfa68871
+  default_langcode: en
+default:
+  preferred_langcode:
+    -
+      value: en
+  preferred_admin_langcode:
+    -
+      value: en
+  name:
+    -
+      value: pravesh.p
+  pass:
+    -
+      value: $2y$10$jOKR6DFXHVBMnYak/3nNJuWgnMfIVq2QgxQg5EcuCYCCYH80ImO.K
+      pre_hashed: true
+      existing: null
+  timezone:
+    -
+      value: Australia/Brisbane
+  status:
+    -
+      value: true
+  access:
+    -
+      value: 1781273206
+  login:
+    -
+      value: 1781242948
+  roles:
+    -
+      target_id: content_editor
+    -
+      target_id: administrator
+  path:
+    -
+      langcode: en
+      alias: null

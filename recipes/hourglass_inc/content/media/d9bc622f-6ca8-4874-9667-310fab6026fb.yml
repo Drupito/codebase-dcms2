@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: d9bc622f-6ca8-4874-9667-310fab6026fb
+  bundle: image
+  default_langcode: en
+  depends:
+    99dd41bd-86d9-47f0-8c37-e89da665c4e5: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 8a2572cebb47027e9f95f1fc0516c56845522f72.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Global Headquarter'
+      title: ''
+      width: 772
+      height: 546
+      entity: 99dd41bd-86d9-47f0-8c37-e89da665c4e5

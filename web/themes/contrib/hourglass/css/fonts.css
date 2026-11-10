@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  --font-geist: "Geist", sans-serif;
+  --font-zalando: "Zalando Sans Expanded", sans-serif;
+  --font-family-body: var(--font-geist);
+  --font-family-display: var(--font-zalando);
+}

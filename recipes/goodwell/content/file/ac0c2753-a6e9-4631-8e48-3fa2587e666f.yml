@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ac0c2753-a6e9-4631-8e48-3fa2587e666f
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: policy_doc.jpg
+  uri:
+    -
+      value: 'public://2026-06/policy_doc.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 9605346
+  status:
+    -
+      value: true

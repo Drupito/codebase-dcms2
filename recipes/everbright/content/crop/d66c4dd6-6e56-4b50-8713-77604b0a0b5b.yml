@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: d66c4dd6-6e56-4b50-8713-77604b0a0b5b
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    47363581-f988-47de-8b2a-67477e4d48df: file
+default:
+  entity_id:
+    -
+      uuid: 47363581-f988-47de-8b2a-67477e4d48df
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/left-sidebar.jpg'
+  x:
+    -
+      value: 280
+  'y':
+    -
+      value: 373
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

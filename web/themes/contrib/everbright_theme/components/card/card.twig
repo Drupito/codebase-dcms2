@@ -1,0 +1,139 @@
+{% set has_media = media is defined and media.src is defined and media.src is not empty ? 'yes' : 'no' %}
+{% set has_link = url is defined and url is not empty ? 'yes' : 'no' %}
+{% set is_clickable = has_link %}
+
+{% set additional_classes = card_classes|default('') %}
+{% if additional_classes is iterable %}
+  {% set additional_classes = additional_classes|join(' ') %}
+{% endif %}
+
+{% set card_link_label = link_label|default('Read article'|t) %}
+{% set card_aria_label = heading_text ~ ' – ' ~ card_link_label %}
+
+{% set card_root =
+  html_cva(
+    base: ['flex flex-col bg-background text-foreground'],
+    variants: {
+      clickable: {
+        yes: 'group relative cursor-pointer',
+        no: ''
+      }
+    }
+  )
+%}
+
+{% set card_media =
+  html_cva(
+    base: ['aspect-square w-full shrink-0 overflow-hidden'],
+    variants: {
+      clickable: {
+        yes: 'pointer-events-none relative z-1',
+        no: ''
+      }
+    }
+  )
+%}
+
+{% set card_image =
+  html_cva(
+    base: ['h-full w-full object-cover'],
+    variants: {
+      clickable: {
+        yes: 'transition duration-300 ease-in-out group-hover:scale-110',
+        no: ''
+      }
+    }
+  )
+%}
+
+{% set card_content =
+  html_cva(
+    base: ['flex w-full flex-col items-center gap-5 px-6 py-8 text-center', 'max-w-none'],
+    variants: {
+      clickable: {
+        yes: 'pointer-events-none relative z-1',
+        no: ''
+      }
+    }
+  )
+%}
+
+<div
+  class="{{
+  card_root.apply(
+    {
+      clickable: is_clickable
+    },
+    additional_classes
+  )
+  }}"
+>
+  {% if has_link == 'yes' %}
+    <a href="{{ url }}" class="absolute inset-0 z-0" aria-label="{{ card_aria_label }}"><span class="sr-only">{{ card_link_label }}</span></a>
+  {% endif %}
+
+  {% if has_media == 'yes' %}
+    <div
+      class="{{
+      card_media.apply({
+        clickable: is_clickable
+      })
+      }}"
+    >
+      {% block media %}
+        {% include 'canvas:image' ignore missing with {
+          src: media.src,
+          alt: media.alt,
+          class: card_image.apply({
+            clickable: is_clickable
+          }),
+          width: media.width,
+          height: media.height,
+          sizes: '(min-width: 1024px) 800px, (min-width: 768px) 50vw, 100vw'
+        } only %}
+      {% endblock %}
+    </div>
+  {% endif %}
+
+  <div
+    class="{{
+    card_content.apply({
+      clickable: is_clickable
+    })
+    }}"
+  >
+    <h3 class="text-2xl leading-snug md:text-3xl">{{ heading_text }}</h3>
+
+    {% if text is not empty %}
+      <p class="mb-0 max-w-prose text-lg leading-relaxed font-normal">
+        {{ text }}
+      </p>
+    {% endif %}
+
+    {% if author is defined and author is not empty %}
+      <p class="mb-0 text-xs uppercase">
+        {{
+          'Author: @name'|t({
+            '@name': author
+          })
+        }}
+      </p>
+    {% endif %}
+
+    {% if has_link == 'yes' %}
+      <div class="flex w-full justify-center pt-1" aria-hidden="true">
+        {{
+          include(
+            'everbright_theme:button',
+            {
+              label: card_link_label,
+              variant: 'secondary',
+              btn_classes: ['w-full', 'max-w-[12rem]', 'justify-center', 'pointer-events-none']
+            },
+            with_context: false
+          )
+        }}
+      </div>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,331 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 2bd47416-d684-4d37-98ae-7b70dcc0b03c
+  default_langcode: en
+  depends:
+    32be5674-1716-4fdc-adda-597b9731ee0c: file
+    75114577-bd16-425f-b4b8-40bc6872afa4: media
+    384b1789-14d5-46b4-b12e-dabebb295fd9: file
+    9b357db2-731c-4709-bfb1-e04e0250db25: file
+    9d0a5938-d7b0-4cb9-bba5-2569c104bf69: file
+    697a12af-981a-445a-b841-3906d9b3dfd6: media
+    65c58e3c-dc0e-4868-823e-28688b9cc10b: media
+    06fe57b8-a671-4f1e-bb5e-23d2b5bdc634: media
+    cea8bd48-d333-4da9-8c89-07124fac0998: file
+    b4c3b7eb-93f8-4e55-9a8f-8c5720eec467: media
+    d034e75d-9980-4989-91b6-ff918733ad8e: file
+    21c1b205-269c-47d5-ba4b-a3aa19a32946: media
+    40ebd7cd-ebc6-4f12-aaf9-bb3ae334a7dc: file
+    e49f55bf-06d8-47b9-b93b-34d2a30c2c1a: media
+    82b94e45-c3ab-4bdf-a1b8-bd52e08f2243: file
+    7ab34a62-8b8f-4a10-a891-37abeb6d00e6: media
+    26c0ec40-5657-48b5-bdbe-2ca26173803e: file
+    038ddedc-91ff-4e97-a917-40be0c18979b: media
+    99dd41bd-86d9-47f0-8c37-e89da665c4e5: file
+    d9bc622f-6ca8-4874-9667-310fab6026fb: media
+    accf7508-2eb8-45e6-9809-8f01a6c34c06: file
+    9f05ce32-d018-4700-a02e-26092fa2e49e: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Contact Us'
+  description:
+    -
+      value: 'Contact Us'
+  components:
+    -
+      uuid: 7e6c6386-327b-4344-bcbd-dcf667ae69b6
+      component_id: sdc.hourglass.hero
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 75114577-bd16-425f-b4b8-40bc6872afa4
+            target_type: media
+        heading: "Let's Build Something Better."
+        alignment: left
+        description:
+          value: '<p>From complex integrations to full-scale digital overhauls, speak with a strategist who understands your business inside and out.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: 21d727a3-a9e8-463c-8a58-5a6c9739b2c0
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '80'
+    -
+      parent_uuid: 21d727a3-a9e8-463c-8a58-5a6c9739b2c0
+      slot: content
+      uuid: e320ba14-f031-46f5-9f2c-dbcf0abdc585
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: ''
+        description:
+          value: '<p>To empower organizations by removing the friction of manual processes through intelligent software. We believe technology should be invisible. If a system is designed correctly, it feels like an extension of your team’s natural workflow.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: 56fb73c8-5698-4e5e-807f-700efbf42095
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: 56fb73c8-5698-4e5e-807f-700efbf42095
+      slot: content
+      uuid: 4cdc374d-fd4b-42bf-914b-a64bd557bd21
+      component_id: sdc.hourglass.contact-cards
+      inputs: {  }
+    -
+      parent_uuid: 4cdc374d-fd4b-42bf-914b-a64bd557bd21
+      slot: cards
+      uuid: dfe0b19e-b485-4101-a0ce-943449f10835
+      component_id: sdc.hourglass.contact-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 697a12af-981a-445a-b841-3906d9b3dfd6
+            target_type: media
+        title: 'Call us directly'
+        icon_type: phone
+        contact_value: '+49 8821 8210'
+    -
+      parent_uuid: 4cdc374d-fd4b-42bf-914b-a64bd557bd21
+      slot: cards
+      uuid: a1f11083-c797-4320-96c4-c96267e3a990
+      component_id: sdc.hourglass.contact-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 65c58e3c-dc0e-4868-823e-28688b9cc10b
+            target_type: media
+        title: 'Email us directly'
+        icon_type: email
+        contact_value: 'info@hourglass.com'
+    -
+      parent_uuid: 4cdc374d-fd4b-42bf-914b-a64bd557bd21
+      slot: cards
+      uuid: 9d6282ac-7842-43e4-8654-637ceb376a32
+      component_id: sdc.hourglass.contact-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 06fe57b8-a671-4f1e-bb5e-23d2b5bdc634
+            target_type: media
+        title: 'Get a product demo'
+        cta_url: /contact
+        cta_text: 'Get a demo'
+    -
+      uuid: 8aed1cac-e4bd-458d-83ba-d366fb42ab01
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        padding_top: '120'
+        rounded_top: false
+    -
+      parent_uuid: 8aed1cac-e4bd-458d-83ba-d366fb42ab01
+      slot: content
+      uuid: 6cc05746-ae20-441a-a1eb-c5aef695c80e
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Contact our sales team'
+        heading_tag: h2
+    -
+      parent_uuid: 8aed1cac-e4bd-458d-83ba-d366fb42ab01
+      slot: content
+      uuid: 5b58debb-fd48-4849-a9c6-e90a80814d26
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: 5b58debb-fd48-4849-a9c6-e90a80814d26
+      slot: content
+      uuid: a61035ae-e8bf-446e-80ea-35e25436a147
+      component_id: sdc.hourglass.team-section
+      inputs: {  }
+    -
+      parent_uuid: a61035ae-e8bf-446e-80ea-35e25436a147
+      slot: cards
+      uuid: 1e03b0e1-ecff-46f4-b3c3-0434ceead7bb
+      component_id: sdc.hourglass.team-member-card
+      inputs:
+        name: 'Anya Petrova'
+        role: 'Software Engineer'
+        email: a.petrova@hourglass.com
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b4c3b7eb-93f8-4e55-9a8f-8c5720eec467
+            target_type: media
+        phone: '+49 8821 8210'
+        email_url: 'mailto:a.petrova@hourglass.com'
+        phone_url: 'tel:+498821821'
+    -
+      parent_uuid: a61035ae-e8bf-446e-80ea-35e25436a147
+      slot: cards
+      uuid: 9adeb3e2-3a47-47f1-9f71-7e1e1ea0be1b
+      component_id: sdc.hourglass.team-member-card
+      inputs:
+        name: 'Jian Li'
+        role: 'Product Manager'
+        email: j.li@hourglass.com
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 21c1b205-269c-47d5-ba4b-a3aa19a32946
+            target_type: media
+        phone: '+49 8821 8210'
+        email_url: 'mailto:j.li@hourglass.com'
+        phone_url: 'tel:+49 8821 8210'
+    -
+      parent_uuid: a61035ae-e8bf-446e-80ea-35e25436a147
+      slot: cards
+      uuid: e9c5e267-b420-466b-a4d4-b5b93c68a8cc
+      component_id: sdc.hourglass.team-member-card
+      inputs:
+        name: 'Marcus Webb'
+        role: 'Sales Director'
+        email: m.webb@hourglass.com
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e49f55bf-06d8-47b9-b93b-34d2a30c2c1a
+            target_type: media
+        phone: '+49 8821 8211'
+        email_url: 'mailto:m.webb@hourglass.com'
+        phone_url: 'tel:+49 8821 8211'
+    -
+      parent_uuid: a61035ae-e8bf-446e-80ea-35e25436a147
+      slot: cards
+      uuid: d1c8968a-7b35-476e-b8a4-3476d983f240
+      component_id: sdc.hourglass.team-member-card
+      inputs:
+        name: 'Sofia Dubois'
+        role: 'Data Analyst'
+        email: s.dubois@hourglass.com
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7ab34a62-8b8f-4a10-a891-37abeb6d00e6
+            target_type: media
+        phone: '+49 8821 8210'
+        email_url: 'mailto:s.dubois@hourglass.com'
+        phone_url: 'tel:+49 8821 8212'
+    -
+      uuid: e6776cdc-b0c0-4f13-9c42-736749d3db98
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: default
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: e6776cdc-b0c0-4f13-9c42-736749d3db98
+      slot: content
+      uuid: 37ddd108-063e-4347-af01-75ac7fca554f
+      component_id: sdc.hourglass.contact-cta
+      inputs:
+        cta_body:
+          value: '<p>Ready to optimize your operations? Our consultants work one-on-one with your team to audit your current stack and design a roadmap for the future.</p>'
+          format: canvas_html_block
+        section_title:
+          value: 'Your Needs, Our Expertise'
+          format: canvas_html_block
+        cta_button_url: /contact
+        cta_button_label: 'Request a Consult'
+    -
+      parent_uuid: 37ddd108-063e-4347-af01-75ac7fca554f
+      slot: form
+      uuid: 8b1b5507-e60d-4465-b972-3a66873552ad
+      component_id: block.webform_block
+      inputs:
+        lazy: false
+        label: Webform
+        redirect: false
+        webform_id: contact_cta
+        default_data: ''
+        label_display: '0'
+    -
+      uuid: 0dd03a41-bfc5-421b-be5c-46cf2c4bf063
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: 0dd03a41-bfc5-421b-be5c-46cf2c4bf063
+      slot: content
+      uuid: 5e07d03c-4af7-4550-8c12-d8590dd31881
+      component_id: sdc.hourglass.locations-section
+      inputs:
+        heading: 'Connect to One of Our Locations'
+    -
+      parent_uuid: 5e07d03c-4af7-4550-8c12-d8590dd31881
+      slot: cards
+      uuid: 27f28d49-b08f-4900-a39e-9c19f5bc3bec
+      component_id: sdc.hourglass.location-card
+      inputs:
+        city: 'New York, USA'
+        email: us@hourglass.com
+        label: 'US Office'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 038ddedc-91ff-4e97-a917-40be0c18979b
+            target_type: media
+        phone: '+1 212 736 4200'
+        address: 'Breslauer Strasse 2 | 85386 Eching |'
+    -
+      parent_uuid: 5e07d03c-4af7-4550-8c12-d8590dd31881
+      slot: cards
+      uuid: 0572c3fd-27c3-4ad0-8ae6-4ec27ad7b794
+      component_id: sdc.hourglass.location-card
+      inputs:
+        city: 'Eching, Germany'
+        email: global@hourglass.com
+        label: 'Global Headquarter'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: d9bc622f-6ca8-4874-9667-310fab6026fb
+            target_type: media
+        phone: '+49 8821 8210'
+        address: 'Breslauer Strasse 2 | 85386 Eching |'
+    -
+      parent_uuid: 5e07d03c-4af7-4550-8c12-d8590dd31881
+      slot: cards
+      uuid: 8f41af34-cf54-4a3e-a217-cc636314bff7
+      component_id: sdc.hourglass.location-card
+      inputs:
+        city: 'London, UK'
+        email: global@hourglass.com
+        label: 'UK Office'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 9f05ce32-d018-4700-a02e-26092fa2e49e
+            target_type: media
+        phone: '+44 20 7946 0800'
+        address: '1 Canada Square | Canary Wharf | London'
+  path:
+    -
+      alias: /contact
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

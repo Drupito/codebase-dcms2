@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 98337317-d527-4dd9-9b7d-ca41f425d813
+  bundle: image
+  default_langcode: en
+  depends:
+    f687fbe7-1fb7-4a5e-8593-caa9d2d23d57: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: amir-hosseini-3cl6impBd_8-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'The upper portion of a modern-looking house with timber screening along the outside, with blue sky in the background.'
+      title: ''
+      width: 1920
+      height: 1280
+      entity: f687fbe7-1fb7-4a5e-8593-caa9d2d23d57

@@ -1,0 +1,158 @@
+{% set classes = ['pager', 'my-4', 'font-medium'] %}
+
+{% set list_classes = ['pager__items', 'js-pager__items', 'flex list-none items-center justify-center gap-1'] %}
+
+{% set ellipsis_container_classes = ['flex items-center justify-center px-2 py-1.5'] %}
+
+{% set pager_icon_link_classes = 'pager__icon flex shrink-0 items-center justify-center' %}
+{% set pager_icon_ellipsis_classes = 'pager__icon flex shrink-0 items-center justify-center' %}
+
+{% set pager_nav_link_classes = 'flex items-center justify-center gap-1' %}
+
+{% set pager_page =
+  html_cva(
+    base: [
+      'flex h-10 min-h-10 w-10 min-w-10 shrink-0 items-center justify-center',
+      'text-sm font-semibold tabular-nums md:text-base',
+      'transition-colors duration-300'
+    ],
+    variants: {
+      isCurrent: {
+        yes: 'bg-primary font-bold text-primary-foreground',
+        no: 'hover:bg-muted'
+      }
+    }
+  )
+%}
+
+{% if items %}
+  <nav class="{{ classes|join(' ') }}" role="navigation" aria-labelledby="{{ heading_id }}">
+    {% if pagination_heading_level == 'h1' %}
+      <h1 id="{{ heading_id }}" class="sr-only">{{ 'Pagination'|t }}</h1>
+    {% elseif pagination_heading_level == 'h2' %}
+      <h2 id="{{ heading_id }}" class="sr-only">{{ 'Pagination'|t }}</h2>
+    {% elseif pagination_heading_level == 'h3' %}
+      <h3 id="{{ heading_id }}" class="sr-only">{{ 'Pagination'|t }}</h3>
+    {% elseif pagination_heading_level == 'h4' %}
+      <h4 id="{{ heading_id }}" class="sr-only">{{ 'Pagination'|t }}</h4>
+    {% elseif pagination_heading_level == 'h5' %}
+      <h5 id="{{ heading_id }}" class="sr-only">{{ 'Pagination'|t }}</h5>
+    {% elseif pagination_heading_level == 'h6' %}
+      <h6 id="{{ heading_id }}" class="sr-only">{{ 'Pagination'|t }}</h6>
+    {% else %}
+      <h2 id="{{ heading_id }}" class="sr-only">{{ 'Pagination'|t }}</h2>
+    {% endif %}
+    <ul class="{{ list_classes|join(' ') }}">
+      {% if items.previous %}
+        <li class="pager__item pager__item--previous">
+          <a
+            href="{{ items.previous.href }}"
+            title="{{ 'Go to previous page'|t }}"
+            rel="prev"
+            {{ items.previous.attributes.addClass(pager_nav_link_classes)|without('href', 'title', 'rel') }}
+          >
+            <span class="visually-hidden">{{ 'Previous page'|t }}</span>
+            <span class="{{ pager_icon_link_classes }}" aria-hidden="true">
+              {{
+                include(
+                  '@everbright_theme/components/icon/icon.twig',
+                  {
+                    icon: 'arrow-left',
+                    icon_size: 'small'
+                  },
+                  with_context: false
+                )
+              }}
+            </span>
+          </a>
+        </li>
+      {% endif %}
+      {% if ellipses.previous %}
+        <li class="pager__item pager__item--ellipsis" role="presentation">
+          <span class="{{ ellipsis_container_classes|join(' ') }}">
+            <span class="{{ pager_icon_ellipsis_classes }}" aria-hidden="true">
+              {{
+                include(
+                  '@everbright_theme/components/icon/icon.twig',
+                  {
+                    icon: 'dots-three',
+                    icon_size: 'small'
+                  },
+                  with_context: false
+                )
+              }}
+            </span>
+          </span>
+        </li>
+      {% endif %}
+      {% for key, item in items.pages %}
+        {% set is_current_page = current == key ? 'yes' : 'no' %}
+        <li class="pager__item{{ is_current_page == 'yes' ? ' is-active' : '' }}">
+          {% if is_current_page == 'yes' %}
+            {% set title = 'Current page'|t %}
+          {% else %}
+            {% set title =
+              'Go to page @key'|t({
+                '@key': key
+              })
+            %}
+          {% endif %}
+          <a
+            href="{{ item.href }}"
+            title="{{ title }}"
+            {{ item.attributes.addClass(
+              pager_page.apply({
+                isCurrent: is_current_page
+              })
+            )|without('href', 'title') }}
+          >
+            <span class="visually-hidden">{{ 'Page'|t }}</span>
+            <span class="pager__list-item" aria-hidden="true">{{- key -}}</span>
+          </a>
+        </li>
+      {% endfor %}
+      {% if ellipses.next %}
+        <li class="pager__item pager__item--ellipsis" role="presentation">
+          <span class="{{ ellipsis_container_classes|join(' ') }}">
+            <span class="{{ pager_icon_ellipsis_classes }}" aria-hidden="true">
+              {{
+                include(
+                  '@everbright_theme/components/icon/icon.twig',
+                  {
+                    icon: 'dots-three',
+                    icon_size: 'small'
+                  },
+                  with_context: false
+                )
+              }}
+            </span>
+          </span>
+        </li>
+      {% endif %}
+      {% if items.next %}
+        <li class="pager__item pager__item--next">
+          <a
+            href="{{ items.next.href }}"
+            title="{{ 'Go to next page'|t }}"
+            rel="next"
+            {{ items.next.attributes.addClass(pager_nav_link_classes)|without('href', 'title', 'rel') }}
+          >
+            <span class="visually-hidden">{{ 'Next page'|t }}</span>
+            <span class="{{ pager_icon_link_classes }}" aria-hidden="true">
+              {{
+                include(
+                  '@everbright_theme/components/icon/icon.twig',
+                  {
+                    icon: 'arrow-right',
+                    icon_size: 'small'
+                  },
+                  with_context: false
+                )
+              }}
+            </span>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}

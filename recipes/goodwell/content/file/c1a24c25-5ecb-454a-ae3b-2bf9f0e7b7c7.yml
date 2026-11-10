@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c1a24c25-5ecb-454a-ae3b-2bf9f0e7b7c7
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: container_1.png
+  uri:
+    -
+      value: 'public://2026-06/container_1.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 874
+  status:
+    -
+      value: true

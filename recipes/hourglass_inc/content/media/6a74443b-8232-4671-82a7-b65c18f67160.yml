@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6a74443b-8232-4671-82a7-b65c18f67160
+  bundle: image
+  default_langcode: en
+  depends:
+    c92358f2-55cd-4eee-9bd3-5a7c62b5a7bc: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Green data centre with energy-efficient server racks'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Green data centre with energy-efficient server racks'
+      title: ''
+      width: 1200
+      height: 800
+      entity: c92358f2-55cd-4eee-9bd3-5a7c62b5a7bc

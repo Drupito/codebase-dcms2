@@ -1,0 +1,1108 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: ff94a20d-4eee-42f8-9ec7-48ccf940d5ac
+  default_langcode: en
+  depends:
+    fba61a0e-04f3-44bb-9689-54ab66859be1: file
+    feb767d2-704e-4c89-9a77-e7cc58638673: media
+    530d9c04-6cdf-4d05-9119-c911c6658703: file
+    58dd96e1-8bf2-42af-9af9-982c63c20081: media
+    2cddd3c9-09c9-4fb9-9084-71eb05326956: file
+    d2acfaca-41d9-440e-89c0-2573278c5803: media
+    2de48a8b-ebf3-43e6-8b3e-07693c9ee366: file
+    8c8241d0-26f4-49e5-ab39-4cd27d883618: media
+    4ba1963a-bb00-4783-adf4-6b9578af47e0: file
+    64ed628e-9e4e-447a-a23b-e1a8cf008230: media
+    d572ca25-64c0-4478-9285-6167fbde76a9: file
+    49491f86-37ee-42b9-b24a-633f4b55234a: media
+    e6e6648b-a668-46d9-b85c-5cc4fc0118ee: file
+    aca3e907-3a19-4870-9452-e4b84ffcff2f: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Home
+  description:
+    -
+      value: 'forma agency is a collective of designers, strategists, and technologists who work with organizations of all sizes to build meaningful brands and digital experiences.'
+  components:
+    -
+      uuid: e196c796-8b82-487f-a47e-edf34d962d01
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: small
+        margin_block_end: default
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: false
+        section_footer: true
+    -
+      parent_uuid: e196c796-8b82-487f-a47e-edf34d962d01
+      slot: main_slot
+      uuid: a587216a-1182-4399-a165-f9c93e012b6b
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: a587216a-1182-4399-a165-f9c93e012b6b
+      slot: group_slot
+      uuid: cba606d2-7214-491d-a562-ec99fa4d68af
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: Architecture
+        level: 1
+        text_size: heading-responsive-8xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: a587216a-1182-4399-a165-f9c93e012b6b
+      slot: group_slot
+      uuid: 06e5f8c5-fa1b-45f9-af4d-8cf2943d3739
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'that inspires change'
+        level: 1
+        text_size: heading-responsive-8xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: e196c796-8b82-487f-a47e-edf34d962d01
+      slot: main_slot
+      uuid: d0f5e799-4723-42bb-94c1-ccd8cd1ca87f
+      component_id: sdc.forma_theme.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: feb767d2-704e-4c89-9a77-e7cc58638673
+            target_type: media
+        size: '4:1'
+    -
+      uuid: 2a525208-46dc-4cc4-9a86-d22519eec989
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: default
+        margin_block_end: default
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 2a525208-46dc-4cc4-9a86-d22519eec989
+      slot: main_slot
+      uuid: bb2a04be-93b2-4b0c-82b9-63d590c128f9
+      component_id: sdc.forma_theme.grid
+      inputs:
+        width: 100%
+        columns: '2 columns 67%-33%'
+        mobile_columns: '1'
+        align: left
+    -
+      parent_uuid: bb2a04be-93b2-4b0c-82b9-63d590c128f9
+      slot: main_slot
+      uuid: 0c6b5a0e-cfe7-4904-9e57-0eb9e5fb2d17
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'We create architecture that is simple, functional, and built to last for generations.'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: bb2a04be-93b2-4b0c-82b9-63d590c128f9
+      slot: main_slot
+      uuid: 8affd204-bc7f-4971-8e1c-8df89349e4af
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>We believe that good architecture is about more than just buildings; it is about creating spaces where people truly feel at home. Our approach focuses on understanding your unique lifestyle, needs, and goals. By combining your vision with our design expertise, we create practical and beautiful spaces tailored specifically to you.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 2a525208-46dc-4cc4-9a86-d22519eec989
+      slot: main_slot
+      uuid: 5c6c65fc-2671-49f2-b7d8-4596961f3d88
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: lg
+        items_align: start
+        flex_align: center
+        padding: md
+        background: primary
+    -
+      parent_uuid: 5c6c65fc-2671-49f2-b7d8-4596961f3d88
+      slot: group_slot
+      uuid: d78626ad-6f57-467b-9383-52dcf74475d2
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Our Values'
+        text_size: heading-responsive-xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 5c6c65fc-2671-49f2-b7d8-4596961f3d88
+      slot: group_slot
+      uuid: 3d415411-05a3-4533-85f9-32463c6004ad
+      component_id: sdc.forma_theme.grid
+      inputs:
+        width: 80%
+        columns: '1 column'
+        mobile_columns: '1'
+        align: left
+    -
+      parent_uuid: 3d415411-05a3-4533-85f9-32463c6004ad
+      slot: main_slot
+      uuid: 48bb2305-f3b0-4f7d-8945-ccc86604d33f
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Architecture should look great, but it must work perfectly for the people who use it every day.'
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 5c6c65fc-2671-49f2-b7d8-4596961f3d88
+      slot: group_slot
+      uuid: 10f2ca84-2055-48df-8644-13a624eb4511
+      component_id: sdc.forma_theme.grid
+      inputs:
+        width: 100%
+        columns: '4 columns'
+        mobile_columns: '1'
+        align: center
+    -
+      parent_uuid: 10f2ca84-2055-48df-8644-13a624eb4511
+      slot: main_slot
+      uuid: 6375ef86-2fd5-4f9e-a37b-51a02ba1a6aa
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: lg
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: 6375ef86-2fd5-4f9e-a37b-51a02ba1a6aa
+      slot: group_slot
+      uuid: 3446c303-bb83-488a-ac7f-b6f84a1ef057
+      component_id: sdc.forma_theme.divider
+      inputs:
+        color: black
+    -
+      parent_uuid: 6375ef86-2fd5-4f9e-a37b-51a02ba1a6aa
+      slot: group_slot
+      uuid: b9b9be72-054e-4ecd-afab-6afce859fc4c
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: Tenure
+        level: 3
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 6375ef86-2fd5-4f9e-a37b-51a02ba1a6aa
+      slot: group_slot
+      uuid: 7814ffd1-bf79-4490-aa58-f830a6ecc3eb
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: "<p>12+ Years of radical \Ldesign execution.</p>"
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 10f2ca84-2055-48df-8644-13a624eb4511
+      slot: main_slot
+      uuid: 3c49e61b-7c64-45cc-85ed-fd75dabeb178
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: lg
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: 3c49e61b-7c64-45cc-85ed-fd75dabeb178
+      slot: group_slot
+      uuid: ea2d3acb-cac5-41a2-8820-617fee8639fc
+      component_id: sdc.forma_theme.divider
+      inputs:
+        color: black
+    -
+      parent_uuid: 3c49e61b-7c64-45cc-85ed-fd75dabeb178
+      slot: group_slot
+      uuid: 6108e29f-4fb0-4baf-9a5a-b9819bcc9e8a
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: Impact
+        level: 3
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 3c49e61b-7c64-45cc-85ed-fd75dabeb178
+      slot: group_slot
+      uuid: 80034371-acea-482f-b2bb-36afa35243ab
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>Global reach, specialized<br>local resonance.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 10f2ca84-2055-48df-8644-13a624eb4511
+      slot: main_slot
+      uuid: 6a2bc966-6b7c-4c1d-a8b7-d9a8bb0386a0
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: lg
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: 6a2bc966-6b7c-4c1d-a8b7-d9a8bb0386a0
+      slot: group_slot
+      uuid: 0a60ca52-fe9e-45be-8799-2ad6d491c0f8
+      component_id: sdc.forma_theme.divider
+      inputs:
+        color: black
+    -
+      parent_uuid: 6a2bc966-6b7c-4c1d-a8b7-d9a8bb0386a0
+      slot: group_slot
+      uuid: 9ab3f190-9734-4701-b2c1-e59859aa9633
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: Core
+        level: 3
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 6a2bc966-6b7c-4c1d-a8b7-d9a8bb0386a0
+      slot: group_slot
+      uuid: 8b322a92-3761-48a6-9c5c-f65fed20d078
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>Intentional asymmetry.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 10f2ca84-2055-48df-8644-13a624eb4511
+      slot: main_slot
+      uuid: e5e9421a-8df4-42f0-b98d-83f7224d9d6c
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: lg
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: e5e9421a-8df4-42f0-b98d-83f7224d9d6c
+      slot: group_slot
+      uuid: 4c7fb575-0e6e-4ce4-a1c9-276c88876e4c
+      component_id: sdc.forma_theme.divider
+      inputs:
+        color: black
+    -
+      parent_uuid: e5e9421a-8df4-42f0-b98d-83f7224d9d6c
+      slot: group_slot
+      uuid: 7935a090-b4c5-47a0-b92f-07506dafd05d
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: Perspective
+        level: 3
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: e5e9421a-8df4-42f0-b98d-83f7224d9d6c
+      slot: group_slot
+      uuid: 2f38d1c6-404d-440b-94aa-8329a1120822
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>More than just buildings.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: d0a160ce-fb12-4aca-990a-303161e2077f
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: default
+        margin_block_end: default
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: d0a160ce-fb12-4aca-990a-303161e2077f
+      slot: main_slot
+      uuid: 6f83ee1b-9022-4791-8a55-163002f0f45c
+      component_id: sdc.forma_theme.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+        align: left
+    -
+      parent_uuid: 6f83ee1b-9022-4791-8a55-163002f0f45c
+      slot: main_slot
+      uuid: ecff61e8-7de2-43c0-af0e-a6453dbeee0f
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: ecff61e8-7de2-43c0-af0e-a6453dbeee0f
+      slot: group_slot
+      uuid: 02c06ddd-390d-48dc-a355-77924fe58aa6
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Spaces We Created'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 6f83ee1b-9022-4791-8a55-163002f0f45c
+      slot: main_slot
+      uuid: 179f7520-23f4-480e-a966-83b3edfbe6e9
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: "<p>We don't chase temporary trends; instead, we focus on timeless architecture that respects both the environment and your resources. By choosing the right materials and focusing on clean lines, we create comfortable, efficient spaces that look timeless and feel welcoming.</p>"
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: d0a160ce-fb12-4aca-990a-303161e2077f
+      slot: main_slot
+      uuid: ca2fb6cc-702b-49b0-8d8a-ab9d1ef20473
+      component_id: block.views_block.projects-projects_latest
+      inputs:
+        label: Projects
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+    -
+      uuid: 01b08281-0129-4038-b7ef-c737aae4dd03
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: default
+        margin_block_end: default
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 01b08281-0129-4038-b7ef-c737aae4dd03
+      slot: header_slot
+      uuid: e52104ae-61af-42e8-9ae6-d7d095012121
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Our Philosophy'
+        text_size: heading-responsive-xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 01b08281-0129-4038-b7ef-c737aae4dd03
+      slot: header_slot
+      uuid: 2ef4b833-d0af-453d-9663-d7b94bc4c624
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Spaces where people truly feel at home'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 01b08281-0129-4038-b7ef-c737aae4dd03
+      slot: header_slot
+      uuid: 0adb2703-b1c7-4c55-911e-59e050da8d6e
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>We manage the entire design process with a focus on clear communication and attention to detail. Whether it is a residential home or a commercial space, we balance aesthetics with your budget and practical requirements.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 01b08281-0129-4038-b7ef-c737aae4dd03
+      slot: main_slot
+      uuid: d4cace4e-7a5a-4c91-a262-5f5700ca0872
+      component_id: sdc.forma_theme.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 58dd96e1-8bf2-42af-9af9-982c63c20081
+            target_type: media
+        size: '4:1'
+    -
+      parent_uuid: 01b08281-0129-4038-b7ef-c737aae4dd03
+      slot: main_slot
+      uuid: 7b736cf2-3fd8-47af-8d32-5ad6d6ec5116
+      component_id: sdc.forma_theme.grid
+      inputs:
+        width: 100%
+        columns: '3 columns'
+        mobile_columns: '1'
+        align: center
+    -
+      parent_uuid: 7b736cf2-3fd8-47af-8d32-5ad6d6ec5116
+      slot: main_slot
+      uuid: 41963bde-1146-4766-a9c5-d102684481c9
+      component_id: sdc.forma_theme.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: d2acfaca-41d9-440e-89c0-2573278c5803
+            target_type: media
+        size: '1:1'
+    -
+      parent_uuid: 7b736cf2-3fd8-47af-8d32-5ad6d6ec5116
+      slot: main_slot
+      uuid: f2c29115-1858-478d-a7ec-a07ba16c0dcd
+      component_id: sdc.forma_theme.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8c8241d0-26f4-49e5-ab39-4cd27d883618
+            target_type: media
+        size: '1:1'
+    -
+      parent_uuid: 7b736cf2-3fd8-47af-8d32-5ad6d6ec5116
+      slot: main_slot
+      uuid: f3ef165c-bd65-453d-ab65-e2f67fbdcb67
+      component_id: sdc.forma_theme.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 64ed628e-9e4e-447a-a23b-e1a8cf008230
+            target_type: media
+        size: '1:1'
+    -
+      uuid: a8eb0710-eb64-4d42-878a-61eac9a0d041
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: default
+        margin_block_end: default
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: a8eb0710-eb64-4d42-878a-61eac9a0d041
+      slot: main_slot
+      uuid: 6c186518-c210-43a4-b3be-e4f254574218
+      component_id: sdc.forma_theme.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+        align: left
+    -
+      parent_uuid: 6c186518-c210-43a4-b3be-e4f254574218
+      slot: main_slot
+      uuid: 61fe6ea1-923d-4601-bd01-20b48bb5a88c
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: 61fe6ea1-923d-4601-bd01-20b48bb5a88c
+      slot: group_slot
+      uuid: 219c6973-aca2-46fc-b1c3-e912e4e849a9
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Our Scope of Work'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 6c186518-c210-43a4-b3be-e4f254574218
+      slot: main_slot
+      uuid: 35fabf26-3e4c-4d92-87dd-7b39ad1a50ed
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: "<p>We don't chase temporary trends; instead, we focus on timeless architecture that respects both the environment and your resources. By choosing the right materials and focusing on clean lines, we create comfortable, efficient spaces that look timeless and feel welcoming.</p>"
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: a8eb0710-eb64-4d42-878a-61eac9a0d041
+      slot: main_slot
+      uuid: 13f9c1c3-37f0-4eb9-b97b-c8fefd02f231
+      component_id: sdc.forma_theme.grid
+      inputs:
+        width: 100%
+        columns: '3 columns'
+        mobile_columns: '1'
+        align: center
+    -
+      parent_uuid: 13f9c1c3-37f0-4eb9-b97b-c8fefd02f231
+      slot: main_slot
+      uuid: a33fa60d-9b1e-4ad0-8e7d-8ae938693077
+      component_id: sdc.forma_theme.card
+      inputs:
+        index: '01'
+        heading_text: 'Residential Architecture'
+        text: 'Custom-designed single-family homes, estates, and multi-unit living spaces tailored to modern lifestyles.'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 58dd96e1-8bf2-42af-9af9-982c63c20081
+            target_type: media
+        url:
+          uri: 'internal:/'
+          options: {  }
+        background_color: white
+    -
+      parent_uuid: 13f9c1c3-37f0-4eb9-b97b-c8fefd02f231
+      slot: main_slot
+      uuid: d58bbd3c-c1ad-48a7-8257-471495a3c8b2
+      component_id: sdc.forma_theme.card
+      inputs:
+        index: '02'
+        heading_text: 'Interior Architecture'
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 49491f86-37ee-42b9-b24a-633f4b55234a
+            target_type: media
+        background_color: white
+    -
+      parent_uuid: 13f9c1c3-37f0-4eb9-b97b-c8fefd02f231
+      slot: main_slot
+      uuid: 22172d8a-3309-431c-9cb5-9b2ca10b793e
+      component_id: sdc.forma_theme.card
+      inputs:
+        index: '03'
+        heading_text: 'Renovations & Extensions'
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: aca3e907-3a19-4870-9452-e4b84ffcff2f
+            target_type: media
+        background_color: white
+    -
+      uuid: fd8c4567-d3e2-4edb-bd1e-693da459c0b4
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '2 columns 75-25'
+        mobile_columns: '1'
+        margin_block_start: small
+        margin_block_end: small
+        padding_block_start: small
+        padding_block_end: small
+        background_color: primary
+        section_header: false
+        section_footer: false
+    -
+      parent_uuid: fd8c4567-d3e2-4edb-bd1e-693da459c0b4
+      slot: main_slot
+      uuid: 6cc7f81b-e652-465e-9be9-10369f442094
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: 6cc7f81b-e652-465e-9be9-10369f442094
+      slot: group_slot
+      uuid: f0aba09e-c6ce-44ae-8397-4e61ff9089bd
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Tell us about your project'
+        level: 2
+        text_size: heading-responsive-xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 6cc7f81b-e652-465e-9be9-10369f442094
+      slot: group_slot
+      uuid: 0b976c1f-1cc9-42d6-83b3-29c8899f18f4
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Every great space begins with a conversation, so reach out today to discuss your vision and see how we can work together.'
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 6cc7f81b-e652-465e-9be9-10369f442094
+      slot: group_slot
+      uuid: cba73368-e3ae-4fc9-8611-7cafc411d0a6
+      component_id: sdc.forma_theme.button
+      inputs:
+        variant: primary
+        label: 'Book a meeting'
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+    -
+      uuid: 61109e7b-9631-4247-8655-9272f172f7af
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: small
+        margin_block_end: small
+        padding_block_start: small
+        padding_block_end: small
+        section_header: true
+        section_footer: true
+        views_columns: '3 columns'
+        background_color: white
+    -
+      parent_uuid: 61109e7b-9631-4247-8655-9272f172f7af
+      slot: header_slot
+      uuid: 226ef102-bf9f-4c42-9974-d16dfb63c898
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'News & Articles'
+        text_size: heading-responsive-xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 61109e7b-9631-4247-8655-9272f172f7af
+      slot: header_slot
+      uuid: 2488586e-8485-4af5-9bce-92415dfcfebd
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Studio Journal'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 61109e7b-9631-4247-8655-9272f172f7af
+      slot: header_slot
+      uuid: 934c276d-19ff-45c5-a2e2-5179cb9aeafe
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>Follow our journey as we share our thoughts on design, sustainability, and ongoing projects.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 61109e7b-9631-4247-8655-9272f172f7af
+      slot: main_slot
+      uuid: 8a990bc8-c89d-4223-abb1-e960002055f7
+      component_id: block.views_block.articles-articles_latest
+      inputs:
+        label: Articles
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+    -
+      parent_uuid: 61109e7b-9631-4247-8655-9272f172f7af
+      slot: footer_slot
+      uuid: 5a800b8a-3d2b-4f58-b181-215b729a638a
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: center
+        flex_align: center
+    -
+      parent_uuid: 5a800b8a-3d2b-4f58-b181-215b729a638a
+      slot: group_slot
+      uuid: 4e6f702a-d7b1-4056-98ac-052d56edb8b8
+      component_id: sdc.forma_theme.button
+      inputs:
+        variant: primary
+        label: 'View all articles'
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+        href:
+          uri: 'internal:/articles'
+          options: {  }
+    -
+      uuid: 717e48f5-b492-4e14-b210-9ff37ad0bfa7
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+        margin_block_start: default
+        margin_block_end: default
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 717e48f5-b492-4e14-b210-9ff37ad0bfa7
+      slot: main_slot
+      uuid: 48e46be4-0d03-4d08-bc31-2bc45f6f9cff
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: 48e46be4-0d03-4d08-bc31-2bc45f6f9cff
+      slot: group_slot
+      uuid: 97bc109f-0f86-45a7-94d6-26e6e7a71bdf
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Trusted by the best.'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 48e46be4-0d03-4d08-bc31-2bc45f6f9cff
+      slot: group_slot
+      uuid: 60a3cd68-31a1-4bed-969d-6ddeaf69d44d
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 717e48f5-b492-4e14-b210-9ff37ad0bfa7
+      slot: main_slot
+      uuid: 72354c7b-4b40-4fc1-97cd-93b5b943e0b4
+      component_id: sdc.forma_theme.grid
+      inputs:
+        width: 100%
+        columns: '3 columns'
+        mobile_columns: '1'
+        align: center
+    -
+      parent_uuid: 72354c7b-4b40-4fc1-97cd-93b5b943e0b4
+      slot: main_slot
+      uuid: 64335191-acdb-4990-bf07-7ce2b3921796
+      component_id: sdc.forma_theme.card-logo
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/forma.png
+            alt: 'Forma logo'
+            width: 342
+            height: 69
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.forma_theme.card-logo
+    -
+      parent_uuid: 72354c7b-4b40-4fc1-97cd-93b5b943e0b4
+      slot: main_slot
+      uuid: 6f1dadea-19e6-496f-a602-5f0e2d39b2b9
+      component_id: sdc.forma_theme.card-logo
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/forma.png
+            alt: 'Forma logo'
+            width: 342
+            height: 69
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.forma_theme.card-logo
+    -
+      parent_uuid: 72354c7b-4b40-4fc1-97cd-93b5b943e0b4
+      slot: main_slot
+      uuid: 897d475e-e61e-4f75-b6c5-4b210bc0c887
+      component_id: sdc.forma_theme.card-logo
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/forma.png
+            alt: 'Forma logo'
+            width: 342
+            height: 69
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.forma_theme.card-logo
+    -
+      parent_uuid: 72354c7b-4b40-4fc1-97cd-93b5b943e0b4
+      slot: main_slot
+      uuid: 29ae3827-f8b2-40a5-8b87-c06dc830a757
+      component_id: sdc.forma_theme.card-logo
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/forma.png
+            alt: 'Forma logo'
+            width: 342
+            height: 69
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.forma_theme.card-logo
+    -
+      parent_uuid: 72354c7b-4b40-4fc1-97cd-93b5b943e0b4
+      slot: main_slot
+      uuid: 699e1ca5-d5cc-49d8-be5e-b53b8c6ea2fa
+      component_id: sdc.forma_theme.card-logo
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/forma.png
+            alt: 'Forma logo'
+            width: 342
+            height: 69
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.forma_theme.card-logo
+    -
+      parent_uuid: 72354c7b-4b40-4fc1-97cd-93b5b943e0b4
+      slot: main_slot
+      uuid: 6e6ce12a-d39e-4b57-bc50-841c861e3278
+      component_id: sdc.forma_theme.card-logo
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/forma.png
+            alt: 'Forma logo'
+            width: 342
+            height: 69
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.forma_theme.card-logo
+    -
+      uuid: cd62395d-3f0b-4c6c-9100-57c6d3a58878
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: default
+        margin_block_end: default
+        padding_block_start: small
+        padding_block_end: small
+        section_header: true
+        section_footer: true
+        background_color: white
+    -
+      parent_uuid: cd62395d-3f0b-4c6c-9100-57c6d3a58878
+      slot: main_slot
+      uuid: 625761d8-b9cf-4a89-91a3-837d1a56488b
+      component_id: sdc.forma_theme.card-testimonial
+      inputs:
+        text: '"The team delivered a modern, highly functional office layout that has completely transformed how our team works. They managed to balance a striking aesthetic with highly practical solutions, all while meeting our strict deadline."'
+        cite_name: 'James Stroman'
+        cite_text: 'Vanguard Properties'
+        align: left
+        style: default
+    -
+      uuid: de3e95fe-91f0-4ab5-bfb9-a6bae9ba6c07
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+        margin_block_start: small
+        margin_block_end: small
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: false
+        section_footer: false
+    -
+      parent_uuid: de3e95fe-91f0-4ab5-bfb9-a6bae9ba6c07
+      slot: main_slot
+      uuid: 5a6364fd-dc84-4c72-a338-71a09a1abbeb
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: 5a6364fd-dc84-4c72-a338-71a09a1abbeb
+      slot: group_slot
+      uuid: ffce5b11-06da-4ba4-9138-e3401604e0db
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Contact Us'
+        level: 2
+        text_size: heading-responsive-xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 5a6364fd-dc84-4c72-a338-71a09a1abbeb
+      slot: group_slot
+      uuid: 2b991a6c-a169-420c-97ea-f1c72179f5c6
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Get in touch with our team.'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 5a6364fd-dc84-4c72-a338-71a09a1abbeb
+      slot: group_slot
+      uuid: 78548e17-fca3-4f45-bb05-c3b8b61cfff0
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>We would love to hear about your ideas and discuss how we can help bring your project to life. Get in touch with our team today to ask questions, share your vision, or schedule an initial consultation.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: de3e95fe-91f0-4ab5-bfb9-a6bae9ba6c07
+      slot: main_slot
+      uuid: 0308158a-ba46-4619-ba71-f108f10bae4e
+      component_id: block.webform_block
+      inputs:
+        label: Webform
+        label_display: '0'
+        webform_id: contact_form
+        default_data: ''
+        redirect: false
+        lazy: false
+  path:
+    -
+      alias: /home
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

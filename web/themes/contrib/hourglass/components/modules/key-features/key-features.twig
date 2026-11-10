@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Template for the Key Features section.
+ *
+ * Props:
+ * - section_title: H2 section heading (HTML).
+ * - extra_classes: Additional CSS classes.
+ *
+ * Slots:
+ * - slides: Key Feature Slide atoms. Each becomes one carousel slide.
+ */
+#}
+{{ attach_library('hourglass/key-features') }}
+
+<section class="c-key-features {{ extra_classes|default('') }}">
+
+  {% if section_title %}
+    <div class="c-key-features__header">
+      <h2 class="c-key-features__title">{{ section_title|raw }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="c-key-features__slides js-kf-slides">
+    {{ slides }}
+  </div>
+
+  <div class="c-key-features__pagination js-kf-pagination" role="tablist" aria-label="Key feature slides"></div>
+
+</section>

@@ -1,0 +1,59 @@
+/**
+ * @file heading.css
+ * Atomic heading component.
+ * Visual size is decoupled from the HTML level (h1–h6).
+ * Supports weight, color, alignment and top/bottom margin via CSS vars.
+ */
+
+/* ── Base ────────────────────────────────────────── */
+
+.dst-heading {
+  font-family: var(--font-sans);
+  line-height: 1.2;
+  margin-top: var(--heading-mt, 0);
+  margin-bottom: var(--heading-mb, 0);
+}
+
+/* ── Visual sizes (responsive with clamp) ────────── */
+
+.dst-heading--size-xs  { font-size: 0.875rem;  line-height: 1.5; }
+.dst-heading--size-sm  { font-size: 1rem;       line-height: 1.5; }
+.dst-heading--size-md  { font-size: 1.125rem;   line-height: 1.4; }
+.dst-heading--size-lg  { font-size: 1.25rem;    line-height: 1.35; }
+.dst-heading--size-xl  { font-size: 1.5rem;     line-height: 1.3; }
+.dst-heading--size-2xl { font-size: clamp(1.5rem,  3vw, 1.875rem); line-height: 1.25; }
+.dst-heading--size-3xl { font-size: clamp(1.75rem, 4vw, 2.25rem);  line-height: 1.2; }
+.dst-heading--size-4xl { font-size: clamp(2rem,    5vw, 2.75rem);  line-height: 1.15; letter-spacing: -0.01em; }
+.dst-heading--size-5xl { font-size: clamp(2.5rem,  6vw, 3.5rem);   line-height: 1.1;  letter-spacing: -0.02em; }
+
+/* ── Weight ──────────────────────────────────────── */
+
+.dst-heading--weight-normal   { font-weight: 400; }
+.dst-heading--weight-semibold { font-weight: 600; }
+.dst-heading--weight-bold     { font-weight: 700; }
+
+/* ── Color ───────────────────────────────────────── */
+
+.dst-heading--color-default { color: var(--foreground); }
+.dst-heading--color-primary { color: var(--primary); }
+.dst-heading--color-muted   { color: var(--muted-foreground); }
+.dst-heading--color-accent  { color: var(--accent-foreground, var(--accent)); }
+.dst-heading--color-light   { color: var(--color-white); }
+
+/* ── Alignment ───────────────────────────────────── */
+
+.dst-heading--align-left   { text-align: left; }
+.dst-heading--align-center { text-align: center; }
+.dst-heading--align-right  { text-align: right; }
+
+/* ── Link variant ────────────────────────────────── */
+
+.dst-heading__link {
+  color: inherit;
+  text-decoration: none;
+}
+.dst-heading__link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}

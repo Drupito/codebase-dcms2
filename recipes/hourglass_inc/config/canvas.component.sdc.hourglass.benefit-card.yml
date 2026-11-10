@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: a1fa108eccb314a8
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Adaptive Scalability'
+          expression: ℹ︎string␟value
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Our platforms grow with you. Whether you are managing 50 users or 50,000, the performance remains consistent.'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        media:
+          title: 'Icon Image'
+          description: 'Place a Media atom here — displayed as a 100×100px icon.'
+label: 'Benefit Card'
+id: sdc.hourglass.benefit-card
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:benefit-card'

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1cc8aa0c-5144-4046-a38d-d3c23296ec08
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: recommended-add-ons.yaml
+  uri:
+    -
+      value: 'public://recommended-add-ons.yaml'
+  filemime:
+    -
+      value: text/plain
+  filesize:
+    -
+      value: 2056
+  status:
+    -
+      value: true

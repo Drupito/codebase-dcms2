@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4adc48ee-d0bf-4491-9be0-bded2132e5f8
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: family_photo.png
+  uri:
+    -
+      value: 'public://2026-06/family_photo.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 4583228
+  status:
+    -
+      value: true

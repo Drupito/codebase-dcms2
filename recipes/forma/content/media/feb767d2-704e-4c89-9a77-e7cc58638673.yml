@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: feb767d2-704e-4c89-9a77-e7cc58638673
+  bundle: image
+  default_langcode: en
+  depends:
+    fba61a0e-04f3-44bb-9689-54ab66859be1: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: arturo-castaneyra-xLyOGT8i1qA-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Underground staircase with dark lighting showing a glimpse of outside.'
+      title: ''
+      width: 2000
+      height: 1500
+      entity: fba61a0e-04f3-44bb-9689-54ab66859be1

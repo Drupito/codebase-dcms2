@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 0bebb3c9-fe3c-4f05-9858-6c1034be1427
+  bundle: image
+  default_langcode: en
+  depends:
+    6eb35e8b-1cf1-4582-9932-9a5baa82bc12: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Machine Learning Enterprise'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Machine Learning Enterprise'
+      title: ''
+      width: 1200
+      height: 900
+      entity: 6eb35e8b-1cf1-4582-9932-9a5baa82bc12

@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 244ae05d-56af-4b1f-80d8-da101c4ee99a
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Thank You'
+  components:
+    -
+      uuid: e6fd779e-ac99-40f9-aaf1-d093b355d1c9
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        rounded: none
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: e6fd779e-ac99-40f9-aaf1-d093b355d1c9
+      slot: content
+      uuid: de7261fd-88e6-4a09-b329-c4e74b7d75f3
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: "Your request has been submitted. We'll be in touch soon."
+          format: canvas_html_inline
+        heading:
+          value: 'THANK YOU!'
+          format: canvas_html_inline
+        heading_level: 2
+  path:
+    -
+      alias: /thank-you
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

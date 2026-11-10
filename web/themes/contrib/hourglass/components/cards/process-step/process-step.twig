@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Process Step card — used inside the Process Steps module.
+ *
+ * Props: step_number, title, description, extra_classes.
+ * Slots: icon (60×60 image).
+ */
+#}
+{{ attach_library('hourglass/process-step') }}
+
+<div class="c-process-step {{ extra_classes|default('') }}" data-process-step>
+
+  {# Progress overlay segments — positioned absolute by JS #}
+  <div class="c-process-step__progress c-process-step__progress--before" data-progress="before"></div>
+  <div class="c-process-step__progress c-process-step__progress--after"  data-progress="after"></div>
+
+  {% if step_number %}
+    <div class="c-process-step__number">{{ step_number }}</div>
+  {% endif %}
+
+  <div class="c-process-step__connector">
+    <div class="c-process-step__line c-process-step__line--left"></div>
+    <div class="c-process-step__circle">
+      {% if icon %}
+        <div class="c-process-step__icon">{{ icon }}</div>
+      {% endif %}
+    </div>
+    <div class="c-process-step__line c-process-step__line--right"></div>
+  </div>
+
+  <div class="c-process-step__body">
+    {% if title %}
+      <p class="c-process-step__title">{{ title }}</p>
+    {% endif %}
+    {% if description %}
+      <p class="c-process-step__description">{{ description }}</p>
+    {% endif %}
+  </div>
+
+</div>

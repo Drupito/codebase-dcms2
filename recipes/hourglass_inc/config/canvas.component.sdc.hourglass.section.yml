@@ -1,0 +1,348 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - hourglass
+active_version: f2135db1f2d8fe23
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        padding_top:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: none
+          expression: ℹ︎string␟value
+        padding_bottom:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: none
+          expression: ℹ︎string␟value
+        margin_top:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: none
+          expression: ℹ︎string␟value
+        margin_bottom:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: none
+          expression: ℹ︎string␟value
+        container:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        background:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: none
+          expression: ℹ︎string␟value
+        anchor_id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'Components placed inside this section.'
+  12dbac9157b88157:
+    settings:
+      prop_field_definitions:
+        padding_top:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: none
+          expression: ℹ︎string␟value
+        padding_bottom:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: none
+          expression: ℹ︎string␟value
+        margin_top:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: none
+          expression: ℹ︎string␟value
+        margin_bottom:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: none
+          expression: ℹ︎string␟value
+        container:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        background:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: none
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'Components placed inside this section.'
+  b8f6fdc38cb6203f:
+    settings:
+      prop_field_definitions:
+        padding_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_bottom:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_bottom:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        container:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        background:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'Components placed inside this section.'
+  1a2b3c4d5e6f7890:
+    settings:
+      prop_field_definitions:
+        padding_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: none
+                label: None
+              -
+                value: sm
+                label: 'Small (40px)'
+              -
+                value: md
+                label: 'Medium (64px)'
+              -
+                value: lg
+                label: 'Large (96px)'
+              -
+                value: xl
+                label: 'Extra Large (120px)'
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: lg
+          expression: ℹ︎string␟value
+        padding_bottom:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: none
+                label: None
+              -
+                value: sm
+                label: 'Small (40px)'
+              -
+                value: md
+                label: 'Medium (64px)'
+              -
+                value: lg
+                label: 'Large (96px)'
+              -
+                value: xl
+                label: 'Extra Large (120px)'
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: lg
+          expression: ℹ︎string␟value
+        margin_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: none
+                label: None
+              -
+                value: sm
+                label: 'Small (40px)'
+              -
+                value: md
+                label: 'Medium (64px)'
+              -
+                value: lg
+                label: 'Large (96px)'
+              -
+                value: xl
+                label: 'Extra Large (120px)'
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: none
+          expression: ℹ︎string␟value
+        margin_bottom:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: none
+                label: None
+              -
+                value: sm
+                label: 'Small (40px)'
+              -
+                value: md
+                label: 'Medium (64px)'
+              -
+                value: lg
+                label: 'Large (96px)'
+              -
+                value: xl
+                label: 'Extra Large (120px)'
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: none
+          expression: ℹ︎string␟value
+        background:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: none
+                label: 'None (transparent)'
+              -
+                value: white
+                label: White
+              -
+                value: gray
+                label: Gray
+              -
+                value: dark
+                label: Dark
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: none
+          expression: ℹ︎string␟value
+        container:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: true
+          expression: ℹ︎boolean␟value
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'Components placed inside this section.'
+label: Section
+id: sdc.hourglass.section
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:section'

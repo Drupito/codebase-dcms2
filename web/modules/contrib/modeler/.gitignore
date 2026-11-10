@@ -1,0 +1,6 @@
+/dist/
+/ui/.claude/
+/ui/node_modules/
+/ui/test-results/
+/ui/tests/*/
+!/ui/tests/e2e/

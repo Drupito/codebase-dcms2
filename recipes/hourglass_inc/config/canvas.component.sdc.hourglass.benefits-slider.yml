@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: 0889e83eafbf5a01
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Why Hourglass?'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        cards:
+          title: 'Benefit Cards'
+          description: 'Place Benefit Card components here — each becomes a slide.'
+label: 'Benefits Slider'
+id: sdc.hourglass.benefits-slider
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:benefits-slider'

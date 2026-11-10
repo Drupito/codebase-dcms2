@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: 503014df39230b20
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Frequently Asked Questions'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: 'FAQ Items'
+          description: 'Place FAQ Item components here — one per question/answer pair.'
+label: 'FAQ Section'
+id: sdc.hourglass.faq-section
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:faq-section'

@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Text List Item — bulleted step with a bold title and rich-text description.
+ *
+ * Props: title, description (HTML), extra_classes.
+ */
+#}
+{{ attach_library('hourglass/text-list-item') }}
+
+<div class="c-text-list-item {{ extra_classes|default('') }}">
+  <span class="c-text-list-item__bullet" aria-hidden="true">•</span>
+  <div class="c-text-list-item__content">
+    {% if title %}
+      <p class="c-text-list-item__title">{{ title }}</p>
+    {% endif %}
+    {% if description %}
+      <div class="c-text-list-item__description">{{ description|raw }}</div>
+    {% endif %}
+  </div>
+</div>

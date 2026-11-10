@@ -1,0 +1,75 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.forma_theme.button
+    - canvas.component.sdc.forma_theme.group
+    - canvas.component.sdc.forma_theme.heading
+    - canvas.component.sdc.forma_theme.section
+  module:
+    - options
+id: contactcta
+label: 'Contact CTA'
+component_tree:
+  '0:23ac36ea-5dcf-427d-92a2-1468ecc8c090':
+    uuid: 23ac36ea-5dcf-427d-92a2-1468ecc8c090
+    component_id: sdc.forma_theme.section
+    component_version: 1c24bc07887c802e
+    inputs:
+      width: 100%
+      columns: '2 columns 75-25'
+      mobile_columns: '1'
+      margin_block_start: small
+      margin_block_end: small
+      padding_block_start: small
+      padding_block_end: small
+      background_color: primary
+      section_header: false
+      section_footer: false
+  '0:main_slot:0:ef1c1976-c134-4d78-8e2b-b93a2ab2ec7f':
+    parent_uuid: 23ac36ea-5dcf-427d-92a2-1468ecc8c090
+    slot: main_slot
+    uuid: ef1c1976-c134-4d78-8e2b-b93a2ab2ec7f
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: column
+      flex_gap: md
+      items_align: start
+      flex_align: center
+  '0:main_slot:0:group_slot:0:a609b091-13f0-4af7-867b-68c63410657c':
+    parent_uuid: ef1c1976-c134-4d78-8e2b-b93a2ab2ec7f
+    slot: group_slot
+    uuid: a609b091-13f0-4af7-867b-68c63410657c
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text: 'Tell us about your project'
+      level: 2
+      text_size: heading-responsive-xl
+      text_color: default
+      align: left
+  '0:main_slot:0:group_slot:1:3668332b-d2a7-477b-9fbf-e904efadae99':
+    parent_uuid: ef1c1976-c134-4d78-8e2b-b93a2ab2ec7f
+    slot: group_slot
+    uuid: 3668332b-d2a7-477b-9fbf-e904efadae99
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text: 'Every great space begins with a conversation, so reach out today to discuss your vision and see how we can work together.'
+      text_size: heading-responsive-4xl
+      text_color: default
+      align: left
+  '0:main_slot:0:group_slot:2:b8abed88-82ff-4eae-be8e-0f1482b6abb0':
+    parent_uuid: ef1c1976-c134-4d78-8e2b-b93a2ab2ec7f
+    slot: group_slot
+    uuid: b8abed88-82ff-4eae-be8e-0f1482b6abb0
+    component_id: sdc.forma_theme.button
+    component_version: f68fb081bb669bbb
+    inputs:
+      variant: primary
+      label: 'Book a meeting'
+      icon: arrow-right
+      mobile_width: false
+      icon_first: false
+      disabled: false

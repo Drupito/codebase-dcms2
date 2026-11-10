@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Overview Feature — a single feature row inside the Overview Section.
+ *
+ * Variables:
+ * - label: Feature text.
+ * - icon: Optional image object { src, alt }.
+ * - extra_classes: optional additional classes.
+ */
+#}
+<div class="c-overview-section__feature-item {{ extra_classes|default('') }}">
+  <div class="c-overview-section__feature-icon-wrap" aria-hidden="true">
+    {% if icon and icon.src %}
+      <img
+        class="c-overview-section__feature-icon"
+        src="{{ icon.src }}"
+        alt="{{ icon.alt|default('') }}"
+        loading="lazy"
+      />
+    {% else %}
+      <svg class="c-overview-section__feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="11" stroke="#E8590C" stroke-width="1.5"/>
+        <path d="M8 12L11 15L16 9" stroke="#E8590C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% endif %}
+  </div>
+  {% if label %}
+    <span class="c-overview-section__feature-label">{{ label }}</span>
+  {% endif %}
+</div>

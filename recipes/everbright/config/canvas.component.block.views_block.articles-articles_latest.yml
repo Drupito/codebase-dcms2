@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.articles
+  module:
+    - views
+label: Articles
+id: block.views_block.articles-articles_latest
+source: block
+source_local_id: 'views_block:articles-articles_latest'
+provider: views
+active_version: 48725ea4ca28bf65
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:articles-articles_latest'
+        label: Articles
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null

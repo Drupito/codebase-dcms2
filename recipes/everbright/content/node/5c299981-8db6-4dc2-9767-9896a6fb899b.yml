@@ -1,0 +1,66 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5c299981-8db6-4dc2-9767-9896a6fb899b
+  bundle: project
+  default_langcode: en
+  depends:
+    0cfc7213-3f94-43a9-8877-924c2275ca74: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Propelling Brand Identity Through Cutting-Edge Visual Design'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /propelling-brand-identity-through-cutting-edge-visual-design
+      langcode: en
+  field_content:
+    -
+      value: "<h2>Propelling Monolithus's Identity Through Cutting-Edge Visual Design</h2><p>When Monolithus approached Everbright, they weren't looking for a logo refresh. They were looking for a transformation — a visual identity that could carry the weight of their ambition and signal a new chapter for the brand. What followed was a months-long collaboration that touched every visible surface of the company, from the wordmark to the smallest interface detail.</p><p>The challenge was clear from the first discovery session. Monolithus had outgrown its original branding. The existing identity had served the early-stage company well, but as the business matured and entered new markets, it began to feel quieter than the work it represented. Everbright's task was to build something that matched the company's confidence without losing the warmth that had defined its earlier years.</p><p>We began with research. Stakeholder interviews, competitor audits, and a deep dive into Monolithus's customer base revealed a brand caught between two identities — approachable and technical, established and innovative. Rather than choosing one, we leaned into the tension. The new identity system was designed to hold both: precise where it needed to be, expressive where it could be.</p><p>The wordmark anchors the system. Built on a custom letterform inspired by classical stonework but engineered for digital scale, it reads as both timeless and modern. A refined palette of deep slate, warm ivory, and a single accent of electric coral gives the brand range — calm in long-form contexts, energetic when the moment calls for it. Typography pairs a contemporary grotesque with a high-contrast serif, giving editorial weight to product and marketing pages alike.</p><p>Beyond the core elements, Everbright delivered a complete design system: iconography, photography direction, motion principles, and a component library ready to scale across web, print, and product surfaces. We worked closely with Monolithus's internal team to ensure the system wasn't just handed off but understood, with documentation and workshops to embed the new language across departments.</p><p>The result is a brand that feels confidently itself. Monolithus now has the visual infrastructure to grow without rebranding every two years — a flexible, durable identity built to evolve alongside the company.</p><p>For Everbright, the project reinforced what we believe about brand work at its best: it isn't decoration. It's a strategic tool that, done well, propels a company forward. Monolithus is moving fast, and now their identity moves with them.</p>"
+      format: content_format
+  field_description:
+    -
+      value: 'We partnered with Monolithus to redefine their visual identity from the ground up — delivering a bold, contemporary brand system that captures the energy of a forward-thinking company.'
+  field_eyebrow:
+    -
+      value: Monolithus
+  field_featured_image:
+    -
+      entity: 0cfc7213-3f94-43a9-8877-924c2275ca74
+  field_name:
+    -
+      value: 'Sarah Chen'
+  field_position:
+    -
+      value: CEO
+  field_quote_text:
+    -
+      value: '<p>What set Everbright apart was how deeply they listened. They challenged us in the right places, pushed back when we needed it, and delivered a brand system that feels unmistakably ours.</p>'
+      format: content_format
+  field_seo_analysis:
+    -
+      status: '0'
+      focus_keyword: ''
+      title: ''
+      description: ''

@@ -1,0 +1,137 @@
+/**
+ * @file accordion.css
+ * Reusable accordion — FAQ panels and icon feature lists.
+ * Drop multiple Accordion components into a Section Grid column to form a group.
+ */
+
+/* ── Item ────────────────────────────────────────── */
+
+.accordion__item {
+  background: transparent;
+  border-radius: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.accordion__item:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion__item + .accordion__item {
+  margin-top: 0;
+}
+
+/* Open state: white bg + green top accent line */
+.accordion__item--open {
+  background: var(--color-surface);
+  border-top: 3px solid var(--color-accent);
+  position: relative;
+  z-index: 1;
+  margin-top: -1px; /* overlap previous item's border-bottom */
+}
+
+/* ── Trigger (full-width clickable header) ───────── */
+
+.accordion__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.accordion__trigger:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+@media (min-width: 48rem) {
+  .accordion__trigger {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* ── Optional icon ───────────────────────────────── */
+
+.accordion__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.accordion__icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  /* Force any SVG/PNG to render as black */
+  filter: brightness(0);
+  transition: filter 0.2s ease;
+}
+
+/* Only highlight icon when accordion is open — targets var(--color-accent) #7ed957 */
+.accordion__item--open .accordion__icon-img {
+  filter: brightness(0) invert(0.5) sepia(1) hue-rotate(60deg) saturate(2.7) brightness(1.05);
+}
+
+/* ── Question text ───────────────────────────────── */
+
+.accordion__question {
+  flex: 1;
+}
+
+/* ── Chevron — rotates 180° when open ────────────── */
+
+.accordion__chevron {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+  transition: transform 0.25s ease;
+}
+
+.accordion__item--open .accordion__chevron {
+  transform: rotate(180deg);
+}
+
+/* ── Panel ───────────────────────────────────────── */
+
+.accordion__panel[hidden] {
+  display: none;
+}
+
+.accordion__content {
+  padding: 0 1.25rem 1.25rem;
+}
+
+@media (min-width: 48rem) {
+  .accordion__content {
+    padding: 0 1.5rem 1.5rem;
+  }
+}
+
+/* ── Answer text ─────────────────────────────────── */
+
+.accordion__answer {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.accordion__answer p { margin: 0 0 0.75em; }
+.accordion__answer p:last-child { margin-bottom: 0; }

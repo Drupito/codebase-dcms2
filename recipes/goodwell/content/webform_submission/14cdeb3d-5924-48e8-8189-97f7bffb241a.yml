@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: webform_submission
+  uuid: 14cdeb3d-5924-48e8-8189-97f7bffb241a
+  bundle: make_a_claim
+  default_langcode: en
+default:
+  serial:
+    -
+      value: 8
+  token:
+    -
+      value: 1X1VmW9y-PxeW2yCTAqtiEaMeyMWSh8g3He77x384wo
+  uri:
+    -
+      value: /make-a-claim
+  completed:
+    -
+      value: 1781500360
+  in_draft:
+    -
+      value: false
+  remote_addr:
+    -
+      value: 172.19.0.2
+  uid:
+    -
+      target_id: 1
+  entity_type:
+    -
+      value: canvas_page
+  entity_id:
+    -
+      value: '5'
+  locked:
+    -
+      value: false
+  sticky:
+    -
+      value: false

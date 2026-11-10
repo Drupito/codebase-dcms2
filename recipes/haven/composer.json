@@ -1,0 +1,19 @@
+{
+    "name": "drupal/haven",
+    "description": "Designed for non-profit sites, this template features a warm design with additional features coming soon.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/drupal_cms_site_template_base": "^2",
+        "drupal/drupal_cms_search": "^2",
+        "drupal/drupal_cms_forms": "^2",
+        "drupal/cva": "^1.0.0",
+        "drupal/haven_theme": "^1",
+        "drupal/ui_icons": "^1.1.1",
+        "drupal/views_infinite_scroll": "^2.0.3"
+    },
+    "require-dev": {
+        "cweagans/composer-patches": "^2"
+    },
+    "version": "1.1.1"
+}

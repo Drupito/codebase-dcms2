@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 6a14646b-055d-4658-8c2e-b1f3e26ace85
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: profile_icon.png
+  uri:
+    -
+      value: 'public://2026-06/profile_icon.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 662
+  status:
+    -
+      value: true

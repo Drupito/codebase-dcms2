@@ -1,0 +1,75 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Contact Info
+group: Content
+status: stable
+description: "Contact details block with phone, email, hours and address. Icon colour is configurable."
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      default: "Contact us"
+      examples:
+        - "Contact us"
+
+    phone:
+      type: string
+      title: Phone number
+      examples:
+        - "(190) 391-740-04"
+    email:
+      type: string
+      title: Email address
+      examples:
+        - "mail@goodwell.com"
+    hours:
+      type: string
+      title: Office hours
+      examples:
+        - "9 AM - 5 PM, Monday - Saturday"
+    address:
+      type: string
+      title: Address
+      examples:
+        - "905 Locust Street Redding, CA 96001"
+
+    icon_color:
+      type: string
+      title: Icon colour
+      description: "Colour applied to all icons."
+      enum:
+        - accent
+        - primary-mid
+        - primary
+        - white
+        - custom
+      meta:enum:
+        accent:      "Accent green (#7ED957)"
+        primary-mid: "Mid teal (#1C7E6E)"
+        primary:     "Dark teal (#1B3A35)"
+        white:       "White"
+        custom:      "Custom (set hex below)"
+      default: primary-mid
+      examples:
+        - primary-mid
+
+    icon_color_custom:
+      type: string
+      title: Custom icon colour
+      description: "Hex or CSS colour value — only used when Icon colour is set to Custom."
+      examples:
+        - "#1c7e6e"
+
+    icon_style:
+      type: string
+      title: Icon style
+      enum:
+        - plain
+        - circle
+      meta:enum:
+        plain:  "Plain icon"
+        circle: "Icon in a circle badge"
+      default: circle
+      examples:
+        - circle

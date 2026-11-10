@@ -1,0 +1,16 @@
+{% set is_active = active|default(false) %}
+
+<div class="feature-item{{ is_active ? ' feature-item--active' : '' }}">
+  <div class="feature-item__row">
+    {% if icon is not empty %}
+      <span class="feature-item__icon" aria-hidden="true">
+        {% block icon %}{% endblock %}
+      </span>
+    {% endif %}
+    <span class="feature-item__heading">{{ heading }}</span>
+  </div>
+
+  {% if description and is_active %}
+    <p class="feature-item__description">{{ description }}</p>
+  {% endif %}
+</div>

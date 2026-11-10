@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: a4724c5209a57cd6
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Gallery
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: 'Gallery Items'
+          description: 'Place Gallery Item cards here — each provides a main image, thumbnail, caption and label.'
+label: 'Image Gallery'
+id: sdc.hourglass.image-gallery
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:image-gallery'

@@ -1,0 +1,526 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: d57503fd-c38b-4022-baaa-bf44a7e9c2d3
+  default_langcode: en
+  depends:
+    49f754e4-8eb2-4a9d-aa1b-0a238d0ddacc: file
+    e5337414-4d60-4279-a765-fa300c5284db: media
+    602d4023-5005-4d46-85fc-c6f6ead85a80: file
+    26ab0289-96db-4fd2-bb96-4bd09f3a16d7: media
+    5eec803d-18d4-4947-ae82-6d392cc6b0f2: file
+    40f4cdec-3712-4646-9068-9072a723033b: media
+    84ad1a36-9705-4220-b86a-480719b31fa5: file
+    5d0f18c8-8dee-4159-9302-a9fc929437c9: media
+    1ae55f41-979c-42ca-8e19-247f73c39644: file
+    fd739e5d-a52c-404e-9b40-ab0977b045f0: media
+    f9b3c072-4420-4a63-8ca1-59c9ef381a40: file
+    f7f672cb-82f6-4f35-a561-c3cba2e667a9: media
+    02e94cc8-cbcd-4c2a-aa0a-5bd9bd3fc7b0: file
+    612f683e-9bea-4d05-8079-24de57818233: media
+    1eb0b0a3-0092-4bdb-a206-fcc80f81989f: file
+    c913b505-9064-4582-9717-2d83c40ba8b8: media
+    c51c84ff-3415-4d2f-a40b-68bb9638373d: file
+    601894ce-1ef4-4e18-acad-6f420e0cbbc4: media
+    bbc48218-ae4f-4ffd-b779-e6d1e7b00790: file
+    625a3a69-4777-4741-b4ea-03fe354a20e7: media
+    2ef6eca6-b24e-4ef9-8894-227c514ad3b6: file
+    a50d4899-55b8-4740-9d54-9c1aba0174d0: media
+    a97c2d93-9bb4-4350-8c8b-ba9631f40bc5: file
+    7e983a5d-42b2-44ce-8928-b81fa0b4c4cb: media
+    0ea7af8b-5bda-4c65-b490-8437e08ce310: file
+    cea8bd48-d333-4da9-8c89-07124fac0998: file
+    b4c3b7eb-93f8-4e55-9a8f-8c5720eec467: media
+    e8c910a5-ceea-4430-ae0f-dc7cbe83dac0: media
+    34d05b50-1e59-439e-8057-c0006481f482: file
+    d7e33e37-3a41-49f4-882c-53b5728f2b55: media
+    58001ce9-87ec-4780-9ca6-8da10d762187: file
+    560df8a6-b204-41ea-9f82-42029a24185e: media
+    5dbedcf4-ae4c-4157-a375-9fb1dff1fae1: file
+    f12f9003-4592-45ec-b9c1-eb7d87f2917b: media
+    a747e352-af29-4aad-9602-632e12efc50f: file
+    969363a2-c7b0-47cc-998a-71dbd403ee43: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Home Page'
+  description:
+    -
+      value: 'Home Page'
+  components:
+    -
+      uuid: 959665bd-e524-4161-86ff-ec97ad44e0f6
+      component_id: sdc.hourglass.hero
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e5337414-4d60-4279-a765-fa300c5284db
+            target_type: media
+        cta_url:
+          uri: 'internal:/saas-products'
+          options: {  }
+        heading: 'Master Your Momentum. Scale Without Friction.'
+        cta_text: 'Explore Our Suite'
+        alignment: center
+        tall_image: false
+        description:
+          value: '<p>Hourglass provides high-velocity SaaS platforms and bespoke B2B infrastructure designed to turn operational complexity into a competitive advantage.</p>'
+          format: canvas_html_block
+        heading_tag: h1
+    -
+      uuid: a9976e5b-9861-4039-b357-ae874932a2b3
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: '120'
+        sticky_top: _none
+        padding_top: _none
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: '80'
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: a9976e5b-9861-4039-b357-ae874932a2b3
+      slot: content
+      uuid: 18472b90-214b-41ce-8ffe-2f3c36f2b96f
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'We build the digital backbone for the world’s most ambitious enterprises. From cloud-native SaaS to custom B2B integrations, we ensure your tech stack evolves as fast as the market.'
+        heading_tag: h4
+        eyebrow_text: OVERVIEW
+    -
+      uuid: 68d0e764-e55a-43ed-94e2-f8083d9d599e
+      component_id: sdc.hourglass.overview-section
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 26ab0289-96db-4fd2-bb96-4bd09f3a16d7
+            target_type: media
+        features_label: 'Why Choose Us'
+    -
+      parent_uuid: 68d0e764-e55a-43ed-94e2-f8083d9d599e
+      slot: features
+      uuid: 71a942d1-0cd3-4363-9898-9e2bf1de67cb
+      component_id: sdc.hourglass.overview-feature
+      inputs:
+        icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 40f4cdec-3712-4646-9068-9072a723033b
+            target_type: media
+        label: 'Autonomous Workflow Engines'
+    -
+      parent_uuid: 68d0e764-e55a-43ed-94e2-f8083d9d599e
+      slot: features
+      uuid: abe8163a-a36f-4b6c-8ac7-f0add0b2d4db
+      component_id: sdc.hourglass.overview-feature
+      inputs:
+        icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 5d0f18c8-8dee-4159-9302-a9fc929437c9
+            target_type: media
+        label: 'Predictive Data Analytics'
+    -
+      parent_uuid: 68d0e764-e55a-43ed-94e2-f8083d9d599e
+      slot: features
+      uuid: 58698536-1d1a-4f7d-b1bc-a4492227fb39
+      component_id: sdc.hourglass.overview-feature
+      inputs:
+        icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: fd739e5d-a52c-404e-9b40-ab0977b045f0
+            target_type: media
+        label: 'Zero-Trust Security Architecture'
+    -
+      parent_uuid: 68d0e764-e55a-43ed-94e2-f8083d9d599e
+      slot: features
+      uuid: bc4f94a2-94ea-4153-b09c-61a713dc06a1
+      component_id: sdc.hourglass.overview-feature
+      inputs:
+        icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: f7f672cb-82f6-4f35-a561-c3cba2e667a9
+            target_type: media
+        label: 'Cross-Platform API Synergy'
+    -
+      uuid: 3ccb3413-e7a9-4fff-b851-01b9cb30d600
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        margin_top: '120'
+        padding_top: '120'
+        rounded_top: false
+    -
+      parent_uuid: 3ccb3413-e7a9-4fff-b851-01b9cb30d600
+      slot: content
+      uuid: 149fa59e-d885-47e6-828a-c0c789afdfbe
+      component_id: sdc.hourglass.video-feature
+      inputs: {  }
+    -
+      parent_uuid: 149fa59e-d885-47e6-828a-c0c789afdfbe
+      slot: heading
+      uuid: daa8e9a5-458a-4d4b-9948-57d35090920f
+      component_id: sdc.hourglass.heading
+      inputs:
+        size: h1
+        level: 1
+        heading_text:
+          value: '<p>Redefining Efficiency with Intelligent Automation.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 149fa59e-d885-47e6-828a-c0c789afdfbe
+      slot: description
+      uuid: 75181e35-42ae-4dfc-8651-0bc8e4f0af5d
+      component_id: sdc.hourglass.text
+      inputs:
+        text: 'Move beyond basic automation. Our platform learns your business logic to anticipate bottlenecks before they happen, so your team spends less time firefighting and more time building.'
+    -
+      parent_uuid: 149fa59e-d885-47e6-828a-c0c789afdfbe
+      slot: cta
+      uuid: 2440c0f5-7f92-474f-821b-e880d6ac14fd
+      component_id: sdc.hourglass.button
+      inputs:
+        url: /about-us
+        text: 'Deep Dive into Tech'
+        variant: primary
+        is_nolink: false
+        is_download: false
+        icon_position: left
+        open_in_new_tab: false
+    -
+      parent_uuid: 149fa59e-d885-47e6-828a-c0c789afdfbe
+      slot: media
+      uuid: 87005a04-c1b2-4265-b1b8-e1e52d97b0c3
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 612f683e-9bea-4d05-8079-24de57818233
+            target_type: media
+        video_loop: false
+        video_muted: false
+        youtube_url: 'https://www.youtube.com/watch?v=eo1gKGt6h9M'
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 3ccb3413-e7a9-4fff-b851-01b9cb30d600
+      slot: content
+      uuid: 4feff3fa-795f-4204-b5bc-693c823fc29e
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: '120'
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: 4feff3fa-795f-4204-b5bc-693c823fc29e
+      slot: content
+      uuid: 8ccc4350-ceec-44a3-b1c1-4b7e5b6aa1a7
+      component_id: sdc.hourglass.offerings-slider
+      inputs:
+        cta_url: /products
+        cta_text: 'All Products'
+        section_title: 'Our Offerings'
+        subtitle_left: 'Our solutions are built for organizations that demand precision, performance, and scale.'
+        subtitle_right: 'We invest in the latest technologies to ensure top-tier outcomes for every client we work with.'
+    -
+      parent_uuid: 8ccc4350-ceec-44a3-b1c1-4b7e5b6aa1a7
+      slot: cards
+      uuid: 71894d32-eabc-474f-8325-d85d0ac899f9
+      component_id: sdc.hourglass.offering-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: c913b505-9064-4582-9717-2d83c40ba8b8
+            target_type: media
+        cta_url:
+          uri: 'internal:/saas-products'
+          options: {  }
+        heading: 'SaaS Products'
+        cta_text: 'Explore All'
+        description: 'Modular software tools for project orchestration, resource management, and real-time collaboration.'
+    -
+      parent_uuid: 8ccc4350-ceec-44a3-b1c1-4b7e5b6aa1a7
+      slot: cards
+      uuid: 1e9ba1a6-4495-4824-86de-64cb00e83555
+      component_id: sdc.hourglass.offering-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 601894ce-1ef4-4e18-acad-6f420e0cbbc4
+            target_type: media
+        cta_url:
+          uri: 'internal:/enterprise-solutions'
+          options: {  }
+        heading: 'Enterprise Solutions'
+        cta_text: 'See More'
+        description: 'Dedicated B2B software engineering and digital transformation consulting for global-scale operations.'
+    -
+      parent_uuid: 8ccc4350-ceec-44a3-b1c1-4b7e5b6aa1a7
+      slot: cards
+      uuid: a0ed5a2c-c848-417b-a320-2cc0f13f11f7
+      component_id: sdc.hourglass.offering-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 625a3a69-4777-4741-b4ea-03fe354a20e7
+            target_type: media
+        cta_url:
+          uri: 'internal:/managed-services'
+          options: {  }
+        heading: 'Managed Services'
+        cta_text: 'View All Products'
+        description: 'Ongoing technical support, system monitoring, and proactive software integration management.'
+    -
+      uuid: be423550-545f-49df-9d1a-6e7a683acc42
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        margin_top: '120'
+        padding_top: '120'
+        rounded_top: false
+    -
+      parent_uuid: be423550-545f-49df-9d1a-6e7a683acc42
+      slot: content
+      uuid: 6f6973c7-bcff-4ddf-8080-b67bc1a1af06
+      component_id: sdc.hourglass.key-features
+      inputs:
+        section_title:
+          value: 'What Sets Nexus Apart.'
+          format: canvas_html_block
+    -
+      parent_uuid: 6f6973c7-bcff-4ddf-8080-b67bc1a1af06
+      slot: slides
+      uuid: 346bc6a6-9d10-48d6-af62-381014e0a1ef
+      component_id: sdc.hourglass.key-feature-slide
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: a50d4899-55b8-4740-9d54-9c1aba0174d0
+            target_type: media
+        heading:
+          value: '<p>Built for Stability. Designed for Growth.</p>'
+          format: canvas_html_block
+        stat_label: '99.99% Core Uptime'
+        description:
+          value: '<p>Providing the reliability and resilience needed for mission-critical enterprise environments, with the flexibility to scale on demand.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 6f6973c7-bcff-4ddf-8080-b67bc1a1af06
+      slot: slides
+      uuid: 394ac040-6655-4a65-86b2-44757563fb79
+      component_id: sdc.hourglass.key-feature-slide
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7e983a5d-42b2-44ce-8928-b81fa0b4c4cb
+            target_type: media
+        heading:
+          value: '<p>Trusted Where It Matters Most</p>'
+          format: canvas_html_block
+        stat_label: '40K+ Active Enterprise Deployments'
+        description:
+          value: '<p>From regulated financial institutions to global enterprises, Hourglass is the platform of choice for organisations where performance is non-negotiable and reliability is everything.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: be423550-545f-49df-9d1a-6e7a683acc42
+      slot: content
+      uuid: 4702a73e-da16-4172-b322-da9b41a1e8d6
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: '120'
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: 4702a73e-da16-4172-b322-da9b41a1e8d6
+      slot: content
+      uuid: 97ebe26f-10a8-42e5-8c37-0a668e886c56
+      component_id: sdc.hourglass.tech-insights
+      inputs:
+        section_title:
+          value: 'Tech Insights'
+          format: canvas_html_block
+    -
+      parent_uuid: 97ebe26f-10a8-42e5-8c37-0a668e886c56
+      slot: slides
+      uuid: 7b80be2f-4418-4099-ac00-0c6decba18db
+      component_id: sdc.hourglass.tech-insights-slide
+      inputs:
+        quote_text:
+          value: "<p>Hourglass didn't just give us a new tool, they gave us our time back. Before migrating to Hourglass Core, our team spent 15 hours a week just syncing data between platforms. Now, that process is automated and invisible. It's the first time our tech stack has actually felt like a competitive advantage.</p>"
+          format: canvas_html_block
+        youtube_url: 'https://youtu.be/eo1gKGt6h9M'
+        video_thumbnail:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e8c910a5-ceea-4430-ae0f-dc7cbe83dac0
+            target_type: media
+        quote_author_name:
+          value: '<p>Sarah Jenkins</p>'
+          format: canvas_html_block
+        quote_author_role:
+          value: '<p>VP of Operations at NexaGlobal</p>'
+          format: canvas_html_block
+        video_author_name:
+          value: '<p>Elena Rodriguez</p>'
+          format: canvas_html_block
+        video_author_role:
+          value: '<p>Director of Digital Transformation</p>'
+          format: canvas_html_block
+        quote_author_image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b4c3b7eb-93f8-4e55-9a8f-8c5720eec467
+            target_type: media
+    -
+      parent_uuid: be423550-545f-49df-9d1a-6e7a683acc42
+      slot: content
+      uuid: 006e4af6-ad2e-49b3-b72a-93a1f518b6bd
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        margin_top: '120'
+        padding_top: '120'
+        rounded_top: false
+    -
+      parent_uuid: 006e4af6-ad2e-49b3-b72a-93a1f518b6bd
+      slot: content
+      uuid: 91a134fb-1cec-4899-8929-b6486a24b16f
+      component_id: sdc.hourglass.contact-cta
+      inputs:
+        cta_body:
+          value: '<p>Ready to optimize your operations? Our consultants work one-on-one with your team to audit your current stack and design a roadmap for the future.</p>'
+          format: canvas_html_block
+        section_title:
+          value: 'Your Needs, Our Expertise'
+          format: canvas_html_block
+        cta_button_url: /contact
+        cta_button_label: 'Request a Consult'
+    -
+      parent_uuid: 91a134fb-1cec-4899-8929-b6486a24b16f
+      slot: form
+      uuid: dc6eb71c-87df-48c0-801c-1831073cd13a
+      component_id: block.webform_block
+      inputs:
+        lazy: false
+        label: Webform
+        redirect: false
+        webform_id: contact_cta
+        default_data: ''
+        label_display: '0'
+    -
+      parent_uuid: be423550-545f-49df-9d1a-6e7a683acc42
+      slot: content
+      uuid: 5998b339-5477-4c16-bf33-decbdc6499db
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: '120'
+        sticky_top: _none
+        padding_top: _none
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: '120'
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: 5998b339-5477-4c16-bf33-decbdc6499db
+      slot: content
+      uuid: 06ef42bd-a1c9-486b-bcc1-2ac89176288d
+      component_id: sdc.hourglass.logo-carousel
+      inputs: {  }
+    -
+      parent_uuid: 06ef42bd-a1c9-486b-bcc1-2ac89176288d
+      slot: logos
+      uuid: 1f3ecd45-5460-46f6-958a-f3c3e7c0a871
+      component_id: sdc.hourglass.logo-item
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: d7e33e37-3a41-49f4-882c-53b5728f2b55
+            target_type: media
+    -
+      parent_uuid: 06ef42bd-a1c9-486b-bcc1-2ac89176288d
+      slot: logos
+      uuid: 047298a7-6995-430b-97d1-5881825cc4d1
+      component_id: sdc.hourglass.logo-item
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 560df8a6-b204-41ea-9f82-42029a24185e
+            target_type: media
+    -
+      parent_uuid: 06ef42bd-a1c9-486b-bcc1-2ac89176288d
+      slot: logos
+      uuid: 7ecfd88b-d365-4ce3-8a23-0d5fe186d77c
+      component_id: sdc.hourglass.logo-item
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: f12f9003-4592-45ec-b9c1-eb7d87f2917b
+            target_type: media
+    -
+      parent_uuid: 06ef42bd-a1c9-486b-bcc1-2ac89176288d
+      slot: logos
+      uuid: 0a39c646-b2c6-4227-9106-ad8f723e302b
+      component_id: sdc.hourglass.logo-item
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 969363a2-c7b0-47cc-998a-71dbd403ee43
+            target_type: media
+    -
+      uuid: 3048a471-18ae-4086-ab79-40bfa67079d1
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: 3048a471-18ae-4086-ab79-40bfa67079d1
+      slot: content
+      uuid: 4ddcb346-5a79-4706-9b37-acc066f7339a
+      component_id: block.views_block.news_events-block_1
+      inputs:
+        label: 'News & Events Block'
+        views_label: ''
+        label_display: '0'
+        items_per_page: null
+  path:
+    -
+      alias: /home-page
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

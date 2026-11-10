@@ -1,0 +1,252 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section wrapper ──────────────────────────────────────────────────────── */
+
+.c-article-feature {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 120px;
+}
+
+/* ── Inner row ────────────────────────────────────────────────────────────── */
+
+.c-article-feature__inner {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* ── Image ────────────────────────────────────────────────────────────────── */
+
+.c-article-feature__image {
+  position: relative;
+  width: 512px;
+  height: 512px;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.c-article-feature__image .c-base-media,
+.c-article-feature__image .c-base-media__inner,
+.c-article-feature__image .c-base-media__content,
+.c-article-feature__image picture {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-article-feature__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Right body column ────────────────────────────────────────────────────── */
+
+.c-article-feature__body {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-self: stretch;
+}
+
+/* ── Text block ───────────────────────────────────────────────────────────── */
+
+.c-article-feature__text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ── Date ─────────────────────────────────────────────────────────────────── */
+
+.c-article-feature__date {
+  font-family: var(--Body-B1-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5e5e5e;
+  margin: 0;
+}
+
+/* ── Heading ──────────────────────────────────────────────────────────────── */
+
+/* feature variant: H2 (32px) */
+.c-article-feature__heading {
+  font-family: var(--Heading-H2-fontFamily, "Zalando Sans Expanded", sans-serif);
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 38px;
+  letter-spacing: -0.2px;
+  color: #000;
+  margin: 0;
+  max-width: 750px;
+}
+
+/* blog variant: H4 (32px) */
+.c-article-feature__heading--h4 {
+  font-family: var(--Heading-H4-fontFamily, "Zalando Sans Expanded", sans-serif);
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -0.2px;
+}
+
+/* ── Description ──────────────────────────────────────────────────────────── */
+
+.c-article-feature__description {
+  font-family: var(--Body-B1-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  margin: 0;
+  max-width: 750px;
+}
+
+/* ── Image position ───────────────────────────────────────────────────────── */
+
+.c-article-feature--image-left .c-article-feature__inner {
+  flex-direction: row;
+}
+
+.c-article-feature--image-right .c-article-feature__inner {
+  flex-direction: row-reverse;
+}
+
+
+
+/* ── CTA — base shared styles ────────────────────────────────────────────── */
+
+.c-article-feature__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 48px;
+  font-family: var(--Body-B2-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-decoration: none;
+  white-space: nowrap;
+  align-self: flex-start;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.c-article-feature__cta svg {
+  flex-shrink: 0;
+  display: block;
+}
+
+/* blog variant: orange outline */
+.c-article-feature--blog .c-article-feature__cta,
+.c-article-feature:not([class*="c-article-feature--"]) .c-article-feature__cta {
+  border: 1px solid #f76707;
+  background: transparent;
+  color: #f76707;
+}
+
+.c-article-feature--blog .c-article-feature__cta:hover,
+.c-article-feature:not([class*="c-article-feature--"]) .c-article-feature__cta:hover {
+  background: #f76707;
+  color: #fff;
+}
+
+/* feature variant: glassmorphism */
+.c-article-feature__cta--glass {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+  color: #000;
+}
+
+.c-article-feature__cta--glass:hover {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-article-feature {
+    padding: 0 60px;
+  }
+
+  .c-article-feature__image {
+    width: 420px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-article-feature {
+    padding: 60px 40px;
+  }
+
+  .c-article-feature__inner {
+    gap: 40px;
+  }
+
+  .c-article-feature__image {
+    width: 340px;
+    height: 340px;
+  }
+
+  .c-article-feature__heading {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .c-article-feature__heading--h4 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-article-feature {
+    padding: 48px 24px;
+  }
+
+  .c-article-feature__inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .c-article-feature__image,
+  .c-article-feature--feature .c-article-feature__image {
+    width: 100%;
+    height: 280px;
+  }
+
+  .c-article-feature__heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .c-article-feature__heading--h4 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

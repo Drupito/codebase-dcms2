@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Expertise Card
+group: Cards
+status: stable
+description: 'Tall image card with an orange heading and description — used in the Expertise Section.'
+props:
+  type: object
+  properties:
+    media:
+      $ref: 'json-schema-definitions://canvas.module/image'
+      title: 'Card Image'
+    heading:
+      type: string
+      title: 'Heading'
+      examples:
+        - 'Hybrid Cloud Strategy'
+    description:
+      type: string
+      title: 'Description'
+      examples:
+        - 'We design redundant, high-availability cloud environments that allow your B2B operations to scale across borders without latency or data sovereignty issues.'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

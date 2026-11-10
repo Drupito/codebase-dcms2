@@ -1,0 +1,144 @@
+{#
+/**
+ * @file
+ * Template for the Tech Insights Slide atom.
+ *
+ * Props:
+ * - video_author_name:  Name above the video card.
+ * - video_author_role:  Role above the video card.
+ * - video_thumbnail:    Canvas image entity reference { src, alt }.
+ * - video_media:        Canvas video entity reference for the play button link (mp4).
+ * - youtube_url:        YouTube URL (any format). Takes priority over video_media.
+ * - video_cta_label:    Play button label (default: "Watch Now").
+ * - quote_title:        Title above the quote card.
+ * - quote_subtitle:     Subtitle above the quote card.
+ * - quote_text:         Testimonial body text.
+ * - quote_author_name:  Quoted person's name.
+ * - quote_author_role:  Quoted person's role/company.
+ * - quote_author_image: Canvas image entity reference { src, alt }.
+ */
+#}
+{{ attach_library('hourglass/tech-insights-slide') }}
+
+{# ── Normalise YouTube URL to clean embed URL (same logic as media.twig) ── #}
+{% set _yt_embed = '' %}
+{% if youtube_url %}
+  {% if 'youtube.com/embed/' in youtube_url %}
+    {% set _yt_embed = youtube_url|split('?')[0] %}
+  {% elseif 'youtube.com/watch' in youtube_url %}
+    {% set _yt_embed = 'https://www.youtube.com/embed/' ~ youtube_url|split('v=')[1]|split('&')[0]|split('#')[0] %}
+  {% elseif 'youtu.be/' in youtube_url %}
+    {% set _yt_embed = 'https://www.youtube.com/embed/' ~ youtube_url|split('youtu.be/')[1]|split('?')[0]|split('#')[0] %}
+  {% elseif 'youtube.com/shorts/' in youtube_url %}
+    {% set _yt_embed = 'https://www.youtube.com/embed/' ~ youtube_url|split('shorts/')[1]|split('?')[0]|split('#')[0] %}
+  {% else %}
+    {% set _yt_embed = youtube_url %}
+  {% endif %}
+{% endif %}
+
+{% set _has_author = quote_author_name or quote_author_role or quote_author_image %}
+{% set _has_quote_content = quote_text or _has_author %}
+{% set _has_any_quote = _has_quote_content or quote_title or quote_subtitle %}
+
+<div class="c-tech-insights-slide{% if not _has_any_quote %} c-tech-insights-slide--full-video{% endif %} {{ extra_classes|default('') }}">
+
+  {# ── Video column ────────────────────────────────────────────────────── #}
+  <div class="c-tech-insights-slide__col">
+
+    {% if video_author_name or video_author_role %}
+      <div class="c-tech-insights-slide__meta-bar">
+        {% if video_author_name %}
+          <span class="c-tech-insights-slide__meta-name">{{ video_author_name|raw }}</span>
+        {% endif %}
+        {% if video_author_role %}
+          <span class="c-tech-insights-slide__meta-role">{{ video_author_role|raw }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="c-tech-insights-slide__video-wrap{% if _yt_embed %} js-ti-yt-wrap{% endif %}"
+         {% if _yt_embed %}data-yt-src="{{ _yt_embed }}"{% endif %}>
+      {% if video_thumbnail %}
+        {% include 'hourglass:media' with {
+          image: video_thumbnail,
+          extra_classes: 'c-tech-insights-slide__video-media'
+        } only %}
+      {% endif %}
+
+      {% set play_label = video_cta_label|default('Watch Now') %}
+      {% if _yt_embed %}
+        <button type="button" class="c-tech-insights-slide__play-btn js-ti-play-btn" aria-label="{{ play_label|striptags }}">
+      {% elseif video_media %}
+        <a href="{{ video_media.src }}" class="c-tech-insights-slide__play-btn" aria-label="{{ play_label|striptags }}">
+      {% else %}
+        <span class="c-tech-insights-slide__play-btn">
+      {% endif %}
+        <span class="c-tech-insights-slide__play-label">{{ play_label|raw }}</span>
+        <span class="c-tech-insights-slide__play-icon" aria-hidden="true">
+<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="42" height="42" rx="21" fill="white"/>
+<path d="M30.5 20.134C31.1667 20.5189 31.1667 21.4811 30.5 21.866L17 29.6603C16.3333 30.0452 15.5 29.564 15.5 28.7942L15.5 13.2058C15.5 12.436 16.3333 11.9548 17 12.3397L30.5 20.134Z" fill="black"/>
+</svg>
+
+        </span>
+      {% if _yt_embed %}
+        </button>
+      {% elseif video_media %}
+        </a>
+      {% else %}
+        </span>
+      {% endif %}
+    </div>
+  </div>
+
+  {# ── Quote / testimonial column ──────────────────────────────────────── #}
+  {% if _has_any_quote %}
+  <div class="c-tech-insights-slide__col">
+
+    <div class="c-tech-insights-slide__meta-bar">
+      {% if quote_title %}
+        <span class="c-tech-insights-slide__meta-name">{{ quote_title|raw }}</span>
+      {% endif %}
+      {% if quote_subtitle %}
+        <span class="c-tech-insights-slide__meta-role">{{ quote_subtitle|raw }}</span>
+      {% endif %}
+    </div>
+
+    <div class="c-tech-insights-slide__quote-card{% if not _has_quote_content %} c-tech-insights-slide__quote-card--empty{% endif %}">
+
+      {% if quote_text %}
+        <blockquote class="c-tech-insights-slide__quote-text">{{ quote_text|raw }}</blockquote>
+      {% endif %}
+
+      {% if quote_text and _has_author %}
+        <div class="c-tech-insights-slide__quote-divider" aria-hidden="true"></div>
+      {% endif %}
+
+      {% if _has_author %}
+        <div class="c-tech-insights-slide__quote-author">
+          {% if quote_author_image %}
+            <div class="c-tech-insights-slide__author-photo-wrap">
+              {% include 'hourglass:media' with {
+                image: quote_author_image,
+                extra_classes: 'c-tech-insights-slide__author-photo'
+              } only %}
+            </div>
+          {% endif %}
+          {% if quote_author_name or quote_author_role %}
+            <div class="c-tech-insights-slide__author-meta">
+              {% if quote_author_name %}
+                <p class="c-tech-insights-slide__author-name">{{ quote_author_name|raw }}</p>
+              {% endif %}
+              {% if quote_author_role %}
+                <p class="c-tech-insights-slide__author-role">{{ quote_author_role|raw }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+  {% endif %}
+
+</div>

@@ -1,0 +1,49 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Value Item
+group: Content
+status: stable
+description: "A single value/feature row with a coloured icon circle, title and description. Stack multiple instances in a column — the divider line is automatic."
+props:
+  type: object
+  properties:
+
+    icon:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: Icon
+      description: "Icon image displayed inside the coloured circle."
+
+    icon_color:
+      type: string
+      title: Icon background colour
+      enum:
+        - primary
+        - primary-mid
+        - accent
+        - light
+      meta:enum:
+        primary:     "Dark teal"
+        primary-mid: "Mid teal (#1C7E6E)"
+        accent:      "Accent green"
+        light:       "Light (#EDF6F5)"
+      default: primary-mid
+
+    title:
+      type: string
+      title: Title
+      examples:
+        - "Integrity"
+
+    description:
+      type: string
+      title: Description
+      contentMediaType: text/html
+      x-formatting-context: inline
+      examples:
+        - "We uphold honesty and transparency in all our actions."
+
+    show_divider:
+      type: boolean
+      title: Show divider
+      description: "Show a horizontal line below this item."
+      default: true

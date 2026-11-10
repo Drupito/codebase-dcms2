@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: b565c36a-6c5e-4d0f-9a9d-35d8a133b385
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    0a9c6c65-46ad-480d-b1cd-bf2203029de1: file
+default:
+  entity_id:
+    -
+      uuid: 0a9c6c65-46ad-480d-b1cd-bf2203029de1
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/young_couple.jpg'
+  x:
+    -
+      value: 3201
+  'y':
+    -
+      value: 1996
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

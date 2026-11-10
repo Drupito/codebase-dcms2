@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 66659c75-262f-42c7-8eb0-3c7b83b90be6
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    6eb35e8b-1cf1-4582-9932-9a5baa82bc12: file
+default:
+  entity_id:
+    -
+      uuid: 6eb35e8b-1cf1-4582-9932-9a5baa82bc12
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://blog-images/blog-ml.jpg'
+  x:
+    -
+      value: 600
+  'y':
+    -
+      value: 450
+  revision_uid:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true

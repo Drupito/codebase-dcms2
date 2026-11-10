@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 30d2c787-6dfc-4f76-9989-f384ea35fb8b
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    6469d0c2-d6e0-46b3-ad50-939beb175f2d: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Card
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 6469d0c2-d6e0-46b3-ad50-939beb175f2d
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

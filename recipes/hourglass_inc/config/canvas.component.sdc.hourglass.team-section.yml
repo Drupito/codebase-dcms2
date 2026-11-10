@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: 0ce1c88df6b19ea6
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        section_title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Marketing & Sales'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        cards:
+          title: 'Team Member Cards'
+          description: 'Place one Team Member Card atom here and duplicate it as needed.'
+label: 'Team Section'
+id: sdc.hourglass.team-section
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:team-section'

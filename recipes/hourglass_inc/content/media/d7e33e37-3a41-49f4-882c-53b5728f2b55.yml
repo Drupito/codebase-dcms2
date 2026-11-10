@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: d7e33e37-3a41-49f4-882c-53b5728f2b55
+  bundle: image
+  default_langcode: en
+  depends:
+    34d05b50-1e59-439e-8057-c0006481f482: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: fudan-university.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: fudan-university
+      title: ''
+      width: 200
+      height: 200
+      entity: 34d05b50-1e59-439e-8057-c0006481f482

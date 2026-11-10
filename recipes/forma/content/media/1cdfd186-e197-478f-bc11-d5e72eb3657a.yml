@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1cdfd186-e197-478f-bc11-d5e72eb3657a
+  bundle: image
+  default_langcode: en
+  depends:
+    72f642ec-6212-434e-9984-26ec3b4f11d8: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: sadiq-sonalkar-OcRG-NU8kbo-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Silhouettes of people waiting in a dimly lit train station with bright windows'
+      title: ''
+      width: 1920
+      height: 1440
+      entity: 72f642ec-6212-434e-9984-26ec3b4f11d8

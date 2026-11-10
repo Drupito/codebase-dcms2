@@ -1,0 +1,51 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: c25bb267-2b40-4a07-9754-3a1dda9d6a63
+  bundle: plans
+  default_langcode: en
+  depends:
+    c43f04d0-6a6c-4d33-a434-c69ce0961620: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Car Insurance'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /car-insurance
+      langcode: en
+  field_body:
+    -
+      value: '<h2>About Car Insurance</h2><p>Car insurance helps safeguard you from the financial impact of accidents, vehicle damage, theft, and third-party liabilities. Whether you''re driving to work, taking a family trip, or running daily errands, having the right insurance coverage provides peace of mind every time you get behind the wheel.</p><p>At Goodwell Insurance, we offer flexible car insurance solutions designed to fit different vehicles, driving habits, and budgets. Our goal is to make insurance simple, affordable, and dependable so you can focus on the journey ahead.</p><h2>What''s Included</h2><ul><li data-list-item-id="e76566acdd61cc2c9ef0142355e4ce478">Coverage for accidental damage and collisions</li><li data-list-item-id="e466f18d8d37f3f43ada7e826bac13644">Protection against theft and vandalism</li><li data-list-item-id="e49762f291217e56efe8c2abd6311ca15">Fire and natural disaster coverage</li><li data-list-item-id="e1fb0bd31bd2b1bed8354e2bdbc6da22e">Third-party liability protection</li><li data-list-item-id="eb860e15458ada81dd4b54a10cd8236bc">Personal accident cover</li><li data-list-item-id="e782afee72ecdcfd760edf477271b461c">Cashless repairs at network garages</li><li data-list-item-id="ee2cc1c96f5c7ab42e4d701eb4c628170">No Claim Bonus benefits</li><li data-list-item-id="eabdf8e4fb2e3826b96e98645d39285ad">24/7 roadside assistance options</li><li data-list-item-id="e2fc040e4ae0b45d364df9d5055d5707d">Fast and simple claims process</li><li data-list-item-id="e837f025e0a3f69617bb365c113b05162">Easy online policy management</li></ul><h2>How It Works</h2><ol><li data-list-item-id="e601bc2eff8ef97b9ef4952aab64d6810">Choose a coverage plan that suits your vehicle.</li><li data-list-item-id="e004d3050ace3cc8e4807c64009dca5d2">Provide basic vehicle and driver information.</li><li data-list-item-id="eeada25e3ff080df0381552e9b5cf9664">Review available benefits and optional add-ons.</li><li data-list-item-id="e6a79dbaea027eb8bd9c35c105780bd14">Complete your policy purchase.</li><li data-list-item-id="eb17898aec5b83940962d8d618aa4338b">Enjoy protection and support whenever you need it.</li></ol><h2>Why It Matters</h2><p>Unexpected accidents and vehicle damage can lead to costly repairs and financial stress. Car insurance helps protect your savings while ensuring you''re prepared for unforeseen situations. With comprehensive coverage and reliable support, you can drive confidently knowing you''re protected.</p><h2>Why Choose Goodwell Insurance</h2><ul><li data-list-item-id="e0f259c5646fbbaf0589ed954649004d4">Flexible coverage options</li><li data-list-item-id="e0fb23a7e4fd622fb1f2cfc59f80268d7">Competitive premiums</li><li data-list-item-id="e5ae9e33278a69d0bcda96058a7ad0c08">Transparent policy terms</li><li data-list-item-id="eca3ec27184c125d14e514c3c39aafde5">Quick claim assistance</li><li data-list-item-id="e9ed0b667385ea79413b1575bf981527b">Trusted repair network</li><li data-list-item-id="ee81b624eb6f0c787a572e1bb250ca5eb">Dedicated customer support</li><li data-list-item-id="e57efb8d6ae24078d4315ffe75aa77762">Convenient online services</li></ul><h2>Get Started</h2><p>Protect your vehicle today with a car insurance plan designed around your needs. Get a quote and find the coverage that''s right for you.</p>'
+      format: content_format
+      summary: 'Protect your vehicle and your finances with reliable coverage against accidents, theft, and unexpected road incidents.'
+  field_button:
+    -
+      uri: 'internal:/'
+      title: 'View Details'
+      options: {  }
+  field_content:
+    -
+      value: '<p>Protect your vehicle and your finances with reliable coverage against accidents, theft, and unexpected road incidents.</p>'
+      format: content_format
+  field_featured_image:
+    -
+      entity: c43f04d0-6a6c-4d33-a434-c69ce0961620

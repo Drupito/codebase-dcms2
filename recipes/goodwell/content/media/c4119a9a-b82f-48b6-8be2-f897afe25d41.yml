@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c4119a9a-b82f-48b6-8be2-f897afe25d41
+  bundle: image
+  default_langcode: en
+  depends:
+    1d20ea07-f43e-4597-94c6-38652e700f19: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: girl_in_yellow.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Gir in yellow image'
+      title: ''
+      width: 80
+      height: 80
+      entity: 1d20ea07-f43e-4597-94c6-38652e700f19

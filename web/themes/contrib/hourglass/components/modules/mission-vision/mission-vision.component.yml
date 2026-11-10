@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Mission Vision
+group: Organisms
+status: stable
+description: 'Stacked glassmorphism cards section for Mission, Vision, and Philosophy content.'
+props:
+  type: object
+  properties:
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  items:
+    title: 'Mission/Vision Items'
+    description: 'Mission Vision Item atoms'

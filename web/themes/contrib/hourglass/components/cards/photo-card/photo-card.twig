@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Template for the Photo Card atom.
+ *
+ * Props:
+ * - media: Canvas image object { src, alt, width, height }.
+ * - caption: Optional text caption displayed below the image.
+ */
+#}
+{{ attach_library('hourglass/photo-card') }}
+
+<div class="c-photo-card {{ extra_classes|default('') }}">
+  {% if media %}
+    <div class="c-photo-card__image">
+      {% include 'hourglass:media' with {
+        image: media,
+        extra_classes: 'c-photo-card__media'
+      } %}
+    </div>
+  {% endif %}
+
+  {% if caption %}
+    <p class="c-photo-card__caption">{{ caption }}</p>
+  {% endif %}
+</div>

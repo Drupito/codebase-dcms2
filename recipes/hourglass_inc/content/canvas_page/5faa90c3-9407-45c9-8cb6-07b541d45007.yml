@@ -1,0 +1,943 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 5faa90c3-9407-45c9-8cb6-07b541d45007
+  default_langcode: en
+  depends:
+    3ee355fb-7433-4eb2-884e-d05840457d61: file
+    7a9d58f7-75cc-4600-a0e9-d6e888a547bf: media
+    29b3d4ef-d225-4ac1-9d0d-11c810573589: file
+    e271c9f8-cd6c-4e49-be1e-e960e86c65a3: media
+    aba3e0ed-12f6-42c1-ac94-b2a4047ff104: file
+    dd3e5833-f3ce-49a5-ae1b-684eb24061db: media
+    b5bdd00d-52ce-4ecf-814c-4822e6327c85: file
+    9d5ca260-5333-45da-b0ef-80ce4081219c: media
+    95d1a6a2-eab9-49bc-8b11-558d89a7bf60: file
+    76abcc85-c8df-45bc-a743-0d6c46c11926: media
+    3baaf7d5-cb67-44de-987b-c64e67b3ff8c: file
+    419ed671-a775-425f-aee0-c9e63c415555: media
+    514b9c70-60fb-498d-8d2c-e1da8eddb869: file
+    a27e0a74-5a4e-4446-8c90-7b42c69ea41d: media
+    966480ce-3cce-4690-9c2b-65db1b2d7362: file
+    65e1859f-7ba3-457b-b35d-f38e2edf76f6: media
+    e0a3d8ad-5c9c-465f-91ec-3412361a9126: file
+    30c9c36f-f0bc-42b0-b207-b5ef1bf24ff3: media
+    87615a1f-66af-4ae3-af5c-20411a4ec481: file
+    fd796e10-e77a-48dd-89af-8ad046ffc139: media
+    f91682cf-63fa-41a1-b3c3-f807a85eac21: file
+    23a39244-9d5f-40a7-bd1d-d85a2e452cd9: media
+    a97c2d93-9bb4-4350-8c8b-ba9631f40bc5: file
+    7e983a5d-42b2-44ce-8928-b81fa0b4c4cb: media
+    8c7addff-66eb-4cb4-a6eb-2768d404ab2c: file
+    bc706e89-78ce-4532-9562-22d721c6c888: media
+    cae1773a-903e-45dd-ad56-71ad423fc141: file
+    ee41620e-fa15-4c68-bc58-b3bf845869c8: media
+    1eb0b0a3-0092-4bdb-a206-fcc80f81989f: file
+    c913b505-9064-4582-9717-2d83c40ba8b8: media
+    6e28e8c0-c063-4e02-90b0-3f4eb9f7a68f: file
+    215a6a5c-8cff-4965-9ba7-f22f86010367: media
+    02862c4f-5767-40f7-b183-c3faf9656926: file
+    283d5b78-29c4-4e96-b8d6-47c383a56444: media
+    74877fde-c469-4ffe-bc7b-a54712f2e286: file
+    8d8122bc-092e-4017-907a-fcf1572db9e3: media
+    c6d5ba04-465d-494d-a64a-d35dca08f4e9: file
+    027f4d09-4a21-4dad-a5c2-8d19f6876232: media
+    68b5caa8-594c-4623-a7f8-3d5a7aa167c3: file
+    cf8019a3-ef69-48a5-b22c-fd126eae8aac: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Enterprise Solutions'
+  description:
+    -
+      value: 'Managed Services'
+  components:
+    -
+      uuid: 19ee4e3c-74fd-4341-8dc3-08e2d9776cae
+      component_id: sdc.hourglass.hero
+      inputs:
+        label: 'HOURGLASS ENTERPRISE SOLUTIONS'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7a9d58f7-75cc-4600-a0e9-d6e888a547bf
+            target_type: media
+        cta_url:
+          uri: 'internal:/contact'
+          options: {  }
+        heading: 'Built for the Complexity of Global Business.'
+        cta_text: 'Start a Conversation'
+        alignment: left
+        tall_image: true
+        description:
+          value: '<p>Dedicated B2B software engineering and digital transformation consulting designed for organisations operating at global scale — where off-the-shelf solutions stop working and bespoke thinking becomes a competitive necessity.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: c58ff1b9-2875-4a7a-93bd-afe0182e46fb
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+    -
+      parent_uuid: c58ff1b9-2875-4a7a-93bd-afe0182e46fb
+      slot: content
+      uuid: cb4ed469-e600-4090-94ec-053eced92ef8
+      component_id: sdc.hourglass.anchor-navigation
+      inputs: {  }
+    -
+      parent_uuid: cb4ed469-e600-4090-94ec-053eced92ef8
+      slot: links
+      uuid: 2ca248b2-7c64-4749-8bc7-8a41c666bca9
+      component_id: sdc.hourglass.anchor-nav-link
+      inputs:
+        url: '#product'
+        title: Product
+    -
+      parent_uuid: cb4ed469-e600-4090-94ec-053eced92ef8
+      slot: links
+      uuid: 66fe9665-e1e6-49c6-b1b7-f78616347aae
+      component_id: sdc.hourglass.anchor-nav-link
+      inputs:
+        url: '#how-it-works'
+        title: 'How it Works'
+    -
+      parent_uuid: cb4ed469-e600-4090-94ec-053eced92ef8
+      slot: links
+      uuid: 6009cdb6-5bc2-4f34-9871-04b1c8c7327e
+      component_id: sdc.hourglass.anchor-nav-link
+      inputs:
+        url: '#applications'
+        title: Applications
+    -
+      parent_uuid: cb4ed469-e600-4090-94ec-053eced92ef8
+      slot: links
+      uuid: f958aa67-08c4-4e44-b250-f4678eb8cd6e
+      component_id: sdc.hourglass.anchor-nav-link
+      inputs:
+        url: '#downloads'
+        title: Downloads
+    -
+      parent_uuid: cb4ed469-e600-4090-94ec-053eced92ef8
+      slot: links
+      uuid: 386ec953-dfde-4984-84b1-cc8cc77fdde2
+      component_id: sdc.hourglass.anchor-nav-link
+      inputs:
+        url: '#faq'
+        title: FAQ
+    -
+      uuid: fea7653f-4e0e-4da6-9bb7-614d4971bf03
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        margin_top: '120'
+        rounded_top: false
+    -
+      parent_uuid: fea7653f-4e0e-4da6-9bb7-614d4971bf03
+      slot: content
+      uuid: 0a034694-c543-48ad-bdd2-39fdd983f3f6
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Data Without Borders. Insights Without Effort.'
+        description:
+          value: '<p>Most enterprise platforms create silos; Nexus dissolves them. By aggregating live data from every department into a high-fidelity visualization engine, Nexus provides executive clarity that used to take weeks to compile. It isn’t just about seeing what happened—it’s about understanding what’s next.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: 8975a505-6428-48fb-9730-16c46ab65ebf
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: '80'
+        sticky_top: _none
+        padding_top: _none
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: 8975a505-6428-48fb-9730-16c46ab65ebf
+      slot: content
+      uuid: e83c6c9b-d257-4344-bdd6-555d9f923a01
+      component_id: sdc.hourglass.tech-insights
+      inputs: {  }
+    -
+      parent_uuid: e83c6c9b-d257-4344-bdd6-555d9f923a01
+      slot: slides
+      uuid: 853b87a1-2876-4e15-bdcf-d9b34713e151
+      component_id: sdc.hourglass.tech-insights-slide
+      inputs:
+        youtube_url: 'https://youtu.be/eo1gKGt6h9M'
+        video_thumbnail:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e271c9f8-cd6c-4e49-be1e-e960e86c65a3
+            target_type: media
+    -
+      uuid: bf5ba118-a63e-4e50-a8b8-7ee1f35da679
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        anchor_id: product
+        container: full
+        background: _none
+        margin_top: '120'
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: bf5ba118-a63e-4e50-a8b8-7ee1f35da679
+      slot: content
+      uuid: 52163c64-5010-46c7-80a8-b3a6c3bb4bb1
+      component_id: sdc.hourglass.article-feature
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: dd3e5833-f3ce-49a5-ae1b-684eb24061db
+            target_type: media
+        heading: 'Digital Transformation Strategy'
+        variant: feature
+        description: 'Transformation without a strategy is just expensive experimentation. Our enterprise consultants work with your leadership team to map your current technology landscape, define a clear target state, and build a phased roadmap that delivers measurable progr'
+    -
+      uuid: 89797b2e-c485-48ff-9e3d-10a6107b7035
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        margin_top: '40'
+        rounded_top: false
+        margin_bottom: '40'
+    -
+      parent_uuid: 89797b2e-c485-48ff-9e3d-10a6107b7035
+      slot: content
+      uuid: 323d1c6c-4409-4a41-8b09-3524ac3b75fc
+      component_id: sdc.hourglass.article-feature
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 9d5ca260-5333-45da-b0ef-80ce4081219c
+            target_type: media
+        heading: 'Bespoke B2B Software Engineering'
+        variant: feature
+        description: 'When your operational complexity outgrows what the market offers, we build. Our engineering teams design and deliver custom B2B software solutions from the ground up, built around your workflows, your integrations, and your scale requirements.'
+        image_position: right
+    -
+      uuid: e02c8cb8-7866-43ac-aedc-613033e3be91
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: e02c8cb8-7866-43ac-aedc-613033e3be91
+      slot: content
+      uuid: b77cdffa-852a-4f06-85e5-fcbb1f2086b0
+      component_id: sdc.hourglass.article-feature
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 76abcc85-c8df-45bc-a743-0d6c46c11926
+            target_type: media
+        heading: 'Global Operations Integration'
+        variant: feature
+        description: 'Running operations across multiple countries, jurisdictions, and time zones creates integration challenges that standard software cannot solve. We architect the connective tissue between your global systems, ensuring data, decisions, and processes flow.'
+        image_position: left
+    -
+      uuid: 142f9c44-0857-45e3-81f5-c9be5be46558
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        anchor_id: how-it-works
+        container: full
+        background: white-translucent
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '96'
+    -
+      parent_uuid: 142f9c44-0857-45e3-81f5-c9be5be46558
+      slot: content
+      uuid: 00cff4da-1bf6-4aed-bcb4-7295d3e4901e
+      component_id: sdc.hourglass.process-steps
+      inputs:
+        heading: 'Technical Specifications & Integrity'
+        subtitle: 'Our enterprise solutions are engineered to the highest technical standards — built to handle the data volumes, compliance requirements, and operational complexity of global-scale organisations.'
+        body_text: 'Every engagement is governed by a rigorous delivery framework with defined milestones, documented architecture decisions, and independent quality assurance at every stage.'
+    -
+      parent_uuid: 00cff4da-1bf6-4aed-bcb4-7295d3e4901e
+      slot: steps
+      uuid: a948aacd-0b72-4f61-bf13-f226665037d4
+      component_id: sdc.hourglass.process-step
+      inputs:
+        title: 'Architecture Review'
+        description: 'Independent technical review at every major project milestone'
+        step_number: '01'
+    -
+      parent_uuid: a948aacd-0b72-4f61-bf13-f226665037d4
+      slot: icon
+      uuid: ea1929e9-e340-4cfa-822a-c40c5053f10f
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 419ed671-a775-425f-aee0-c9e63c415555
+            target_type: media
+        video_loop: false
+        video_muted: false
+        youtube_url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 00cff4da-1bf6-4aed-bcb4-7295d3e4901e
+      slot: steps
+      uuid: 4c2c151e-e012-4779-8f95-120729d3d9b4
+      component_id: sdc.hourglass.process-step
+      inputs:
+        title: Compliance
+        description: 'Delivered to SOC2, GDPR, ISO 27001, and sector-specific standards'
+        step_number: '02'
+    -
+      parent_uuid: 4c2c151e-e012-4779-8f95-120729d3d9b4
+      slot: icon
+      uuid: b1d5c852-f597-4573-b5f6-81ba99e5c8a6
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: a27e0a74-5a4e-4446-8c90-7b42c69ea41d
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 00cff4da-1bf6-4aed-bcb4-7295d3e4901e
+      slot: steps
+      uuid: 5fae9769-19f0-41fe-98d3-3a1a239867ca
+      component_id: sdc.hourglass.process-step
+      inputs:
+        title: Integration
+        description: 'Full compatibility with existing ERP, CRM, and data infrastructure'
+        step_number: '03'
+    -
+      parent_uuid: 5fae9769-19f0-41fe-98d3-3a1a239867ca
+      slot: icon
+      uuid: af9e8608-9e48-4362-b680-b1227c482b4d
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 65e1859f-7ba3-457b-b35d-f38e2edf76f6
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 00cff4da-1bf6-4aed-bcb4-7295d3e4901e
+      slot: steps
+      uuid: a09cab98-eb5e-45e8-b7d6-afabb13cc3a5
+      component_id: sdc.hourglass.process-step
+      inputs:
+        title: 'Delivery Model'
+        description: 'Agile delivery with fixed-scope or time-and-materials engagement options'
+        step_number: '04'
+    -
+      parent_uuid: a09cab98-eb5e-45e8-b7d6-afabb13cc3a5
+      slot: icon
+      uuid: fd79ae69-2c6a-4309-91ea-1a681f7dc3c0
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 30c9c36f-f0bc-42b0-b207-b5ef1bf24ff3
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      uuid: f40f006e-8835-41ca-886d-816200ec05ef
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        anchor_id: applications
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: f40f006e-8835-41ca-886d-816200ec05ef
+      slot: content
+      uuid: a9182bbf-fcff-4dcb-91cf-2e2d9953f055
+      component_id: sdc.hourglass.key-features
+      inputs:
+        section_title:
+          value: 'Enterprise Engineering. No Compromises.'
+          format: canvas_html_block
+    -
+      parent_uuid: a9182bbf-fcff-4dcb-91cf-2e2d9953f055
+      slot: slides
+      uuid: 1dffefe8-c557-448f-abe2-ddcebf543336
+      component_id: sdc.hourglass.key-feature-slide
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: fd796e10-e77a-48dd-89af-8ad046ffc139
+            target_type: media
+        heading:
+          value: '<p>Strategy Before a Single Line of Code</p>'
+          format: canvas_html_block
+        stat_label: '100% Discovery-Led Delivery'
+        description:
+          value: "<p>We don't start building until we fully understand your business. Every enterprise engagement begins with a structured discovery phase mapping your processes, your pain points, and your goals so the solution we deliver is exactly what your organisation actually needs.</p>"
+          format: canvas_html_block
+    -
+      parent_uuid: a9182bbf-fcff-4dcb-91cf-2e2d9953f055
+      slot: slides
+      uuid: 0b72041d-35c3-44e2-8fa6-be9544f52dbf
+      component_id: sdc.hourglass.key-feature-slide
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 23a39244-9d5f-40a7-bd1d-d85a2e452cd9
+            target_type: media
+        heading:
+          value: '<p>Engineering Teams That Think Like Consultants</p>'
+          format: canvas_html_block
+        stat_label: 'Cross-Functional Delivery Teams'
+        description:
+          value: "<p>Our engineers don't just write code, they understand business context. They challenge requirements, flag risks, and make architecture decisions with your long-term operational needs in mind, not just the immediate sprint goal.</p>"
+          format: canvas_html_block
+    -
+      parent_uuid: a9182bbf-fcff-4dcb-91cf-2e2d9953f055
+      slot: slides
+      uuid: a988e778-a7d1-48d2-a021-ba22dc4fba4f
+      component_id: sdc.hourglass.key-feature-slide
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7e983a5d-42b2-44ce-8928-b81fa0b4c4cb
+            target_type: media
+        heading:
+          value: '<p>Delivered on Time. Every Time</p>'
+          format: canvas_html_block
+        stat_label: '94% On-Time Delivery Rate'
+        description:
+          value: '<p>Enterprise projects have a reputation for running over budget and behind schedule. Our structured delivery methodology, milestone governance, and escalation protocols are specifically designed to prevent that, and our track record proves it.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: a9182bbf-fcff-4dcb-91cf-2e2d9953f055
+      slot: slides
+      uuid: 8c30cf8d-fcf6-461d-9491-a27000fb5440
+      component_id: sdc.hourglass.key-feature-slide
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7e983a5d-42b2-44ce-8928-b81fa0b4c4cb
+            target_type: media
+        heading:
+          value: '<p>Knowledge Transfer Built In</p>'
+          format: canvas_html_block
+        stat_label: 'Full IP and Documentation Ownership'
+        description:
+          value: '<p>When we finish a project, your team owns it completely. Every Hourglass enterprise engagement includes structured knowledge transfer, full technical documentation, and handover sessions, so you are never dependent on us to run what we built.</p>'
+          format: canvas_html_block
+    -
+      uuid: dfd314ff-9184-4801-9408-0eca54d4c383
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        anchor_id: downloads
+        container: full
+        background: white-translucent
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: dfd314ff-9184-4801-9408-0eca54d4c383
+      slot: content
+      uuid: 01ce2d0d-7dd0-4b1c-941c-0410b0360dfb
+      component_id: sdc.hourglass.image-gallery
+      inputs:
+        heading: 'Enterprise Solutions. Global Scale.'
+    -
+      parent_uuid: 01ce2d0d-7dd0-4b1c-941c-0410b0360dfb
+      slot: items
+      uuid: 1162c731-307e-4fa0-aae4-4d2cd2829bb8
+      component_id: sdc.hourglass.gallery-item
+      inputs:
+        caption: 'A global transformation engagement in progress, our cross-functional team working alongside client leadership to redesign a core operational workflow across 14 markets.'
+        thumb_label: 'A global transformation engagement in progress, our cross-functional team working alongside client leadership to redesign a core operational workflow across 14 markets.'
+    -
+      parent_uuid: 1162c731-307e-4fa0-aae4-4d2cd2829bb8
+      slot: thumbnail
+      uuid: 76986f60-d00a-451f-9f92-7bd6b3ae957d
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: bc706e89-78ce-4532-9562-22d721c6c888
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 01ce2d0d-7dd0-4b1c-941c-0410b0360dfb
+      slot: items
+      uuid: da01a54e-1618-4ce2-b8a6-a52ee5ad99f7
+      component_id: sdc.hourglass.gallery-item
+      inputs:
+        caption: 'Architecture design session, mapping the integration layer for a multi-entity ERP consolidation project.'
+        thumb_label: 'Architecture design session, mapping the integration layer for a multi-entity ERP consolidation project.'
+    -
+      parent_uuid: da01a54e-1618-4ce2-b8a6-a52ee5ad99f7
+      slot: thumbnail
+      uuid: ea496e60-28c6-4c92-9369-34c053649bdc
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: ee41620e-fa15-4c68-bc58-b3bf845869c8
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 01ce2d0d-7dd0-4b1c-941c-0410b0360dfb
+      slot: items
+      uuid: a3d62cea-c83a-44be-aa79-95beba936d4c
+      component_id: sdc.hourglass.gallery-item
+      inputs:
+        caption: 'Digital transformation roadmap, a structured 24-month programme designed to modernise a legacy operational stack.'
+        thumb_label: 'Digital transformation roadmap, a structured 24-month programme designed to modernise a legacy operational stack.'
+    -
+      parent_uuid: a3d62cea-c83a-44be-aa79-95beba936d4c
+      slot: thumbnail
+      uuid: 506739f3-96bc-4a91-aa51-b3709f2eb923
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: bc706e89-78ce-4532-9562-22d721c6c888
+            target_type: media
+        video_loop: false
+        video_muted: false
+        youtube_url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: a3d62cea-c83a-44be-aa79-95beba936d4c
+      slot: thumbnail
+      uuid: 239a34d4-0672-4bda-a9e1-eef8bc567754
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: fd796e10-e77a-48dd-89af-8ad046ffc139
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 01ce2d0d-7dd0-4b1c-941c-0410b0360dfb
+      slot: items
+      uuid: ea704f7f-daf4-46e4-a783-8b70d630e3d3
+      component_id: sdc.hourglass.gallery-item
+      inputs:
+        caption: "Client handover session, transferring full technical ownership of a bespoke enterprise platform to the client's internal team."
+        thumb_label: "Client handover session, transferring full technical ownership of a bespoke enterprise platform to the client's internal team."
+    -
+      parent_uuid: ea704f7f-daf4-46e4-a783-8b70d630e3d3
+      slot: thumbnail
+      uuid: c34b93f0-f36a-4238-874c-c033f270053e
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: bc706e89-78ce-4532-9562-22d721c6c888
+            target_type: media
+        video_loop: false
+        video_muted: false
+        youtube_url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: ea704f7f-daf4-46e4-a783-8b70d630e3d3
+      slot: thumbnail
+      uuid: 0727b2e7-9b8a-4de5-bf1d-37f18b999903
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: c913b505-9064-4582-9717-2d83c40ba8b8
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      uuid: 36ab6234-4904-4068-a02d-3672253e1236
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: 36ab6234-4904-4068-a02d-3672253e1236
+      slot: content
+      uuid: b1233bbc-3cee-4ff5-af47-a261d7ffb8a2
+      component_id: sdc.hourglass.benefits-slider
+      inputs:
+        heading: 'Why Choose Hourglass for Enterprise Solutions?'
+    -
+      parent_uuid: b1233bbc-3cee-4ff5-af47-a261d7ffb8a2
+      slot: cards
+      uuid: 1f32270f-1536-411e-b513-23fb8fc3b76a
+      component_id: sdc.hourglass.benefit-card
+      inputs:
+        heading: "We've Solved This Before"
+        description: 'Enterprise transformation projects fail most often because the delivery partner lacks relevant experience. Hourglass has delivered complex B2B engineering and transformation programmes across 15+ industries, which means we bring proven patterns.'
+    -
+      parent_uuid: 1f32270f-1536-411e-b513-23fb8fc3b76a
+      slot: media
+      uuid: 22142c02-5899-4b75-8e2e-e1e1610970fb
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 215a6a5c-8cff-4965-9ba7-f22f86010367
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: b1233bbc-3cee-4ff5-af47-a261d7ffb8a2
+      slot: cards
+      uuid: e62a37f2-454e-4661-8dc0-ed994e7c7310
+      component_id: sdc.hourglass.benefit-card
+      inputs:
+        heading: 'We Align to Business Outcomes, Not Billable Hours'
+        description: 'Our enterprise engagements are structured around the outcomes your organisation needs to achieve, not the number of hours our team works. Every milestone has a defined business objective, and we measure our success by whether you achieve yours.'
+    -
+      parent_uuid: e62a37f2-454e-4661-8dc0-ed994e7c7310
+      slot: media
+      uuid: 9d1c6be1-ebde-4fdd-8932-4c89d4861d78
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 283d5b78-29c4-4e96-b8d6-47c383a56444
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: b1233bbc-3cee-4ff5-af47-a261d7ffb8a2
+      slot: cards
+      uuid: 82db696a-04ac-4372-87c5-231746044715
+      component_id: sdc.hourglass.benefit-card
+      inputs:
+        heading: 'Senior Expertise at Every Level'
+        description: "We don't staff enterprise projects with junior consultants and one senior lead. Every Hourglass enterprise engagement is staffed with experienced practitioners at every level, from the architect to the analyst, because complexity demands expertise through"
+    -
+      parent_uuid: 82db696a-04ac-4372-87c5-231746044715
+      slot: media
+      uuid: 97e08b47-541d-4bde-bdc5-26ed2519e79a
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 65e1859f-7ba3-457b-b35d-f38e2edf76f6
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      uuid: c2426106-f79d-4399-a88d-d51b371bf54a
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        anchor_id: faq
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: c2426106-f79d-4399-a88d-d51b371bf54a
+      slot: content
+      uuid: cd4d9410-4f7c-4536-95f9-743f3e4f7a98
+      component_id: sdc.hourglass.faq-section
+      inputs:
+        heading: 'Frequently Asked Questions'
+    -
+      parent_uuid: cd4d9410-4f7c-4536-95f9-743f3e4f7a98
+      slot: items
+      uuid: 4610e8b8-f2eb-475a-bb88-2a38893c73d3
+      component_id: sdc.hourglass.faq-item
+      inputs:
+        answer:
+          value: '<p>We work on digital transformation programmes, bespoke B2B software development, global systems integration, legacy modernisation, and enterprise data architecture projects. Our typical engagement involves organisations with complex operational environments and requirements that standard software products cannot meet.</p>'
+          format: canvas_html_block
+        question: 'What types of enterprise projects does Hourglass take on?'
+    -
+      parent_uuid: 4610e8b8-f2eb-475a-bb88-2a38893c73d3
+      slot: image
+      uuid: 05fd0b6a-7b67-492f-bb53-b518a296ea75
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8d8122bc-092e-4017-907a-fcf1572db9e3
+            target_type: media
+        video_loop: false
+        video_muted: false
+        youtube_url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: cd4d9410-4f7c-4536-95f9-743f3e4f7a98
+      slot: items
+      uuid: 7b256450-8bd2-41cb-8139-7bc855768f8f
+      component_id: sdc.hourglass.faq-item
+      inputs:
+        answer:
+          value: '<p>Yes. We require secure, role-based access to the environments we manage. Our onboarding process includes a detailed access audit to ensure we have exactly the permissions needed, no more, no less, with full documentation of every access point.</p>'
+          format: canvas_html_block
+        question: 'How do you structure enterprise engagements?'
+    -
+      parent_uuid: 7b256450-8bd2-41cb-8139-7bc855768f8f
+      slot: image
+      uuid: d08c3303-d5bc-4880-a1b9-78ea4eee92d5
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8d8122bc-092e-4017-907a-fcf1572db9e3
+            target_type: media
+        video_loop: false
+        video_muted: false
+        youtube_url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: cd4d9410-4f7c-4536-95f9-743f3e4f7a98
+      slot: items
+      uuid: 9df8446a-3f5c-4547-bfca-0081634fd12c
+      component_id: sdc.hourglass.faq-item
+      inputs:
+        answer:
+          value: '<p>Team size is scoped to the engagement. A typical enterprise project runs with a core team of 6 to 12 people including an engagement lead, architects, engineers, and a QA specialist. For larger programmes, we scale accordingly with no reduction in seniority.</p>'
+          format: canvas_html_block
+        question: 'How large are your delivery teams?'
+    -
+      parent_uuid: cd4d9410-4f7c-4536-95f9-743f3e4f7a98
+      slot: items
+      uuid: 5e712994-23f4-4e3c-b99f-6dbcf391a6d2
+      component_id: sdc.hourglass.faq-item
+      inputs:
+        answer:
+          value: '<p>Yes. We regularly operate in embedded or hybrid delivery models, working directly alongside your internal teams, supplementing specific skill gaps, or running parallel workstreams that feed into a common delivery plan.</p>'
+          format: canvas_html_block
+        question: 'Can you work alongside our existing internal teams?'
+    -
+      parent_uuid: 5e712994-23f4-4e3c-b99f-6dbcf391a6d2
+      slot: image
+      uuid: 51b9685d-0f48-4c35-82f1-624595ab2c01
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8d8122bc-092e-4017-907a-fcf1572db9e3
+            target_type: media
+        video_loop: false
+        video_muted: false
+        youtube_url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: cd4d9410-4f7c-4536-95f9-743f3e4f7a98
+      slot: items
+      uuid: 8688b4af-6904-45ca-9f55-c845dfc509e4
+      component_id: sdc.hourglass.faq-item
+      inputs:
+        answer:
+          value: '<p>You do. All intellectual property created during an Hourglass enterprise engagement belongs to the client upon final payment. This is a standard term in our contracts, not an optional add-on.</p>'
+          format: canvas_html_block
+        question: 'Who owns the IP at the end of the project?'
+    -
+      parent_uuid: 8688b4af-6904-45ca-9f55-c845dfc509e4
+      slot: image
+      uuid: e12540fc-4773-45ca-be28-19e8d288bbe2
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8d8122bc-092e-4017-907a-fcf1572db9e3
+            target_type: media
+        video_loop: false
+        video_muted: false
+        youtube_url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: cd4d9410-4f7c-4536-95f9-743f3e4f7a98
+      slot: items
+      uuid: 4a1935f9-a5f3-4de8-8abd-250058a965e0
+      component_id: sdc.hourglass.faq-item
+      inputs:
+        answer:
+          value: "<p>We offer structured post-go-live support as either a time-limited hypercare period or an ongoing managed services arrangement. We don't disappear after launch; we ensure the solution performs as expected and your team is fully capable of running it independently.</p>"
+          format: canvas_html_block
+        question: 'What happens after go-live?'
+    -
+      parent_uuid: 4a1935f9-a5f3-4de8-8abd-250058a965e0
+      slot: image
+      uuid: 2426f663-e8ee-4770-b580-161905cf75ec
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8d8122bc-092e-4017-907a-fcf1572db9e3
+            target_type: media
+        video_loop: false
+        video_muted: false
+        youtube_url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        show_controls: false
+        autoplay_video: false
+    -
+      uuid: 0c1a2723-3457-49af-b8f0-aa8377350560
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        background: white-translucent
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: 0c1a2723-3457-49af-b8f0-aa8377350560
+      slot: content
+      uuid: 5c14fb4b-0136-453d-8aae-930e145d4df2
+      component_id: sdc.hourglass.expertise-section
+      inputs:
+        heading: 'Where Enterprise Solutions Creates the Greatest Impact'
+        description: 'From legacy system overhauls to greenfield platform builds, our enterprise solutions practice operates at the intersection of technology and business strategy, where the decisions are complex and the consequences are significant.'
+    -
+      parent_uuid: 5c14fb4b-0136-453d-8aae-930e145d4df2
+      slot: cards
+      uuid: 36b92f3d-c74c-433c-b445-6d02235b7b08
+      component_id: sdc.hourglass.expertise-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 027f4d09-4a21-4dad-a5c2-8d19f6876232
+            target_type: media
+        heading: 'Legacy System Modernisation'
+        description: 'Aging systems create risk, slow teams down, and make digital growth nearly impossible. We design and execute structured migration programmes that move organisations from legacy infrastructure to modern and scalable architecture.'
+    -
+      parent_uuid: 5c14fb4b-0136-453d-8aae-930e145d4df2
+      slot: cards
+      uuid: b9d53b7b-df35-4324-893d-e77f95a74a91
+      component_id: sdc.hourglass.expertise-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: cf8019a3-ef69-48a5-b22c-fd126eae8aac
+            target_type: media
+        heading: 'Cross-Border Operations Integration'
+        description: 'Expanding across markets creates a proliferation of disconnected systems, inconsistent data, and broken processes. We design the integration architecture that connects your global operations into a coherent, manageable whole, giving leadership a unified w'
+    -
+      uuid: 7f28a835-a3ba-429c-9033-342aabf6ad16
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: default
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: 7f28a835-a3ba-429c-9033-342aabf6ad16
+      slot: content
+      uuid: 323dbea0-2841-4eea-a3bf-8d24f0907c85
+      component_id: sdc.hourglass.contact-cta
+      inputs:
+        cta_body:
+          value: '<p>Ready to optimize your operations? Our consultants work one-on-one with your team to audit your current stack and design a roadmap for the future.</p>'
+          format: canvas_html_block
+        section_title:
+          value: 'Your Needs, Our Expertise'
+          format: canvas_html_block
+        cta_button_url: /contact
+        cta_button_label: 'Request a Consult'
+    -
+      parent_uuid: 323dbea0-2841-4eea-a3bf-8d24f0907c85
+      slot: form
+      uuid: ad898b12-b983-403b-8fe4-69b49ec206cf
+      component_id: block.webform_block
+      inputs:
+        lazy: false
+        label: Webform
+        redirect: false
+        webform_id: contact_cta
+        default_data: ''
+        label_display: '0'
+  path:
+    -
+      alias: /enterprise-solutions
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

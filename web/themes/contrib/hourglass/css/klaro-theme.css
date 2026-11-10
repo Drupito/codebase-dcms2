@@ -1,0 +1,207 @@
+/**
+ * Brand theming for the Klaro consent notice.
+ *
+ * Klaro ships a CSS custom-property theming API in
+ * web/modules/contrib/klaro/css/klaro-override.css, keyed by a
+ * ".klaro-theme-<active theme name>" class it adds automatically (the same
+ * mechanism the module uses for its own .klaro-theme-gin/-olivero/-claro
+ * blocks) — so brand colors/spacing/position plug in here rather than
+ * fighting Klaro's own styles with ad hoc selectors.
+ */
+
+.klaro.klaro-theme-hourglass {
+  --klaro-primary-color: #f76707;
+  --klaro-button-border: 1px solid transparent;
+  --klaro-button-border-radius: 48px;
+  --klaro-button-padding: 10px 24px;
+  --klaro-button-border-hover: 1px solid transparent;
+  --klaro-button-focus-outline: 2px solid #f76707;
+  --klaro-button-focus-outline-offset: 2px;
+  --klaro-dialog-focus-outline: none;
+  --klaro-dialog-focus-box-shadow: 0 0 0 2px #f76707;
+  --border-radius: 20px;
+  --notice-max-width: 90vw;
+  --notice-right: 5vw;
+  --notice-bottom: 24px;
+}
+
+.klaro-theme-hourglass .cookie-notice {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16) !important;
+  background: #fff !important;
+  padding: 24px !important;
+}
+
+.klaro-theme-hourglass .cookie-notice:focus,
+.klaro-theme-hourglass .cookie-notice:focus-visible {
+  outline: none !important;
+  box-shadow:
+    0 0 0 2px #f76707,
+    0 12px 40px rgba(0, 0, 0, 0.16) !important;
+}
+
+.klaro-theme-hourglass .cn-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 32px;
+  padding: 0 !important;
+}
+
+.klaro-theme-hourglass .cn-body::before {
+  content: "";
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  background:
+    #fff
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M21.1071%2015.3039C20.5037%2015.3039%2019.9923%2015.0929%2019.5726%2014.671C19.153%2014.2492%2018.9432%2013.7369%2018.9432%2013.1342C18.9432%2012.5315%2019.1544%2012.0205%2019.5768%2011.6014C19.9991%2011.1822%2020.512%2010.9727%2021.1153%2010.9727C21.7187%2010.9727%2022.2301%2011.1836%2022.6497%2011.6055C23.0694%2012.0274%2023.2792%2012.5397%2023.2792%2013.1424C23.2792%2013.7451%2023.068%2014.256%2022.6456%2014.6752C22.2233%2015.0943%2021.7104%2015.3039%2021.1071%2015.3039ZM23.9044%2022.2897C23.3011%2022.2897%2022.7896%2022.0788%2022.37%2021.6569C21.9504%2021.235%2021.7406%2020.7227%2021.7406%2020.12C21.7406%2019.5173%2021.9518%2019.0064%2022.3741%2018.5872C22.7965%2018.1681%2023.3093%2017.9585%2023.9127%2017.9585C24.516%2017.9585%2025.0275%2018.1694%2025.4471%2018.5913C25.8667%2019.0132%2026.0765%2019.5255%2026.0765%2020.1282C26.0765%2020.7309%2025.8653%2021.2418%2025.443%2021.661C25.0207%2022.0801%2024.5078%2022.2897%2023.9044%2022.2897ZM14.8171%2023.617C14.4208%2023.617%2014.0886%2023.4831%2013.8206%2023.2153C13.5525%2022.9475%2013.4184%2022.6157%2013.4184%2022.2198C13.4184%2021.824%2013.5525%2021.4922%2013.8206%2021.2244C14.0886%2020.9566%2014.4208%2020.8227%2014.8171%2020.8227C15.2134%2020.8227%2015.5456%2020.9566%2015.8137%2021.2244C16.0818%2021.4922%2016.2158%2021.824%2016.2158%2022.2198C16.2158%2022.6157%2016.0818%2022.9475%2015.8137%2023.2153C15.5456%2023.4831%2015.2134%2023.617%2014.8171%2023.617ZM19.005%2032C20.922%2032%2022.7313%2031.6332%2024.4331%2030.8997C26.1348%2030.1662%2027.6209%2029.1649%2028.8914%2027.8958C30.1618%2026.6267%2031.1642%2025.1423%2031.8985%2023.4424C32.6328%2021.7425%2033%2019.9378%2033%2018.0284C33%2015.886%2032.5454%2013.8834%2031.6363%2012.0205C30.7271%2010.1577%2029.5091%208.58003%2027.9822%207.28765C26.4553%205.99527%2024.6953%205.06383%2022.7022%204.49332C20.7091%203.92281%2018.6402%203.84713%2016.4955%204.26628C16.6354%205.31416%2016.5422%206.30381%2016.2158%207.23526C15.8894%208.1667%2015.3941%208.95843%2014.7297%209.61044C14.0653%2010.2624%2013.2669%2010.7398%2012.3345%2011.0425C11.402%2011.3453%2010.4229%2011.4151%209.39723%2011.2521C9.86346%2012.6726%209.60703%2013.9475%208.62795%2015.0768C7.64888%2016.2062%206.46%2016.8291%205.06131%2016.9456C4.87482%2018.9714%205.11376%2020.8925%205.77814%2022.7089C6.44251%2024.5252%207.41576%2026.1203%208.69789%2027.4941C9.98001%2028.8665%2011.5045%2029.9625%2013.2714%2030.7775C15.0382%2031.5925%2016.9494%2032%2019.005%2032Z%22%20fill%3D%22%231A1A1A%22/%3E%3C/svg%3E")
+    center / 24px no-repeat;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* The "We Value / Your Privacy." branded lead-in lives inside the notice
+   description (see klaro.texts.yml consentNotice.description) since Klaro's
+   dedicated title slot doesn't support HTML content, only the description
+   does (library.html_texts: true). */
+.klaro-theme-hourglass .klaro-notice-label {
+  display: block;
+  font-family: "Geist", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #727272;
+}
+
+.klaro-theme-hourglass .klaro-notice-heading {
+  display: block;
+  margin-bottom: 6px;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+  white-space: nowrap;
+}
+
+.klaro-theme-hourglass #id-cookie-notice {
+  flex: 1;
+  margin: 0 !important;
+  font-family: "Geist", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+.klaro-theme-hourglass .cn-ok {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+  flex-shrink: 0;
+  margin-left: auto !important;
+}
+
+.klaro-theme-hourglass .cm-link.cn-learn-more {
+  color: #f76707;
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.klaro-theme-hourglass .cm-link.cn-learn-more:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.klaro-theme-hourglass .cn-buttons {
+  display: flex !important;
+  gap: 16px !important;
+  margin: 0 !important;
+}
+
+.klaro-theme-hourglass .cm-btn {
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 !important;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.klaro-theme-hourglass .cm-btn.cm-btn-success {
+  background: #f76707 !important;
+  color: #fff !important;
+}
+
+.klaro-theme-hourglass .cm-btn.cm-btn-success:hover {
+  background: #d95a05 !important;
+}
+
+.klaro-theme-hourglass .cm-btn.cm-btn-danger.cn-decline {
+  background: transparent !important;
+  color: #1a1a1a !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.klaro-theme-hourglass .cm-btn.cm-btn-danger.cn-decline:hover {
+  background: #f76707 !important;
+  color: #fff !important;
+  border-color: #f76707 !important;
+}
+
+/* Below 1024px Klaro always renders the notice full-width/edge-to-edge
+   (its own hardcoded default, not exposed via CSS variables) — just
+   tidy the padding for that layout. */
+@media (max-width: 1023.98px) {
+  .klaro-theme-hourglass .cookie-notice {
+    padding: 20px !important;
+  }
+}
+
+/* ── "Customize" preferences modal ──────────────────────────────────────── */
+
+.klaro-theme-hourglass .cm-modal,
+.klaro-theme-hourglass .cm-modal p,
+.klaro-theme-hourglass .cm-modal .cm-list-title,
+.klaro-theme-hourglass .cm-modal .cm-required,
+.klaro-theme-hourglass .cm-modal .cm-powered-by {
+  font-family: "Geist", sans-serif;
+}
+
+.klaro-theme-hourglass .cm-modal h1.title {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 8px !important;
+}
+
+.klaro-theme-hourglass .cm-modal .cm-header p {
+  margin-top: 0 !important;
+}
+
+.klaro-theme-hourglass .cm-modal .cm-header {
+  padding: 32px 32px 24px;
+}
+
+.klaro-theme-hourglass .cm-modal .cm-body {
+  padding: 0 32px;
+}
+
+.klaro-theme-hourglass .cm-modal .cm-footer {
+  padding: 24px 32px 32px;
+}
+
+.klaro-theme-hourglass .cm-modal .cm-footer-buttons {
+  justify-content: flex-end !important;
+  gap: 16px;
+}

@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Template for the Logo Item atom.
+ *
+ * Props:
+ * - image: Logo image (Canvas image object).
+ * - label: Optional company name caption.
+ */
+#}
+{{ attach_library('hourglass/logo-item') }}
+
+<div class="c-logo-item {{ extra_classes|default('') }}">
+  {% if image %}
+    {% include 'hourglass:media' with {
+      media: image,
+      extra_classes: 'c-logo-item__image'
+    } %}
+  {% endif %}
+  {% if label %}
+    <span class="c-logo-item__label">{{ label }}</span>
+  {% endif %}
+</div>

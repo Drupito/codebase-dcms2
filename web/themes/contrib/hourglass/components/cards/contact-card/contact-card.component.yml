@@ -1,0 +1,52 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Contact Card
+group: Atoms
+status: stable
+description: 'White rounded card with an illustration, bold title, and either a contact detail (phone/email with icon) or an orange CTA link. Used inside the Contact Cards section.'
+props:
+  type: object
+  properties:
+    media:
+      type: object
+      title: Illustration
+      $ref: 'json-schema-definitions://canvas.module/image'
+      examples:
+        - src: 'https://example.com/contact-illustration.png'
+          alt: ''
+          width: 200
+          height: 200
+    title:
+      type: string
+      title: Title
+      examples:
+        - 'Call us directly'
+        - 'Send us a quote'
+        - 'Get a product demo'
+    icon_type:
+      type: string
+      title: 'Icon Type'
+      description: 'Renders a phone or email icon next to the contact value. Leave empty for the CTA variant.'
+      examples:
+        - 'phone'
+        - 'email'
+    contact_value:
+      type: string
+      title: 'Contact Value'
+      description: 'Phone number or email address shown next to the icon.'
+      examples:
+        - '+49 8821 8210'
+        - 'info@hourglass.com'
+    cta_text:
+      type: string
+      title: 'CTA Text'
+      description: 'Orange bold link label shown instead of a contact icon row (e.g. "Get a demo").'
+      examples:
+        - 'Get a demo'
+    cta_url:
+      type: string
+      title: 'CTA URL'
+      examples:
+        - '/contact'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

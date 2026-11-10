@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section wrapper ──────────────────────────────────────────────────────── */
+
+.c-rules-section {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 120px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* ── Inner content column ─────────────────────────────────────────────────── */
+
+.c-rules-section__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 750px;
+}
+
+/* ── Heading — H3 ─────────────────────────────────────────────────────────── */
+
+.c-rules-section__heading {
+  font-family: var(
+    --Heading-H3-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 48px;
+  letter-spacing: -0.3px;
+  color: #000;
+  margin: 0;
+}
+
+/* ── Subtitle — B1, orange ────────────────────────────────────────────────── */
+
+.c-rules-section__subtitle {
+  font-family: var(--Body-B1-fontFamily, "Geist", sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #f76707;
+  margin: 0;
+}
+
+/* ── Description — B1, black ──────────────────────────────────────────────── */
+
+.c-rules-section__description {
+  font-family: var(--Body-B1-fontFamily, "Geist", sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #000;
+}
+
+.c-rules-section__description p {
+  margin: 0;
+}
+.c-rules-section__description p + p {
+  margin-top: 1em;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-rules-section {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-rules-section {
+    padding: 80px 60px;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .c-rules-section__heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-rules-section {
+    padding: 60px 24px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .c-rules-section__heading {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .c-rules-section__subtitle,
+  .c-rules-section__description {
+    font-size: 16px;
+  }
+}

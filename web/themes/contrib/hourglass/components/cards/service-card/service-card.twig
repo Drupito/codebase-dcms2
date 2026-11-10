@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Template for the Service Card atom.
+ *
+ * Props:
+ * - media: Canvas image for the card image.
+ * - heading: Card title.
+ * - description: Card body text.
+ * - cta_text: Label for the pill button (defaults to "Explore").
+ * - cta_url: Link target for the pill button.
+ */
+#}
+{{ attach_library('hourglass/service-card') }}
+
+<div class="c-service-card {{ extra_classes|default('') }}">
+
+  {% if media %}
+    <div class="c-service-card__image">
+      {% include 'hourglass:media' with { image: media, extra_classes: 'c-service-card__media' } %}
+    </div>
+  {% endif %}
+
+  <div class="c-service-card__content">
+
+    {% if heading %}
+      <h5 class="c-service-card__heading">{{ heading }}</h5>
+    {% endif %}
+
+    {% if description %}
+      <p class="c-service-card__description">{{ description }}</p>
+    {% endif %}
+
+    {% if cta_url %}
+      <a href="{{ cta_url }}" class="c-service-card__cta">
+        <span>{{ cta_text|default('Explore') }}</span>
+        <svg class="c-service-card__cta-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    {% endif %}
+
+  </div>
+
+</div>

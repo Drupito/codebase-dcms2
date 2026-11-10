@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Process Steps — horizontal numbered-step section.
+ *
+ * Props: heading, subtitle, body_text, extra_classes.
+ * Slots: steps (Process Step cards).
+ */
+#}
+{{ attach_library('hourglass/process-steps') }}
+
+<section class="c-process-steps js-process-steps {{ extra_classes|default('') }}">
+
+  {% if heading %}
+    <div class="c-process-steps__header">
+      <h3 class="c-process-steps__heading">{{ heading }}</h3>
+    </div>
+  {% endif %}
+
+  {% if subtitle or body_text %}
+    <div class="c-process-steps__intro">
+      {% if subtitle %}
+        <div class="c-process-steps__subtitle">{{ subtitle }}</div>
+      {% endif %}
+      {% if body_text %}
+        <div class="c-process-steps__body-text">{{ body_text }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="c-process-steps__track">
+    <div class="c-process-steps__edge c-process-steps__edge--left" aria-hidden="true"></div>
+    <div class="c-process-steps__inner js-process-steps-inner">
+      {{ steps }}
+    </div>
+    <div class="c-process-steps__edge c-process-steps__edge--right" aria-hidden="true"></div>
+  </div>
+
+</section>

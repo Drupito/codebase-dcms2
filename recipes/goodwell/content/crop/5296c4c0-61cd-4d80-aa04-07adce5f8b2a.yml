@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 5296c4c0-61cd-4d80-aa04-07adce5f8b2a
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    75ed9900-b2c3-49b2-818e-7bf554ca2796: file
+default:
+  entity_id:
+    -
+      uuid: 75ed9900-b2c3-49b2-818e-7bf554ca2796
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/hand_shake.jpg'
+  x:
+    -
+      value: 2880
+  'y':
+    -
+      value: 1920
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

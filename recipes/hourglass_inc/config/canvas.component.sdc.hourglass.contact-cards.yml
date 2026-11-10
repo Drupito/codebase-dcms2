@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: 0effa39fcc2d7fc2
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        cards:
+          title: Cards
+          description: 'Place Contact Card atoms here.'
+label: 'Contact Cards'
+id: sdc.hourglass.contact-cards
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:contact-cards'

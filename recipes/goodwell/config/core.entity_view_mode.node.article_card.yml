@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.article_card
+label: 'Article Card'
+description: null
+targetEntityType: node
+cache: true

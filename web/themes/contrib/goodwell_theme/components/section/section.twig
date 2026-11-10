@@ -1,0 +1,45 @@
+{% set bg    = background ?: 'none' %}
+{% set pad   = padding ?: 'lg' %}
+{% set bleed = full_bleed ?? true %}
+{% set mt    = margin_top|default(0) * 0.25 %}
+{% set mb    = margin_bottom|default(0) * 0.25 %}
+
+{# Support legacy boolean true (stored before rounded became an enum) #}
+{% if rounded is same as(true) %}
+  {% set rounded_class = 'dst-section--rounded-all' %}
+{% elseif rounded == 'all' %}
+  {% set rounded_class = 'dst-section--rounded-all' %}
+{% elseif rounded == 'top' %}
+  {% set rounded_class = 'dst-section--rounded-top' %}
+{% elseif rounded == 'bottom' %}
+  {% set rounded_class = 'dst-section--rounded-bottom' %}
+{% else %}
+  {% set rounded_class = '' %}
+{% endif %}
+
+{% set classes = [
+  'dst-section',
+  'dst-section--bg-'  ~ bg,
+  'dst-section--pad-' ~ pad,
+  bleed ? 'dst-section--bleed' : '',
+  rounded_class,
+  (mt < 0 or mb < 0) ? 'dst-section--elevated' : '',
+] | join(' ') | trim %}
+
+{% set style_parts = [] %}
+{% if bg == 'custom' and custom_bg_color %}
+  {% set style_parts = style_parts|merge(['background:' ~ custom_bg_color ~ ';']) %}
+{% endif %}
+{% if mt != 0 %}
+  {% set style_parts = style_parts|merge(['margin-top:' ~ mt ~ 'rem;']) %}
+{% endif %}
+{% if mb != 0 %}
+  {% set style_parts = style_parts|merge(['margin-bottom:' ~ mb ~ 'rem;']) %}
+{% endif %}
+{% set inline_style = style_parts|join(' ') %}
+
+<section class="{{ classes }}"{% if inline_style %} style="{{ inline_style }}"{% endif %}>
+  <div class="dst-section__inner custom-container">
+    {% block content %}{% endblock %}
+  </div>
+</section>

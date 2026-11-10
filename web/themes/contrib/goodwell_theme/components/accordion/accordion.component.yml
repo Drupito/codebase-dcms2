@@ -1,0 +1,37 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Accordion
+group: Content
+status: stable
+description: "Expandable FAQ / feature panel. Drop multiple instances into a Section Grid column to form a group."
+props:
+  type: object
+  properties:
+    icon:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Icon
+      type: object
+      description: "Optional icon shown before the question. Accepts SVG, PNG or JPEG."
+    question:
+      type: string
+      title: Question
+      examples:
+        - "What types of insurance do you offer?"
+    answer:
+      type: string
+      title: Answer
+      description: "Supports rich text."
+      examples:
+        - "Life insurance is a financial protection plan that provides your loved ones with a lump-sum payment in case of your untimely death."
+    default_state:
+      type: string
+      title: Default state
+      enum:
+        - collapsed
+        - expanded
+      meta:enum:
+        collapsed: Collapsed
+        expanded: Expanded
+      default: collapsed
+      examples:
+        - collapsed
+      description: "Whether this panel starts open or closed."

@@ -1,0 +1,525 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 8eb3ca63-9949-4455-8ca9-fb12ed1433e8
+  default_langcode: en
+  depends:
+    395a4b60-5097-419b-abd3-05098c2aa375: file
+    3f176de1-4aa8-4cba-bc81-9d908e1f0f95: file
+    d7587f40-2398-4c6b-9e48-c2e9d9e203de: file
+    eac02746-02dc-4d49-b6ea-584c9737c959: file
+    43b65244-af7d-4fb7-b754-db663b22f335: media
+    5935831b-9e6c-4edf-a68f-6028e2d0e0b6: media
+    b4c2117f-8244-425f-990d-e1fe42ad6dd8: media
+    cedc939e-a075-47ad-b6a5-71356a4f5344: media
+    2ac40b91-7030-4f2b-acac-eb9a7f2c07e3: file
+    327f360a-7ea2-489a-af5a-5617e07a22c5: file
+    53445d17-807f-497a-a874-90520e4ab28c: file
+    78b332ff-5055-4214-ac96-6530bdc6e190: file
+    051f3800-935c-4e6d-8ef6-2a1ed06dc76d: media
+    2077454c-bb58-477d-84d7-5c0f83c65f5d: media
+    4d22e9f3-56f3-455f-b6c6-bfd6d61c8b4f: media
+    98b0ebd0-a065-45a7-a4a0-9e17697892eb: media
+    270b9212-8454-4029-a721-ebd72164d051: file
+    43971e31-5b1f-4e62-9de4-58fef3c1cf3e: media
+    7eeb01a4-09a5-471d-820a-c49e28315aa2: file
+    5d6145bb-3be8-4021-bdce-ffa1d8b727a6: media
+    1ed4efcc-9ddc-4a87-8670-c8f6e5f24a15: file
+    1b7c90aa-1d01-49a1-92cc-ddacefd893b7: media
+    34422f5d-3cfb-41a5-b62c-567bfa661bc3: file
+    ec3811f4-fbf2-47aa-95d8-07ec040e932c: file
+    b4cd58a4-ff61-4315-99a1-125315a9d0d2: media
+    015d3f0b-c360-479a-bc11-29a5e0b4108a: media
+    25d1817b-5f86-40b5-9544-b3e79bff7f4c: file
+    e9d80f15-7cdf-431e-abeb-12957a34e07b: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Home Page'
+  components:
+    -
+      uuid: 056257cf-67d9-490a-bbc7-a860291843cd
+      component_id: sdc.goodwell_theme.hero-section
+      inputs:
+        heading:
+          value: "Secure your family's future today"
+          format: canvas_html_inline
+        tagline: 'FAST, PAPERLESS, AND TRUSTED.'
+        background:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b4c2117f-8244-425f-990d-e1fe42ad6dd8
+            target_type: media
+        award_1_sub: 'No Medical Exam Term Life Insurance'
+        award_2_sub: 'Instant Life Policy'
+        award_3_sub: 'No Medical Exam Term Life Insurance'
+        rating_text: 'Rated 4.7 ★'
+        award_1_text: Best
+        award_2_text: '#1'
+        award_3_text: Best
+        award_1_brand: 'BUSINESS INSIDER'
+        award_2_brand: Forbes
+        award_3_brand: 'BUSINESS INSIDER'
+        customer_count: '10k+ customers'
+        overlay_opacity: 50
+        customer_avatar_1:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: cedc939e-a075-47ad-b6a5-71356a4f5344
+            target_type: media
+        customer_avatar_2:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 43b65244-af7d-4fb7-b754-db663b22f335
+            target_type: media
+        customer_avatar_3:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 5935831b-9e6c-4edf-a68f-6028e2d0e0b6
+            target_type: media
+    -
+      parent_uuid: 056257cf-67d9-490a-bbc7-a860291843cd
+      slot: card
+      uuid: 74769251-48d7-4bd0-af9c-06528596ce3c
+      component_id: sdc.goodwell_theme.premium-calculator
+      inputs:
+        cta_url: /get-a-quote
+        heading: 'Check My Premium'
+        cta_label: 'Get Full Quote'
+    -
+      uuid: 1ee4f0dd-65c1-40ec-a02a-5c180023633b
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      uuid: e35cea27-29e7-49b5-a33f-fdd7dd123aa3
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        alignment: center
+        grid_layout: 2_column_50_50
+        is_small_container: false
+    -
+      parent_uuid: e35cea27-29e7-49b5-a33f-fdd7dd123aa3
+      slot: slot_1
+      uuid: 00d8f27f-1ef5-4a2b-9c15-36249464a478
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        heading:
+          value: 'Trusted by thousands, proven by numbers'
+          format: canvas_html_inline
+        heading_level: 3
+    -
+      parent_uuid: e35cea27-29e7-49b5-a33f-fdd7dd123aa3
+      slot: slot_2
+      uuid: 504b1bfe-aa03-4670-bc3f-9abcb99b20be
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        grid_gap: 10
+        alignment: center
+        grid_layout: 2_column_50_50
+        is_small_container: false
+    -
+      parent_uuid: 504b1bfe-aa03-4670-bc3f-9abcb99b20be
+      slot: slot_1
+      uuid: 20785646-1347-4c60-bc89-3d7179b0ffe3
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: '<p>Policies Issued </p>'
+          format: canvas_html_inline
+        heading:
+          value: 2000+
+          format: canvas_html_inline
+        heading_level: 3
+    -
+      parent_uuid: 504b1bfe-aa03-4670-bc3f-9abcb99b20be
+      slot: slot_2
+      uuid: cf165396-7b37-4000-bd44-387bbc53ba94
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: 'Claim Approval Rate'
+          format: canvas_html_inline
+        heading:
+          value: 98%
+          format: canvas_html_inline
+        alignment: left
+        heading_level: 3
+    -
+      uuid: e5550bd4-4569-4d2a-8973-b26047b09c8b
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: e5550bd4-4569-4d2a-8973-b26047b09c8b
+      slot: content
+      uuid: 7cd4dcc7-3a6d-4cac-afbd-694be357d837
+      component_id: sdc.goodwell_theme.brand-band
+      inputs:
+        gap: 2
+        brand_1:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 051f3800-935c-4e6d-8ef6-2a1ed06dc76d
+            target_type: media
+        brand_2:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 2077454c-bb58-477d-84d7-5c0f83c65f5d
+            target_type: media
+        brand_3:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 98b0ebd0-a065-45a7-a4a0-9e17697892eb
+            target_type: media
+        brand_4:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 4d22e9f3-56f3-455f-b6c6-bfd6d61c8b4f
+            target_type: media
+        brand_5:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 2077454c-bb58-477d-84d7-5c0f83c65f5d
+            target_type: media
+        marquee: false
+    -
+      uuid: 9d6456c1-dc17-49fa-a172-47fdefd63e37
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: gray-light
+        full_bleed: true
+        margin_top: 10
+    -
+      parent_uuid: 9d6456c1-dc17-49fa-a172-47fdefd63e37
+      slot: content
+      uuid: 846b9b3b-5342-45f9-b4c6-d1d3d1e507b2
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        grid_layout: 2_column_50_50
+        is_small_container: false
+    -
+      parent_uuid: 846b9b3b-5342-45f9-b4c6-d1d3d1e507b2
+      slot: slot_1
+      uuid: a598497b-958e-42d0-a654-9a8184d96d0e
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        heading:
+          value: 'Plans designed for your life stage'
+          format: canvas_html_inline
+        tagline: 'RELIABLE INSURANCE COMPANY'
+        heading_level: 2
+    -
+      parent_uuid: 846b9b3b-5342-45f9-b4c6-d1d3d1e507b2
+      slot: slot_2
+      uuid: e2d247ca-b4ea-4641-b564-5bee3b04ee58
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: 'We analyze market trends and provide the building blocks necessary for creating a professional website.'
+          format: canvas_html_inline
+        alignment: left
+        text_color: dark
+        heading_level: 0
+    -
+      uuid: cff0ba50-a5df-4e0f-abbf-463653d58e1a
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        rounded: none
+        background: gray-light
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: cff0ba50-a5df-4e0f-abbf-463653d58e1a
+      slot: content
+      uuid: 0481cb8b-d4b7-41a0-bf5d-9286ddfdfb9b
+      component_id: block.views_block.plans-block_1
+      inputs:
+        label: Plans
+        views_label: ''
+        label_display: '0'
+        items_per_page: null
+    -
+      uuid: 627387ac-392a-4558-bb6d-3aec9a6935ae
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 627387ac-392a-4558-bb6d-3aec9a6935ae
+      slot: content
+      uuid: 362a7e9d-a1a0-4428-87a9-3128c9ed317a
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        alignment: center
+        grid_layout: 2_column_50_50
+        is_small_container: false
+    -
+      parent_uuid: 362a7e9d-a1a0-4428-87a9-3128c9ed317a
+      slot: slot_1
+      uuid: 72005260-6d3b-4f53-9c58-50822be1ab8c
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        heading:
+          value: 'Why Goodwell'
+          format: canvas_html_inline
+        tagline: 'The Goodwell Promise'
+        heading_level: 2
+    -
+      parent_uuid: 362a7e9d-a1a0-4428-87a9-3128c9ed317a
+      slot: slot_1
+      uuid: b220b260-6843-4fd4-b9f8-6b855d79a452
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 43971e31-5b1f-4e62-9de4-58fef3c1cf3e
+            target_type: media
+        answer: 'Life insurance is a financial protection plan that provides your loved ones with a lump-sum payment in case of your untimely death.'
+        question: 'Instant Issuance'
+        default_state: collapsed
+    -
+      parent_uuid: 362a7e9d-a1a0-4428-87a9-3128c9ed317a
+      slot: slot_1
+      uuid: b3cea5f9-e0e3-40c5-b589-92da1e15b8c8
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 5d6145bb-3be8-4021-bdce-ffa1d8b727a6
+            target_type: media
+        answer: 'Our dedicated support team is available around the clock to assist with policy questions, claims, and emergencies whenever you need help. Get reliable assistance anytime, day or night.'
+        question: '24/7 Support'
+        default_state: collapsed
+    -
+      parent_uuid: 362a7e9d-a1a0-4428-87a9-3128c9ed317a
+      slot: slot_1
+      uuid: 326ffd08-6baf-4c4c-bbad-87db90c4801a
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 1b7c90aa-1d01-49a1-92cc-ddacefd893b7
+            target_type: media
+        answer: 'Enjoy a fast and convenient digital experience with a fully paperless application, policy management, and claims process.'
+        question: '100% Paperless'
+        default_state: collapsed
+    -
+      parent_uuid: 362a7e9d-a1a0-4428-87a9-3128c9ed317a
+      slot: slot_2
+      uuid: 0b009fa4-cab7-40c3-bfa1-a5575bf117e3
+      component_id: sdc.goodwell_theme.image
+      inputs:
+        size: '1:1'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b4cd58a4-ff61-4315-99a1-125315a9d0d2
+            target_type: media
+        radius: large
+        badge_icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 015d3f0b-c360-479a-bc11-29a5e0b4108a
+            target_type: media
+        badge_text: 'We’re Chosen by More Than 12K Insurance!'
+        border_radius: 0
+        badge_position: bottom-right
+    -
+      uuid: 8c4caf6b-7a89-4205-9d31-b8b1f39e5308
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        full_bleed: false
+        margin_top: 0
+        margin_bottom: 0
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 8c4caf6b-7a89-4205-9d31-b8b1f39e5308
+      slot: content
+      uuid: e36686c2-bd9c-4e8e-aecf-5d0acbe8a4d1
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        heading:
+          value: 'Frequently Asked Questions'
+          format: canvas_html_inline
+        tagline: 'our faqs'
+        alignment: center
+        heading_level: 2
+    -
+      uuid: 45e0501d-0df7-476b-8188-b1786e2e0486
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        rounded: none
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 45e0501d-0df7-476b-8188-b1786e2e0486
+      slot: content
+      uuid: 65c8b1ef-ae04-41d9-999d-b1a34d6fa44d
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'Life insurance is a financial protection plan that provides your loved ones with a lump-sum payment in case of your untimely death.'
+        question: 'What types of insurance do you offer?'
+        default_state: expanded
+    -
+      parent_uuid: 45e0501d-0df7-476b-8188-b1786e2e0486
+      slot: content
+      uuid: 9a7ad8ed-40ca-42df-a9f1-4cffbf96bd65
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'Life insurance helps provide financial security for your loved ones by covering living expenses, debts, and future financial needs if something unexpected happens to you'
+        question: 'Why do I need life insurance?'
+        default_state: collapsed
+    -
+      parent_uuid: 45e0501d-0df7-476b-8188-b1786e2e0486
+      slot: content
+      uuid: 5ffedc74-563c-43dd-a83f-938eb873e3a0
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'The amount of coverage you need depends on your income, financial obligations, debts, and future family expenses. A good policy should provide enough support to help your loved ones maintain their lifestyle and achieve their long-term goals.'
+        question: 'How much life insurance coverage do I need?'
+        default_state: collapsed
+    -
+      parent_uuid: 45e0501d-0df7-476b-8188-b1786e2e0486
+      slot: content
+      uuid: 37fc97c9-a789-4a43-bdd1-8c110e4dc9ec
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'The cost of life insurance varies based on factors such as your age, health, coverage amount, and policy type. Many plans are affordable and can be customized to fit your budget and protection needs.'
+        question: 'How much does life insurance cost?'
+        default_state: collapsed
+    -
+      parent_uuid: 45e0501d-0df7-476b-8188-b1786e2e0486
+      slot: content
+      uuid: 6307c706-1b1f-4912-b767-09cf61bbab6b
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'Coverage typically begins once your application is approved, the policy is issued, and the first premium payment is received. The exact start date will be outlined in your policy documents.'
+        question: 'When does the coverage start?'
+        default_state: collapsed
+    -
+      uuid: 88459e16-0ef4-4b83-aafc-f19554c9ed31
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        full_bleed: false
+        margin_top: 0
+        margin_bottom: -7
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 88459e16-0ef4-4b83-aafc-f19554c9ed31
+      slot: content
+      uuid: 66ba22e4-3044-4b75-a851-874845ee34c4
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        heading:
+          value: 'Insights & Update'
+          format: canvas_html_inline
+        tagline: Resources
+        alignment: center
+        text_color: dark
+        heading_level: 2
+    -
+      uuid: 941b652f-55ed-400c-8ef4-9517fcd26714
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        full_bleed: false
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 941b652f-55ed-400c-8ef4-9517fcd26714
+      slot: content
+      uuid: b6d79b11-925c-4003-899e-a5ef15f32ab8
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        grid_layout: 1_column
+        is_small_container: false
+    -
+      parent_uuid: b6d79b11-925c-4003-899e-a5ef15f32ab8
+      slot: slot_1
+      uuid: c925e89a-fac6-40ce-b8b5-d39bd6e3f555
+      component_id: block.views_block.article-block_1
+      inputs:
+        label: Article
+        views_label: ''
+        label_display: '0'
+        items_per_page: null
+    -
+      uuid: ca66688e-33a1-4d02-bb73-0c81cf314a79
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        rounded: top
+        background: teal
+        full_bleed: false
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: ca66688e-33a1-4d02-bb73-0c81cf314a79
+      slot: content
+      uuid: c74f1cf8-4ef3-4915-9fcb-98a8490b000f
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        grid_layout: 2_column_66_33
+        is_small_container: false
+    -
+      parent_uuid: c74f1cf8-4ef3-4915-9fcb-98a8490b000f
+      slot: slot_1
+      uuid: 73fb2576-7db9-4d61-84ab-9e21087f18c9
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: 'We analyze market trends and provide the building blocks necessary for creating a professional website.'
+          format: canvas_html_inline
+        heading:
+          value: 'Plans designed for your life stage'
+          format: canvas_html_inline
+        alignment: left
+        heading_level: 2
+    -
+      parent_uuid: c74f1cf8-4ef3-4915-9fcb-98a8490b000f
+      slot: slot_1
+      uuid: 9ce977be-e4cd-4760-b952-850d178230a6
+      component_id: sdc.goodwell_theme.button
+      inputs:
+        href:
+          uri: 'internal:/get-a-quote'
+          options: {  }
+        size: md
+        label: 'Secure Your Family'
+        variant: primary
+        disabled: false
+        full_width: false
+        spacing_top: 0
+        spacing_bottom: 0
+    -
+      parent_uuid: c74f1cf8-4ef3-4915-9fcb-98a8490b000f
+      slot: slot_2
+      uuid: 71849b5f-ece2-4f99-9966-b80d3eb0036f
+      component_id: sdc.goodwell_theme.image
+      inputs:
+        size: '1:1'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e9d80f15-7cdf-431e-abeb-12957a34e07b
+            target_type: media
+        radius: small
+        decoration: bottom-right
+        border_radius: 15
+  path:
+    -
+      alias: /home
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

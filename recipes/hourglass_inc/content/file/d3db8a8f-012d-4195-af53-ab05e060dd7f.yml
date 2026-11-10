@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: d3db8a8f-012d-4195-af53-ab05e060dd7f
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: Component-1-(1).png
+  uri:
+    -
+      value: 'public://2026-05/Component-1-(1).png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 389406
+  status:
+    -
+      value: true

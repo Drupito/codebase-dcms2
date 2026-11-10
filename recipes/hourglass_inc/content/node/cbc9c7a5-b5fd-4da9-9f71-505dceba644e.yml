@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: cbc9c7a5-b5fd-4da9-9f71-505dceba644e
+  bundle: blog
+  default_langcode: en
+  depends:
+    0bebb3c9-fe3c-4f05-9858-6c1034be1427: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Machine Learning in Enterprise Software: A Practical Overview'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/machine-learning-enterprise-software-practical-overview
+      langcode: en
+  body:
+    -
+      value: "<p>Machine learning is moving from data science experiments into production enterprise software. Understanding where ML delivers real value — and where it doesn't — is critical for making smart investments.</p><h2>High-Value ML Use Cases</h2><p>Fraud detection, demand forecasting, personalisation engines, and predictive maintenance are among the highest-ROI ML applications in enterprise contexts. These domains share a common thread: large datasets, clear success metrics, and repetitive pattern-matching tasks.</p><h2>MLOps: Operationalising Machine Learning</h2><p>Building a model is only 20% of the work. MLOps — the practice of deploying, monitoring, and maintaining ML models in production — accounts for the remaining 80%. Investing in feature stores, model registries, and automated retraining pipelines is essential for sustained ML value.</p><h2>Common Pitfalls</h2><p>Data quality issues, model drift, and lack of explainability are the most common causes of failed ML initiatives. Starting with clean, well-labelled data, establishing clear evaluation metrics upfront, and building interpretable models where possible dramatically improves success rates.</p>"
+      format: content_format
+      summary: ''
+  field_featured:
+    -
+      value: false
+  field_hero_image:
+    -
+      entity: 0bebb3c9-fe3c-4f05-9858-6c1034be1427
+  field_read_time:
+    -
+      value: 5

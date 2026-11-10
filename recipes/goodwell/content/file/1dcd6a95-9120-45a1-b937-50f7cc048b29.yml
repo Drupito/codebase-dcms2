@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1dcd6a95-9120-45a1-b937-50f7cc048b29
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: team_cheer.jpg
+  uri:
+    -
+      value: 'public://2026-06/team_cheer.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 87604
+  status:
+    -
+      value: true

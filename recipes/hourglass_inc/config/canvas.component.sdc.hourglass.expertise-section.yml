@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: dcd990996c4a6af2
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Where Our Expertise is Applied'
+          expression: ℹ︎string␟value
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'To empower organizations by removing the friction of manual processes through intelligent software.'
+          expression: ℹ︎string␟value
+        cta_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        cta_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /team
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        cards:
+          title: 'Expertise Cards'
+          description: 'Place two Expertise Card components here (one per column).'
+label: 'Expertise Section'
+id: sdc.hourglass.expertise-section
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:expertise-section'

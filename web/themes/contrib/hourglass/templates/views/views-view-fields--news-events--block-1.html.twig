@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Row markup for the News & Events block.
+ *
+ * Row 0 (view.row_index == 0) renders as the featured card;
+ * every other row renders as a small blog card.
+ */
+#}
+
+{% if row.index == 0 %}
+  <article class="c-ne-featured">
+    {% if fields.field_hero_image.content %}
+      <div class="c-ne-featured__bg" aria-hidden="true">{{ fields.field_hero_image.content }}</div>
+    {% endif %}
+    <div class="c-ne-featured__scrim" aria-hidden="true"></div>
+    <div class="c-ne-featured__content">
+      <span class="c-ne-featured__label">Blog</span>
+      <h3 class="c-ne-featured__title">
+        <a href="{{ fields.view_node.content }}" class="c-ne-featured__title-link">{{ fields.title.content }}</a>
+      </h3>
+      <time class="c-ne-featured__date">{{ fields.field_published_date.content }}</time>
+      <a href="{{ fields.view_node.content }}" class="c-ne-featured__cta">
+        <span>Read More</span>
+        <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12.6001 5.1001L8.4001 0.600098M12.6001 5.1001L8.4001 9.6001M12.6001 5.1001H0.600098" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </article>
+{% else %}
+  <article class="c-ne-card">
+    <a href="{{ fields.view_node.content }}" class="c-ne-card__inner">
+      <span class="c-ne-card__category">Blog</span>
+      <h3 class="c-ne-card__title">{{ fields.title.content }}</h3>
+      <time class="c-ne-card__date">{{ fields.field_published_date_1.content }}</time>
+    </a>
+  </article>
+{% endif %}

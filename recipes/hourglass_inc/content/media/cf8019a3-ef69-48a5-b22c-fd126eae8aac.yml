@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: cf8019a3-ef69-48a5-b22c-fd126eae8aac
+  bundle: image
+  default_langcode: en
+  depends:
+    68b5caa8-594c-4623-a7f8-3d5a7aa167c3: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Component-4.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Expert Support'
+      title: ''
+      width: 560
+      height: 568
+      entity: 68b5caa8-594c-4623-a7f8-3d5a7aa167c3

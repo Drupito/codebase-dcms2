@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c43f04d0-6a6c-4d33-a434-c69ce0961620
+  bundle: image
+  default_langcode: en
+  depends:
+    f6abf53b-9d1a-4d9f-a0c3-d779ffa9cb9e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: car.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: Car
+      title: ''
+      width: 964
+      height: 1200
+      entity: f6abf53b-9d1a-4d9f-a0c3-d779ffa9cb9e

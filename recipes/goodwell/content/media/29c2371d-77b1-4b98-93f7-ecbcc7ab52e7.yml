@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 29c2371d-77b1-4b98-93f7-ecbcc7ab52e7
+  bundle: image
+  default_langcode: en
+  depends:
+    814b61a5-6069-420f-89ae-aee5dd56bf03: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Family_first_home.jpeg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: Family_first_home.jpeg
+      title: ''
+      width: 1438
+      height: 2048
+      entity: 814b61a5-6069-420f-89ae-aee5dd56bf03

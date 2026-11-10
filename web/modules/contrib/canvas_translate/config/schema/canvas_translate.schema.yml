@@ -1,0 +1,25 @@
+# Records the source strings a config translation was last reviewed against, so
+# staleness ("outdated") and per-field "Source was…" survive config export/import.
+canvas_translate.baseline.*:
+  type: config_entity
+  label: 'Config translation baseline'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    config_name:
+      type: string
+      label: 'Config name'
+    source:
+      type: sequence
+      label: 'Source strings'
+      sequence:
+        type: mapping
+        label: 'Source string'
+        mapping:
+          key:
+            type: string
+            label: 'Row key'
+          text:
+            type: string
+            label: 'Source text'

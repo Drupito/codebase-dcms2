@@ -1,0 +1,6 @@
+logo:
+  use_default: false
+  path: themes/contrib/hourglass/images/logo-dark.svg
+brand_image:
+  use_default: false
+  path: themes/contrib/hourglass/images/login.webp

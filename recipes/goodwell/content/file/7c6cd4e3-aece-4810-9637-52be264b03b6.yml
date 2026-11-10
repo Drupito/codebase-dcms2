@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 7c6cd4e3-aece-4810-9637-52be264b03b6
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: woman_blazer.png
+  uri:
+    -
+      value: 'public://2026-06/woman_blazer.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 235034
+  status:
+    -
+      value: true

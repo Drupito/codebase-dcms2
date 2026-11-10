@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 499df14e-1d72-43e8-9e52-c55dc30a6e0c
+  bundle: image
+  default_langcode: en
+  depends:
+    2cd7e822-f006-4e9c-8a9c-8b387a5b7053: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: couple_with_papers.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: couple_papers.jpg
+      title: ''
+      width: 6000
+      height: 4000
+      entity: 2cd7e822-f006-4e9c-8a9c-8b387a5b7053

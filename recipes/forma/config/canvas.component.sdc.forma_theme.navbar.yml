@@ -1,0 +1,67 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - forma_theme
+active_version: c68c0b8e47c365e7
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: 'Site logo'
+        navigation:
+          title: 'Navigation menu'
+        links:
+          title: 'Social links'
+  4aedf28cbaed428d:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: 'Site logo'
+        navigation:
+          title: 'Navigation menu'
+  9c54b0537f574888:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: 'Site logo'
+        navigation:
+          title: 'Navigation menu'
+        links:
+          title: CTAs
+  3149f199d66bbc29:
+    settings:
+      prop_field_definitions:
+        menu_align:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: center
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: 'Site logo'
+        navigation:
+          title: 'Navigation menu'
+        links:
+          title: CTAs
+label: Navbar
+id: sdc.forma_theme.navbar
+provider: forma_theme
+source: sdc
+source_local_id: 'forma_theme:navbar'

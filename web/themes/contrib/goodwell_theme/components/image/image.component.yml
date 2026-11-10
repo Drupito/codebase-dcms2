@@ -1,0 +1,119 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Image
+group: Base
+props:
+  type: object
+  properties:
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: "assets/pexels-felix-mittermeier-1209650.jpg"
+          alt: "A purple, cloudy sky reflected on a calm lake"
+          width: 1920
+          height: 1014
+    max_width:
+      type: integer
+      title: Max width (px)
+      description: "Constrains the image width and centres it. Use with Circle to set the circle diameter (e.g. 600 = 600px circle)."
+      examples:
+        - 600
+
+    shape:
+      title: Shape
+      type: string
+      description: "Clip the image into a special shape. Overrides aspect ratio and radius when set."
+      enum:
+        - default
+        - circle
+        - arch
+      meta:enum:
+        default: "Default (use aspect ratio + radius below)"
+        circle:  "Circle"
+        arch:    "Arch (tall rectangle with dome top)"
+      default: default
+      examples:
+        - default
+
+    size:
+      title: Aspect ratio
+      type: string
+      enum:
+        - "2:1"
+        - 16:9
+        - 3:2
+        - 4:3
+        - 1:1
+      meta:enum:
+        2:1: "2×1"
+        16:9: "16×9"
+        3:2: "3×2"
+        4:3: "4×3"
+        1:1: Square
+      default: "4:3"
+      examples:
+        - "4:3"
+    radius:
+      type: string
+      title: Corner radius
+      enum:
+        - small
+        - large
+        - extra-large
+      meta:enum:
+        small: Small
+        large: Large
+        extra-large: Extra large
+      default: small
+      examples:
+        - "small"
+    border_radius:
+      type: number
+      title: Custom border radius
+      default: 0
+      description: Custom border radius in pixels (0 = use Corner radius preset above)
+    caption:
+      title: Caption
+      type: string
+    url:
+      type: string
+      title: Link
+    decoration:
+      type: string
+      title: Accent decoration
+      description: "Green accent block behind the image corner — matches the section CTA style."
+      default: "none"
+      enum:
+        - none
+        - accent-br
+        - accent-bl
+        - bottom-right
+        - bottom-left
+      meta:enum:
+        none:      "None"
+        accent-br: "Bottom right"
+        accent-bl: "Bottom left"
+    badge_text:
+      type: string
+      title: Badge text
+      description: "Short headline shown on the overlay badge. Leave blank to hide the badge."
+      examples:
+        - "We're Chosen by More Than 12K Insurance!"
+    badge_icon:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Badge icon
+      type: object
+      description: "Optional logo or icon shown inside the badge."
+    badge_position:
+      type: string
+      title: Badge position
+      enum:
+        - bottom-right
+        - bottom-left
+      meta:enum:
+        bottom-right: "Bottom right"
+        bottom-left:  "Bottom left"
+      default: bottom-right
+      examples:
+        - bottom-right

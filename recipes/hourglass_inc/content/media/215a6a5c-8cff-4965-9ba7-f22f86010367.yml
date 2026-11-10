@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 215a6a5c-8cff-4965-9ba7-f22f86010367
+  bundle: image
+  default_langcode: en
+  depends:
+    6e28e8c0-c063-4e02-90b0-3f4eb9f7a68f: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Shrink.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: Shrink
+      title: ''
+      width: 100
+      height: 100
+      entity: 6e28e8c0-c063-4e02-90b0-3f4eb9f7a68f

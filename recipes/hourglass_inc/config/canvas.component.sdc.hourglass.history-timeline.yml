@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.canvas_html_block
+  module:
+    - text
+  theme:
+    - hourglass
+active_version: ab4d5c8d2c214a19
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        section_title:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: Milestones
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        slides:
+          title: Slides
+          description: 'Place History Timeline Slide atoms here. Use reversed: true on every second slide.'
+label: 'History Timeline'
+id: sdc.hourglass.history-timeline
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:history-timeline'

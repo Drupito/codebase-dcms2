@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 47363581-f988-47de-8b2a-67477e4d48df
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: left-sidebar.jpg
+  uri:
+    -
+      value: 'public://2026-05/left-sidebar.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 180276
+  status:
+    -
+      value: true

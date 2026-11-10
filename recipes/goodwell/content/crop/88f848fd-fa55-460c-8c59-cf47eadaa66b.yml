@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 88f848fd-fa55-460c-8c59-cf47eadaa66b
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    aeb3fdef-34e7-42a8-b664-346d4a237c48: file
+default:
+  entity_id:
+    -
+      uuid: aeb3fdef-34e7-42a8-b664-346d4a237c48
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/home_icon.png'
+  x:
+    -
+      value: 600
+  'y':
+    -
+      value: 290
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

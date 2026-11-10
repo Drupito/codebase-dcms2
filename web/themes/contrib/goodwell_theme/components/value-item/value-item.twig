@@ -1,0 +1,30 @@
+{% set color = icon_color | default('primary-mid') %}
+{% set divider = show_divider is not defined ? true : show_divider %}
+
+<div class="dst-value-item{{ divider ? ' dst-value-item--divider' : '' }}">
+
+  {# Icon circle #}
+  {% if icon and icon.src %}
+    <div class="dst-value-item__icon dst-value-item__icon--{{ color }}">
+      {% include 'canvas:image' ignore missing with {
+        src: icon.src,
+        alt: icon.alt | default(''),
+        class: 'dst-value-item__icon-img',
+        loading: 'lazy'
+      } only %}
+    </div>
+  {% else %}
+    <div class="dst-value-item__icon dst-value-item__icon--{{ color }} dst-value-item__icon--empty" aria-hidden="true"></div>
+  {% endif %}
+
+  {# Text #}
+  <div class="dst-value-item__body">
+    {% if title %}
+      <h3 class="dst-value-item__title">{{ title }}</h3>
+    {% endif %}
+    {% if description %}
+      <p class="dst-value-item__description">{{ description | raw }}</p>
+    {% endif %}
+  </div>
+
+</div>

@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Blog Listing module — dynamic view-driven listing.
+ *
+ * Props:
+ * - section_title: Optional intro sentence above the listing.
+ * - extra_classes:  Additional CSS classes on the wrapper.
+ *
+ * Renders the blog_listing view (block_1 display) which outputs:
+ *   - A featured post (first item, horizontal layout)
+ *   - A 3-column card grid (remaining items)
+ *   - Pagination
+ */
+#}
+{{ attach_library('hourglass/blog-listing') }}
+
+<section class="c-blog-listing {{ extra_classes|default('') }}">
+
+  {% if section_title %}
+    <div class="c-blog-listing__intro-bar">
+      <p class="c-blog-listing__intro-text">{{ section_title }}</p>
+    </div>
+  {% endif %}
+
+  {{ drupal_view('blog_listing', 'block_1') }}
+
+</section>

@@ -1,0 +1,42 @@
+.c-notification-banner {
+  background-color: var(--color-corp-gray-200, #ddd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  width: 100%;
+}
+
+.c-notification-banner__inner,
+.c-notification-banner__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.c-notification-banner__message {
+  font-family: var(--font-family-body);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-black);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.c-notification-banner__tag {
+  background-color: var(--color-corp-orange-mid, #fd7e14);
+  color: var(--color-white);
+  font-family: var(--font-family-body);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 4px 12px;
+  border-radius: 16px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+}

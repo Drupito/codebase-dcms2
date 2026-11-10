@@ -1,0 +1,201 @@
+/**
+ * @file theme.css
+ * Global design tokens for the Goodwell theme.
+ *
+ * All components reference these variables — change a value here and it
+ * updates everywhere on the site. No rebuild required: copy this file next
+ * to index.php and clear Drupal's cache to see changes immediately.
+ *
+ * ─── Color reference (Figma: Goodwell / Goodwell) ───────────────────────
+ *   Primary (dark teal)   #1B3A35   headers, footer bg, strong text
+ *   Accent  (bright green) #7ED957   CTA buttons, active states, highlights
+ *   Background             #EDF6F5   light page background
+ *   Surface (card/white)   #FFFFFF   cards, modals
+ *   Text dark              #0D1C18   headings
+ *   Text muted             #4E6860   body, secondary labels
+ *   Border                 #D2E0DB   dividers, input borders
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+
+:root {
+
+  /* ── Brand palette ───────────────────────────────── */
+
+  --color-primary:       #034A46;   /* dark teal  */
+  --color-primary-mid:   #1c7e6e;   /* mid teal — card title hover, accents */
+  --color-primary-light: #2e5e55;   /* lighter teal for hover */
+  --color-primary-dark:  #112620;   /* deeper teal for pressed states */
+
+  --color-accent:        #7ed957;   /* bright green CTA */
+  --color-accent-light:  #a3e87c;   /* lighter green */
+  --color-accent-dark:   #5db83d;   /* darker green for hover */
+
+  --color-surface:       #ffffff;
+  --color-bg:            #edf6f5;   /* site background */
+  --color-bg-subtle:     #edf6f5;   /* very light teal tint for section backgrounds */
+  --color-bg-dark:       #1b3a35;   /* dark section background */
+
+  --color-text:          #000000;   /* headings / strong text */
+  --color-text-muted:    #5f5f5f;   /* body / secondary text */
+  --color-text-light:    #ffffff;   /* text on dark backgrounds */
+
+  --color-border:        #d2e0db;
+  --color-input:         #e4eeea;
+  --color-destructive:   #d94f4f;
+  --color-white:         #ffffff;
+
+  /* ── Overlay utilities ───────────────────────────
+   * Use these instead of raw rgba() so a single token
+   * change trickles through every component at once.
+   */
+  --overlay-white-08:  rgba(255, 255, 255, 0.08);
+  --overlay-white-10:  rgba(255, 255, 255, 0.10);
+  --overlay-white-12:  rgba(255, 255, 255, 0.12);
+  --overlay-white-20:  rgba(255, 255, 255, 0.20);
+  --overlay-white-25:  rgba(255, 255, 255, 0.25);
+  --overlay-white-45:  rgba(255, 255, 255, 0.45);
+  --overlay-white-50:  rgba(255, 255, 255, 0.50);
+  --overlay-white-60:  rgba(255, 255, 255, 0.60);
+  --overlay-white-70:  rgba(255, 255, 255, 0.70);
+  --overlay-white-75:  rgba(255, 255, 255, 0.75);
+  --overlay-white-80:  rgba(255, 255, 255, 0.80);
+  --overlay-white-85:  rgba(255, 255, 255, 0.85);
+  --overlay-white-90:  rgba(255, 255, 255, 0.90);
+
+  --overlay-black-02:  rgba(0, 0, 0, 0.02);
+  --overlay-black-06:  rgba(0, 0, 0, 0.06);
+  --overlay-black-08:  rgba(0, 0, 0, 0.08);
+  --overlay-black-10:  rgba(0, 0, 0, 0.10);
+  --overlay-black-12:  rgba(0, 0, 0, 0.12);
+  --overlay-black-20:  rgba(0, 0, 0, 0.20);
+  --overlay-black-35:  rgba(0, 0, 0, 0.35);
+  --overlay-black-40:  rgba(0, 0, 0, 0.40);
+  --overlay-black-65:  rgba(0, 0, 0, 0.65);
+
+  /* ── Semantic aliases (used by all components) ───── */
+
+  --background:          var(--color-bg);
+  --foreground:          var(--color-text);
+
+  --card:                var(--color-surface);
+  --card-foreground:     var(--color-text);
+
+  --primary:             var(--color-primary);
+  --primary-foreground:  var(--color-text-light);
+  --primary-light:       var(--color-primary-light);
+  --primary-dark:        var(--color-primary-dark);
+
+  --secondary:           var(--color-primary-light);
+  --secondary-foreground: var(--color-text-light);
+  --secondary-light:     color-mix(in srgb, var(--color-primary-light) 85%, white);
+  --secondary-dark:      color-mix(in srgb, var(--color-primary-light) 85%, black);
+
+  --accent:              var(--color-accent);
+  --accent-foreground:   var(--color-primary);
+  --accent-light:        var(--color-accent-light);
+  --accent-dark:         var(--color-accent-dark);
+
+  --muted:               var(--color-bg);
+  --muted-foreground:    var(--color-text-muted);
+
+  --destructive:         var(--color-destructive);
+  --destructive-foreground: var(--color-text-light);
+
+  --border:              var(--color-border);
+  --input:               var(--color-input);
+
+  /* ── Typography — font stacks ────────────────────── */
+
+  --font-sans:  "Inter", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  --font-serif: "Georgia", "Times New Roman", Times, ui-serif, serif;
+  --font-mono:  "Fira Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+
+  /* ── Typography — size scale ─────────────────────── */
+  /*
+   * Named after Tailwind's scale so existing components keep working.
+   * 1rem = 16px base.
+   */
+
+  --text-xs:   0.75rem;    /*  12px */
+  --text-sm:   0.875rem;   /*  14px */
+  --text-base: 1rem;       /*  16px */
+  --text-md:   1rem;       /*  16px (alias) */
+  --text-lg:   1.125rem;   /*  18px */
+  --text-xl:   1.25rem;    /*  20px */
+  --text-2xl:  1.5rem;     /*  24px */
+  --text-3xl:  1.875rem;   /*  30px */
+  --text-4xl:  2.25rem;    /*  36px */
+  --text-5xl:  3rem;       /*  48px */
+  --text-6xl:  3.75rem;    /*  60px */
+
+  /* Named heading sizes used in section-intro */
+  --h1-size:   clamp(2.5rem, 6vw, 3.75rem);
+  --h2-size:   clamp(2rem,   4vw, 3rem);
+  --h3-size:   clamp(1.5rem, 3vw, 2.25rem);
+  --h4-size:   1.5rem;
+  --h5-size:   1.25rem;
+
+  /* ── Typography — weights ────────────────────────── */
+
+  --font-weight-light:    300;
+  --font-weight-normal:   400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+  --font-weight-extrabold: 800;
+
+  /* ── Typography — tracking / leading ─────────────── */
+
+  --tracking-tight:  -0.025em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.025em;
+  --tracking-widest:  0.1em;
+
+  --leading-none:    1;
+  --leading-tight:   1.2;
+  --leading-snug:    1.35;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  /* ── Spacing base ────────────────────────────────── */
+  /* Used by section-grid gap props: N × --spacing = N × 0.25rem */
+
+  --spacing: 0.25rem;
+
+  /* ── Border radius ───────────────────────────────── */
+
+  --radius-sm:  0.25rem;
+  --radius:     0.5rem;
+  --radius-md:  0.75rem;
+  --radius-lg:  1rem;
+  --radius-xl:  1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Shadows ─────────────────────────────────────── */
+
+  --shadow-2xs: 0 1px 2px 0 hsl(0 0% 0% / 0.04);
+  --shadow-xs:  0 1px 3px 0 hsl(0 0% 0% / 0.06), 0 1px 2px -1px hsl(0 0% 0% / 0.06);
+  --shadow-sm:  0 2px 4px -1px hsl(0 0% 0% / 0.08), 0 1px 2px -1px hsl(0 0% 0% / 0.06);
+  --shadow:     0 4px 6px -2px hsl(0 0% 0% / 0.08), 0 2px 4px -2px hsl(0 0% 0% / 0.06);
+  --shadow-md:  0 8px 12px -3px hsl(0 0% 0% / 0.1),  0 4px 6px  -3px hsl(0 0% 0% / 0.06);
+  --shadow-lg:  0 12px 20px -4px hsl(0 0% 0% / 0.12), 0 6px 8px -4px hsl(0 0% 0% / 0.06);
+  --shadow-xl:  0 20px 28px -5px hsl(0 0% 0% / 0.14), 0 8px 12px -5px hsl(0 0% 0% / 0.06);
+  --shadow-2xl: 0 28px 40px -6px hsl(0 0% 0% / 0.18);
+
+  /* ── Layout ──────────────────────────────────────── */
+
+  --container-sm:  640px;
+  --container-md:  768px;
+  --container-lg:  1024px;
+  --container-xl:  1280px;
+  --container-2xl: 1440px;
+
+  --navbar-height: calc(var(--spacing) * 14);   /* 3.5rem  */
+
+  @media (min-width: 768px) {
+    --navbar-height: calc(var(--spacing) * 20); /* 5rem */
+  }
+  @media (min-width: 1280px) {
+    --navbar-height: calc(var(--spacing) * 22); /* 5.5rem */
+  }
+}

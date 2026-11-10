@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Offering Card
+group: Molecules
+status: stable
+description: "Square card with background image, orange gradient scrim, heading, description, and tertiary CTA link."
+props:
+  type: object
+  properties:
+    media:
+      type: object
+      title: "Background Image"
+      $ref: json-schema-definitions://canvas.module/image
+      examples:
+        - src: "https://example.com/offering.jpg"
+          alt: "SaaS Products"
+          width: 568
+          height: 568
+    heading:
+      type: string
+      title: "Heading"
+    description:
+      type: string
+      title: "Description"
+    cta_text:
+      type: string
+      title: "CTA Text"
+    cta_url:
+      type: string
+      title: "CTA URL"
+      format: uri-reference

@@ -1,0 +1,253 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 25e7e1e4-35bb-4047-bb97-4f2283495352
+  default_langcode: en
+  depends:
+    7253479d-6630-42a4-8ced-fb3f80ea15fa: file
+    02cf73a3-af0d-4c8c-a2ad-4e9e39fa74e4: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Portfolio
+  components:
+    -
+      uuid: e126cd29-2812-4198-b744-6e26b9f0adef
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '128'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: e126cd29-2812-4198-b744-6e26b9f0adef
+      slot: header_slot
+      uuid: 1d8cd5a7-05fd-4c6f-a558-7af9d5178536
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: Portfolio
+        text_color: default
+    -
+      parent_uuid: e126cd29-2812-4198-b744-6e26b9f0adef
+      slot: header_slot
+      uuid: 5c32d992-d3e6-4db6-b853-6a2c8d59171f
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Selected Projects and Collaborations'
+        level: 1
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: e126cd29-2812-4198-b744-6e26b9f0adef
+      slot: main_slot
+      uuid: 388170a9-62aa-4d66-972c-c3d3bc9082bc
+      component_id: block.views_block.projects-projects_all
+      inputs:
+        label: Projects
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+    -
+      uuid: 4f6b1ec1-b9ec-4f05-b34d-6f4bccf82df9
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '2 columns 33-67'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 4f6b1ec1-b9ec-4f05-b34d-6f4bccf82df9
+      slot: main_slot
+      uuid: 5c912606-e031-4c7a-9634-3726f6576508
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Any questions? We got you.'
+        level: 2
+        text_size: heading-responsive-5xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 4f6b1ec1-b9ec-4f05-b34d-6f4bccf82df9
+      slot: main_slot
+      uuid: 525f2457-83ab-4505-ad9c-b2432d9ae18d
+      component_id: sdc.everbright_theme.accordion-container
+      inputs: {  }
+    -
+      parent_uuid: 525f2457-83ab-4505-ad9c-b2432d9ae18d
+      slot: accordion_content
+      uuid: 754730f0-bb27-4e39-a795-9ba8cf36d319
+      component_id: sdc.everbright_theme.accordion
+      inputs:
+        title: 'How often should we refresh our brand?'
+        heading_level: 3
+        open_by_default: false
+    -
+      parent_uuid: 754730f0-bb27-4e39-a795-9ba8cf36d319
+      slot: accordion_content
+      uuid: 83b9468f-8383-473a-8900-99f71c1c601d
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Branding firms help businesses create, develop, and manage their brand identity through services such as logo design, brand messaging, and marketing strategies.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 525f2457-83ab-4505-ad9c-b2432d9ae18d
+      slot: accordion_content
+      uuid: 046ef089-2590-4f81-8357-632066d072bf
+      component_id: sdc.everbright_theme.accordion
+      inputs:
+        title: 'What services does your agency offer?'
+        heading_level: 3
+        open_by_default: false
+    -
+      parent_uuid: 046ef089-2590-4f81-8357-632066d072bf
+      slot: accordion_content
+      uuid: 4aaadb37-8631-4b4f-a2fa-40fe14ec9ac0
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 525f2457-83ab-4505-ad9c-b2432d9ae18d
+      slot: accordion_content
+      uuid: 82a7e34a-fc28-46dc-a22c-261c88b0acc1
+      component_id: sdc.everbright_theme.accordion
+      inputs:
+        title: 'What industries do you specialize in?'
+        heading_level: 3
+        open_by_default: false
+    -
+      parent_uuid: 82a7e34a-fc28-46dc-a22c-261c88b0acc1
+      slot: accordion_content
+      uuid: 7d0b7c62-ae38-4b8b-8b99-f671695e9e0c
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 525f2457-83ab-4505-ad9c-b2432d9ae18d
+      slot: accordion_content
+      uuid: 166b9589-6478-41f4-a4ed-5751fea4d029
+      component_id: sdc.everbright_theme.accordion
+      inputs:
+        title: 'How long does the branding process typically take?'
+        heading_level: 3
+        open_by_default: false
+    -
+      parent_uuid: 166b9589-6478-41f4-a4ed-5751fea4d029
+      slot: accordion_content
+      uuid: 616850c4-c941-4b75-bb54-e018c4c66832
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 2267c96a-d047-4057-9025-34cbd83b5850
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '128'
+        margin_block_end: '128'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 2267c96a-d047-4057-9025-34cbd83b5850
+      slot: main_slot
+      uuid: 3d2d03d8-863e-446a-9cea-84c3ada311a5
+      component_id: sdc.everbright_theme.hero-billboard
+      inputs:
+        height: large
+        flex_position: hero-center
+        overlay_opacity: 75%
+        object_position: center
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 02cf73a3-af0d-4c8c-a2ad-4e9e39fa74e4
+            target_type: media
+        overlap_navbar: false
+    -
+      parent_uuid: 3d2d03d8-863e-446a-9cea-84c3ada311a5
+      slot: hero_slot
+      uuid: 6aa3ea51-fe64-4fca-9ab4-ba0330a02b97
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: 'Strategic partnerships'
+        text_color: inverted
+    -
+      parent_uuid: 3d2d03d8-863e-446a-9cea-84c3ada311a5
+      slot: hero_slot
+      uuid: 4a0d9322-0896-41d8-9618-2e90d7d9f472
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Partner with us'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: inverted
+        align: left
+    -
+      parent_uuid: 3d2d03d8-863e-446a-9cea-84c3ada311a5
+      slot: hero_slot
+      uuid: ddeae086-e23f-4af6-adf2-4c53b4f73278
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: "<p>We're eager to embark on new ventures. Share your aspirations with us, and together, we'll craft something truly remarkable that exceeds all expectations.</p>"
+          format: canvas_html_block
+        text_size: text-xl
+        text_color: inverted
+    -
+      parent_uuid: 3d2d03d8-863e-446a-9cea-84c3ada311a5
+      slot: hero_slot
+      uuid: e22f4e5f-3154-4e44-bd5a-db378b49104d
+      component_id: sdc.everbright_theme.button
+      inputs:
+        variant: secondary-inverted
+        label: 'Book a meeting'
+        mobile_width: false
+        icon_first: false
+        disabled: false
+  path:
+    -
+      alias: /portfolio
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

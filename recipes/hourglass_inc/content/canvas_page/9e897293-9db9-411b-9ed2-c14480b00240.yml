@@ -1,0 +1,252 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 9e897293-9db9-411b-9ed2-c14480b00240
+  default_langcode: en
+  depends:
+    cae1773a-903e-45dd-ad56-71ad423fc141: file
+    ee41620e-fa15-4c68-bc58-b3bf845869c8: media
+    613a6a92-e97e-4453-b301-68c5b150b3ea: file
+    13b1cdf2-8c5c-4b72-bb58-302bba8f86f2: media
+    849244be-eb64-48f6-973e-e978927e6d58: file
+    05caae00-c275-4d04-bffd-88d83c5d029f: media
+    b3f8e37d-a449-4668-87f4-207ca93b87a9: file
+    b616fca4-cdb1-4691-ae8d-78fa272ee569: media
+    8c7addff-66eb-4cb4-a6eb-2768d404ab2c: file
+    bc706e89-78ce-4532-9562-22d721c6c888: media
+    3afb94a9-6d74-47be-a605-3a2abcdcaae2: file
+    16c90768-a5a5-46fc-b29c-f9e67af369be: media
+    74877fde-c469-4ffe-bc7b-a54712f2e286: file
+    8d8122bc-092e-4017-907a-fcf1572db9e3: media
+    3ee355fb-7433-4eb2-884e-d05840457d61: file
+    7a9d58f7-75cc-4600-a0e9-d6e888a547bf: media
+    40ebd7cd-ebc6-4f12-aaf9-bb3ae334a7dc: file
+    e49f55bf-06d8-47b9-b93b-34d2a30c2c1a: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Service Listing'
+  description:
+    -
+      value: 'Service Listing'
+  components:
+    -
+      uuid: 4bc5abca-434a-49d2-bec4-f8f333f9d114
+      component_id: sdc.hourglass.hero
+      inputs:
+        label: 'WHAT WE DO'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: ee41620e-fa15-4c68-bc58-b3bf845869c8
+            target_type: media
+        cta_url:
+          uri: 'internal:/contact'
+          options: {  }
+        heading: 'Solutions Built for Scale'
+        cta_text: 'Book a Strategy Session'
+        alignment: left
+        description:
+          value: '<p>From cloud transformation to AI-powered automation, every service we offer is built to remove friction, reduce risk, and move your business forward at scale.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: bb291542-c5cd-4136-8198-a52cd5523305
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        padding_top: '120'
+        rounded_top: false
+    -
+      parent_uuid: bb291542-c5cd-4136-8198-a52cd5523305
+      slot: content
+      uuid: ffb65fa0-5c5b-4f3b-8d46-f898a4a7b80a
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Explore all our services'
+        heading_tag: h2
+    -
+      uuid: d1b8d827-a4fb-4d80-a744-b47d8d92e180
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: _none
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: d1b8d827-a4fb-4d80-a744-b47d8d92e180
+      slot: content
+      uuid: 0cf418d2-dcd8-4195-a652-ef8d28a43047
+      component_id: sdc.hourglass.services-grid
+      inputs: {  }
+    -
+      parent_uuid: 0cf418d2-dcd8-4195-a652-ef8d28a43047
+      slot: cards
+      uuid: 91f0f656-5561-4f90-ae93-82295d8a9c39
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 13b1cdf2-8c5c-4b72-bb58-302bba8f86f2
+            target_type: media
+        cta_url: /service-detail
+        heading: 'Seamless Cloud Transformation'
+        cta_text: Explore
+        description: 'Moving legacy infrastructure to the cloud is risky. Our B2B experts manage the transition with zero downtime and total data security.'
+    -
+      parent_uuid: 0cf418d2-dcd8-4195-a652-ef8d28a43047
+      slot: cards
+      uuid: be782aec-05c3-41f1-98fd-6aad4414f0f3
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 05caae00-c275-4d04-bffd-88d83c5d029f
+            target_type: media
+        cta_url: /service-detail
+        heading: 'Agile Cloud Migration'
+        cta_text: Explore
+        description: 'Migrating to the cloud can be complex. Our experts ensure a smooth transition with minimal disruption and robust data protection.'
+    -
+      parent_uuid: 0cf418d2-dcd8-4195-a652-ef8d28a43047
+      slot: cards
+      uuid: 5dc64f2f-b0f7-4f34-af91-d812ca79c757
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b616fca4-cdb1-4691-ae8d-78fa272ee569
+            target_type: media
+        cta_url: /service-detail
+        heading: 'AI-Powered Automation'
+        cta_text: Explore
+        description: 'Unlock new efficiencies with our AI solutions. We tailor automation to streamline your workflows and boost productivity across every department.'
+    -
+      parent_uuid: 0cf418d2-dcd8-4195-a652-ef8d28a43047
+      slot: cards
+      uuid: 460a6d2f-a036-4c67-b054-98059d2f01dd
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: bc706e89-78ce-4532-9562-22d721c6c888
+            target_type: media
+        cta_url: /service-detail
+        heading: 'Data Analytics & Insights'
+        cta_text: Explore
+        description: 'Transform raw data into actionable intelligence. Our analytics services provide the clarity your leadership team needs for confident, strategic decision-making.'
+    -
+      parent_uuid: 0cf418d2-dcd8-4195-a652-ef8d28a43047
+      slot: cards
+      uuid: e75c041f-e0f9-4f52-b372-a2903baaf477
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 16c90768-a5a5-46fc-b29c-f9e67af369be
+            target_type: media
+        cta_url: /service-detail
+        heading: 'Cybersecurity Solutions'
+        cta_text: Explore
+        description: 'Protect your digital assets with our advanced cybersecurity services. We offer comprehensive threat detection and prevention.'
+    -
+      parent_uuid: 0cf418d2-dcd8-4195-a652-ef8d28a43047
+      slot: cards
+      uuid: 3c480737-6c3c-40fc-8917-d5a92ea264fd
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8d8122bc-092e-4017-907a-fcf1572db9e3
+            target_type: media
+        cta_url: /service-detail
+        heading: 'Custom Software Development'
+        cta_text: Explore
+        description: 'Get tailor-made software solutions that fit your unique business needs. Our development team delivers scalable and innovative applications.'
+    -
+      parent_uuid: 0cf418d2-dcd8-4195-a652-ef8d28a43047
+      slot: cards
+      uuid: 3305670e-59ba-4c80-8e06-46394d53135c
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7a9d58f7-75cc-4600-a0e9-d6e888a547bf
+            target_type: media
+        cta_url: /service-detail
+        heading: 'IT Infrastructure Management'
+        cta_text: Explore
+        description: 'Focus on your core business while we handle your IT infrastructure. We provide proactive monitoring, maintenance, and rapid response for optimal performance.'
+    -
+      parent_uuid: 0cf418d2-dcd8-4195-a652-ef8d28a43047
+      slot: cards
+      uuid: 3bfdae01-c755-4347-8635-51214df6939e
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e49f55bf-06d8-47b9-b93b-34d2a30c2c1a
+            target_type: media
+        cta_url: /service-detail
+        heading: 'Digital Transformation Consulting'
+        cta_text: Explore
+        description: 'Navigate the digital landscape with confidence. Our consultants guide you through every stage of strategic transformation, from discovery to full-scale deployment.'
+    -
+      uuid: 145f11f7-c6c5-4e9f-906d-f6074208331b
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: default
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: 145f11f7-c6c5-4e9f-906d-f6074208331b
+      slot: content
+      uuid: 9dcbb47c-cd46-4535-a44c-c62471aa07d9
+      component_id: sdc.hourglass.contact-cta
+      inputs:
+        cta_body:
+          value: '<p>Ready to optimize your operations? Our consultants work one-on-one with your team to audit your current stack and design a roadmap for the future.</p>'
+          format: canvas_html_block
+        section_title:
+          value: 'Your Needs, Our Expertise'
+          format: canvas_html_block
+        cta_button_url: /contact
+        cta_button_label: 'Request a Consult'
+    -
+      parent_uuid: 9dcbb47c-cd46-4535-a44c-c62471aa07d9
+      slot: form
+      uuid: 4228cb4b-5a2f-4b51-9a31-f1b9e4c3bbbb
+      component_id: block.webform_block
+      inputs:
+        lazy: false
+        label: Webform
+        redirect: false
+        webform_id: contact_cta
+        default_data: ''
+        label_display: '0'
+  path:
+    -
+      alias: /services
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

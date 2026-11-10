@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Not Found (404)
+group: Organisms
+status: stable
+description: '404 error page: giant error code, description text, and two action buttons (Go Back + Return to Homepage).'
+props:
+  type: object
+  properties:
+    error_code:
+      type: string
+      title: 'Error Code'
+      default: '404'
+    message:
+      type: string
+      title: 'Message'
+      default: "It seems the page you're looking for doesn't exist. Let's get you back on track."
+    back_label:
+      type: string
+      title: '"Go Back" Button Label'
+      default: 'Go Back'
+    home_label:
+      type: string
+      title: '"Return to Homepage" Button Label'
+      default: 'Return to Homepage'
+    home_url:
+      type: string
+      title: 'Homepage URL'
+      default: '/'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

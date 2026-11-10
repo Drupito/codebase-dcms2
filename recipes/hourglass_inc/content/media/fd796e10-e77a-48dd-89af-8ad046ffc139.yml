@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: fd796e10-e77a-48dd-89af-8ad046ffc139
+  bundle: image
+  default_langcode: en
+  depends:
+    87615a1f-66af-4ae3-af5c-20411a4ec481: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 95a73b3616532edee43ae6a1f97a6a24912231f1.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Reached 1 Million Global Users'
+      title: ''
+      width: 1024
+      height: 1024
+      entity: 87615a1f-66af-4ae3-af5c-20411a4ec481

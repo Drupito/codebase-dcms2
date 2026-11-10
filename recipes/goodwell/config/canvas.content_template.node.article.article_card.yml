@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.goodwell_theme.card-article
+    - core.entity_view_mode.node.article_card
+    - field.field.media.image.field_media_image
+    - field.field.node.article.field_featured_image
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - node.type.article
+  module:
+    - file
+    - media
+    - node
+id: node.article.article_card
+content_entity_type_id: node
+content_entity_type_bundle: article
+content_entity_type_view_mode: article_card
+component_tree:
+  '0:8758423c-89bf-458d-a0dd-f5f9369c50cb':
+    uuid: 8758423c-89bf-458d-a0dd-f5f9369c50cb
+    component_id: sdc.goodwell_theme.card-article
+    component_version: 2c8e079297403542
+    inputs:
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:article␝field_featured_image␞␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      date:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node␝created␞␟value'
+        adapter: unix_to_date
+      title:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:article␝title␞␟value'
+      button_label: 'Read More'
+      button_url:
+        sourceType: host-entity-url
+        absolute: false
+exposed_slots: {  }

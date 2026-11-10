@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section ──────────────────────────────────────────────────────────────── */
+
+.c-image-gallery {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+
+.c-image-gallery__header {
+  padding: 0 120px;
+}
+
+.c-image-gallery__heading {
+  font-family: var(
+    --Heading-H3-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: -0.3px;
+  color: #000;
+  margin: 0;
+  max-width: 750px;
+}
+
+/* ── Content row ─────────────────────────────────────────────────────────── */
+
+.c-image-gallery__content {
+  padding: 0 120px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* ── Main column ─────────────────────────────────────────────────────────── */
+
+.c-image-gallery__main-col {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Main view ───────────────────────────────────────────────────────────── */
+
+.c-image-gallery__main-view {
+  position: relative;
+  height: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+/* Canvas editor placeholder when no slides have been built yet */
+.c-image-gallery__main-view:empty::after {
+  content: "Main image appears here";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+/* ── Slides ──────────────────────────────────────────────────────────────── */
+
+.c-image-gallery__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.c-image-gallery__slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Media fill inside slides */
+.c-image-gallery__slide > *,
+.c-image-gallery__slide .c-base-media,
+.c-image-gallery__slide .c-base-media__inner,
+.c-image-gallery__slide .c-base-media__content,
+.c-image-gallery__slide picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.c-image-gallery__slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Caption ─────────────────────────────────────────────────────────────── */
+
+.c-image-gallery__caption {
+  font-family: var(--Body-B1-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #000;
+  margin: 0;
+  max-width: 750px;
+  transition: opacity 0.2s ease;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+
+.c-image-gallery__sidebar {
+  flex-shrink: 0;
+  width: 234px;
+  position: relative;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+/* ── Thumbnail list ──────────────────────────────────────────────────────── */
+
+.c-image-gallery__thumb-list {
+  padding: 0 0 0 14px; /* left indent for the active bar */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Sidebar gradient fade ───────────────────────────────────────────────── */
+
+.c-image-gallery__sidebar-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  pointer-events: none;
+}
+
+/* ── Responsive: tablet ──────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-image-gallery__header {
+    padding: 0 60px;
+  }
+
+  .c-image-gallery__content {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-image-gallery {
+    padding: 80px 0;
+    gap: 60px;
+  }
+
+  .c-image-gallery__header {
+    padding: 0 60px;
+  }
+
+  .c-image-gallery__heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .c-image-gallery__content {
+    padding: 0 60px;
+    gap: 40px;
+  }
+
+  .c-image-gallery__main-view {
+    height: 440px;
+  }
+
+  .c-image-gallery__sidebar {
+    width: 180px;
+    max-height: 440px;
+  }
+}
+
+/* ── Responsive: mobile ──────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .c-image-gallery {
+    padding: 60px 0;
+    gap: 40px;
+  }
+
+  .c-image-gallery__header {
+    padding: 0 24px;
+  }
+
+  .c-image-gallery__heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .c-image-gallery__content {
+    padding: 0 24px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .c-image-gallery__main-view {
+    height: 240px;
+  }
+
+  .c-image-gallery__caption {
+    font-size: 16px;
+  }
+
+  .c-image-gallery__sidebar {
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .c-image-gallery__sidebar-fade {
+    display: none;
+  }
+
+  /* Horizontal scroll on mobile */
+  .c-image-gallery__thumb-list {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0 0 14px 14px;
+    scrollbar-width: none;
+  }
+
+  .c-image-gallery__thumb-list::-webkit-scrollbar {
+    display: none;
+  }
+}

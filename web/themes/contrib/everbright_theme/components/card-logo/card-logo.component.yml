@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Logo card
+description: A component with an image and optional background and link.
+group: Card
+props:
+  type: object
+  properties:
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      type: object
+      title: Logo
+      examples:
+        - src: "assets/dark.png"
+          alt: "Placeholder brand logo"
+          width: 188
+          height: 113
+    url:
+      type: string
+      title: Link
+      format: uri-reference

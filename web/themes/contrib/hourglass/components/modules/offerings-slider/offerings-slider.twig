@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Template for the Offerings Slider component.
+ *
+ * Props:
+ * - section_title: H2 heading.
+ * - subtitle_left: H6 text in the left column.
+ * - subtitle_right: Body text in the right column.
+ * - cta_text: Footer link label (default: "All Products").
+ * - cta_url: Footer link URL.
+ *
+ * Slots:
+ * - cards: Offering Card atoms — each card becomes a slide.
+ */
+#}
+{{ attach_library('hourglass/offerings-slider') }}
+
+<section class="c-offerings-slider {{ extra_classes|default('') }}">
+
+  {% if section_title %}
+    <div class="c-offerings-slider__title-row">
+      <h2 class="c-offerings-slider__title">{{ section_title }}</h2>
+    </div>
+  {% endif %}
+
+  {% if subtitle_left or subtitle_right %}
+    <div class="c-offerings-slider__subtitle-row">
+      {% if subtitle_left %}
+        <p class="c-offerings-slider__subtitle-left">{{ subtitle_left }}</p>
+      {% endif %}
+      {% if subtitle_right %}
+        <p class="c-offerings-slider__subtitle-right">{{ subtitle_right }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="c-offerings-slider__track-wrapper">
+
+    <button class="c-offerings-slider__nav c-offerings-slider__nav--prev js-offerings-prev" aria-label="Previous offering">
+      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="c-offerings-slider__track js-offerings-track">
+      <div class="c-offerings-slider__edge" aria-hidden="true"></div>
+      {{ cards }}
+      <div class="c-offerings-slider__edge" aria-hidden="true"></div>
+    </div>
+
+    <button class="c-offerings-slider__nav c-offerings-slider__nav--next js-offerings-next" aria-label="Next offering">
+      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+  </div>
+
+  {% if cta_url %}
+    <div class="c-offerings-slider__footer">
+      <a href="{{ cta_url }}" class="c-offerings-slider__cta-link">
+        <span>{{ cta_text|default('All Products') }}</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  {% endif %}
+
+</section>

@@ -1,0 +1,4 @@
+translate canvas content:
+  title: 'Translate Canvas content'
+  description: 'Use the Canvas Translate workspace to create and publish translations of Canvas content. Per-page edits are still subject to entity update access.'
+  restrict access: TRUE

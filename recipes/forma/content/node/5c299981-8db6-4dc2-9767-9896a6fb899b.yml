@@ -1,0 +1,59 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5c299981-8db6-4dc2-9767-9896a6fb899b
+  bundle: project
+  default_langcode: en
+  depends:
+    62511b6d-c709-4900-876e-bdec2bd39258: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Solaria Waterfront Towers'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /solaria-waterfront-towers
+      langcode: en
+  field_content:
+    -
+      value: '<p>Rising at the edge of Sydney Harbour, the Solaria Waterfront Towers are two residential towers that redefine what it means to live at the water''s edge. Designed for Solaria Group, the development comprises 340 residences across 32 floors, alongside ground-level retail, dining, and public promenade space that opens the waterfront back to the city. Where many buildings of this scale turn their backs on the public realm, Solaria faces it — deliberately and generously.</p><h2>The Challenge</h2><p>Waterfront development in Sydney carries enormous expectation and scrutiny. The site sat at the intersection of competing demands: a developer seeking a landmark address, a council requiring meaningful public benefit, and an existing neighbourhood protective of its scale and character. The towers also needed to perform across a wide range of residences — from compact apartments to full-floor penthouses — without any unit feeling like an afterthought.</p><h2>Our Approach</h2><p>The design begins at ground level. Rather than treating the podium as a base for the towers above, we conceived it as the project''s civic heart — a covered public promenade connecting the existing streetscape to the water''s edge, lined with activated tenancies and framed by deep, sheltered arcades. The towers rise from this base as two distinct forms, offset in plan to preserve view corridors and reduce the visual mass of the development from the harbour.</p><p>Each residence was planned around a simple principle: every room with a reason to face the water does. Living areas, primary bedrooms, and main terraces are oriented northward, capturing harbour views and maximising natural light throughout the day. Facade design responds to orientation — deeper louvres to the west, full-height glazing to the north, textured precast panels to the south that give the towers a material richness at close range.</p><p>The material palette was chosen for longevity and appropriateness to the harbour context: off-white precast concrete, brushed bronze metalwork, and warm timber soffits that carry through from the public promenade into the residential lobbies, creating a sense of continuity from street to sky.</p><h2>The Result</h2><p>The Solaria Waterfront Towers were awarded Development of the Year at the 2024 NSW Urban Taskforce Awards, with judges noting the project''s success in delivering genuine public value alongside exceptional private amenity. The ground-level promenade has become one of the precinct''s most frequented public spaces, busy from early morning through to late evening.</p><p>Residences sold out prior to practical completion. More importantly, the building has been embraced by the wider neighbourhood — a difficult outcome to achieve at this scale, and one Forma regards as the project''s most significant success.</p><h2>Details</h2><ul><li data-list-item-id="e183579f921177b11bc4d7bc69d99b663"><strong>Completed:</strong> 2024</li><li data-list-item-id="edf49c4035c7b08355195116d3d22d861"><strong>Storeys:</strong> 32</li><li data-list-item-id="e1b48ce2a79c0f690c8b75bbb0d746927"><strong>Residences:</strong> 340</li><li data-list-item-id="eeba14ad8bfa68396f5584417db258fd5"><strong>GFA:</strong> 42,000 m²</li><li data-list-item-id="e817e5de3445f5fdb8f9ff34974b05e80"><strong>Structure:</strong> Post-tensioned concrete, precast facade panels</li><li data-list-item-id="eb8cc900389f9fac91660154e9973d6a8"><strong>Public Realm:</strong> 1,800 m² waterfront promenade</li></ul>'
+      format: content_format
+  field_description:
+    -
+      value: "Rising at the edge of Sydney Harbour, the Solaria Waterfront Towers are two residential towers that redefine what it means to live at the water's edge."
+  field_eyebrow:
+    -
+      value: 'Vanguard Properties'
+  field_featured_image:
+    -
+      entity: 62511b6d-c709-4900-876e-bdec2bd39258
+  field_location:
+    -
+      value: 'Sydney, Australia'
+  field_seo_analysis:
+    -
+      status: '0'
+      focus_keyword: ''
+      title: ''
+      description: ''

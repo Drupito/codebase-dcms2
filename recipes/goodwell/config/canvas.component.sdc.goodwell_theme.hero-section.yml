@@ -1,0 +1,444 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - field.field.media.svg_image.field_media_svg_image
+    - filter.format.canvas_html_inline
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - media.type.svg_image
+  module:
+    - file
+    - media
+    - media_library
+    - text
+  theme:
+    - goodwell_theme
+label: 'Hero Section'
+id: sdc.goodwell_theme.hero-section
+source: sdc
+source_local_id: 'goodwell_theme:hero-section'
+provider: goodwell_theme
+active_version: e1f031108b39556f
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        background:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
+          derived_schema_metadata: {  }
+        overlay_opacity:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 50
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'FAST, PAPERLESS, AND TRUSTED.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        heading:
+          required: false
+          field_type: text
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_inline
+          field_widget: text_textfield
+          default_value:
+            -
+              value: "Secure your family's future today"
+              format: canvas_html_inline
+          expression: ℹ︎text␟processed
+          derived_schema_metadata:
+            string_shape:
+              contentMediaType: text/html
+              x-formatting-context: inline
+        customer_avatar_1:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
+          derived_schema_metadata: {  }
+        customer_avatar_2:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
+          derived_schema_metadata: {  }
+        customer_avatar_3:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
+          derived_schema_metadata: {  }
+        customer_count:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '10k+ customers'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        rating_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Rated 4.7 ★'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        award_1_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Best
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        award_1_sub:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'No Medical Exam Term Life Insurance'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        award_1_brand:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'BUSINESS INSIDER'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        award_2_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '#1'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        award_2_sub:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Instant Life Policy'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        award_2_brand:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Forbes
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        award_3_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Best
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        award_3_sub:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'No Medical Exam Term Life Insurance'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        award_3_brand:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'BUSINESS INSIDER'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        card:
+          title: Card
+          description: 'Drop the Webform Embed (or any card component) here — floats on the right side of the hero.'
+  32895c2de5ca3462:
+    settings:
+      prop_field_definitions:
+        background:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
+          derived_schema_metadata: {  }
+        overlay_opacity:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 50
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'FAST, PAPERLESS, AND TRUSTED.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        heading:
+          required: false
+          field_type: text
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_inline
+          field_widget: text_textfield
+          default_value:
+            -
+              value: "Secure your family's future today"
+              format: canvas_html_inline
+          expression: ℹ︎text␟processed
+          derived_schema_metadata: {  }
+        customer_count:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '10k+ customers'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        rating_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Rated 4.7 ★'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        award_1_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Best
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        award_1_sub:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'No Medical Exam Term Life Insurance'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        award_1_brand:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'BUSINESS INSIDER'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        award_2_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '#1'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        award_2_sub:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Instant Life Policy'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        award_2_brand:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Forbes
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        award_3_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Best
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        award_3_sub:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'No Medical Exam Term Life Insurance'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        award_3_brand:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'BUSINESS INSIDER'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        card:
+          title: Card
+          description: 'Drop the Webform Embed (or any card component) here — floats on the right side of the hero.'

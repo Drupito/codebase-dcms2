@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 0068d487-38fe-482e-9b9d-d57445c5328e
+  bundle: image
+  default_langcode: en
+  depends:
+    769bce9d-0330-4df5-bade-52a26832c143: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: not_found.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: not_found.png
+      title: ''
+      width: 300
+      height: 154
+      entity: 769bce9d-0330-4df5-bade-52a26832c143

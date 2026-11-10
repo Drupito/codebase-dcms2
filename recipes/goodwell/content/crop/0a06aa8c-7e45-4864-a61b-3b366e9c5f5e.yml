@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 0a06aa8c-7e45-4864-a61b-3b366e9c5f5e
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    94a6f834-df7c-4fc6-ab4a-3202b7d57925: file
+default:
+  entity_id:
+    -
+      uuid: 94a6f834-df7c-4fc6-ab4a-3202b7d57925
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/life_insurance.png'
+  x:
+    -
+      value: 194
+  'y':
+    -
+      value: 121
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

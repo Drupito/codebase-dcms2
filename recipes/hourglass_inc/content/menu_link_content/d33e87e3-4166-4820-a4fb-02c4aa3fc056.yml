@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: d33e87e3-4166-4820-a4fb-02c4aa3fc056
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    35ba8b32-db64-46ef-a9ec-eed9de1c7754: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Careers
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 35ba8b32-db64-46ef-a9ec-eed9de1c7754
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 10
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

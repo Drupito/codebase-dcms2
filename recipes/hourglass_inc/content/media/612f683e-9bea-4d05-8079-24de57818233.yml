@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 612f683e-9bea-4d05-8079-24de57818233
+  bundle: image
+  default_langcode: en
+  depends:
+    02e94cc8-cbcd-4c2a-aa0a-5bd9bd3fc7b0: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 15a0c66f72b6b42375789d13b233e8c4ae72e80c-(1).jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Redefining Efficiency with Intelligent Automation.'
+      title: ''
+      width: 1304
+      height: 869
+      entity: 02e94cc8-cbcd-4c2a-aa0a-5bd9bd3fc7b0

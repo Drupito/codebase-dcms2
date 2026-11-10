@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 2cd7e822-f006-4e9c-8a9c-8b387a5b7053
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: couple_papers.jpg
+  uri:
+    -
+      value: 'public://2026-06/couple_papers.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 9519582
+  status:
+    -
+      value: true

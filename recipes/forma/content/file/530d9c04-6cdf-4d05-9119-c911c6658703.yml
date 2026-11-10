@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 530d9c04-6cdf-4d05-9119-c911c6658703
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: frankie-xjosJTK8u-c-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-06/frankie-xjosJTK8u-c-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 697646
+  status:
+    -
+      value: true

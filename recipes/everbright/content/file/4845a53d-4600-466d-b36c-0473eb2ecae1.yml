@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4845a53d-4600-466d-b36c-0473eb2ecae1
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: pawel-czerwinski-T5VUBvCYqKk-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-05/pawel-czerwinski-T5VUBvCYqKk-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 333150
+  status:
+    -
+      value: true

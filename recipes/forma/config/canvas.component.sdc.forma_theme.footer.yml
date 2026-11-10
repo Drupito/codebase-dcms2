@@ -1,0 +1,90 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - forma_theme
+active_version: ffe29d5274917de1
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        footer_first:
+          title: 'Column 1'
+        footer_second:
+          title: 'Column 2'
+        footer_third:
+          title: 'Column 3'
+  9363930709cf22bc:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        footer_first:
+          title: 'Column 1'
+        footer_second:
+          title: 'Column 2'
+        footer_third:
+          title: 'Column 3'
+        footer_last:
+          title: 'Column 4'
+        footer_utility_first:
+          title: 'Utility links'
+        footer_utility_last:
+          title: 'Copyright text'
+  5349e604659c6e33:
+    settings:
+      prop_field_definitions:
+        align:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+    fallback_metadata:
+      slot_definitions:
+        footer_first:
+          title: 'Column 1'
+        footer_second:
+          title: 'Column 2'
+        footer_third:
+          title: 'Column 3'
+        footer_last:
+          title: 'Column 4'
+        footer_utility_first:
+          title: 'Utility links'
+        footer_utility_last:
+          title: 'Copyright text'
+  d696cea1796b650e:
+    settings:
+      prop_field_definitions:
+        align:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+    fallback_metadata:
+      slot_definitions:
+        footer_first:
+          title: 'Branding & Social'
+        footer_last:
+          title: 'Call to action'
+        footer_utility_first:
+          title: 'Utility links'
+        footer_utility_last:
+          title: 'Copyright text'
+label: Footer
+id: sdc.forma_theme.footer
+provider: forma_theme
+source: sdc
+source_local_id: 'forma_theme:footer'

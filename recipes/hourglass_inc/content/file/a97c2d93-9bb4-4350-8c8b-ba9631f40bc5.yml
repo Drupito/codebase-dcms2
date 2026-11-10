@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a97c2d93-9bb4-4350-8c8b-ba9631f40bc5
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: blog-cybersecurity.jpg
+  uri:
+    -
+      value: 'public://blog-images/blog-cybersecurity.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 216962
+  status:
+    -
+      value: true

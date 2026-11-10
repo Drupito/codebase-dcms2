@@ -1,0 +1,180 @@
+name: 'Forma'
+description: 'Designed for a portfolio site, this template features a warm and modern earthy design, along with articles and a project portfolio.'
+type: Site
+recipes:
+  - drupal_cms_site_template_base
+  - drupal_cms_forms
+install:
+  - ui_icons
+  - ui_icons_field
+  - ui_icons_menu
+  - ui_icons_picker
+  - forma_theme
+config:
+  strict: false
+  actions:
+    gin_login.settings:
+      simpleConfigUpdate:
+        brand_image.path: 'public://nick-hillier-aQcE3gDSSTY-unsplash_0.jpg'
+    node.type.page:
+      setPreviewMode: 0
+    project_browser.admin_settings:
+      simpleConfigUpdate:
+        enabled_sources:
+          recommended:
+            uri: 'https://git.drupalcode.org/api/v4/projects/221152/repository/files/recommended.yml/raw?ref=HEAD'
+            ttl: 86400
+          drupalorg_jsonapi: { }
+    system.site:
+      simpleConfigUpdate:
+        page:
+          403: /user/login
+          404: /page/2
+          front: /home
+    system.theme:
+      simpleConfigUpdate:
+        default: forma_theme
+    user.role.content_editor:
+      grantPermissions:
+        - create article content
+        - create project content
+        - edit any article content
+        - edit any project content
+        - delete any article content
+        - delete any project content
+    workflows.workflow.basic_editorial:
+      addNodeTypes:
+        - article
+        - project
+
+    canvas.component.theme_page_template.forma_theme:
+      createIfNotExists:
+        label: 'Forma page template'
+        provider: canvas_page_template_component
+        source: theme_page_template
+        source_local_id: forma_theme
+        active_version: 15fe1e06320b1035
+        versioned_properties:
+          active:
+            settings: { }
+            fallback_metadata:
+              slot_definitions:
+                content:
+                  title: Content
+                  description: 'The Content region.'
+                  examples:
+                    - ''
+                header:
+                  title: Header
+                  description: 'The Header region.'
+                  examples:
+                    - ''
+                footer:
+                  title: Footer
+                  description: 'The Footer region.'
+                  examples:
+                    - ''
+
+    canvas.page_variant.theme_forma_theme:
+      create:
+        label: 'Forma_theme theme'
+        component_tree:
+          - uuid: 3098a8d8-c3b4-4f85-8fa5-7b2bc38a441e
+            component_id: theme_page_template.forma_theme
+            component_version: 15fe1e06320b1035
+            inputs: { }
+          - parent_uuid: 3098a8d8-c3b4-4f85-8fa5-7b2bc38a441e
+            slot: content
+            uuid: a694f276-feb0-4c09-a973-41fb2f6b6450
+            component_id: marker.page_content
+            component_version: 3b12c0b99a6caecc
+            inputs: { }
+          - parent_uuid: 3098a8d8-c3b4-4f85-8fa5-7b2bc38a441e
+            slot: footer
+            uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            component_id: sdc.forma_theme.footer
+            component_version: ffe29d5274917de1
+            inputs: { }
+          - parent_uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            slot: footer_first
+            uuid: f52b2ced-2907-48c2-bd35-d15b582432e6
+            component_id: block.system_branding_block
+            component_version: 7d528e00f56b3abf
+            inputs:
+              label: 'Site branding'
+              label_display: '0'
+              use_site_logo: true
+              use_site_name: false
+              use_site_slogan: false
+          - parent_uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            slot: footer_second
+            uuid: c893995e-800a-41b0-8c39-94e5bbb300ff
+            component_id: sdc.forma_theme.text
+            component_version: 8a33edeeb2e4a925
+            inputs:
+              text:
+                value: '<p>Architecture that Shapes the Environment and Elevates the Human Experience</p>'
+                format: canvas_html_block
+              text_size: text-sm
+              text_color: default
+          - parent_uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            slot: footer_third
+            uuid: 63ecfaa9-10c3-4cee-81cc-2cad13f7240f
+            component_id: sdc.forma_theme.text
+            component_version: 8a33edeeb2e4a925
+            inputs:
+              text:
+                value: '<p class="text-align-right"><strong>© 2026 FORMA </strong>All rights reserved.</p>'
+                format: canvas_html_block
+              text_size: text-xs
+              text_color: default
+          - parent_uuid: 3098a8d8-c3b4-4f85-8fa5-7b2bc38a441e
+            slot: header
+            uuid: 9d4f46dd-0e77-429f-b63e-e91a7fb7bd12
+            component_id: sdc.forma_theme.navbar
+            component_version: c68c0b8e47c365e7
+            inputs: { }
+          - parent_uuid: 9d4f46dd-0e77-429f-b63e-e91a7fb7bd12
+            slot: links
+            uuid: 20767334-6a54-42f0-88fe-20e304af47a3
+            component_id: block.system_menu_block.social
+            component_version: 838d76f066aff791
+            inputs:
+              label: 'Social links'
+              label_display: '0'
+              level: 1
+              depth: null
+              expand_all_items: false
+          - parent_uuid: 9d4f46dd-0e77-429f-b63e-e91a7fb7bd12
+            slot: logo
+            uuid: 344f2633-5910-4dcf-b36e-9f987a0a1922
+            component_id: block.system_branding_block
+            component_version: 7d528e00f56b3abf
+            inputs:
+              label: 'Site branding'
+              label_display: '0'
+              use_site_logo: true
+              use_site_name: false
+              use_site_slogan: false
+          - parent_uuid: 9d4f46dd-0e77-429f-b63e-e91a7fb7bd12
+            slot: navigation
+            uuid: 7a7b27fa-35f2-44da-81e8-f43db578871a
+            component_id: block.system_menu_block.main
+            component_version: 322535c0078cf59c
+            inputs:
+              label: 'Main navigation'
+              label_display: '0'
+              level: 1
+              depth: null
+              expand_all_items: false
+
+    canvas.settings:
+      simpleConfigUpdate:
+        default_page_variant: theme_forma_theme
+
+extra:
+  drupal_cms_installer:
+    creator: Drupal CMS
+    links:
+      - text: Demo
+        url: 'https://simplytest.me/template/forma'

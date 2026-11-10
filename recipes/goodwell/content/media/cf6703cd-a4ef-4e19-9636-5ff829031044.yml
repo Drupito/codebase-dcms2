@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: cf6703cd-a4ef-4e19-9636-5ff829031044
+  bundle: image
+  default_langcode: en
+  depends:
+    7987412e-f501-4d30-a472-c7952d69486a: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Father Daughter'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Father Daughter Image'
+      title: ''
+      width: 3041
+      height: 1433
+      entity: 7987412e-f501-4d30-a472-c7952d69486a

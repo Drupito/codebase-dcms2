@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section ──────────────────────────────────────────────────────────────── */
+
+.c-contact-cards {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 120px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* ── Inner flex row ───────────────────────────────────────────────────────── */
+
+.c-contact-cards__inner {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Each direct child (Canvas block wrapper or bare card) gets equal width */
+.c-contact-cards__inner > * {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+}
+
+/* Make the card fill its column */
+.c-contact-cards__inner .c-contact-card {
+  flex: 1;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-contact-cards {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-contact-cards {
+    padding: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-contact-cards {
+    padding: 48px 24px;
+  }
+
+  .c-contact-cards__inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .c-contact-cards__inner > * {
+    flex: none;
+  }
+}

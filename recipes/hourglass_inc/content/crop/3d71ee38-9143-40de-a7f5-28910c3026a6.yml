@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 3d71ee38-9143-40de-a7f5-28910c3026a6
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    b0b077af-3a7c-4650-8da8-c941f89bba06: file
+default:
+  entity_id:
+    -
+      uuid: b0b077af-3a7c-4650-8da8-c941f89bba06
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/Hero-services-products.png'
+  x:
+    -
+      value: 720
+  'y':
+    -
+      value: 450
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

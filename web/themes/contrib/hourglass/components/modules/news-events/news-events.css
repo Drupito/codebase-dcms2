@@ -1,0 +1,336 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section wrapper ─────────────────────────────────────────────────────── */
+
+.c-news-events {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 0;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+
+.c-news-events__header {
+  padding: 0 120px;
+}
+
+.c-news-events__title {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -0.4px;
+  color: #000;
+  margin: 0;
+}
+
+/* ── Divider ─────────────────────────────────────────────────────────────── */
+
+.c-news-events__divider {
+  height: 1px;
+  background: #000;
+  margin: 0 120px;
+  opacity: 0.12;
+}
+
+/* ── Body (view output) ──────────────────────────────────────────────────── */
+
+.c-news-events__body {
+  padding: 0 120px;
+}
+
+/* ── Grid: featured + 2 card columns ─────────────────────────────────────── */
+
+.c-news-events__grid {
+  display: flex;
+  gap: 12px;
+  height: 608px;
+  align-items: stretch;
+}
+
+/* ── Featured card ───────────────────────────────────────────────────────── */
+
+.c-ne-featured {
+  position: relative;
+  flex: 1 0 0;
+  min-width: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.c-ne-featured__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: 16px;
+}
+
+.c-ne-featured__bg img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.c-ne-featured__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #f76707 0%, rgba(247, 103, 7, 0) 70%);
+  border-radius: 16px;
+}
+
+.c-ne-featured__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 36px;
+  margin-bottom: auto;
+}
+
+.c-ne-featured__label {
+  font-family: "Geist", "Geist Mono", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+
+.c-ne-featured__title {
+  margin: 0;
+}
+
+.c-ne-featured__title-link {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: -0.2px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.c-ne-featured__title-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.c-ne-featured__date {
+  font-family: "Geist", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+
+.c-ne-featured__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Geist", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.c-ne-featured__cta:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Small-card columns ──────────────────────────────────────────────────── */
+
+.c-ne-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 284px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.c-ne-col::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+/* ── Small blog card ─────────────────────────────────────────────────────── */
+
+.c-ne-card {
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.c-ne-card__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 20px;
+  transition: box-shadow 0.2s ease;
+}
+
+.c-ne-card__inner:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.c-ne-card__category {
+  display: block;
+  font-family: "Geist", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #f76707;
+  white-space: nowrap;
+}
+
+.c-ne-card__title {
+  margin: 0;
+  font-family: "Geist", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #000;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.c-ne-card__date {
+  display: block;
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #727272;
+}
+
+/* ── Footer CTA ──────────────────────────────────────────────────────────── */
+
+.c-news-events__footer {
+  padding: 0 120px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.c-news-events__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Geist", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 12px 28px;
+  border-radius: 48px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.c-news-events__cta:hover {
+  background: #f76707;
+  color: #fff;
+  border-color: #f76707;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-news-events__header,
+  .c-news-events__body,
+  .c-news-events__footer {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .c-news-events__divider {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .c-news-events {
+    padding: 80px 0;
+    gap: 40px;
+  }
+
+  .c-news-events__header,
+  .c-news-events__body,
+  .c-news-events__footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .c-news-events__divider {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .c-news-events__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .c-news-events__grid {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .c-ne-featured {
+    min-height: 400px;
+  }
+
+  .c-ne-col {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+
+  .c-ne-card {
+    min-width: 260px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .c-news-events__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .c-ne-featured__title-link {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

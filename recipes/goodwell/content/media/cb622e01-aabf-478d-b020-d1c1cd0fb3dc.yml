@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: cb622e01-aabf-478d-b020-d1c1cd0fb3dc
+  bundle: image
+  default_langcode: en
+  depends:
+    5541f109-82bf-4710-85f5-9343a58c9f45: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: life.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Family Happy Moments'
+      title: ''
+      width: 1200
+      height: 1200
+      entity: 5541f109-82bf-4710-85f5-9343a58c9f45

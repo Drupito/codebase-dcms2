@@ -1,0 +1,21 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: History Timeline
+group: Organisms
+status: stable
+description: 'Horizontal drag-to-scroll milestone timeline with alternating image/text layout. Place History Timeline Slide atoms in the slides slot.'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Section Title'
+      contentMediaType: text/html
+      examples:
+        - 'Milestones'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  slides:
+    title: Slides
+    description: 'Place History Timeline Slide atoms here. Use reversed: true on every second slide.'

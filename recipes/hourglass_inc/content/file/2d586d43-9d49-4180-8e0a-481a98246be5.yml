@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 2d586d43-9d49-4180-8e0a-481a98246be5
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: blog-cloud.jpg
+  uri:
+    -
+      value: 'public://blog-images/blog-cloud.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 120399
+  status:
+    -
+      value: true

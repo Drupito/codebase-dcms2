@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: webform_submission
+  uuid: 443f0e34-439f-4960-8356-de45fca94634
+  bundle: calculate_premium
+  default_langcode: en
+default:
+  serial:
+    -
+      value: 17
+  token:
+    -
+      value: dKI54lRkHrMFs3CH7kcbTzOag2YiU2Y6hp3Fc4klifg
+  uri:
+    -
+      value: /
+  completed:
+    -
+      value: 1781503151
+  in_draft:
+    -
+      value: false
+  remote_addr:
+    -
+      value: 172.19.0.2
+  uid:
+    -
+      target_id: 1
+  entity_type:
+    -
+      value: canvas_page
+  entity_id:
+    -
+      value: '4'
+  locked:
+    -
+      value: false
+  sticky:
+    -
+      value: false

@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Key Feature Slide
+group: Molecules
+status: stable
+description: 'Individual slide for the Key Features section: left text (H4 + body), orange stat card, and media image.'
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: 'Feature Heading'
+      contentMediaType: text/html
+    description:
+      type: string
+      title: 'Feature Description'
+      contentMediaType: text/html
+    stat_label:
+      type: string
+      title: 'Stat Highlight (orange card text)'
+      examples:
+        - '99.99% Core Uptime'
+    media:
+      type: object
+      title: 'Feature Image'
+      $ref: 'json-schema-definitions://canvas.module/image'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

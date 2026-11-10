@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4d22e9f3-56f3-455f-b6c6-bfd6d61c8b4f
+  bundle: image
+  default_langcode: en
+  depends:
+    53445d17-807f-497a-a874-90520e4ab28c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Pulse.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Pulse Logo'
+      title: ''
+      width: 112
+      height: 29
+      entity: 53445d17-807f-497a-a874-90520e4ab28c

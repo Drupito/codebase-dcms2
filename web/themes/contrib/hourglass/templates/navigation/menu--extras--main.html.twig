@@ -1,0 +1,179 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu with 'Menu Extras' module.
+ *
+ * Available variables:
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu item label.
+ *   - url: The menu item link.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ *   - entity: The menu link content entity (if using Menu Extras).
+ */
+#}
+{% set icon_chevron %}
+<svg class="site-header__nav-chevron" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.78401 5.355L0.187013 1.2435C-0.237487 0.75975 0.107513 2.75779e-07 0.751763 2.75779e-07H7.94576C8.08995 -0.000123345 8.23111 0.0413159 8.35235 0.119356C8.47358 0.197396 8.56976 0.308728 8.62935 0.44002C8.68894 0.571312 8.70943 0.716999 8.68835 0.859633C8.66727 1.00227 8.60553 1.1358 8.51051 1.24425L4.91351 5.35425C4.84312 5.43481 4.7563 5.49937 4.65889 5.54361C4.56149 5.58785 4.45574 5.61073 4.34876 5.61073C4.24178 5.61073 4.13604 5.58785 4.03863 5.54361C3.94122 5.49937 3.85441 5.43556 3.78401 5.355Z" fill="white"/>
+</svg>
+{% endset %}
+
+{% set icon_arrow %}
+<svg class="desktop-icon" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M0.5 6.33333H12.1667M12.1667 6.33333L6.33333 0.5M12.1667 6.33333L6.33333 12.1667" stroke="#818181" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+{% endset %}
+
+{% set icon_cart %}
+<svg class="site-header__megamenu-cart" width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M0.5 0.5H1.58847C1.79349 0.5 1.89599 0.5 1.97849 0.5377C2.05118 0.570923 2.11279 0.624354 2.15596 0.691621C2.20495 0.767953 2.21944 0.869433 2.24844 1.07239L2.64286 3.83333M2.64286 3.83333L3.51943 10.2762C3.63067 11.0938 3.68629 11.5026 3.88175 11.8103C4.05398 12.0814 4.3009 12.297 4.5928 12.4311C4.92405 12.5833 5.33662 12.5833 6.16176 12.5833H13.2933C14.0788 12.5833 14.4715 12.5833 14.7925 12.442C15.0755 12.3174 15.3182 12.1165 15.4936 11.8619C15.6924 11.573 15.7659 11.1872 15.9129 10.4156L17.0159 4.62474C17.0676 4.35317 17.0935 4.21739 17.056 4.11125C17.0231 4.01814 16.9583 3.93974 16.873 3.89001C16.7757 3.83333 16.6375 3.83333 16.361 3.83333H2.64286ZM7.16667 16.3333C7.16667 16.7936 6.79357 17.1667 6.33333 17.1667C5.8731 17.1667 5.5 16.7936 5.5 16.3333C5.5 15.8731 5.8731 15.5 6.33333 15.5C6.79357 15.5 7.16667 15.8731 7.16667 16.3333ZM13.8333 16.3333C13.8333 16.7936 13.4602 17.1667 13 17.1667C12.5398 17.1667 12.1667 16.7936 12.1667 16.3333C12.1667 15.8731 12.5398 15.5 13 15.5C13.4602 15.5 13.8333 15.8731 13.8333 16.3333Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+{% endset %}
+
+{% set icon_accordion %}
+<svg class="mobile-icon site-header__nav-accordion" width="11" height="6" viewbox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M0.5 0.5L5.5 5.5L10.5 0.5" stroke="#818181" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+{% endset %}
+
+<ul class="site-header__nav-list" role="list">
+	{% for item in items %}
+		{% set display_title = item.entity and item.entity.field_title.value ? item.entity.field_title.value|replace({'<p>':'', '</p>':''}) : item.title %}
+		{% set item_id = item.title|lower|replace({' ': '-', '&': 'and', '/': '-'})|clean_class %}
+		{% set has_children = item.below is not empty %}
+		{% if has_children %}
+			{% set layout_groups = [] %}
+			{% set plain_links   = [] %}
+			{% for child in item.below %}
+				{% if child.title == 'Menu Layout' %}
+					{% set layout_groups = layout_groups|merge([child]) %}
+				{% else %}
+					{% set plain_links = plain_links|merge([child]) %}
+				{% endif %}
+			{% endfor %}
+			<li class="site-header__nav-item site-header__nav-item--has-mega{{ item.in_active_trail ? ' is-active-trail' : '' }}" data-nav-item="{{ item_id }}">
+				<button class="site-header__nav-trigger" aria-expanded="false" aria-controls="megamenu-{{ item_id }}" aria-haspopup="true">
+					<span class="site-header__nav-text" data-text="{{ display_title|striptags|trim }}">{{ display_title|raw }}</span>
+					{{ icon_chevron }}
+				</button>
+				<div class="site-header__megamenu" id="megamenu-{{ item_id }}" aria-hidden="true" role="dialog" aria-label="{{ item.title }} menu">
+					<div class="site-header__megamenu-inner">
+						<button type="button" class="site-header__mobile-back" aria-label="Go back" data-back="{{ item_id }}">
+							<svg width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.1667 6.33333H0.5M0.5 6.33333L6.33333 12.1667M0.5 6.33333L6.33333 0.5" stroke="#218A9D" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<span>{{ display_title|raw }}</span>
+						</button>
+
+						{# Logic: Identify nested state and all L2 items for pre-rendering #}
+						{% set l2_items = layout_groups|length > 0 ? layout_groups[0].below : plain_links %}
+						{% set has_l3_somewhere = false %}
+						{% for link in l2_items %}
+							{% if link.below is not empty %}
+								{% set has_l3_somewhere = true %}
+							{% endif %}
+						{% endfor %}
+
+						{# Column Distribution: Strictly based on layout_groups or single column #}
+						{% if layout_groups|length > 0 %}
+							{% for group in layout_groups %}
+								<div class="site-header__megamenu-col site-header__megamenu-col--links">
+									<ul class="site-header__megamenu-list" role="list">
+										{% for link in group.below %}
+											{% set link_display_title = link.entity and link.entity.field_title.value ? link.entity.field_title.value|replace({'<p>':'', '</p>':''}) : link.title %}
+											{% set has_children = link.below is not empty %}
+											{% set sub_link_id = (item_id ~ '-' ~ link.title)|lower|replace({' ': '-', '&': 'and', '/': '-'})|clean_class %}
+											<li>
+												<div class="site-header__megamenu-link-wrapper">
+													<a href="{{ link.url }}" class="site-header__megamenu-link{{ link.in_active_trail ? ' is-active' : '' }}{{ has_children ? ' has-children' : '' }}" data-l2-item="{{ sub_link_id }}" {{ has_children ? 'aria-expanded="false" role="button"' : '' }}>
+														<span>{{ link_display_title|replace({'🛒': ''})|trim|raw }}</span>
+														{% if 'Online Shop' in link.title %}
+															{{ icon_cart }}
+														{% elseif has_children %}
+															{{ icon_accordion }}
+														{% endif %}
+													</a>
+													{% if has_children %}
+														<button type="button" class="site-header__megamenu-arrow-toggle" data-l2-item="{{ sub_link_id }}" aria-label="Toggle submenu">
+															{{ icon_arrow }}
+														</button>
+													{% endif %}
+												</div>
+												{% if has_children %}
+													<div class="site-header__megamenu-sublist-wrapper site-header__megamenu-sublist-wrapper--mobile" data-l3-list="{{ sub_link_id }}" aria-hidden="true">
+														<ul class="site-header__megamenu-list site-header__megamenu-list--l3" role="list">
+															{% for sublink in link.below %}
+																{% set sublink_display_title = sublink.entity and sublink.entity.field_title.value ? sublink.entity.field_title.value|replace({'<p>':'', '</p>':''}) : sublink.title %}
+																<li>
+																	<a href="{{ sublink.url }}" class="site-header__megamenu-sublink">
+																		{{ sublink_display_title|raw }}
+																	</a>
+																</li>
+															{% endfor %}
+														</ul>
+													</div>
+												{% endif %}
+											</li>
+										{% endfor %}
+									</ul>
+								</div>
+
+								{# If this is the column that has L3 sub-items (usually first), render them next to it #}
+								{% if loop.first and has_l3_somewhere %}
+									<div class="site-header__megamenu-col site-header__megamenu-col--middle">
+										<div class="site-header__megamenu-l3-container">
+											{% for link in group.below %}
+												{% if link.below is not empty %}
+													{% set sub_link_id = (item_id ~ '-' ~ link.title)|lower|replace({' ': '-', '&': 'and', '/': '-'})|clean_class %}
+													<div class="site-header__megamenu-sublist-wrapper" data-l3-list="{{ sub_link_id }}" aria-hidden="true">
+														<ul class="site-header__megamenu-list site-header__megamenu-list--l3" role="list">
+															{% for sublink in link.below %}
+																{% set sublink_display_title = sublink.entity and sublink.entity.field_title.value ? sublink.entity.field_title.value|replace({'<p>':'', '</p>':''}) : sublink.title %}
+																<li>
+																	<a href="{{ sublink.url }}" class="site-header__megamenu-sublink">
+																		{{ sublink_display_title|raw }}
+																	</a>
+																</li>
+															{% endfor %}
+														</ul>
+													</div>
+												{% endif %}
+											{% endfor %}
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						{% else %}
+							{# Single Column Layout #}
+							<div class="site-header__megamenu-col site-header__megamenu-col--links">
+								<ul class="site-header__megamenu-list" role="list">
+									{% for link in plain_links %}
+										{% set link_display_title = link.entity and link.entity.field_title.value ? link.entity.field_title.value|replace({'<p>':'', '</p>':''}) : link.title %}
+										<li>
+											<a href="{{ link.url }}" class="site-header__megamenu-link{{ link.in_active_trail ? ' is-active' : '' }}">
+												{{ link_display_title|replace({'🛒': ''})|trim|raw }}
+												{% if 'Online Shop' in link.title %}
+													{{ icon_cart }}
+												{% else %}
+													{{ icon_arrow }}
+												{% endif %}
+											</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+						{% endif %}
+
+					</div>
+				</div>
+			</li>
+		{% else %}
+			<li class="site-header__nav-item{{ item.in_active_trail ? ' is-active-trail' : '' }}">
+				<a href="{{ item.url }}" class="site-header__nav-link{{ item.in_active_trail ? ' is-active' : '' }}">
+					<span class="site-header__nav-text" data-text="{{ display_title|striptags|trim }}">{{ display_title|raw }}</span>
+				</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1695ab20-e7f3-4db6-b7db-96240206609a
+  bundle: image
+  default_langcode: en
+  depends:
+    2c6c20f4-fd74-40ef-b011-7d685ab8b19e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 04e0debac553a766153e12b5f88860afe01be953.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Lead UX Designer'
+      title: ''
+      width: 756
+      height: 504
+      entity: 2c6c20f4-fd74-40ef-b011-7d685ab8b19e

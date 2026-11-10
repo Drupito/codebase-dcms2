@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 697bcdda-c00b-455a-bdda-2c83da45bc9b
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    5dbedcf4-ae4c-4157-a375-9fb1dff1fae1: file
+default:
+  entity_id:
+    -
+      uuid: 5dbedcf4-ae4c-4157-a375-9fb1dff1fae1
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/university-of-cambridge.png'
+  x:
+    -
+      value: 100
+  'y':
+    -
+      value: 117
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

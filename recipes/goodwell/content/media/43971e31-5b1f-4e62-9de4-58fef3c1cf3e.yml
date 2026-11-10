@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 43971e31-5b1f-4e62-9de4-58fef3c1cf3e
+  bundle: image
+  default_langcode: en
+  depends:
+    270b9212-8454-4029-a721-ebd72164d051: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: vector.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: vector
+      title: ''
+      width: 13
+      height: 13
+      entity: 270b9212-8454-4029-a721-ebd72164d051

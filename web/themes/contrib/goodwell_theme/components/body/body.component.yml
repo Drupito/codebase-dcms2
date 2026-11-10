@@ -1,0 +1,56 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Body
+group: Content
+status: stable
+description: "Full rich-text area. Supports headings, paragraphs, lists, tables, blockquotes and images. Use for page body content, article text, plan descriptions."
+props:
+  type: object
+  properties:
+    content:
+      type: string
+      title: Content
+      description: "Full HTML body content — headings, lists, tables, images all supported."
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - "<h2>About Life Insurance</h2><p>Life insurance is a financial safety net for your family.</p>"
+
+    max_width:
+      type: string
+      title: Max width
+      description: "Controls the reading width of the content."
+      enum:
+        - full
+        - wide
+        - narrow
+      meta:enum:
+        full:   "Full (no max-width)"
+        wide:   "Wide (900px)"
+        narrow: "Narrow (680px — ideal for articles)"
+      default: full
+      examples:
+        - full
+
+    text_size:
+      type: string
+      title: Text size
+      enum:
+        - sm
+        - base
+        - lg
+      meta:enum:
+        sm:   "Small (14px)"
+        base: "Base (16px)"
+        lg:   "Large (18px)"
+      default: base
+
+    text_color:
+      type: string
+      title: Text colour
+      enum:
+        - dark
+        - light
+      meta:enum:
+        dark:  "Dark (default)"
+        light: "Light (for dark backgrounds)"
+      default: dark

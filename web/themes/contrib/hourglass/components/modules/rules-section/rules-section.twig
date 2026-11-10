@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Rules Section — gray card section with H3 heading, orange subtitle, and body.
+ *
+ * Props: heading, subtitle, description (HTML), extra_classes.
+ */
+#}
+{{ attach_library('hourglass/rules-section') }}
+
+<section class="c-rules-section {{ extra_classes|default('') }}">
+  <div class="c-rules-section__inner">
+
+    {% if heading %}
+      <h2 class="c-rules-section__heading">{{ heading }}</h2>
+    {% endif %}
+
+    {% if subtitle %}
+      <p class="c-rules-section__subtitle">{{ subtitle }}</p>
+    {% endif %}
+
+    {% if description %}
+      <div class="c-rules-section__description">{{ description|raw }}</div>
+    {% endif %}
+
+  </div>
+</section>

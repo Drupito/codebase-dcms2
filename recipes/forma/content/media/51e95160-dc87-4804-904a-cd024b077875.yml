@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 51e95160-dc87-4804-904a-cd024b077875
+  bundle: image
+  default_langcode: en
+  depends:
+    0891be46-84bf-45ce-a45a-eb2cdf8c050c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: kam-idris-_HqHX3LBN18-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'A yellow chair under a lamp in the corner of a room.'
+      title: ''
+      width: 3400
+      height: 3000
+      entity: 0891be46-84bf-45ce-a45a-eb2cdf8c050c

@@ -1,0 +1,390 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - field.field.media.svg_image.field_media_svg_image
+    - filter.format.canvas_html_block
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - media.type.svg_image
+  module:
+    - file
+    - link
+    - media
+    - media_library
+    - options
+    - text
+  theme:
+    - hourglass
+active_version: 5ef79fe91da3e00a
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        play_button_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        heading:
+          title: Heading
+          description: 'Place the Heading atom here.'
+        description:
+          title: Description
+          description: 'Place the Text atom here.'
+        cta:
+          title: 'CTA Button'
+          description: 'Place the Button atom here — styled automatically as the orange gradient CTA.'
+        media:
+          title: 'Video Thumbnail'
+          description: 'Place the Media atom here for the background thumbnail.'
+  eed313a9a940ec79:
+    settings:
+      prop_field_definitions:
+        layout:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        play_button_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        heading:
+          title: Heading
+          description: 'Place the Heading atom here.'
+        description:
+          title: Description
+          description: 'Place the Text atom here.'
+        cta:
+          title: 'CTA Button'
+          description: 'Place the Button atom here — styled automatically as the orange gradient CTA.'
+        media:
+          title: 'Video Thumbnail'
+          description: 'Place the Media atom here for the background thumbnail.'
+  c605e271829094ec:
+    settings:
+      prop_field_definitions:
+        variant:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: side
+          expression: ℹ︎list_string␟value
+        play_button_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        heading:
+          title: Heading
+          description: 'Place the Heading atom here.'
+        description:
+          title: Description
+          description: 'Place the Text atom here.'
+        cta:
+          title: 'CTA Button'
+          description: 'Place the Button atom here — styled automatically as the orange gradient CTA.'
+        media:
+          title: 'Video Thumbnail'
+          description: 'Place the Media atom here for the background thumbnail.'
+  13852da401a32c6b:
+    settings:
+      prop_field_definitions:
+        variant:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: side
+          expression: ℹ︎list_string␟value
+        play_button_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        heading:
+          title: Heading
+          description: 'Place the Heading atom here.'
+        description:
+          title: Description
+          description: 'Place the Text atom here.'
+        cta:
+          title: 'CTA Button'
+          description: 'Place the Button atom here — styled automatically as the orange gradient CTA.'
+        media:
+          title: 'Video Thumbnail'
+          description: 'Place the Media atom here for the background thumbnail.'
+  5ef79fe91da3e00a:
+    settings:
+      prop_field_definitions:
+        play_button_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        heading:
+          title: Heading
+          description: 'Place the Heading atom here.'
+        description:
+          title: Description
+          description: 'Place the Text atom here.'
+        cta:
+          title: 'CTA Button'
+          description: 'Place the Button atom here — styled automatically as the orange gradient CTA.'
+        media:
+          title: 'Video Thumbnail'
+          description: 'Place the Media atom here for the background thumbnail.'
+  d33a2eac2ed773b9:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        heading:
+          title: Heading
+          description: 'Place the Heading atom here.'
+        description:
+          title: Description
+          description: 'Place the Text atom here.'
+        cta:
+          title: 'CTA Button'
+          description: 'Place the Button atom here — styled as orange gradient CTA.'
+        media:
+          title: 'Video Thumbnail'
+          description: 'Place the Media atom here for the background thumbnail.'
+        video_button:
+          title: 'Play Button'
+          description: 'Place the Button atom here — styled as glassmorphism play overlay.'
+  ec894e08f79eefe1:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value: null
+          expression: ℹ︎text_long␟processed
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        cta_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        cta_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+        media:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
+        video_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+        play_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  38b8126d71f82bb9:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value: null
+          expression: ℹ︎text_long␟processed
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        cta_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        cta_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+        video_thumbnail_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        video_thumbnail_alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        video_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+        play_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Video Feature'
+id: sdc.hourglass.video-feature
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:video-feature'

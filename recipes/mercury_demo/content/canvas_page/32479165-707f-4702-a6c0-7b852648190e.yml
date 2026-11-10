@@ -1,0 +1,711 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 32479165-707f-4702-a6c0-7b852648190e
+  default_langcode: en
+  depends:
+    51b1827b-4f77-44a4-879d-7c6deea306c3: file
+    902ebd05-b98d-4c5a-8508-89b5a805717c: media
+    bcee0e5b-972f-470c-b08a-8856745bf494: file
+    a1e3574c-2e69-4c6a-8673-e719c1c05910: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Layout components'
+  components:
+    -
+      uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '48'
+        padding_block_start: '64'
+        padding_block_end: '32'
+        section_header: true
+        section_footer: true
+        background_color: muted
+    -
+      parent_uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      slot: header_slot
+      uuid: a553e204-2e45-4a48-91ca-7868df5d275a
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Layout components'
+        level: 1
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      slot: main_slot
+      uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        items_align: start
+        flex_align: center
+        radius: sm
+        flex_gap: md
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: 88dd5b64-df8b-4134-93e3-17faa114cae5
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Accordion
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#accordion'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: d0b97032-940b-4f45-b25e-4c97df7c94c7
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Accordion container'
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#accordion-container'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: 260fe6fd-0b3f-426b-a227-12de4978c92b
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Footer
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#footer'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: c6c0fe91-8de5-4aa2-9822-a57a4ca492c4
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Grid
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#grid'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: 00e1913e-5fe4-47cf-862f-ec9e9f2fb540
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Group
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#group'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: 9c29cf86-fa07-4888-9dc9-8e76a27b8724
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Navbar
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#icon'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: 9e97779b-1933-49e1-b540-04908416f682
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Section
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#section'
+          options: {  }
+    -
+      uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: header_slot
+      uuid: c4b8fd3c-3f60-455b-8fcd-bc43c159562f
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: c4b8fd3c-3f60-455b-8fcd-bc43c159562f
+      slot: main_slot
+      uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 20130bb9-44d1-4817-b8e4-b52433921b5b
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: accordion
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 6ff9f2f6-8bf7-47cf-b809-c7f8d3b27e31
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Accordion
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 63800e8d-8ece-47b5-9bee-4ef60c7b1d70
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The accordion component creates a collapsible section with a heading and a slot for content. Options are heading level and whether to open the accordion by default.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: main_slot
+      uuid: 3a38725c-c865-448b-8c04-d8c0eb3aa05c
+      component_id: sdc.mercury.accordion
+      inputs:
+        title: 'Section title'
+        heading_level: '3'
+        open_by_default: false
+    -
+      parent_uuid: 3a38725c-c865-448b-8c04-d8c0eb3aa05c
+      slot: accordion_content
+      uuid: 4106e67e-d226-472e-ac17-3cad23ea483c
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 47d824ec-ac77-44f8-977b-38f7a8c1ee6b
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 47d824ec-ac77-44f8-977b-38f7a8c1ee6b
+      slot: header_slot
+      uuid: 2965053d-4d2c-4d2d-9d22-daaf92a4c04f
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 2965053d-4d2c-4d2d-9d22-daaf92a4c04f
+      slot: main_slot
+      uuid: 1920eb70-b76c-4a23-b6a4-09599edabc4d
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 1920eb70-b76c-4a23-b6a4-09599edabc4d
+      slot: group_slot
+      uuid: ac451873-0558-4c45-bc5f-4dba8a4e9815
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: accordion-container
+    -
+      parent_uuid: 1920eb70-b76c-4a23-b6a4-09599edabc4d
+      slot: group_slot
+      uuid: f7dda3f1-1a34-4e4e-9325-d471dedc14a3
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Accordion container'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1920eb70-b76c-4a23-b6a4-09599edabc4d
+      slot: group_slot
+      uuid: 552789b3-6187-4c17-aa54-9c56ec21a462
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The accordion container component provides a way to group accordions. Multiple accordions placed in the same container will not have space between them and opening one accordion will close the others in the container.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 47d824ec-ac77-44f8-977b-38f7a8c1ee6b
+      slot: main_slot
+      uuid: 8bcd4fc6-c51a-428d-9218-1e352e0d1e09
+      component_id: sdc.mercury.accordion-container
+      inputs: {  }
+    -
+      parent_uuid: 8bcd4fc6-c51a-428d-9218-1e352e0d1e09
+      slot: accordion_content
+      uuid: b2b13c9c-9025-4146-a537-906cf4acc65f
+      component_id: sdc.mercury.accordion
+      inputs:
+        title: 'Section title'
+        heading_level: 3
+        open_by_default: true
+    -
+      parent_uuid: b2b13c9c-9025-4146-a537-906cf4acc65f
+      slot: accordion_content
+      uuid: 21c35f82-16e6-41fb-8729-ae2c9a547579
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 8bcd4fc6-c51a-428d-9218-1e352e0d1e09
+      slot: accordion_content
+      uuid: 0d7b6560-bc96-44a1-88d4-867e0d3814dc
+      component_id: sdc.mercury.accordion
+      inputs:
+        title: 'Section title'
+        heading_level: 3
+        open_by_default: true
+    -
+      parent_uuid: 0d7b6560-bc96-44a1-88d4-867e0d3814dc
+      slot: accordion_content
+      uuid: 440d6c9a-2d0a-4b53-b811-8ea3a24688b4
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: b036e805-fc18-4299-9a38-b3df09d21a2a
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: b036e805-fc18-4299-9a38-b3df09d21a2a
+      slot: header_slot
+      uuid: 0480db00-db3c-4ca4-99c6-9cf15a6427a3
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 0480db00-db3c-4ca4-99c6-9cf15a6427a3
+      slot: main_slot
+      uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      slot: group_slot
+      uuid: ed18221f-89fd-4057-a3ac-7aecd4f7bd59
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: footer
+    -
+      parent_uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      slot: group_slot
+      uuid: 0d6aed63-76f9-4fde-ad20-240580d2c9ad
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Footer
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      slot: group_slot
+      uuid: f0d00437-9521-46d7-81b3-f5c833cc4de5
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The footer component provides a layout for the sitewide footer with four slots for content:</p><ul><li data-list-item-id="e3daa2980800a4223e546c79e05bb3d1d">Branding &amp; Social</li><li data-list-item-id="ee17ddd34ddcc8d58a21233746236af39">Call to action</li><li data-list-item-id="e53c5bfacaeee00faa44a29e8db641e01">Utility links</li><li data-list-item-id="ee8b1f4d3ee42e593064c1c00123befb8">Copyright</li></ul>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: b036e805-fc18-4299-9a38-b3df09d21a2a
+      slot: main_slot
+      uuid: b96e66b1-9ecf-46e9-bb7f-438e51ba53a8
+      component_id: sdc.mercury.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 902ebd05-b98d-4c5a-8508-89b5a805717c
+            target_type: media
+        radius: small
+        caption: 'Screenshot of the footer component in the Canvas editor'
+    -
+      uuid: 18de2b9e-e801-42f2-9639-a3fd0ec3db25
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 18de2b9e-e801-42f2-9639-a3fd0ec3db25
+      slot: header_slot
+      uuid: 8ee858c7-f8e1-4e7d-bca6-85890899e5e5
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 8ee858c7-f8e1-4e7d-bca6-85890899e5e5
+      slot: main_slot
+      uuid: b367ea0f-a04b-4157-ab47-f02d5342c2b6
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: b367ea0f-a04b-4157-ab47-f02d5342c2b6
+      slot: group_slot
+      uuid: 38dc0bc7-1301-45f7-8d47-f17785146a63
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: grid
+    -
+      parent_uuid: b367ea0f-a04b-4157-ab47-f02d5342c2b6
+      slot: group_slot
+      uuid: d8f996fd-cc05-4963-8662-10edb66ccee9
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Grid
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: b367ea0f-a04b-4157-ab47-f02d5342c2b6
+      slot: group_slot
+      uuid: 337ec9ac-db03-4423-9cbe-90046bd6cbb6
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The grid component provides a simple way to place other components in a grid layout. It has one content slot and options for width, columns and columns on mobile.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 255949a2-bc4b-4e47-988d-6bec3811da4f
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 255949a2-bc4b-4e47-988d-6bec3811da4f
+      slot: header_slot
+      uuid: 5fda2d2a-fab1-475f-939e-1910f100eb6e
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 5fda2d2a-fab1-475f-939e-1910f100eb6e
+      slot: main_slot
+      uuid: 927a77ce-f323-4bcd-92d9-c9199463a550
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 927a77ce-f323-4bcd-92d9-c9199463a550
+      slot: group_slot
+      uuid: 3b4ba65a-e0c7-44c8-b31f-8423a4bac8b7
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: group
+    -
+      parent_uuid: 927a77ce-f323-4bcd-92d9-c9199463a550
+      slot: group_slot
+      uuid: 14b2b200-3d8c-41b9-9181-5808f5ce9c1d
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Group
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 927a77ce-f323-4bcd-92d9-c9199463a550
+      slot: group_slot
+      uuid: eb590534-bf7a-495a-9a38-0589b8dff7ea
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The group component provides a way to group components together to create more complex layouts. The group has many options that make it flexible for controlling the layout of multiple components.</p><p>Some examples of uses for a group:</p><ul><li data-list-item-id="eab73379c988242dd6b43d9ac4f3e2d3e">Bundling components with a grid or section into a single column</li><li data-list-item-id="eea22fee603fcaf9d0e2769228df74fba">Placing multiple elements inline</li><li data-list-item-id="e2f05e78fffa68094ef46e68b08e08790">Offsetting elements with a different colored background</li><li data-list-item-id="e2bb8fd3e21e178c680d2644a05d987c9">Additional control of spacing between elements in any slot</li><li data-list-item-id="e6fb7bef7e360940d144d5de59d9b60a4">Adding padding around a single element</li></ul>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: dcd7e4cf-e0b0-4116-b686-0726801eabf4
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: dcd7e4cf-e0b0-4116-b686-0726801eabf4
+      slot: header_slot
+      uuid: 3f8e3211-ce1c-45af-b1bd-5da2c47bfd7c
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 3f8e3211-ce1c-45af-b1bd-5da2c47bfd7c
+      slot: main_slot
+      uuid: 2211489d-057d-4ade-9330-f72b891c2f41
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 2211489d-057d-4ade-9330-f72b891c2f41
+      slot: group_slot
+      uuid: 59af9c65-148d-44ed-a25d-9080ba1192dd
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: navbar
+    -
+      parent_uuid: 2211489d-057d-4ade-9330-f72b891c2f41
+      slot: group_slot
+      uuid: bb75b95b-6669-4666-9bd4-c73132f02b58
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Navbar
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 2211489d-057d-4ade-9330-f72b891c2f41
+      slot: group_slot
+      uuid: 2f3a7243-9576-4b33-bbdc-9cc12ef6d518
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The navbar component provides a layout for the header with three slots for content:</p><ul><li data-list-item-id="e3daa2980800a4223e546c79e05bb3d1d">Site logo</li><li data-list-item-id="ee17ddd34ddcc8d58a21233746236af39">Navigation menu</li><li data-list-item-id="e53c5bfacaeee00faa44a29e8db641e01">CTAs</li></ul><p>CTAs are for optional buttons to place in the header. There is an option for menu alignment, either left, right or center.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: b6a5415c-6e9e-4263-a505-614402c7e4db
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: b6a5415c-6e9e-4263-a505-614402c7e4db
+      slot: header_slot
+      uuid: befff884-31c7-4779-afd2-a93dcb8d9de3
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: befff884-31c7-4779-afd2-a93dcb8d9de3
+      slot: main_slot
+      uuid: 2fe353e4-b217-450c-b641-4bb7100709f4
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 2fe353e4-b217-450c-b641-4bb7100709f4
+      slot: group_slot
+      uuid: 2526c751-9334-4fb7-ac92-36eaf08fb65f
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: section
+    -
+      parent_uuid: 2fe353e4-b217-450c-b641-4bb7100709f4
+      slot: group_slot
+      uuid: 22e421bc-fac2-4242-b371-0464c2b9bc3f
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Section
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 2fe353e4-b217-450c-b641-4bb7100709f4
+      slot: group_slot
+      uuid: 875b49f4-7fe3-4eec-b9ed-456995336548
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The section component provides a more complex grid layout, with slots for a header and footer as well as a grid. It has many options including section width, number of columns, whether it contains a views grid, top and bottom margin and padding, background color and a background image.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: b6a5415c-6e9e-4263-a505-614402c7e4db
+      slot: main_slot
+      uuid: e70ff33c-eb36-4d7f-88c5-6e366f3f0e85
+      component_id: sdc.mercury.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: a1e3574c-2e69-4c6a-8673-e719c1c05910
+            target_type: media
+        radius: small
+        caption: 'Screenshot of the section component in the Canvas editor'
+    -
+      parent_uuid: b6a5415c-6e9e-4263-a505-614402c7e4db
+      slot: main_slot
+      uuid: 5c163b2b-c833-42e3-86b1-df60eb9d63bc
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 50-50
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+  path:
+    -
+      alias: /layout-components
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

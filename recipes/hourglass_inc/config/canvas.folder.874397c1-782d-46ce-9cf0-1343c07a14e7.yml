@@ -1,0 +1,12 @@
+uuid: 874397c1-782d-46ce-9cf0-1343c07a14e7
+langcode: en
+status: true
+dependencies: {  }
+name: Molecules
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.hourglass.heading-with-description
+  - sdc.hourglass.key-feature-slide
+  - sdc.hourglass.notification-banner
+  - sdc.hourglass.offering-card

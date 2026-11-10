@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3f5b1c4a-303e-440f-ba06-b55dd534fdb1
+  bundle: plans
+  default_langcode: en
+  depends:
+    76624e6b-e1d8-43fe-bed7-9a6d8795b45d: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Life Insurance'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /life-insurance
+      langcode: en
+  field_body:
+    -
+      value: '<h2>About Life Insurance</h2><p>Life insurance is one of the most important financial decisions you can make for your loved ones. It provides a financial safety net that helps your family manage expenses, maintain their lifestyle, and achieve future goals if something unexpected happens to you.</p><p>At Goodwell Insurance, we offer flexible life insurance plans that provide long-term security and support. Whether you''re planning for your family''s future, protecting outstanding debts, or building financial stability, our coverage options are designed to grow with your needs.</p><h2>What''s Included</h2><ul><li data-list-item-id="ed0839e0642f382dbac248d640ff0cdce">Flexible coverage amounts</li><li data-list-item-id="e0d787fff366973e75740ef937d14d5e7">Financial protection for your loved ones</li><li data-list-item-id="e3afb71ae75ca1e1adc15fcf92721476a">Lump-sum benefit payment options</li><li data-list-item-id="e83634dd869368cdfbebc5eb4416b04bb">Coverage for outstanding loans and debts</li><li data-list-item-id="eff454e7ff53ce73a1947fbb150b367e3">Long-term family financial security</li><li data-list-item-id="e5a7fc378eb246e57a0f10be729491703">Optional dependent and family coverage</li><li data-list-item-id="ea8702ebf63cf1814098a8234d251e0e7">Easy policy management and updates</li><li data-list-item-id="e5f41095ed0749ff7b7f89cef6474a062">Simple application process</li><li data-list-item-id="ee9fc34d06d0b62fc0731aa5f4726cabd">Competitive premiums</li><li data-list-item-id="e607988114b0e5da0450b54faa0ae53c9">Dedicated customer support</li></ul><h2>How It Works</h2><ol><li data-list-item-id="ee2a8f634b3db028e5a69e7f779d623bd">Choose the coverage amount that fits your needs.</li><li data-list-item-id="ef465e0f1c7609b532f2a48a84e407e41">Complete a simple application process.</li><li data-list-item-id="ecae0b4bcc73d51bb135dec1b94f23268">Select any optional benefits or add-ons.</li><li data-list-item-id="ef6c43ce5e9453c8e210ee6d13463e51e">Activate your policy and maintain coverage.</li><li data-list-item-id="e7078ab25d26e2e76ac70bf82da7bb6e7">Enjoy peace of mind knowing your loved ones are protected.</li></ol><h2>Why It Matters</h2><p>Life is unpredictable, but your family''s financial security shouldn''t be. Life insurance helps ensure that your loved ones can continue managing everyday expenses, education costs, mortgage payments, and future goals even during difficult times.</p><h2>Why Choose Goodwell Insurance</h2><ul><li data-list-item-id="e107801d751284e7ad792b363716494ee">Flexible coverage options</li><li data-list-item-id="e8f67ae9f9354e7857c25f44e402cf4a8">Affordable premiums</li><li data-list-item-id="e089529d2acc86927c44e2c33d78e7fc4">Long-term financial protection</li><li data-list-item-id="ebcb6f5ff3bfb29fcb9d9726f5cc94599">Simple and transparent policies</li><li data-list-item-id="e88432ddd470b13c8720335468b197206">Reliable customer support</li><li data-list-item-id="e769ec19b0ded17d812b1a2d75cf37b69">Easy online management</li><li data-list-item-id="ed1a747fa2ce656be49b1e86ecdcb3600">Plans designed for every stage of life</li></ul><h2>Get Started</h2><p>Take the first step toward protecting your family''s future with a life insurance plan from Goodwell Insurance.</p><p>&nbsp;</p>'
+      format: content_format
+      summary: "Secure your family's financial future with life insurance coverage designed to provide protection, stability, and peace of mind."
+  field_button:
+    -
+      uri: 'internal:/'
+      title: 'View Details'
+      options: {  }
+  field_featured_image:
+    -
+      entity: 76624e6b-e1d8-43fe-bed7-9a6d8795b45d

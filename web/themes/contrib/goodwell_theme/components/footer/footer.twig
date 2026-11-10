@@ -1,0 +1,44 @@
+<footer class="dst-footer">
+  <div class="dst-footer__inner custom-container">
+
+    {# ── Left column: logo + tagline + social ── #}
+    <div class="dst-footer__brand">
+      {% if logo is not empty %}
+        <div class="dst-footer__logo">
+          {% block logo %}{% endblock %}
+        </div>
+      {% endif %}
+
+      {% if tagline %}
+        <p class="dst-footer__tagline">{{ tagline }}</p>
+      {% endif %}
+
+      {% if social is not empty %}
+        <div class="dst-footer__social">
+          {% block social %}{% endblock %}
+        </div>
+      {% endif %}
+    </div>
+
+    {# ── Right columns: nav menus ── #}
+    <div class="dst-footer__columns">
+      {% block columns %}{% endblock %}
+    </div>
+
+  </div>
+
+  {# ── Bottom bar ── #}
+  <div class="dst-footer__bottom">
+    <div class="custom-container dst-footer__bottom-inner">
+      {% if copyright %}
+        <span class="dst-footer__copyright">{{ copyright }}</span>
+      {% endif %}
+      {% if privacy_html or legal is not empty %}
+        <div class="dst-footer__legal">
+          {% if privacy_html %}{{ privacy_html|raw }}{% endif %}
+          {% block legal %}{% endblock %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</footer>

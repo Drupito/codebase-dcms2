@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: d0c63877-e8eb-45d5-be94-2d167ab15ace
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    df561162-0ee9-4f9d-be2f-1c29b5c10b1b: file
+default:
+  entity_id:
+    -
+      uuid: df561162-0ee9-4f9d-be2f-1c29b5c10b1b
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/man_shirt.png'
+  x:
+    -
+      value: 512
+  'y':
+    -
+      value: 437
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

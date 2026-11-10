@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 5c183fa5-e93c-4bcb-81e1-f1a20f6ffa7d
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    a97c2d93-9bb4-4350-8c8b-ba9631f40bc5: file
+default:
+  entity_id:
+    -
+      uuid: a97c2d93-9bb4-4350-8c8b-ba9631f40bc5
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://blog-images/blog-cybersecurity.jpg'
+  x:
+    -
+      value: 600
+  'y':
+    -
+      value: 401
+  revision_uid:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true

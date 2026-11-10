@@ -1,0 +1,184 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.everbright_theme.blockquote
+    - canvas.component.sdc.everbright_theme.button
+    - canvas.component.sdc.everbright_theme.cta
+    - canvas.component.sdc.everbright_theme.eyebrow
+    - canvas.component.sdc.everbright_theme.group
+    - canvas.component.sdc.everbright_theme.heading
+    - canvas.component.sdc.everbright_theme.image
+    - canvas.component.sdc.everbright_theme.section
+    - canvas.component.sdc.everbright_theme.text
+    - core.entity_view_mode.node.full
+    - field.field.media.image.field_media_image
+    - field.field.node.project.field_content
+    - field.field.node.project.field_eyebrow
+    - field.field.node.project.field_featured_image
+    - field.field.node.project.field_name
+    - field.field.node.project.field_position
+    - field.field.node.project.field_quote_text
+    - filter.format.canvas_html_block
+    - filter.format.content_format
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - node.type.project
+  module:
+    - file
+    - media
+    - node
+    - options
+    - text
+id: node.project.full
+content_entity_type_id: node
+content_entity_type_bundle: project
+content_entity_type_view_mode: full
+component_tree:
+  '0:76e77452-c209-43b4-91ad-65a08bbcbad5':
+    uuid: 76e77452-c209-43b4-91ad-65a08bbcbad5
+    component_id: sdc.everbright_theme.section
+    component_version: 7082127ba792625d
+    inputs:
+      width: 100%
+      columns: '1 column'
+      mobile_columns: '1'
+      margin_block_start: '64'
+      margin_block_end: '48'
+      padding_block_start: '0'
+      padding_block_end: '0'
+      section_header: true
+      section_footer: true
+  '0:header_slot:0:ab0c50a9-873f-48cd-9f3a-70a3c55d9a37':
+    parent_uuid: 76e77452-c209-43b4-91ad-65a08bbcbad5
+    slot: header_slot
+    uuid: ab0c50a9-873f-48cd-9f3a-70a3c55d9a37
+    component_id: sdc.everbright_theme.eyebrow
+    component_version: bfd703095b65f975
+    inputs:
+      eyebrow_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_eyebrow␞␟value'
+      text_color: default
+  '0:header_slot:1:56b93e10-431a-4d9e-9068-81b6da8c1919':
+    parent_uuid: 76e77452-c209-43b4-91ad-65a08bbcbad5
+    slot: header_slot
+    uuid: 56b93e10-431a-4d9e-9068-81b6da8c1919
+    component_id: sdc.everbright_theme.heading
+    component_version: ca71146b4d2d085d
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝title␞␟value'
+      level: 1
+      text_size: heading-responsive-6xl
+      text_color: default
+      align: center
+  '0:main_slot:0:68e8b83a-fbfd-412d-865f-102f28ec8508':
+    parent_uuid: 76e77452-c209-43b4-91ad-65a08bbcbad5
+    slot: main_slot
+    uuid: 68e8b83a-fbfd-412d-865f-102f28ec8508
+    component_id: sdc.everbright_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: column
+      flex_gap: xl
+      items_align: start
+      flex_align: center
+  '0:main_slot:0:group_slot:0:20327903-180a-4f75-8d05-996f49685d0f':
+    parent_uuid: 68e8b83a-fbfd-412d-865f-102f28ec8508
+    slot: group_slot
+    uuid: 20327903-180a-4f75-8d05-996f49685d0f
+    component_id: sdc.everbright_theme.image
+    component_version: 5c3c4ca7f7c196ee
+    inputs:
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_featured_image␞␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      size: '16:9'
+  '1:12badd0d-da2a-46e9-b5b7-d7dc27a17593':
+    uuid: 12badd0d-da2a-46e9-b5b7-d7dc27a17593
+    component_id: sdc.everbright_theme.section
+    component_version: 7082127ba792625d
+    inputs:
+      width: 70%
+      columns: '1 column'
+      mobile_columns: '1'
+      margin_block_start: '48'
+      margin_block_end: '48'
+      padding_block_start: '0'
+      padding_block_end: '0'
+      section_header: true
+      section_footer: true
+  '1:main_slot:0:a1bdf506-8821-4251-9995-85dc27456c17':
+    parent_uuid: 12badd0d-da2a-46e9-b5b7-d7dc27a17593
+    slot: main_slot
+    uuid: a1bdf506-8821-4251-9995-85dc27456c17
+    component_id: sdc.everbright_theme.text
+    component_version: 8a33edeeb2e4a925
+    inputs:
+      text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_content␞␟processed'
+      text_size: normal
+      text_color: default
+  '1:main_slot:1:d1fb5a6f-928e-430d-8b2e-116ba9c8683f':
+    parent_uuid: 12badd0d-da2a-46e9-b5b7-d7dc27a17593
+    slot: main_slot
+    uuid: d1fb5a6f-928e-430d-8b2e-116ba9c8683f
+    component_id: sdc.everbright_theme.blockquote
+    component_version: e50ad5a868ff0b4c
+    inputs:
+      text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_quote_text␞␟processed'
+      cite_name:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_name␞␟value'
+      cite_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_position␞␟value'
+      border: true
+  '2:f1ad4454-66d6-49f6-afde-56cb2647a61b':
+    uuid: f1ad4454-66d6-49f6-afde-56cb2647a61b
+    component_id: sdc.everbright_theme.section
+    component_version: 7082127ba792625d
+    inputs:
+      width: 100%
+      columns: '1 column'
+      mobile_columns: '1'
+      margin_block_start: '48'
+      margin_block_end: '48'
+      padding_block_start: '0'
+      padding_block_end: '0'
+      section_header: true
+      section_footer: true
+  '2:main_slot:0:actions:0:8ae7e587-6818-42e5-b73d-2e271b685483':
+    parent_uuid: b4a3b144-8cc9-45fb-bb1d-c13cb91b2f15
+    slot: actions
+    uuid: 8ae7e587-6818-42e5-b73d-2e271b685483
+    component_id: sdc.everbright_theme.button
+    component_version: 640a23e2a2b2db0a
+    inputs:
+      variant: secondary
+      label: 'Get in touch'
+      icon: arrow-right
+      mobile_width: false
+      icon_first: false
+      disabled: false
+  '2:main_slot:0:b4a3b144-8cc9-45fb-bb1d-c13cb91b2f15':
+    parent_uuid: f1ad4454-66d6-49f6-afde-56cb2647a61b
+    slot: main_slot
+    uuid: b4a3b144-8cc9-45fb-bb1d-c13cb91b2f15
+    component_id: sdc.everbright_theme.cta
+    component_version: 92ac4ed201f8f623
+    inputs:
+      eyebrow_text: 'Connect now'
+      heading:
+        value: '<p>Want to learn more?</p>'
+        format: canvas_html_block
+      text:
+        value: '<p>If you have questions about our process or just want to see if our vibes align, don’t hesitate to get in touch.</p>'
+        format: canvas_html_block
+      background_color: muted
+exposed_slots: {  }

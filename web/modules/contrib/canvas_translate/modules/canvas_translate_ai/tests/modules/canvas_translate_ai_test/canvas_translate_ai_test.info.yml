@@ -1,0 +1,13 @@
+name: Canvas Translate AI test
+type: module
+description: 'Provides a fake translate_text AI provider for Canvas Translate AI tests.'
+package: Testing
+core_version_requirement: ^11.2
+dependencies:
+  - canvas:canvas_translate_ai
+  - ai:ai_test
+
+# Information added by Drupal.org packaging script on 2026-10-07
+version: '1.0.0-beta1'
+project: 'canvas_translate'
+datestamp: 1791359364

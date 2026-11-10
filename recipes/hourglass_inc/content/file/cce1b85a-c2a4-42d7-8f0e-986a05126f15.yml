@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: cce1b85a-c2a4-42d7-8f0e-986a05126f15
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: sustainable-tech-solar-panels.jpg
+  uri:
+    -
+      value: 'public://blog-images/sustainable-tech-solar-panels.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 172524
+  status:
+    -
+      value: true

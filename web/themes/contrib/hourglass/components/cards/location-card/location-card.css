@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Card wrapper ─────────────────────────────────────────────────────────── */
+
+.c-location-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* ── Header: label + photo ────────────────────────────────────────────────── */
+
+.c-location-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* ── Orange label ─────────────────────────────────────────────────────────── */
+
+.c-location-card__label {
+  font-family: "Geist", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #f76707;
+  margin: 0;
+}
+
+/* ── Cover photo ──────────────────────────────────────────────────────────── */
+
+.c-location-card__image {
+  height: 230px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Force base-media wrappers to fill the frame */
+.c-location-card__image .c-base-media,
+.c-location-card__image .c-base-media__inner,
+.c-location-card__image .c-base-media__content,
+.c-location-card__image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c-location-card__image img,
+.c-location-card__media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Address row (map-pin + city + street) ────────────────────────────────── */
+
+.c-location-card__address-row {
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.c-location-card__pin-icon {
+  display: flex;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  color: #000;
+  margin-top: 1px;
+}
+
+.c-location-card__pin-icon svg {
+  display: block;
+}
+
+.c-location-card__address-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.c-location-card__city {
+  font-family: "Geist", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000;
+  margin: 0;
+}
+
+.c-location-card__address {
+  font-family: var(--Body-B2-fontFamily, "Geist", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  margin: 0;
+}
+
+/* ── Contact rows (phone / email) ─────────────────────────────────────────── */
+
+.c-location-card__contact-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.c-location-card__contact-icon {
+  display: flex;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.c-location-card__contact-icon svg {
+  display: block;
+}
+
+.c-location-card__contact-value {
+  font-family: var(--Body-B2-fontFamily, "Geist", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .c-location-card__image {
+    height: 200px;
+  }
+}

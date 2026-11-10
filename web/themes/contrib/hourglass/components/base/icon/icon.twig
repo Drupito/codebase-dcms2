@@ -1,0 +1,137 @@
+{#
+/**
+ * @file
+ * Template for the Icon component.
+ *
+ * Available variables:
+ * - name: The name of the icon to render.
+ * - size: Size in pixels (applies to width/height).
+ * - color: CSS color value.
+ * - attributes: Drupal attributes.
+ */
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+{% set classes = [
+  'c-icon',
+] %}
+
+{% set style_parts = [] %}
+{% if size %}{% set style_parts = style_parts|merge(['--icon-size: ' ~ size ~ 'px']) %}{% endif %}
+{% if color %}{% set style_parts = style_parts|merge(['--icon-color: ' ~ color]) %}{% endif %}
+
+<span{{ attributes.addClass(classes) }}{% if style_parts %} style="{{ style_parts|join('; ') }};"{% endif %}>
+  {% block content %}
+    {% if name == 'video-user' %}
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_4152_653)">
+          <path d="M21 14.25C21 15.0456 20.6839 15.8087 20.1213 16.3713C19.5587 16.9339 18.7956 17.25 18 17.25C17.2044 17.25 16.4413 16.9339 15.8787 16.3713C15.3161 15.8087 15 15.0456 15 14.25C15 13.4544 15.3161 12.6913 15.8787 12.1287C16.4413 11.5661 17.2044 11.25 18 11.25C18.7956 11.25 19.5587 11.5661 20.1213 12.1287C20.6839 12.6913 21 13.4544 21 14.25ZM12 22.8C12 24 13.2 24 13.2 24H22.8C22.8 24 24 24 24 22.8C24 21.6 22.8 18 18 18C13.2 18 12 21.6 12 22.8Z" fill="currentColor"/>
+          <path d="M3 3C2.20435 3 1.44129 3.31607 0.87868 3.87868C0.316071 4.44129 0 5.20435 0 6L0 18C0 18.7956 0.316071 19.5587 0.87868 20.1213C1.44129 20.6839 2.20435 21 3 21H10.8645C11.0475 20.511 11.307 19.998 11.6535 19.5H3C2.60218 19.5 2.22064 19.342 1.93934 19.0607C1.65804 18.7794 1.5 18.3978 1.5 18V6C1.5 5.60218 1.65804 5.22064 1.93934 4.93934C2.22064 4.65804 2.60218 4.5 3 4.5H21C21.3978 4.5 21.7794 4.65804 22.0607 4.93934C22.342 5.22064 22.5 5.60218 22.5 6V17.715C23.0295 18.06 23.484 18.459 23.865 18.8895C23.955 18.6085 24 18.312 24 18V6C24 5.20435 23.6839 4.44129 23.1213 3.87868C22.5587 3.31607 21.7956 3 21 3H3Z" fill="currentColor"/>
+          <path d="M9.91975 8.97641C9.84398 8.92105 9.75483 8.88815 9.66206 8.88133C9.56928 8.87451 9.47647 8.89403 9.39379 8.93775C9.31111 8.98147 9.24174 9.0477 9.1933 9.12919C9.14485 9.21068 9.1192 9.30428 9.11914 9.39974V14.6003C9.1192 14.6957 9.14485 14.7893 9.1933 14.8708C9.24174 14.9523 9.31111 15.0185 9.39379 15.0623C9.47647 15.106 9.56928 15.1255 9.66206 15.1187C9.75483 15.1119 9.84398 15.079 9.91975 15.0236L13.4668 12.4233C13.5324 12.3752 13.586 12.3117 13.6229 12.2381C13.6599 12.1644 13.6791 12.0828 13.6791 12C13.6791 11.9172 13.6599 11.8356 13.6229 11.7619C13.586 11.6883 13.5324 11.6248 13.4668 11.5767L9.91975 8.97641Z" fill="currentColor"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_4152_653">
+            <rect width="24" height="24" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+    {% elseif name == 'arrow-left' %}
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% elseif name == 'arrow-right' %}
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% elseif name == 'arrow-long-right' %}
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% elseif name == 'play' %}
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 5v14l11-7L8 5z" fill="currentColor"/>
+      </svg>
+    {% elseif name == 'video-play' %}
+      <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" fill="white"/>
+        <rect x="0.5" y="0.5" width="41" height="41" rx="20.5" stroke="#BEBEBE"/>
+        <path d="M30.5 20.134C31.1667 20.5189 31.1667 21.4811 30.5 21.866L17 29.6603C16.3333 30.0452 15.5 29.564 15.5 28.7942L15.5 13.2058C15.5 12.436 16.3333 11.9548 17 12.3397L30.5 20.134Z" fill="#3B3B3B"/>
+      </svg>
+    {% elseif name == 'video-play-gallery' %}
+      <svg width="50" height="42" viewBox="0 0 50 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4.5" y="0.5" width="41" height="41" rx="20.5" stroke="white"/>
+        <path d="M34.5 20.134C35.1667 20.5189 35.1667 21.4811 34.5 21.866L21 29.6603C20.3333 30.0452 19.5 29.564 19.5 28.7942L19.5 13.2058C19.5 12.436 20.3333 11.9548 21 12.3397L34.5 20.134Z" fill="white"/>
+      </svg>
+    {% elseif name == 'search' %}
+      <svg width="24" height="24" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="48" height="48" rx="8" stroke="currentColor"/>
+        <path d="M32 32L28.375 28.375M30.3333 23.6667C30.3333 27.3486 27.3486 30.3333 23.6667 30.3333C19.9848 30.3333 17 27.3486 17 23.6667C17 19.9848 19.9848 17 23.6667 17C27.3486 17 30.3333 19.9848 30.3333 23.6667Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% elseif name == 'search-gradient' %}
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="43" height="43" rx="7.5" stroke="url(#paint0_linear_icon)"/>
+        <path d="M29.5 29.5L25.875 25.875M27.8333 21.1667C27.8333 24.8486 24.8486 27.8333 21.1667 27.8333C17.4848 27.8333 14.5 24.8486 14.5 21.1667C14.5 17.4848 17.4848 14.5 21.1667 14.5C24.8486 14.5 27.8333 17.4848 27.8333 21.1667Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+          <linearGradient id="paint0_linear_icon" x1="0" y1="22" x2="44" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#1E697A"/>
+            <stop offset="1" stop-color="#218A9D"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    {% elseif name == 'close' %}
+      <svg width="24" height="24" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.5 0.5L0.5 10.5M0.5 0.5L10.5 10.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% elseif name == 'clock' %}
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 4.5V9L12 12M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% elseif name == 'download' %}
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.75 11.25V14.25C15.75 14.6478 15.592 15.0294 15.3107 15.3107C15.0294 15.592 14.6478 15.75 14.25 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.25 7.5L9 11.25L12.75 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 2.25V11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% elseif name == 'calendar' %}
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.666 2.66663V7.99996" stroke="currentColor" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21.334 2.66663V7.99996" stroke="currentColor" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M25.3333 5.33337H6.66667C5.19391 5.33337 4 6.52728 4 8.00004V26.6667C4 28.1395 5.19391 29.3334 6.66667 29.3334H25.3333C26.8061 29.3334 28 28.1395 28 26.6667V8.00004C28 6.52728 26.8061 5.33337 25.3333 5.33337Z" stroke="currentColor" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4 13.3334H28" stroke="currentColor" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% elseif name == 'location' %}
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 22C16 18 20 14.4183 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 14.4183 8 18 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% elseif name == 'phone' %}
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_4858_3620)">
+          <path d="M18.3351 14.1V16.6C18.3361 16.8321 18.2886 17.0618 18.1956 17.2745C18.1026 17.4871 17.9662 17.678 17.7952 17.8349C17.6242 17.9918 17.4223 18.1113 17.2024 18.1856C16.9826 18.26 16.7496 18.2876 16.5185 18.2667C13.9542 17.9881 11.491 17.1118 9.32682 15.7084C7.31334 14.4289 5.60626 12.7219 4.32682 10.7084C2.91846 8.53438 2.04202 6.0592 1.76848 3.48337C1.74766 3.25293 1.77505 3.02067 1.8489 2.80139C1.92275 2.58211 2.04146 2.38061 2.19745 2.20972C2.35345 2.03883 2.54332 1.9023 2.75498 1.80881C2.96663 1.71532 3.19543 1.66692 3.42682 1.66671H5.92682C6.33124 1.66273 6.72331 1.80594 7.02995 2.06965C7.33659 2.33336 7.53688 2.69958 7.59348 3.10004C7.699 3.9001 7.89469 4.68565 8.17682 5.44171C8.28894 5.73998 8.3132 6.06414 8.24674 6.37577C8.18028 6.68741 8.02587 6.97347 7.80182 7.20004L6.74348 8.25837C7.92978 10.3447 9.65719 12.0721 11.7435 13.2584L12.8018 12.2C13.0284 11.976 13.3144 11.8216 13.6261 11.7551C13.9377 11.6887 14.2619 11.7129 14.5601 11.825C15.3162 12.1072 16.1018 12.3029 16.9018 12.4084C17.3066 12.4655 17.6763 12.6694 17.9406 12.9813C18.2049 13.2932 18.3453 13.6914 18.3351 14.1Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_4858_3620">
+            <rect width="20" height="20" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+    {% elseif name == 'email' %}
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.668 3.33337H3.33464C2.41416 3.33337 1.66797 4.07957 1.66797 5.00004V15C1.66797 15.9205 2.41416 16.6667 3.33464 16.6667H16.668C17.5884 16.6667 18.3346 15.9205 18.3346 15V5.00004C18.3346 4.07957 17.5884 3.33337 16.668 3.33337Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18.3346 5.83337L10.8596 10.5834C10.6024 10.7446 10.3049 10.83 10.0013 10.83C9.6977 10.83 9.40024 10.7446 9.14297 10.5834L1.66797 5.83337" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% elseif name == 'globe' %}
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_4858_3631)">
+          <path d="M10.0013 18.3333C14.6037 18.3333 18.3346 14.6023 18.3346 9.99996C18.3346 5.39759 14.6037 1.66663 10.0013 1.66663C5.39893 1.66663 1.66797 5.39759 1.66797 9.99996C1.66797 14.6023 5.39893 18.3333 10.0013 18.3333Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10.0013 1.66663C7.8615 3.91342 6.66797 6.89724 6.66797 9.99996C6.66797 13.1027 7.8615 16.0865 10.0013 18.3333C12.1411 16.0865 13.3346 13.1027 13.3346 9.99996C13.3346 6.89724 12.1411 3.91342 10.0013 1.66663Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1.66797 10H18.3346" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_4858_3631">
+            <rect width="20" height="20" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+    {% endif %}
+  {% endblock %}
+</span>

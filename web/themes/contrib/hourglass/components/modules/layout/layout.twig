@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Layout section wrapper — full MMI-style spacing, background, and container control.
+ *
+ * Available variables:
+ * - padding_top:    Vertical padding above content in px (0 | 8 | 12 | 16 | 24 | 32 | 40 | 48 | 64 | 80 | 96 | 120 | 144 | 160).
+ * - padding_bottom: Vertical padding below content (same scale).
+ * - padding_left:   Left padding in px (0 | 8 | 12 | 16 | 24 | 32 | 40 | 48 | 64 | 80 | 120 | 148).
+ * - padding_right:  Right padding (same scale).
+ * - margin_top:     Margin above section in px (0 | 8 | 12 | 16 | 24 | 32 | 40 | 48 | 64 | 80 | 96 | 120 | 144).
+ * - margin_bottom:  Margin below section (same scale).
+ * - background:     Background style (transparent | white | gray | dark | dark-gradient | gray-rounded).
+ * - container:      Container type (default | full | carousel).
+ * - position:       CSS position (static | relative | sticky).
+ * - sticky_top:     Top offset when sticky (40 | 80).
+ * - rounded_top:    Boolean — round top corners.
+ * - hidden:         Boolean — hide the section.
+ * - anchor_id:      Optional id attribute for jump links.
+ * - extra_classes:  Additional CSS classes.
+ * - content:        Slot for child components.
+ */
+#}
+{{ attach_library('hourglass/layout') }}
+
+{# ── Build class list ─────────────────────────────────────────────────────── #}
+{% set classes = [
+  'c-layout',
+  padding_top    ? 'c-layout--pt-' ~ padding_top,
+  padding_bottom ? 'c-layout--pb-' ~ padding_bottom,
+  padding_left   ? 'c-layout--pl-' ~ padding_left,
+  padding_right  ? 'c-layout--pr-' ~ padding_right,
+  margin_top     ? 'c-layout--mt-' ~ margin_top,
+  margin_bottom  ? 'c-layout--mb-' ~ margin_bottom,
+  background     ? 'c-layout--bg-' ~ background : 'c-layout--bg-transparent',
+  position and position != 'static' ? 'c-layout--' ~ position,
+  sticky_top     ? 'c-layout--top-' ~ sticky_top,
+  rounded_top    ? 'c-layout--rounded-top',
+  hidden         ? 'c-layout--hidden',
+  extra_classes|default(''),
+]|filter(v => v)|join(' ') %}
+
+{% set container_type = container|default('default') %}
+
+<section
+  class="{{ classes }}"
+  {% if anchor_id %}id="{{ anchor_id }}"{% endif %}>
+
+  {% if container_type == 'full' %}
+    {{ content }}
+  {% elseif container_type == 'carousel' %}
+    <div class="c-layout__carousel">
+      {{ content }}
+    </div>
+  {% else %}
+    <div class="c-layout__container">
+      {{ content }}
+    </div>
+  {% endif %}
+
+</section>

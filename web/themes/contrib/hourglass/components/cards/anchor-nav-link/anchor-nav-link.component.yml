@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: "Anchor Nav Link"
+group: Cards
+status: stable
+description: "A single link item for the Anchor Navigation bar. Use #section-id for same-page anchors."
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: "Link Text"
+    url:
+      type: string
+      title: "Target URL or Anchor"
+      description: "Use #section-id for same-page anchors, or a full path for page navigation."
+    extra_classes:
+      type: string
+      title: "Extra CSS Classes"

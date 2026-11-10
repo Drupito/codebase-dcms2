@@ -1,0 +1,197 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 1e9855cb-b7b2-4f06-a6b6-b945e5df4885
+  default_langcode: en
+  depends:
+    1dcd6a95-9120-45a1-b937-50f7cc048b29: file
+    ad2991b6-b361-452c-90a3-203857bde3a9: media
+    25d1817b-5f86-40b5-9544-b3e79bff7f4c: file
+    e9d80f15-7cdf-431e-abeb-12957a34e07b: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Resources
+  components:
+    -
+      uuid: 0f00d736-6235-4697-bf1c-e24de84a1f76
+      component_id: sdc.goodwell_theme.hero-section
+      inputs:
+        heading:
+          value: RESOURCES
+          format: canvas_html_inline
+        tagline: 'Insights & Update'
+        background:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: ad2991b6-b361-452c-90a3-203857bde3a9
+            target_type: media
+        overlay_opacity: '50'
+    -
+      uuid: 7f9b0882-01ac-44ea-83a0-1d4ad2845f1f
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        rounded: none
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 7f9b0882-01ac-44ea-83a0-1d4ad2845f1f
+      slot: content
+      uuid: ee7aa412-2ad3-4366-af52-1dee5e4eb39a
+      component_id: block.views_block.article-block_1
+      inputs:
+        label: Article
+        views_label: ''
+        label_display: '0'
+        items_per_page: 9
+    -
+      uuid: f7c3c904-998c-4379-bdad-8001de02459b
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        full_bleed: false
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: f7c3c904-998c-4379-bdad-8001de02459b
+      slot: content
+      uuid: 6d3a9193-b0ec-4985-bb9f-9116983fe576
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        heading:
+          value: 'Frequently Asked Questions'
+          format: canvas_html_inline
+        tagline: 'OUR FAQS'
+        alignment: center
+        heading_level: 2
+    -
+      uuid: be79faa9-c3f0-4410-a4f7-134e5990f3ef
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        full_bleed: false
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: be79faa9-c3f0-4410-a4f7-134e5990f3ef
+      slot: content
+      uuid: bd51a4a0-8eab-47cf-b946-88bffe3067e9
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'Life insurance is a financial protection plan that provides your loved ones with a lump-sum payment in case of your untimely death.'
+        question: 'What types of insurance do you offer?'
+        default_state: expanded
+    -
+      parent_uuid: be79faa9-c3f0-4410-a4f7-134e5990f3ef
+      slot: content
+      uuid: 279704b6-adfd-4e39-9f36-d9843cd927de
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'Life insurance helps provide financial security for your loved ones by covering living expenses, debts, and future financial needs if something unexpected happens to you'
+        question: 'Why do I need life insurance?'
+        default_state: collapsed
+    -
+      parent_uuid: be79faa9-c3f0-4410-a4f7-134e5990f3ef
+      slot: content
+      uuid: 94a06732-f96d-4117-b9f8-342ecdf18a4d
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'The amount of coverage you need depends on your income, financial obligations, debts, and future family expenses. A good policy should provide enough support to help your loved ones maintain their lifestyle and achieve their long-term goals.'
+        question: 'How much life insurance coverage do I need?'
+        default_state: collapsed
+    -
+      parent_uuid: be79faa9-c3f0-4410-a4f7-134e5990f3ef
+      slot: content
+      uuid: 878c17b1-e72d-4833-b118-452064da7b8c
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'The cost of life insurance varies based on factors such as your age, health, coverage amount, and policy type. Many plans are affordable and can be customized to fit your budget and protection needs.'
+        question: 'How much does life insurance cost?'
+        default_state: collapsed
+    -
+      parent_uuid: be79faa9-c3f0-4410-a4f7-134e5990f3ef
+      slot: content
+      uuid: f1b40a87-6dbe-40cf-83bd-be24c8911cc8
+      component_id: sdc.goodwell_theme.accordion
+      inputs:
+        answer: 'Coverage typically begins once your application is approved, the policy is issued, and the first premium payment is received. The exact start date will be outlined in your policy documents.'
+        question: 'When does the coverage start?'
+        default_state: collapsed
+    -
+      uuid: f6ffb02a-fa4c-40eb-9d09-01462935c77b
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: top
+        background: teal
+        full_bleed: false
+        margin_top: 20
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: f6ffb02a-fa4c-40eb-9d09-01462935c77b
+      slot: content
+      uuid: ba74cdd0-73a0-4c31-b944-f0c2ebdf84c7
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        grid_gap: 10
+        alignment: center
+        grid_layout: 2_column_66_33
+        is_small_container: false
+    -
+      parent_uuid: ba74cdd0-73a0-4c31-b944-f0c2ebdf84c7
+      slot: slot_1
+      uuid: 227598b8-92f6-49a3-81a9-9a2f7ef6c097
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: 'Get started with a personalized life insurance plan that meets your needs and protects your loved ones.'
+          format: canvas_html_inline
+        heading:
+          value: 'Secure your tomorrow, today'
+          format: canvas_html_inline
+        heading_level: 3
+    -
+      parent_uuid: ba74cdd0-73a0-4c31-b944-f0c2ebdf84c7
+      slot: slot_1
+      uuid: 3be1552e-b825-4bc0-93f8-7977d7d3c1f6
+      component_id: sdc.goodwell_theme.button
+      inputs:
+        href:
+          uri: 'internal:/get-a-quote'
+          options: {  }
+        size: md
+        label: 'Secure Your Family'
+        rounded: pill
+        variant: primary
+        disabled: false
+        full_width: false
+    -
+      parent_uuid: ba74cdd0-73a0-4c31-b944-f0c2ebdf84c7
+      slot: slot_2
+      uuid: 9a256bde-ddd9-4a98-ad15-ef8a47c67dbf
+      component_id: sdc.goodwell_theme.image
+      inputs:
+        size: '1:1'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e9d80f15-7cdf-431e-abeb-12957a34e07b
+            target_type: media
+        shape: default
+        radius: extra-large
+        decoration: accent-br
+        border_radius: 0
+        badge_position: bottom-right
+  path:
+    -
+      alias: /resources
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

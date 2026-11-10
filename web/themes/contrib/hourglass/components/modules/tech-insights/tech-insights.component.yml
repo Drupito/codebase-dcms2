@@ -1,0 +1,21 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Tech Insights
+group: Organisms
+status: stable
+description: 'Carousel section with multiple video + quote slide pairs.'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Section Title'
+      contentMediaType: text/html
+      examples:
+        - 'Tech Insights'
+    extra_classes:
+      type: string
+      title: 'Extra CSS Classes'
+slots:
+  slides:
+    title: 'Slides'
+    description: 'Place Tech Insights Slide atoms here. Each atom provides one video card and one quote card.'

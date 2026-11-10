@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.plan_card
+    - field.field.node.team.field_body
+    - field.field.node.team.field_facebook_link
+    - field.field.node.team.field_featured_image
+    - field.field.node.team.field_linkedin_link
+    - field.field.node.team.field_sub_heading
+    - field.field.node.team.field_twitter_link
+    - node.type.team
+  module:
+    - text
+    - user
+id: node.team.plan_card
+targetEntityType: node
+bundle: team
+mode: plan_card
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_facebook_link: true
+  field_featured_image: true
+  field_linkedin_link: true
+  field_sub_heading: true
+  field_twitter_link: true

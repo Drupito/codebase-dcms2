@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 87466759-eb42-4176-a567-73a551c6d650
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: premium_photo-1661374880675-0c79f7b1dad5-3-(4).png
+  uri:
+    -
+      value: 'public://2026-05/premium_photo-1661374880675-0c79f7b1dad5-3-(4).png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 77620
+  status:
+    -
+      value: true

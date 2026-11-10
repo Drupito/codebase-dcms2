@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: b357f6ff-0939-46c5-8602-94cab5d934b5
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    691e8096-ad84-42f1-89d0-6de9b03e7c7d: file
+default:
+  entity_id:
+    -
+      uuid: 691e8096-ad84-42f1-89d0-6de9b03e7c7d
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://blog-images/blog-greenIT.jpg'
+  x:
+    -
+      value: 600
+  'y':
+    -
+      value: 400
+  revision_uid:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 06fe57b8-a671-4f1e-bb5e-23d2b5bdc634
+  bundle: image
+  default_langcode: en
+  depends:
+    9d0a5938-d7b0-4cb9-bba5-2569c104bf69: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: contact_demo.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Get a product demo'
+      title: ''
+      width: 200
+      height: 200
+      entity: 9d0a5938-d7b0-4cb9-bba5-2569c104bf69

@@ -1,0 +1,67 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_branding_block
+    - canvas.component.block.system_menu_block.footer
+    - canvas.component.sdc.goodwell_theme.footer
+    - canvas.component.sdc.goodwell_theme.social-links
+  module:
+    - link
+  theme:
+    - goodwell_theme
+id: goodwell_theme.footer
+theme: goodwell_theme
+region: footer
+component_tree:
+  '0:6299742e-f63e-4861-a1b0-2e8b4e5c4957':
+    uuid: 6299742e-f63e-4861-a1b0-2e8b4e5c4957
+    component_id: sdc.goodwell_theme.footer
+    component_version: c5f54532a091540b
+    inputs:
+      tagline: 'Empowering Your Peace of Mind'
+      copyright: 'Copyright © 2026 Goodwell'
+      privacy_html: '<a href="/privacy-policy">Privacy &amp; Policy</a>'
+  '0:columns:0:5c48d7da-627f-4f18-99de-8de4e39c92ee':
+    parent_uuid: 6299742e-f63e-4861-a1b0-2e8b4e5c4957
+    slot: columns
+    uuid: 5c48d7da-627f-4f18-99de-8de4e39c92ee
+    component_id: block.system_menu_block.footer
+    component_version: 68bdb40e1ac48125
+    inputs:
+      label: Footer
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: true
+  '0:logo:0:889643db-a9da-400b-86b1-a42d691b1c3d':
+    parent_uuid: 6299742e-f63e-4861-a1b0-2e8b4e5c4957
+    slot: logo
+    uuid: 889643db-a9da-400b-86b1-a42d691b1c3d
+    component_id: block.system_branding_block
+    component_version: b168140fdcaebae5
+    inputs:
+      label: 'Site branding'
+      label_display: '0'
+      use_site_logo: true
+      use_site_name: true
+      use_site_slogan: false
+  '0:social:0:04b5c45d-d580-4923-aa3b-1cbb22f356f3':
+    parent_uuid: 6299742e-f63e-4861-a1b0-2e8b4e5c4957
+    slot: social
+    uuid: 04b5c45d-d580-4923-aa3b-1cbb22f356f3
+    component_id: sdc.goodwell_theme.social-links
+    component_version: 1e3df00d115c78f4
+    inputs:
+      facebook_url:
+        uri: 'https://www.facebook.com/'
+        options: {  }
+      instagram_url:
+        uri: 'https://www.instagram.com/'
+        options: {  }
+      twitter_url:
+        uri: 'https://x.com/'
+        options: {  }
+      linkedin_url:
+        uri: 'https://www.linkedin.com/'
+        options: {  }

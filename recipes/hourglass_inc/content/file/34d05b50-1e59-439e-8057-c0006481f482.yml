@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 34d05b50-1e59-439e-8057-c0006481f482
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: fudan-university-1).png
+  uri:
+    -
+      value: 'public://2026-05/fudan-university-1).png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 39125
+  status:
+    -
+      value: true

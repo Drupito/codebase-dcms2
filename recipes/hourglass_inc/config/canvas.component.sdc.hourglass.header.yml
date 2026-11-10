@@ -1,0 +1,117 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: d0960a7014a93363
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        transparent:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        announcement_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Quarterly Report: 200% Growth in Enterprise Partnerships'
+          expression: ℹ︎string␟value
+        announcement_badge:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: EVENT
+          expression: ℹ︎string␟value
+        announcement_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: Logo
+          description: 'Site branding block.'
+        navigation:
+          title: Navigation
+          description: 'Primary navigation menu block.'
+  c2221a18a85e5965:
+    settings:
+      prop_field_definitions:
+        transparent:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        announcement_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Quarterly Report: 200% Growth in Enterprise Partnerships'
+          expression: ℹ︎string␟value
+        announcement_badge:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: EVENT
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: Logo
+          description: 'Site branding block.'
+        navigation:
+          title: Navigation
+          description: 'Primary navigation menu block.'
+  143ccecbb86980a7:
+    settings:
+      prop_field_definitions:
+        transparent:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: Logo
+          description: 'Site branding block.'
+        navigation:
+          title: Navigation
+          description: 'Primary navigation menu block.'
+label: 'Site Header'
+id: sdc.hourglass.header
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:header'

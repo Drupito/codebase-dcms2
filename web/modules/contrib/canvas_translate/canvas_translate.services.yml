@@ -1,0 +1,53 @@
+services:
+  _defaults:
+    autowire: true
+
+  Drupal\canvas_translate\Service\TranslatableFieldGlue:
+    public: true
+  Drupal\canvas_translate\Service\TranslationStatus:
+    public: true
+  Drupal\canvas_translate\Service\ConfigTranslatableGlue:
+    public: true
+    arguments:
+      $languageConfigOverride: '@language.config_factory_override'
+
+  Drupal\canvas_translate\Service\RichTextGuard:
+    public: true
+
+  Drupal\canvas_translate\Service\TranslationDraftStore:
+    public: true
+    arguments:
+      $store: '@canvas_translate.draft_store'
+
+  Drupal\canvas_translate\Service\ApprovalStore:
+    public: true
+    arguments:
+      $store: '@canvas_translate.approval_store'
+
+  Drupal\canvas_translate\Controller\ApiLayoutControllerDecorator:
+    decorates: Drupal\canvas\Controller\ApiLayoutController
+    arguments:
+      $inner: '@.inner'
+
+  Drupal\canvas_translate\Service\PageRegionTranslationUpgrade:
+    public: true
+    arguments:
+      $languageConfigOverride: '@language.config_factory_override'
+
+  Drupal\canvas_translate\Hook\DraftCleanupHooks:
+    tags:
+      - { name: event_subscriber }
+
+  Drupal\canvas_translate\Routing\TranslateRouteSubscriber:
+    tags:
+      - { name: event_subscriber }
+
+  canvas_translate.draft_store:
+    class: Drupal\Core\KeyValueStore\KeyValueStoreInterface
+    factory: ['@keyvalue', 'get']
+    arguments: ['canvas_translate.drafts']
+
+  canvas_translate.approval_store:
+    class: Drupal\Core\KeyValueStore\KeyValueStoreInterface
+    factory: ['@keyvalue', 'get']
+    arguments: ['canvas_translate.approvals']

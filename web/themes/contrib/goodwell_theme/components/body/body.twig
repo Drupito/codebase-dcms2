@@ -1,0 +1,9 @@
+{% set width = max_width | default('full') %}
+{% set size  = text_size  | default('base') %}
+{% set color = text_color | default('dark') %}
+
+{% if content %}
+<div class="dst-body dst-body--{{ width }} dst-body--{{ size }} dst-body--{{ color }}">
+  {{ content | raw }}
+</div>
+{% endif %}

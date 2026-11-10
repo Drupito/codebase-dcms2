@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: cf09391e-7267-4f3c-b138-3511fdc7078e
+  bundle: image
+  default_langcode: en
+  depends:
+    92c39f66-bf2a-4072-9a9b-7b451707e274: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Frame-14176_1.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Three townhouses with A-frame black roofs with a blue-green sky in the background.'
+      title: ''
+      width: 581
+      height: 801
+      entity: 92c39f66-bf2a-4072-9a9b-7b451707e274

@@ -1,0 +1,91 @@
+{#
+/**
+ * @file
+ * Site Header — fixed, transparent over hero, opaque on scroll.
+ *
+ * Slots:
+ *   logo       — Site branding block (system_branding_block).
+ *   navigation — Primary menu block (system_menu_block:main).
+ */
+#}
+
+<header class="site-header">
+
+  {# ── Announcement Bar ─────────────────────────────────────────────────── #}
+  {% if announcement_text %}
+    <div class="site-header__announcement js-site-announcement">
+      <div class="site-header__announcement-inner">
+        <span class="site-header__announcement-text">{{ announcement_text }}</span>
+        {% if announcement_badge %}
+          {% if announcement_url %}
+            <a href="{{ announcement_url }}" class="site-header__announcement-badge">{{ announcement_badge }}</a>
+          {% else %}
+            <span class="site-header__announcement-badge">{{ announcement_badge }}</span>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="site-header__bar">
+    <div class="site-header__inner">
+
+      {# ── Logo ─────────────────────────────────────────────────────────── #}
+      {% if logo %}
+        {{ logo }}
+      {% else %}
+        <a href="{{ path('<front>') }}" class="site-header__logo" aria-label="Hourglass — Home">
+          <img
+            src="{{ base_path ~ directory }}/images/Logo.svg"
+            alt="Hourglass"
+            class="site-header__logo-img site-header__logo-img--white"
+            width="160" height="40"
+          />
+          <img
+            src="{{ base_path ~ directory }}/images/Logo-dark.svg"
+            alt="Hourglass"
+            class="site-header__logo-img site-header__logo-img--black"
+            width="160" height="40"
+          />
+        </a>
+      {% endif %}
+
+      {# ── Primary nav ──────────────────────────────────────────────────── #}
+      <nav class="site-header__nav" id="site-primary-nav" aria-label="Primary navigation">
+        {{ navigation }}
+      </nav>
+
+      {# ── Actions ──────────────────────────────────────────────────────── #}
+      <div class="site-header__actions">
+        <button class="site-header__search-toggle" id="search-toggle-btn"
+          aria-label="Open search" aria-expanded="false" aria-controls="site-search-bar">
+          {% include 'hourglass:icon' with { name: 'search', color: 'white', size: 49 } %}
+        </button>
+
+        <button class="site-header__hamburger" id="mobile-menu-toggle"
+          aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="site-primary-nav">
+          <span class="site-header__hamburger-line"></span>
+          <span class="site-header__hamburger-line"></span>
+          <span class="site-header__hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="site-header__search-bar" id="site-search-bar" aria-hidden="true">
+      <div class="site-header__search-bar-inner">
+        <label for="site-search-input" class="visually-hidden">Search</label>
+        <input type="text" id="site-search-input" class="site-header__search-input"
+          placeholder="What can we help you find today?" autocomplete="off" aria-label="Search"/>
+        <button class="site-header__search-submit" aria-label="Submit search">
+          {% include 'hourglass:icon' with { name: 'search-gradient' } %}
+        </button>
+        <button class="site-header__search-close" id="search-close-btn" aria-label="Close search">
+          {% include 'hourglass:icon' with { name: 'close', size: 11 } %}
+        </button>
+      </div>
+    </div>
+
+    <div class="site-header__overlay" id="site-header-overlay" aria-hidden="true"></div>
+  </div>
+</header>

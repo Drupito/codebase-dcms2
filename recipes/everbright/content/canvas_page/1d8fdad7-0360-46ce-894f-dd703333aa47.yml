@@ -1,0 +1,72 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 1d8fdad7-0360-46ce-894f-dd703333aa47
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Articles
+  components:
+    -
+      uuid: 5000a6da-5465-4258-bf97-20024c1ab184
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '128'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+        views_columns: '2 columns'
+    -
+      parent_uuid: 5000a6da-5465-4258-bf97-20024c1ab184
+      slot: header_slot
+      uuid: 9870a2f8-a3c9-41ef-8853-0904ea45cde8
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: 'News and updates'
+        text_color: default
+    -
+      parent_uuid: 5000a6da-5465-4258-bf97-20024c1ab184
+      slot: header_slot
+      uuid: 526c297c-ed64-47fb-a276-ee642cfde456
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Explore Our Stories and Insights'
+        level: 1
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 5000a6da-5465-4258-bf97-20024c1ab184
+      slot: main_slot
+      uuid: 0a124596-b563-4196-a707-f276ea661136
+      component_id: block.views_block.articles-articles_all
+      inputs:
+        label: Articles
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+  path:
+    -
+      alias: /articles
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

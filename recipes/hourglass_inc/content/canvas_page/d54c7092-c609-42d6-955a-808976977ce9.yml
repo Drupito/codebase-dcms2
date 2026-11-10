@@ -1,0 +1,388 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: d54c7092-c609-42d6-955a-808976977ce9
+  default_langcode: en
+  depends:
+    b0b077af-3a7c-4650-8da8-c941f89bba06: file
+    6d4864b5-6b39-4757-8a66-2e8ca66215b8: media
+    853f690d-069e-420b-a60e-d31ccec2df12: file
+    465cf6ca-443f-4627-b7b9-3e93ecab6a31: media
+    613a6a92-e97e-4453-b301-68c5b150b3ea: file
+    13b1cdf2-8c5c-4b72-bb58-302bba8f86f2: media
+    c8a02a4c-6023-429b-927f-4d6f84eff25c: file
+    e4697c8d-c8f0-4fe1-a366-a3ae06071bce: media
+    9649a947-cb82-4964-ba0e-db22cab932cb: file
+    6fa5e42b-dd80-4a26-89ff-1f8341dd5f90: media
+    6e28e8c0-c063-4e02-90b0-3f4eb9f7a68f: file
+    215a6a5c-8cff-4965-9ba7-f22f86010367: media
+    02862c4f-5767-40f7-b183-c3faf9656926: file
+    283d5b78-29c4-4e96-b8d6-47c383a56444: media
+    1ea1c43c-db8b-450a-b709-392a2ff10e44: file
+    8c572013-bdee-4ba1-9a5b-d167950342f1: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Service Detail'
+  description:
+    -
+      value: 'Service Detail'
+  components:
+    -
+      uuid: ae3c1847-4d7b-4135-bf60-e35fc6a6dab3
+      component_id: sdc.hourglass.hero
+      inputs:
+        label: Services
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 6d4864b5-6b39-4757-8a66-2e8ca66215b8
+            target_type: media
+        cta_url:
+          uri: 'internal:/contact'
+          options: {  }
+        heading: 'Seamless Cloud Transformation.'
+        cta_text: 'Book a Strategy Session'
+        alignment: left
+        tall_image: true
+        description:
+          value: '<p>Moving legacy infrastructure to the cloud is risky. Our B2B experts manage the transition with zero downtime and total data security.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: dda1012c-caa6-4834-acbb-210db69a188a
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+    -
+      parent_uuid: dda1012c-caa6-4834-acbb-210db69a188a
+      slot: content
+      uuid: 6d2fa67c-3526-4197-8b65-b461c0f2c250
+      component_id: sdc.hourglass.anchor-navigation
+      inputs: {  }
+    -
+      parent_uuid: 6d2fa67c-3526-4197-8b65-b461c0f2c250
+      slot: links
+      uuid: bc2acea5-e8a2-4ad1-b9d2-8ccaf6e7fac9
+      component_id: sdc.hourglass.anchor-nav-link
+      inputs:
+        url: '#application'
+        title: Application
+    -
+      parent_uuid: 6d2fa67c-3526-4197-8b65-b461c0f2c250
+      slot: links
+      uuid: 6bc3e23a-6282-442d-af1f-dcef0c4c79fa
+      component_id: sdc.hourglass.anchor-nav-link
+      inputs:
+        url: '#how-it-works'
+        title: 'How it Works'
+    -
+      parent_uuid: 6d2fa67c-3526-4197-8b65-b461c0f2c250
+      slot: links
+      uuid: a6fd7b44-05a4-476f-909d-be3c39088489
+      component_id: sdc.hourglass.anchor-nav-link
+      inputs:
+        url: '#download'
+        title: Downloads
+    -
+      parent_uuid: 6d2fa67c-3526-4197-8b65-b461c0f2c250
+      slot: links
+      uuid: 9bfacec3-ca65-444b-87ed-617866d50002
+      component_id: sdc.hourglass.anchor-nav-link
+      inputs:
+        url: '#faq'
+        title: FAQ
+    -
+      uuid: ff602b33-3516-4703-9db3-4d7b4de1b4fa
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        anchor_id: application
+        container: full
+        background: _none
+        margin_top: '120'
+        sticky_top: _none
+        padding_top: _none
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: ff602b33-3516-4703-9db3-4d7b4de1b4fa
+      slot: content
+      uuid: fe9a34d3-8a3a-423c-bafc-3f68c1b4ac38
+      component_id: sdc.hourglass.article-feature
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 465cf6ca-443f-4627-b7b9-3e93ecab6a31
+            target_type: media
+        cta_url: /about-us
+        heading: 'Fundamental Insights'
+        variant: feature
+        cta_text: Discover
+        description: 'In an era of data fragmentation, the ability to see the "whole picture" is your greatest asset. Our service focuses on harmonizing disparate data streams into a single, intuitive dashboard. We prioritize lean architecture and real-time responsiveness, ens'
+    -
+      uuid: 6034e811-3aab-4ac3-9812-0e02234690c9
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        anchor_id: how-it-works
+        container: full
+        background: white-translucent
+        margin_top: '120'
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: 6034e811-3aab-4ac3-9812-0e02234690c9
+      slot: content
+      uuid: 9717cab7-315b-4343-9da7-640c82566298
+      component_id: sdc.hourglass.expertise-section
+      inputs:
+        heading: 'Where We Deliver the Most Value.'
+        description: 'From regulated industries to high-growth scale-ups, our cloud services are designed to meet the demands of organizations where uptime, compliance, and speed all matter equally.'
+    -
+      parent_uuid: 9717cab7-315b-4343-9da7-640c82566298
+      slot: cards
+      uuid: 1eb484fd-8552-464e-992c-81e1d61a3829
+      component_id: sdc.hourglass.expertise-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 13b1cdf2-8c5c-4b72-bb58-302bba8f86f2
+            target_type: media
+        heading: 'Hybrid Cloud Strategy'
+        description: 'We design redundant, high-availability cloud environments that allow your B2B operations to scale across borders without latency or data sovereignty issues.'
+    -
+      parent_uuid: 9717cab7-315b-4343-9da7-640c82566298
+      slot: cards
+      uuid: 5a8c2b6a-e1d0-4984-8f0b-ab6aafe8e937
+      component_id: sdc.hourglass.expertise-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e4697c8d-c8f0-4fe1-a366-a3ae06071bce
+            target_type: media
+        heading: 'Automated Workflow Orchestration'
+        description: 'By mapping your unique business logic into our platform, we remove the manual middle-man tasks that slow down project delivery and resource allocation.'
+    -
+      uuid: 48bdb4b5-7f26-4286-9431-1c35dbfa2849
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: orange-rounded
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '80'
+    -
+      parent_uuid: 48bdb4b5-7f26-4286-9431-1c35dbfa2849
+      slot: content
+      uuid: e46a6595-675a-4b73-bb23-dbf35dfd3706
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'What is the Gold Standard for Scalable Infrastructure?'
+        description:
+          value: '<p>Achieving the "Gold Standard" means creating a system that is both rigid in its security and fluid in its usability. Our methodology relies on "Zero-Trust" security protocols integrated directly into a user-centric interface, ensuring that high-level protection never comes at the cost of team speed.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: 9d825951-f40e-432c-8767-1dad6cc1f75f
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        background: orange-rounded
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: 9d825951-f40e-432c-8767-1dad6cc1f75f
+      slot: content
+      uuid: 53362f27-37e3-472b-8ba3-eae4032d287c
+      component_id: sdc.hourglass.tech-insights
+      inputs: {  }
+    -
+      parent_uuid: 53362f27-37e3-472b-8ba3-eae4032d287c
+      slot: slides
+      uuid: 461feb36-d46e-4c24-b430-723bf96368c1
+      component_id: sdc.hourglass.tech-insights-slide
+      inputs:
+        youtube_url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        video_thumbnail:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 6fa5e42b-dd80-4a26-89ff-1f8341dd5f90
+            target_type: media
+    -
+      uuid: d5199fc9-29c9-46c3-b336-d3d333d389f1
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        anchor_id: download
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: d5199fc9-29c9-46c3-b336-d3d333d389f1
+      slot: content
+      uuid: 188d9070-9022-4e8b-b1a1-9d38925e1c6f
+      component_id: sdc.hourglass.benefits-slider
+      inputs:
+        heading: 'Why Hourglass?'
+    -
+      parent_uuid: 188d9070-9022-4e8b-b1a1-9d38925e1c6f
+      slot: cards
+      uuid: 9427786f-0829-4d80-b777-b34ae314ff8d
+      component_id: sdc.hourglass.benefit-card
+      inputs:
+        heading: 'Adaptive Scalability'
+        description: 'Whether you need a single consultant or a dedicated cross-functional team, our service model scales to match your project size, timeline, and budget, without compromising on quality or delivery speed.'
+    -
+      parent_uuid: 9427786f-0829-4d80-b777-b34ae314ff8d
+      slot: media
+      uuid: 300bc231-a2c5-4a75-af51-9210d717688d
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 215a6a5c-8cff-4965-9ba7-f22f86010367
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 188d9070-9022-4e8b-b1a1-9d38925e1c6f
+      slot: cards
+      uuid: 42e2ede3-05f4-412d-8f89-a3862912108d
+      component_id: sdc.hourglass.benefit-card
+      inputs:
+        heading: 'Design-Led Engineering'
+        description: "We don't just build what you ask for, we challenge the brief. Our service teams combine technical depth with design thinking to ensure every solution we deliver is as intuitive for your end users as it is robust under the hood."
+    -
+      parent_uuid: 42e2ede3-05f4-412d-8f89-a3862912108d
+      slot: media
+      uuid: 1657385c-b220-4264-8df5-c88a0ff0b9c2
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 283d5b78-29c4-4e96-b8d6-47c383a56444
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 188d9070-9022-4e8b-b1a1-9d38925e1c6f
+      slot: cards
+      uuid: 40fa9bc6-2149-4ae7-8d09-470c390b9167
+      component_id: sdc.hourglass.benefit-card
+      inputs:
+        heading: 'Proactive Support'
+        description: "Our service engagements come with structured post-delivery support built in. We don't wait for issues to surface, we monitor, review, and optimize continuously so your investment keeps delivering long after launch day."
+    -
+      parent_uuid: 40fa9bc6-2149-4ae7-8d09-470c390b9167
+      slot: media
+      uuid: 00000ad2-f2c8-4aa5-b7c3-744202600301
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8c572013-bdee-4ba1-9a5b-d167950342f1
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 40fa9bc6-2149-4ae7-8d09-470c390b9167
+      slot: media
+      uuid: 6d8541dd-18c9-435f-927a-01e9ff0b8543
+      component_id: sdc.hourglass.media
+      inputs:
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      uuid: 158b644b-0894-449b-a59f-dd6b6ba44292
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        anchor_id: faq
+        container: default
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: 158b644b-0894-449b-a59f-dd6b6ba44292
+      slot: content
+      uuid: 317c279b-b052-43d1-9e43-aa3b54f8f8f1
+      component_id: sdc.hourglass.contact-cta
+      inputs:
+        cta_body:
+          value: '<p>Ready to optimize your operations? Our consultants work one-on-one with your team to audit your current stack and design a roadmap for the future.</p>'
+          format: canvas_html_block
+        section_title:
+          value: 'Your Needs, Our Expertise'
+          format: canvas_html_block
+        cta_button_url: /contact
+        cta_button_label: 'Request a Consult'
+    -
+      parent_uuid: 317c279b-b052-43d1-9e43-aa3b54f8f8f1
+      slot: form
+      uuid: dbcd0efb-5c90-480c-8369-1d9c21ecab9f
+      component_id: block.webform_block
+      inputs:
+        lazy: false
+        label: Webform
+        redirect: false
+        webform_id: contact_cta
+        default_data: ''
+        label_display: '0'
+  path:
+    -
+      alias: /service-detail
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

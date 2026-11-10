@@ -1,0 +1,80 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.canvas_html_block
+  module:
+    - text
+  theme:
+    - hourglass
+active_version: 554ba33ca69246a0
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        section_title:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'Hourglass by the Numbers'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        cards:
+          title: 'Stat Cards'
+          description: 'Place Stat Card atoms here. Duplicate as needed — 4 or more will automatically switch to a slider.'
+  7b89ade859d75579:
+    settings:
+      prop_field_definitions:
+        section_title:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'Hourglass by the Numbers'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        card_1:
+          title: 'Stat Card 1'
+          description: 'Place a Stat Card atom here.'
+        card_2:
+          title: 'Stat Card 2'
+          description: 'Place a Stat Card atom here.'
+        card_3:
+          title: 'Stat Card 3'
+          description: 'Place a Stat Card atom here.'
+label: 'Stats Section'
+id: sdc.hourglass.stats-section
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:stats-section'

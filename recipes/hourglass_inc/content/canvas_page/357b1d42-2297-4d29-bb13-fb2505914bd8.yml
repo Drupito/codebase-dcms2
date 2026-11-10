@@ -1,0 +1,171 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 357b1d42-2297-4d29-bb13-fb2505914bd8
+  default_langcode: en
+  depends:
+    cea8bd48-d333-4da9-8c89-07124fac0998: file
+    b4c3b7eb-93f8-4e55-9a8f-8c5720eec467: media
+    d034e75d-9980-4989-91b6-ff918733ad8e: file
+    21c1b205-269c-47d5-ba4b-a3aa19a32946: media
+    82b94e45-c3ab-4bdf-a1b8-bd52e08f2243: file
+    7ab34a62-8b8f-4a10-a891-37abeb6d00e6: media
+    d3db8a8f-012d-4195-af53-ab05e060dd7f: file
+    01b5193b-8855-4291-b5b1-00bb20baba32: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Our Team'
+  description:
+    -
+      value: 'Our Team'
+  components:
+    -
+      uuid: d7c0578d-c68f-445e-a151-5d7a285d691d
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: d7c0578d-c68f-445e-a151-5d7a285d691d
+      slot: content
+      uuid: 9c3ae255-a6f1-4217-bcf7-9894e0af2d43
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Expertise at Every Level'
+        description:
+          value: '<p>From founding engineers to frontline support, discover the people behind Hourglass and what drives them to build differently.</p>'
+          format: canvas_html_block
+        heading_tag: h1
+        eyebrow_text: 'THE PEOPLE'
+    -
+      uuid: 6a3747ff-30a7-4f2c-862d-6344394ef59c
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: _none
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: '80'
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: 6a3747ff-30a7-4f2c-862d-6344394ef59c
+      slot: content
+      uuid: 33269b5f-3cae-449f-8e7b-0804c4dc7bcd
+      component_id: sdc.hourglass.team-section
+      inputs:
+        section_title: 'Information Technology (IT)'
+    -
+      parent_uuid: 33269b5f-3cae-449f-8e7b-0804c4dc7bcd
+      slot: cards
+      uuid: 1e34709f-9a5c-402c-bae0-96875dde2183
+      component_id: sdc.hourglass.team-member-card
+      inputs:
+        name: 'Anya Petrova'
+        role: 'Software Engineer'
+        email: info@company.com
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b4c3b7eb-93f8-4e55-9a8f-8c5720eec467
+            target_type: media
+        phone: '+49 8821 8210'
+        email_url: 'mailto:info@company.com'
+        phone_url: 'tel:+498821821'
+        linkedin_url: 'https://linkedin.com/in/username'
+    -
+      parent_uuid: 33269b5f-3cae-449f-8e7b-0804c4dc7bcd
+      slot: cards
+      uuid: 432307c7-4a9b-44a2-bb89-e8e74ae55883
+      component_id: sdc.hourglass.team-member-card
+      inputs:
+        name: 'Jian Li'
+        role: 'Product Manager'
+        email: info@company.com
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 21c1b205-269c-47d5-ba4b-a3aa19a32946
+            target_type: media
+        phone: '+49 8821 8210'
+        email_url: 'mailto:info@company.com'
+        phone_url: 'tel:+498821821'
+        linkedin_url: 'https://linkedin.com/in/username'
+    -
+      parent_uuid: 33269b5f-3cae-449f-8e7b-0804c4dc7bcd
+      slot: cards
+      uuid: 16b71fb2-5647-46ce-9b6d-00fd49290fc4
+      component_id: sdc.hourglass.team-member-card
+      inputs:
+        name: 'Sofia Dubois'
+        role: 'Data Analyst'
+        email: info@company.com
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7ab34a62-8b8f-4a10-a891-37abeb6d00e6
+            target_type: media
+        phone: '+49 8821 8210'
+        email_url: 'mailto:info@company.com'
+        phone_url: 'tel:+498821821'
+        linkedin_url: 'https://linkedin.com/in/username'
+    -
+      uuid: b783b028-6987-4f70-abfc-1cbc1e33e6fa
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: '80'
+        sticky_top: _none
+        padding_top: '80'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: '80'
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: b783b028-6987-4f70-abfc-1cbc1e33e6fa
+      slot: content
+      uuid: cc3d3818-65cd-45cc-9c4a-a9571d8c48f4
+      component_id: sdc.hourglass.cta-banner
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 01b5193b-8855-4291-b5b1-00bb20baba32
+            target_type: media
+        cta_url: /careers
+        eyebrow: Careers
+        heading: 'Shape the Future of Enterprise Tech'
+        cta_text: ' Find Your Place'
+        description: "We're looking for bold thinkers and skilled builders who want to work on problems that actually matter at scale. Explore open roles across engineering, product, and operations."
+  path:
+    -
+      alias: /team
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

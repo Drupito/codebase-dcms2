@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1ed4efcc-9ddc-4a87-8670-c8f6e5f24a15
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: mobile_icon.svg
+  uri:
+    -
+      value: 'public://2026-05/mobile_icon.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 650
+  status:
+    -
+      value: true

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: d572ca25-64c0-4478-9285-6167fbde76a9
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: Frame-14176.jpg
+  uri:
+    -
+      value: 'public://2026-06/Frame-14176.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 231869
+  status:
+    -
+      value: true

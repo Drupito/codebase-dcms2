@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Contact Cards
+group: Organisms
+status: stable
+description: 'Three-column contact options section. Place Contact Card atoms in the cards slot — one for phone, one for email, one for a CTA link.'
+props:
+  type: object
+  properties:
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  cards:
+    title: Cards
+    description: 'Place Contact Card atoms here.'

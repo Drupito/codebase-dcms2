@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.goodwell_theme.card-plan
+    - core.entity_view_mode.node.plan_card
+    - field.field.media.image.field_media_image
+    - field.field.node.plans.field_body
+    - field.field.node.plans.field_button
+    - field.field.node.plans.field_featured_image
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - node.type.plans
+  module:
+    - file
+    - media
+    - node
+    - options
+id: node.plans.plan_card
+content_entity_type_id: node
+content_entity_type_bundle: plans
+content_entity_type_view_mode: plan_card
+component_tree:
+  '0:37a017cc-46f4-40e8-96b7-3dea82104531':
+    uuid: 37a017cc-46f4-40e8-96b7-3dea82104531
+    component_id: sdc.goodwell_theme.card-plan
+    component_version: 5527e9bec79b9805
+    inputs:
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:plans␝field_featured_image␞␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      title:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:plans␝title␞␟value'
+      description:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:plans␝field_body␞␟summary_processed'
+      button_label:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:plans␝field_button␞␟title'
+      button_url:
+        sourceType: host-entity-url
+        absolute: false
+      button_style: outline
+exposed_slots: {  }

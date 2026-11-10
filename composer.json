@@ -1,0 +1,193 @@
+{
+    "name": "drupal/cms",
+    "version": "2.2.8",
+    "description": "Drupal CMS is a ready-to-use platform built on Drupal core, offering smart defaults to get started quickly and enterprise-grade tools for marketers, designers, and content creators.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/cms",
+    "support": {
+        "User guide": "https://www.drupal.org/docs/drupal-cms",
+        "Get help": "https://www.drupal.org/project/cms#support"
+    },
+    "repositories": [
+        {
+            "name": "drupal",
+            "type": "composer",
+            "url": "https://packages.drupal.org/8",
+            "only": ["drupal/*"]
+        }
+    ],
+    "require": {
+        "composer/composer": "^2.9.8",
+        "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^2.0",
+        "drupal/ai": "^1.3.1",
+        "drupal/ai_image_alt_text": "^1.0.2",
+        "drupal/ai_provider_openai": "^1.2.1",
+        "drupal/altcha": "^1.1",
+        "drupal/automatic_updates": "^4.1",
+        "drupal/autosave_form": "^1.11.0",
+        "drupal/bpmn_io": "^3.0.5",
+        "drupal/byte_theme": "^1",
+        "drupal/canvas": "^1.11",
+        "drupal/canvas_translate": "@alpha",
+        "drupal/captcha": "^2.0.10",
+        "drupal/caresphere_theme": "^1.2.0",
+        "drupal/coffee": "^2.0.1",
+        "drupal/consistent": "^1",
+        "drupal/convene_theme": "^1.2.0",
+        "drupal/core": "^11.4",
+        "drupal/core-composer-scaffold": "^11.4",
+        "drupal/core-project-message": "^11.4",
+        "drupal/core-recipe-unpack": "^11.4",
+        "drupal/core-recommended": "^11.4",
+        "drupal/core-vendor-hardening": "^11.4",
+        "drupal/crop": "^2.6.0",
+        "drupal/cva": "^1.0.0",
+        "drupal/dashboard": "^2.2",
+        "drupal/drupal_cms_helper": "^2.1.2",
+        "drupal/drupal_cms_installer": "^2",
+        "drupal/drupical": "^1.0.2",
+        "drupal/easy_breadcrumb": "^2.0.9",
+        "drupal/easy_email": "^3.0.7",
+        "drupal/easy_email_theme": "^1.1.0",
+        "drupal/eca": "^3.1.2",
+        "drupal/entity_reference_revisions": "^1.14.0",
+        "drupal/everbright_theme": "^1",
+        "drupal/field_group": "^3.6 || ^4",
+        "drupal/focal_point": "^2.1.2",
+        "drupal/forma_theme": "^1",
+        "drupal/friendlycaptcha": "^1.1.4",
+        "drupal/gin": "^5.0.13",
+        "drupal/gin_login": "^2.1.4",
+        "drupal/gin_toolbar": "^3.0.3",
+        "drupal/goodwell_theme": "^1.0",
+        "drupal/haven_theme": "^1",
+        "drupal/honeypot": "^2.2.2",
+        "drupal/hourglass": "^1.0",
+        "drupal/jquery_ui": "^1.8.0",
+        "drupal/jquery_ui_resizable": "^2.1.0",
+        "drupal/key": "^1.22.0",
+        "drupal/klaro": "^3.1.1",
+        "drupal/link_attributes": "^2.1.2",
+        "drupal/linkit": "^7.0.15",
+        "drupal/login_emailusername": "^3.0.1",
+        "drupal/mailsystem": "^4.5.0",
+        "drupal/media_file_delete": "^1.3.1",
+        "drupal/media_library_bulk_upload": "^1.0.6",
+        "drupal/menu_link_attributes": "^1.7.0",
+        "drupal/mercury": "^1.0.5",
+        "drupal/metatag": "^2.2.0",
+        "drupal/modeler": "^1",
+        "drupal/modeler_api": "^1.1.2",
+        "drupal/navigation_extra_tools": "^1.3.2",
+        "drupal/paragraphs": "^1.20.0",
+        "drupal/pathauto": "^1.15.0",
+        "drupal/project_browser": "^2.1.5",
+        "drupal/recipe_locale": "^1",
+        "drupal/redirect": "^1.13.0",
+        "drupal/sam": "^1.3.2",
+        "drupal/scheduler": "^2.2.2",
+        "drupal/scheduler_content_moderation_integration": "^3.0.5",
+        "drupal/search_api": "^1.40.0",
+        "drupal/search_api_exclude": "^2.0.3",
+        "drupal/selective_better_exposed_filters": "^3.0.3",
+        "drupal/seo_checklist": "^5.2.1",
+        "drupal/simple_sitemap": "^4.2.3",
+        "drupal/site_template_helper": "^1.0.4",
+        "drupal/svg_image": "^3.2.2",
+        "drupal/symfony_mailer_lite": "^2.0.4",
+        "drupal/tagify": "^1.2.51",
+        "drupal/token": "^1.17",
+        "drupal/token_or": "^2.3.2",
+        "drupal/trash": "^3.0.27",
+        "drupal/twig_tweak": "^3.4.2",
+        "drupal/ui_icons": "^1.1.2",
+        "drupal/view_password": "^6.0.5",
+        "drupal/views_infinite_scroll": "^2.0.3",
+        "drupal/webform": "^6.3.1",
+        "drupal/yoast_seo": "^2.1",
+        "drush/drush": "^13.7"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-recipe-unpack": true,
+            "drupal/core-vendor-hardening": true,
+            "drupal/site_template_helper": true,
+            "php-http/discovery": true,
+            "symfony/runtime": true,
+            "cweagans/composer-patches": true
+        },
+        "bin-dir": "vendor/bin",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/example.gitignore": false
+            },
+            "allowed-packages": [
+                "drupal/drupal_cms_blank",
+                "drupal/drupal_cms_site_template_base"
+            ]
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "./drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "./recipes/{$name}": ["type:drupal-recipe"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "drupal-core-project-message": {
+            "include-keys": ["support"],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                   </>",
+                "<bg=blue;fg=white>  You're all set to get started with Drupal CMS!   </>",
+                ""
+            ]
+        },
+        "drupal-core-vendor-hardening": {
+            "composer/composer": false
+        },
+        "patches": {
+            "drupal/core": {
+                "Set host and client IP from proxy headers": "patches/indexphp-proxy-host-and-client-ip.patch",
+                "Add Drupito help text to error pages": "patches/installer-error-msg.patch"
+            },
+            "drupal/drupal_cms_installer": {
+                "Require a stronger password in the installer": "patches/registration-password.patch"
+            },
+            "drupal/caresphere": {
+                "Canvas no longer accepts JSON string inputs (#3633493, MR !10)": "patches/caresphere-3633493-canvas-json-string-inputs.patch"
+            },
+            "drupal/convene": {
+                "Canvas no longer accepts JSON string inputs (#3633590, MR !3)": "patches/convene-3633590-canvas-json-string-inputs.patch"
+            }
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "@php -r \"@unlink('vendor/bin/composer');\""
+        ],
+        "post-install-cmd": [
+            "@post-update-cmd"
+        ]
+    }
+}

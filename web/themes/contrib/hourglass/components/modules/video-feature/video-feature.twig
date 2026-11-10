@@ -1,0 +1,75 @@
+{#
+/**
+ * @file
+ * Video Feature — Figma node 2:11431
+ *
+ * Variants:
+ * - side (default): text left + video right (horizontal).
+ * - stacked:        H3 header above + full-width video below.
+ *
+ * Slots: heading, description, cta, media
+ * Props: variant, play_button_text, extra_classes
+ */
+#}
+{{ attach_library('hourglass/video-feature') }}
+
+{% set _variant = layout|default(variant)|default('side') %}
+
+<section class="c-video-feature c-video-feature--{{ _variant }} {{ extra_classes|default('') }}">
+
+  {% if _variant == 'stacked' %}
+
+    {% if heading or description %}
+      <div class="c-video-feature__header">
+        {% if heading %}
+          <div class="c-video-feature__heading">{{ heading }}</div>
+        {% endif %}
+        {% if description %}
+          <div class="c-video-feature__description">{{ description }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="c-video-feature__media js-vf-media">
+      <div class="c-video-feature__thumbnail js-vf-thumbnail">{{ media }}</div>
+      <button class="c-video-feature__play-wrap js-vf-play" type="button" aria-label="{{ play_button_text|default('View Video') }}">
+        <span class="c-video-feature__play-label">{{ play_button_text|default('View Video') }}</span>
+        <span class="c-video-feature__play-icon" aria-hidden="true">
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="42" height="42" rx="21" fill="white"/>
+            <path d="M30.5 20.134C31.1667 20.5189 31.1667 21.4811 30.5 21.866L17 29.6603C16.3333 30.0452 15.5 29.564 15.5 28.7942L15.5 13.2058C15.5 12.436 16.3333 11.9548 17 12.3397L30.5 20.134Z" fill="black"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+
+  {% else %}
+
+    <div class="c-video-feature__container">
+
+      <div class="c-video-feature__text">
+        <div class="c-video-feature__text-content">
+          <div class="c-video-feature__heading">{{ heading }}</div>
+          <div class="c-video-feature__description">{{ description }}</div>
+        </div>
+        <div class="c-video-feature__cta">{{ cta }}</div>
+      </div>
+
+      <div class="c-video-feature__media js-vf-media">
+        <div class="c-video-feature__thumbnail js-vf-thumbnail">{{ media }}</div>
+        <button class="c-video-feature__play-wrap js-vf-play" type="button" aria-label="{{ play_button_text|default('View Video') }}">
+          <span class="c-video-feature__play-label">{{ play_button_text|default('View Video') }}</span>
+          <span class="c-video-feature__play-icon" aria-hidden="true">
+            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="42" height="42" rx="21" fill="white"/>
+              <path d="M30.5 20.134C31.1667 20.5189 31.1667 21.4811 30.5 21.866L17 29.6603C16.3333 30.0452 15.5 29.564 15.5 28.7942L15.5 13.2058C15.5 12.436 16.3333 11.9548 17 12.3397L30.5 20.134Z" fill="black"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+
+    </div>
+
+  {% endif %}
+
+</section>

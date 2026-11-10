@@ -1,0 +1,836 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: 126f57a62297dcff
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        padding_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '96'
+                label: 96px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '144'
+                label: 144px
+              -
+                value: '160'
+                label: 160px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_bottom:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '96'
+                label: 96px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '144'
+                label: 144px
+              -
+                value: '160'
+                label: 160px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_left:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '148'
+                label: 148px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_right:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '148'
+                label: 148px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '96'
+                label: 96px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '144'
+                label: 144px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_bottom:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '96'
+                label: 96px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '144'
+                label: 144px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        background:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: transparent
+                label: Transparent
+              -
+                value: white
+                label: White
+              -
+                value: gray
+                label: 'Gray (#e8e8e8)'
+              -
+                value: dark
+                label: 'Dark (black)'
+              -
+                value: dark-gradient
+                label: 'Dark gradient'
+              -
+                value: gray-rounded
+                label: 'Gray with rounded top corners'
+              -
+                value: orange-rounded
+                label: 'Orange with rounded top corners'
+              -
+                value: white-translucent
+                label: 'White translucent'
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        container:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: default
+                label: 'Default (max-width centred)'
+              -
+                value: full
+                label: 'Full width (no wrapper)'
+              -
+                value: carousel
+                label: 'Carousel (left-aligned bleed)'
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        position:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: static
+                label: 'Static (normal flow)'
+              -
+                value: relative
+                label: Relative
+              -
+                value: sticky
+                label: Sticky
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        sticky_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '80'
+                label: 80px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        rounded_top:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        hidden:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        anchor_id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'Components placed inside this layout section.'
+  2edbdbb88ea7f252:
+    settings:
+      prop_field_definitions:
+        padding_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '96'
+                label: 96px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '144'
+                label: 144px
+              -
+                value: '160'
+                label: 160px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_bottom:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '96'
+                label: 96px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '144'
+                label: 144px
+              -
+                value: '160'
+                label: 160px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_left:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '148'
+                label: 148px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        padding_right:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '148'
+                label: 148px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '96'
+                label: 96px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '144'
+                label: 144px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        margin_bottom:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '0'
+                label: 0px
+              -
+                value: '8'
+                label: 8px
+              -
+                value: '12'
+                label: 12px
+              -
+                value: '16'
+                label: 16px
+              -
+                value: '24'
+                label: 24px
+              -
+                value: '32'
+                label: 32px
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '48'
+                label: 48px
+              -
+                value: '64'
+                label: 64px
+              -
+                value: '80'
+                label: 80px
+              -
+                value: '96'
+                label: 96px
+              -
+                value: '120'
+                label: 120px
+              -
+                value: '144'
+                label: 144px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        background:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: transparent
+                label: Transparent
+              -
+                value: white
+                label: White
+              -
+                value: gray
+                label: 'Gray (#e8e8e8)'
+              -
+                value: dark
+                label: 'Dark (black)'
+              -
+                value: dark-gradient
+                label: 'Dark gradient'
+              -
+                value: gray-rounded
+                label: 'Gray with rounded top corners'
+              -
+                value: orange-rounded
+                label: 'Orange with rounded top corners'
+              -
+                value: white-translucent
+                label: 'White translucent'
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        container:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: default
+                label: 'Default (max-width centred)'
+              -
+                value: full
+                label: 'Full width (no wrapper)'
+              -
+                value: carousel
+                label: 'Carousel (left-aligned bleed)'
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        position:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: static
+                label: 'Static (normal flow)'
+              -
+                value: relative
+                label: Relative
+              -
+                value: sticky
+                label: Sticky
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        sticky_top:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: '40'
+                label: 40px
+              -
+                value: '80'
+                label: 80px
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        rounded_top:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        hidden:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        anchor_id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'Components placed inside this layout section.'
+label: Layout
+id: sdc.hourglass.layout
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:layout'

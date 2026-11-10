@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: dc8817d4-c6d3-44a3-8ebe-ca51f7d0511e
+  bundle: image
+  default_langcode: en
+  depends:
+    8aa7738d-eca6-43fe-8bee-f237f292bb22: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Gemini_Generated_Image_8w5li08w5li08w5l-(1)-3-(5).png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Call us directly'
+      title: ''
+      width: 200
+      height: 200
+      entity: 8aa7738d-eca6-43fe-8bee-f237f292bb22

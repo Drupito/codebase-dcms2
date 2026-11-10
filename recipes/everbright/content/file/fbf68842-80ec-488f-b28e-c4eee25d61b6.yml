@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: fbf68842-80ec-488f-b28e-c4eee25d61b6
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: jonathan-borba-eTmS90d3hEY-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-05/jonathan-borba-eTmS90d3hEY-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 155755
+  status:
+    -
+      value: true

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: d034e75d-9980-4989-91b6-ff918733ad8e
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: card-(3).png
+  uri:
+    -
+      value: 'public://2026-05/card-(3).png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 84385
+  status:
+    -
+      value: true

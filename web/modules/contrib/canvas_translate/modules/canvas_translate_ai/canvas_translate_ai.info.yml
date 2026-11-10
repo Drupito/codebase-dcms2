@@ -1,0 +1,13 @@
+name: Canvas Translate AI
+type: module
+description: 'Optional AI-assisted machine translation for Canvas Translate, via the Drupal AI module.'
+package: Canvas
+core_version_requirement: ^11.2
+dependencies:
+  - canvas:canvas_translate
+  - ai:ai
+
+# Information added by Drupal.org packaging script on 2026-10-07
+version: '1.0.0-beta1'
+project: 'canvas_translate'
+datestamp: 1791359364

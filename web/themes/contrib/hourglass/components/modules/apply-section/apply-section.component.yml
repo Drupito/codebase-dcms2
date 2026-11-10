@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Apply Section
+group: Organisms
+status: stable
+description: 'Two-column section on a warm cream background: left side has a heading and bulleted step list; right side has a white card containing a form.'
+
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: 'Section Heading'
+      examples:
+        - 'Submitting a Lead and How It Is Handled'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+
+slots:
+  items:
+    title: 'List Items'
+    description: 'Place Text List Item components here — one per step.'
+  form:
+    title: 'Form'
+    description: 'Place a Webform block or custom form here.'

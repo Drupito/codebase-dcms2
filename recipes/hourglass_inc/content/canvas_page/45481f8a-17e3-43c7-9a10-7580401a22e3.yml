@@ -1,0 +1,210 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 45481f8a-17e3-43c7-9a10-7580401a22e3
+  default_langcode: en
+  depends:
+    cae1773a-903e-45dd-ad56-71ad423fc141: file
+    ee41620e-fa15-4c68-bc58-b3bf845869c8: media
+    1eb0b0a3-0092-4bdb-a206-fcc80f81989f: file
+    c913b505-9064-4582-9717-2d83c40ba8b8: media
+    67847ed9-b22c-413b-9baf-a34f43870773: file
+    79501784-4a75-48ac-9910-bc0ce04d2f05: media
+    c51c84ff-3415-4d2f-a40b-68bb9638373d: file
+    601894ce-1ef4-4e18-acad-6f420e0cbbc4: media
+    3eb5b211-6233-41ed-b645-69d92b2915b1: file
+    08b0b015-0aba-40c0-8fe5-770072ad8778: media
+    68b5caa8-594c-4623-a7f8-3d5a7aa167c3: file
+    cf8019a3-ef69-48a5-b22c-fd126eae8aac: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Product Listing'
+  description:
+    -
+      value: 'Product Listing'
+  components:
+    -
+      uuid: ecfdb08a-2377-4fb2-9330-62e32ebba2eb
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+    -
+      parent_uuid: ecfdb08a-2377-4fb2-9330-62e32ebba2eb
+      slot: content
+      uuid: 1a78f18b-4491-4219-a69d-3a25240d6f97
+      component_id: sdc.hourglass.hero
+      inputs:
+        label: 'THE SUITE'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: ee41620e-fa15-4c68-bc58-b3bf845869c8
+            target_type: media
+        cta_url:
+          uri: 'internal:/contact'
+          options: {  }
+        heading: 'Software That Works as Hard as You Do'
+        cta_text: 'Start Your Free Trial'
+        alignment: left
+        description:
+          value: '<p>From modular SaaS platforms to fully bespoke enterprise solutions, every Hourglass product is engineered to replace complexity with clarity and manual effort with intelligent automation.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: c581b726-70a5-40b0-acc9-c92b4f89ee0f
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: c581b726-70a5-40b0-acc9-c92b4f89ee0f
+      slot: content
+      uuid: 23131d7e-8e6c-415a-bd4f-191d0106e8fa
+      component_id: sdc.hourglass.product-grid
+      inputs:
+        body_text:
+          value: "<p>The Hourglass product suite is built for organizations that can't afford friction. Each product is independently deployable, deeply configurable, and designed to integrate into your existing stack from day one, without a six-month implementation runway.</p>"
+          format: canvas_html_block
+    -
+      parent_uuid: 23131d7e-8e6c-415a-bd4f-191d0106e8fa
+      slot: cards
+      uuid: fcd8a619-05c6-495b-8158-344f4d0c8585
+      component_id: sdc.hourglass.offering-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: c913b505-9064-4582-9717-2d83c40ba8b8
+            target_type: media
+        cta_url:
+          uri: 'internal:/saas-products'
+          options: {  }
+        heading: 'SaaS Products'
+        cta_text: 'Explore All'
+        description: 'Modular software tools for project orchestration, resource management, and real-time collaboration.'
+    -
+      parent_uuid: 23131d7e-8e6c-415a-bd4f-191d0106e8fa
+      slot: cards
+      uuid: 48434edb-2681-4a2f-824d-436ab47d7e97
+      component_id: sdc.hourglass.offering-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 79501784-4a75-48ac-9910-bc0ce04d2f05
+            target_type: media
+        cta_url:
+          uri: 'internal:/managed-services'
+          options: {  }
+        heading: 'Managed Services'
+        cta_text: 'View All Products'
+        description: 'Ongoing technical support, cloud optimization, and hardware-software integration services.'
+    -
+      parent_uuid: 23131d7e-8e6c-415a-bd4f-191d0106e8fa
+      slot: cards
+      uuid: dace7501-0954-488c-9253-be92913219d6
+      component_id: sdc.hourglass.offering-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 601894ce-1ef4-4e18-acad-6f420e0cbbc4
+            target_type: media
+        cta_url:
+          uri: 'internal:/enterprise-solutions'
+          options: {  }
+        heading: 'Enterprise Solutions'
+        cta_text: 'See More'
+        description: 'Dedicated B2B software engineering and digital transformation consulting for global-scale operations.'
+    -
+      parent_uuid: 23131d7e-8e6c-415a-bd4f-191d0106e8fa
+      slot: cards
+      uuid: 70fb0630-2692-4761-8610-62f7b1df95d7
+      component_id: sdc.hourglass.offering-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 08b0b015-0aba-40c0-8fe5-770072ad8778
+            target_type: media
+        cta_url:
+          uri: 'internal:/expert-support'
+          options: {  }
+        heading: 'Expert Support'
+        cta_text: 'View All Products'
+        description: '24/7 technical assistance, infrastructure management, and ongoing system optimization.'
+    -
+      parent_uuid: 23131d7e-8e6c-415a-bd4f-191d0106e8fa
+      slot: cards
+      uuid: 2c02b301-1e0f-4aeb-8cf4-313a8098683e
+      component_id: sdc.hourglass.offering-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: cf8019a3-ef69-48a5-b22c-fd126eae8aac
+            target_type: media
+        cta_url:
+          uri: 'internal:/bespoke-platforms'
+          options: {  }
+        heading: 'Bespoke Platforms'
+        cta_text: 'See More'
+        description: 'Custom software development, integration, and support for enterprise-level organizations.'
+    -
+      uuid: a70b26d7-6a8b-47c6-aa10-d928258e5b21
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: _none
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: '120'
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: a70b26d7-6a8b-47c6-aa10-d928258e5b21
+      slot: content
+      uuid: 0a4fa246-4497-4f4f-9c5d-bb030ab3207f
+      component_id: sdc.hourglass.contact-cta
+      inputs:
+        cta_body:
+          value: '<p>Ready to optimize your operations? Our consultants work one-on-one with your team to audit your current stack and design a roadmap for the future.</p>'
+          format: canvas_html_block
+        section_title:
+          value: 'Your Needs, Our Expertise'
+          format: canvas_html_block
+        cta_button_url: /contact
+        cta_button_label: 'Request a Consult'
+    -
+      parent_uuid: 0a4fa246-4497-4f4f-9c5d-bb030ab3207f
+      slot: form
+      uuid: f9e33bd0-43f3-4f5c-98e0-543dc5221972
+      component_id: block.webform_block
+      inputs:
+        lazy: false
+        label: Webform
+        redirect: false
+        webform_id: contact_cta
+        default_data: ''
+        label_display: '0'
+  path:
+    -
+      alias: /products
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

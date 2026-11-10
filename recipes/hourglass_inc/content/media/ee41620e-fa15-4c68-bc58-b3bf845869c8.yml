@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: ee41620e-fa15-4c68-bc58-b3bf845869c8
+  bundle: image
+  default_langcode: en
+  depends:
+    cae1773a-903e-45dd-ad56-71ad423fc141: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Hero-(1).png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: Products
+      title: ''
+      width: 1440
+      height: 600
+      entity: cae1773a-903e-45dd-ad56-71ad423fc141

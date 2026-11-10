@@ -1,0 +1,63 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Social Links
+group: Base
+status: stable
+description: "Row of social media icon links. Only platforms with a URL are rendered."
+props:
+  type: object
+  properties:
+    facebook_url:
+      type: string
+      title: Facebook URL
+      format: uri-reference
+    instagram_url:
+      type: string
+      title: Instagram URL
+      format: uri-reference
+    twitter_url:
+      type: string
+      title: X (Twitter) URL
+      format: uri-reference
+    linkedin_url:
+      type: string
+      title: LinkedIn URL
+      format: uri-reference
+    youtube_url:
+      type: string
+      title: YouTube URL
+      format: uri-reference
+    style:
+      type: string
+      title: Style
+      enum:
+        - circle
+        - plain
+      meta:enum:
+        circle: Circle button
+        plain:  Plain icon (no background)
+      default: circle
+    size:
+      type: string
+      title: Size
+      enum:
+        - sm
+        - md
+        - lg
+      meta:enum:
+        sm: Small (2rem)
+        md: Medium (2.75rem)
+        lg: Large (3.5rem)
+      default: md
+    color:
+      type: string
+      title: Colour
+      description: "Use 'light' on dark backgrounds like the footer."
+      enum:
+        - default
+        - light
+        - dark
+      meta:enum:
+        default: Default (brand colours)
+        light:   Light (white, for dark backgrounds)
+        dark:    Dark (black)
+      default: default

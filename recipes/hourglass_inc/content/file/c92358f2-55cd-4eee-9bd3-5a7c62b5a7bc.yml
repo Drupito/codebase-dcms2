@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c92358f2-55cd-4eee-9bd3-5a7c62b5a7bc
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: sustainable-tech-data-center.jpg
+  uri:
+    -
+      value: 'public://blog-images/sustainable-tech-data-center.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 91097
+  status:
+    -
+      value: true

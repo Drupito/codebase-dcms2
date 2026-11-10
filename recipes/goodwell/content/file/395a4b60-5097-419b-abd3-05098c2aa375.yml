@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 395a4b60-5097-419b-abd3-05098c2aa375
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: man_glasses.png
+  uri:
+    -
+      value: 'public://2026-06/man_glasses.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 3086
+  status:
+    -
+      value: true

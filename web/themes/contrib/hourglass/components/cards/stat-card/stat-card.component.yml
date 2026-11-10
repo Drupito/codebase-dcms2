@@ -1,0 +1,34 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Stat Card
+group: Atoms
+status: stable
+description: 'White card with a 100×100 icon, a bold stat number, and a short label. Used inside Stats Section.'
+props:
+  type: object
+  properties:
+    media:
+      type: object
+      title: Icon Image
+      $ref: 'json-schema-definitions://canvas.module/image'
+      examples:
+        - src: 'https://example.com/icon.svg'
+          alt: 'People'
+          width: 100
+          height: 100
+    stat:
+      type: string
+      title: 'Stat / Number'
+      examples:
+        - '250+'
+        - '40k'
+        - '12'
+    label:
+      type: string
+      title: Label
+      examples:
+        - 'Full-Stack Experts'
+        - 'Active Enterprise Deployments'
+        - 'Global Tech Hubs'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

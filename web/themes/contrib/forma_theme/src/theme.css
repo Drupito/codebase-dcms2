@@ -1,0 +1,28 @@
+/**
+ * @file theme.css
+ * shadcn/ui-compatible theme variables for FormaTheme.
+ *
+ * You can customize these values without rebuilding the compiled CSS.
+ * Tools like https://tweakcn.com can help generate these values. Copy this
+ * file to your web root, so it sits next to index.php, and clear Drupal's
+ * cache. Then, any changes you make in this file should be reflected right away.
+ */
+
+:root {
+  --background: oklch(0.955 0 89.876);
+  --foreground: oklch(0.205 0 89.876);
+  --primary: oklch(0.873 0.017 61.928);
+  --primary-foreground: var(--foreground);
+  --secondary: oklch(0.321 0 89.876);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.876 0 89.876);
+  --muted-foreground: var(--foreground);
+  --accent: oklch(0.875 0.018 219.672);
+  --accent-foreground: var(--foreground);
+  --destructive: oklch(0.6368 0.2078 25.3313);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.872 0.009 258.338);
+  --input: oklch(0.872 0.009 258.338);
+  --font-sans: "Poppins", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  --font-mono: "Fira Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+}

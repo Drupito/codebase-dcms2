@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Process Steps
+group: Organisms
+status: stable
+description: 'Horizontal numbered-step section with connecting lines and scroll-triggered progressive animation. Place Process Step cards in the steps slot.'
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: 'Section Heading'
+      examples:
+        - 'Technical Specifications & Integrity'
+    subtitle:
+      type: string
+      title: 'Left Column Subtitle (H6)'
+      examples:
+        - 'Our facilities are equipped with cutting-edge instruments.'
+    body_text:
+      type: string
+      title: 'Right Column Body Text'
+      examples:
+        - 'We invest in the newest technologies to ensure top-tier data quality for our clients.'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  steps:
+    title: 'Process Step Cards'
+    description: 'Place Process Step components here — each becomes one step in the timeline.'

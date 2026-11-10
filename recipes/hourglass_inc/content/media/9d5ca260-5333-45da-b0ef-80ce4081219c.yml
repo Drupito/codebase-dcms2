@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 9d5ca260-5333-45da-b0ef-80ce4081219c
+  bundle: image
+  default_langcode: en
+  depends:
+    b5bdd00d-52ce-4ecf-814c-4822e6327c85: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 94f4ce7284ea905712e5b16b281b3893f952775e.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Autonomous Approval Workflows'
+      title: ''
+      width: 1023
+      height: 682
+      entity: b5bdd00d-52ce-4ecf-814c-4822e6327c85

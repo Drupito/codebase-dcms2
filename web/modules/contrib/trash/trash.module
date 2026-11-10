@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Module implementation file.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\trash\Trash;
+
+/**
+ * Determines whether an entity is deleted.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   An entity object.
+ *
+ * @return bool
+ *   TRUE if the entity is deleted, FALSE otherwise.
+ *
+ * @deprecated in trash:3.0.30 and is removed from trash:3.1.0. Use
+ *   \Drupal\trash\Trash::entityIsDeleted() instead.
+ *
+ * @see https://www.drupal.org/node/3609675
+ */
+function trash_entity_is_deleted(EntityInterface $entity): bool {
+  @trigger_error(__FUNCTION__ . '() is deprecated in trash:3.0.30 and is removed from trash:3.1.0. Use \Drupal\trash\Trash::entityIsDeleted() instead. See https://www.drupal.org/node/3609675', E_USER_DEPRECATED);
+  return Trash::entityIsDeleted($entity);
+}
+
+/**
+ * Restores the given entity.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   An entity object.
+ * @param string[] $langcodes
+ *   The translations to restore, defaults to all.
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ *   In case of failures, an exception is thrown.
+ *
+ * @deprecated in trash:3.0.30 and is removed from trash:3.1.0. Use
+ *   \Drupal\trash\Trash::restoreEntity() instead.
+ *
+ * @see https://www.drupal.org/node/3609675
+ */
+function trash_restore_entity(EntityInterface $entity, array $langcodes = []): void {
+  @trigger_error(__FUNCTION__ . '() is deprecated in trash:3.0.30 and is removed from trash:3.1.0. Use \Drupal\trash\Trash::restoreEntity() instead. See https://www.drupal.org/node/3609675', E_USER_DEPRECATED);
+  Trash::restoreEntity($entity, $langcodes);
+}

@@ -1,0 +1,336 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Slide wrapper ──────────────────────────────────────────────────────── */
+
+.c-tech-insights-slide {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+/* ── Columns (fixed 1000px per Figma) ──────────────────────────────────── */
+
+.c-tech-insights-slide__col {
+  width: 1000px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* When no quote fields exist, span from left to right container content edge */
+.c-tech-insights-slide--full-video {
+  width: calc(100vw - 2 * max(120px, calc((100vw - 1440px) / 2 + 120px)));
+}
+
+.c-tech-insights-slide--full-video .c-tech-insights-slide__col {
+  width: 100%;
+  flex-shrink: 1;
+}
+
+/* ── Meta bar ───────────────────────────────────────────────────────────── */
+
+.c-tech-insights-slide__meta-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 200px;
+  padding: 0 80px 0 10px;
+  min-height: 50px;
+}
+
+.c-tech-insights-slide__meta-name {
+  font-family: var(
+    --Heading-H6-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: var(--Heading-H6-fontSize, 20px);
+  font-weight: var(--Weights-Regular, 400);
+  line-height: var(--Heading-H6-lineHeight, 24px);
+  letter-spacing: 0px;
+  color: var(--gray-black, #000);
+  white-space: nowrap;
+}
+
+.c-tech-insights-slide__meta-role {
+  font-family: var(--Body-B2-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: var(--Body-B2-fontSize, 16px);
+  font-weight: var(--Weights-Regular, 400);
+  line-height: var(--Body-B2-lineHeight, 24px);
+  letter-spacing: 0px;
+  color: var(--gray-black, #000);
+}
+
+/* ── Video card ─────────────────────────────────────────────────────────── */
+
+.c-tech-insights-slide__video-wrap {
+  position: relative;
+  height: 620px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111;
+}
+
+.c-tech-insights-slide__video-wrap .c-tech-insights-slide__video-media,
+.c-tech-insights-slide__video-wrap
+  .c-tech-insights-slide__video-media
+  .c-base-media__inner,
+.c-tech-insights-slide__video-wrap
+  .c-tech-insights-slide__video-media
+  .c-base-media__content,
+.c-tech-insights-slide__video-wrap .c-tech-insights-slide__video-media picture,
+.c-tech-insights-slide__video-wrap .c-tech-insights-slide__video-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.c-tech-insights-slide__video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.c-tech-insights-slide__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 48px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  font-family: var(--Body-B2-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.c-tech-insights-slide__play-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.c-tech-insights-slide__play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Quote card ─────────────────────────────────────────────────────────── */
+
+.c-tech-insights-slide__quote-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 48px;
+  background-color: #ffe8cc;
+  border-radius: 16px;
+  padding: 60px;
+  height: 620px;
+}
+
+.c-tech-insights-slide__quote-card--empty {
+  background-color: transparent;
+  padding: 0;
+}
+
+.c-tech-insights-slide__quote-text {
+  flex: 1 0 0;
+  font-family: var(--Body-B1-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: var(--Body-B1-fontSize, 18px);
+  font-weight: var(--Weights-Regular, 400);
+  line-height: 1.8;
+  letter-spacing: 0px;
+  color: var(--gray-black, #000);
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Strip extra <p> margin from CKEditor output inside blockquote */
+.c-tech-insights-slide__quote-text p {
+  margin: 0;
+}
+
+.c-tech-insights-slide__quote-divider {
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* ── Quote author ───────────────────────────────────────────────────────── */
+
+.c-tech-insights-slide__quote-author {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.c-tech-insights-slide__author-photo-wrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.c-tech-insights-slide__author-photo-wrap .c-tech-insights-slide__author-photo,
+.c-tech-insights-slide__author-photo-wrap
+  .c-tech-insights-slide__author-photo
+  .c-base-media__inner,
+.c-tech-insights-slide__author-photo-wrap
+  .c-tech-insights-slide__author-photo
+  .c-base-media__content,
+.c-tech-insights-slide__author-photo-wrap
+  .c-tech-insights-slide__author-photo
+  picture,
+.c-tech-insights-slide__author-photo-wrap
+  .c-tech-insights-slide__author-photo
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.c-tech-insights-slide__author-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Strip extra <p> wrapping from CKEditor output inside author meta */
+.c-tech-insights-slide__author-name p,
+.c-tech-insights-slide__author-role p {
+  margin: 0;
+}
+
+.c-tech-insights-slide__author-meta .c-tech-insights-slide__author-name + p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32.4px;
+  font-family: var(--font-family-body);
+  color: #000;
+}
+
+.c-tech-insights-slide__author-meta .c-tech-insights-slide__author-role + p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  font-family: var(--font-family-body);
+  color: #000;
+}
+
+.c-tech-insights-slide__author-name {
+  font-family: var(--Body-B1-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: var(--Body-B1-fontSize, 18px);
+  font-weight: var(--Weights-Regular, 400);
+  line-height: 1.8;
+  color: var(--gray-black, #000);
+  margin: 0;
+}
+
+.c-tech-insights-slide__author-role {
+  font-family: var(--Body-B4-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: var(--Body-B4-fontSize, 12px);
+  font-weight: var(--Weights-Regular, 400);
+  line-height: var(--Body-B4-lineHeight, 16px);
+  color: var(--gray-black, #000);
+  margin: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  /* Edge spacers shrink to 60px each → 120px total */
+  .c-tech-insights-slide--full-video {
+    width: calc(100vw - 120px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-tech-insights-slide__col {
+    width: 700px;
+  }
+
+  .c-tech-insights-slide__meta-bar {
+    gap: 80px;
+    padding: 0 24px 0 10px;
+  }
+
+  .c-tech-insights-slide__video-wrap,
+  .c-tech-insights-slide__quote-card {
+    height: 480px;
+  }
+
+  .c-tech-insights-slide__quote-card {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Edge spacers shrink to 24px each → 48px total */
+  .c-tech-insights-slide--full-video {
+    width: calc(100vw - 48px);
+  }
+
+  .c-tech-insights-slide {
+    flex-direction: column;
+  }
+
+  .c-tech-insights-slide__col {
+    width: 320px;
+  }
+
+  .c-tech-insights-slide__meta-bar {
+    gap: 24px;
+    padding: 0 10px;
+  }
+
+  .c-tech-insights-slide__video-wrap {
+    height: 280px;
+  }
+
+  .c-tech-insights-slide__quote-card {
+    flex-direction: column;
+    height: auto;
+    padding: 32px;
+    gap: 32px;
+  }
+
+  .c-tech-insights-slide__quote-divider {
+    width: 100%;
+    height: 1px;
+    align-self: auto;
+  }
+
+  .c-tech-insights-slide__quote-author {
+    width: 100%;
+  }
+}

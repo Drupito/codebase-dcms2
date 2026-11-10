@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 015d3f0b-c360-479a-bc11-29a5e0b4108a
+  bundle: svg_image
+  default_langcode: en
+  depends:
+    34422f5d-3cfb-41a5-b62c-567bfa661bc3: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: logomark.svg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_svg_image:
+    -
+      alt: logomark.svg
+      title: ''
+      width: 0
+      height: 0
+      entity: 34422f5d-3cfb-41a5-b62c-567bfa661bc3

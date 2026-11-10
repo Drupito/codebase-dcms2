@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 29c00bfa-5f97-42f5-9660-8d5feb87c966
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: everbright-hero.jpg
+  uri:
+    -
+      value: 'public://2026-05/everbright-hero.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 629275
+  status:
+    -
+      value: true

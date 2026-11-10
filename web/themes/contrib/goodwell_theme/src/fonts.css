@@ -1,0 +1,9 @@
+/**
+ * Defines the fonts used in the Goodwell theme.
+ *
+ * You can customize these values without rebuilding the compiled CSS. Copy this
+ * file to your web root, so it sits next to index.php, and clear Drupal's
+ * cache. Then, any changes you make in this file should be reflected right away.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');

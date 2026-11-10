@@ -1,0 +1,398 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.c-heading-with-description {
+  position: relative;
+  width: 100%;
+}
+
+.c-heading-with-description__container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  padding: 0 120px;
+}
+
+/* ── Eyebrow ───────────────────────────────────────────────────────────── */
+
+.c-heading-with-description__eyebrow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.c-eyebrow {
+  font-family: var(--font-family-display);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.18px;
+  text-transform: uppercase;
+  color: var(--color-black, #000);
+}
+
+.c-eyebrow p {
+  margin: 0;
+  padding: 0;
+}
+
+.c-tag {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: var(--color-black, #000);
+  color: var(--color-white, #fff);
+  font-family: var(--font-family-body);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* ── Heading row (heading + optional CTA) ──────────────────────────────── */
+
+.c-heading-with-description__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.c-heading-with-description__top:has(.text-align-center) {
+  justify-content: center;
+}
+
+.c-heading-with-description__heading h1,
+.c-heading-with-description__heading h2,
+.c-heading-with-description__heading h3,
+.c-heading-with-description__heading h4,
+.c-heading-with-description__heading h5,
+.c-heading-with-description__heading h6,
+.c-heading-with-description__heading p {
+  font-style: normal;
+  font-weight: var(--Weights-Regular, 400);
+  color: var(--gray-black, #000);
+  max-width: 750px;
+  margin: 0;
+  padding: 0;
+}
+
+.c-heading-with-description__heading h1 {
+  font-family: var(--Heading-H1-fontFamily, "Zalando Sans Expanded", sans-serif);
+  font-size: var(--Heading-H1-fontSize, 72px);
+  line-height: var(--Heading-H1-lineHeight, 88px);
+  letter-spacing: var(--Heading-H1-letterSpacing, -0.8px);
+}
+
+.c-heading-with-description__heading h2 {
+  font-family: var(--Heading-H2-fontFamily, "Zalando Sans Expanded", sans-serif);
+  font-size: var(--Heading-H2-fontSize, 48px);
+  line-height: var(--Heading-H2-lineHeight, 58px);
+  letter-spacing: var(--Heading-H2-letterSpacing, -0.4px);
+}
+
+.c-heading-with-description__heading h3,
+.c-heading-with-description__heading p {
+  font-family: var(--Heading-H3-fontFamily, "Zalando Sans Expanded", sans-serif);
+  font-size: var(--Heading-H3-fontSize, 40px);
+  line-height: var(--Heading-H3-lineHeight, 48px);
+  letter-spacing: var(--Heading-H3-letterSpacing, -0.3px);
+}
+
+.c-heading-with-description__heading h4 {
+  font-family: var(--Heading-H4-fontFamily, "Zalando Sans Expanded", sans-serif);
+  font-size: var(--Heading-H4-fontSize, 32px);
+  line-height: var(--Heading-H4-lineHeight, 38px);
+  letter-spacing: var(--Heading-H4-letterSpacing, -0.2px);
+}
+
+.c-heading-with-description__heading h5 {
+  font-family: var(--Heading-H5-fontFamily, "Zalando Sans Expanded", sans-serif);
+  font-size: var(--Heading-H5-fontSize, 24px);
+  line-height: var(--Heading-H5-lineHeight, 32px);
+  letter-spacing: var(--Heading-H5-letterSpacing, 0px);
+}
+
+.c-heading-with-description__heading h6 {
+  font-family: var(--Heading-H6-fontFamily, "Zalando Sans Expanded", sans-serif);
+  font-size: var(--Heading-H6-fontSize, 20px);
+  line-height: var(--Heading-H6-lineHeight, 26px);
+  letter-spacing: var(--Heading-H6-letterSpacing, 0px);
+}
+
+.c-heading-with-description__heading--nowrap h1,
+.c-heading-with-description__heading--nowrap h2,
+.c-heading-with-description__heading--nowrap h3,
+.c-heading-with-description__heading--nowrap h4,
+.c-heading-with-description__heading--nowrap h5,
+.c-heading-with-description__heading--nowrap h6,
+.c-heading-with-description__heading--nowrap p {
+  white-space: nowrap;
+  max-width: none;
+}
+
+.c-heading-with-description__cta a {
+  border-radius: 48px;
+  border: 1px solid var(--color-black, #000);
+  padding: 12px 28px;
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-black, #000);
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
+
+.c-heading-with-description__cta a:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* ── Links inside rich text areas ──────────────────────────────────────── */
+
+.c-heading-with-description__description a,
+.c-heading-with-description__text a,
+.c-heading-with-description__value a,
+.c-heading-with-description__callout a {
+  color: var(--color-black, #000);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.c-heading-with-description__description a:hover,
+.c-heading-with-description__text a:hover,
+.c-heading-with-description__value a:hover,
+.c-heading-with-description__callout a:hover {
+  opacity: 0.7;
+}
+
+/* ── Description ───────────────────────────────────────────────────────── */
+
+.c-heading-with-description__description {
+  max-width: 895px;
+}
+
+.c-heading-with-description__description p {
+  margin: 0;
+  padding: 0;
+  color: var(--gray-black, #000);
+  font-family: var(--Body-B1-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: var(--Body-B1-fontSize, 18px);
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* Styling lists inside CKEditor rich text fields */
+.c-heading-with-description__description ul,
+.c-heading-with-description__description ol,
+.c-heading-with-description__text ul,
+.c-heading-with-description__text ol,
+.c-heading-with-description__value ul,
+.c-heading-with-description__value ol {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.c-heading-with-description__description ul,
+.c-heading-with-description__text ul,
+.c-heading-with-description__value ul {
+  list-style-type: disc;
+}
+
+.c-heading-with-description__description ol,
+.c-heading-with-description__text ol,
+.c-heading-with-description__value ol {
+  list-style-type: decimal;
+}
+
+.c-heading-with-description__description ul,
+.c-heading-with-description__description ol {
+  color: var(--gray-black, #000);
+  font-family: var(--Body-B1-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: var(--Body-B1-fontSize, 18px);
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.c-heading-with-description__text ul,
+.c-heading-with-description__text ol,
+.c-heading-with-description__value ul,
+.c-heading-with-description__value ol {
+  color: var(--color-black, #000);
+  font-family: var(--font-family-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.c-heading-with-description__description li,
+.c-heading-with-description__text li,
+.c-heading-with-description__value li {
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.c-heading-with-description__description li:last-child,
+.c-heading-with-description__text li:last-child,
+.c-heading-with-description__value li:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Two-column text content ───────────────────────────────────────────── */
+
+.c-heading-with-description__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.c-heading-with-description__left,
+.c-heading-with-description__right {
+  flex: 1;
+  min-width: 240px;
+  max-width: 486px;
+}
+
+.c-heading-with-description__text p,
+.c-heading-with-description__value p {
+  margin: 0;
+  padding: 0;
+  color: var(--color-black, #000);
+  font-family: var(--font-family-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* ── Callout block ─────────────────────────────────────────────────────── */
+
+.c-heading-with-description__callout {
+  border-radius: 0 10px 10px 0;
+  border-left: 3px solid var(--color-black, #000);
+  background: rgba(0, 0, 0, 0.05);
+  max-width: 750px;
+  padding: 24px 28px;
+}
+
+.c-heading-with-description__callout p {
+  margin: 0;
+  padding: 0;
+  color: var(--color-black, #000);
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.c-heading-with-description__callout p strong,
+.c-heading-with-description__callout p b {
+  font-weight: 600;
+}
+
+/* ── Margin utilities ──────────────────────────────────────────────────── */
+
+.c-heading-with-description--mt-16 {
+  margin-top: 16px;
+}
+.c-heading-with-description--mb-16 {
+  margin-bottom: 16px;
+}
+.c-heading-with-description--mt-24 {
+  margin-top: 24px;
+}
+.c-heading-with-description--mb-24 {
+  margin-bottom: 24px;
+}
+.c-heading-with-description--mt-32 {
+  margin-top: 32px;
+}
+.c-heading-with-description--mb-32 {
+  margin-bottom: 32px;
+}
+.c-heading-with-description--mt-40 {
+  margin-top: 40px;
+}
+.c-heading-with-description--mb-40 {
+  margin-bottom: 40px;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-heading-with-description__container {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-heading-with-description__container {
+    padding: 0 60px;
+  }
+
+
+  .c-heading-with-description__heading h1,
+  .c-heading-with-description__heading h2,
+  .c-heading-with-description__heading h3,
+  .c-heading-with-description__heading p {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-heading-with-description__container {
+    padding: 0 24px;
+  }
+
+  .c-heading-with-description__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .c-heading-with-description__heading h1,
+  .c-heading-with-description__heading h2,
+  .c-heading-with-description__heading h3,
+  .c-heading-with-description__heading h4,
+  .c-heading-with-description__heading p {
+    font-size: 28px;
+    line-height: 36px;
+    word-break: break-word;
+  }
+
+  .c-heading-with-description__description p,
+  .c-heading-with-description__description ul,
+  .c-heading-with-description__description ol {
+    font-size: 16px;
+  }
+
+  .c-heading-with-description__content {
+    flex-direction: column;
+  }
+
+  .c-heading-with-description__left,
+  .c-heading-with-description__right {
+    max-width: 100%;
+  }
+
+  .c-heading-with-description--mt-40 {
+    margin-top: 24px;
+  }
+  .c-heading-with-description--mb-40 {
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.projects
+  module:
+    - views
+label: Projects
+id: block.views_block.projects-projects_latest
+source: block
+source_local_id: 'views_block:projects-projects_latest'
+provider: views
+active_version: d247df83c53372a9
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:projects-projects_latest'
+        label: Projects
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null

@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Gallery Item
+group: Cards
+status: stable
+description: 'Image + caption card for the Image Gallery module. The single image is used both as the sidebar thumbnail and the main view.'
+
+slots:
+  thumbnail:
+    title: 'Image'
+    description: 'Image shown as thumbnail in the sidebar and full-size in the main view.'
+
+props:
+  type: object
+  properties:
+    caption:
+      type: string
+      title: 'Caption'
+      description: 'Description text shown below the main image when this item is active.'
+      examples:
+        - 'We invest in the newest technologies to ensure top-tier data quality for our clients.'
+    thumb_label:
+      type: string
+      title: 'Thumbnail Label'
+      description: 'Short label shown below the thumbnail. Defaults to caption.'
+      examples:
+        - 'Data Quality'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

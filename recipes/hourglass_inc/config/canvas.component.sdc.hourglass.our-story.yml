@@ -1,0 +1,74 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.canvas_html_block
+  module:
+    - text
+  theme:
+    - hourglass
+active_version: 73d17ca45b77f1d0
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        section_title:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'Our Story'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        body_primary:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'The Journey: Founded in 2016 by a group of systems architects...'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        body_highlight:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'The Name: We chose Hourglass because time is the only resource you cannot buy.'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        card_1:
+          title: 'Photo Card 1 (left, normal position)'
+          description: 'Place a Photo Card atom here.'
+        card_2:
+          title: 'Photo Card 2 (right, offset 100px down)'
+          description: 'Place a Photo Card atom here.'
+label: 'Our Story'
+id: sdc.hourglass.our-story
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:our-story'

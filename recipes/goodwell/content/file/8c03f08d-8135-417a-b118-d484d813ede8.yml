@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 8c03f08d-8135-417a-b118-d484d813ede8
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: health.png
+  uri:
+    -
+      value: 'public://2026-06/health.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1191402
+  status:
+    -
+      value: true

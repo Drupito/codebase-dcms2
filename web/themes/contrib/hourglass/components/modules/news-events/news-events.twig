@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * News & Events section.
+ *
+ * Props:
+ * - section_title: H2 heading (default: "News & Events").
+ * - cta_text:      "View All" link label.
+ * - cta_url:       "View All" link destination.
+ * - extra_classes: Extra CSS classes on the root element.
+ *
+ * Blog posts are rendered via the news_events View (block_1 display).
+ */
+#}
+{{ attach_library('hourglass/news-events') }}
+
+<section class="c-news-events {{ extra_classes|default('') }}">
+
+  <div class="c-news-events__header">
+    <h2 class="c-news-events__title">{{ section_title|default('News & Events') }}</h2>
+  </div>
+
+  <div class="c-news-events__divider" aria-hidden="true"></div>
+
+  <div class="c-news-events__body">
+    {{ drupal_view('news_events', 'block_1') }}
+  </div>
+
+  {% if cta_url %}
+    <div class="c-news-events__footer">
+      <a href="{{ cta_url }}" class="c-news-events__cta">
+        <span>{{ cta_text|default('View All Posts') }}</span>
+        <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12.6001 5.1001L8.4001 0.600098M12.6001 5.1001L8.4001 9.6001M12.6001 5.1001H0.600098" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  {% endif %}
+
+</section>

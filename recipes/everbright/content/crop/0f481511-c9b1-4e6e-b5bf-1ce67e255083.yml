@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 0f481511-c9b1-4e6e-b5bf-1ce67e255083
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    00cf8713-13fd-40fc-884e-5c54c6ba8aad: file
+default:
+  entity_id:
+    -
+      uuid: 00cf8713-13fd-40fc-884e-5c54c6ba8aad
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/jonathan-borba-nwdqWv76-ec-unsplash.jpg'
+  x:
+    -
+      value: 400
+  'y':
+    -
+      value: 372
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

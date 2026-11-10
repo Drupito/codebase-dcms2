@@ -1,0 +1,229 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 35ba8b32-db64-46ef-a9ec-eed9de1c7754
+  default_langcode: en
+  depends:
+    04fac3cb-582b-498e-8de5-986e2159ad4e: file
+    83648a1c-f853-4151-b8bd-470d7bc810f2: media
+    4c346b37-e76f-4700-9ec0-0a6d7da2b8bc: file
+    992fbab2-78b2-48ad-b9d5-53de3c3449e6: media
+    2c6c20f4-fd74-40ef-b011-7d685ab8b19e: file
+    1695ab20-e7f3-4db6-b7db-96240206609a: media
+    b0b077af-3a7c-4650-8da8-c941f89bba06: file
+    6d4864b5-6b39-4757-8a66-2e8ca66215b8: media
+    3afb94a9-6d74-47be-a605-3a2abcdcaae2: file
+    16c90768-a5a5-46fc-b29c-f9e67af369be: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Career Detail'
+  description:
+    -
+      value: 'Career Detail'
+  components:
+    -
+      uuid: be4c41ba-4324-49d3-bde2-a4c453cf2224
+      component_id: sdc.hourglass.hero
+      inputs:
+        label: 'JOIN US'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 83648a1c-f853-4151-b8bd-470d7bc810f2
+            target_type: media
+        heading: 'Build Something That Lasts.'
+        alignment: left
+        description:
+          value: "<p>Shape the future of enterprise technology. Join a team of bold thinkers building software that moves the world's most ambitious organizations forward.</p>"
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: 0ae54331-852d-4caa-875c-6677cb8fbda3
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: 0ae54331-852d-4caa-875c-6677cb8fbda3
+      slot: content
+      uuid: d7731015-ad39-403e-989c-9a3f7c0bbc52
+      component_id: sdc.hourglass.rules-section
+      inputs:
+        heading: 'What is the Application Process and Who Can Apply?'
+        description:
+          value: '<p>Our careers program is open to professionals across engineering, design, data, and business functions. We welcome applications from candidates at all career stages, from recent graduates to senior industry veterans. To apply, simply select a role below, complete the application form, and upload your CV. Every application is reviewed by our internal talent team within 5 business days."</p>'
+          format: canvas_html_block
+    -
+      uuid: b76b167b-84c0-4566-b8ff-d34d9d50aaaf
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        padding_top: '120'
+        rounded_top: false
+    -
+      parent_uuid: b76b167b-84c0-4566-b8ff-d34d9d50aaaf
+      slot: content
+      uuid: a7ead79c-1772-4aad-829d-5c16d071d01f
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Shape the Future of Enterprise Tech'
+        description:
+          value: "<p>We're looking for bold thinkers and skilled builders who want to work on problems that actually matter at scale. Explore open roles across engineering, product, and operations.</p>"
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: 2034b841-a23b-4d5f-ad31-c9aeca0dda10
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: _none
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: 2034b841-a23b-4d5f-ad31-c9aeca0dda10
+      slot: content
+      uuid: 6d74c75a-f32e-4624-8232-80786f673278
+      component_id: sdc.hourglass.services-grid
+      inputs: {  }
+    -
+      parent_uuid: 6d74c75a-f32e-4624-8232-80786f673278
+      slot: cards
+      uuid: 7c6e51ef-2614-4706-ac98-b83d91bc34a3
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 992fbab2-78b2-48ad-b9d5-53de3c3449e6
+            target_type: media
+        heading: 'Featured Role — Senior Data Scientist'
+        description: 'Join our team of data scientists to develop cutting-edge AI models and drive innovation in a fast-moving, collaborative environment.'
+    -
+      parent_uuid: 6d74c75a-f32e-4624-8232-80786f673278
+      slot: cards
+      uuid: 86e709b0-f553-4bac-bab2-260baf4af409
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 1695ab20-e7f3-4db6-b7db-96240206609a
+            target_type: media
+        heading: 'Lead UX Designer'
+        description: 'Shape user experiences that delight and inspire. Collaborate with product managers and engineers to create intuitive, accessible interfaces.'
+    -
+      parent_uuid: 6d74c75a-f32e-4624-8232-80786f673278
+      slot: cards
+      uuid: 288209da-5987-4fb4-a455-69ea4680722e
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 6d4864b5-6b39-4757-8a66-2e8ca66215b8
+            target_type: media
+        heading: 'Cloud Architect'
+        description: 'Design and implement scalable cloud solutions. Work with the latest technologies to optimize performance and ensure reliability.'
+    -
+      parent_uuid: 6d74c75a-f32e-4624-8232-80786f673278
+      slot: cards
+      uuid: 59ff0dd3-7c2f-4de7-9bc6-aa57aa5f2400
+      component_id: sdc.hourglass.service-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 16c90768-a5a5-46fc-b29c-f9e67af369be
+            target_type: media
+        heading: 'Cybersecurity Analyst'
+        description: 'Protect our systems and data from cyber threats. Stay ahead of emerging risks and implement proactive security measures.'
+    -
+      uuid: a4265eb1-b0c7-446a-b6a5-24f67dd6a174
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        background: orange-rounded
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: a4265eb1-b0c7-446a-b6a5-24f67dd6a174
+      slot: content
+      uuid: aa328a9d-b152-49bc-a609-aca793ae491b
+      component_id: sdc.hourglass.apply-section
+      inputs:
+        heading: 'How to Apply?'
+    -
+      parent_uuid: aa328a9d-b152-49bc-a609-aca793ae491b
+      slot: items
+      uuid: 2d101377-8a3d-4ce4-9667-09946d372478
+      component_id: sdc.hourglass.text-list-item
+      inputs:
+        title: 'Submit Your Application'
+        description:
+          value: '<p>Complete the form with your details and attach your CV. Make sure to save a copy of your confirmation for your records.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: aa328a9d-b152-49bc-a609-aca793ae491b
+      slot: items
+      uuid: 7f6d583a-1e30-4657-acfe-4e1548e52228
+      component_id: sdc.hourglass.text-list-item
+      inputs:
+        title: 'Application Review'
+        description:
+          value: '<p>Once submitted, your application is reviewed by our talent team. We assess each candidate against the role requirements and will contact you within 5 business days to confirm next steps.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: aa328a9d-b152-49bc-a609-aca793ae491b
+      slot: items
+      uuid: 28d9f315-a5a9-468a-a075-ef26e6398d2e
+      component_id: sdc.hourglass.text-list-item
+      inputs:
+        title: 'Interview and Offer Process'
+        description:
+          value: '<p>Shortlisted candidates will be invited to a structured interview process. Successful applicants will receive a formal offer with full details on compensation, benefits, and start date.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: aa328a9d-b152-49bc-a609-aca793ae491b
+      slot: form
+      uuid: a7dc0989-e12b-44ee-873c-2d8e3a6ad1c9
+      component_id: block.webform_block
+      inputs:
+        lazy: false
+        label: Webform
+        redirect: false
+        webform_id: apply_form
+        default_data: ''
+        label_display: '0'
+  path:
+    -
+      alias: /careers
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

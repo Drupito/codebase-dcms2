@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 7ad0e335-8399-469f-b42e-acdc59e0e38a
+  bundle: svg_image
+  default_langcode: en
+  depends:
+    b56d7c4e-e637-4ec9-a322-7d14181f260d: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Group.svg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_svg_image:
+    -
+      alt: Group
+      title: ''
+      width: 0
+      height: 0
+      entity: b56d7c4e-e637-4ec9-a322-7d14181f260d

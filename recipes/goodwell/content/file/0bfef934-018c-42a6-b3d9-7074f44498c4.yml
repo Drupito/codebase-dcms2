@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 0bfef934-018c-42a6-b3d9-7074f44498c4
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: travel.png
+  uri:
+    -
+      value: 'public://2026-06/travel.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1678496
+  status:
+    -
+      value: true

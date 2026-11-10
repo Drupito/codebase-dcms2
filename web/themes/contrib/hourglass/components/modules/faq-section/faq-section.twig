@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * FAQ Section — glassmorphism card wrapping accordion FAQ items.
+ *
+ * Props: heading, extra_classes.
+ * Slots: items (FAQ Item components).
+ *
+ * JS opens the first item by default and enforces single-open accordion.
+ */
+#}
+{{ attach_library('hourglass/faq-section') }}
+
+<section class="c-faq-section {{ extra_classes|default('') }}" data-faq-section>
+
+  {% if heading %}
+    <div class="c-faq-section__header">
+      <h2 class="c-faq-section__heading">{{ heading }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="c-faq-section__card">
+    <div class="c-faq-section__list">
+      {{ items }}
+    </div>
+  </div>
+
+</section>

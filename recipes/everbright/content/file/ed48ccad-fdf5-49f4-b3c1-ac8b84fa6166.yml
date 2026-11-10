@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ed48ccad-fdf5-49f4-b3c1-ac8b84fa6166
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: everbright-white.svg
+  uri:
+    -
+      value: 'public://2026-05/everbright-white.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 13268
+  status:
+    -
+      value: true

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 7482b78b-dd3a-4565-9477-6962d7195f05
+  bundle: image
+  default_langcode: en
+  depends:
+    c4452c08-0915-4c05-9b0f-c10941eb87d5: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: half_circle.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Father Daughter Image'
+      title: ''
+      width: 1200
+      height: 560
+      entity: c4452c08-0915-4c05-9b0f-c10941eb87d5

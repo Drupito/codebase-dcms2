@@ -1,0 +1,54 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 98df225c-3f29-4d22-8fd3-0583ce41e490
+  bundle: team
+  default_langcode: en
+  depends:
+    c3bafb32-fe42-4c08-a6cf-4b66fdd4001c: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Jamie Clarke'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /jamie-clarke
+      langcode: en
+  field_body:
+    -
+      value: '<p>Ensures every customer experience is simple and consistent.</p>'
+      format: content_format
+      summary: 'Ensures every customer experience is simple and consistent.'
+  field_facebook_link:
+    -
+      value: 'https://m.facebook.com/'
+  field_featured_image:
+    -
+      entity: c3bafb32-fe42-4c08-a6cf-4b66fdd4001c
+  field_linkedin_link:
+    -
+      value: 'https://www.linkedin.com'
+  field_sub_heading:
+    -
+      value: 'Chief Customer Officer'
+  field_twitter_link:
+    -
+      value: 'https://x.com/'

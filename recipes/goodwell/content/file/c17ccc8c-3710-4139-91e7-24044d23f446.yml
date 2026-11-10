@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c17ccc8c-3710-4139-91e7-24044d23f446
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: insurance_b.png
+  uri:
+    -
+      value: 'public://2026-05/insurance_b.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 161762
+  status:
+    -
+      value: true

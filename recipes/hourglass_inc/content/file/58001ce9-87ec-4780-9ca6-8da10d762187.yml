@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 58001ce9-87ec-4780-9ca6-8da10d762187
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: shanghai-jiao-tong-university.png
+  uri:
+    -
+      value: 'public://2026-05/shanghai-jiao-tong-university.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 104356
+  status:
+    -
+      value: true

@@ -1,0 +1,60 @@
+{#
+/**
+ * @file
+ * Blog Card atom — for Canvas manual placement.
+ *
+ * For the automated Views listing the template
+ * node--blog--teaser.html.twig uses the same CSS classes.
+ */
+#}
+{{ attach_library('hourglass/blog-card') }}
+
+<article class="c-blog-card {{ featured ? 'c-blog-card--featured' : '' }} {{ extra_classes|default('') }}">
+
+  <a href="{{ cta_url|default('#') }}" class="c-blog-card__image-link" tabindex="-1" aria-hidden="true">
+    <div class="c-blog-card__image">
+      {% if media %}
+        {% include 'hourglass:media' with { image: media, extra_classes: 'c-blog-card__media' } %}
+      {% endif %}
+    </div>
+  </a>
+
+  <div class="c-blog-card__body">
+
+    <div class="c-blog-card__meta">
+      {% if category %}
+        <span class="c-blog-card__category">{{ category }}</span>
+      {% endif %}
+      {% if date or read_time %}
+        <span class="c-blog-card__meta-divider" aria-hidden="true">·</span>
+      {% endif %}
+      {% if date %}
+        <time class="c-blog-card__date">{{ date }}</time>
+      {% endif %}
+      {% if read_time %}
+        <span class="c-blog-card__read-time">{{ read_time }} min read</span>
+      {% endif %}
+    </div>
+
+    {% if heading %}
+      <h3 class="c-blog-card__heading">
+        <a href="{{ cta_url|default('#') }}" class="c-blog-card__heading-link">{{ heading }}</a>
+      </h3>
+    {% endif %}
+
+    {% if summary %}
+      <p class="c-blog-card__summary">{{ summary }}</p>
+    {% endif %}
+
+    {% if cta_url %}
+      <a href="{{ cta_url }}" class="c-blog-card__cta">
+        <span>Read More</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    {% endif %}
+
+  </div>
+
+</article>

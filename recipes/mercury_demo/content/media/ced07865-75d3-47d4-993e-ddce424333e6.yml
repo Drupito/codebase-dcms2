@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: ced07865-75d3-47d4-993e-ddce424333e6
+  bundle: video
+  default_langcode: en
+  depends:
+    9a1e236d-56d3-472a-88f9-98dc861cf273: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: mixkit-aerial-view-of-waves-hitting-a-small-cliff-51455-hd-ready.mp4
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_video_file:
+    -
+      display: false
+      description: ''
+      entity: 9a1e236d-56d3-472a-88f9-98dc861cf273

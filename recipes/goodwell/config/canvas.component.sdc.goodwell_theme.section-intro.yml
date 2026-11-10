@@ -1,0 +1,277 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.canvas_html_inline
+  module:
+    - options
+    - text
+  theme:
+    - goodwell_theme
+label: 'Section Intro'
+id: sdc.goodwell_theme.section-intro
+source: sdc
+source_local_id: 'goodwell_theme:section-intro'
+provider: goodwell_theme
+active_version: 8913765d9bbab64b
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Impact
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        heading:
+          required: true
+          field_type: text
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_inline
+          field_widget: text_textfield
+          default_value:
+            -
+              value: 'Measurable change in our community'
+              format: canvas_html_inline
+          expression: ℹ︎text␟processed
+          derived_schema_metadata:
+            string_shape:
+              contentMediaType: text/html
+              x-formatting-context: inline
+        heading_level:
+          required: false
+          field_type: float
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 2.0
+          expression: ℹ︎float␟value
+          derived_schema_metadata: {  }
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'We track what matters. Our work produces real results that improve lives and strengthen neighborhoods.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        textcolor:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        ctas:
+          title: CTAs
+          description: 'Call-to-action buttons displayed below the description.'
+  f7829294b131ae22:
+    settings:
+      prop_field_definitions:
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Impact
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        heading:
+          required: true
+          field_type: text
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_inline
+          field_widget: text_textfield
+          default_value:
+            -
+              value: 'Measurable change in our community'
+              format: canvas_html_inline
+          expression: ℹ︎text␟processed
+          derived_schema_metadata: {  }
+        heading_level:
+          required: false
+          field_type: float
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 2.0
+          expression: ℹ︎float␟value
+          derived_schema_metadata: {  }
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'We track what matters. Our work produces real results that improve lives and strengthen neighborhoods.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        textcolor:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        ctas:
+          title: CTAs
+          description: 'Call-to-action buttons displayed below the description.'
+  8913765d9bbab64b:
+    settings:
+      prop_field_definitions:
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Impact
+          expression: ℹ︎string␟value
+        heading:
+          required: true
+          field_type: text
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_inline
+          field_widget: text_textfield
+          default_value:
+            -
+              value: 'Measurable change in our community'
+              format: canvas_html_inline
+          expression: ℹ︎text␟processed
+        heading_level:
+          required: false
+          field_type: float
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 2.0
+          expression: ℹ︎float␟value
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'We track what matters. Our work produces real results that improve lives and strengthen neighborhoods.'
+          expression: ℹ︎string␟value
+        textcolor:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        ctas:
+          title: CTAs
+          description: 'Call-to-action buttons displayed below the description.'
+  4f973f7fcaa8cc85:
+    settings:
+      prop_field_definitions:
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Impact
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        heading:
+          required: true
+          field_type: text
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_inline
+          field_widget: text_textfield
+          default_value:
+            -
+              value: 'Measurable change in our community'
+              format: canvas_html_inline
+          expression: ℹ︎text␟processed
+          derived_schema_metadata: {  }
+        heading_level:
+          required: false
+          field_type: list_float
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: '2'
+          expression: ℹ︎list_float␟value
+          derived_schema_metadata: {  }
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'We track what matters. Our work produces real results that improve lives and strengthen neighborhoods.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        textcolor:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        ctas:
+          title: CTAs
+          description: 'Call-to-action buttons displayed below the description.'

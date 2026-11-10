@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f992cc0e-945e-4327-9450-ceb48ec61999
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: logo-light.svg
+  uri:
+    -
+      value: 'public://2026-04/logo-light.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 6806
+  status:
+    -
+      value: true

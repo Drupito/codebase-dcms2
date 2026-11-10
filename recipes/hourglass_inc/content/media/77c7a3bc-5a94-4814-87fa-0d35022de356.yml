@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 77c7a3bc-5a94-4814-87fa-0d35022de356
+  bundle: image
+  default_langcode: en
+  depends:
+    34ff57f2-acd0-467f-b562-ef1003336dc9: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Hero-(4).png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Blog Listing Hero'
+      title: ''
+      width: 1440
+      height: 600
+      entity: 34ff57f2-acd0-467f-b562-ef1003336dc9

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 109dcd05-4162-4b42-9f94-50b80ea56e91
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: collov-home-design-H-1j_s0dhCw-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-06/collov-home-design-H-1j_s0dhCw-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 2539328
+  status:
+    -
+      value: true

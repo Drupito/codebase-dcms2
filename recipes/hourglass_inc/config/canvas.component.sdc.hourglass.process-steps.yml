@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: 389e11292ee34208
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Technical Specifications & Integrity'
+          expression: ℹ︎string␟value
+        subtitle:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Our facilities are equipped with cutting-edge instruments.'
+          expression: ℹ︎string␟value
+        body_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'We invest in the newest technologies to ensure top-tier data quality for our clients.'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        steps:
+          title: 'Process Step Cards'
+          description: 'Place Process Step components here — each becomes one step in the timeline.'
+label: 'Process Steps'
+id: sdc.hourglass.process-steps
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:process-steps'

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 00d16008-4d06-44d1-bb5b-d5e438ef8236
+  bundle: image
+  default_langcode: en
+  depends:
+    094dbead-6908-4885-bc6b-f4554508b4c3: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Canvas-editor.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Screenshot of the Drupal Canvas drag-and-drop visual page builder'
+      title: ''
+      width: 3018
+      height: 1678
+      entity: 094dbead-6908-4885-bc6b-f4554508b4c3

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 419ed671-a775-425f-aee0-c9e63c415555
+  bundle: image
+  default_langcode: en
+  depends:
+    3baaf7d5-cb67-44de-987b-c64e67b3ff8c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 3e6f73630004c8c69218aad02cb8f2451bcce6bf.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Data Encryption'
+      title: ''
+      width: 100
+      height: 100
+      entity: 3baaf7d5-cb67-44de-987b-c64e67b3ff8c

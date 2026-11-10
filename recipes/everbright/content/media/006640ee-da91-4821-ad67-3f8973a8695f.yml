@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 006640ee-da91-4821-ad67-3f8973a8695f
+  bundle: image
+  default_langcode: en
+  depends:
+    60f74077-8c33-4961-a6ed-89a34da2cf06: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: right.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Photo of the site of a building painted white with a large uppercase E painted on it'
+      title: ''
+      width: 879
+      height: 584
+      entity: 60f74077-8c33-4961-a6ed-89a34da2cf06

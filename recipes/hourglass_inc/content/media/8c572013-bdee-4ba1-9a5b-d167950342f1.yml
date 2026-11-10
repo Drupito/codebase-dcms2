@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8c572013-bdee-4ba1-9a5b-d167950342f1
+  bundle: image
+  default_langcode: en
+  depends:
+    1ea1c43c-db8b-450a-b709-392a2ff10e44: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 5344dbd17cacdc43747a2ed00e1bc4352d397a59.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Global Tech Hubs'
+      title: ''
+      width: 100
+      height: 100
+      entity: 1ea1c43c-db8b-450a-b709-392a2ff10e44

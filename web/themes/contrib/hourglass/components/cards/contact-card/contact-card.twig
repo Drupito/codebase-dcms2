@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Template for the Contact Card atom.
+ *
+ * Props:
+ * - media:          Canvas image object for the card illustration.
+ * - title:          Bold heading (e.g. "Call us directly").
+ * - icon_type:      'phone' or 'email' — renders matching inline SVG in orange.
+ * - contact_value:  Text shown next to the icon (phone number / email address).
+ * - cta_text:       Orange bold CTA label (e.g. "Get a demo") — used instead of icon row.
+ * - cta_url:        URL the CTA label links to.
+ */
+#}
+{{ attach_library('hourglass/contact-card') }}
+
+<div class="c-contact-card {{ extra_classes|default('') }}">
+
+  {% if media %}
+    <div class="c-contact-card__image">
+      {% include 'hourglass:media' with {
+        image: media,
+        extra_classes: 'c-contact-card__media'
+      } %}
+    </div>
+  {% endif %}
+
+  <div class="c-contact-card__body">
+    {% if title %}
+      <h3 class="c-contact-card__title">{{ title }}</h3>
+    {% endif %}
+
+    {% if cta_text %}
+      <a href="{{ cta_url|default('#') }}" class="c-contact-card__cta">
+        <span>{{ cta_text }}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path stroke="#F76707" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M3.333 8h9.334M8.667 4.667 12 8l-3.333 3.333"/>
+        </svg>
+      </a>
+
+    {% elseif contact_value %}
+      <div class="c-contact-card__contact">
+        {% if icon_type == 'phone' %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path stroke="#F76707" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M2.5 4.5A2 2 0 0 1 4.5 2.5h.992c.438 0 .819.284.95.703l.95 2.852a1 1 0 0 1-.303.985L5.95 7.954a9.5 9.5 0 0 0 6.096 6.096l.914-1.139a1 1 0 0 1 .985-.303l2.852.95c.42.131.703.512.703.951v.991a2 2 0 0 1-2 2c-8.284 0-15-6.716-15-15Z"/>
+          </svg>
+        {% elseif icon_type == 'email' %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <rect x="2.5" y="5" width="15" height="11.5" rx="1.5" stroke="#F76707" stroke-width="1.5"/>
+            <path stroke="#F76707" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m2.5 6.5 7.5 5.5 7.5-5.5"/>
+          </svg>
+        {% endif %}
+        <span class="c-contact-card__contact-value">{{ contact_value }}</span>
+      </div>
+    {% endif %}
+  </div>
+
+</div>

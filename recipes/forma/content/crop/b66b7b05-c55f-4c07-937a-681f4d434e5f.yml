@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: b66b7b05-c55f-4c07-937a-681f4d434e5f
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    e6e6648b-a668-46d9-b85c-5cc4fc0118ee: file
+default:
+  entity_id:
+    -
+      uuid: e6e6648b-a668-46d9-b85c-5cc4fc0118ee
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/Frame-14176_2.jpg'
+  x:
+    -
+      value: 301
+  'y':
+    -
+      value: 401
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

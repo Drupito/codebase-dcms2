@@ -1,0 +1,50 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Testimonial card
+group: Card
+props:
+  type: object
+  required:
+    - align
+    - style
+  properties:
+    text:
+      type: string
+      title: Quote text
+      pattern: "(.|\\r?\\n)*"
+      examples:
+        - "Everbright didn't just redesign our brand — they helped us understand who we are as a company. Their team took the time to dig into our values, our customers, and our goals, and what came out the other side was a brand identity that genuinely feels like us. "
+    cite_name:
+      type: string
+      title: Citation name
+      examples:
+        - "James Stroman"
+    cite_text:
+      type: string
+      title: Citation text
+      examples:
+        - "Head of Branding"
+    cite_url:
+      type: string
+      title: Citation link
+      format: uri-reference
+    align:
+      type: string
+      title: Alignment
+      enum:
+        - center
+        - left
+      default: left
+      examples:
+        - left
+    style:
+      type: string
+      title: Style
+      enum:
+        - default
+        - inverted
+      meta:enum:
+        default: Default
+        inverted: Inverted
+      default: default
+      examples:
+        - default

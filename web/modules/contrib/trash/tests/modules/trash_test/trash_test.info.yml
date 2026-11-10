@@ -1,0 +1,11 @@
+name: 'Trash test'
+type: module
+description: 'Provides test entities for the Trash module.'
+core_version_requirement: ^11.3.3 | ^12
+dependencies:
+  - drupal:trash
+
+# Information added by Drupal.org packaging script on 2026-10-24
+version: '3.1.2'
+project: 'trash'
+datestamp: 1792828494

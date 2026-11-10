@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1e07220d-7e65-49be-bbe9-b32499d5de35
+  bundle: image
+  default_langcode: en
+  depends:
+    08b9440e-5885-4a4a-8f61-dedbf423a095: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: adam-winger-oh6FswCTTmY-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Three people laughing together'
+      title: ''
+      width: 1920
+      height: 1282
+      entity: 08b9440e-5885-4a4a-8f61-dedbf423a095

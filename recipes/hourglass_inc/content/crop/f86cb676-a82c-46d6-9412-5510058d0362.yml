@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: f86cb676-a82c-46d6-9412-5510058d0362
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    6e28e8c0-c063-4e02-90b0-3f4eb9f7a68f: file
+default:
+  entity_id:
+    -
+      uuid: 6e28e8c0-c063-4e02-90b0-3f4eb9f7a68f
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/Shrink.png'
+  x:
+    -
+      value: 50
+  'y':
+    -
+      value: 50
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

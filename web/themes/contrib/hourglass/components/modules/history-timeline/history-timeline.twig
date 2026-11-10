@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Template for the History Timeline component.
+ *
+ * Props:
+ * - section_title: Optional heading above the timeline (CKEditor).
+ *
+ * Slots:
+ * - slides: History Timeline Slide atoms. JS clones them into the scrollable
+ *   track. Use reversed: true on every second slide for alternating layout.
+ */
+#}
+{{ attach_library('hourglass/history-timeline') }}
+
+<section class="c-history-timeline {{ extra_classes|default('') }}">
+
+  {% if section_title %}
+    <div class="c-history-timeline__header">
+      <h2 class="c-history-timeline__title">{{ section_title|raw }}</h2>
+    </div>
+  {% endif %}
+
+  {# Flat slot — visible to Canvas editor, hidden after JS runs. #}
+  <div class="c-history-timeline__source js-ht-source">
+    {{ slides }}
+  </div>
+
+  {# Scrollable viewport — hidden until JS runs. #}
+  <div class="c-history-timeline__viewport js-ht-viewport" aria-hidden="true">
+    <div class="c-history-timeline__line-container">
+      <div class="c-history-timeline__line"></div>
+      <div class="c-history-timeline__slider js-ht-slider">
+        <ul class="c-history-timeline__list js-ht-list"></ul>
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Image Gallery
+group: Organisms
+status: stable
+description: 'Full-width gallery with main image view + scrollable thumbnail sidebar. Clicking a thumbnail cross-fades to that image.'
+
+slots:
+  items:
+    title: 'Gallery Items'
+    description: 'Place Gallery Item cards here — each provides a main image, thumbnail, caption and label.'
+
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: 'Section Heading'
+      examples:
+        - 'Gallery'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

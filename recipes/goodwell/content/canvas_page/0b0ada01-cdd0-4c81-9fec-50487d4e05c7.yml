@@ -1,0 +1,91 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 0b0ada01-cdd0-4c81-9fec-50487d4e05c7
+  default_langcode: en
+  depends:
+    5f78bcfa-896d-49ef-a0b1-4fd5004ae1b6: file
+    9c73242d-2257-4d8d-9ee9-af74a7194b86: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Make A Claim'
+  components:
+    -
+      uuid: b09fd234-9639-438a-92c7-c5a2c1fb661f
+      component_id: sdc.goodwell_theme.hero-section
+      inputs:
+        heading:
+          value: 'MAKE A CLAIM'
+          format: canvas_html_inline
+        tagline: 'Fast, Paperless and Trusted'
+        background:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 9c73242d-2257-4d8d-9ee9-af74a7194b86
+            target_type: media
+        overlay_opacity: 50
+    -
+      uuid: bae787cd-b0f9-4081-8889-e2864d7a6b86
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: bae787cd-b0f9-4081-8889-e2864d7a6b86
+      slot: content
+      uuid: dfe3444b-f4b9-4a06-81cb-18f66aeee152
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        grid_layout: 2_column_66_33
+        is_small_container: false
+    -
+      parent_uuid: dfe3444b-f4b9-4a06-81cb-18f66aeee152
+      slot: slot_1
+      uuid: 1ae2e279-75e4-4913-855e-23e34b07e8b7
+      component_id: sdc.goodwell_theme.webform-embed
+      inputs: {  }
+    -
+      parent_uuid: 1ae2e279-75e4-4913-855e-23e34b07e8b7
+      slot: form
+      uuid: 540cd2d3-161f-4fce-8210-52dbc49a1e04
+      component_id: block.webform_block
+      inputs:
+        lazy: true
+        label: Webform
+        redirect: false
+        webform_id: make_a_claim
+        default_data: ''
+        label_display: '0'
+    -
+      parent_uuid: dfe3444b-f4b9-4a06-81cb-18f66aeee152
+      slot: slot_2
+      uuid: ba4c4ff1-3af6-4427-8afe-a5387d7d8a93
+      component_id: sdc.goodwell_theme.contact-info
+      inputs:
+        email: mail@goodwell.com
+        hours: '9 AM - 5 PM, Monday - Saturday'
+        phone: '(190) 391-740-04'
+        address: '905 Locust Street Redding, CA 96001'
+        heading: 'Contact us'
+        icon_color: custom
+        icon_style: plain
+        icon_color_custom: '#FCBE48'
+  path:
+    -
+      alias: /make-a-claim
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

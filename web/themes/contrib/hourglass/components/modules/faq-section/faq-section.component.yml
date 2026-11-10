@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: FAQ Section
+group: Organisms
+status: stable
+description: 'Glassmorphism accordion section with a heading and collapsible FAQ items. First item opens by default; only one item open at a time.'
+
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: 'Section Heading'
+      examples:
+        - 'Frequently Asked Questions'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+
+slots:
+  items:
+    title: 'FAQ Items'
+    description: 'Place FAQ Item components here — one per question/answer pair.'

@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_branding_block
+    - canvas.component.block.system_menu_block.main
+    - canvas.component.sdc.hourglass.header
+  theme:
+    - hourglass
+id: hourglass.header
+region: header
+theme: hourglass
+component_tree:
+  '0:11111111-1111-4000-a000-000000000001':
+    uuid: 11111111-1111-4000-a000-000000000001
+    component_id: sdc.hourglass.header
+    component_version: d0960a7014a93363
+    inputs:
+      transparent: true
+      announcement_text: 'Quarterly Report: 200% Growth in Enterprise Partnerships.'
+      announcement_badge: "Let's Talk the Numbers"
+      announcement_url: /contact
+  '0:logo:0:11111111-1111-4000-a000-000000000002':
+    parent_uuid: 11111111-1111-4000-a000-000000000001
+    slot: logo
+    uuid: 11111111-1111-4000-a000-000000000002
+    component_id: block.system_branding_block
+    component_version: 7d528e00f56b3abf
+    inputs:
+      label: 'Site branding'
+      label_display: '0'
+      use_site_logo: true
+      use_site_name: false
+      use_site_slogan: false
+  '0:navigation:0:11111111-1111-4000-a000-000000000003':
+    parent_uuid: 11111111-1111-4000-a000-000000000001
+    slot: navigation
+    uuid: 11111111-1111-4000-a000-000000000003
+    component_id: block.system_menu_block.main
+    component_version: 322535c0078cf59c
+    inputs:
+      label: 'Main navigation'
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: false

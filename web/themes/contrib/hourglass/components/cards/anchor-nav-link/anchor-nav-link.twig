@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Template for the Anchor Nav Link card.
+ *
+ * Props:
+ * - title:       Link label text.
+ * - url:         href — use #section-id for same-page anchors.
+ * - extra_classes: Optional extra CSS classes.
+ */
+#}
+<li class="c-anchor-nav__item {{ extra_classes|default('') }}">
+  <a href="{{ url|default('#') }}"
+     class="c-anchor-nav__link js-anchor-nav-link"
+     data-anchor="{{ url|default('')|split('#')|last }}">
+    {{ title }}
+  </a>
+</li>

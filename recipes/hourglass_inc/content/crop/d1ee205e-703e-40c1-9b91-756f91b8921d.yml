@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: d1ee205e-703e-40c1-9b91-756f91b8921d
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    d034e75d-9980-4989-91b6-ff918733ad8e: file
+default:
+  entity_id:
+    -
+      uuid: d034e75d-9980-4989-91b6-ff918733ad8e
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/card-(3).png'
+  x:
+    -
+      value: 143
+  'y':
+    -
+      value: 143
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

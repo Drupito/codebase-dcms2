@@ -1,0 +1,120 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Hero Section
+group: Section
+status: stable
+description: "Full-width hero with background image, headline, customer badge, award strip on the left and a card slot on the right."
+props:
+  type: object
+  properties:
+
+    # ── Background ─────────────────────────────────────
+    background:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: Background image
+
+    overlay_opacity:
+      type: integer
+      title: Overlay opacity
+      description: "Darkness of the gradient overlay on the left (0 = none, 80 = very dark)."
+      default: 50
+      examples:
+        - 50
+
+    # ── Left content ───────────────────────────────────
+    tagline:
+      type: string
+      title: Tagline
+      description: "Small eyebrow text above the heading."
+      examples:
+        - "FAST, PAPERLESS, AND TRUSTED."
+
+    heading:
+      type: string
+      title: Heading
+      contentMediaType: text/html
+      x-formatting-context: inline
+      examples:
+        - "Secure your family's future today"
+
+    # ── Customer badge ─────────────────────────────────
+    customer_avatar_1:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: "Customer avatar 1"
+    customer_avatar_2:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: "Customer avatar 2"
+    customer_avatar_3:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: "Customer avatar 3"
+
+    customer_count:
+      type: string
+      title: Customer count
+      description: "e.g. '10k+ customers'"
+      examples:
+        - "10k+ customers"
+
+    rating_text:
+      type: string
+      title: Rating text
+      description: "e.g. 'Rated 4.7 ★'"
+      examples:
+        - "Rated 4.7 ★"
+
+    # ── Award badges (up to 3) ─────────────────────────
+    award_1_text:
+      type: string
+      title: Award 1 — Label
+      examples:
+        - "Best"
+    award_1_sub:
+      type: string
+      title: Award 1 — Sub-label
+      examples:
+        - "No Medical Exam Term Life Insurance"
+    award_1_brand:
+      type: string
+      title: Award 1 — Brand
+      examples:
+        - "BUSINESS INSIDER"
+
+    award_2_text:
+      type: string
+      title: Award 2 — Label
+      examples:
+        - "#1"
+    award_2_sub:
+      type: string
+      title: Award 2 — Sub-label
+      examples:
+        - "Instant Life Policy"
+    award_2_brand:
+      type: string
+      title: Award 2 — Brand
+      examples:
+        - "Forbes"
+
+    award_3_text:
+      type: string
+      title: Award 3 — Label
+      examples:
+        - "Best"
+    award_3_sub:
+      type: string
+      title: Award 3 — Sub-label
+      examples:
+        - "No Medical Exam Term Life Insurance"
+    award_3_brand:
+      type: string
+      title: Award 3 — Brand
+      examples:
+        - "BUSINESS INSIDER"
+
+slots:
+  card:
+    title: Card
+    description: "Drop the Webform Embed (or any card component) here — floats on the right side of the hero."

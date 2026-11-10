@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 34422f5d-3cfb-41a5-b62c-567bfa661bc3
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: logomark.svg
+  uri:
+    -
+      value: 'public://2026-05/logomark.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 1586
+  status:
+    -
+      value: true

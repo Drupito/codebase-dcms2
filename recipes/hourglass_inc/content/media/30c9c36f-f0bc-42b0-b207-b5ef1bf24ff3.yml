@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 30c9c36f-f0bc-42b0-b207-b5ef1bf24ff3
+  bundle: image
+  default_langcode: en
+  depends:
+    e0a3d8ad-5c9c-465f-91ec-3412361a9126: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: e4040dbff871b46b7388796e5c43e3e797629783.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Active Enterprise Deployments'
+      title: ''
+      width: 100
+      height: 100
+      entity: e0a3d8ad-5c9c-465f-91ec-3412361a9126

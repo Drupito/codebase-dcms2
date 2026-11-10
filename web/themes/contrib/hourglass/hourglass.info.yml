@@ -1,0 +1,22 @@
+name: Hourglass
+screenshot: screenshot.webp
+type: theme
+description: "A modern corporate theme for Drupal, built entirely with Single Directory Components (SDC). Features a clean orange brand palette, responsive layouts, modular component architecture, and full Canvas/Site Template integration for flexible page building."
+core_version_requirement: ^11.3
+package: Custom
+base theme: false
+libraries:
+  - hourglass/global
+regions:
+  header: Header
+  content: Content
+  footer: Footer
+dependencies:
+  - "canvas:canvas"
+  - "cva:cva"
+# datestamp: 1759716792
+
+# Information added by Drupal.org packaging script on 2026-09-25
+version: '1.0.0'
+project: 'hourglass'
+datestamp: 1790329093

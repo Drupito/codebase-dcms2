@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Template for the Stat Card atom.
+ *
+ * Props:
+ * - media: Canvas image object { src, alt, width, height } for the icon.
+ * - stat:  Bold stat number (e.g. "250+", "40k").
+ * - label: Short descriptor below the stat (e.g. "Full-Stack Experts").
+ */
+#}
+{{ attach_library('hourglass/stat-card') }}
+
+<div class="c-stat-card {{ extra_classes|default('') }}">
+
+  {% if media %}
+    <div class="c-stat-card__icon">
+      {% include 'hourglass:media' with {
+        image: media,
+        extra_classes: 'c-stat-card__media'
+      } %}
+    </div>
+  {% else %}
+    <div class="c-stat-card__icon c-stat-card__icon--empty" aria-hidden="true"></div>
+  {% endif %}
+
+  <div class="c-stat-card__body">
+    {% if stat %}
+      <p class="c-stat-card__stat">{{ stat }}</p>
+    {% endif %}
+    {% if label %}
+      <p class="c-stat-card__label">{{ label }}</p>
+    {% endif %}
+  </div>
+
+</div>

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 0a15bf13-e1bd-4f44-ad60-23d80f68cb80
+  bundle: image
+  default_langcode: en
+  depends:
+    dcb1b95f-3160-4206-8be7-5e679242eeea: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: premium_photo-1661374880675-0c79f7b1dad5-3-(3).png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Our Vision'
+      title: ''
+      width: 400
+      height: 400
+      entity: dcb1b95f-3160-4206-8be7-5e679242eeea

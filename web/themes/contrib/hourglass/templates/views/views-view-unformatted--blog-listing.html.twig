@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Unformatted rows for the Blog Listing view.
+ * Each row is a node rendered in "teaser" mode via node--blog--teaser.html.twig.
+ *
+ * Variables:
+ * - rows: Array of rendered node rows.
+ */
+#}
+{% for row in rows %}
+  {{ row.content }}
+{% endfor %}

@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 02bca990-4e6f-420f-a2c8-d6382a5823f6
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    4845a53d-4600-466d-b36c-0473eb2ecae1: file
+default:
+  entity_id:
+    -
+      uuid: 4845a53d-4600-466d-b36c-0473eb2ecae1
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/pawel-czerwinski-T5VUBvCYqKk-unsplash.jpg'
+  x:
+    -
+      value: 960
+  'y':
+    -
+      value: 640
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Blog post teaser — used in the Views listing grid and the "More Blogs" section.
+ *
+ * Variables:
+ * - node:  The blog node entity.
+ * - url:   Canonical URL of the node.
+ * - label: Node title.
+ * - content.field_hero_image: Rendered hero image (see the "teaser" view
+ *   mode's field display config for the formatter/view mode used).
+ */
+#}
+{{ attach_library('hourglass/blog-card') }}
+
+{% set featured = node.field_featured.value %}
+{% set pub_date = node.field_published_date.value %}
+{% set display_date = pub_date ? pub_date|date('d. m. Y') : node.createdtime|date('d. m. Y') %}
+
+<article class="c-blog-card {{ featured ? 'c-blog-card--featured' : '' }}" data-nid="{{ node.id() }}">
+
+  <a href="{{ url }}" class="c-blog-card__image-link" tabindex="-1" aria-hidden="true">
+    <div class="c-blog-card__image">
+      {{ content.field_hero_image }}
+    </div>
+  </a>
+
+  <div class="c-blog-card__body">
+
+    <div class="c-blog-card__meta-block">
+      <p class="c-blog-card__date">Published - {{ display_date }}</p>
+      <h3 class="c-blog-card__heading">
+        <a href="{{ url }}" class="c-blog-card__heading-link">{{ label }}</a>
+      </h3>
+    </div>
+
+    {% set body_summary = node.body[0].summary %}
+    {% if body_summary %}
+      <p class="c-blog-card__summary">{{ body_summary }}</p>
+    {% endif %}
+
+    <a href="{{ url }}" class="c-blog-card__cta">
+      <span>Read Blog</span>
+      <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M1 4.5H11M11 4.5L7.5 1M11 4.5L7.5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+  </div>
+
+</article>

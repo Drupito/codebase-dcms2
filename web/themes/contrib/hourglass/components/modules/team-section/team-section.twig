@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Template for the Team Section module.
+ *
+ * Props:
+ * - section_title: Orange H2 heading above the grid.
+ *
+ * Slots:
+ * - cards: Team Member Card atoms. Duplicate as needed — they auto-flow
+ *   into the 4-column grid.
+ */
+#}
+{{ attach_library('hourglass/team-section') }}
+
+<div class="c-team-section {{ extra_classes|default('') }}">
+
+  {% if section_title %}
+    <div class="c-team-section__header">
+      <h2 class="c-team-section__title">{{ section_title }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="c-team-section__cards">
+    {{ cards }}
+  </div>
+
+</div>

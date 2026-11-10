@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: e24bff93-a32f-4a01-88d0-63506c6a705d
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    25e7e1e4-35bb-4047-bb97-4f2283495352: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Projects
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: ''
+      options:
+        icon: null
+        icon_display: icon_only
+      target_uuid: 25e7e1e4-35bb-4047-bb97-4f2283495352
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

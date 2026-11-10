@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section ────────────────────────────────────────────────────────────── */
+
+.c-our-story {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  /* Full-width breakout */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ── Section header ──────────────────────────────────────────────────────── */
+
+.c-our-story__header {
+  padding: 0 120px;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-our-story__title {
+  font-family: var(
+    --Heading-H2-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: 40px;
+  font-weight: var(--Weights-Regular, 400);
+  line-height: 48px;
+  letter-spacing: -0.3px;
+  color: var(--gray-black, #000);
+  margin: 0;
+  max-width: 750px;
+}
+
+/* ── Body row ────────────────────────────────────────────────────────────── */
+
+.c-our-story__body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 0 120px;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Photo cards column ──────────────────────────────────────────────────── */
+
+.c-our-story__photos {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.c-our-story__photo-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  min-height: 280px;
+}
+
+/* Dashed placeholder when no photo card is placed yet */
+.c-our-story__photo-col > *:only-child:empty,
+.c-our-story__photo-col:not(:has(.c-photo-card)) {
+  min-width: 280px;
+  min-height: 280px;
+  border: 2px dashed #ffa94d;
+  border-radius: 16px;
+}
+
+/* Second card is offset 100px down to create the stagger */
+.c-our-story__photo-col--second {
+  padding-top: 100px;
+}
+
+/* ── Rich-text content column ────────────────────────────────────────────── */
+
+.c-our-story__content {
+  flex: 1 0 0;
+  max-width: 750px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.c-our-story__text {
+  font-family: var(--Body-B1-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+
+.c-our-story__text p {
+  margin: 0;
+}
+
+.c-our-story__text--primary {
+  color: var(--gray-black, #000);
+}
+
+.c-our-story__text--highlight {
+  color: #d9480f;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-our-story__header,
+  .c-our-story__body {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-our-story {
+    padding: 80px 0;
+    gap: 56px;
+  }
+
+  .c-our-story__body {
+    gap: 40px;
+  }
+
+  .c-our-story__content {
+    gap: 80px;
+  }
+
+  .c-our-story__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-our-story {
+    padding: 60px 0;
+    gap: 40px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .c-our-story__header,
+  .c-our-story__body {
+    padding: 0 24px;
+  }
+
+  .c-our-story__body {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .c-our-story__title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .c-our-story__content {
+    gap: 48px;
+    font-size: 16px;
+  }
+
+  .c-our-story__photo-col--second {
+    padding-top: 60px;
+  }
+}

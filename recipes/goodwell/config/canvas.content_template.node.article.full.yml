@@ -1,0 +1,130 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.views_block.article-block_1
+    - canvas.component.sdc.goodwell_theme.body
+    - canvas.component.sdc.goodwell_theme.contact-info
+    - canvas.component.sdc.goodwell_theme.section
+    - canvas.component.sdc.goodwell_theme.section-grid
+    - canvas.component.sdc.goodwell_theme.simple-hero
+    - canvas.component.sdc.goodwell_theme.text
+    - core.entity_view_mode.node.full
+    - field.field.media.image.field_media_image
+    - field.field.node.article.field_content
+    - field.field.node.article.field_featured_image
+    - filter.format.canvas_html_inline
+    - filter.format.content_format
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - node.type.article
+  module:
+    - file
+    - media
+    - node
+    - options
+    - text
+id: node.article.full
+content_entity_type_id: node
+content_entity_type_bundle: article
+content_entity_type_view_mode: full
+component_tree:
+  '0:af931894-58d3-44a5-96bd-3d4374787985':
+    uuid: af931894-58d3-44a5-96bd-3d4374787985
+    component_id: sdc.goodwell_theme.simple-hero
+    component_version: 13ab6936b49498d2
+    inputs:
+      image:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:article␝field_featured_image␞␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      heading:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:article␝title␞␟value'
+  '1:content:0:06abc7b8-3e2d-4d48-954e-5db30c09ae00':
+    parent_uuid: f9f1de3e-cca6-4348-b64d-2fc58bd81a2e
+    slot: content
+    uuid: 06abc7b8-3e2d-4d48-954e-5db30c09ae00
+    component_id: sdc.goodwell_theme.section-grid
+    component_version: 04145a81d752b635
+    inputs:
+      grid_layout: 2_column_66_33
+      is_small_container: false
+  '1:content:0:slot_1:0:2c7ec7f7-4b6a-4971-9266-cc6eeec4da53':
+    parent_uuid: 06abc7b8-3e2d-4d48-954e-5db30c09ae00
+    slot: slot_1
+    uuid: 2c7ec7f7-4b6a-4971-9266-cc6eeec4da53
+    component_id: sdc.goodwell_theme.body
+    component_version: 9aad40df6fa5a2de
+    inputs:
+      content:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:article␝field_content␞␟processed'
+      max_width: full
+      text_size: sm
+  '1:content:0:slot_2:0:3ca892bc-c172-40a4-9cf5-556ce067a9fb':
+    parent_uuid: 06abc7b8-3e2d-4d48-954e-5db30c09ae00
+    slot: slot_2
+    uuid: 3ca892bc-c172-40a4-9cf5-556ce067a9fb
+    component_id: sdc.goodwell_theme.contact-info
+    component_version: 91fcd5352857a248
+    inputs:
+      heading: 'Contact us'
+      phone: '(190) 391-740-04'
+      email: mail@goodwell.com
+      hours: '9 AM - 5 PM, Monday - Saturday'
+      address: '905 Locust Street Redding, CA 96001'
+      icon_color: primary-mid
+      icon_color_custom: '#1c7e6e'
+      icon_style: circle
+  '1:f9f1de3e-cca6-4348-b64d-2fc58bd81a2e':
+    uuid: f9f1de3e-cca6-4348-b64d-2fc58bd81a2e
+    component_id: sdc.goodwell_theme.section
+    component_version: 2a95989336cfd33a
+    inputs:
+      custom_bg_color: '#f0f7f9'
+      padding: sm
+      full_bleed: true
+      rounded: none
+  '2:7f2ef0d2-56af-492a-9898-462dcfb1bccd':
+    uuid: 7f2ef0d2-56af-492a-9898-462dcfb1bccd
+    component_id: sdc.goodwell_theme.section
+    component_version: 2a95989336cfd33a
+    inputs:
+      background: white
+      padding: sm
+      full_bleed: true
+      rounded: none
+  '2:content:0:23331f73-349c-4c51-bfd9-4fe051e210d9':
+    parent_uuid: 7f2ef0d2-56af-492a-9898-462dcfb1bccd
+    slot: content
+    uuid: 23331f73-349c-4c51-bfd9-4fe051e210d9
+    component_id: sdc.goodwell_theme.text
+    component_version: 5f96dc68441cee38
+    inputs:
+      heading:
+        value: 'MORE BLOGS'
+        format: canvas_html_inline
+      heading_level: 2
+      alignment: center
+  '3:3b5ff092-d25a-4dad-aeed-da37b76291b2':
+    uuid: 3b5ff092-d25a-4dad-aeed-da37b76291b2
+    component_id: sdc.goodwell_theme.section
+    component_version: 2a95989336cfd33a
+    inputs:
+      background: white
+      custom_bg_color: '#f0f7f9'
+      padding: sm
+      full_bleed: true
+      rounded: none
+  '3:content:0:8856c82e-3811-4006-b254-a987977e971c':
+    parent_uuid: 3b5ff092-d25a-4dad-aeed-da37b76291b2
+    slot: content
+    uuid: 8856c82e-3811-4006-b254-a987977e971c
+    component_id: block.views_block.article-block_1
+    component_version: 2be9b43b1e4b288d
+    inputs:
+      label: Article
+      label_display: '0'
+      views_label: ''
+      items_per_page: null
+exposed_slots: {  }

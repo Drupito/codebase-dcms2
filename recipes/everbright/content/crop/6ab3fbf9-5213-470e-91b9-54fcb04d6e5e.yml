@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 6ab3fbf9-5213-470e-91b9-54fcb04d6e5e
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    29c00bfa-5f97-42f5-9660-8d5feb87c966: file
+default:
+  entity_id:
+    -
+      uuid: 29c00bfa-5f97-42f5-9660-8d5feb87c966
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/everbright-hero.jpg'
+  x:
+    -
+      value: 1536
+  'y':
+    -
+      value: 1024
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

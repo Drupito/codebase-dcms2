@@ -1,0 +1,27 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Divider
+group: Base
+status: stable
+props:
+  type: object
+  required:
+    - color
+  properties:
+    color:
+      type: string
+      title: Color
+      enum:
+        - black
+        - primary
+        - secondary
+        - accent
+        - muted
+      meta:enum:
+        black: Black
+        primary: Primary
+        secondary: Secondary
+        accent: Accent
+        muted: Muted
+      default: black
+      examples:
+        - black

@@ -1,0 +1,4 @@
+.DS_Store
+*.cache
+extension/node_modules/
+extension/dist/*.map

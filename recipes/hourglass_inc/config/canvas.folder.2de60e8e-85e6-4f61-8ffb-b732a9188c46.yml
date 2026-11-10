@@ -1,0 +1,9 @@
+uuid: 2de60e8e-85e6-4f61-8ffb-b732a9188c46
+langcode: en
+status: true
+dependencies: {  }
+name: Modules
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.hourglass.anchor-navigation

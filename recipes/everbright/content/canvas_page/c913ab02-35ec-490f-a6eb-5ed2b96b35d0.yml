@@ -1,0 +1,87 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: c913ab02-35ec-490f-a6eb-5ed2b96b35d0
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Page not found'
+  components:
+    -
+      uuid: bdbc5928-1570-4d56-b8e3-d0b53aaf234a
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 70%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: bdbc5928-1570-4d56-b8e3-d0b53aaf234a
+      slot: main_slot
+      uuid: 7defbaca-cb69-4af7-b610-17450ae88010
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: xl
+        items_align: center
+        flex_align: center
+        padding: sm
+    -
+      parent_uuid: 7defbaca-cb69-4af7-b610-17450ae88010
+      slot: group_slot
+      uuid: 83ccb0fd-f2ea-4300-aa67-27361a974d6e
+      component_id: sdc.everbright_theme.icon
+      inputs:
+        icon: ghost
+        icon_size: extra-large
+    -
+      parent_uuid: 7defbaca-cb69-4af7-b610-17450ae88010
+      slot: group_slot
+      uuid: 3fc4d3de-a63e-4fc5-baa0-e3e40624a5fb
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p class="text-align-center">Oops...The page you’re trying to find doesn’t exist.</p>'
+          format: canvas_html_block
+        text_size: text-3xl
+        text_color: default
+    -
+      parent_uuid: 7defbaca-cb69-4af7-b610-17450ae88010
+      slot: group_slot
+      uuid: d1a0f263-c418-44e4-9167-25ad1e03500e
+      component_id: sdc.everbright_theme.button
+      inputs:
+        variant: secondary
+        label: 'Go back home'
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: 'internal:/'
+          options: {  }
+  path:
+    -
+      alias: /page-not-found
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

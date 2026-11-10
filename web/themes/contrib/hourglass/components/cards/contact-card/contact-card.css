@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Card wrapper ─────────────────────────────────────────────────────────── */
+
+.c-contact-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Illustration ─────────────────────────────────────────────────────────── */
+
+.c-contact-card__image {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  mix-blend-mode: multiply;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Force base-media wrappers to fill the 200×200 box */
+.c-contact-card__image .c-base-media,
+.c-contact-card__image .c-base-media__inner,
+.c-contact-card__image .c-base-media__content,
+.c-contact-card__image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c-contact-card__image img,
+.c-contact-card__media {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ── Body ─────────────────────────────────────────────────────────────────── */
+
+.c-contact-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+/* ── Title ────────────────────────────────────────────────────────────────── */
+
+.c-contact-card__title {
+  font-family: var(--Heading-H4-fontFamily, "Zalando Sans Expanded", sans-serif);
+  font-size: 32px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 38px;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: #000;
+  margin: 0;
+}
+
+/* ── Contact row (icon + phone/email) ─────────────────────────────────────── */
+
+.c-contact-card__contact {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.c-contact-card__contact svg {
+  flex-shrink: 0;
+}
+
+.c-contact-card__contact-value {
+  font-family: var(--Body-B2-fontFamily, "Geist", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  white-space: nowrap;
+}
+
+/* ── CTA link ─────────────────────────────────────────────────────────────── */
+
+.c-contact-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-family: "Geist", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #f76707;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.c-contact-card__cta:hover {
+  opacity: 0.8;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 1200px) {
+  .c-contact-card {
+    padding: 30px 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-contact-card {
+    padding: 30px 32px;
+  }
+
+  .c-contact-card__title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-contact-card {
+    padding: 30px 24px;
+  }
+}

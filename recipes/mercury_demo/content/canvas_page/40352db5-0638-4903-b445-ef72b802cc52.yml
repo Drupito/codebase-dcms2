@@ -1,0 +1,872 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 40352db5-0638-4903-b445-ef72b802cc52
+  default_langcode: en
+  depends:
+    a7c58081-5fac-47cf-aea0-13c23efe3e8b: file
+    bf4fa4f3-3674-4aa2-b168-e97b26789ecb: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Hero components'
+  components:
+    -
+      uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '48'
+        padding_block_start: '64'
+        padding_block_end: '32'
+        section_header: true
+        section_footer: false
+        background_color: muted
+    -
+      parent_uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      slot: header_slot
+      uuid: a553e204-2e45-4a48-91ca-7868df5d275a
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Hero components'
+        level: 1
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      slot: main_slot
+      uuid: bbe44edc-36f4-4552-af0a-b6a17bb78bb6
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: bbe44edc-36f4-4552-af0a-b6a17bb78bb6
+      slot: group_slot
+      uuid: 85e82233-e4b6-4d12-b91b-85542124ca6c
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Hero billboard'
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#hero-billboard'
+          options: {  }
+    -
+      parent_uuid: bbe44edc-36f4-4552-af0a-b6a17bb78bb6
+      slot: group_slot
+      uuid: 789f1106-2769-4ebc-a92c-2b4a2652ae2d
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Hero CTA'
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#hero-cta'
+          options: {  }
+    -
+      parent_uuid: bbe44edc-36f4-4552-af0a-b6a17bb78bb6
+      slot: group_slot
+      uuid: b59576f3-12d7-45b6-bc3a-6c2abc8fd004
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Hero side-by-side'
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#hero-side'
+          options: {  }
+    -
+      uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 25-25-25-25
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: header_slot
+      uuid: c4b8fd3c-3f60-455b-8fcd-bc43c159562f
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: c4b8fd3c-3f60-455b-8fcd-bc43c159562f
+      slot: main_slot
+      uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 20130bb9-44d1-4817-b8e4-b52433921b5b
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: hero-billboard
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 6ff9f2f6-8bf7-47cf-b809-c7f8d3b27e31
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Hero billboard'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 63800e8d-8ece-47b5-9bee-4ef60c7b1d70
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The hero billboard component is a full width banner with an image background and a slot for content. It includes options for height, content placement, opacity, and image background position. The image can be uploaded or selected from the media library.</p><p>It also has a toggle to overlap the header, which places it behind the menu if it is the first item on the page. To adjust this for changes to the menu height, you can modify the <em>--navbar-height</em> variable in theme.css.<em>&nbsp;</em></p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: d64a0467-38ab-488e-8932-72dd8de2caea
+      component_id: sdc.mercury.hero-billboard
+      inputs:
+        height: full
+        flex_position: center-left
+        overlay_opacity: 0%
+        object_position: center
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/luke-chesser-pJadQetzTkI-unsplash.jpg
+            alt: 'Green blue gradient placeholder image'
+            width: 1920
+            height: 1344
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.hero-billboard
+        overlap_navbar: false
+    -
+      parent_uuid: d64a0467-38ab-488e-8932-72dd8de2caea
+      slot: hero_slot
+      uuid: 7a75273f-e02c-4035-b16a-a390712d7ac2
+      component_id: sdc.mercury.heading
+      inputs:
+        level: 2
+        text_size: heading-responsive-8xl
+        text_color: inverted
+        align: left
+        heading_text: 'Hero billboard full screen'
+    -
+      parent_uuid: d64a0467-38ab-488e-8932-72dd8de2caea
+      slot: hero_slot
+      uuid: 0a4c7b7c-9388-444f-8030-36fe7fd73d5d
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>This is a hero billboard at full screen, with the content left center.</p>'
+          format: canvas_html_block
+        text_size: text-xl
+        text_color: inverted
+    -
+      uuid: 594bfa16-aab2-46f2-b6ee-93b7fb02b714
+      component_id: sdc.mercury.hero-billboard
+      inputs:
+        height: large
+        flex_position: center-left
+        overlay_opacity: 40%
+        object_position: center
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/luke-chesser-pJadQetzTkI-unsplash.jpg
+            alt: 'Green blue gradient placeholder image'
+            width: 1920
+            height: 1344
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.hero-billboard
+        overlap_navbar: false
+    -
+      parent_uuid: 594bfa16-aab2-46f2-b6ee-93b7fb02b714
+      slot: hero_slot
+      uuid: 6e170a5e-d59e-4484-aa87-a5ff12351e1a
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Hero billboard large'
+        level: 2
+        text_size: heading-responsive-8xl
+        text_color: inverted
+        align: left
+    -
+      parent_uuid: 594bfa16-aab2-46f2-b6ee-93b7fb02b714
+      slot: hero_slot
+      uuid: 4985aea1-1c5f-4e79-8486-9a640869e4e5
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>This is a hero billboard at large, with the content center, and overlay opacity set to 40%.</p>'
+          format: canvas_html_block
+        text_size: text-xl
+        text_color: inverted
+    -
+      uuid: 031217af-0e57-4a34-a4af-be9a77d58e52
+      component_id: sdc.mercury.hero-billboard
+      inputs:
+        height: large
+        flex_position: bottom-left
+        overlay_opacity: 60%
+        object_position: center
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/luke-chesser-pJadQetzTkI-unsplash.jpg
+            alt: 'Green blue gradient placeholder image'
+            width: 1920
+            height: 1344
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.hero-billboard
+        overlap_navbar: false
+    -
+      parent_uuid: 031217af-0e57-4a34-a4af-be9a77d58e52
+      slot: hero_slot
+      uuid: 7a11a75c-b1a2-4aca-80da-6a54db6f2ff1
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Hero billboard large'
+        level: 2
+        text_size: heading-responsive-8xl
+        text_color: inverted
+        align: left
+    -
+      parent_uuid: 031217af-0e57-4a34-a4af-be9a77d58e52
+      slot: hero_slot
+      uuid: 4f68cec4-3d26-41af-ac7c-bfcf1329175f
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>This is a hero billboard at large, with the content bottom left, and overlay opacity set to 60%.</p>'
+          format: canvas_html_block
+        text_size: text-xl
+        text_color: inverted
+    -
+      uuid: e8845535-c763-483c-9eb0-256803cd2c75
+      component_id: sdc.mercury.hero-billboard
+      inputs:
+        height: ribbon
+        flex_position: bottom-left
+        overlay_opacity: 75%
+        object_position: center
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/luke-chesser-pJadQetzTkI-unsplash.jpg
+            alt: 'Green blue gradient placeholder image'
+            width: 1920
+            height: 1344
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.hero-billboard
+        overlap_navbar: false
+    -
+      parent_uuid: e8845535-c763-483c-9eb0-256803cd2c75
+      slot: hero_slot
+      uuid: b6dd8e5f-bdfb-4d22-a9c6-227f92eb5381
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Hero billboard ribbon'
+        level: 2
+        text_size: heading-responsive-8xl
+        text_color: inverted
+        align: left
+    -
+      parent_uuid: e8845535-c763-483c-9eb0-256803cd2c75
+      slot: hero_slot
+      uuid: 620b7057-9793-4be0-8581-5373db3951b0
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>This is a hero billboard at ribbon, with the content left bottom, and overlay opacity set to 75%.</p>'
+          format: canvas_html_block
+        text_size: text-xl
+        text_color: inverted
+    -
+      uuid: a6e8400e-bb37-404a-b974-f828e09c9077
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 25-25-25-25
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: a6e8400e-bb37-404a-b974-f828e09c9077
+      slot: header_slot
+      uuid: bcf6ba1e-a6b5-474d-8add-510a5cd637d0
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: bcf6ba1e-a6b5-474d-8add-510a5cd637d0
+      slot: main_slot
+      uuid: 5100a39c-aef0-44b8-92ee-5b9306366854
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 5100a39c-aef0-44b8-92ee-5b9306366854
+      slot: group_slot
+      uuid: 04ec9ffe-0ff4-4f16-b429-229a7dbe4c67
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: hero-billboard
+    -
+      parent_uuid: 5100a39c-aef0-44b8-92ee-5b9306366854
+      slot: group_slot
+      uuid: f364d341-be37-4322-bbd4-a3ddd0626058
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Hero CTA'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 5100a39c-aef0-44b8-92ee-5b9306366854
+      slot: group_slot
+      uuid: efdf6807-feb3-4d0b-a995-bae951e688ed
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The Hero CTA component is a full-width call to action banner with a heading, description, and slot for buttons. Options are heading level, text alignment, background color and optional image for the background.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 181d58f1-be50-4719-8653-6f348e1a5931
+      component_id: sdc.mercury.cta
+      inputs:
+        heading_text: 'Hero with image background'
+        level: 2
+        text: 'Lorem ipsum dolor sit amet.'
+        text_align: center
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: bf4fa4f3-3674-4aa2-b168-e97b26789ecb
+            target_type: media
+        background_color: primary
+        overlay_opacity: 20%
+    -
+      parent_uuid: 181d58f1-be50-4719-8653-6f348e1a5931
+      slot: actions
+      uuid: 64cea63e-6feb-4a8e-8c38-5e3bce6982e7
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary
+        label: 'Button label'
+        size: medium
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+    -
+      uuid: 2786393b-6ec3-4ddd-90fb-69dcef5c6b3b
+      component_id: sdc.mercury.cta
+      inputs:
+        heading_text: 'Hero with primary background'
+        level: 2
+        text: 'Lorem ipsum dolor sit amet.'
+        text_align: center
+        background_color: primary
+        overlay_opacity: 20%
+    -
+      parent_uuid: 2786393b-6ec3-4ddd-90fb-69dcef5c6b3b
+      slot: actions
+      uuid: 0918f7e8-b941-4cea-aa1f-1fb456979319
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Button label'
+        size: medium
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+    -
+      uuid: 96f970ea-ca80-4ba8-a5ea-2044e17f2b40
+      component_id: sdc.mercury.cta
+      inputs:
+        heading_text: 'Hero with no background'
+        level: 2
+        text: 'Lorem ipsum dolor sit amet.'
+        text_align: center
+        overlay_opacity: 20%
+    -
+      parent_uuid: 96f970ea-ca80-4ba8-a5ea-2044e17f2b40
+      slot: actions
+      uuid: 3576e6e0-8819-4b72-a509-b9aed8bda63d
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary-inverted
+        label: 'Button label'
+        size: medium
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+    -
+      uuid: 3387483b-c654-4eea-bda6-ee48c2a3dd65
+      component_id: sdc.mercury.cta
+      inputs:
+        heading_text: 'Hero with secondary background'
+        level: 2
+        text: 'Lorem ipsum dolor sit amet.'
+        text_align: center
+        background_color: secondary
+        overlay_opacity: 20%
+    -
+      parent_uuid: 3387483b-c654-4eea-bda6-ee48c2a3dd65
+      slot: actions
+      uuid: 3968cb6d-888c-4c3b-9c92-0bc94a00a74a
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary-inverted
+        label: 'Button label'
+        size: medium
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+    -
+      uuid: 367122fb-c86c-44e8-bece-e0674c0d0a83
+      component_id: sdc.mercury.cta
+      inputs:
+        heading_text: 'Hero with accent background'
+        level: 2
+        text: 'Lorem ipsum dolor sit amet.'
+        text_align: center
+        background_color: accent
+        overlay_opacity: 20%
+    -
+      parent_uuid: 367122fb-c86c-44e8-bece-e0674c0d0a83
+      slot: actions
+      uuid: dd46f6af-b7bb-4609-bb67-9fb526249ea1
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary
+        label: 'Button label'
+        size: medium
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+    -
+      uuid: 029c6f3c-24c0-4a3e-9560-b96e7f8dadde
+      component_id: sdc.mercury.cta
+      inputs:
+        heading_text: 'Hero with muted background'
+        level: 2
+        text: 'Lorem ipsum dolor sit amet.'
+        text_align: center
+        background_color: muted
+        overlay_opacity: 20%
+    -
+      parent_uuid: 029c6f3c-24c0-4a3e-9560-b96e7f8dadde
+      slot: actions
+      uuid: 028f1188-fa54-4e3e-b46c-9f150979e074
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary-inverted
+        label: 'Button label'
+        size: medium
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+    -
+      uuid: a2110c28-7864-4da0-85fa-a4de6bb74153
+      component_id: sdc.mercury.cta
+      inputs:
+        heading_text: 'Hero with inverted background'
+        level: 2
+        text: 'Lorem ipsum dolor sit amet.'
+        text_align: center
+        background_color: inverted
+        overlay_opacity: 20%
+    -
+      parent_uuid: a2110c28-7864-4da0-85fa-a4de6bb74153
+      slot: actions
+      uuid: 92a79f69-a961-4b41-a740-ecf3abd94f3f
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Button label'
+        size: medium
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+    -
+      uuid: 22e888bd-5906-4347-b9a0-045dfce35565
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '8'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 22e888bd-5906-4347-b9a0-045dfce35565
+      slot: header_slot
+      uuid: c2dabc20-d5cf-4db5-b0f2-517e80a17293
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: c2dabc20-d5cf-4db5-b0f2-517e80a17293
+      slot: main_slot
+      uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      slot: group_slot
+      uuid: 4f93b7bc-889b-4ea2-9a32-3bf3d99cd084
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: hero-side
+    -
+      parent_uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      slot: group_slot
+      uuid: 2f8333ff-98f4-4192-95a2-6b680a6bfe89
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Hero side-by-side'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      slot: group_slot
+      uuid: d7c7caa7-35b9-4bce-bda0-53ea95f7055c
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The hero side-by-side component is a two-column element with an image in one column and a slot for content in the other column. It can be used inside of a section to contain the width, or without one to make it full width.</p><p>The component has many options to control the layout and spacing, including the gap between items, content justification, direction on mobile, top and bottom padding, image aspect ratio, image position, and image border radius.</p><p>&nbsp;</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 22e888bd-5906-4347-b9a0-045dfce35565
+      slot: main_slot
+      uuid: 9526a02a-00b1-4685-a07f-13b14355699f
+      component_id: sdc.mercury.hero-side-by-side
+      inputs:
+        hero_flex_gap: large
+        hero_flex_direction_mobile: vertical
+        padding_block_start: '0'
+        padding_block_end: '0'
+        image_size: '4:3'
+        image_position: left
+        image_radius: small
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/luke-chesser-pJadQetzTkI-unsplash.jpg
+            alt: 'Green blue gradient placeholder image'
+            width: 1920
+            height: 1344
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.hero-side-by-side
+        justify_content: center
+    -
+      parent_uuid: 9526a02a-00b1-4685-a07f-13b14355699f
+      slot: hero_slot
+      uuid: 66e62fc7-bc2d-47b7-af8b-76368a27efbc
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Side by side hero'
+        text_size: heading-responsive-5xl
+        text_color: default
+        align: left
+        level: 2
+    -
+      parent_uuid: 9526a02a-00b1-4685-a07f-13b14355699f
+      slot: hero_slot
+      uuid: f2bdac98-730b-4783-95d2-7a2fa0c6448b
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>A side-by-side hero with the image on the left with a 4 x 3 aspect ratio and the content set to justify center.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 22e888bd-5906-4347-b9a0-045dfce35565
+      slot: main_slot
+      uuid: bfafb098-1764-46df-b158-ddd3e63d3f53
+      component_id: sdc.mercury.hero-side-by-side
+      inputs:
+        hero_flex_gap: large
+        hero_flex_direction_mobile: vertical
+        padding_block_start: '0'
+        padding_block_end: '0'
+        image_size: '3:2'
+        image_position: right
+        image_radius: small
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/luke-chesser-pJadQetzTkI-unsplash.jpg
+            alt: 'Green blue gradient placeholder image'
+            width: 1920
+            height: 1344
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.hero-side-by-side
+        justify_content: start
+    -
+      parent_uuid: bfafb098-1764-46df-b158-ddd3e63d3f53
+      slot: hero_slot
+      uuid: d002ca3e-00ed-4ec8-87c3-f71ef7677d34
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Side by side hero'
+        text_size: heading-responsive-5xl
+        text_color: default
+        align: left
+        level: 2
+    -
+      parent_uuid: bfafb098-1764-46df-b158-ddd3e63d3f53
+      slot: hero_slot
+      uuid: 090b4ae1-e2a3-4869-9f69-868259b55048
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>A side-by-side hero with the image on theright left with a 3 x 2 aspect ratio and the content set to justify top.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 22e888bd-5906-4347-b9a0-045dfce35565
+      slot: main_slot
+      uuid: aa035d45-6ae9-4a1f-8b85-fdbf319c9744
+      component_id: sdc.mercury.hero-side-by-side
+      inputs:
+        hero_flex_gap: large
+        hero_flex_direction_mobile: vertical
+        padding_block_start: '0'
+        padding_block_end: '0'
+        image_size: '16:9'
+        image_position: left
+        image_radius: large
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/luke-chesser-pJadQetzTkI-unsplash.jpg
+            alt: 'Green blue gradient placeholder image'
+            width: 1920
+            height: 1344
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.hero-side-by-side
+        justify_content: end
+    -
+      parent_uuid: aa035d45-6ae9-4a1f-8b85-fdbf319c9744
+      slot: hero_slot
+      uuid: 4d18a6b4-e582-41c0-834c-31c6c1dd883a
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Side by side hero'
+        text_size: heading-responsive-5xl
+        text_color: default
+        align: left
+        level: 2
+    -
+      parent_uuid: aa035d45-6ae9-4a1f-8b85-fdbf319c9744
+      slot: hero_slot
+      uuid: 2b4f6de6-f636-431a-81df-92e32f9e1863
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>A side-by-side hero with the image on the left with a 16 x 9 aspect ratio and the content set to justify bottom.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+  path:
+    -
+      alias: /hero-components
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

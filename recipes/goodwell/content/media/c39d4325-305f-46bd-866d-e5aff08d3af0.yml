@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c39d4325-305f-46bd-866d-e5aff08d3af0
+  bundle: image
+  default_langcode: en
+  depends:
+    9c0cb443-0edf-4c7e-9cd9-ad0d3856f8ba: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: couple_nature.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Couple Enjoying Nature'
+      title: ''
+      width: 748
+      height: 528
+      entity: 9c0cb443-0edf-4c7e-9cd9-ad0d3856f8ba

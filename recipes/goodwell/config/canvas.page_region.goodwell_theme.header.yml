@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_branding_block
+    - canvas.component.block.system_menu_block.main
+    - canvas.component.sdc.goodwell_theme.navbar
+  module:
+    - link
+    - options
+  theme:
+    - goodwell_theme
+id: goodwell_theme.header
+theme: goodwell_theme
+region: header
+component_tree:
+  '0:30672979-7ed0-48c8-ac25-3f4355de596a':
+    uuid: 30672979-7ed0-48c8-ac25-3f4355de596a
+    component_id: sdc.goodwell_theme.navbar
+    component_version: 77133a9a57ae5703
+    inputs:
+      show_top_bar: false
+      top_bar_phone: '(190) 391-740-04'
+      top_bar_email: mail@goodwell.com
+      cta_label: 'Get a Quote'
+      cta_url:
+        uri: 'internal:/get-a-quote'
+        options: {  }
+      background: dark
+      sticky: false
+  '0:logo:0:ffddf3d1-8667-420c-897d-97d46b283ece':
+    parent_uuid: 30672979-7ed0-48c8-ac25-3f4355de596a
+    slot: logo
+    uuid: ffddf3d1-8667-420c-897d-97d46b283ece
+    component_id: block.system_branding_block
+    component_version: b168140fdcaebae5
+    inputs:
+      label: 'Site branding'
+      label_display: '0'
+      use_site_logo: true
+      use_site_name: false
+      use_site_slogan: false
+  '0:navigation:0:e34a98fb-a592-4c65-ae3e-682c18d66d57':
+    parent_uuid: 30672979-7ed0-48c8-ac25-3f4355de596a
+    slot: navigation
+    uuid: e34a98fb-a592-4c65-ae3e-682c18d66d57
+    component_id: block.system_menu_block.main
+    component_version: 023ff7ba63f80798
+    inputs:
+      label: 'Main navigation'
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: false

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 23a39244-9d5f-40a7-bd1d-d85a2e452cd9
+  bundle: image
+  default_langcode: en
+  depends:
+    f91682cf-63fa-41a1-b3c3-f807a85eac21: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'AI Automation'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'AI Automation'
+      title: ''
+      width: 1200
+      height: 675
+      entity: f91682cf-63fa-41a1-b3c3-f807a85eac21

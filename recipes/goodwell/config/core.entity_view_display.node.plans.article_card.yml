@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.article_card
+    - field.field.node.plans.field_body
+    - field.field.node.plans.field_button
+    - field.field.node.plans.field_content
+    - field.field.node.plans.field_featured_image
+    - field.field.node.plans.field_tags
+    - node.type.plans
+  module:
+    - text
+    - user
+id: node.plans.article_card
+targetEntityType: node
+bundle: plans
+mode: article_card
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: hero
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_body: true
+  field_button: true
+  field_tags: true

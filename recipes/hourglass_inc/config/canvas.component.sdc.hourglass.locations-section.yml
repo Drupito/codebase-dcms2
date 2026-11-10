@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: 552051e09da97670
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Connect to One of Our Locations'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        cards:
+          title: 'Location Cards'
+          description: 'Place Location Card atoms here — one per office location.'
+label: 'Locations Section'
+id: sdc.hourglass.locations-section
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:locations-section'

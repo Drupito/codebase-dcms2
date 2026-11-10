@@ -1,0 +1,239 @@
+canvas_translate.api.items:
+  path: '/canvas-translate/api/items'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::items'
+  requirements:
+    _permission: 'translate canvas content'
+  methods: [GET]
+  options:
+    no_cache: TRUE
+
+canvas_translate.api.editor_assets:
+  path: '/canvas-translate/api/editor-assets'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\EditorAssetsController::get'
+  requirements:
+    _permission: 'translate canvas content'
+  methods: [GET]
+  options:
+    # Resolve assets against the admin theme, as Canvas's own forms do.
+    _admin_route: TRUE
+    no_cache: TRUE
+
+canvas_translate.api.translation.get:
+  path: '/canvas-translate/api/items/canvas_page/{canvas_page}/{langcode}'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::getTranslation'
+  requirements:
+    _permission: 'translate canvas content'
+    canvas_page: \d+
+  methods: [GET]
+  options:
+    parameters:
+      canvas_page:
+        type: 'entity:canvas_page'
+    no_cache: TRUE
+
+canvas_translate.api.translation.save:
+  path: '/canvas-translate/api/items/canvas_page/{canvas_page}/{langcode}'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::saveDraft'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    canvas_page: \d+
+  methods: [PATCH]
+  options:
+    parameters:
+      canvas_page:
+        type: 'entity:canvas_page'
+    no_cache: TRUE
+
+canvas_translate.api.translation.publish:
+  path: '/canvas-translate/api/items/canvas_page/{canvas_page}/{langcode}/publish'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::publish'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    canvas_page: \d+
+  methods: [POST]
+  options:
+    parameters:
+      canvas_page:
+        type: 'entity:canvas_page'
+    no_cache: TRUE
+
+canvas_translate.api.translation.mark_reviewed:
+  path: '/canvas-translate/api/items/canvas_page/{canvas_page}/{langcode}/mark-reviewed'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::markReviewed'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    canvas_page: \d+
+  methods: [POST]
+  options:
+    parameters:
+      canvas_page:
+        type: 'entity:canvas_page'
+    no_cache: TRUE
+
+canvas_translate.api.translation.approve:
+  path: '/canvas-translate/api/items/canvas_page/{canvas_page}/{langcode}/approve'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::approve'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    canvas_page: \d+
+  methods: [POST]
+  options:
+    parameters:
+      canvas_page:
+        type: 'entity:canvas_page'
+    no_cache: TRUE
+
+canvas_translate.api.translation.unapprove:
+  path: '/canvas-translate/api/items/canvas_page/{canvas_page}/{langcode}/unapprove'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::unapprove'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    canvas_page: \d+
+  methods: [POST]
+  options:
+    parameters:
+      canvas_page:
+        type: 'entity:canvas_page'
+    no_cache: TRUE
+
+canvas_translate.api.publish_batch:
+  path: '/canvas-translate/api/publish-batch'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::publishBatch'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+  methods: [POST]
+  options:
+    no_cache: TRUE
+
+canvas_translate.api.translation.discard:
+  path: '/canvas-translate/api/items/canvas_page/{canvas_page}/{langcode}'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::discardDraft'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    canvas_page: \d+
+  methods: [DELETE]
+  options:
+    parameters:
+      canvas_page:
+        type: 'entity:canvas_page'
+    no_cache: TRUE
+
+# Config-entity (Content Template / Page Region / Page Variant) translation
+# routes. `{id}` is a config entity ID and may contain dots (e.g.
+# node.article.full), so it is matched permissively.
+# `{type}` ∈ content_template | page_region | page_variant.
+canvas_translate.api.config_translation.get:
+  path: '/canvas-translate/api/config/{type}/{id}/{langcode}'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::getConfigTranslation'
+  requirements:
+    _permission: 'translate canvas content'
+    type: 'content_template|page_region|page_variant'
+  methods: [GET]
+  options:
+    no_cache: TRUE
+
+canvas_translate.api.config_translation.save:
+  path: '/canvas-translate/api/config/{type}/{id}/{langcode}'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::saveConfigTranslation'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    type: 'content_template|page_region|page_variant'
+  methods: [PATCH]
+  options:
+    no_cache: TRUE
+
+canvas_translate.api.config_translation.publish:
+  path: '/canvas-translate/api/config/{type}/{id}/{langcode}/publish'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::publishConfigTranslation'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    type: 'content_template|page_region|page_variant'
+  methods: [POST]
+  options:
+    no_cache: TRUE
+
+canvas_translate.api.config_translation.approve:
+  path: '/canvas-translate/api/config/{type}/{id}/{langcode}/approve'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::approveConfig'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    type: 'content_template|page_region|page_variant'
+  methods: [POST]
+  options:
+    no_cache: TRUE
+
+canvas_translate.api.config_translation.unapprove:
+  path: '/canvas-translate/api/config/{type}/{id}/{langcode}/unapprove'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::unapproveConfig'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    type: 'content_template|page_region|page_variant'
+  methods: [POST]
+  options:
+    no_cache: TRUE
+
+canvas_translate.api.config_translation.mark_reviewed:
+  path: '/canvas-translate/api/config/{type}/{id}/{langcode}/mark-reviewed'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::markConfigReviewed'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    type: 'content_template|page_region|page_variant'
+  methods: [POST]
+  options:
+    no_cache: TRUE
+
+canvas_translate.api.config_translation.discard:
+  path: '/canvas-translate/api/config/{type}/{id}/{langcode}'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\ApiTranslateController::discardConfigTranslation'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    type: 'content_template|page_region|page_variant'
+  methods: [DELETE]
+  options:
+    no_cache: TRUE
+
+# Full-page themed preview of a page translation (draft applied). Returns HTML,
+# not JSON — the editor's preview pane iframes this so component assets load.
+canvas_translate.preview:
+  path: '/canvas-translate/preview/canvas_page/{canvas_page}/{langcode}'
+  defaults:
+    _controller: '\Drupal\canvas_translate\Controller\PreviewController::preview'
+    _title: 'Translation preview'
+  requirements:
+    _permission: 'translate canvas content'
+    canvas_page: \d+
+  options:
+    parameters:
+      canvas_page:
+        type: 'entity:canvas_page'
+    no_cache: TRUE

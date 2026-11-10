@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: bab17bf5-ef96-4649-8731-48d8bd6f9dfd
+  bundle: image
+  default_langcode: en
+  depends:
+    df561162-0ee9-4f9d-be2f-1c29b5c10b1b: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Man in shirt'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Man in shirt'
+      title: ''
+      width: 1024
+      height: 874
+      entity: df561162-0ee9-4f9d-be2f-1c29b5c10b1b

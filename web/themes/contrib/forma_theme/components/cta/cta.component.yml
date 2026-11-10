@@ -1,0 +1,41 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Hero CTA
+description: A call to action with a heading, description and slot for buttons.
+group: Hero
+props:
+  type: object
+  properties:
+    eyebrow_text:
+      type: string
+      title: Eyebrow
+    heading:
+      type: string
+      title: Heading
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <h2>Your heading goes here</h2>
+    text:
+      type: string
+      title: Text
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>Lorem ipsum dolor sit amet.</p>
+    background_color:
+      type: string
+      title: Background color
+      enum:
+        - primary
+        - muted
+      meta:enum:
+        primary: Primary
+        muted: Muted
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Background image
+      type: object
+
+slots:
+  actions:
+    title: Buttons

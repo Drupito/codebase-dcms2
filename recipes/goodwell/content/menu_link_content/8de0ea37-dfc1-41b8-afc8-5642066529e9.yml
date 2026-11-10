@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 8de0ea37-dfc1-41b8-afc8-5642066529e9
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    a7cfcd03-0b9e-44eb-8eec-92d2cfb72dde: menu_link_content
+    c25bb267-2b40-4a07-9754-3a1dda9d6a63: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Car Insurance'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: c25bb267-2b40-4a07-9754-3a1dda9d6a63
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:a7cfcd03-0b9e-44eb-8eec-92d2cfb72dde'
+  revision_translation_affected:
+    -
+      value: true

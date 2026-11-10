@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 523bc513-38cb-4678-a1b8-c6cd6dad570d
+  bundle: image
+  default_langcode: en
+  depends:
+    aab1ac4e-468e-4f7d-8845-e8cfe67c579a: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 85ec249bd8ce7a15abbd18ab795da37f4d24d0f5.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Prof. Dr. Stefan Seeger'
+      title: ''
+      width: 560
+      height: 373
+      entity: aab1ac4e-468e-4f7d-8845-e8cfe67c579a

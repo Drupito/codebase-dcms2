@@ -1,0 +1,32 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Site Header
+group: Layout
+status: stable
+description: "Fixed site header with logo, primary navigation, search toggle, and mobile hamburger."
+props:
+  type: object
+  properties:
+    transparent:
+      type: boolean
+      title: "Start transparent (hero pages)"
+      default: true
+    announcement_text:
+      type: string
+      title: "Announcement Bar Text"
+      examples:
+        - "Quarterly Report: 200% Growth in Enterprise Partnerships"
+    announcement_badge:
+      type: string
+      title: "Announcement Badge Label"
+      examples:
+        - "EVENT"
+    announcement_url:
+      type: string
+      title: "Announcement Badge URL"
+slots:
+  logo:
+    title: "Logo"
+    description: "Site branding block."
+  navigation:
+    title: "Navigation"
+    description: "Primary navigation menu block."

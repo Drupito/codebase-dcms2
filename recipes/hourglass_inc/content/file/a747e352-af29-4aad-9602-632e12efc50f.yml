@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a747e352-af29-4aad-9602-632e12efc50f
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: university-of-manchester.png
+  uri:
+    -
+      value: 'public://2026-05/university-of-manchester.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 75202
+  status:
+    -
+      value: true

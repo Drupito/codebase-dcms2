@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 691e8096-ad84-42f1-89d0-6de9b03e7c7d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: blog-greenIT.jpg
+  uri:
+    -
+      value: 'public://blog-images/blog-greenIT.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 91097
+  status:
+    -
+      value: true

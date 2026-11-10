@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 752800fa-79bc-4d7b-89f4-21c88f4bbf3e
+  bundle: image
+  default_langcode: en
+  depends:
+    cce1b85a-c2a4-42d7-8f0e-986a05126f15: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Solar panels powering a technology campus'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Solar panels powering a technology campus'
+      title: ''
+      width: 1200
+      height: 799
+      entity: cce1b85a-c2a4-42d7-8f0e-986a05126f15

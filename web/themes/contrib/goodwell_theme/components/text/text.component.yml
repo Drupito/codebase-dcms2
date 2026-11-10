@@ -1,0 +1,60 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Text
+group: Content
+status: stable
+description: "Tagline + heading + body text block. Drop into any Section Grid slot."
+props:
+  type: object
+  properties:
+    tagline:
+      type: string
+      title: Tagline
+      description: "Short eyebrow label above the heading."
+      examples:
+        - "RELIABLE INSURANCE COMPANY"
+    heading:
+      type: string
+      title: Heading
+      contentMediaType: text/html
+      x-formatting-context: inline
+      examples:
+        - "Plans designed for your life stage"
+    heading_level:
+      type: number
+      title: Heading level
+      meta:enum:
+        1: Heading 1
+        2: Heading 2
+        3: Heading 3
+        4: Heading 4
+        5: Heading 5
+      default: 2
+    body:
+      type: string
+      title: Body text
+      contentMediaType: text/html
+      x-formatting-context: inline
+      examples:
+        - "We analyze market trends and provide the building blocks necessary for creating a professional website."
+    alignment:
+      type: string
+      title: Alignment
+      enum:
+        - left
+        - center
+        - right
+      meta:enum:
+        left: Left
+        center: Center
+        right: Right
+      default: left
+    text_color:
+      type: string
+      title: Text Color
+      enum:
+        - dark
+        - light
+      meta:enum:
+        dark: Dark (default)
+        light: Light (for dark backgrounds)
+      default: dark

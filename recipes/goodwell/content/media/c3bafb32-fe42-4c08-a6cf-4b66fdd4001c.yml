@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c3bafb32-fe42-4c08-a6cf-4b66fdd4001c
+  bundle: image
+  default_langcode: en
+  depends:
+    4e4b246d-3c9b-4f13-a01b-b258daff1782: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Women in bun'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Women in bun'
+      title: ''
+      width: 1024
+      height: 1016
+      entity: 4e4b246d-3c9b-4f13-a01b-b258daff1782

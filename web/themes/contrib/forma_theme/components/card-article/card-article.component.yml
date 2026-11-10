@@ -1,0 +1,36 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Card Article
+group: Card
+props:
+  type: object
+  required:
+    - heading_text
+  properties:
+    heading_text:
+      type: string
+      title: Title
+      examples:
+        - "How to Choose a Cohesive Color Palette for Open-Plan Living Spaces"
+    author:
+      type: string
+      title: Author
+      examples:
+        - "Amanda Hayes"
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: "assets/frankie-xjosJTK8u-c-unsplash.jpg"
+          alt: "Futuristic white building with curved lines and large, geometric window panes."
+          width: 1500
+          height: 1125
+    url:
+      type: string
+      title: Link
+      format: uri-reference
+    link_label:
+      type: string
+      title: Link label
+      examples:
+        - "Read article"

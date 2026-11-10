@@ -1,0 +1,47 @@
+{% set has_url = url is not empty ? 'yes' : 'no' %}
+
+{% set tile =
+  html_cva(
+    base: ['max-w-full md:min-h-[80px]'],
+    variants: {
+      hasUrl: {
+        yes: 'group cursor-pointer transition duration-300 hover:scale-103 hover:opacity-90',
+        no: ''
+      }
+    }
+  )
+%}
+
+{% set tile_classes =
+  tile.apply({
+    hasUrl: has_url
+  })
+%}
+
+<div class="{{ tile_classes }}">
+  <div class="flex h-[100%] items-center justify-center p-[10%]">
+    {% block logo %}
+      {% if url is not empty %}
+        <a href="{{ url }}">
+          {% if media.src is not empty %}
+            {% include 'canvas:image' ignore missing with {
+              src: media.src,
+              alt: media.alt,
+              width: media.width,
+              height: media.height
+            } only %}
+          {% endif %}
+        </a>
+      {% else %}
+        {% if media.src is not empty %}
+          {% include 'canvas:image' ignore missing with {
+            src: media.src,
+            alt: media.alt,
+            width: media.width,
+            height: media.height
+          } only %}
+        {% endif %}
+      {% endif %}
+    {% endblock %}
+  </div>
+</div>

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 849244be-eb64-48f6-973e-e978927e6d58
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: Rectangle-37.png
+  uri:
+    -
+      value: 'public://2026-05/Rectangle-37.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 95540
+  status:
+    -
+      value: true

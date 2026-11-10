@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Template for the Tech Insights component.
+ *
+ * Props:
+ * - section_title: H2 section heading.
+ * - extra_classes: Additional CSS classes.
+ *
+ * Slots:
+ * - slides: Tech Insights Slide atoms. Each provides one video + quote pair.
+ */
+#}
+{{ attach_library('hourglass/tech-insights') }}
+
+<section class="c-tech-insights {{ extra_classes|default('') }}">
+
+  {% if section_title %}
+    <div class="c-tech-insights__header">
+      <h2 class="c-tech-insights__title">{{ section_title|raw }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="c-tech-insights__track js-ti-track">
+    <div class="c-tech-insights__edge" aria-hidden="true"></div>
+    {{ slides }}
+    <div class="c-tech-insights__edge" aria-hidden="true"></div>
+  </div>
+
+  <div class="c-tech-insights__pagination js-ti-pagination" role="tablist" aria-label="Tech Insights slides"></div>
+
+</section>

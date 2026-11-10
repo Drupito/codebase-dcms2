@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 1c08a663-6f0b-414c-a695-c181eac2f881
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    20f066ba-1c45-4544-b219-92248ff340c3: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Company
+  menu_name:
+    -
+      value: footer-nav
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: 20f066ba-1c45-4544-b219-92248ff340c3
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Template for the Hero component.
+ *
+ * Available variables:
+ * - label: Optional eyebrow text displayed above the heading (e.g. "About Us").
+ * - heading: Primary headline (HTML allowed).
+ * - heading_tag: HTML tag for the heading (h1, h2, h3).
+ * - description: Supporting body text.
+ * - media: Canvas image object { src, alt, width, height }.
+ * - cta_text: Call-to-action button label.
+ * - cta_url: Call-to-action button URL.
+ * - alignment: Content alignment (left, center, right).
+ */
+#}
+{{ attach_library('hourglass/hero') }}
+
+{% set align = alignment|default('center') %}
+{% set tag = heading_tag|default('h1') %}
+
+<section class="c-hero c-hero--{{ align }} {{ tall_image ? 'c-hero--tall' : '' }} {{ extra_classes|default('') }}">
+	{% if media and media.src %}
+		{% include 'hourglass:media' with {
+      background_type: 'media',
+      image: media,
+      extra_classes: 'c-hero__bg-image'
+    } %}
+	{% endif %}
+	<div class="c-hero__scrim" aria-hidden="true"></div>
+
+	<div class="c-hero__content">
+		{% if label %}
+			<p class="c-hero__label">{{ label }}</p>
+		{% endif %}
+
+		{% if heading %}
+			<{{tag}} class="c-hero__heading">{{ heading|striptags('<em><strong><br><span><b><i><a><u><p><ul><ol><li>')|raw }}</{{tag}}>
+		{% endif %}
+
+		{% if description %}
+			<div class="c-hero__description">{{ description|raw }}</div>
+		{% endif %}
+
+		{% if cta_url and cta_text %}
+			<a href="{{ cta_url }}" class="c-hero__cta">
+				<span>{{ cta_text }}</span>
+				<svg class="c-hero__cta-icon" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+					<path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</a>
+		{% endif %}
+	</div>
+</section>

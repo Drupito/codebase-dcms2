@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: c3e1ce46-a56c-4b81-b3db-cf43b588b54d
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    78b332ff-5055-4214-ac96-6530bdc6e190: file
+default:
+  entity_id:
+    -
+      uuid: 78b332ff-5055-4214-ac96-6530bdc6e190
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/sparkle_logo.png'
+  x:
+    -
+      value: 65
+  'y':
+    -
+      value: 18
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Template for the Mission Vision Item atom.
+ *
+ * Props:
+ * - title:       H4 card title (HTML).
+ * - description: B2 body text (HTML).
+ * - image:       Canvas image entity reference { src, alt, width, height }.
+ * - extra_classes: Additional CSS classes.
+ */
+#}
+{{ attach_library('hourglass/mission-vision-item') }}
+
+<div class="c-mission-vision-item {{ extra_classes|default('') }}" data-mission-vision="card">
+  {% if image %}
+    <div class="c-mission-vision-item__image-wrap">
+      {% include 'hourglass:media' with {
+        image: image,
+        extra_classes: 'c-mission-vision-item__image'
+      } %}
+    </div>
+  {% endif %}
+
+  <div class="c-mission-vision-item__text">
+    {% if title %}
+      <h4 class="c-mission-vision-item__title">{{ title|raw }}</h4>
+    {% endif %}
+    {% if description %}
+      <div class="c-mission-vision-item__description">{{ description|raw }}</div>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,66 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5fcb32a1-46ed-4d71-954f-a6bf6bcecfd0
+  bundle: project
+  default_langcode: en
+  depends:
+    eb447fcc-7225-4e29-ba07-f1ee8e9b666d: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Elevating the online shopping experience with intuitive design'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /elevating-online-shopping-experience-intuitive-design
+      langcode: en
+  field_content:
+    -
+      value: "<h2>Enhancing Evano's online shopping experience with a sleek, user-friendly design that makes browsing and purchasing effortless and enjoyable.</h2><p>Evano transforms online shopping by blending breathtaking visuals with intuitive, user-centered design. Our talented team of visionary artists creates custom jewelry inspired by South Africa's rich and vibrant culture, delivering a captivating and seamless experience that deeply connects you to the unique story behind every exquisite piece.</p>"
+      format: content_format
+  field_description:
+    -
+      value: "Evano transforms online shopping by blending breathtaking visuals with intuitive, user-centered design. Our talented team of visionary artists creates custom jewelry inspired by South Africa's rich and vibrant culture, delivering a captivating and seamless experience that deeply connects you to the unique story behind every exquisite piece."
+  field_eyebrow:
+    -
+      value: Evano
+  field_featured_image:
+    -
+      entity: eb447fcc-7225-4e29-ba07-f1ee8e9b666d
+  field_name:
+    -
+      value: Thando
+  field_position:
+    -
+      value: 'CEO of Evano'
+  field_quote_text:
+    -
+      value: "<p>\"Working with Everbright Agency was a dream. \LThey truly captured the essence of our brand \Land brought it to life!\"</p>"
+      format: content_format
+  field_seo_analysis:
+    -
+      status: '0'
+      focus_keyword: ''
+      title: ''
+      description: ''

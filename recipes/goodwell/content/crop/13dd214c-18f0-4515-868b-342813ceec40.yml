@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 13dd214c-18f0-4515-868b-342813ceec40
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    eac02746-02dc-4d49-b6ea-584c9737c959: file
+default:
+  entity_id:
+    -
+      uuid: eac02746-02dc-4d49-b6ea-584c9737c959
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/girl_walking.png'
+  x:
+    -
+      value: 930
+  'y':
+    -
+      value: 533
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: ea53d067-caec-4b6e-bcb0-05187cbaea2c
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    7253479d-6630-42a4-8ced-fb3f80ea15fa: file
+default:
+  entity_id:
+    -
+      uuid: 7253479d-6630-42a4-8ced-fb3f80ea15fa
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/charlesdeluvio-Lks7vei-eAg-unsplash.jpg'
+  x:
+    -
+      value: 960
+  'y':
+    -
+      value: 640
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

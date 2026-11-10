@@ -1,0 +1,56 @@
+{#
+  Accepts date as:
+   - ISO string "YYYY-MM-DD" or "YYYY-MM-DDTHH:MM:SS" (Canvas / Drupal date field .value)
+   - Unix timestamp integer (Drupal timestamp fields)
+   - Pre-formatted string (passed through as-is when it cannot be parsed)
+#}
+{% set btn_style = button_style|default('outline') %}
+{% set btn_label = button_label|default('Read More') %}
+
+{# Normalise date: Drupal timestamps are integers; strings work with |date() directly #}
+{% if date is not empty %}
+  {% if date matches '/^\\d+$/' %}
+    {# Pure integer timestamp #}
+    {% set date_formatted = date|date('M j, Y')|upper %}
+  {% else %}
+    {# ISO string or pre-formatted — strip the time portion first so |date() is reliable #}
+    {% set date_formatted = date|slice(0, 10)|date('M j, Y')|upper %}
+  {% endif %}
+{% endif %}
+
+<article class="card-article">
+
+  {% if media.src %}
+    <div class="card-article__media">
+      <img
+        src="{{ media.src }}"
+        alt="{{ media.alt|default('') }}"
+        class="card-article__image"
+        loading="lazy"
+        {% if media.width %}width="{{ media.width }}"{% endif %}
+        {% if media.height %}height="{{ media.height }}"{% endif %}
+      >
+    </div>
+  {% endif %}
+
+  <div class="card-article__body">
+
+    {% if date_formatted %}
+      <time class="card-article__date" datetime="{{ date|slice(0, 10) }}">
+        {{ date_formatted }}
+      </time>
+    {% endif %}
+
+    {% if title %}
+      <h3 class="card-article__title">{{ title }}</h3>
+    {% endif %}
+
+    {% if button_url %}
+      <a href="{{ button_url }}" class="card-article__btn card-article__btn--{{ btn_style }}">
+        {{ btn_label }}
+      </a>
+    {% endif %}
+
+  </div>
+
+</article>

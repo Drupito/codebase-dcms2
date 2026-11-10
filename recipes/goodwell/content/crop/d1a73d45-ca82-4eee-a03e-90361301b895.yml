@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: d1a73d45-ca82-4eee-a03e-90361301b895
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    6a14646b-055d-4658-8c2e-b1f3e26ace85: file
+default:
+  entity_id:
+    -
+      uuid: 6a14646b-055d-4658-8c2e-b1f3e26ace85
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/profile_icon.png'
+  x:
+    -
+      value: 15
+  'y':
+    -
+      value: 15
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

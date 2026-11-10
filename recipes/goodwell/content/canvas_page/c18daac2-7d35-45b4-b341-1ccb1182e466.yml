@@ -1,0 +1,68 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: c18daac2-7d35-45b4-b341-1ccb1182e466
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Page Not Found'
+  components:
+    -
+      uuid: 922964a5-b74a-4f25-bf1d-fd4e67c0a7e7
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 922964a5-b74a-4f25-bf1d-fd4e67c0a7e7
+      slot: content
+      uuid: 4f85d11e-6204-48e9-8e6a-e941a5b75b54
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        grid_layout: 1_column
+        is_small_container: true
+        horizontal_alignment: center
+    -
+      parent_uuid: 4f85d11e-6204-48e9-8e6a-e941a5b75b54
+      slot: slot_1
+      uuid: 9a23a3d5-a7ba-40f2-881e-225764c5eb61
+      component_id: sdc.goodwell_theme.section-intro
+      inputs:
+        heading:
+          value: 'Page Not Found'
+          format: canvas_html_inline
+        description: 'Check the URL or return to the homepage.'
+        heading_level: 2
+    -
+      parent_uuid: 9a23a3d5-a7ba-40f2-881e-225764c5eb61
+      slot: ctas
+      uuid: eb503449-187b-48b9-bec4-91ebf0f3d6ba
+      component_id: sdc.goodwell_theme.button
+      inputs:
+        href:
+          uri: 'internal:/'
+          options: {  }
+        size: md
+        label: 'Take me to Homepage'
+        variant: primary
+        disabled: false
+        full_width: false
+  path:
+    -
+      alias: /page-not-found
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

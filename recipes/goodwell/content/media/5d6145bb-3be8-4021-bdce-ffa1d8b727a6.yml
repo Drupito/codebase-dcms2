@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 5d6145bb-3be8-4021-bdce-ffa1d8b727a6
+  bundle: svg_image
+  default_langcode: en
+  depends:
+    7eeb01a4-09a5-471d-820a-c49e28315aa2: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: girl_icon.svg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_svg_image:
+    -
+      alt: Girl
+      title: ''
+      width: 0
+      height: 0
+      entity: 7eeb01a4-09a5-471d-820a-c49e28315aa2

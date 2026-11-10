@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Unformatted rows for the News & Events block.
+ *
+ * Row 0     → featured card (full-bleed image, gradient, large title).
+ * Rows 1–3  → left column of small white blog cards.
+ * Rows 4–6  → right column of small white blog cards.
+ *
+ * Layout is driven entirely by row position (loop.index0); the per-row
+ * markup itself lives in views-view-fields--news-events--block-1.html.twig.
+ *
+ * @see views-view-fields--news-events--block-1.html.twig
+ */
+#}
+
+<div class="c-news-events__grid">
+  {% for row in rows %}
+    {% if loop.index0 == 1 or loop.index0 == 4 %}
+      <div class="c-ne-col">
+    {% endif %}
+
+    {{ row.content }}
+
+    {% if loop.index0 >= 1 and (loop.index0 == 3 or loop.index0 == 6 or loop.last) %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

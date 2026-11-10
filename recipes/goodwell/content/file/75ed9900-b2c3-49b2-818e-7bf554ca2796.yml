@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 75ed9900-b2c3-49b2-818e-7bf554ca2796
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: hand_shake.jpg
+  uri:
+    -
+      value: 'public://2026-06/hand_shake.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 8477234
+  status:
+    -
+      value: true

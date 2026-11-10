@@ -1,0 +1,52 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Location Card
+group: Atoms
+status: stable
+description: 'Office location card: orange label, cover photo, city/address with map-pin, phone, and email. Used inside the Locations Section.'
+props:
+  type: object
+  properties:
+    media:
+      type: object
+      title: Photo
+      $ref: 'json-schema-definitions://canvas.module/image'
+      examples:
+        - src: 'https://example.com/location.jpg'
+          alt: 'Eching office'
+          width: 600
+          height: 230
+    label:
+      type: string
+      title: 'Office Label'
+      description: 'Orange bold label above the photo (e.g. "Global Headquarter").'
+      examples:
+        - 'Global Headquarter'
+        - 'US Office'
+        - 'UK Office'
+    city:
+      type: string
+      title: City
+      description: 'Bold city/country name shown next to the map-pin.'
+      examples:
+        - 'Eching, Germany'
+        - 'New York, USA'
+        - 'London, UK'
+    address:
+      type: string
+      title: Address
+      description: 'Street address shown below the city name.'
+      examples:
+        - 'Breslauer Strasse 2 | 85386 Eching'
+    phone:
+      type: string
+      title: Phone
+      examples:
+        - '+49 8821 8210'
+    email:
+      type: string
+      title: Email
+      examples:
+        - 'info@hourglass.com'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

@@ -1,0 +1,19 @@
+{% set level = heading_level|default(2) %}
+{% set tag = 'h' ~ level %}
+{% set align = alignment|default('left') %}
+{% set color = text_color|default('dark') %}
+
+<div class="dst-text dst-text--align-{{ align }} dst-text--color-{{ color }}">
+  {% if tagline %}
+    <p class="dst-text__tagline">{{ tagline }}</p>
+  {% endif %}
+  {% if heading %}
+    <{{ tag }} class="dst-text__heading dst-text__heading--{{ tag }}">
+      {{- heading -}}
+    </{{ tag }}>
+  {% endif %}
+  {% if body %}
+    <div class="dst-text__body">{{ body }}</div>
+  {% endif %}
+</div>
+

@@ -1,0 +1,45 @@
+{% set brands = [brand_1, brand_2, brand_3, brand_4, brand_5, brand_6, brand_7, brand_8]
+  | filter(b => b.src is not empty) %}
+
+{% set gap_px = (gap | default(6)) * 8 %}
+
+{% if brands is not empty %}
+<section class="dst-brand-band">
+  {% if heading %}
+    <p class="dst-brand-band__heading">{{ heading }}</p>
+  {% endif %}
+
+  <div
+    class="dst-brand-band__track{{ marquee ? ' dst-brand-band__track--marquee' : '' }}"
+    style="gap: {{ gap_px }}px;"
+  >
+    {% for brand in brands %}
+      {% if brand.src %}
+        <div class="dst-brand-band__item">
+          {% include 'canvas:image' ignore missing with {
+            src: brand.src,
+            alt: brand.alt | default(''),
+            class: 'dst-brand-band__logo',
+            loading: 'lazy'
+          } only %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    {% if marquee %}
+      {% for brand in brands %}
+        {% if brand.src %}
+          <div class="dst-brand-band__item" aria-hidden="true">
+            {% include 'canvas:image' ignore missing with {
+              src: brand.src,
+              alt: brand.alt | default(''),
+              class: 'dst-brand-band__logo',
+              loading: 'lazy'
+            } only %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}

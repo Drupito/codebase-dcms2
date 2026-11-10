@@ -1,0 +1,340 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: fb42da52-cfb4-4b81-a66e-ceb392c09b37
+  default_langcode: en
+  depends:
+    ce84f45a-e7ac-4c83-a249-da8a28babb29: file
+    3f2492ae-6f8c-44b3-a6d1-eaefb806a8ee: media
+    c1a24c25-5ecb-454a-ae3b-2bf9f0e7b7c7: file
+    33f8ce74-43a2-4bef-a017-d24fd370199b: media
+    6a14646b-055d-4658-8c2e-b1f3e26ace85: file
+    df6ded95-8496-4139-a9ab-8fcfa074362c: media
+    46a07839-a34a-44b9-9f63-370767da4504: file
+    2ab57cd4-788d-45dd-be4f-312dc533bf23: media
+    7cdfc12c-ff12-43f3-a2d4-c6ac8e861db2: file
+    d68e6449-eb3e-4151-922e-47d34efba3c6: media
+    25d1817b-5f86-40b5-9544-b3e79bff7f4c: file
+    e9d80f15-7cdf-431e-abeb-12957a34e07b: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'About US'
+  components:
+    -
+      uuid: f6f20521-725b-4564-aa41-70cdf56201da
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: f6f20521-725b-4564-aa41-70cdf56201da
+      slot: content
+      uuid: da0d622b-6fea-41e6-ae5d-304ca455292c
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        heading:
+          value: 'We help customers a get secured life.'
+          format: canvas_html_inline
+        tagline: 'About us'
+        heading_level: 1
+    -
+      uuid: 7ad013a8-2c60-4e66-a94d-29dceac3871c
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        margin_top: 0
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 7ad013a8-2c60-4e66-a94d-29dceac3871c
+      slot: content
+      uuid: 6ff3b74d-8ab1-4cb4-a055-d1cecf14a803
+      component_id: sdc.goodwell_theme.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 3f2492ae-6f8c-44b3-a6d1-eaefb806a8ee
+            target_type: media
+        shape: default
+        radius: small
+        border_radius: 0
+        badge_position: bottom-right
+    -
+      uuid: 405a01ec-dc8e-42d0-8129-5e4aa425e44e
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 405a01ec-dc8e-42d0-8129-5e4aa425e44e
+      slot: content
+      uuid: bc9f657f-70cc-4d21-b248-4ba1680e80d3
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        alignment: center
+        grid_layout: 2_column_50_50
+        is_small_container: false
+    -
+      parent_uuid: bc9f657f-70cc-4d21-b248-4ba1680e80d3
+      slot: slot_1
+      uuid: 93cb5df5-631b-4a8a-af66-1e59eb7ef73d
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        heading:
+          value: 'Trusted by thousands, proven by numbers'
+          format: canvas_html_inline
+        heading_level: 3
+    -
+      parent_uuid: bc9f657f-70cc-4d21-b248-4ba1680e80d3
+      slot: slot_2
+      uuid: 45913d9d-7077-467b-9067-f1172852b9a6
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        grid_gap: 10
+        grid_layout: 2_column_50_50
+        is_small_container: false
+    -
+      parent_uuid: 45913d9d-7077-467b-9067-f1172852b9a6
+      slot: slot_1
+      uuid: efd02c37-2ade-4315-819d-9e8f7a182605
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: 'Policies Issued'
+          format: canvas_html_inline
+        heading:
+          value: 20000+
+          format: canvas_html_inline
+        heading_level: 3
+    -
+      parent_uuid: 45913d9d-7077-467b-9067-f1172852b9a6
+      slot: slot_2
+      uuid: 8c0c96be-13d3-4c70-94fe-b19221d49b62
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: 'Claim Approval Rate'
+          format: canvas_html_inline
+        heading:
+          value: 98%
+          format: canvas_html_inline
+        heading_level: 3
+    -
+      uuid: 73449ddc-cb56-4790-8799-99c11bc7bcc5
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        rounded: none
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 73449ddc-cb56-4790-8799-99c11bc7bcc5
+      slot: content
+      uuid: a85f04a0-7245-41e1-8e32-d0ff141c29a7
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        grid_layout: 2_column_50_50
+        is_small_container: false
+    -
+      parent_uuid: a85f04a0-7245-41e1-8e32-d0ff141c29a7
+      slot: slot_1
+      uuid: e53bafe4-8d77-4158-a649-02b1e9e0b2db
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        heading:
+          value: 'Our Core Values'
+          format: canvas_html_inline
+        tagline: Values
+        heading_level: 3
+    -
+      parent_uuid: a85f04a0-7245-41e1-8e32-d0ff141c29a7
+      slot: slot_2
+      uuid: 7f4b91d1-2743-4e2a-b0ae-c39f7a95344d
+      component_id: sdc.goodwell_theme.value-item
+      inputs:
+        icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 33f8ce74-43a2-4bef-a017-d24fd370199b
+            target_type: media
+        title: Integrity
+        icon_color: light
+        description:
+          value: 'We uphold honesty and transparency in all our actions.'
+          format: canvas_html_inline
+        show_divider: true
+    -
+      parent_uuid: a85f04a0-7245-41e1-8e32-d0ff141c29a7
+      slot: slot_2
+      uuid: 63d4da1d-ead4-4df5-a860-49db994fec52
+      component_id: sdc.goodwell_theme.value-item
+      inputs:
+        icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: df6ded95-8496-4139-a9ab-8fcfa074362c
+            target_type: media
+        title: Excellence
+        icon_color: light
+        description:
+          value: 'We dedicate ourselves to meeting the needs of our clients.'
+          format: canvas_html_inline
+        show_divider: true
+    -
+      parent_uuid: a85f04a0-7245-41e1-8e32-d0ff141c29a7
+      slot: slot_2
+      uuid: 2024ee6b-944d-4770-a003-ca6b45da7696
+      component_id: sdc.goodwell_theme.value-item
+      inputs:
+        icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 2ab57cd4-788d-45dd-be4f-312dc533bf23
+            target_type: media
+        title: Respect
+        icon_color: light
+        description:
+          value: 'We value every individual and foster a culture.'
+          format: canvas_html_inline
+        show_divider: true
+    -
+      parent_uuid: a85f04a0-7245-41e1-8e32-d0ff141c29a7
+      slot: slot_2
+      uuid: d8b7794d-bd01-47f3-b46f-4600cd53d3fe
+      component_id: sdc.goodwell_theme.value-item
+      inputs:
+        icon:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: d68e6449-eb3e-4151-922e-47d34efba3c6
+            target_type: media
+        title: Responsibility
+        icon_color: light
+        description:
+          value: 'We work together to achieve shared goals'
+          format: canvas_html_inline
+        show_divider: true
+    -
+      uuid: 7855ccc8-ae03-4aad-983f-f762d9fd1df7
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 7855ccc8-ae03-4aad-983f-f762d9fd1df7
+      slot: content
+      uuid: 5d21966c-44bc-4834-b7db-8aff0af83363
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: ' '
+          format: canvas_html_inline
+        heading:
+          value: 'Meet our experienced team'
+          format: canvas_html_inline
+        tagline: 'Our Experts'
+        alignment: center
+        heading_level: 2
+    -
+      uuid: 64e86252-dfa3-48b1-9853-9feb34745f32
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 64e86252-dfa3-48b1-9853-9feb34745f32
+      slot: content
+      uuid: 842c52a9-3ad2-4a98-865a-eab820d52b41
+      component_id: block.views_block.team-block_1
+      inputs:
+        label: Team
+        views_label: ''
+        label_display: '0'
+        items_per_page: null
+    -
+      uuid: 833c92d0-7187-40dd-b20d-2e0edd8fbc17
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: top
+        background: teal
+        full_bleed: false
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: 833c92d0-7187-40dd-b20d-2e0edd8fbc17
+      slot: content
+      uuid: 13141bd5-bb5d-45aa-9eec-fca6150a6d48
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        alignment: center
+        grid_layout: 2_column_66_33
+        is_small_container: false
+    -
+      parent_uuid: 13141bd5-bb5d-45aa-9eec-fca6150a6d48
+      slot: slot_1
+      uuid: 59b7d267-7b4d-4c5f-98b1-8bc2fe7e4415
+      component_id: sdc.goodwell_theme.text
+      inputs:
+        body:
+          value: 'Get started with a personalized life insurance plan that meets your needs and protects your loved ones.'
+          format: canvas_html_inline
+        heading:
+          value: 'Secure your tomorrow, today'
+          format: canvas_html_inline
+        heading_level: 2
+    -
+      parent_uuid: 13141bd5-bb5d-45aa-9eec-fca6150a6d48
+      slot: slot_1
+      uuid: 6f5a3ca1-b133-4b28-af5d-ac5710fb1eb7
+      component_id: sdc.goodwell_theme.button
+      inputs:
+        href:
+          uri: 'internal:/get-a-quote'
+          options: {  }
+        size: md
+        label: 'Secure Your Family'
+        rounded: pill
+        variant: primary
+        disabled: false
+        full_width: false
+    -
+      parent_uuid: 13141bd5-bb5d-45aa-9eec-fca6150a6d48
+      slot: slot_2
+      uuid: 21eaf3ad-8aa1-4282-860f-ec231f21e399
+      component_id: sdc.goodwell_theme.image
+      inputs:
+        size: '1:1'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e9d80f15-7cdf-431e-abeb-12957a34e07b
+            target_type: media
+        shape: default
+        radius: extra-large
+        decoration: bottom-right
+        border_radius: 0
+        badge_position: bottom-right
+  path:
+    -
+      alias: /about-us
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

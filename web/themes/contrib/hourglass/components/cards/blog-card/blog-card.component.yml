@@ -1,0 +1,48 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Blog Card
+group: Cards
+status: stable
+description: 'Blog post card with thumbnail image, category, date, read time, title, excerpt, and a "Read More" CTA. For Canvas manual placement.'
+props:
+  type: object
+  properties:
+    media:
+      $ref: 'json-schema-definitions://canvas.module/image'
+      title: 'Thumbnail Image'
+    category:
+      type: string
+      title: 'Category'
+      examples:
+        - 'Technology'
+    date:
+      type: string
+      title: 'Published Date'
+      examples:
+        - 'July 1, 2025'
+    read_time:
+      type: integer
+      title: 'Read Time (minutes)'
+      examples:
+        - 5
+    heading:
+      type: string
+      title: 'Post Title'
+      examples:
+        - 'Intelligent Resource Mapping'
+    summary:
+      type: string
+      title: 'Excerpt'
+      examples:
+        - 'Stop guessing bandwidth. Nexus uses real-time telemetry to track team availability.'
+    cta_url:
+      type: string
+      title: 'Post URL'
+      examples:
+        - '/blog/intelligent-resource-mapping'
+    featured:
+      type: boolean
+      title: 'Featured Post'
+      default: false
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

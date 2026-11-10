@@ -1,0 +1,196 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - goodwell_theme
+active_version: 0686e9b202a809dd
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Empowering Your Peace of Mind'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        copyright:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Copyright © 2026 Goodwell'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        privacy_html:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '<a href="/privacy-policy">Privacy &amp; Policy</a>'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: Logo
+          description: 'Site logo image or branding block.'
+        social:
+          title: 'Social icons'
+          description: 'Social media icon links.'
+        columns:
+          title: 'Navigation columns'
+          description: 'Drop the Drupal menu block(s) here — they get styled as footer columns automatically.'
+        legal:
+          title: 'Legal / Privacy'
+          description: 'Bottom-bar legal content. Drop any block here — HTML text, privacy links, cookie consent scripts, etc.'
+  c5f54532a091540b:
+    settings:
+      prop_field_definitions:
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Empowering Your Peace of Mind'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        copyright:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Copyright © 2026 Goodwell'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        privacy_html:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '<a href="/privacy-policy">Privacy &amp; Policy</a> <a href="/terms">Terms of Service</a>'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: Logo
+          description: 'Site logo image or branding block.'
+        social:
+          title: 'Social icons'
+          description: 'Social media icon links.'
+        columns:
+          title: 'Navigation columns'
+          description: 'Drop the Drupal menu block(s) here — they get styled as footer columns automatically.'
+        legal:
+          title: 'Legal / Privacy'
+          description: 'Bottom-bar legal content. Drop any block here — HTML text, privacy links, cookie consent scripts, etc.'
+  dd0f6cf6ef19014d:
+    settings:
+      prop_field_definitions:
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Empowering Your Peace of Mind'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        copyright:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Copyright © 2026 Goodwell'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: Logo
+          description: 'Site logo image or branding block.'
+        social:
+          title: 'Social icons'
+          description: 'Social media icon links.'
+        columns:
+          title: 'Navigation columns'
+          description: 'Drop the Drupal menu block(s) here — they get styled as footer columns automatically.'
+        legal:
+          title: 'Legal / Privacy'
+          description: 'Bottom-bar legal content. Drop any block here — HTML text, privacy links, cookie consent scripts, etc.'
+  570ea0feb5aed40c:
+    settings:
+      prop_field_definitions:
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Empowering Your Peace of Mind'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        copyright:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Copyright © 2026 Goodwell'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        logo:
+          title: Logo
+          description: 'Site logo image or branding block.'
+        social:
+          title: 'Social icons'
+          description: 'Social media icon links.'
+        columns:
+          title: 'Navigation columns'
+          description: 'Drop the Drupal menu block(s) here — they get styled as footer columns automatically.'
+        legal:
+          title: 'Legal links'
+          description: 'Privacy policy and terms links for the bottom bar.'
+label: Footer
+id: sdc.goodwell_theme.footer
+provider: goodwell_theme
+source: sdc
+source_local_id: 'goodwell_theme:footer'

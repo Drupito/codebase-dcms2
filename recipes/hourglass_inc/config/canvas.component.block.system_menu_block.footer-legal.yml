@@ -1,0 +1,26 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.footer-legal
+  module:
+    - system
+active_version: 22dcd60b154c3106
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'system_menu_block:footer-legal'
+        label: 'Footer Legal'
+        label_display: '0'
+        provider: system
+        level: 1
+        depth: null
+        expand_all_items: false
+    fallback_metadata:
+      slot_definitions: null
+label: 'Footer Legal'
+id: block.system_menu_block.footer-legal
+provider: system
+source: block
+source_local_id: 'system_menu_block:footer-legal'

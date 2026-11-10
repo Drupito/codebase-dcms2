@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 2bb5e3ce-b2e3-41ee-9b24-e59e2d7b37c9
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    7376ce94-6d96-43bc-9a8e-5c657730a9a8: file
+default:
+  entity_id:
+    -
+      uuid: 7376ce94-6d96-43bc-9a8e-5c657730a9a8
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/woman_glasses.png'
+  x:
+    -
+      value: 512
+  'y':
+    -
+      value: 480
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

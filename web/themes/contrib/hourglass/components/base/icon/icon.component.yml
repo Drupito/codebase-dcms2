@@ -1,0 +1,26 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json"
+name: Icon
+group: Atoms
+status: stable
+description: 'Reusable SVG icon component.'
+props:
+  type: object
+  properties:
+    name:
+      type: string
+      title: 'Icon Name'
+      enum: ['video-user', 'arrow-left', 'arrow-right', 'arrow-long-right', 'play', 'video-play', 'video-play-gallery', 'search', 'search-gradient', 'close', 'clock', 'download', 'calendar', 'location', 'phone', 'email', 'globe']
+    size:
+      type: integer
+      title: 'Icon Size'
+      default: 24
+    color:
+      type: string
+      title: 'Icon Color'
+      default: 'currentColor'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  content:
+    title: 'Custom SVG Content'

@@ -1,0 +1,20 @@
+name: Everbright
+type: theme
+"base theme": false
+libraries:
+  - everbright_theme/global
+logo: logo-dark.svg
+description: "Theme for the Everbright site template"
+core_version_requirement: ^11
+generator: "mercury:unknown-version"
+regions:
+  content: Content
+  header: Header
+  footer: Footer
+dependencies:
+  - "cva:cva"
+
+# Information added by Drupal.org packaging script on 2026-06-02
+version: '1.0.0'
+project: 'everbright_theme'
+datestamp: 1780367386

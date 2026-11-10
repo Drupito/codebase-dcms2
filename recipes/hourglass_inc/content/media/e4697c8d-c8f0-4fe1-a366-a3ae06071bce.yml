@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e4697c8d-c8f0-4fe1-a366-a3ae06071bce
+  bundle: image
+  default_langcode: en
+  depends:
+    c8a02a4c-6023-429b-927f-4d6f84eff25c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 322baccfbae567b360073bec8c764a017a64958e.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Automated Workflow Orchestration'
+      title: ''
+      width: 1418
+      height: 521
+      entity: c8a02a4c-6023-429b-927f-4d6f84eff25c

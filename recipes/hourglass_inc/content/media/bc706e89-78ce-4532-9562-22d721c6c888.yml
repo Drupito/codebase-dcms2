@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: bc706e89-78ce-4532-9562-22d721c6c888
+  bundle: image
+  default_langcode: en
+  depends:
+    8c7addff-66eb-4cb4-a6eb-2768d404ab2c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: a891da2288f1730acbcca67326cad6246cedf283.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'The Nexus neural data layer, visualizing live event streams across 40,000+ enterprise deployments worldwide.'
+      title: ''
+      width: 1840
+      height: 1380
+      entity: 8c7addff-66eb-4cb4-a6eb-2768d404ab2c

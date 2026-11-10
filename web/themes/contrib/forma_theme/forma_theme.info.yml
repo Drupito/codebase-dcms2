@@ -1,0 +1,19 @@
+name: Forma
+type: theme
+"base theme": false
+libraries:
+  - forma_theme/global
+logo: forma.svg
+description: "Theme for the Forma site template"
+core_version_requirement: ^11
+regions:
+  content: Content
+  header: Header
+  footer: Footer
+dependencies:
+  - "cva:cva"
+
+# Information added by Drupal.org packaging script on 2026-06-16
+version: '1.0.0'
+project: 'forma_theme'
+datestamp: 1781586059

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 0cfc7213-3f94-43a9-8877-924c2275ca74
+  bundle: image
+  default_langcode: en
+  depends:
+    58a57af8-20d2-4237-bc05-2aa31b0ceb80: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: img2.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'A photo of a hand holding a white card with a black letter M printed on it.'
+      title: ''
+      width: 648
+      height: 648
+      entity: 58a57af8-20d2-4237-bc05-2aa31b0ceb80

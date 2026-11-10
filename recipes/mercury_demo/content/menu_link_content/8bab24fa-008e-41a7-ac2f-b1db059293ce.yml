@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 8bab24fa-008e-41a7-ac2f-b1db059293ce
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    40352db5-0638-4903-b445-ef72b802cc52: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Hero
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 40352db5-0638-4903-b445-ef72b802cc52
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

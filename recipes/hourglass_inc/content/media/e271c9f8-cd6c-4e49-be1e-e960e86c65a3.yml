@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e271c9f8-cd6c-4e49-be1e-e960e86c65a3
+  bundle: image
+  default_langcode: en
+  depends:
+    29b3d4ef-d225-4ac1-9d0d-11c810573589: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 2f91bfeb83ff2525ab1f2b90956c7e239363ebb0.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Data Without Borders. Insights Without Effort.'
+      title: ''
+      width: 2399
+      height: 1604
+      entity: 29b3d4ef-d225-4ac1-9d0d-11c810573589

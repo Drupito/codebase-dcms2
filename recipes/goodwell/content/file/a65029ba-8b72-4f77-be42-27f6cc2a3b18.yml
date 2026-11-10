@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a65029ba-8b72-4f77-be42-27f6cc2a3b18
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: half_circle.png
+  uri:
+    -
+      value: 'public://2026-06/half_circle.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 949314
+  status:
+    -
+      value: true

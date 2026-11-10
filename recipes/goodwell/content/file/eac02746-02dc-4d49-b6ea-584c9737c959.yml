@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: eac02746-02dc-4d49-b6ea-584c9737c959
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: girl_walking.png
+  uri:
+    -
+      value: 'public://2026-06/girl_walking.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 507586
+  status:
+    -
+      value: true

@@ -1,0 +1,122 @@
+{% set has_border = border|default(false) ? 'yes' : 'no' %}
+
+{% set blockquote_root =
+  html_cva(
+    base: [
+      'blockquote',
+      'relative flex w-full flex-col items-center gap-6',
+      'bg-background text-center text-foreground',
+      'my-10 px-8 py-12 pt-14',
+      'md:px-12 md:py-16 md:pt-20'
+    ],
+    variants: {
+      hasBorder: {
+        yes: 'border border-foreground',
+        no: ''
+      }
+    }
+  )
+%}
+
+{% set quote_icon = html_cva(base: ['absolute top-0 left-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2', 'bg-background px-4 text-foreground']) %}
+
+{% set quote_text =
+  html_cva(base: ['relative z-10 max-w-3xl text-2xl leading-snug md:text-3xl', '[&>*:first-child]:mt-0 [&>*:last-child]:mb-0', '[&_p]:mb-0'])
+%}
+
+{% set quote_footer = html_cva(base: ['relative z-10 text-sm leading-snug font-normal not-italic', 'md:text-mbase']) %}
+
+{% set cite_link =
+  html_cva(
+    base: ['not-italic'],
+    variants: {
+      hasUrl: {
+        yes: ['underline underline-offset-2', 'duration-300 hover:opacity-80'],
+        no: ''
+      }
+    }
+  )
+%}
+
+{% set has_cite_url = cite_url is not empty ? 'yes' : 'no' %}
+{% set cite_attr = cite_url is not empty ? 'cite="' ~ cite_url ~ '"' : '' %}
+
+{% if text is not empty %}
+  <blockquote
+    class="{{
+    blockquote_root.apply({
+      hasBorder: has_border
+    })
+    }}"
+    {{ cite_attr }}
+  >
+    <span class="{{ quote_icon.apply({}) }}" aria-hidden="true">
+      <svg class="size-12 md:size-18" width="24" height="24" viewBox="0 0 129 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M128.464 0L101.824 56.832L99.16 38.776C104.488 38.776 109.323 40.0587 113.664 42.624C118.005 45.1893 121.459 48.6427 124.024 52.984C126.589 57.128 127.872 61.7653 127.872 66.896C127.872 72.224 126.589 77.0587 124.024 81.4C121.459 85.544 118.005 88.8987 113.664 91.464C109.323 94.0293 104.488 95.312 99.16 95.312C93.832 95.312 88.9973 94.0293 84.656 91.464C80.3147 88.8987 76.7627 85.4453 74 81.104C71.4347 76.5653 70.152 71.632 70.152 66.304C70.152 60.976 71.336 55.4507 73.704 49.728C76.072 43.808 80.216 36.408 86.136 27.528L103.6 0H128.464ZM58.016 0L31.672 56.832L28.712 38.776C34.2373 38.776 39.072 40.0587 43.216 42.624C47.5573 45.1893 51.0107 48.6427 53.576 52.984C56.3387 57.128 57.72 61.7653 57.72 66.896C57.72 72.224 56.3387 77.0587 53.576 81.4C51.0107 85.544 47.5573 88.8987 43.216 91.464C39.072 94.0293 34.2373 95.312 28.712 95.312C23.5813 95.312 18.7467 94.0293 14.208 91.464C9.86667 88.8987 6.41333 85.4453 3.848 81.104C1.28267 76.5653 0 71.632 0 66.304C0 60.976 1.184 55.4507 3.552 49.728C5.92 43.808 10.064 36.408 15.984 27.528L33.448 0H58.016Z"
+          fill="#171717"
+        />
+      </svg>
+    </span>
+
+    <div class="{{ quote_text.apply({}) }}">
+      {{ text }}
+    </div>
+
+    {% if cite_name is not empty or cite_text is not empty %}
+      <footer class="{{ quote_footer.apply({}) }}">
+        <cite class="not-italic">
+          {% if cite_name is not empty and cite_text is not empty %}
+            {{ cite_name }},{% if cite_url is not empty %}
+              <a
+                href="{{ cite_url }}"
+                target="_blank"
+                class="{{
+                cite_link.apply({
+                  hasUrl: has_cite_url
+                })
+                }}"
+              >
+                {{ cite_text }}
+              </a>
+            {% else %}
+              <span
+                class="{{
+                cite_link.apply({
+                  hasUrl: 'no'
+                })
+                }}"
+              >
+                {{ cite_text }}
+              </span>
+            {% endif %}
+          {% elseif cite_name is not empty %}
+            {{ cite_name }}
+          {% elseif cite_url is not empty %}
+            <a
+              href="{{ cite_url }}"
+              target="_blank"
+              class="{{
+              cite_link.apply({
+                hasUrl: has_cite_url
+              })
+              }}"
+            >
+              {{ cite_text }}
+            </a>
+          {% else %}
+            <span
+              class="{{
+              cite_link.apply({
+                hasUrl: 'no'
+              })
+              }}"
+            >
+              {{ cite_text }}
+            </span>
+          {% endif %}
+        </cite>
+      </footer>
+    {% endif %}
+  </blockquote>
+{% endif %}

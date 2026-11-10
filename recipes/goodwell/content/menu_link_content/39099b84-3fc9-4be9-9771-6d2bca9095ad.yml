@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 39099b84-3fc9-4be9-9771-6d2bca9095ad
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    a7cfcd03-0b9e-44eb-8eec-92d2cfb72dde: menu_link_content
+    36015f6a-98fb-43c7-acfd-c8ce23e16c7b: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Home Insurance'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 36015f6a-98fb-43c7-acfd-c8ce23e16c7b
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 3
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:a7cfcd03-0b9e-44eb-8eec-92d2cfb72dde'
+  revision_translation_affected:
+    -
+      value: true

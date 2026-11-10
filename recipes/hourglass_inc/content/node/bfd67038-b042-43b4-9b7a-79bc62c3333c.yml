@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: bfd67038-b042-43b4-9b7a-79bc62c3333c
+  bundle: blog
+  default_langcode: en
+  depends:
+    298f8a38-367c-4f72-b406-55596d9d1309: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Zero Trust Security Architecture Explained'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/zero-trust-security-architecture-explained
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>The traditional "castle and moat" approach to network security is no longer sufficient. Zero Trust architecture — built on the principle of "never trust, always verify" — is becoming the gold standard for enterprise security.</p>
+
+        <h2>Core Principles of Zero Trust</h2>
+        <p>Zero Trust requires continuous verification of every user, device, and network connection, regardless of whether they are inside or outside the corporate perimeter. Least-privilege access, micro-segmentation, and strong identity verification are foundational elements.</p>
+
+        <h2>Implementing Zero Trust</h2>
+        <p>A successful Zero Trust implementation starts with understanding your data flows and access patterns. Deploying identity and access management (IAM), multi-factor authentication (MFA), and endpoint detection and response (EDR) tools lays the groundwork for a robust Zero Trust posture.</p>
+
+        <h2>Business Benefits</h2>
+        <p>Beyond improved security, Zero Trust reduces the blast radius of breaches, simplifies compliance auditing, and enables secure remote work at scale. Organisations with mature Zero Trust implementations experience significantly fewer successful cyberattacks.</p>
+      format: content_format
+      summary: ''
+  field_featured:
+    -
+      value: false
+  field_hero_image:
+    -
+      entity: 298f8a38-367c-4f72-b406-55596d9d1309
+  field_published_date:
+    -
+      value: '2025-06-09'
+  field_read_time:
+    -
+      value: 5

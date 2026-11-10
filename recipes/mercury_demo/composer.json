@@ -1,0 +1,14 @@
+{
+    "name": "drupal/mercury_demo",
+    "description": "Built with the Mercury theme, this template showcases Mercury and documents the theme's features and components.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/drupal_cms_site_template_base": "^2",
+        "drupal/mercury": "^1.0.5"
+    },
+    "require-dev": {
+        "cweagans/composer-patches": "^2"
+    },
+    "version": "1.1.1"
+}

@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Template for the CTA Banner module.
+ *
+ * Props:
+ * - media: Canvas background image.
+ * - eyebrow: Small label above the heading.
+ * - heading: H4 title.
+ * - description: Body text.
+ * - cta_text: CTA button label (default: "View Openings").
+ * - cta_url: CTA button URL.
+ */
+#}
+{{ attach_library('hourglass/cta-banner') }}
+
+<div class="c-cta-banner {{ extra_classes|default('') }}">
+
+  {# ── Banner card ──────────────────────────────────────────────── #}
+  <div class="c-cta-banner__card">
+
+    {% if media %}
+      <div class="c-cta-banner__bg">
+        {% include 'hourglass:media' with { image: media, extra_classes: 'c-cta-banner__media' } %}
+      </div>
+    {% endif %}
+
+    <div class="c-cta-banner__scrim" aria-hidden="true"></div>
+
+    <div class="c-cta-banner__content">
+      {% if eyebrow %}
+        <p class="c-cta-banner__eyebrow">{{ eyebrow }}</p>
+      {% endif %}
+      {% if heading %}
+        <h2 class="c-cta-banner__heading">{{ heading }}</h2>
+      {% endif %}
+      {% if description %}
+        <p class="c-cta-banner__description">{{ description }}</p>
+      {% endif %}
+    </div>
+
+  </div>
+
+  {# ── Footer CTA ───────────────────────────────────────────────── #}
+  {% if cta_url %}
+    <div class="c-cta-banner__footer">
+      <a href="{{ cta_url }}" class="c-cta-banner__cta">
+        <span>{{ cta_text|default('View Openings') }}</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  {% endif %}
+
+</div>

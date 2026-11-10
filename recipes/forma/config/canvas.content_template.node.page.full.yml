@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.forma_theme.heading
+    - canvas.component.sdc.forma_theme.section
+    - canvas.component.sdc.forma_theme.text
+    - core.entity_view_mode.node.full
+    - field.field.node.page.field_content
+    - filter.format.content_format
+    - node.type.page
+  module:
+    - node
+    - options
+id: node.page.full
+content_entity_type_id: node
+content_entity_type_bundle: page
+content_entity_type_view_mode: full
+component_tree:
+  '0:50831288-41d4-457c-8070-4e2d2ed7d06d':
+    uuid: 50831288-41d4-457c-8070-4e2d2ed7d06d
+    component_id: sdc.forma_theme.section
+    component_version: 7082127ba792625d
+    inputs:
+      width: 70%
+      columns: '1 column'
+      mobile_columns: '1'
+      margin_block_start: 'large'
+      margin_block_end: 'default'
+      padding_block_start: '0'
+      padding_block_end: '0'
+      section_header: true
+      section_footer: true
+  '0:header_slot:0:324da1a3-a2bb-401f-abf6-710950662efb':
+    parent_uuid: 50831288-41d4-457c-8070-4e2d2ed7d06d
+    slot: header_slot
+    uuid: 324da1a3-a2bb-401f-abf6-710950662efb
+    component_id: sdc.forma_theme.heading
+    component_version: ca71146b4d2d085d
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:page␝title␞␟value'
+      level: 2
+      text_size: heading-responsive-6xl
+      text_color: default
+      align: left
+  '0:main_slot:0:4282658f-d77c-4b97-9be3-438d94b91fc2':
+    parent_uuid: 50831288-41d4-457c-8070-4e2d2ed7d06d
+    slot: main_slot
+    uuid: 4282658f-d77c-4b97-9be3-438d94b91fc2
+    component_id: sdc.forma_theme.text
+    component_version: 8a33edeeb2e4a925
+    inputs:
+      text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:page␝field_content␞␟processed'
+      text_size: normal
+      text_color: default
+exposed_slots: {  }

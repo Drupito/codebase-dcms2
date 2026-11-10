@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Text List Item
+group: Cards
+status: stable
+description: 'Bulleted list item with a bold title and rich-text description. Used inside the Apply Section module.'
+
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Item Title'
+      examples:
+        - 'Submit the Lead Form'
+    description:
+      type: string
+      title: 'Description'
+      contentMediaType: text/html
+      examples:
+        - 'Fill out the form with the respective lead details. Be sure to print or save a copy of the confirmation page for your records.'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

@@ -1,0 +1,85 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set block_content = elements.content['#block_content'] ?? null
+%}
+
+<div{{ attributes.addClass('hero-image-module') }}>
+  {{ title_prefix }}
+  {% block content %}
+    {% if block_content %}
+      {% set image_url = '' %}
+      {% set responsive_bg = {} %}
+
+      {% if block_content.field_image.entity.field_media_image.entity %}
+        {% set image_uri = block_content.field_image.entity.field_media_image.entity.uri.value %}
+        {% set image_url = image_uri %}
+        {% set responsive_bg = {
+          '320': image_uri|image_style('scale_320'),
+          '480': image_uri|image_style('scale_480'),
+          '640': image_uri|image_style('scale_640'),
+          '800': image_uri|image_style('scale_800'),
+          '1024': image_uri|image_style('scale_1024'),
+          '1280': image_uri|image_style('scale_1280'),
+          '1440': image_uri|image_style('scale_1440'),
+          '1920': image_uri|image_style('scale_1920')
+        } %}
+      {% endif %}
+
+      {% set tagline = block_content.field_eyebrow.value|default('') %}
+      {% set title = block_content.field_hero_title.processed|default(block_content.field_hero_title.value)|default(label)|default('') %}
+      {% set description = block_content.field_description.processed|default(block_content.field_description.value)|default('') %}
+
+      {% set floating_cta_text = '' %}
+      {% set floating_cta_url = '' %}
+      {% if block_content.field_cta.title %}
+        {% set floating_cta_text = block_content.field_cta.title %}
+        {% set floating_cta_url = block_content.field_cta.0.url %}
+      {% endif %}
+
+      {{ include('hourglass:product-hero', {
+        title: title,
+        tagline: tagline,
+        description: description,
+        floating_cta_text: floating_cta_text,
+        floating_cta_url: floating_cta_url,
+        image: image_url,
+        responsive_bg: responsive_bg,
+        hero_id: 'block-' ~ block_content.id(),
+        use_gradient_overlay: true,
+        aspect_ratio: block_content.field_aspect_ratio.value|default('')
+      }, with_context = false) }}
+    {% else %}
+      {{ content }}
+    {% endif %}
+  {% endblock %}
+  {{ title_suffix }}
+</div>

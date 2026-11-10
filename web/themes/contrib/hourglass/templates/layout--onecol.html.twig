@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Theme override for a one-column layout.
+ *
+ * MMI Section Style: section style classes are added in
+ * mmi_section_style_preprocess_layout() to attributes. Optionally wrap
+ * region content in a container div when container_size is set.
+ *
+ * Available variables:
+ * - content: The content for this layout (e.g. content.content).
+ * - attributes: HTML attributes for the layout wrapper.
+ * - settings: Layout settings (includes mmi_section_style when set).
+ * - layout: Layout definition.
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ */
+#}
+{% set bss = settings.mmi_section_style|default({}) %}
+{% set container_size = bss.container_size|default('') %}
+
+{% set classes = [
+  'layout',
+  'layout--onecol',
+] %}
+
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if container_size %}
+      <div class="layout__region layout__region--content {{ container_size }}">
+        {{ content.content }}
+      </div>
+    {% else %}
+      <div class="layout__region layout__region--content">
+        {{ content.content }}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

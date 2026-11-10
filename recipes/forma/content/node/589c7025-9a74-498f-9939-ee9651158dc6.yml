@@ -1,0 +1,56 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 589c7025-9a74-498f-9939-ee9651158dc6
+  bundle: article
+  default_langcode: en
+  depends:
+    51e95160-dc87-4804-904a-cd024b077875: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'How to Choose a Cohesive Color Palette for Open-Plan Living Spaces'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /how-choose-cohesive-color-palette-open-plan-living-spaces
+      langcode: en
+  field_author:
+    -
+      value: 'Alice Liu'
+  field_content:
+    -
+      value: '<p>Open-plan living offers freedom, but that freedom comes with a design challenge. Without walls to contain them, colors must work harder. A shade that feels grounded in a defined dining room can feel adrift when it flows into a kitchen, then a living area, then a hallway. Getting the palette right is the difference between a home that feels expansive and one that feels uncertain.</p><h2>Start with one anchor color</h2><p>Every successful open-plan palette begins with a single anchor — typically applied to the largest surface area, most often the walls or flooring. This color sets the emotional register for the entire space and everything else responds to it. Choose it carefully, and choose it first. Trying to reconcile several colors after the fact rarely works.</p><h2>Work in layers, not zones</h2><p>A common instinct is to assign different colors to different functional areas — a soft green for the kitchen, a warm white for the living room. Resist it. In an open plan, the eye travels the full length of the space in a single glance, and color boundaries read as interruptions rather than definition. Instead, build the palette in layers: a dominant tone across all walls, a secondary tone in fixed elements like cabinetry and joinery, and a third in soft furnishings and accents that can be adjusted over time.</p><h2>Let natural light lead</h2><p>The same color can behave completely differently across a large open-plan space depending on how light moves through it. A north-facing living area and a south-facing kitchen may share the same wall color but read entirely differently at midday. Before committing to a palette, observe the space at multiple times of day. Where light is abundant, cooler tones hold their composure. Where rooms run deeper or darker, warmer tones prevent the space from feeling flat.</p><h2>Limit the palette, trust the materials</h2><p>Three colors is almost always enough. Beyond that, the space begins to feel busy rather than considered. The rest of the visual interest should come from materiality — the grain of a timber floor, the texture of a stone benchtop, the weave of an upholstered sofa. Materials introduce variation without competing with the palette, and they give an open-plan space the layered richness it needs to feel complete.</p><h2>Test before you commit</h2><p>Paint large swatches — at least A3 size — and live with them for several days across different lighting conditions before making a final decision. What looks resolved on a small sample card almost never tells the whole story.</p>'
+      format: content_format
+  field_description:
+    -
+      value: 'Open-plan living offers freedom, but that freedom comes with a design challenge. Getting the palette right is the difference between a home that feels expansive and one that feels uncertain.'
+  field_featured_image:
+    -
+      entity: 51e95160-dc87-4804-904a-cd024b077875
+  field_seo_analysis:
+    -
+      status: '0'
+      focus_keyword: ''
+      title: ''
+      description: ''

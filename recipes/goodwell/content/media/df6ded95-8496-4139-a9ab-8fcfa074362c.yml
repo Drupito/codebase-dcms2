@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: df6ded95-8496-4139-a9ab-8fcfa074362c
+  bundle: image
+  default_langcode: en
+  depends:
+    6a14646b-055d-4658-8c2e-b1f3e26ace85: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: profile_icon.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Profile pic icon'
+      title: ''
+      width: 30
+      height: 30
+      entity: 6a14646b-055d-4658-8c2e-b1f3e26ace85

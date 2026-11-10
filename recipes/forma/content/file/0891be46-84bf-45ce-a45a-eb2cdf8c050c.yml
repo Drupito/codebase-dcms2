@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 0891be46-84bf-45ce-a45a-eb2cdf8c050c
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: kam-idris-_HqHX3LBN18-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-06/kam-idris-_HqHX3LBN18-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 1423920
+  status:
+    -
+      value: true

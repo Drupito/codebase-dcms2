@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b4c3b7eb-93f8-4e55-9a8f-8c5720eec467
+  bundle: image
+  default_langcode: en
+  depends:
+    cea8bd48-d333-4da9-8c89-07124fac0998: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: card-(2).png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Sarah Jenkins'
+      title: ''
+      width: 285
+      height: 285
+      entity: cea8bd48-d333-4da9-8c89-07124fac0998

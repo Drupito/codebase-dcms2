@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 25d1817b-5f86-40b5-9544-b3e79bff7f4c
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: father_son.png
+  uri:
+    -
+      value: 'public://2026-06/father_son.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 162593
+  status:
+    -
+      value: true

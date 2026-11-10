@@ -1,0 +1,670 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 20f066ba-1c45-4544-b219-92248ff340c3
+  default_langcode: en
+  depends:
+    5f7678c7-c4f4-4f14-8759-ee6accad0256: file
+    879b60c7-72f3-46d2-bf81-28afc7f7d7b4: media
+    7a24e187-36dd-4fbf-8760-1148a633ef98: file
+    bd9f5ed3-3c37-47ca-9008-78998701cf72: media
+    dcb1b95f-3160-4206-8be7-5e679242eeea: file
+    0a15bf13-e1bd-4f44-ad60-23d80f68cb80: media
+    87466759-eb42-4176-a567-73a551c6d650: file
+    6bcc3297-6ca3-484d-a7b2-cccc39b43fcf: media
+    aab1ac4e-468e-4f7d-8845-e8cfe67c579a: file
+    523bc513-38cb-4678-a1b8-c6cd6dad570d: media
+    c985f259-bf67-4094-98dc-4547c5a82df9: file
+    f801aa06-a858-4001-9840-f330d05b133c: media
+    e36dacde-e3ff-4ed9-81f3-fc25505d7fd4: file
+    965c4ff0-d023-4cab-978c-a04886fab316: media
+    5fb33016-8535-4930-973c-17eef58c0467: file
+    b61189e2-2b16-4c7e-a38d-4e849a560612: media
+    87615a1f-66af-4ae3-af5c-20411a4ec481: file
+    fd796e10-e77a-48dd-89af-8ad046ffc139: media
+    47c66bb9-cec2-4d19-971b-bedd0a0fccb9: file
+    7d81cdde-1b6c-456b-aa4c-3236d41c7006: media
+    e0a3d8ad-5c9c-465f-91ec-3412361a9126: file
+    30c9c36f-f0bc-42b0-b207-b5ef1bf24ff3: media
+    1ea1c43c-db8b-450a-b709-392a2ff10e44: file
+    8c572013-bdee-4ba1-9a5b-d167950342f1: media
+    cea8bd48-d333-4da9-8c89-07124fac0998: file
+    b4c3b7eb-93f8-4e55-9a8f-8c5720eec467: media
+    82b94e45-c3ab-4bdf-a1b8-bd52e08f2243: file
+    7ab34a62-8b8f-4a10-a891-37abeb6d00e6: media
+    40ebd7cd-ebc6-4f12-aaf9-bb3ae334a7dc: file
+    e49f55bf-06d8-47b9-b93b-34d2a30c2c1a: media
+    d034e75d-9980-4989-91b6-ff918733ad8e: file
+    21c1b205-269c-47d5-ba4b-a3aa19a32946: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'About Us'
+  description:
+    -
+      value: 'Anout Us Page'
+  components:
+    -
+      uuid: 698810ff-1d9b-4098-b629-7915d4c9d4db
+      component_id: sdc.hourglass.hero
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 879b60c7-72f3-46d2-bf81-28afc7f7d7b4
+            target_type: media
+        heading: 'Our Mission to Reclaim Time.'
+        alignment: left
+        description:
+          value: "<p>From a home-office prototype to a global enterprise platform, we've spent a decade turning operational complexity into a competitive advantage for the world's most ambitious organizations.</p>"
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: fa2b38b0-44f4-4dae-adb5-e501ecbc6ec0
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        margin_top: '120'
+        rounded_top: false
+    -
+      parent_uuid: fa2b38b0-44f4-4dae-adb5-e501ecbc6ec0
+      slot: content
+      uuid: f06dc138-02ab-4cfe-b99a-dac2c883c702
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: Overview
+        description:
+          value: '<p>Hourglass was built on a simple belief: that the best technology disappears into the background. We design software that removes friction, accelerates decisions, and gives your team back the one resource no budget can replace time.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: 6f43bb5c-b263-465a-9f57-16948f624748
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: '80'
+        sticky_top: _none
+        padding_top: _none
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: 6f43bb5c-b263-465a-9f57-16948f624748
+      slot: content
+      uuid: d193ecb8-c245-42d6-bc9c-a40e47012d56
+      component_id: sdc.hourglass.mission-vision
+      inputs: {  }
+    -
+      parent_uuid: d193ecb8-c245-42d6-bc9c-a40e47012d56
+      slot: items
+      uuid: 02d93b0d-4ef8-48e6-bb4f-31d301e6e30e
+      component_id: sdc.hourglass.mission-vision-item
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: bd9f5ed3-3c37-47ca-9008-78998701cf72
+            target_type: media
+        title:
+          value: 'Our Mission'
+          format: canvas_html_block
+        description:
+          value: '<p>To empower organizations by removing the friction of manual processes through intelligent software, so teams can focus on the work that actually moves the business forward.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: d193ecb8-c245-42d6-bc9c-a40e47012d56
+      slot: items
+      uuid: 5cc3d4b8-b2db-46c4-9f18-f87b8e178fb3
+      component_id: sdc.hourglass.mission-vision-item
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 0a15bf13-e1bd-4f44-ad60-23d80f68cb80
+            target_type: media
+        title:
+          value: 'Our Vision'
+          format: canvas_html_block
+        description:
+          value: '<p>To become the global standard for enterprise operations software, making efficiency a baseline, not a goal.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: d193ecb8-c245-42d6-bc9c-a40e47012d56
+      slot: items
+      uuid: a170b2f4-db0c-4db7-b939-c9d58f35d157
+      component_id: sdc.hourglass.mission-vision-item
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 6bcc3297-6ca3-484d-a7b2-cccc39b43fcf
+            target_type: media
+        title:
+          value: 'Our Philosophy'
+          format: canvas_html_block
+        description:
+          value: "<p>We believe technology should be invisible. If a system is designed correctly, it feels like a natural extension of your team's workflow, not a tool they have to manage.</p>"
+          format: canvas_html_block
+    -
+      uuid: 3ba432d3-3635-4a67-8781-99462a3193f7
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: _none
+        background: orange-rounded
+        margin_top: '120'
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: 3ba432d3-3635-4a67-8781-99462a3193f7
+      slot: content
+      uuid: 615f3f55-00de-4feb-a0c9-f0a7765f94f0
+      component_id: sdc.hourglass.our-story
+      inputs:
+        body_primary:
+          value: '<p>Hourglass was founded in 2016 by a group of systems engineers and enterprise architects who were tired of bloated, fragmented enterprise software. What started as a single automation tool built in a home office has grown into a trusted global technology partner serving organizations across four continents.</p>'
+          format: canvas_html_block
+        section_title:
+          value: 'Our Story'
+          format: canvas_html_block
+        body_highlight:
+          value: '<p>We chose "Hourglass" because time is the only resource you can''t buy. Our job is to help you use it more effectively.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 615f3f55-00de-4feb-a0c9-f0a7765f94f0
+      slot: card_1
+      uuid: a633ce65-1ce0-4b64-98dd-de07cd6e91f1
+      component_id: sdc.hourglass.photo-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 523bc513-38cb-4678-a1b8-c6cd6dad570d
+            target_type: media
+        caption: 'Prof. Dr. Stefan Seeger'
+    -
+      parent_uuid: 615f3f55-00de-4feb-a0c9-f0a7765f94f0
+      slot: card_2
+      uuid: b0c00430-4ed7-4b49-a611-f9e712ee238f
+      component_id: sdc.hourglass.photo-card
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: f801aa06-a858-4001-9840-f330d05b133c
+            target_type: media
+        caption: 'Dr. Stefan Niehren'
+    -
+      uuid: da019435-e1e6-4350-a37f-75f24cd457ef
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        background: white-translucent
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: da019435-e1e6-4350-a37f-75f24cd457ef
+      slot: content
+      uuid: 2c4a6483-4aff-4ae9-9e33-8b492421669a
+      component_id: sdc.hourglass.history-timeline
+      inputs:
+        section_title:
+          value: 'Milestones'
+          format: canvas_html_block
+    -
+      parent_uuid: 2c4a6483-4aff-4ae9-9e33-8b492421669a
+      slot: slides
+      uuid: 9caa695e-ee3d-420a-a035-788f10c2bb2e
+      component_id: sdc.hourglass.history-timeline-slide
+      inputs:
+        year: '2016'
+        reversed: false
+        description:
+          value: '<p>Hourglass Alpha Launched</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 9caa695e-ee3d-420a-a035-788f10c2bb2e
+      slot: image
+      uuid: 84ad32a6-6fbd-4f16-befe-ad80116bb32e
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 965c4ff0-d023-4cab-978c-a04886fab316
+            target_type: media
+        video_loop: false
+        video_muted: false
+        youtube_url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 2c4a6483-4aff-4ae9-9e33-8b492421669a
+      slot: slides
+      uuid: 96754d23-14d6-40db-96b4-32ea6b97c877
+      component_id: sdc.hourglass.history-timeline-slide
+      inputs:
+        year: '2017'
+        reversed: true
+        description:
+          value: '<p>Secured Series A Funding of $12M</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 96754d23-14d6-40db-96b4-32ea6b97c877
+      slot: image
+      uuid: 4d547ff4-fa63-4f68-a4d2-006a97593920
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b61189e2-2b16-4c7e-a38d-4e849a560612
+            target_type: media
+        video_loop: false
+        video_muted: false
+        youtube_url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 2c4a6483-4aff-4ae9-9e33-8b492421669a
+      slot: slides
+      uuid: 967ce68e-51ac-4130-be04-3fbcad8c853e
+      component_id: sdc.hourglass.history-timeline-slide
+      inputs:
+        year: '2019'
+        reversed: false
+        description:
+          value: '<p>Reached 1 Million Global Users</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 967ce68e-51ac-4130-be04-3fbcad8c853e
+      slot: image
+      uuid: bfc37b3a-dc8e-4c25-b757-018242f85337
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: fd796e10-e77a-48dd-89af-8ad046ffc139
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 967ce68e-51ac-4130-be04-3fbcad8c853e
+      slot: image
+      uuid: 5fb0a016-5cc5-4e34-966f-14785aa4c3e4
+      component_id: sdc.hourglass.media
+      inputs:
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 2c4a6483-4aff-4ae9-9e33-8b492421669a
+      slot: slides
+      uuid: a0bfd616-c4a5-4408-863a-638668839bf3
+      component_id: sdc.hourglass.history-timeline-slide
+      inputs:
+        year: '2020'
+        reversed: true
+        description:
+          value: '<p>Launched Hourglass Core, Our Flagship Enterprise Platform</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: a0bfd616-c4a5-4408-863a-638668839bf3
+      slot: image
+      uuid: 4ec318c5-e112-450b-96e3-1577ea4f4c6e
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 965c4ff0-d023-4cab-978c-a04886fab316
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 2c4a6483-4aff-4ae9-9e33-8b492421669a
+      slot: slides
+      uuid: 0626fead-6b63-440a-bab2-bddb3945e483
+      component_id: sdc.hourglass.history-timeline-slide
+      inputs:
+        year: '2022'
+        reversed: false
+        description:
+          value: '<p>Launched Enterprise B2B Consulting Division</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 0626fead-6b63-440a-bab2-bddb3945e483
+      slot: image
+      uuid: b97837cb-b86a-4844-889b-23ff11bb8b2e
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 0a15bf13-e1bd-4f44-ad60-23d80f68cb80
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 0626fead-6b63-440a-bab2-bddb3945e483
+      slot: image
+      uuid: 2df88810-8243-41a5-8f8d-ff2fbbd54c62
+      component_id: sdc.hourglass.media
+      inputs:
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 2c4a6483-4aff-4ae9-9e33-8b492421669a
+      slot: slides
+      uuid: 49b1dad6-d87c-452b-a0cd-ca69b59eb23f
+      component_id: sdc.hourglass.history-timeline-slide
+      inputs:
+        year: '2023'
+        reversed: true
+        description:
+          value: '<p>Crossed $100M in Annual Recurring Revenue</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 49b1dad6-d87c-452b-a0cd-ca69b59eb23f
+      slot: image
+      uuid: bb602042-4bdb-4777-8248-5accaf9bd639
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 6bcc3297-6ca3-484d-a7b2-cccc39b43fcf
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 49b1dad6-d87c-452b-a0cd-ca69b59eb23f
+      slot: image
+      uuid: 08f61e67-2b12-41a4-9b1f-bb49c8018092
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b61189e2-2b16-4c7e-a38d-4e849a560612
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 49b1dad6-d87c-452b-a0cd-ca69b59eb23f
+      slot: image
+      uuid: 377372af-b967-467c-a3c3-64f650cdbd10
+      component_id: sdc.hourglass.media
+      inputs:
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 2c4a6483-4aff-4ae9-9e33-8b492421669a
+      slot: slides
+      uuid: 5573ec61-9306-4160-94bc-73ab673ccc62
+      component_id: sdc.hourglass.history-timeline-slide
+      inputs:
+        year: '2026'
+        reversed: false
+        description:
+          value: '<p>2026 Introduction of AI-Driven Predictive Operations</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 5573ec61-9306-4160-94bc-73ab673ccc62
+      slot: image
+      uuid: f335eb82-651a-4cc7-bcea-585c34921316
+      component_id: sdc.hourglass.media
+      inputs:
+        image:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b61189e2-2b16-4c7e-a38d-4e849a560612
+            target_type: media
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      parent_uuid: 5573ec61-9306-4160-94bc-73ab673ccc62
+      slot: image
+      uuid: ca33d457-756c-4d13-8a78-e80d3a18498c
+      component_id: sdc.hourglass.media
+      inputs:
+        video_loop: false
+        video_muted: false
+        show_controls: false
+        autoplay_video: false
+    -
+      uuid: 40e6f1fd-e6e8-4664-b2cf-b1de66360ba8
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        padding_top: '120'
+        rounded_top: false
+        padding_bottom: '120'
+    -
+      parent_uuid: 40e6f1fd-e6e8-4664-b2cf-b1de66360ba8
+      slot: content
+      uuid: a8777077-34ad-454a-bcf5-6fc7cc783b12
+      component_id: sdc.hourglass.stats-section
+      inputs:
+        section_title:
+          value: 'Hourglass by the Numbers'
+          format: canvas_html_block
+    -
+      parent_uuid: a8777077-34ad-454a-bcf5-6fc7cc783b12
+      slot: cards
+      uuid: f074148b-4c82-4b10-8e65-54799a2640bb
+      component_id: sdc.hourglass.stat-card
+      inputs:
+        stat: 250+
+        label: 'Full-Stack Experts'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7d81cdde-1b6c-456b-aa4c-3236d41c7006
+            target_type: media
+    -
+      parent_uuid: a8777077-34ad-454a-bcf5-6fc7cc783b12
+      slot: cards
+      uuid: 86920b6f-18b7-4699-927c-58e6d863cf29
+      component_id: sdc.hourglass.stat-card
+      inputs:
+        stat: 40k
+        label: 'Active Enterprise Deployments'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 30c9c36f-f0bc-42b0-b207-b5ef1bf24ff3
+            target_type: media
+    -
+      parent_uuid: a8777077-34ad-454a-bcf5-6fc7cc783b12
+      slot: cards
+      uuid: eb9fecdd-1eff-485d-90ac-82d9678f7f31
+      component_id: sdc.hourglass.stat-card
+      inputs:
+        stat: '12'
+        label: 'Global Tech Hubs'
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8c572013-bdee-4ba1-9a5b-d167950342f1
+            target_type: media
+    -
+      uuid: 90c56f50-dc7f-40b2-8405-81b673c98f13
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: 90c56f50-dc7f-40b2-8405-81b673c98f13
+      slot: content
+      uuid: d89acedb-5d8c-42bb-8fcb-a22725c6a96f
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Contact our sales team'
+        heading_tag: h2
+    -
+      uuid: cc1e2123-b9a6-4eb1-bff8-b0aecee0ecad
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: _none
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '0'
+    -
+      parent_uuid: cc1e2123-b9a6-4eb1-bff8-b0aecee0ecad
+      slot: content
+      uuid: c26c9d33-73e4-4260-98c2-305c5d732f91
+      component_id: sdc.hourglass.team-section
+      inputs: {  }
+    -
+      parent_uuid: c26c9d33-73e4-4260-98c2-305c5d732f91
+      slot: cards
+      uuid: 1455c128-8aaa-448d-b286-077013044acf
+      component_id: sdc.hourglass.team-member-card
+      inputs:
+        name: 'Anya Petrova'
+        role: 'Software Engineer'
+        email: info@company.com
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: b4c3b7eb-93f8-4e55-9a8f-8c5720eec467
+            target_type: media
+        phone: '+49 8821 8210'
+        phone_url: 'tel:+498821821'
+    -
+      parent_uuid: c26c9d33-73e4-4260-98c2-305c5d732f91
+      slot: cards
+      uuid: 96a8ddd6-b56d-47fd-ac0f-3de5bc97e185
+      component_id: sdc.hourglass.team-member-card
+      inputs:
+        name: 'Jian Li'
+        role: 'Product Manager'
+        email: info@company.com
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7ab34a62-8b8f-4a10-a891-37abeb6d00e6
+            target_type: media
+        phone: '+49 8821 8210'
+        phone_url: 'tel:+498821821'
+    -
+      parent_uuid: c26c9d33-73e4-4260-98c2-305c5d732f91
+      slot: cards
+      uuid: fff264fb-4fc6-46d5-b841-a706a0b3683b
+      component_id: sdc.hourglass.team-member-card
+      inputs:
+        name: 'Marcus Webb'
+        role: 'Sales Director'
+        email: info@company.com
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e49f55bf-06d8-47b9-b93b-34d2a30c2c1a
+            target_type: media
+        phone: '+49 8821 8210'
+        phone_url: 'tel:+498821821'
+    -
+      parent_uuid: c26c9d33-73e4-4260-98c2-305c5d732f91
+      slot: cards
+      uuid: 3dc923b5-69fd-4359-a55f-714968b7e907
+      component_id: sdc.hourglass.team-member-card
+      inputs:
+        name: 'Sofia Dubois'
+        role: 'Data Analyst'
+        email: info@company.com
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 21c1b205-269c-47d5-ba4b-a3aa19a32946
+            target_type: media
+        phone: '+49 8821 8210'
+        phone_url: 'tel:+498821821'
+    -
+      uuid: 52de8027-9b91-4eb4-a041-d7fd290fa649
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: default
+        background: _none
+        margin_top: '120'
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: '120'
+        padding_right: _none
+        padding_bottom: _none
+    -
+      parent_uuid: 52de8027-9b91-4eb4-a041-d7fd290fa649
+      slot: content
+      uuid: 14790f9a-fd17-4390-9e34-dbbaa42c8486
+      component_id: sdc.hourglass.contact-cta
+      inputs:
+        cta_body:
+          value: '<p>Ready to optimize your operations? Our consultants work one-on-one with your team to audit your current stack and design a roadmap for the future.</p>'
+          format: canvas_html_block
+        section_title:
+          value: 'Your Needs, Our Expertise'
+          format: canvas_html_block
+        cta_button_url: /contact
+        cta_button_label: 'Request a Consult'
+    -
+      parent_uuid: 14790f9a-fd17-4390-9e34-dbbaa42c8486
+      slot: form
+      uuid: 8b3be3a3-6da5-442c-96f2-085f95f71053
+      component_id: block.webform_block
+      inputs:
+        lazy: false
+        label: Webform
+        redirect: false
+        webform_id: contact_cta
+        default_data: ''
+        label_display: '0'
+  path:
+    -
+      alias: /about-us
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

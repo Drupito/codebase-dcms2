@@ -1,0 +1,1898 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 6469d0c2-d6e0-46b3-ad50-939beb175f2d
+  default_langcode: en
+  depends:
+    f992cc0e-945e-4327-9450-ceb48ec61999: file
+    e0c60dce-4fb0-4e58-bf0e-db1e1d20b84e: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Card components'
+  components:
+    -
+      uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '48'
+        padding_block_start: '64'
+        padding_block_end: '32'
+        section_header: true
+        section_footer: true
+        background_color: muted
+    -
+      parent_uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      slot: header_slot
+      uuid: a553e204-2e45-4a48-91ca-7868df5d275a
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Card components'
+        level: 1
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      slot: main_slot
+      uuid: bbe44edc-36f4-4552-af0a-b6a17bb78bb6
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: bbe44edc-36f4-4552-af0a-b6a17bb78bb6
+      slot: group_slot
+      uuid: 85e82233-e4b6-4d12-b91b-85542124ca6c
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Icon card'
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#icon-card'
+          options: {  }
+    -
+      parent_uuid: bbe44edc-36f4-4552-af0a-b6a17bb78bb6
+      slot: group_slot
+      uuid: 789f1106-2769-4ebc-a92c-2b4a2652ae2d
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Image card'
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#image-card'
+          options: {  }
+    -
+      parent_uuid: bbe44edc-36f4-4552-af0a-b6a17bb78bb6
+      slot: group_slot
+      uuid: b59576f3-12d7-45b6-bc3a-6c2abc8fd004
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Logo card'
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#logo-card'
+          options: {  }
+    -
+      parent_uuid: bbe44edc-36f4-4552-af0a-b6a17bb78bb6
+      slot: group_slot
+      uuid: 07d2324a-16dc-4808-8d59-4a53d57d3d11
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Pricing card'
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#pricing-card'
+          options: {  }
+    -
+      parent_uuid: bbe44edc-36f4-4552-af0a-b6a17bb78bb6
+      slot: group_slot
+      uuid: b3938ac4-de76-41bb-a315-725b340e3534
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Testimonial card'
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#testimonial-card'
+          options: {  }
+    -
+      uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 25-25-25-25
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: header_slot
+      uuid: c4b8fd3c-3f60-455b-8fcd-bc43c159562f
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: c4b8fd3c-3f60-455b-8fcd-bc43c159562f
+      slot: main_slot
+      uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 20130bb9-44d1-4817-b8e4-b52433921b5b
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: icon-card
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 6ff9f2f6-8bf7-47cf-b809-c7f8d3b27e31
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Icon card'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 63800e8d-8ece-47b5-9bee-4ef60c7b1d70
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The icon card component is a card with an optional icon, heading and description. There are many variations.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: main_slot
+      uuid: 8cefca28-e8df-4c88-95a0-0c5316baad49
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: rocket
+        icon_size: large
+        icon_align: center
+        text: 'Your heading here'
+        description:
+          value: '<p>This card uses the default styles.</p>'
+          format: canvas_html_block
+        text_align: center
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: main_slot
+      uuid: 8f967830-0249-4f21-8538-c99180f94609
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: rocket
+        icon_size: large
+        icon_align: center
+        text: 'Your heading here'
+        description:
+          value: '<p>This card uses the default styles with the primary icon style.</p>'
+          format: canvas_html_block
+        text_align: center
+        icon_style: primary
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: main_slot
+      uuid: 24b419fd-8a38-446b-87ae-b3e3ac443220
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: rocket
+        icon_size: medium
+        icon_align: center
+        text: 'Your heading here'
+        description:
+          value: '<p>This card uses the default styles with the primary with background icon style.</p>'
+          format: canvas_html_block
+        text_align: center
+        icon_style: primary_background
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: main_slot
+      uuid: 7b4e32d9-7e06-432a-991b-3a2bc488ad97
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: rocket
+        icon_size: medium
+        icon_align: center
+        text: 'Your heading here'
+        description:
+          value: '<p>This card uses the default styles with the secondary with background icon style.</p>'
+          format: canvas_html_block
+        text_align: center
+        icon_style: secondary_background
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: main_slot
+      uuid: 1eb700e8-77ea-4a2e-b44a-eecd35f09575
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: rocket
+        icon_size: large
+        icon_align: left
+        text: 'Your heading here'
+        description:
+          value: '<p>This card uses the primary background color with the icon and text left aligned.</p>'
+          format: canvas_html_block
+        text_align: left
+        background_color: primary
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: main_slot
+      uuid: efb69967-2fa1-4f5d-a42f-b4662f917276
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: rocket
+        icon_size: large
+        icon_align: right
+        text: 'Your heading here'
+        description:
+          value: '<p>This card uses the secondary background color with the icon right aligned.</p>'
+          format: canvas_html_block
+        text_align: center
+        background_color: secondary
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: main_slot
+      uuid: f1913b77-82fb-44b1-9ef1-0a5ee4d72737
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: rocket
+        icon_size: large
+        icon_align: center
+        text: 'Your heading here'
+        description:
+          value: '<p>This card uses the accent background color.</p>'
+          format: canvas_html_block
+        text_align: center
+        background_color: accent
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: main_slot
+      uuid: 6815cf1e-0424-431c-bf94-733de75316d3
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: rocket
+        icon_size: large
+        icon_align: center
+        text: 'Your heading here'
+        description:
+          value: '<p>This card uses the muted background color.</p>'
+          format: canvas_html_block
+        text_align: center
+        background_color: muted
+    -
+      uuid: 22e888bd-5906-4347-b9a0-045dfce35565
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 25-25-25-25
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '8'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 22e888bd-5906-4347-b9a0-045dfce35565
+      slot: header_slot
+      uuid: c2dabc20-d5cf-4db5-b0f2-517e80a17293
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: c2dabc20-d5cf-4db5-b0f2-517e80a17293
+      slot: main_slot
+      uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      slot: group_slot
+      uuid: 4f93b7bc-889b-4ea2-9a32-3bf3d99cd084
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: image-card
+    -
+      parent_uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      slot: group_slot
+      uuid: 2f8333ff-98f4-4192-95a2-6b680a6bfe89
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Image card'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      slot: group_slot
+      uuid: d7c7caa7-35b9-4bce-bda0-53ea95f7055c
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The image card component is&nbsp;</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: fadeaed4-7e26-464d-a3a8-eab40f1042e7
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 33-33-33
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '0'
+        padding_block_start: '0'
+        padding_block_end: '32'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: fadeaed4-7e26-464d-a3a8-eab40f1042e7
+      slot: header_slot
+      uuid: 8871fc61-2393-48b5-a297-5d5632a57cd2
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Vertical / Framed'
+        level: 2
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: fadeaed4-7e26-464d-a3a8-eab40f1042e7
+      slot: main_slot
+      uuid: 3c8d18d9-3818-4873-8d98-31ca8bb91e54
+      component_id: sdc.mercury.card
+      inputs:
+        style: framed
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: fadeaed4-7e26-464d-a3a8-eab40f1042e7
+      slot: main_slot
+      uuid: f682e006-e15c-4ede-ae7a-220323963b16
+      component_id: sdc.mercury.card
+      inputs:
+        background: default
+        style: framed
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: fadeaed4-7e26-464d-a3a8-eab40f1042e7
+      slot: main_slot
+      uuid: 1c106f37-96ed-4f46-9afe-9cb3dbf06104
+      component_id: sdc.mercury.card
+      inputs:
+        background: accent
+        style: framed
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: fadeaed4-7e26-464d-a3a8-eab40f1042e7
+      slot: main_slot
+      uuid: a8e7eb91-8da1-4e5e-accb-c60720d9884c
+      component_id: sdc.mercury.card
+      inputs:
+        background: primary
+        style: framed
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: fadeaed4-7e26-464d-a3a8-eab40f1042e7
+      slot: main_slot
+      uuid: 31335128-13b5-4a8e-b503-5d17873db408
+      component_id: sdc.mercury.card
+      inputs:
+        background: inverted
+        style: framed
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: fadeaed4-7e26-464d-a3a8-eab40f1042e7
+      slot: main_slot
+      uuid: 788e6eb7-b4dd-4bf7-8ccd-ba30b4de8841
+      component_id: sdc.mercury.card
+      inputs:
+        background: background
+        style: framed
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      uuid: 82f0c6e0-8792-4301-8aa1-a79d5d94843a
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 33-33-33
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '0'
+        padding_block_start: '32'
+        padding_block_end: '32'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 82f0c6e0-8792-4301-8aa1-a79d5d94843a
+      slot: header_slot
+      uuid: 46bb8de7-d7a0-47e3-9211-d801667811a9
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Vertical / Full width'
+        level: 2
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 82f0c6e0-8792-4301-8aa1-a79d5d94843a
+      slot: main_slot
+      uuid: 2c5682df-caac-439a-ac2d-1c697bcda937
+      component_id: sdc.mercury.card
+      inputs:
+        style: full
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: 82f0c6e0-8792-4301-8aa1-a79d5d94843a
+      slot: main_slot
+      uuid: 700d846c-2079-40a1-b3d6-c7c607d63439
+      component_id: sdc.mercury.card
+      inputs:
+        background: default
+        style: full
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: 82f0c6e0-8792-4301-8aa1-a79d5d94843a
+      slot: main_slot
+      uuid: a5f17209-3210-4465-80be-4bbd598a5883
+      component_id: sdc.mercury.card
+      inputs:
+        background: accent
+        style: full
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: 82f0c6e0-8792-4301-8aa1-a79d5d94843a
+      slot: main_slot
+      uuid: 9b303cea-99b4-4838-ad48-d345e4ecca4b
+      component_id: sdc.mercury.card
+      inputs:
+        background: primary
+        style: full
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: 82f0c6e0-8792-4301-8aa1-a79d5d94843a
+      slot: main_slot
+      uuid: a2b058bb-14e4-49eb-ba51-b811b1c0ce3a
+      component_id: sdc.mercury.card
+      inputs:
+        background: inverted
+        style: full
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: 82f0c6e0-8792-4301-8aa1-a79d5d94843a
+      slot: main_slot
+      uuid: 308455a4-72f9-432d-8a77-e26fba60b001
+      component_id: sdc.mercury.card
+      inputs:
+        background: background
+        style: full
+        orientation: vertical
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      uuid: 4f14dc6c-57d7-4eb9-bf4f-03bdb0751795
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 33-33-33
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '0'
+        padding_block_start: '32'
+        padding_block_end: '64'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 4f14dc6c-57d7-4eb9-bf4f-03bdb0751795
+      slot: header_slot
+      uuid: 52de868d-a258-4100-abda-d06ef52ba449
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Horizonal / Framed'
+        level: 2
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 4f14dc6c-57d7-4eb9-bf4f-03bdb0751795
+      slot: main_slot
+      uuid: 4fae7ac6-27b1-47e7-acc3-56bf18b7a22d
+      component_id: sdc.mercury.card
+      inputs:
+        style: framed
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: 4f14dc6c-57d7-4eb9-bf4f-03bdb0751795
+      slot: main_slot
+      uuid: dacda347-bcf0-4c9f-a98b-c81af45d88ef
+      component_id: sdc.mercury.card
+      inputs:
+        background: default
+        style: framed
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: 4f14dc6c-57d7-4eb9-bf4f-03bdb0751795
+      slot: main_slot
+      uuid: b6c1f130-30c7-4d05-9c78-cca25fa6a30d
+      component_id: sdc.mercury.card
+      inputs:
+        background: accent
+        style: framed
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: 4f14dc6c-57d7-4eb9-bf4f-03bdb0751795
+      slot: main_slot
+      uuid: 5a2e0da2-253d-4ec3-a1cd-3798171d1a53
+      component_id: sdc.mercury.card
+      inputs:
+        background: primary
+        style: framed
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: 4f14dc6c-57d7-4eb9-bf4f-03bdb0751795
+      slot: main_slot
+      uuid: e984c872-340f-4de7-8951-c0a4d8fc9706
+      component_id: sdc.mercury.card
+      inputs:
+        background: inverted
+        style: framed
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: 4f14dc6c-57d7-4eb9-bf4f-03bdb0751795
+      slot: main_slot
+      uuid: 4aff8b9c-e166-4538-9fb4-9979b583ada2
+      component_id: sdc.mercury.card
+      inputs:
+        background: background
+        style: framed
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      uuid: c065acba-65b0-43d1-8b01-c37e45438244
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 33-33-33
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '0'
+        padding_block_start: '32'
+        padding_block_end: '64'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: c065acba-65b0-43d1-8b01-c37e45438244
+      slot: header_slot
+      uuid: 77f93e96-c4e1-4148-b4f8-94d99db97eaf
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Horizonal / Full width'
+        level: 2
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: c065acba-65b0-43d1-8b01-c37e45438244
+      slot: main_slot
+      uuid: b9d63652-4d79-47b9-817c-cfa69bbdeee7
+      component_id: sdc.mercury.card
+      inputs:
+        style: full
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: c065acba-65b0-43d1-8b01-c37e45438244
+      slot: main_slot
+      uuid: 8e643936-bbd7-4b1c-97f1-516c449d89f0
+      component_id: sdc.mercury.card
+      inputs:
+        background: default
+        style: full
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: c065acba-65b0-43d1-8b01-c37e45438244
+      slot: main_slot
+      uuid: 3426a3c4-0c3a-4203-86c6-fc885acc0b58
+      component_id: sdc.mercury.card
+      inputs:
+        background: accent
+        style: full
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: c065acba-65b0-43d1-8b01-c37e45438244
+      slot: main_slot
+      uuid: 75f3914c-f504-4dc4-8726-8f4a9d5f9a8a
+      component_id: sdc.mercury.card
+      inputs:
+        background: primary
+        style: full
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: c065acba-65b0-43d1-8b01-c37e45438244
+      slot: main_slot
+      uuid: 7228d142-e5be-4a39-94a3-d04dc790dc4e
+      component_id: sdc.mercury.card
+      inputs:
+        background: inverted
+        style: full
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      parent_uuid: c065acba-65b0-43d1-8b01-c37e45438244
+      slot: main_slot
+      uuid: 8fd0131c-7666-46b3-b2a3-99fa1f7a4300
+      component_id: sdc.mercury.card
+      inputs:
+        background: background
+        style: full
+        orientation: horizontal
+        heading_text: 'This is your card title'
+        level: 3
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/jj-ying-8bghKxNU1j0-unsplash.jpg
+            width: 1200
+            height: 900
+            alt: 'Photo by jjying: https://unsplash.com/photos/purple-and-blue-light-digital-wallpaper-8bghKxNU1j0'
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card
+        text: 'Quaerat laborum rerum dolores dolores dolor qui.'
+        is_text_centered: false
+    -
+      uuid: b036e805-fc18-4299-9a38-b3df09d21a2a
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: b036e805-fc18-4299-9a38-b3df09d21a2a
+      slot: header_slot
+      uuid: 0480db00-db3c-4ca4-99c6-9cf15a6427a3
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 0480db00-db3c-4ca4-99c6-9cf15a6427a3
+      slot: main_slot
+      uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      slot: group_slot
+      uuid: ed18221f-89fd-4057-a3ac-7aecd4f7bd59
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: logo-card
+    -
+      parent_uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      slot: group_slot
+      uuid: 0d6aed63-76f9-4fde-ad20-240580d2c9ad
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Logo card'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      slot: group_slot
+      uuid: f0d00437-9521-46d7-81b3-f5c833cc4de5
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The logo card component is a simple, text-based way to call out a quotation.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: b036e805-fc18-4299-9a38-b3df09d21a2a
+      slot: main_slot
+      uuid: d32932ab-580e-473d-ae9d-1d29fbcc781e
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '6 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: d32932ab-580e-473d-ae9d-1d29fbcc781e
+      slot: main_slot
+      uuid: 74995073-1364-49bc-bf60-077e582cb226
+      component_id: sdc.mercury.card-logo
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/dark.png
+            alt: 'Placeholder brand logo'
+            width: 188
+            height: 113
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card-logo
+        border_radius: small
+    -
+      parent_uuid: d32932ab-580e-473d-ae9d-1d29fbcc781e
+      slot: main_slot
+      uuid: 2dd2c0c8-625f-407f-9cdf-258c1e1b43f6
+      component_id: sdc.mercury.card-logo
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/dark.png
+            alt: 'Placeholder brand logo'
+            width: 188
+            height: 113
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card-logo
+        background_color: muted
+    -
+      parent_uuid: d32932ab-580e-473d-ae9d-1d29fbcc781e
+      slot: main_slot
+      uuid: 06574290-d49c-4e5d-9664-c85266df240b
+      component_id: sdc.mercury.card-logo
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: e0c60dce-4fb0-4e58-bf0e-db1e1d20b84e
+            target_type: media
+        background_color: primary
+        border_radius: small
+    -
+      parent_uuid: d32932ab-580e-473d-ae9d-1d29fbcc781e
+      slot: main_slot
+      uuid: 07d804fd-6b16-4cc4-b173-5137410dd8f6
+      component_id: sdc.mercury.card-logo
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/dark.png
+            alt: 'Placeholder brand logo'
+            width: 188
+            height: 113
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card-logo
+        background_color: secondary
+        border_radius: medium
+    -
+      parent_uuid: d32932ab-580e-473d-ae9d-1d29fbcc781e
+      slot: main_slot
+      uuid: 12a60586-1380-436b-9873-f766572a6269
+      component_id: sdc.mercury.card-logo
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/dark.png
+            alt: 'Placeholder brand logo'
+            width: 188
+            height: 113
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card-logo
+        background_color: accent
+        border_radius: small
+    -
+      uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 25-25-25-25
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '0'
+        padding_block_start: '64'
+        padding_block_end: '64'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      slot: header_slot
+      uuid: d4b67c76-47c5-46c3-bb8e-a66ad083ee1b
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: d4b67c76-47c5-46c3-bb8e-a66ad083ee1b
+      slot: main_slot
+      uuid: 295d3853-d018-43b1-9663-1c70192c9171
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 295d3853-d018-43b1-9663-1c70192c9171
+      slot: group_slot
+      uuid: 87911612-c874-4d1e-8a48-a55bc57d6ae9
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: pricing-card
+    -
+      parent_uuid: 295d3853-d018-43b1-9663-1c70192c9171
+      slot: group_slot
+      uuid: 4f558af7-0cf2-4cf1-9220-26d161dd1353
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Pricing card'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 295d3853-d018-43b1-9663-1c70192c9171
+      slot: group_slot
+      uuid: fda9468f-115c-4ff0-869c-1e8cd5ddd64f
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The pricing card component</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      slot: main_slot
+      uuid: eb0dea24-dc8f-4a1a-8faf-3e472abf0968
+      component_id: sdc.mercury.card-pricing
+      inputs:
+        heading_text: Free
+        description: 'Curabitur nascetur non potenti pede luctus vivamus'
+        symbol_position: before
+        text:
+          value: '<ul> <li>Example item 1</li> <li>Example item 2</li> </ul>'
+          format: canvas_html_block
+        button_label: 'Choose this plan'
+        promote: false
+        price: '0'
+        currency_symbol: $
+    -
+      parent_uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      slot: main_slot
+      uuid: 3b88c31c-98a4-488a-b79a-e25505ab0588
+      component_id: sdc.mercury.card-pricing
+      inputs:
+        heading_text: Pro
+        description: 'Curabitur nascetur non potenti pede luctus vivamus'
+        price: '29'
+        currency_code: USD
+        currency_symbol: $
+        symbol_position: before
+        text:
+          value: '<ul> <li>Example item 1</li> <li>Example item 2</li> </ul>'
+          format: canvas_html_block
+        button_label: 'Choose this plan'
+        promote: true
+    -
+      parent_uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      slot: main_slot
+      uuid: 7fb83697-28cb-42b3-b347-995734a5e36b
+      component_id: sdc.mercury.card-pricing
+      inputs:
+        heading_text: Premium
+        description: 'Curabitur nascetur non potenti pede luctus vivamus'
+        price: '99'
+        currency_code: USD
+        currency_symbol: $
+        symbol_position: before
+        text:
+          value: '<ul> <li>Example item 1</li> <li>Example item 2</li> </ul>'
+          format: canvas_html_block
+        button_label: 'Choose this plan'
+        promote: false
+    -
+      parent_uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      slot: main_slot
+      uuid: 3f40455a-25c8-4afc-8a4a-c0b18e1a5866
+      component_id: sdc.mercury.card-pricing
+      inputs:
+        heading_text: Enterprise
+        description: 'Curabitur nascetur non potenti pede luctus vivamus'
+        symbol_position: before
+        text:
+          value: '<ul> <li>Example item 1</li> <li>Example item 2</li> </ul>'
+          format: canvas_html_block
+        button_label: 'Contact sales'
+        promote: false
+    -
+      uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 50-50
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: header_slot
+      uuid: 623e2e7e-a7d1-4a99-ac2a-cdcd7094631d
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 623e2e7e-a7d1-4a99-ac2a-cdcd7094631d
+      slot: main_slot
+      uuid: 0d50d8b6-191e-4fab-a74b-503df255e7fd
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 0d50d8b6-191e-4fab-a74b-503df255e7fd
+      slot: group_slot
+      uuid: 7ff65d7d-a018-452b-bcdd-7eea1cc7a888
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: testimonial-card
+    -
+      parent_uuid: 0d50d8b6-191e-4fab-a74b-503df255e7fd
+      slot: group_slot
+      uuid: 5177e807-6ad9-4cc7-a30b-ea2301c8a283
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Testimonial card'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 0d50d8b6-191e-4fab-a74b-503df255e7fd
+      slot: group_slot
+      uuid: f3b3cc1f-b2db-41d3-935c-e3522f7a6311
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The testimonial card component provides for a quotation, citation name and citation source, as well as an optional image. It has two styles: default and inverted.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 460475a4-4664-4def-8c51-2928fc3e9c6c
+      component_id: sdc.mercury.card-testimonial
+      inputs:
+        text: 'My career’s guidance was crucial in helping me understand the tech industry landscape and ultimately secure my role.'
+        cite_name: 'Isiah Julio'
+        cite_text: 'Engineer, Technical Services'
+        align: center
+        style: default
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/portrait.png
+            alt: Placeholder
+            width: 100
+            height: 100
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card-testimonial
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 8773bfc5-6e42-4bb7-b1da-d3b239d3826f
+      component_id: sdc.mercury.card-testimonial
+      inputs:
+        text: 'My career’s guidance was crucial in helping me understand the tech industry landscape and ultimately secure my role.'
+        cite_name: 'Isiah Julio'
+        cite_text: 'Engineer, Technical Services'
+        align: center
+        style: inverted
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/portrait.png
+            alt: Placeholder
+            width: 100
+            height: 100
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.card-testimonial
+  path:
+    -
+      alias: /card-components
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

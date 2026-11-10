@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: e10021d1-866a-4555-8910-04009f239dd6
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    3b7cc64e-4c05-4b2e-9064-dc17ed0f57fb: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Plans
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 3b7cc64e-4c05-4b2e-9064-dc17ed0f57fb
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

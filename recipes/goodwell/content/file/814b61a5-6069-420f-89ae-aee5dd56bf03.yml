@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 814b61a5-6069-420f-89ae-aee5dd56bf03
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: first_home_2.png
+  uri:
+    -
+      value: 'public://2026-05/b0291a85da2a2657e4618fa93b2e522016718656-%25281%2529_0.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1044249
+  status:
+    -
+      value: true

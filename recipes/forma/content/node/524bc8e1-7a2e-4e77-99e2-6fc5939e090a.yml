@@ -1,0 +1,56 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 524bc8e1-7a2e-4e77-99e2-6fc5939e090a
+  bundle: article
+  default_langcode: en
+  depends:
+    d038d79f-6ef0-4991-8d40-2e275b4cb6c5: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Why We Focus on Timeless Design Over Temporary Trends'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /why-we-focus-timeless-design-over-temporary-trends
+      langcode: en
+  field_author:
+    -
+      value: 'Alice Liu'
+  field_content:
+    -
+      value: '<p>Every few years, a new aesthetic sweeps through interiors. Curves replace hard edges. Arches reappear in doorways. A particular shade of green becomes ubiquitous in kitchen cabinetry. Then, gradually, it passes — and the homes designed around it begin to look like a specific moment in time rather than a place someone truly lives.</p><p>At Forma, we have made a deliberate choice to build our practice around timeless design. Not because we are indifferent to what is contemporary, but because we believe our clients deserve better than a home with an expiry date.</p><h2>Trends are a symptom, not a solution</h2><p>Design trends spread quickly and are adopted widely precisely because they feel like answers. They offer a ready-made visual language, a sense of confidence that the choice is correct because others are making it too. But a trend, by definition, is a collective response to a particular cultural moment — and cultural moments pass. What feels fresh today can feel dated within a decade, sometimes sooner.</p><p>Timeless design asks a different question. Rather than asking what is popular now, it asks what is true about how this person lives, what they value, and what will still feel right for them in twenty years. Those answers are always specific to the individual, which is precisely why timeless homes never look like one another.</p><h2>Simplicity outlasts novelty</h2><p>The architecture and interiors that age most gracefully tend to share certain qualities: clarity of form, honest use of materials, spaces planned around how people actually move and gather. These qualities are not exciting in the way a design trend is exciting. They do not photograph dramatically for social media. But they create homes that remain liveable, comfortable, and genuinely beautiful across decades of changing tastes.</p><p>Complexity, by contrast, tends to accelerate ageing. The more a design relies on a specific decorative language — a particular hardware finish, a signature tile pattern, a fashionable fixture — the more visible it becomes when that language falls out of currency.</p><h2>Investment follows longevity</h2><p>There is also a practical dimension. Homes designed for longevity require less intervention over time. When the architecture is resolved and the material palette considered, clients are not compelled to renovate simply because the space has come to feel outdated. The savings are real, and so is the reduced disruption to daily life.</p><p>We also believe that clients should be able to evolve a space gradually — updating soft furnishings, artwork, and accessories as their tastes and lives change — without the underlying architecture working against them. A timeless framework gives people that flexibility. A trend-driven one rarely does.</p><h2>Our commitment</h2><p>When we begin a project, we are not thinking about what is on the covers of design magazines this season. We are thinking about who you are, how you live, and what kind of home will still feel like yours a generation from now. That is the standard we hold ourselves to, and it is the reason we build the way we do.</p>'
+      format: content_format
+  field_description:
+    -
+      value: 'Every few years, a new aesthetic sweeps through interiors. Curves replace hard edges. Arches reappear in doorways. A particular shade of green becomes ubiquitous in kitchen cabinetry. Then, gradually, it passes — and the homes designed around it begin to look like a specific moment in time rather than a place someone truly lives.'
+  field_featured_image:
+    -
+      entity: d038d79f-6ef0-4991-8d40-2e275b4cb6c5
+  field_seo_analysis:
+    -
+      status: '0'
+      focus_keyword: ''
+      title: ''
+      description: ''

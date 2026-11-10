@@ -1,0 +1,47 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Card Team
+group: Card
+status: stable
+description: "Team member card with circular photo, name, role, description and social links. All fields are optional — empty ones are hidden automatically."
+props:
+  type: object
+  properties:
+
+    photo:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: Photo
+
+    name:
+      type: string
+      title: Name
+      examples:
+        - "Sarah Bennett"
+
+    role:
+      type: string
+      title: Role / Job title
+      examples:
+        - "Chief Executive Officer"
+
+    description:
+      type: string
+      title: Description
+      description: "Short summary text."
+      default: ""
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - "<p>Leads company direction and focuses on building long-term trust.</p>"
+
+    facebook_url:
+      type: string
+      title: Facebook URL
+
+    twitter_url:
+      type: string
+      title: X (Twitter) URL
+
+    linkedin_url:
+      type: string
+      title: LinkedIn URL

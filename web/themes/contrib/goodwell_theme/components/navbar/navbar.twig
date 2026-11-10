@@ -1,0 +1,83 @@
+{% set bg = background | default('light') %}
+
+<header
+  class="dst-navbar dst-navbar--{{ bg }}{{ sticky | default(true) ? ' dst-navbar--sticky' : '' }}"
+  data-navbar
+>
+
+  {# ── Top bar ─────────────────────────────────────── #}
+  {% if show_top_bar | default(true) and (top_bar_phone or top_bar_email) %}
+    <div class="dst-navbar__topbar">
+      <div class="dst-navbar__topbar-inner">
+        {% if top_bar_phone %}
+          <a class="dst-navbar__topbar-item" href="tel:{{ top_bar_phone | replace({' ': '', '(': '', ')': '', '-': ''}) }}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.72 6.72l1.79-1.79a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/>
+            </svg>
+            {{ top_bar_phone }}
+          </a>
+        {% endif %}
+        {% if top_bar_email %}
+          <a class="dst-navbar__topbar-item" href="mailto:{{ top_bar_email }}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            {{ top_bar_email }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {# ── Main nav ─────────────────────────────────────── #}
+  <div class="dst-navbar__main">
+    <div class="dst-navbar__inner">
+
+      {# Logo #}
+      <div class="dst-navbar__logo">
+        {% block logo %}{% endblock %}
+      </div>
+
+      {# Desktop navigation #}
+      <nav class="dst-navbar__nav" aria-label="Main navigation">
+        {% block navigation %}{% endblock %}
+      </nav>
+
+      {# CTA button #}
+      {% if cta_label and cta_url %}
+        <a class="dst-navbar__cta" href="{{ cta_url }}">
+          {{ cta_label }}
+        </a>
+      {% endif %}
+
+      {# Mobile hamburger #}
+      <button
+        class="dst-navbar__hamburger"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="dst-navbar-mobile"
+        data-navbar-toggle
+      >
+        <span class="dst-navbar__hamburger-line"></span>
+        <span class="dst-navbar__hamburger-line"></span>
+        <span class="dst-navbar__hamburger-line"></span>
+      </button>
+
+    </div>
+  </div>
+
+  {# ── Mobile drawer — reuses the same navigation slot ─ #}
+  <div class="dst-navbar__mobile" id="dst-navbar-mobile" hidden data-navbar-mobile>
+    <nav aria-label="Mobile navigation">
+      {{ block('navigation') }}
+    </nav>
+    {% if cta_label and cta_url %}
+      <a class="dst-navbar__cta dst-navbar__cta--mobile" href="{{ cta_url }}">
+        {{ cta_label }}
+      </a>
+    {% endif %}
+  </div>
+
+</header>

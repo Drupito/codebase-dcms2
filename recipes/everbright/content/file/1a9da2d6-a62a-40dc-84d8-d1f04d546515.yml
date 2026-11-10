@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1a9da2d6-a62a-40dc-84d8-d1f04d546515
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: ant-rozetsky-KhmJnxGrlWM-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-05/ant-rozetsky-KhmJnxGrlWM-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 121586
+  status:
+    -
+      value: true

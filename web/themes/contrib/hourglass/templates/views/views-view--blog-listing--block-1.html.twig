@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Blog Listing block view wrapper.
+ * Delegates row rendering to views-view-unformatted--blog-listing--block-1.html.twig.
+ *
+ * Variables:
+ * - rows:   Rendered rows (unformatted style handles the featured + grid split).
+ * - pager:  Pager links.
+ */
+#}
+<div class="c-blog-listing-view">
+
+  {% if rows %}
+    {{ rows }}
+  {% else %}
+    <div class="c-blog-listing-view__empty">
+      <p>No blog posts found.</p>
+    </div>
+  {% endif %}
+
+  {% if pager %}
+    <div class="c-blog-listing-view__pager">
+      {{ pager }}
+    </div>
+  {% endif %}
+
+</div>

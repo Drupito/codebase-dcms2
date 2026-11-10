@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: b56d7c4e-e637-4ec9-a322-7d14181f260d
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: Group.svg
+  uri:
+    -
+      value: 'public://2026-05/Group.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 2846
+  status:
+    -
+      value: true

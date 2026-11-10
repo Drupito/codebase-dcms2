@@ -1,0 +1,22 @@
+{% set divider =
+  html_cva(
+    base: ['m-0 w-80/100 border-0 border-t'],
+    variants: {
+      color: {
+        black: 'border-black',
+        primary: 'border-primary',
+        secondary: 'border-secondary',
+        accent: 'border-accent',
+        muted: 'border-muted'
+      }
+    }
+  )
+%}
+
+<hr
+  class="{{
+  divider.apply({
+    color: color|default('black')
+  })
+  }}"
+/>

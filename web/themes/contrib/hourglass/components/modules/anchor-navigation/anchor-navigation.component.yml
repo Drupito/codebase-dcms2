@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: "Anchor Navigation"
+group: Modules
+status: stable
+description: "Sticky horizontal navigation bar with smooth scroll and scroll-spy active state."
+props:
+  type: object
+  properties:
+    extra_classes:
+      type: string
+      title: "Extra CSS Classes"
+slots:
+  links:
+    title: Links
+    description: "Anchor Nav Link items placed inside this navigation bar."

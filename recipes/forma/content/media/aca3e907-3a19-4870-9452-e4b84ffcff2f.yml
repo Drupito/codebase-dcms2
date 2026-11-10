@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: aca3e907-3a19-4870-9452-e4b84ffcff2f
+  bundle: image
+  default_langcode: en
+  depends:
+    e6e6648b-a668-46d9-b85c-5cc4fc0118ee: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Frame-14176_2.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Two people in hard hats working on a construction site.'
+      title: ''
+      width: 601
+      height: 801
+      entity: e6e6648b-a668-46d9-b85c-5cc4fc0118ee

@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Expertise Card — tall image, orange heading, description.
+ *
+ * Props:
+ * - media: Canvas image object { src, alt }.
+ * - heading: Card title (renders in orange).
+ * - description: Card body text.
+ */
+#}
+{{ attach_library('hourglass/expertise-card') }}
+
+<div class="c-expertise-card {{ extra_classes|default('') }}">
+
+  {% if media %}
+    <div class="c-expertise-card__image">
+      {% include 'hourglass:media' with { image: media, extra_classes: 'c-expertise-card__media' } %}
+    </div>
+  {% endif %}
+
+  <div class="c-expertise-card__content">
+    {% if heading %}
+      <h5 class="c-expertise-card__heading">{{ heading }}</h5>
+    {% endif %}
+    {% if description %}
+      <p class="c-expertise-card__description">{{ description }}</p>
+    {% endif %}
+  </div>
+
+</div>

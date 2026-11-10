@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Template for the Stats Section component.
+ *
+ * Props:
+ * - section_title: Section heading (CKEditor).
+ *
+ * Slots:
+ * - cards: Stat Card atoms. JS shows ≤3 as a grid, 4+ as a Splide slider.
+ */
+#}
+{{ attach_library('hourglass/stats-section') }}
+
+<section class="c-stats-section {{ extra_classes|default('') }}">
+
+  {% if section_title %}
+    <div class="c-stats-section__header">
+      <h2 class="c-stats-section__title">{{ section_title|raw }}</h2>
+    </div>
+  {% endif %}
+
+  {# Flat slot — always visible to Canvas editor. JS hides this when >3 cards. #}
+  <div class="c-stats-section__source js-ss-source">
+    {{ cards }}
+  </div>
+
+  {# Splide viewport — revealed by JS only when card count exceeds 3. #}
+  <div class="c-stats-section__viewport js-ss-viewport" aria-hidden="true">
+    <div class="splide c-stats-section__splide js-ss-splide" aria-label="Stats Slider">
+      <div class="splide__track">
+        <ul class="splide__list"></ul>
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 84c8a075-a9ea-4a01-9897-1d4fc0e14cbb
+  bundle: image
+  default_langcode: en
+  depends:
+    4845a53d-4600-466d-b36c-0473eb2ecae1: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: pawel-czerwinski-T5VUBvCYqKk-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'A close up of a white object with wavy lines'
+      title: ''
+      width: 1920
+      height: 1280
+      entity: 4845a53d-4600-466d-b36c-0473eb2ecae1

@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 30877dcf-820b-43de-a416-f35245ae07e1
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    e2775adc-3cf3-4514-bf97-90fdf87bcbcf: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Privacy Policy'
+  menu_name:
+    -
+      value: footer-legal
+  link:
+    -
+      title: null
+      options: {  }
+      target_uuid: e2775adc-3cf3-4514-bf97-90fdf87bcbcf
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

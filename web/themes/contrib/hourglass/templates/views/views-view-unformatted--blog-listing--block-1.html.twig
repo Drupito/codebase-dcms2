@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Unformatted rows for the Blog Listing block display.
+ * First row → full-width featured layout.
+ * Remaining rows → 3-column card grid.
+ *
+ * Variables:
+ * - rows: Array of rendered node rows (each has .content).
+ */
+#}
+{% if rows %}
+  <div class="c-blog-listing-view__featured">
+    {{ rows[0].content }}
+  </div>
+
+  {% if rows|length > 1 %}
+    <div class="c-blog-listing-view__grid">
+      {% for row in rows %}
+        {% if not loop.first %}
+          {{ row.content }}
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endif %}

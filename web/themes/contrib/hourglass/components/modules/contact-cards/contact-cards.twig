@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Template for the Contact Cards section.
+ *
+ * Slots:
+ * - cards: Contact Card atoms (typically three — phone, email, CTA).
+ */
+#}
+{{ attach_library('hourglass/contact-cards') }}
+
+<section class="c-contact-cards {{ extra_classes|default('') }}">
+  <div class="c-contact-cards__inner">
+    {{ cards }}
+  </div>
+</section>

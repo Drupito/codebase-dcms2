@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 769efd47-dce0-4433-a742-57df21764629
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: pexels-miguel-delima-1419393-12475586.jpg
+  uri:
+    -
+      value: 'public://2026-06/pexels-miguel-delima-1419393-12475586.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 425876
+  status:
+    -
+      value: true

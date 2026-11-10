@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b4c2117f-8244-425f-990d-e1fe42ad6dd8
+  bundle: image
+  default_langcode: en
+  depends:
+    eac02746-02dc-4d49-b6ea-584c9737c959: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: girl_walking_happily.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Girl Walking Happily Image'
+      title: ''
+      width: 1859
+      height: 1065
+      entity: eac02746-02dc-4d49-b6ea-584c9737c959

@@ -1,0 +1,28 @@
+# AI machine-translation endpoints. These return suggested target values for a
+# set of source strings supplied by the editor; they never mutate stored content.
+canvas_translate_ai.translate:
+  path: '/canvas-translate/api/items/canvas_page/{canvas_page}/{langcode}/ai-translate'
+  defaults:
+    _controller: '\Drupal\canvas_translate_ai\Controller\AiTranslateController::translate'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    canvas_page: \d+
+  methods: [POST]
+  options:
+    parameters:
+      canvas_page:
+        type: 'entity:canvas_page'
+    no_cache: TRUE
+
+canvas_translate_ai.translate_config:
+  path: '/canvas-translate/api/config/{type}/{id}/{langcode}/ai-translate'
+  defaults:
+    _controller: '\Drupal\canvas_translate_ai\Controller\AiTranslateController::translateConfig'
+  requirements:
+    _permission: 'translate canvas content'
+    _csrf_request_header_token: 'TRUE'
+    type: 'content_template|page_region|page_variant'
+  methods: [POST]
+  options:
+    no_cache: TRUE

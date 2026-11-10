@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 172e10eb-e795-4c6f-a04b-ae7211a4440b
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    72f642ec-6212-434e-9984-26ec3b4f11d8: file
+default:
+  entity_id:
+    -
+      uuid: 72f642ec-6212-434e-9984-26ec3b4f11d8
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/sadiq-sonalkar-OcRG-NU8kbo-unsplash.jpg'
+  x:
+    -
+      value: 960
+  'y':
+    -
+      value: 720
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

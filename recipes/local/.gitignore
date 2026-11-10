@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# PhpStorm
+.idea/
+
+# VS Code
+ .vscode/
+
+# Claude
+.claude/
+.claude.json
+

@@ -1,0 +1,129 @@
+################
+# GitLabCI template for Drupal projects.
+#
+# This template is designed to give any Contrib maintainer everything they need to test, without requiring modification.
+# It is also designed to keep up to date with Core Development automatically through the use of include files that can be centrally maintained.
+# As long as you include the project, ref and three files below, any future updates added by the Drupal Association will be used in your
+# pipelines automatically. However, you can modify this template if you have additional needs for your project.
+# The full documentation is on https://project.pages.drupalcode.org/gitlab_templates/
+################
+
+# For information on alternative values for 'ref' see https://project.pages.drupalcode.org/gitlab_templates/info/templates-version/
+# To test a Drupal 7 project, change the first include filename from .main.yml to .main-d7.yml
+include:
+  - project: $_GITLAB_TEMPLATES_REPO
+    ref: $_GITLAB_TEMPLATES_REF
+    file:
+      - '/includes/include.drupalci.main.yml'
+      - '/includes/include.drupalci.variables.yml'
+      - '/includes/include.drupalci.workflows.yml'
+#
+################
+# Pipeline configuration variables are defined with default values and descriptions in the file
+# https://git.drupalcode.org/project/gitlab_templates/-/blob/main/includes/include.drupalci.variables.yml
+# Uncomment the lines below if you want to override any of the variables. The following is just an example.
+################
+variables:
+  # This module ships no CSS of its own to lint.
+  SKIP_STYLELINT: '1'
+  SKIP_ESLINT: '1'
+  # The built SPA bundle is not ours to spell check.
+  _CSPELL_IGNORE_PATHS: 'extension/dist/*'
+  # Lint jobs pass, keep them that way.
+  _CSPELL_ALLOW_FAILURE: '0'
+  _PHPCS_ALLOW_FAILURE: '0'
+  _PHPSTAN_ALLOW_FAILURE: '0'
+  # Core's node_modules push the composer artifact over the upload limit (413),
+  # and nothing here uses them: ESLint/Stylelint are skipped, Playwright runs
+  # its own npm ci.
+  _COMPOSER_YARN_INSTALL: '0'
+# Other overrides available, e.g.:
+#   OPT_IN_TEST_NEXT_MAJOR: '1'
+#   _CURL_TEMPLATES_REF: 'main'
+
+################
+# Playwright end-to-end tests (custom job; not part of the template above).
+#
+# The template runs PHPUnit/PHPCS/PHPStan/ESLint. Playwright additionally needs a
+# running Drupal site and a browser, so this job serves the codebase the
+# template's `composer` job produced and installs a browser. The suite uses
+# Drupal core's @drupal/playwright (like canvas); see tests/e2e/fixture.ts.
+# (A composer-required canvas release already ships its built UI, so no build.)
+#
+# The suite passes locally (ddev); this job is required to pass. If the first
+# real pipeline trips an environment assumption (marked CEILING below), fix the
+# environment rather than re-adding allow_failure.
+################
+playwright:
+  stage: test
+  # Reuse the built project (Drupal + canvas + canvas_translate) from the template.
+  needs:
+    - composer
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  # CEILING: default DA PHP image. Assumes (a) Node is present (DA php images
+  # bundle it for eslint/nightwatch) and (b) `sudo -u www-data php` resolves php
+  # on the sudo PATH. If either fails, use canvas's image
+  # (ghcr.io/drupal-canvas/drupal-testing) instead.
+  image:
+    name: $_CONFIG_DOCKERHUB_ROOT/php-$PHP_VERSION-$PHP_IMAGE_VARIANT:$PHP_IMAGE_TAG
+  variables:
+    DRUPAL_TEST_BASE_URL: http://localhost
+    DRUPAL_TEST_DB_URL: sqlite://localhost/sites/default/files/.ht.sqlite
+    # @drupal/playwright runs the Drupal CLI from the docroot...
+    DRUPAL_TEST_DRUPAL_ROOT: $CI_PROJECT_DIR/$_WEB_ROOT
+    # ...as the user Apache serves as, so the sandbox files (notably the SQLite
+    # DB) are owned by www-data and writable by the served site. This is how
+    # canvas stays green; @drupal/playwright's exec applies the sudo.
+    DRUPAL_TEST_WEBSERVER_USER: www-data
+    # The template symlinks the module under modules/custom (not contrib); the
+    # setup-file path is resolved relative to the docroot above.
+    CANVAS_TRANSLATE_SETUP_FILE: modules/custom/canvas_translate/tests/src/TestSite/CanvasTranslateTestSetup.php
+  before_script:
+    # Serve the docroot with Apache at http://localhost (as the template test jobs do).
+    - rm -rf /var/www/html && ln -s $CI_PROJECT_DIR/$_WEB_ROOT /var/www/html
+    - mkdir -p $CI_PROJECT_DIR/$_WEB_ROOT/sites/default/files
+    - chmod -R 777 $CI_PROJECT_DIR/$_WEB_ROOT/sites
+    - chown -R www-data:www-data $CI_PROJECT_DIR
+    - service apache2 start
+  script:
+    # The checkout at $CI_PROJECT_DIR is the module root, so tests/e2e lives here.
+    - cd $CI_PROJECT_DIR/tests/e2e
+    - npm ci
+    # CEILING: apt-installs browser deps into the image; needs root plus network.
+    - npx playwright install --with-deps chromium
+    - npx playwright test
+  artifacts:
+    when: on_failure
+    expire_in: 1 day
+    paths:
+      - tests/e2e/playwright-report/
+      - tests/e2e/test-results/
+
+################
+# Build assets check (custom job): fails if extension/dist is stale.
+#
+# The Canvas page extension in extension/ builds (tsup) to the committed
+# extension/dist. Rebuild it and fail if the result differs from what's checked
+# in, so a fresh `npm run build` + commit is never forgotten.
+################
+build-assets:
+  stage: validate
+  needs: []
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  image:
+    name: $_CONFIG_DOCKERHUB_ROOT/php-$PHP_VERSION-$PHP_IMAGE_VARIANT:$PHP_IMAGE_TAG
+  script:
+    - cd $CI_PROJECT_DIR/extension && npm ci && npm run build
+    - cd $CI_PROJECT_DIR
+    - git config --global --add safe.directory $CI_PROJECT_DIR
+    # --intent-to-add so newly generated (untracked) files also show in the diff.
+    - git add --intent-to-add extension/dist
+    - |
+      git diff --exit-code -- extension/dist || {
+        echo "extension/dist is out of date. Run 'npm run build' in extension/ and commit the result.";
+        exit 1;
+      }

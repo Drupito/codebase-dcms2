@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_menu_block.footer-legal
+    - canvas.component.block.system_menu_block.footer-nav
+    - canvas.component.sdc.hourglass.footer
+  theme:
+    - hourglass
+id: hourglass.footer
+region: footer
+theme: hourglass
+component_tree:
+  '0:22222222-2222-4000-a000-000000000003':
+    uuid: 22222222-2222-4000-a000-000000000003
+    component_id: sdc.hourglass.footer
+    component_version: 8967fb01f47c566f
+    inputs:
+      twitter_url: 'https://x.com/'
+      linkedin_url: 'https://www.linkedin.com/'
+      youtube_url: 'https://www.youtube.com/'
+  '0:legal_links:0:22222222-2222-4000-a000-000000000002':
+    parent_uuid: 22222222-2222-4000-a000-000000000003
+    slot: legal_links
+    uuid: 22222222-2222-4000-a000-000000000002
+    component_id: block.system_menu_block.footer-legal
+    component_version: 22dcd60b154c3106
+    inputs:
+      label: 'Footer Legal'
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: false
+  '0:nav_links:0:22222222-2222-4000-a000-000000000001':
+    parent_uuid: 22222222-2222-4000-a000-000000000003
+    slot: nav_links
+    uuid: 22222222-2222-4000-a000-000000000001
+    component_id: block.system_menu_block.footer-nav
+    component_version: f30cf484c6a94d65
+    inputs:
+      label: 'Footer Navigation'
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: false

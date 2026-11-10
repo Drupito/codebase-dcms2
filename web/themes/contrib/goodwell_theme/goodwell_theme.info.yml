@@ -1,0 +1,19 @@
+name: Goodwell
+type: theme
+'base theme': false
+libraries:
+  - goodwell_theme/global
+logo: Logo.svg
+description: 'Front-end theme for the Goodwell site template.'
+core_version_requirement: ^11.3
+regions:
+  content: Content
+  header: Header
+  footer: Footer
+dependencies:
+  - 'cva:cva'
+
+# Information added by Drupal.org packaging script on 2026-09-25
+version: '1.0.0'
+project: 'goodwell_theme'
+datestamp: 1790342749

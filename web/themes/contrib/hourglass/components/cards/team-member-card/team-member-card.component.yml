@@ -1,0 +1,49 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Team Member Card
+group: Cards
+status: stable
+description: 'Person card with a square photo, hover overlay with social links, name, role, phone, and email.'
+props:
+  type: object
+  properties:
+    media:
+      $ref: 'json-schema-definitions://canvas.module/image'
+      title: 'Photo'
+    name:
+      type: string
+      title: 'Full Name'
+      examples:
+        - 'Anya Petrova'
+    role:
+      type: string
+      title: 'Job Title'
+      examples:
+        - 'Software Engineer'
+    phone:
+      type: string
+      title: 'Phone Number'
+      examples:
+        - '+49 8821 8210'
+    phone_url:
+      type: string
+      title: 'Phone Link (tel:)'
+      examples:
+        - 'tel:+498821821'
+    email:
+      type: string
+      title: 'Email Address'
+      examples:
+        - 'info@company.com'
+    email_url:
+      type: string
+      title: 'Email Link (mailto:)'
+      examples:
+        - 'mailto:info@company.com'
+    linkedin_url:
+      type: string
+      title: 'LinkedIn URL'
+      examples:
+        - 'https://linkedin.com/in/username'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

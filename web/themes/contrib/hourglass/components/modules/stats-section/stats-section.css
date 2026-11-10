@@ -1,0 +1,208 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section ────────────────────────────────────────────────────────────── */
+
+.c-stats-section {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 0;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+
+.c-stats-section__header {
+  padding: 0 120px;
+  width: 100%;
+}
+
+.c-stats-section__title {
+  font-family: var(
+    --Heading-H2-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: 40px;
+  font-weight: var(--Weights-Regular, 400);
+  line-height: 48px;
+  letter-spacing: -0.3px;
+  color: var(--gray-black, #000);
+  margin: 0;
+  max-width: 750px;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* ── Source (Canvas drop zone + static grid) ─────────────────────────────── */
+
+.c-stats-section__source {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 120px;
+  min-height: 220px;
+  width: 100%;
+}
+
+/* Equal-width columns when JS confirms ≤3 items */
+.c-stats-section__source.is-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: unset;
+}
+
+/* Ensure stat cards inside grid/source fill their column */
+.c-stats-section__source .c-stat-card {
+  flex: 1 0 calc(33.333% - 20px);
+  min-width: 200px;
+}
+
+/* Empty drop-zone placeholder */
+.c-stats-section__source:not(:has(.c-stat-card)) {
+  border: 2px dashed #e0e0e0;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Splide viewport (4+ cards) ──────────────────────────────────────────── */
+
+.c-stats-section__viewport {
+  display: none;
+  width: 100%;
+}
+
+.c-stats-section__viewport[aria-hidden="false"],
+.c-stats-section__viewport:not([aria-hidden]) {
+  display: block;
+}
+
+/* ── Splide overrides ────────────────────────────────────────────────────── */
+
+.c-stats-section__splide .splide__track {
+  overflow: visible;
+}
+
+.c-stats-section .splide__slide {
+  padding: 0;
+  border: none;
+}
+
+/* Arrows */
+.c-stats-section .splide__arrow {
+  background: #f76707;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  opacity: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.c-stats-section .splide__arrow svg {
+  fill: #fff;
+  width: 16px;
+  height: 16px;
+}
+
+.c-stats-section .splide__arrow--prev {
+  left: 72px;
+}
+
+.c-stats-section .splide__arrow--next {
+  right: 72px;
+}
+
+.c-stats-section .splide__arrow:hover {
+  background: #e8590c;
+}
+
+/* Pagination dots */
+.c-stats-section .splide__pagination {
+  bottom: -32px;
+}
+
+.c-stats-section .splide__pagination__page {
+  background: #e0e0e0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 1;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.c-stats-section .splide__pagination__page.is-active {
+  background: #f76707;
+  transform: scale(1.4);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 1200px) {
+  .c-stats-section__header,
+  .c-stats-section__source {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-stats-section {
+    gap: 56px;
+    padding: 80px 0;
+  }
+
+  .c-stats-section__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .c-stats-section__source.is-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .c-stats-section .splide__arrow--prev {
+    left: 32px;
+  }
+  .c-stats-section .splide__arrow--next {
+    right: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-stats-section {
+    gap: 40px;
+    padding: 60px 0;
+  }
+
+  .c-stats-section__header,
+  .c-stats-section__source {
+    padding: 0 24px;
+  }
+
+  .c-stats-section__source.is-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .c-stats-section__title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .c-stats-section .splide__arrow--prev {
+    left: 8px;
+  }
+  .c-stats-section .splide__arrow--next {
+    right: 8px;
+  }
+}

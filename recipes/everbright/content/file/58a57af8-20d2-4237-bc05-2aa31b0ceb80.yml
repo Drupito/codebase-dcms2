@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 58a57af8-20d2-4237-bc05-2aa31b0ceb80
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: img2.jpg
+  uri:
+    -
+      value: 'public://2026-05/img2.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 253356
+  status:
+    -
+      value: true

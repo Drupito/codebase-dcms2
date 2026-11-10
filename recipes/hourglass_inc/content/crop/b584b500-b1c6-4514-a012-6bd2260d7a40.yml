@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: b584b500-b1c6-4514-a012-6bd2260d7a40
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    d8ba048b-85c9-420d-91f9-6bf04b330c1f: file
+default:
+  entity_id:
+    -
+      uuid: d8ba048b-85c9-420d-91f9-6bf04b330c1f
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/harvard_university.png'
+  x:
+    -
+      value: 100
+  'y':
+    -
+      value: 26
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

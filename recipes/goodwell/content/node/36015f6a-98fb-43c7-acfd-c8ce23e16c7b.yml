@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 36015f6a-98fb-43c7-acfd-c8ce23e16c7b
+  bundle: plans
+  default_langcode: en
+  depends:
+    4b7edac8-ce58-413e-aefa-d52a1712c095: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Home Insurance'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /home-insurance
+      langcode: en
+  field_body:
+    -
+      value: '<h2>About Home Insurance</h2><p>Your home is one of your most valuable investments, and protecting it is essential. Home insurance helps cover the costs associated with damage to your property, personal belongings, and certain liabilities that may arise from unforeseen events such as fire, storms, theft, or accidental damage.</p><p>At Goodwell Insurance, we offer home insurance solutions designed to help homeowners and tenants safeguard what matters most. Whether you own a house, apartment, or rental property, our flexible plans provide the protection you need for greater peace of mind.</p><h2>What''s Included</h2><ul><li data-list-item-id="ec52ae1d65cbafd0ce8bc35e12bf9b677">Building and property structure coverage</li><li data-list-item-id="e78ebfd5565e73ceaad40f838ae3ac023">Protection against fire and smoke damage</li><li data-list-item-id="e7ac61460e4d2f11bb08655519bedd3b8">Coverage for theft and burglary</li><li data-list-item-id="ef4e19b258471200670e3d843f10a4faf">Storm, flood, and natural disaster protection</li><li data-list-item-id="ed26f49a07c849680831cc1746cce0d72">Personal belongings coverage</li><li data-list-item-id="e08583d45fed9ea0542ca09d8caa42180">Accidental damage protection options</li><li data-list-item-id="e06006b98c53d9082b1fc44ddd44b232a">Liability coverage for property-related incidents</li><li data-list-item-id="ee2705c4dd366d5ee3bfeee4a2c76f85a">Temporary accommodation support after major damage</li><li data-list-item-id="e6c82b505c7a0c9f004bf613998433915">Fast claims assistance</li><li data-list-item-id="ec2da0aa67e0947c05b5362e1807a7dc0">Flexible coverage options</li></ul><h2>How It Works</h2><ol><li data-list-item-id="e17ab7cc84c3b6fc32a206062e2e9853b">Choose the coverage level that suits your property.</li><li data-list-item-id="e4984e6685c6e6a667ac95c3e4698899b">Provide details about your home and belongings.</li><li data-list-item-id="e035f9ae3c93812f2ac7fed952e310f8c">Customize your policy with optional protections.</li><li data-list-item-id="eabdbb01f2b869955e81ee1aab6f99937">Complete your application and activate coverage.</li><li data-list-item-id="ea4215ec43f0691d1a0fa8105de14d2d7">Enjoy ongoing protection for your home and possessions.</li></ol><h2>Why It Matters</h2><p>Unexpected events can result in costly repairs, replacements, and financial stress. Home insurance helps protect your property and belongings while reducing the financial impact of unforeseen incidents. With the right coverage in place, you can focus on enjoying your home rather than worrying about potential risks.</p><h2>Why Choose Goodwell Insurance</h2><ul><li data-list-item-id="ee9da460980ba9ccfa779b5e271007655">Flexible coverage options</li><li data-list-item-id="e895cd35e473e96499a57d60efd945628">Affordable premiums</li><li data-list-item-id="edb315e229cea2c454bc4bfb53b61e17a">Comprehensive property protection</li><li data-list-item-id="e7cba0f2e7df3654b76e749de412c4b36">Simple claims process</li><li data-list-item-id="eb8903a81cc202e473546ff76510f3ee7">Reliable customer support</li><li data-list-item-id="eed635a4c7b513009ba1195345033cdf1">Protection for homeowners and tenants</li><li data-list-item-id="e979e228382f12a1233bef05b844f779d">Easy online policy management</li></ul><h2>Get Started</h2><p>Protect your home and everything inside it with a home insurance plan from Goodwell Insurance. Explore your options and secure your property today.</p>'
+      format: content_format
+      summary: 'Protect your home, belongings, and peace of mind with comprehensive coverage against unexpected events and property damage.'
+  field_button:
+    -
+      uri: 'internal:/'
+      title: 'View Details'
+      options: {  }
+  field_featured_image:
+    -
+      entity: 4b7edac8-ce58-413e-aefa-d52a1712c095

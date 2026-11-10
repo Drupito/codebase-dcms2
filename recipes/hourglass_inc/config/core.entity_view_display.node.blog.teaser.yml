@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blog.body
+    - field.field.node.blog.field_featured
+    - field.field.node.blog.field_hero_image
+    - field.field.node.blog.field_linkedin_url
+    - field.field.node.blog.field_published_date
+    - field.field.node.blog.field_read_time
+    - field.field.node.blog.field_twitter_url
+    - field.field.node.blog.field_youtube_url
+    - node.type.blog
+  module:
+    - datetime
+    - user
+id: node.blog.teaser
+targetEntityType: node
+bundle: blog
+mode: teaser
+content:
+  field_published_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_read_time:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  body: true
+  field_featured: true
+  field_hero_image: true
+  field_linkedin_url: true
+  field_twitter_url: true
+  field_youtube_url: true
+  links: true

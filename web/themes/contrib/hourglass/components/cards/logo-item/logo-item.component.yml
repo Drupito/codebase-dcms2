@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Logo Item
+group: Atoms
+status: stable
+description: 'A single logo image with optional caption for use inside Logo Carousel.'
+props:
+  type: object
+  properties:
+    image:
+      type: object
+      title: 'Logo Image'
+      $ref: json-schema-definitions://canvas.module/image
+      examples:
+        - src: 'https://example.com/logo.png'
+          alt: 'Company logo'
+          width: 200
+          height: 80
+    label:
+      type: string
+      title: 'Caption / Company Name'
+      examples:
+        - 'Novartis'

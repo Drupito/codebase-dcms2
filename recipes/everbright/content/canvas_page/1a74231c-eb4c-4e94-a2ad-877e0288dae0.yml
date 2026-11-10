@@ -1,0 +1,638 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 1a74231c-eb4c-4e94-a2ad-877e0288dae0
+  default_langcode: en
+  depends:
+    fbf68842-80ec-488f-b28e-c4eee25d61b6: file
+    2b0e08bb-893a-4a0c-b235-865db4380d5a: media
+    00cf8713-13fd-40fc-884e-5c54c6ba8aad: file
+    7853e2b6-09ec-4e77-aa98-622c4d8bdebd: media
+    500c85a7-2b08-4fb8-b6a9-d69dec9408bd: file
+    8bcc1ac2-084a-43a6-9aab-c44a136e04ff: media
+    65a7ea53-cf61-48e3-9880-73cb5c016790: file
+    44821970-4e16-4986-9d99-c25a9ed71a31: media
+    4845a53d-4600-466d-b36c-0473eb2ecae1: file
+    84c8a075-a9ea-4a01-9897-1d4fc0e14cbb: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: About
+  description:
+    -
+      value: 'At everbright, we revitalize brands, infusing them with the energy and appeal they need to connect and thrive.'
+  components:
+    -
+      uuid: 210afe40-cf76-4825-be99-cd3a9c2aa3e2
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 210afe40-cf76-4825-be99-cd3a9c2aa3e2
+      slot: main_slot
+      uuid: 2e5ef21d-e6d8-4f66-9c86-3bb6d4b639d8
+      component_id: sdc.everbright_theme.hero-side-by-side
+      inputs:
+        hero_flex_gap: large
+        justify_content: center
+        hero_flex_direction_mobile: vertical
+        padding_block_start: '0'
+        padding_block_end: '0'
+        image_size: '1:1'
+        image_position: right
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 2b0e08bb-893a-4a0c-b235-865db4380d5a
+            target_type: media
+    -
+      parent_uuid: 2e5ef21d-e6d8-4f66-9c86-3bb6d4b639d8
+      slot: hero_slot
+      uuid: 2317e736-806c-4e51-a15a-27a8faf90a9d
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>We revitalize brands, infusing them with the energy and appeal they need to connect and thrive.</p>'
+          format: canvas_html_block
+        text_size: text-5xl
+        text_color: default
+    -
+      uuid: 41815592-a2f8-4e17-ae24-ad0d3e322d88
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 60%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '96'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 41815592-a2f8-4e17-ae24-ad0d3e322d88
+      slot: main_slot
+      uuid: 025dd418-40f9-4cb5-a7cf-eec859f1e0b1
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: 'Our vision'
+        text_color: default
+    -
+      parent_uuid: 41815592-a2f8-4e17-ae24-ad0d3e322d88
+      slot: main_slot
+      uuid: acb2a25f-4a4f-47c0-a9ba-15e70577f39c
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Building unforgettable brands'
+        level: 2
+        text_size: heading-responsive-5xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 41815592-a2f8-4e17-ae24-ad0d3e322d88
+      slot: main_slot
+      uuid: 3b777f5d-7563-4677-9ee8-1b5a9c9204ef
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: "<p>Everbright stands as a beacon of creativity, renowned for its ability to weave compelling brand narratives through cutting-edge design. Each venture we undertake showcases our unwavering commitment to creativity, capturing the distinct essence of our clients' visions.&nbsp;</p><p>Under the guidance of our team of forward-thinking artists and strategic experts, Everbright seamlessly blends creative prowess with marketing acumen, establishing profound connections with audiences worldwide. We celebrate the individuality of each brand, inviting you to explore a realm where every element is thoughtfully considered and meticulously executed.</p>"
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 3f5757a5-6f37-4306-96d1-1f7bd893b569
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '96'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 3f5757a5-6f37-4306-96d1-1f7bd893b569
+      slot: header_slot
+      uuid: c91d0525-4715-436a-b2c7-9a114c9a9535
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: Leadership
+        text_color: default
+    -
+      parent_uuid: 3f5757a5-6f37-4306-96d1-1f7bd893b569
+      slot: header_slot
+      uuid: 98d30752-f490-4390-814b-34ffb5db5305
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Meet the Founders'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 3f5757a5-6f37-4306-96d1-1f7bd893b569
+      slot: main_slot
+      uuid: 4d9618bd-3c73-4216-889e-ef177a7fecfc
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: 4d9618bd-3c73-4216-889e-ef177a7fecfc
+      slot: group_slot
+      uuid: 7d06ed30-e2d5-42b3-8896-9fc508b5bece
+      component_id: sdc.everbright_theme.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 7853e2b6-09ec-4e77-aa98-622c4d8bdebd
+            target_type: media
+        size: '4:3'
+    -
+      parent_uuid: 4d9618bd-3c73-4216-889e-ef177a7fecfc
+      slot: group_slot
+      uuid: cfe78889-6dcd-457b-9522-5836dd6c9ebb
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Naomi Singh'
+        level: 3
+        text_size: heading-responsive-3xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 4d9618bd-3c73-4216-889e-ef177a7fecfc
+      slot: group_slot
+      uuid: f055df59-0a3c-4f7c-aeb1-c1b5706b2858
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Chief Creative Officer &amp; Co-Founder</p>'
+          format: canvas_html_block
+        text_size: text-sm
+        text_color: default
+    -
+      parent_uuid: 4d9618bd-3c73-4216-889e-ef177a7fecfc
+      slot: group_slot
+      uuid: b84c39bd-6c76-4dc6-a105-9204831984e9
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: "<p>With a sharp eye for emerging design trends and a profound understanding of consumer dynamics, Naomi spearheads Everbright's creative endeavors, ensuring that every brand story we craft is both captivating and genuine.</p>"
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 3f5757a5-6f37-4306-96d1-1f7bd893b569
+      slot: main_slot
+      uuid: 600261c5-9312-4798-b451-f643b37a8531
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: 600261c5-9312-4798-b451-f643b37a8531
+      slot: group_slot
+      uuid: c3ab8966-260a-4c4d-a4fc-7cf2f4cd9e8d
+      component_id: sdc.everbright_theme.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 8bcc1ac2-084a-43a6-9aab-c44a136e04ff
+            target_type: media
+        size: '4:3'
+    -
+      parent_uuid: 600261c5-9312-4798-b451-f643b37a8531
+      slot: group_slot
+      uuid: 0ea18ae8-8ea5-4475-a2cb-bddb41c18a80
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Javier Hayes'
+        level: 3
+        text_size: heading-responsive-3xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 600261c5-9312-4798-b451-f643b37a8531
+      slot: group_slot
+      uuid: d9971eb8-97a0-4c10-b26b-4d6f8d73db39
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Strategy Director &amp; Co-Founder</p>'
+          format: canvas_html_block
+        text_size: text-sm
+        text_color: default
+    -
+      parent_uuid: 600261c5-9312-4798-b451-f643b37a8531
+      slot: group_slot
+      uuid: b281722e-d1bd-4813-8e04-5ac53b4d961a
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Javier masterfully combines groundbreaking design with strategic foresight, steering Everbright Branding towards impactful storytelling that resonates deeply with audiences.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 422a806f-4513-458f-9514-ef6dc88cbba2
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '3 columns'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 422a806f-4513-458f-9514-ef6dc88cbba2
+      slot: header_slot
+      uuid: 8e71ffa5-b590-43ee-873f-473536cf271a
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: 'Our talented team'
+        text_color: default
+    -
+      parent_uuid: 422a806f-4513-458f-9514-ef6dc88cbba2
+      slot: header_slot
+      uuid: 9ef4d033-6428-4724-98ec-ff5d0b92782b
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'The Creative Minds Behind the Magic'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 422a806f-4513-458f-9514-ef6dc88cbba2
+      slot: main_slot
+      uuid: b04e818d-6f87-425a-b6ac-9a20f5f32401
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: b04e818d-6f87-425a-b6ac-9a20f5f32401
+      slot: group_slot
+      uuid: f56a2f23-149e-488b-be91-4112dce053a8
+      component_id: sdc.everbright_theme.image
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/george-pagan-iii-FBwW4Xu3FTs-unsplash.jpg
+            alt: 'Black-and-white striped wallpaper'
+            width: 1920
+            height: 1415
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.everbright_theme.image
+        size: '1:1'
+    -
+      parent_uuid: b04e818d-6f87-425a-b6ac-9a20f5f32401
+      slot: group_slot
+      uuid: 00cd4565-dea3-4bf9-8c0a-fe2b10bbb61b
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Naomi Singh'
+        level: 3
+        text_size: heading-responsive-3xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: b04e818d-6f87-425a-b6ac-9a20f5f32401
+      slot: group_slot
+      uuid: 15ff173e-ced1-4a06-a7df-50c0528acbdd
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Chief Creative Officer &amp; Co-Founder</p>'
+          format: canvas_html_block
+        text_size: text-sm
+        text_color: default
+    -
+      parent_uuid: b04e818d-6f87-425a-b6ac-9a20f5f32401
+      slot: group_slot
+      uuid: a90ea693-6b1c-48aa-bc82-aff93a143886
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: "<p>With a sharp eye for emerging design trends and a profound understanding of consumer dynamics, Naomi spearheads Everbright's creative endeavors, ensuring that every brand story we craft is both captivating and genuine.</p>"
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 422a806f-4513-458f-9514-ef6dc88cbba2
+      slot: main_slot
+      uuid: bb5271d1-002f-4170-a8fc-0050af7ac19b
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: bb5271d1-002f-4170-a8fc-0050af7ac19b
+      slot: group_slot
+      uuid: c430c9fb-fc56-42d8-ba85-16f2cf21f432
+      component_id: sdc.everbright_theme.image
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/george-pagan-iii-FBwW4Xu3FTs-unsplash.jpg
+            alt: 'Black-and-white striped wallpaper'
+            width: 1920
+            height: 1415
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.everbright_theme.image
+        size: '1:1'
+    -
+      parent_uuid: bb5271d1-002f-4170-a8fc-0050af7ac19b
+      slot: group_slot
+      uuid: cfdae73d-dacf-4fe3-8aa5-98c7abca4113
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Naomi Singh'
+        level: 3
+        text_size: heading-responsive-3xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: bb5271d1-002f-4170-a8fc-0050af7ac19b
+      slot: group_slot
+      uuid: 99a4acbf-e375-485d-bab3-1c9683051f62
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Chief Creative Officer &amp; Co-Founder</p>'
+          format: canvas_html_block
+        text_size: text-sm
+        text_color: default
+    -
+      parent_uuid: bb5271d1-002f-4170-a8fc-0050af7ac19b
+      slot: group_slot
+      uuid: 0128e39e-5e7a-4de0-a856-3a0a221bc00a
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: "<p>With a sharp eye for emerging design trends and a profound understanding of consumer dynamics, Naomi spearheads Everbright's creative endeavors, ensuring that every brand story we craft is both captivating and genuine.</p>"
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 422a806f-4513-458f-9514-ef6dc88cbba2
+      slot: main_slot
+      uuid: c626c1a0-af86-40a4-80e9-0118038866ea
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: c626c1a0-af86-40a4-80e9-0118038866ea
+      slot: group_slot
+      uuid: 2a179a50-96a0-4188-ac07-94553a37a179
+      component_id: sdc.everbright_theme.image
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/george-pagan-iii-FBwW4Xu3FTs-unsplash.jpg
+            alt: 'Black-and-white striped wallpaper'
+            width: 1920
+            height: 1415
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.everbright_theme.image
+        size: '1:1'
+    -
+      parent_uuid: c626c1a0-af86-40a4-80e9-0118038866ea
+      slot: group_slot
+      uuid: 5fd0279a-9128-4ed5-b88e-cd939d37ab9b
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Naomi Singh'
+        level: 3
+        text_size: heading-responsive-3xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: c626c1a0-af86-40a4-80e9-0118038866ea
+      slot: group_slot
+      uuid: 5e8fb503-b3bd-4c90-8ff1-fd444a7ae62b
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Chief Creative Officer &amp; Co-Founder</p>'
+          format: canvas_html_block
+        text_size: text-sm
+        text_color: default
+    -
+      parent_uuid: c626c1a0-af86-40a4-80e9-0118038866ea
+      slot: group_slot
+      uuid: 453efd11-983f-495a-ba93-351bf58c84ef
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: "<p>With a sharp eye for emerging design trends and a profound understanding of consumer dynamics, Naomi spearheads Everbright's creative endeavors, ensuring that every brand story we craft is both captivating and genuine.</p>"
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: fa462d26-7014-4763-8401-5659ee54567b
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: fa462d26-7014-4763-8401-5659ee54567b
+      slot: main_slot
+      uuid: acd14ea9-df79-40f8-95fe-119e9ae9b2e7
+      component_id: sdc.everbright_theme.hero-side-by-side
+      inputs:
+        hero_flex_gap: large
+        justify_content: center
+        hero_flex_direction_mobile: vertical
+        padding_block_start: '0'
+        padding_block_end: '0'
+        image_size: '1:1'
+        image_position: left
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 44821970-4e16-4986-9d99-c25a9ed71a31
+            target_type: media
+    -
+      parent_uuid: acd14ea9-df79-40f8-95fe-119e9ae9b2e7
+      slot: hero_slot
+      uuid: 9a4d0547-12aa-4179-866b-8f11333eebe3
+      component_id: sdc.everbright_theme.blockquote
+      inputs:
+        text:
+          value: '<p>We are a collective of designers, strategists, and technologists who work with organizations of all sizes to build meaningful brands and digital experiences.&nbsp;</p>'
+          format: canvas_html_block
+        cite_name: 'Antonia Tran'
+        cite_text: 'Chief Visionary'
+        border: false
+    -
+      uuid: ccfeccf1-013e-4660-83f3-92b1c090f941
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '96'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: ccfeccf1-013e-4660-83f3-92b1c090f941
+      slot: main_slot
+      uuid: f1209bac-56a6-48dd-a01b-36f89b8f47c1
+      component_id: sdc.everbright_theme.hero-billboard
+      inputs:
+        height: large
+        flex_position: hero-center
+        overlay_opacity: 0%
+        object_position: center
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 84c8a075-a9ea-4a01-9897-1d4fc0e14cbb
+            target_type: media
+        overlap_navbar: false
+    -
+      parent_uuid: f1209bac-56a6-48dd-a01b-36f89b8f47c1
+      slot: hero_slot
+      uuid: e8118b2c-4093-4726-82f7-01ea660140c2
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: 'Strategic partnerships'
+        text_color: default
+    -
+      parent_uuid: f1209bac-56a6-48dd-a01b-36f89b8f47c1
+      slot: hero_slot
+      uuid: 266b6cf8-d8ee-4f1e-b19c-9a5b4c4465a8
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Partner with us'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: f1209bac-56a6-48dd-a01b-36f89b8f47c1
+      slot: hero_slot
+      uuid: 26bae52d-50bc-4293-9732-49ef58dc9c4c
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: "<p>We're eager to embark on new ventures. Share your aspirations with us, and together, we'll craft something truly remarkable that exceeds all expectations.</p>"
+          format: canvas_html_block
+        text_size: text-xl
+        text_color: default
+    -
+      parent_uuid: f1209bac-56a6-48dd-a01b-36f89b8f47c1
+      slot: hero_slot
+      uuid: 674d2901-910a-4660-802f-488c147321dc
+      component_id: sdc.everbright_theme.button
+      inputs:
+        variant: secondary
+        label: 'Book a session'
+        mobile_width: false
+        icon_first: false
+        disabled: false
+  path:
+    -
+      alias: /about
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

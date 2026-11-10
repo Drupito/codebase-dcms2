@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4e4b246d-3c9b-4f13-a01b-b258daff1782
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: woman_bun.png
+  uri:
+    -
+      value: 'public://2026-06/woman_bun.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 246240
+  status:
+    -
+      value: true

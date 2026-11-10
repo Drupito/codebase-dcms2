@@ -1,0 +1,29 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Simple Hero
+group: Section
+status: stable
+description: "Full-width hero with a background image, plain-text heading, and subheading."
+props:
+  type: object
+  required:
+    - heading
+  properties:
+
+    image:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: Background image
+
+    heading:
+      type: string
+      title: Heading
+      description: "Main headline — plain text, no formatting."
+      examples:
+        - "Protect what matters most"
+
+    subheading:
+      type: string
+      title: Subheading
+      description: "Short supporting text below the heading."
+      examples:
+        - "Simple, affordable insurance plans for every family."

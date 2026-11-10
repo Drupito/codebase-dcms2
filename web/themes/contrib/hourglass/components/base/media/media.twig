@@ -1,0 +1,107 @@
+{#
+/**
+ * @file
+ * Media atom — images, mp4 videos, or YouTube embeds.
+ *
+ * When both `youtube_url` and `image` are set, the image is shown as a
+ * poster/thumbnail. JS (video-feature or media.js) injects the iframe +
+ * autoplay when the play control is triggered.
+ */
+#}
+
+{% set _img_src = (image and image.src) ? image.src : (image_url|default('')) %}
+{% set _img_alt = (image and image.alt is defined) ? image.alt|default('') : (image_alt|default('')) %}
+{% set _img_width = (image and image.width) ? image.width : null %}
+{% set _img_height = (image and image.height) ? image.height : null %}
+{% set _img_srcset = _img_src ? _img_src|toSrcSet(_img_width) : null %}
+{% set _vid_src = (video and video.src) ? video.src : '' %}
+
+{# ── Convert any YouTube URL format to embed URL ──────────────────────────── #}
+{% set _yt_embed = '' %}
+{% if youtube_url %}
+  {% if 'youtube.com/embed/' in youtube_url %}
+    {% set _yt_embed = youtube_url|split('?')[0] %}
+  {% elseif 'youtube.com/watch' in youtube_url %}
+    {% set _yt_embed = 'https://www.youtube.com/embed/' ~ youtube_url|split('v=')[1]|split('&')[0]|split('#')[0] %}
+  {% elseif 'youtu.be/' in youtube_url %}
+    {% set _yt_embed = 'https://www.youtube.com/embed/' ~ youtube_url|split('youtu.be/')[1]|split('?')[0]|split('#')[0] %}
+  {% elseif 'youtube.com/shorts/' in youtube_url %}
+    {% set _yt_embed = 'https://www.youtube.com/embed/' ~ youtube_url|split('shorts/')[1]|split('?')[0]|split('#')[0] %}
+  {% else %}
+    {% set _yt_embed = youtube_url %}
+  {% endif %}
+{% endif %}
+
+<div class="c-base-media {{ extra_classes|default('') }}">
+  <div class="c-base-media__inner">
+    <div class="c-base-media__content">
+
+      {% if _yt_embed %}
+        {#
+          Store the clean embed URL in data-yt-src.
+          JS will inject `?enablejsapi=1&autoplay=1` when the play button fires.
+          If a thumbnail image is also set, render it as the poster — the iframe
+          is not present in the DOM yet (created by JS on demand).
+          If no thumbnail, render the iframe immediately (no autoplay).
+        #}
+        <div class="c-base-media__embed js-yt-embed"
+             data-yt-src="{{ _yt_embed }}">
+          {% if _img_src %}
+            {# Thumbnail mode — show poster, iframe injected by JS on play #}
+            <img
+              class="c-base-media__image js-yt-poster"
+              src="{{ _img_src }}"
+              {% if _img_srcset %}
+                srcset="{{ _img_srcset }}"
+                sizes="auto 100vw"
+              {% endif %}
+              alt="{{ _img_alt }}"
+              loading="{{ loading|default('lazy') }}"
+              {% if _img_width %}width="{{ _img_width }}"{% endif %}
+              {% if _img_height %}height="{{ _img_height }}"{% endif %}
+            >
+          {% else %}
+            {# No thumbnail — load iframe straight away, play via postMessage #}
+            <iframe
+              class="c-base-media__iframe"
+              src="{{ _yt_embed }}?enablejsapi=1"
+              title="Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="{{ loading|default('lazy') }}"
+            ></iframe>
+          {% endif %}
+        </div>
+
+      {% elseif _vid_src %}
+        <video
+          class="c-base-media__video"
+          src="{{ _vid_src }}"
+          {% if autoplay_video %}autoplay{% endif %}
+          {% if video_loop %}loop{% endif %}
+          {% if video_muted %}muted{% endif %}
+          {% if show_controls %}controls{% endif %}
+          playsinline
+        ></video>
+
+      {% elseif _img_src %}
+        <picture>
+          <img
+            class="c-base-media__image"
+            src="{{ _img_src }}"
+            {% if _img_srcset %}
+              srcset="{{ _img_srcset }}"
+              sizes="auto 100vw"
+            {% endif %}
+            alt="{{ _img_alt }}"
+            loading="{{ loading|default('lazy') }}"
+            {% if _img_width %}width="{{ _img_width }}"{% endif %}
+            {% if _img_height %}height="{{ _img_height }}"{% endif %}
+          >
+        </picture>
+      {% endif %}
+
+    </div>
+  </div>
+</div>

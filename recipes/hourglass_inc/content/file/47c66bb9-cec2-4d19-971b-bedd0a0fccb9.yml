@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 47c66bb9-cec2-4d19-971b-bedd0a0fccb9
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: f4f30ea8382f126999e73f6d8dc491310fcdb76d.png
+  uri:
+    -
+      value: 'public://2026-05/f4f30ea8382f126999e73f6d8dc491310fcdb76d.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 2088
+  status:
+    -
+      value: true

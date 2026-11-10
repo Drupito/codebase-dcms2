@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Gallery Item (thumbnail entry in the sidebar) ───────────────────────── */
+
+.c-gallery-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  outline: none;
+}
+
+.c-gallery-item:focus-visible {
+  outline: 2px solid #f76707;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Thumb wrap (positions the active bar relative to the image) ─────────── */
+
+.c-gallery-item__thumb-wrap {
+  position: relative;
+}
+
+/* ── Active indicator bar ────────────────────────────────────────────────── */
+
+.c-gallery-item__bar {
+  position: absolute;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #f76707;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.c-gallery-item.is-active .c-gallery-item__bar {
+  opacity: 1;
+}
+
+/* ── Thumbnail image container ───────────────────────────────────────────── */
+
+.c-gallery-item__thumb-img {
+  position: relative;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  transition: opacity 0.2s ease;
+}
+
+.c-gallery-item:not(.is-active) .c-gallery-item__thumb-img {
+  opacity: 0.7;
+}
+
+.c-gallery-item:hover .c-gallery-item__thumb-img {
+  opacity: 1;
+}
+
+/* Media fill inside thumbnail */
+.c-gallery-item__thumb-img > *,
+.c-gallery-item__thumb-img .c-base-media,
+.c-gallery-item__thumb-img .c-base-media__inner,
+.c-gallery-item__thumb-img .c-base-media__content,
+.c-gallery-item__thumb-img picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.c-gallery-item__thumb-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Label ───────────────────────────────────────────────────────────────── */
+
+.c-gallery-item__label {
+  font-family: var(--Body-B3-fontFamily, 'Geist', 'Zalando Sans', sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Hidden caption (data only — read by JS) ─────────────────────────────── */
+
+.c-gallery-item__caption {
+  display: none;
+}

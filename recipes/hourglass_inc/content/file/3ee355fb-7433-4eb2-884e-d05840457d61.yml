@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 3ee355fb-7433-4eb2-884e-d05840457d61
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: Hero-services-products-(1).png
+  uri:
+    -
+      value: 'public://2026-05/Hero-services-products-(1).png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 2144095
+  status:
+    -
+      value: true

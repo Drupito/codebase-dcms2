@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Overview Section
+group: Organisms
+status: stable
+description: 'Circular image on left with feature list on right. Place a Heading with Description component above for the eyebrow and heading.'
+props:
+  type: object
+  properties:
+    media:
+      type: object
+      title: 'Circular Image'
+      $ref: json-schema-definitions://canvas.module/image
+      examples:
+        - src: 'https://example.com/overview.jpg'
+          alt: ''
+          width: 500
+          height: 500
+    features_label:
+      type: string
+      title: 'Features Sub-label'
+      examples:
+        - 'Why Choose Us'
+slots:
+  features:
+    title: 'Feature Items'
+    description: 'Place Overview Feature components here.'
+

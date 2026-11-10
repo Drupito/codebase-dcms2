@@ -1,0 +1,81 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 6f4033bd-9cc4-4dda-b62f-bd6c5f9a847d
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Page not found'
+  components:
+    -
+      uuid: 452e4dd5-947b-4c66-b45a-13ac8d15c407
+      component_id: sdc.mercury.section
+      inputs:
+        width: 80%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 452e4dd5-947b-4c66-b45a-13ac8d15c407
+      slot: header_slot
+      uuid: b5c5f37c-ff90-4f28-8340-9b951e05aeba
+      component_id: sdc.mercury.heading
+      inputs:
+        level: 1
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: center
+        heading_text: 'Page not found'
+    -
+      parent_uuid: 452e4dd5-947b-4c66-b45a-13ac8d15c407
+      slot: main_slot
+      uuid: 7e1ebe07-6705-43e5-a470-f07bf13c48d8
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        items_align: center
+        flex_align: center
+        radius: sm
+        padding: sm
+        flex_gap: xl
+    -
+      parent_uuid: 7e1ebe07-6705-43e5-a470-f07bf13c48d8
+      slot: group_slot
+      uuid: 290dcfbb-5b5e-4e2f-b66b-ff7b651170e7
+      component_id: sdc.mercury.icon
+      inputs:
+        icon: smiley-x-eyes
+        icon_size: extra-large
+    -
+      parent_uuid: 7e1ebe07-6705-43e5-a470-f07bf13c48d8
+      slot: group_slot
+      uuid: cb750a79-d176-491b-a8a7-f4081ecedcad
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p class="text-align-center">We can''t find the page you''re looking for.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+  path:
+    -
+      alias: /404
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

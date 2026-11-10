@@ -1,0 +1,33 @@
+{% set eyebrow_text_color = text_color|default('default') %}
+
+{# Normalize eyebrow_classes - handle both array and string formats #}
+{% set additional_classes = eyebrow_classes|default('') %}
+{% if additional_classes is iterable %}
+  {% set additional_classes = additional_classes|join(' ') %}
+{% endif %}
+
+{% set eyebrow_variants =
+  html_cva(
+    base: ['mb-0', 'tracking-xl font-sans text-sm leading-none font-bold uppercase'],
+    variants: {
+      textColor: {
+        default: 'text-foreground',
+        inverted: 'text-background',
+        muted: 'text-accent'
+      }
+    }
+  )
+%}
+
+<p
+  class="{{
+  eyebrow_variants.apply(
+    {
+      textColor: eyebrow_text_color
+    },
+    additional_classes
+  )
+  }}"
+>
+  {{ eyebrow_text }}
+</p>

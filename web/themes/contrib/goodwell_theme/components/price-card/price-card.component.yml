@@ -1,0 +1,91 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Price Card
+group: Card
+status: stable
+description: "Pricing card with label, price, primary CTA and optional secondary link. Used on plan detail pages."
+props:
+  type: object
+  properties:
+
+    # ── Price ──────────────────────────────────────────
+    price_label:
+      type: string
+      title: Price label
+      description: "Small text above the price (e.g. 'Starting Price')."
+      default: "Starting Price"
+      examples:
+        - "Starting Price"
+
+    price:
+      type: string
+      title: Price
+      description: "The price value to display (e.g. '$147.00')."
+      examples:
+        - "$147.00"
+
+    badge_text:
+      type: string
+      title: Badge
+      description: "Optional promotional badge shown above the price (e.g. '10% off first year')."
+      examples:
+        - "10% off first year"
+
+    # ── Primary CTA ────────────────────────────────────
+    cta_label:
+      type: string
+      title: CTA button label
+      default: "Start your plan"
+      examples:
+        - "Start your plan"
+
+    cta_url:
+      type: string
+      title: CTA button URL
+      format: uri-reference
+      examples:
+        - "/get-a-quote"
+
+    # ── Secondary link ─────────────────────────────────
+    secondary_label:
+      type: string
+      title: Secondary link label
+      examples:
+        - "Talk to sales"
+
+    secondary_url:
+      type: string
+      title: Secondary link URL
+      format: uri-reference
+      examples:
+        - "/contact"
+
+    # ── Appearance ─────────────────────────────────────
+    background:
+      type: string
+      title: Background
+      enum:
+        - dark
+        - accent
+        - light
+      meta:enum:
+        dark:   "Dark teal (default)"
+        accent: "Accent green"
+        light:  "Light / white"
+      default: dark
+
+    shadow:
+      type: string
+      title: Shadow
+      enum:
+        - none
+        - sm
+        - md
+        - lg
+        - xl
+      meta:enum:
+        none: "None"
+        sm:   "Small"
+        md:   "Medium"
+        lg:   "Large"
+        xl:   "Extra large"
+      default: none

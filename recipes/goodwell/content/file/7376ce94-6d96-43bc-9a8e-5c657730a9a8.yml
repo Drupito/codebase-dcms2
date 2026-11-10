@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 7376ce94-6d96-43bc-9a8e-5c657730a9a8
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: woman_glasses.png
+  uri:
+    -
+      value: 'public://2026-06/woman_glasses.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 185856
+  status:
+    -
+      value: true

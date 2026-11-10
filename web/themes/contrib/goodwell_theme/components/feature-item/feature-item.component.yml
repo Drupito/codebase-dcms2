@@ -1,0 +1,30 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Feature Item
+group: Content
+status: stable
+description: "Icon + heading row with optional description. Stack inside a Section Grid slot for a feature list."
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    heading:
+      type: string
+      title: Heading
+      examples:
+        - "Instant Issuance"
+    description:
+      type: string
+      title: Description
+      description: "Optional body text shown below the heading when the item is active."
+      examples:
+        - "Handle life's everyday risks with ease — all managed together with clear, flexible coverage."
+    active:
+      type: boolean
+      title: Active / expanded
+      description: "When true the description is shown and the heading is rendered in the accent colour."
+      default: false
+slots:
+  icon:
+    title: Icon
+    description: "SVG or img tag for the feature icon."

@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ddb2b6bd-1e0f-4cae-8b2a-a071c8ff063d
+  bundle: plans
+  default_langcode: en
+  depends:
+    9c73242d-2257-4d8d-9ee9-af74a7194b86: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Term Life'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /term-life
+      langcode: en
+  field_body:
+    -
+      value: '<h2>About Term Life Insurance</h2><p>Term life insurance is a simple and cost-effective way to protect your family''s financial future. It provides coverage for a specified period, ensuring that your loved ones receive financial support if something happens to you during the policy term.</p><p>Whether you''re supporting a family, paying off a mortgage, or planning for your children''s education, term life insurance helps provide peace of mind knowing your dependents will have financial protection when they need it most.</p><p>At Goodwell Insurance, we offer flexible term life insurance plans with high coverage amounts and affordable premiums, making it easier to protect what matters most.</p><h2>What''s Included</h2><ul><li data-list-item-id="e9af95753ce1842558a2bdd6c1d049047">High coverage at affordable premiums</li><li data-list-item-id="e92c52b74049855365635ae3eeb4834b8">Flexible policy terms</li><li data-list-item-id="e2f2e754378ceacd74ff0fdde685ea832">Financial protection for your family</li><li data-list-item-id="eb546f7b91dd856cf27a47a2f481cdb46">Coverage for outstanding loans and debts</li><li data-list-item-id="e3a4b02e23490b41f38201c378401b85a">Simple application process</li><li data-list-item-id="e3e82bea7088ab9ff9fa011c1ff99d52c">Optional riders and additional benefits</li><li data-list-item-id="ed322647ea9f24f04570f730311973481">Flexible coverage amounts</li><li data-list-item-id="ebf8821b027bccaf7f3c894bb4fdb22a4">Easy policy management</li><li data-list-item-id="ef9af763ddedae5b8e7d8d4795eb0e72a">Quick claim support</li><li data-list-item-id="ef2bc95e9d37f9f8bd38321d7b2245b77">Dedicated customer service</li></ul><h2>How It Works</h2><ol><li data-list-item-id="e150836743154481738603cf1d14ca871">Select the coverage amount you need.</li><li data-list-item-id="e9a026b42f55b2655ff47c9728be9f6f6">Choose the policy term that matches your financial responsibilities.</li><li data-list-item-id="eea10eb0956c3780be42ab7a19168028d">Complete the application process.</li><li data-list-item-id="e0862dfc19ecd2d8c32debdf8b76dc11a">Activate your coverage.</li><li data-list-item-id="edd698e9c30bae11125f027db84a12587">Enjoy peace of mind knowing your family is protected.</li></ol><h2>Why It Matters</h2><p>Your family may depend on your income to meet daily expenses, future goals, and financial commitments. Term life insurance helps ensure they remain financially secure even if you''re no longer there to support them.</p><h2>Why Choose Goodwell Insurance</h2><ul><li data-list-item-id="e8287e27e518097b3204dba29c422800b">Affordable premiums</li><li data-list-item-id="ef8659e47d83428c4df41b0c6bb7a585a">Flexible coverage terms</li><li data-list-item-id="e67c619880792cc3e112987f730a940db">High sum assured options</li><li data-list-item-id="e3c5c0fa806fa2ff6966512abd10d9854">Simple and transparent policies</li><li data-list-item-id="e7cf82c4e7b82a983dad7f04b0c78ec5d">Fast claims assistance</li><li data-list-item-id="e93a241d49402f1a7a3baf53a8a4f504b">Trusted customer support</li><li data-list-item-id="e82c3419eafad7ba15be89698909d1262">Easy online application process</li></ul><h2>Key Benefits</h2><ul><li data-list-item-id="e064ee435de91520cac601df8a91b5a4f">Income replacement for your family</li><li data-list-item-id="ec99567a5bb40d164f0bf10757db49212">Protection for mortgages and loans</li><li data-list-item-id="e5cc82d9290eed7853cfacd0319a56437">Support for children''s education expenses</li><li data-list-item-id="ea0b844c4871653ea3fd46ed8e8f9da46">Financial security during critical life stages</li><li data-list-item-id="edf48ee58a1d45562b722b5d4e4dc644a">Peace of mind for you and your loved ones</li></ul><h2>Get Started</h2><p>Protect your family''s future with a term life insurance plan from Goodwell Insurance and ensure lasting financial security for the people who matter most.</p><p>&nbsp;</p>'
+      format: content_format
+      summary: 'Affordable life protection that provides financial security for your loved ones during a specific coverage period.'
+  field_button:
+    -
+      uri: 'internal:/'
+      title: 'View Details'
+      options: {  }
+  field_featured_image:
+    -
+      entity: 9c73242d-2257-4d8d-9ee9-af74a7194b86

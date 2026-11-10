@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 01b5193b-8855-4291-b5b1-00bb20baba32
+  bundle: image
+  default_langcode: en
+  depends:
+    d3db8a8f-012d-4195-af53-ab05e060dd7f: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Component-1-(1).png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Jop Openings'
+      title: ''
+      width: 1200
+      height: 300
+      entity: d3db8a8f-012d-4195-af53-ab05e060dd7f

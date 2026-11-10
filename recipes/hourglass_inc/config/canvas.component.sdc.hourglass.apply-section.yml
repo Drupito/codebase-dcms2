@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: f39b9230c3c68017
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Submitting a Lead and How It Is Handled'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: 'List Items'
+          description: 'Place Text List Item components here — one per step.'
+        form:
+          title: Form
+          description: 'Place a Webform block or custom form here.'
+label: 'Apply Section'
+id: sdc.hourglass.apply-section
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:apply-section'

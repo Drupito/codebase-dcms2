@@ -1,0 +1,38 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: CTA Banner
+group: Organisms
+status: stable
+description: 'Full-width 300px banner card with a background image, orange gradient scrim, eyebrow label, H4 heading, description, and a glassmorphism pill CTA button below.'
+props:
+  type: object
+  properties:
+    media:
+      $ref: 'json-schema-definitions://canvas.module/image'
+      title: 'Background Image'
+    eyebrow:
+      type: string
+      title: 'Eyebrow Label'
+      examples:
+        - 'Careers'
+    heading:
+      type: string
+      title: 'Heading'
+      examples:
+        - 'Job Openings'
+    description:
+      type: string
+      title: 'Description'
+      examples:
+        - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    cta_text:
+      type: string
+      title: 'CTA Label'
+      default: 'View Openings'
+    cta_url:
+      type: string
+      title: 'CTA URL'
+      examples:
+        - '/careers'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 51b1827b-4f77-44a4-879d-7c6deea306c3
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: footer-component.png
+  uri:
+    -
+      value: 'public://2026-04/footer-component.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 39688
+  status:
+    -
+      value: true

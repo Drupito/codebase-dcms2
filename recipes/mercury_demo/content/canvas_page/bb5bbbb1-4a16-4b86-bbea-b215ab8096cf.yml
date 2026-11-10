@@ -1,0 +1,699 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: bb5bbbb1-4a16-4b86-bbea-b215ab8096cf
+  default_langcode: en
+  depends:
+    a7c58081-5fac-47cf-aea0-13c23efe3e8b: file
+    bf4fa4f3-3674-4aa2-b168-e97b26789ecb: media
+    094dbead-6908-4885-bc6b-f4554508b4c3: file
+    00d16008-4d06-44d1-bb5b-d5e438ef8236: media
+    3e7ce683-dacd-48f3-b151-fcb83086f5f4: file
+    a461d7e8-2fba-44c8-a448-b927a791c943: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Home
+  components:
+    -
+      uuid: 2abbecf8-49a7-40f0-b8bc-326985385543
+      component_id: sdc.mercury.hero-billboard
+      inputs:
+        height: large
+        flex_position: center-left
+        overlay_opacity: 0%
+        object_position: center
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: bf4fa4f3-3674-4aa2-b168-e97b26789ecb
+            target_type: media
+        overlap_navbar: false
+    -
+      parent_uuid: 2abbecf8-49a7-40f0-b8bc-326985385543
+      slot: hero_slot
+      uuid: 47c63791-d5da-4b37-9018-10496d23c5b3
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: 47c63791-d5da-4b37-9018-10496d23c5b3
+      slot: group_slot
+      uuid: 2fff38e6-11b6-406d-a8ee-8084d6b8c940
+      component_id: sdc.mercury.badge
+      inputs:
+        label: 'Mercury 1.0'
+        style: primary
+        icon: shooting-star
+        icon_first: true
+    -
+      parent_uuid: 2abbecf8-49a7-40f0-b8bc-326985385543
+      slot: hero_slot
+      uuid: a9c12d54-38ed-4b87-9d29-fc07377513e6
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Designed for flexibility, built for speed'
+        level: 1
+        text_size: heading-responsive-7xl
+        text_color: inverted
+        align: left
+    -
+      parent_uuid: 2abbecf8-49a7-40f0-b8bc-326985385543
+      slot: hero_slot
+      uuid: b5018996-7114-43e2-a3ff-60a27901933d
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Mercury is a Drupal theme with a Tailwind-based component library that will supercharge your site build.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: inverted
+    -
+      parent_uuid: 2abbecf8-49a7-40f0-b8bc-326985385543
+      slot: hero_slot
+      uuid: f540f285-1582-462d-a1a4-89625a50b473
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: f540f285-1582-462d-a1a4-89625a50b473
+      slot: group_slot
+      uuid: 151bb462-5936-437b-a71b-091e627783d0
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'View documentation'
+        size: medium
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+    -
+      parent_uuid: f540f285-1582-462d-a1a4-89625a50b473
+      slot: group_slot
+      uuid: 8aa543d2-4047-498b-8d7a-81822928a11b
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary
+        size: medium
+        icon_first: false
+        disabled: false
+        mobile_width: false
+        label: 'Component library'
+        href:
+          uri: '#components'
+          options: {  }
+    -
+      uuid: 7e30578d-cdf9-403a-8226-37bcd9dbd9cf
+      component_id: sdc.mercury.section
+      inputs:
+        width: 80%
+        columns: 33-33-33
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '0'
+        padding_block_start: '64'
+        padding_block_end: '64'
+        section_header: true
+        section_footer: false
+        background_color: muted
+    -
+      parent_uuid: 7e30578d-cdf9-403a-8226-37bcd9dbd9cf
+      slot: header_slot
+      uuid: 39a4e75f-9fed-4ca1-a6ea-b498043f7363
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns 67%-33%'
+        mobile_columns: '1'
+    -
+      parent_uuid: 39a4e75f-9fed-4ca1-a6ea-b498043f7363
+      slot: main_slot
+      uuid: a2c4c2aa-8cf9-4622-b5da-2bdf92a3bdb8
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: sm
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: a2c4c2aa-8cf9-4622-b5da-2bdf92a3bdb8
+      slot: group_slot
+      uuid: eb83e4ff-c1dc-4c5f-899d-8f83f5e0bda8
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: "<p><strong>WHAT'S INSIDE</strong></p>"
+          format: canvas_html_block
+        text_size: text-xs
+        text_color: primary
+    -
+      parent_uuid: a2c4c2aa-8cf9-4622-b5da-2bdf92a3bdb8
+      slot: group_slot
+      uuid: ae4c1e6e-043f-4f81-a345-82b8bb08b1c6
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Everything you need to ship a Drupal site'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: a2c4c2aa-8cf9-4622-b5da-2bdf92a3bdb8
+      slot: group_slot
+      uuid: 03a99019-90ea-4f1c-853e-00c58dc51e9b
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Mercury Demo provides a foundation for building a modern, beautiful Drupal site, <em>quickly</em>. No more starting from scratch, or creating a custom theme. Just copy Mercury, add your content, and launch!</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 7e30578d-cdf9-403a-8226-37bcd9dbd9cf
+      slot: main_slot
+      uuid: 18588299-935c-4dc2-99b2-6da24d1ff84d
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: lock-open
+        icon_size: small
+        icon_align: left
+        text: 'Open source, always'
+        description:
+          value: '<p>Mercury and Drupal are open-source software, meaning you can build with the confidence that you will always own your data.</p>'
+          format: canvas_html_block
+        text_align: left
+        icon_style: primary_background
+        background_color: background
+    -
+      parent_uuid: 7e30578d-cdf9-403a-8226-37bcd9dbd9cf
+      slot: main_slot
+      uuid: f73e01be-effd-48dd-9d39-53a48e6d9e06
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: rocket-launch
+        icon_size: small
+        icon_align: left
+        text: 'Built with Drupal CMS'
+        description:
+          value: '<p>Mercury Demo is built on Drupal CMS 2.0, so it includes all the functionality you need and expect from a modern CMS.</p>'
+          format: canvas_html_block
+        text_align: left
+        icon_style: primary_background
+        background_color: background
+    -
+      parent_uuid: 7e30578d-cdf9-403a-8226-37bcd9dbd9cf
+      slot: main_slot
+      uuid: 3ae24667-9ca7-4c8c-a5cc-ccdedd3f7034
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: layout
+        icon_size: small
+        icon_align: left
+        icon_style: primary_background
+        text: 'Complete component library'
+        description:
+          value: '<p>Mercury includes a full library of single-directory components that work with Drupal Canvas, the drag-and-drop visual page builder.</p>'
+          format: canvas_html_block
+        text_align: left
+        background_color: background
+    -
+      parent_uuid: 7e30578d-cdf9-403a-8226-37bcd9dbd9cf
+      slot: main_slot
+      uuid: 36e4bf92-b446-47fa-b200-41226f9e1f4c
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: palette
+        icon_size: small
+        icon_align: left
+        text: 'Easy to customize'
+        text_align: left
+        icon_style: primary_background
+        background_color: background
+        description:
+          value: '<p>Mercury is built to be modified, whether you want to just change a few colors, or adapt it fully to your brand.</p>'
+          format: canvas_html_block
+    -
+      parent_uuid: 7e30578d-cdf9-403a-8226-37bcd9dbd9cf
+      slot: main_slot
+      uuid: b40799eb-6974-460c-a404-c38f60727486
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: person-simple-circle
+        icon_size: small
+        icon_align: left
+        text: 'Accessible by design'
+        description:
+          value: '<p>WCAG 2.2 AA across every component. Focus rings, keyboard order, and ARIA roles ship in the base, not bolted on.</p>'
+          format: canvas_html_block
+        text_align: left
+        icon_style: primary_background
+        background_color: background
+    -
+      parent_uuid: 7e30578d-cdf9-403a-8226-37bcd9dbd9cf
+      slot: main_slot
+      uuid: d2689390-f6f2-4ca8-9dc2-ca5e9f1e7acd
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: question
+        icon_size: small
+        icon_align: left
+        text: 'Supported by humans'
+        description:
+          value: '<p>Need help? File an issue on Drupal.org, or join us on Slack for real-time assistance from our community of experts.&nbsp;</p>'
+          format: canvas_html_block
+        text_align: left
+        icon_style: primary_background
+        background_color: background
+    -
+      uuid: 49ef53ba-8a02-4378-87f0-73485b87cfd0
+      component_id: sdc.mercury.section
+      inputs:
+        width: 80%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '0'
+        padding_block_start: '64'
+        padding_block_end: '64'
+        section_header: false
+        section_footer: false
+    -
+      parent_uuid: 49ef53ba-8a02-4378-87f0-73485b87cfd0
+      slot: main_slot
+      uuid: 604a3024-dba6-469e-a16a-4c39f160bad6
+      component_id: sdc.mercury.hero-side-by-side
+      inputs:
+        hero_flex_gap: large
+        hero_flex_direction_mobile: vertical
+        padding_block_start: '64'
+        padding_block_end: '64'
+        image_position: right
+        image_radius: large
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 00d16008-4d06-44d1-bb5b-d5e438ef8236
+            target_type: media
+        justify_content: center
+    -
+      parent_uuid: 604a3024-dba6-469e-a16a-4c39f160bad6
+      slot: hero_slot
+      uuid: 6d9a8a31-2d31-422d-bc1e-01bb662ae2d9
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Visual page building, out of the box'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 604a3024-dba6-469e-a16a-4c39f160bad6
+      slot: hero_slot
+      uuid: 234ca364-160f-4eaf-b7e8-ea2ee2e9d7f4
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: "<p>Mercury provides a complete, ready-to-use component library for Drupal Canvas, the new drag-and-drop visual page builder. It's never been easier to create beautiful pages.</p>"
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 5f4cd660-a7c6-4448-8691-064e1b8337c5
+      component_id: sdc.mercury.section
+      inputs:
+        width: 80%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '0'
+        padding_block_start: '64'
+        padding_block_end: '64'
+        section_header: false
+        section_footer: false
+        background_color: muted
+    -
+      parent_uuid: 5f4cd660-a7c6-4448-8691-064e1b8337c5
+      slot: main_slot
+      uuid: 6d8ed369-0038-46b0-939e-3d1c7e85941e
+      component_id: sdc.mercury.hero-side-by-side
+      inputs:
+        hero_flex_gap: large
+        hero_flex_direction_mobile: vertical
+        padding_block_start: '64'
+        padding_block_end: '64'
+        image_position: left
+        image_radius: large
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: a461d7e8-2fba-44c8-a448-b927a791c943
+            target_type: media
+        justify_content: center
+    -
+      parent_uuid: 6d8ed369-0038-46b0-939e-3d1c7e85941e
+      slot: hero_slot
+      uuid: dba59ac3-494c-44eb-828a-a9f73411be54
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Built with modern tools'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 6d8ed369-0038-46b0-939e-3d1c7e85941e
+      slot: hero_slot
+      uuid: 61e7207c-8e25-4cb9-a7a1-65e10d9e6e38
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Mercury is built with <a href="https://tailwindcss.com/">Tailwind v4</a>. If you want to customize it, just make a copy and run the build command.&nbsp;</p><p>Don''t know Tailwind? No problem. You can customize colors, fonts, and other sitewide settings without rebuilding the compiled CSS.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 60d73a58-cac1-4592-aadc-ea8310bcde81
+      component_id: sdc.mercury.section
+      inputs:
+        width: 80%
+        columns: 25-25-25-25
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '96'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 60d73a58-cac1-4592-aadc-ea8310bcde81
+      slot: header_slot
+      uuid: aecbfb8c-4adc-41fb-be41-b71b31bb7e23
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: components
+    -
+      parent_uuid: 60d73a58-cac1-4592-aadc-ea8310bcde81
+      slot: header_slot
+      uuid: 9c29aa75-b32a-4b67-b239-f5ad9bc3a0c3
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 60%
+        columns: '1 column'
+        mobile_columns: '1'
+    -
+      parent_uuid: 9c29aa75-b32a-4b67-b239-f5ad9bc3a0c3
+      slot: main_slot
+      uuid: e5a39db3-250f-41db-ae8b-7bc6b98ad53c
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: center
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: e5a39db3-250f-41db-ae8b-7bc6b98ad53c
+      slot: group_slot
+      uuid: 52d04cf8-a1c1-415e-ac95-c4ca12c65d50
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Mercury components'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: e5a39db3-250f-41db-ae8b-7bc6b98ad53c
+      slot: group_slot
+      uuid: 2ec3bdde-235e-442f-b78c-7d422becb86c
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p class="text-align-center">Find out more about Mercury''s component library with our detailed documentation.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 60d73a58-cac1-4592-aadc-ea8310bcde81
+      slot: main_slot
+      uuid: 0585ae2e-3c4b-4a55-92e7-effb9cad6d1b
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: puzzle-piece
+        icon_size: large
+        icon_align: center
+        text: 'Base components'
+        description:
+          value: '<p>This is placeholder text.</p>'
+          format: canvas_html_block
+        text_align: center
+        url:
+          uri: 'internal:/base-components'
+          options: {  }
+    -
+      parent_uuid: 60d73a58-cac1-4592-aadc-ea8310bcde81
+      slot: main_slot
+      uuid: ad327ad6-f449-49ce-bcee-d15d10c818c5
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: cards
+        icon_size: large
+        icon_align: center
+        text: 'Card components'
+        description:
+          value: '<p>This is placeholder text.</p>'
+          format: canvas_html_block
+        text_align: center
+        url:
+          uri: 'internal:/card-components'
+          options: {  }
+    -
+      parent_uuid: 60d73a58-cac1-4592-aadc-ea8310bcde81
+      slot: main_slot
+      uuid: 9f677d09-f9af-46eb-8183-9f1dd9d893c1
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: panorama
+        icon_size: large
+        icon_align: center
+        text: 'Hero components'
+        description:
+          value: '<p>This is placeholder text.</p>'
+          format: canvas_html_block
+        text_align: center
+        url:
+          uri: 'internal:/hero-components'
+          options: {  }
+    -
+      parent_uuid: 60d73a58-cac1-4592-aadc-ea8310bcde81
+      slot: main_slot
+      uuid: b896ede4-16a3-4fd4-b378-8ce08c7185c8
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: layout
+        icon_size: large
+        icon_align: center
+        text: 'Layout components'
+        description:
+          value: '<p>This is placeholder text.</p>'
+          format: canvas_html_block
+        text_align: center
+        url:
+          uri: 'internal:/layout-components'
+          options: {  }
+    -
+      uuid: 3c9b1d70-6cf5-4f5c-a64f-8cd94ceb7e2a
+      component_id: sdc.mercury.section
+      inputs:
+        width: 50%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '96'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 3c9b1d70-6cf5-4f5c-a64f-8cd94ceb7e2a
+      slot: header_slot
+      uuid: 012bf390-1854-4cf9-9819-5ec1b660652a
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Frequently asked questions'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 3c9b1d70-6cf5-4f5c-a64f-8cd94ceb7e2a
+      slot: main_slot
+      uuid: 7499c754-25fa-4b61-a579-e45ca6fd8218
+      component_id: sdc.mercury.accordion-container
+      inputs: {  }
+    -
+      parent_uuid: 7499c754-25fa-4b61-a579-e45ca6fd8218
+      slot: accordion_content
+      uuid: 05acb5fb-9b55-482d-b63b-cbb969673ec5
+      component_id: sdc.mercury.accordion
+      inputs:
+        title: 'How do I customize Mercury?'
+        heading_level: 3
+        open_by_default: false
+    -
+      parent_uuid: 05acb5fb-9b55-482d-b63b-cbb969673ec5
+      slot: accordion_content
+      uuid: d4806397-d893-4e65-9445-487bff9e4250
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p><strong>Don''t subtheme Mercury!</strong> It does not provide backwards compatibility. This allows us to rapidly innovate, iterate, and improve it. If you create a sub-theme of Mercury, it is likely to break in the future.</p><p>See <a href="https://git.drupalcode.org/project/mercury/-/blob/1.x/CUSTOMIZING.md?ref_type=heads">CUSTOMIZING.md</a> for more information.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 7499c754-25fa-4b61-a579-e45ca6fd8218
+      slot: accordion_content
+      uuid: ea55776c-dfc6-4bdf-bd36-a5730c3dbdd7
+      component_id: sdc.mercury.accordion
+      inputs:
+        title: 'How do I update Mercury?'
+        heading_level: 3
+        open_by_default: false
+    -
+      parent_uuid: ea55776c-dfc6-4bdf-bd36-a5730c3dbdd7
+      slot: accordion_content
+      uuid: a1f88fa3-d858-4dac-9738-5dc719608108
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Mercury is meant to be used as a starter kit, and does not provide backward compatibility. This allows us to rapidly innovate, iterate, and improve. If you create a sub-theme of Mercury, it is likely to break in the future.</p><p>For more technical information about how to build a custom theme based on Mercury, see the <a href="https://git.drupalcode.org/project/mercury/-/tree/1.x#customizing">project README</a>.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 5b46e478-2c89-4ee6-ba0b-bb6db6676984
+      component_id: sdc.mercury.section
+      inputs:
+        width: 80%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 5b46e478-2c89-4ee6-ba0b-bb6db6676984
+      slot: main_slot
+      uuid: 3bdc3654-48e5-41ca-8b3e-19e88ea39e88
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: md
+        padding: md
+        background: primary
+    -
+      parent_uuid: 3bdc3654-48e5-41ca-8b3e-19e88ea39e88
+      slot: group_slot
+      uuid: 1a98898d-1554-4dc1-8023-c87fd34b69ad
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns 67%-33%'
+        mobile_columns: '1'
+    -
+      parent_uuid: 1a98898d-1554-4dc1-8023-c87fd34b69ad
+      slot: main_slot
+      uuid: f0f33fc0-58f3-4b9e-9cb6-a862f03c7ad6
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+        padding: sm
+    -
+      parent_uuid: f0f33fc0-58f3-4b9e-9cb6-a862f03c7ad6
+      slot: group_slot
+      uuid: 902f8893-17c2-4d61-98b1-c031e7ca1fa6
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Ready to build with Mercury?'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: inverted
+        align: left
+    -
+      parent_uuid: f0f33fc0-58f3-4b9e-9cb6-a862f03c7ad6
+      slot: group_slot
+      uuid: 979cabe8-6790-4189-be83-49f61355114e
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Install the Mercury Demo with Drupal CMS 2.0 in less than five minutes.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: inverted
+    -
+      parent_uuid: 1a98898d-1554-4dc1-8023-c87fd34b69ad
+      slot: main_slot
+      uuid: 1071304e-929c-4e94-b6a3-b79f010122f9
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: md
+        items_align: end
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 1071304e-929c-4e94-b6a3-b79f010122f9
+      slot: group_slot
+      uuid: e8a33511-9af5-41bf-8008-e58202d90482
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Get started'
+        size: medium
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+  path:
+    -
+      alias: /home
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

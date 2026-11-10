@@ -1,0 +1,91 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 7d1820a3-ebd3-4c0c-9f6e-c0f6045f0668
+  default_langcode: en
+  depends:
+    44a0312c-b36a-4ef4-b23a-c75f11929fc4: file
+    bcc012cf-b2ec-4fa6-aef3-9d019f463b15: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Get A Qoute'
+  components:
+    -
+      uuid: 52879648-c4d2-4755-b9da-e20d1ee9a771
+      component_id: sdc.goodwell_theme.hero-section
+      inputs:
+        heading:
+          value: 'GET A QUOTE'
+          format: canvas_html_inline
+        tagline: 'FAST, PAPERLESS, AND TRUSTED.'
+        background:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: bcc012cf-b2ec-4fa6-aef3-9d019f463b15
+            target_type: media
+        overlay_opacity: 50
+    -
+      uuid: f4ff4caf-49c1-4771-ad89-7fe261b4e42a
+      component_id: sdc.goodwell_theme.section
+      inputs:
+        padding: sm
+        rounded: none
+        background: white
+        full_bleed: true
+        custom_bg_color: '#f0f7f9'
+    -
+      parent_uuid: f4ff4caf-49c1-4771-ad89-7fe261b4e42a
+      slot: content
+      uuid: 88d9badf-dc5f-41b4-a078-f62cf152bd17
+      component_id: sdc.goodwell_theme.section-grid
+      inputs:
+        grid_layout: 2_column_66_33
+        is_small_container: false
+    -
+      parent_uuid: 88d9badf-dc5f-41b4-a078-f62cf152bd17
+      slot: slot_1
+      uuid: 8b0ab5bb-09ec-49aa-a45c-9dfb86dc5e63
+      component_id: sdc.goodwell_theme.webform-embed
+      inputs: {  }
+    -
+      parent_uuid: 8b0ab5bb-09ec-49aa-a45c-9dfb86dc5e63
+      slot: form
+      uuid: 8d8ee344-1887-457a-aa4b-b5fa6832fe06
+      component_id: block.webform_block
+      inputs:
+        lazy: true
+        label: Webform
+        redirect: false
+        webform_id: tell_us_about_you
+        default_data: ''
+        label_display: '0'
+    -
+      parent_uuid: 88d9badf-dc5f-41b4-a078-f62cf152bd17
+      slot: slot_2
+      uuid: 8adf755e-834d-4540-bda8-f675421b49a9
+      component_id: sdc.goodwell_theme.contact-info
+      inputs:
+        email: mail@goodwell.com
+        hours: '9 AM - 5 PM, Monday - Saturday'
+        phone: '(190) 391-740-04'
+        address: '905 Locust Street Redding, CA 96001'
+        heading: 'Contact us'
+        icon_color: custom
+        icon_style: plain
+        icon_color_custom: '#FCBE48'
+  path:
+    -
+      alias: /get-a-quote
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

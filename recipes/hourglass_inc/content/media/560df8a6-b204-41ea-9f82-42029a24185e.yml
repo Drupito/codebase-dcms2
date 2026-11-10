@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 560df8a6-b204-41ea-9f82-42029a24185e
+  bundle: image
+  default_langcode: en
+  depends:
+    58001ce9-87ec-4780-9ca6-8da10d762187: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: shanghai-jiao-tong-university.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: shanghai-jiao-tong-university
+      title: ''
+      width: 316
+      height: 316
+      entity: 58001ce9-87ec-4780-9ca6-8da10d762187

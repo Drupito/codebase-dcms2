@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 05caae00-c275-4d04-bffd-88d83c5d029f
+  bundle: image
+  default_langcode: en
+  depends:
+    849244be-eb64-48f6-973e-e978927e6d58: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Rectangle-37.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Agile Cloud Migration'
+      title: ''
+      width: 379
+      height: 350
+      entity: 849244be-eb64-48f6-973e-e978927e6d58

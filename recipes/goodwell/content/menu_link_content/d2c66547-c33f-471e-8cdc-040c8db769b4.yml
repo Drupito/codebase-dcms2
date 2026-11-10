@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: d2c66547-c33f-471e-8cdc-040c8db769b4
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    a7cfcd03-0b9e-44eb-8eec-92d2cfb72dde: menu_link_content
+    77f30f07-a155-4763-830b-4b202f42a79d: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Travel Insurance'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 77f30f07-a155-4763-830b-4b202f42a79d
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 1
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:a7cfcd03-0b9e-44eb-8eec-92d2cfb72dde'
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: cedc939e-a075-47ad-b6a5-71356a4f5344
+  bundle: image
+  default_langcode: en
+  depends:
+    3f176de1-4aa8-4cba-bc81-9d908e1f0f95: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: woman_cap.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'A fair skinned woman in cap image'
+      title: ''
+      width: 512
+      height: 490
+      entity: 3f176de1-4aa8-4cba-bc81-9d908e1f0f95

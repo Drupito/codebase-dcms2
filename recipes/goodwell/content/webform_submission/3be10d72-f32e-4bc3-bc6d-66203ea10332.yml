@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: webform_submission
+  uuid: 3be10d72-f32e-4bc3-bc6d-66203ea10332
+  bundle: calculate_premium
+  default_langcode: en
+default:
+  serial:
+    -
+      value: 4
+  token:
+    -
+      value: dfqb4xdUAmE4FlsOaGRay5DVrlO9cEG3pQ2afuaRje0
+  uri:
+    -
+      value: /term-life
+  completed:
+    -
+      value: 1781460217
+  in_draft:
+    -
+      value: false
+  remote_addr:
+    -
+      value: 172.19.0.2
+  uid:
+    -
+      target_id: 1
+  entity_type:
+    -
+      value: node
+  entity_id:
+    -
+      value: '13'
+  locked:
+    -
+      value: false
+  sticky:
+    -
+      value: false

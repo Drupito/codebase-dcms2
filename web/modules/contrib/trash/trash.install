@@ -1,0 +1,97 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the Trash module.
+ */
+
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\PhpStorage\PhpStorageFactory;
+
+/**
+ * Implements hook_uninstall().
+ */
+function trash_uninstall(): void {
+  // Delete generated files.
+  PhpStorageFactory::get('trash')->deleteAll();
+}
+
+/**
+ * Update the enabled entity types and bundles configuration.
+ */
+function trash_update_9301(): void {
+  // This was moved from trash_post_update_set_enabled_entity_types_bundles().
+  // @see https://www.drupal.org/project/trash/issues/3453832
+  $config = \Drupal::configFactory()->getEditable('trash.settings');
+  $enabledEntityTypes = $config->get('enabled_entity_types');
+  if (array_is_list($enabledEntityTypes)) {
+    $enabledEntityTypesBundles = array_combine(
+      $enabledEntityTypes,
+      array_fill(0, count($enabledEntityTypes), [])
+    );
+
+    $config->set('enabled_entity_types', $enabledEntityTypesBundles);
+    $config->save();
+  }
+}
+
+/**
+ * Add the compact_overview configuration.
+ */
+function trash_update_10301(): void {
+  $config = \Drupal::configFactory()->getEditable('trash.settings');
+  $config->set('compact_overview', FALSE)->save();
+}
+
+/**
+ * Add a database index on the 'deleted' field.
+ */
+function trash_update_11301(): void {
+  $entity_definition_update_manager = \Drupal::entityDefinitionUpdateManager();
+  $enabled_entity_types = \Drupal::configFactory()->get('trash.settings')->get('enabled_entity_types') ?? [];
+
+  foreach (array_keys($enabled_entity_types) as $entity_type_id) {
+    $field_storage_definition = $entity_definition_update_manager->getFieldStorageDefinition('deleted', $entity_type_id);
+    if ($field_storage_definition && $field_storage_definition->getProvider() === 'trash') {
+      // Add index via reflection since BaseFieldDefinition lacks setIndexes().
+      $reflection = new \ReflectionProperty(BaseFieldDefinition::class, 'indexes');
+      $reflection->setValue($field_storage_definition, ['value' => ['value']]);
+
+      // Clear the 'schema' property so it can be recalculated and take into
+      // account the new index defined above.
+      $reflection = new \ReflectionProperty(BaseFieldDefinition::class, 'schema');
+      $reflection->setValue($field_storage_definition, NULL);
+
+      $entity_definition_update_manager->updateFieldStorageDefinition($field_storage_definition);
+    }
+  }
+}
+
+/**
+ * Remove the obsolete trash.class_suffix state entry.
+ */
+function trash_update_11302(): void {
+  \Drupal::state()->delete('trash.class_suffix');
+
+  // Delete generated files.
+  PhpStorageFactory::get('trash')->deleteAll();
+}
+
+/**
+ * Add translation support to the Trash module.
+ */
+function trash_update_11303(): void {
+  $entity_definition_update_manager = \Drupal::entityDefinitionUpdateManager();
+  $enabled_entity_types = \Drupal::configFactory()->get('trash.settings')->get('enabled_entity_types') ?? [];
+
+  foreach (array_keys($enabled_entity_types) as $entity_type_id) {
+    $field_storage_definition = $entity_definition_update_manager->getFieldStorageDefinition('deleted', $entity_type_id);
+    if ($field_storage_definition
+      && $field_storage_definition->getProvider() === 'trash'
+      && !$field_storage_definition->isTranslatable()
+    ) {
+      $field_storage_definition->setTranslatable(TRUE);
+      $entity_definition_update_manager->updateFieldStorageDefinition($field_storage_definition);
+    }
+  }
+}

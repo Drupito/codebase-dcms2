@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1c2796eb-d044-412f-b303-e3a288ef055d
+  bundle: image
+  default_langcode: en
+  depends:
+    0bfef934-018c-42a6-b3d9-7074f44498c4: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: travel.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Adventure '
+      title: ''
+      width: 904
+      height: 1200
+      entity: 0bfef934-018c-42a6-b3d9-7074f44498c4

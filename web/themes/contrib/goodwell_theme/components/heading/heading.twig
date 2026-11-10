@@ -1,0 +1,28 @@
+{% set level  = level ?: 2 %}
+{% set tag    = 'h' ~ level %}
+{% set size   = size ?: '3xl' %}
+{% set weight = weight ?: 'bold' %}
+{% set color  = color ?: 'default' %}
+{% set align  = align ?: 'left' %}
+{% set mt = spacing_top|default(0) * 0.25 %}
+{% set mb = spacing_bottom|default(0) * 0.25 %}
+{% set inline_style = '--heading-mt:' ~ mt ~ 'rem;--heading-mb:' ~ mb ~ 'rem;' %}
+
+{% set classes = [
+  'dst-heading',
+  'dst-heading--size-' ~ size,
+  'dst-heading--weight-' ~ weight,
+  'dst-heading--color-' ~ color,
+  'dst-heading--align-' ~ align,
+] | join(' ') %}
+
+<{{ tag }}
+  class="{{ classes }}"
+  style="{{ inline_style }}"
+>
+  {% if url %}
+    <a href="{{ url }}" class="dst-heading__link">{{- text -}}</a>
+  {% else %}
+    {{- text -}}
+  {% endif %}
+</{{ tag }}>

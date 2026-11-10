@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8c7c9414-d933-471b-a0d8-8283d5807e4f
+  bundle: video
+  default_langcode: en
+  depends:
+    e211bf80-a5f0-4b95-ae1d-03c5f7b0ae76: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: final_KQFQRuX7.mp4
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_video_file:
+    -
+      display: false
+      description: ''
+      entity: e211bf80-a5f0-4b95-ae1d-03c5f7b0ae76

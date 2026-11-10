@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e0c60dce-4fb0-4e58-bf0e-db1e1d20b84e
+  bundle: svg_image
+  default_langcode: en
+  depends:
+    f992cc0e-945e-4327-9450-ceb48ec61999: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: logo-light.svg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_svg_image:
+    -
+      alt: 'Mercury logo light'
+      title: ''
+      width: 0
+      height: 0
+      entity: f992cc0e-945e-4327-9450-ceb48ec61999

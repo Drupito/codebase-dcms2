@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 6ccc742b-5a9b-4779-949c-d44df1f824d9
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    87615a1f-66af-4ae3-af5c-20411a4ec481: file
+default:
+  entity_id:
+    -
+      uuid: 87615a1f-66af-4ae3-af5c-20411a4ec481
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/95a73b3616532edee43ae6a1f97a6a24912231f1_0.jpg'
+  x:
+    -
+      value: 512
+  'y':
+    -
+      value: 512
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

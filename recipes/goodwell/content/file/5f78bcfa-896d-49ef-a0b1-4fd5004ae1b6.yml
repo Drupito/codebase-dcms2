@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 5f78bcfa-896d-49ef-a0b1-4fd5004ae1b6
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: woman_laptop.png
+  uri:
+    -
+      value: 'public://2026-06/woman_laptop.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 701669
+  status:
+    -
+      value: true

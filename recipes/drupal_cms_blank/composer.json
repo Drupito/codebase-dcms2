@@ -1,0 +1,38 @@
+{
+    "name": "drupal/drupal_cms_blank",
+    "description": "A blank template with the foundational features of Drupal CMS, for those who truly want to start from scratch.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/drupal_cms_site_template_base": "^2.2",
+        "drupal/site_template_helper": "^1.0.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "drupal/site_template_helper": true
+        }
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "file-mapping": {
+                "[web-root]/themes/custom/blank/blank.info.yml": {
+                    "path": "assets/blank.info.yml",
+                    "overwrite": false
+                },
+                "[web-root]/themes/custom/blank/blank.starterkit.yml": {
+                    "path": "assets/blank.starterkit.yml",
+                    "overwrite": false
+                }
+            }
+        }
+    },
+    "require-dev": {
+        "drupal/drupal_cms_accessibility_tools": "^2",
+        "drupal/drupal_cms_ai": "^2",
+        "drupal/drupal_cms_forms": "^2",
+        "drupal/drupal_cms_google_analytics": "^2",
+        "drupal/drupal_cms_multilingual": "^2",
+        "drupal/drupal_cms_search": "^2"
+    },
+    "version": "2.2.8"
+}

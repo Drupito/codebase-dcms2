@@ -1,0 +1,20 @@
+{
+    "name": "drupal/trash",
+    "description": "This module adds a trash bin for all content entities.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "suggest": {
+        "drush/drush": "^13"
+    },
+    "conflict": {
+        "drush/drush": "<12.5.1"
+    },
+    "require-dev": {
+        "amateescu/mago-drupal": "^0.5",
+        "carthage-software/mago": "^1.50",
+        "drupal/pathauto": "*",
+        "drupal/redirect": "*",
+        "drupal/search_api": "*",
+        "drupal/wse": "*"
+    }
+}

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: da6610df-da32-4e4d-bbc2-59b032021a4d
+  bundle: image
+  default_langcode: en
+  depends:
+    c2606d14-05ca-4e16-85db-e2013fca3d75: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: caroline-badran-_1tT95nCC3w-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Three built in cabinets holding dishwear and other items in a kitchen.'
+      title: ''
+      width: 6240
+      height: 4160
+      entity: c2606d14-05ca-4e16-85db-e2013fca3d75

@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Mission Vision Item
+group: Atoms
+status: stable
+description: 'Single card for Mission/Vision/Philosophy section: 400×400 image on left, H4 title + B2 description on right, glassmorphism styling.'
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: 'Card Title (H4)'
+      contentMediaType: text/html
+      examples:
+        - 'Our Mission'
+    description:
+      type: string
+      title: 'Card Description'
+      contentMediaType: text/html
+    image:
+      type: object
+      title: 'Card Image'
+      $ref: json-schema-definitions://canvas.module/image
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

@@ -1,0 +1,70 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Hero side-by-side
+description: Hero with side-by-side slots for media and content.
+group: Hero
+props:
+  type: object
+  required:
+    - justify_content
+    - image_position
+  properties:
+    justify_content:
+      type: string
+      title: Justify content
+      enum:
+        - start
+        - center
+        - end
+      meta:enum:
+        start: Start
+        center: Center
+        end: End
+      default: center
+      examples:
+        - "center"
+    image_size:
+      type: string
+      title: Aspect ratio
+      enum:
+        - "2:1"
+        - 16:9
+        - 3:2
+        - 4:3
+        - 1:1
+        - 3:4
+        - 2:3
+      meta:enum:
+        2:1: "2×1"
+        16:9: "16×9"
+        3:2: "3×2"
+        4:3: "4×3"
+        1:1: Square
+        3:4: 3x4
+        2:3: 2x3
+      default: "4:3"
+      examples:
+        - "4:3"
+    image_position:
+      type: string
+      title: Image position
+      enum:
+        - left
+        - right
+      meta:enum:
+        left: Left
+        right: Right
+      default: left
+      examples:
+        - "left"
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: "assets/frankie-xjosJTK8u-c-unsplash.jpg"
+          alt: "Futuristic white building with curved lines and large, geometric window panes."
+          width: 1500
+          height: 1125
+slots:
+  hero_slot:
+    title: "Content"

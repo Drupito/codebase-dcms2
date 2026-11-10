@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e9d80f15-7cdf-431e-abeb-12957a34e07b
+  bundle: image
+  default_langcode: en
+  depends:
+    25d1817b-5f86-40b5-9544-b3e79bff7f4c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Father Son Studying'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Father Son Studying'
+      title: ''
+      width: 661
+      height: 687
+      entity: 25d1817b-5f86-40b5-9544-b3e79bff7f4c

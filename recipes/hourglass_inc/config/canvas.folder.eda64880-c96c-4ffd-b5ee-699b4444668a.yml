@@ -1,0 +1,19 @@
+uuid: eda64880-c96c-4ffd-b5ee-699b4444668a
+langcode: en
+status: true
+dependencies: {  }
+name: Layout
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.hourglass.footer
+  - sdc.hourglass.header
+  - sdc.hourglass.layout
+  - sdc.hourglass.section
+  - sdc.mercury.accordion
+  - sdc.mercury.accordion-container
+  - sdc.mercury.footer
+  - sdc.mercury.grid
+  - sdc.mercury.group
+  - sdc.mercury.navbar
+  - sdc.mercury.section

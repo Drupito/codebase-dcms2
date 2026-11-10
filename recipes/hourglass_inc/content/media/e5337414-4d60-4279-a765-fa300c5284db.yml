@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e5337414-4d60-4279-a765-fa300c5284db
+  bundle: image
+  default_langcode: en
+  depends:
+    49f754e4-8eb2-4a9d-aa1b-0a238d0ddacc: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 02f0c614-cca5-40cb-9409-7f2a31dc68a3-(1).jpeg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Banner Image'
+      title: ''
+      width: 2048
+      height: 1536
+      entity: 49f754e4-8eb2-4a9d-aa1b-0a238d0ddacc

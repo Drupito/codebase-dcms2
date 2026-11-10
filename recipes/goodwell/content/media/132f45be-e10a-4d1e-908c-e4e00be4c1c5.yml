@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 132f45be-e10a-4d1e-908c-e4e00be4c1c5
+  bundle: image
+  default_langcode: en
+  depends:
+    ef6ae75a-eeec-48e3-9e52-4f4d3797fb15: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: hands_holding_paper_family_close_up.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: hands_holding_paper_family_close_up.jpg
+      title: ''
+      width: 7882
+      height: 5260
+      entity: ef6ae75a-eeec-48e3-9e52-4f4d3797fb15

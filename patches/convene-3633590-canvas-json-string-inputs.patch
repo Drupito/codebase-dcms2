@@ -1,0 +1,61 @@
+diff --git a/config/canvas.page_region.mercury.footer.yml b/config/canvas.page_region.mercury.footer.yml
+index c7037c006d2fc58f5c37358fb6e28112cb4ffa72..27e2f738a6516b8bab73eda8dde1aabb627617c8 100644
+--- a/config/canvas.page_region.mercury.footer.yml
++++ b/config/canvas.page_region.mercury.footer.yml
+@@ -14,11 +14,17 @@ component_tree:
+     uuid: bd25d2aa-d623-479e-86c7-89ecffdd3dfa
+     component_id: sdc.mercury.footer
+     component_version: d696cea1796b650e
+-    inputs: '{"align":true}'
++    inputs:
++      align: true
+   '0:footer_utility_first:0':
+     parent_uuid: bd25d2aa-d623-479e-86c7-89ecffdd3dfa
+     slot: footer_utility_first
+     uuid: c792f1a5-fd27-40de-8d91-12b2ced91e61
+     component_id: block.system_menu_block.footer
+     component_version: 68bdb40e1ac48125
+-    inputs: '{"label":"Footer","label_display":"0","level":1,"depth":null,"expand_all_items":false}'
++    inputs:
++      label: Footer
++      label_display: '0'
++      level: 1
++      depth: null
++      expand_all_items: false
+diff --git a/config/canvas.page_region.mercury.header.yml b/config/canvas.page_region.mercury.header.yml
+index f44e10a7b4a585afe72cc55609343f29d1209ed6..05b23c10f59eac7e2314f8c422aa2a9fa9c621fc 100644
+--- a/config/canvas.page_region.mercury.header.yml
++++ b/config/canvas.page_region.mercury.header.yml
+@@ -17,18 +17,29 @@ component_tree:
+     uuid: 3b448d2f-f191-44cb-8189-2362dbf3fe18
+     component_id: sdc.mercury.navbar
+     component_version: 3149f199d66bbc29
+-    inputs: '{"menu_align":"right"}'
++    inputs:
++      menu_align: right
+   '0:logo:0':
+     parent_uuid: 3b448d2f-f191-44cb-8189-2362dbf3fe18
+     slot: logo
+     uuid: 032b3150-7557-468a-ba40-d1c8fdc27f11
+     component_id: block.system_branding_block
+     component_version: b168140fdcaebae5
+-    inputs: '{"label":"Site branding","label_display":"0","use_site_logo":true,"use_site_name":false,"use_site_slogan":false}'
++    inputs:
++      label: Site branding
++      label_display: '0'
++      use_site_logo: true
++      use_site_name: false
++      use_site_slogan: false
+   '0:navigation:0':
+     parent_uuid: 3b448d2f-f191-44cb-8189-2362dbf3fe18
+     slot: navigation
+     uuid: 6d13ceff-24ca-47d3-9a3b-10bc48480618
+     component_id: block.system_menu_block.main
+     component_version: 023ff7ba63f80798
+-    inputs: '{"label":"Main navigation","label_display":"0","level":1,"depth":null,"expand_all_items":false}'
++    inputs:
++      label: Main navigation
++      label_display: '0'
++      level: 1
++      depth: null
++      expand_all_items: false

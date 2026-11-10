@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 21c1b205-269c-47d5-ba4b-a3aa19a32946
+  bundle: image
+  default_langcode: en
+  depends:
+    d034e75d-9980-4989-91b6-ff918733ad8e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: card-(2).png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Jian Li'
+      title: ''
+      width: 285
+      height: 285
+      entity: d034e75d-9980-4989-91b6-ff918733ad8e

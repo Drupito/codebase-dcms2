@@ -1,0 +1,62 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5c027cf7-7ac9-42c6-a0fb-6f3893dacd06
+  bundle: article
+  default_langcode: en
+  depends:
+    eb447fcc-7225-4e29-ba07-f1ee8e9b666d: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Step aside. This brand is gonna rock the industry'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /step-aside-brand-gonna-rock-industry
+      langcode: en
+  publish_state:
+    -
+      value: _none
+  unpublish_state:
+    -
+      value: _none
+  field_author:
+    -
+      value: 'Anthony Gecerella'
+  field_content:
+    -
+      value: "<p>There is a quiet revolution happening in beauty, and it isn't being led by louder marketing or flashier packaging. It is being led by ingredients — by the careful, intentional choices brands make about what goes into a bottle and where those components come from. Today, we are proud to introduce Lumora, a debut collection built on a simple but uncompromising idea: that the most radiant skin is the result of nature and science working in harmony, not opposition.</p><p>For too long, beauty consumers have been asked to choose. Choose between products that feel luxurious and products that perform. Choose between formulations rooted in botanical tradition and those engineered in the lab. Choose between caring for your skin and caring for the planet that sustains it. Lumora was created to dissolve those choices entirely. Every product in this collection is the result of years of research, careful sourcing, and a deep belief that beauty should never come at the expense of integrity.</p><h2>Sustainably Sourced, Thoughtfully Formulated</h2><p>At the heart of Lumora is a commitment to sustainably sourced botanicals. We work directly with growers and cooperatives who share our values, choosing ingredients harvested through regenerative practices that nourish the soil rather than deplete it. Our centella asiatica comes from family-run farms in Madagascar. Our bakuchiol is wild-harvested from biodiverse forests where local communities are partners, not suppliers. Our marine actives are extracted using cold-water processes that preserve both potency and the surrounding ecosystem.</p><p>But sourcing is only the beginning. Once these botanicals reach our labs, they meet a team of formulators, biochemists, and dermatological researchers whose job is to unlock their full potential. We use advanced delivery systems — liposomal encapsulation, fermentation-derived peptides, biomimetic lipids — to ensure that active ingredients reach the layers of skin where they can actually do their work. The result is a collection that feels indulgent on the surface and performs at the cellular level.</p><h2>The Debut Collection</h2><p>The launch collection comprises six essential products designed to function beautifully on their own or as a complete ritual. The Luminous Renewal Serum pairs stabilized vitamin C with white tea polyphenols to brighten and protect. The Replenishing Botanical Cream uses a blend of squalane and adaptogenic mushrooms to restore the moisture barrier. The Overnight Repair Concentrate features our proprietary bakuchiol complex, offering the benefits associated with retinol-style ingredients in a gentler, plant-derived form.</p><p>Rounding out the line are a gentle gel cleanser, a hydrating mist infused with rose and hyaluronic acid, and a sculpting eye serum formulated for the delicate skin around the eyes. Every product is fragrance-free in its synthetic sense, with subtle aromas drawn entirely from the botanicals themselves. Every bottle is refillable. Every carton is made from post-consumer recycled materials and printed with soy-based inks.</p><h2>A New Standard for Radiance</h2><p>What does it mean to be radiant? We believe it is more than surface glow. Radiance is skin that feels resilient, comfortable, and alive — skin that reflects health from within. It is also, increasingly, a reflection of the choices we make as consumers: choices about transparency, about ethics, about the relationships between what we put on our bodies and the world we live in.</p><p>Lumora is our answer to that evolving definition. It is a collection for people who want their beauty rituals to feel as considered as the rest of their lives. Who want to know where their ingredients come from, how they were processed, and why they work. Who believe, as we do, that science and nature are not opposing forces but collaborators in the pursuit of something genuinely beautiful.</p><p>Experience the radiance. Discover Lumora.</p>"
+      format: content_format
+  field_description:
+    -
+      value: "Introducing 'Lumora' – where science meets beauty. This debut collection features sustainably sourced botanicals and cutting-edge formulations. Experience the radiance."
+  field_featured_image:
+    -
+      entity: eb447fcc-7225-4e29-ba07-f1ee8e9b666d
+  field_seo_analysis:
+    -
+      status: '0'
+      focus_keyword: ''
+      title: ''
+      description: ''

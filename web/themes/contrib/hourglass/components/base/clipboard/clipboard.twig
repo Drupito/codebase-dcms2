@@ -1,0 +1,9 @@
+{#
+/**
+ * @file
+ * Copy-to-clipboard button.
+ */
+#}
+<button class="c-clipboard" data-clipboard-text="{{ text }}" aria-label="{{ label|default('Copy') }}">
+  <span class="c-clipboard__label">{{ label|default('Copy') }}</span>
+</button>

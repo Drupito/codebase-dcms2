@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 7eeb01a4-09a5-471d-820a-c49e28315aa2
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: girl_icon.svg
+  uri:
+    -
+      value: 'public://2026-05/girl_icon.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 1253
+  status:
+    -
+      value: true

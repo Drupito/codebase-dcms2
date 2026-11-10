@@ -1,0 +1,59 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Tech Insights Slide
+group: Atoms
+status: stable
+description: 'A single slide for the Tech Insights carousel: one video card and one quote card side by side.'
+props:
+  type: object
+  properties:
+    video_author_name:
+      type: string
+      title: 'Video Author Name'
+      contentMediaType: text/html
+    video_author_role:
+      type: string
+      title: 'Video Author Role'
+      contentMediaType: text/html
+    video_thumbnail:
+      type: object
+      title: 'Video Thumbnail'
+      $ref: json-schema-definitions://canvas.module/image
+    video_media:
+      type: object
+      title: 'Video Media'
+      $ref: json-schema-definitions://canvas.module/video
+    youtube_url:
+      type: string
+      title: 'YouTube URL'
+      description: 'YouTube URL (watch, youtu.be, shorts, or embed). When set, the play button launches the video inline.'
+      examples:
+        - 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        - 'https://youtu.be/dQw4w9WgXcQ'
+    video_cta_label:
+      type: string
+      title: 'Video CTA Label'
+      contentMediaType: text/html
+    quote_title:
+      type: string
+      title: 'Quote Panel Title'
+      contentMediaType: text/html
+    quote_subtitle:
+      type: string
+      title: 'Quote Panel Subtitle'
+      contentMediaType: text/html
+    quote_text:
+      type: string
+      title: 'Quote Text'
+      contentMediaType: text/html
+    quote_author_name:
+      type: string
+      title: 'Quote Author Name'
+      contentMediaType: text/html
+    quote_author_role:
+      type: string
+      title: 'Quote Author Role'
+      contentMediaType: text/html
+    quote_author_image:
+      type: object
+      title: 'Quote Author Photo'
+      $ref: json-schema-definitions://canvas.module/image

@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.article.field_author
+    - field.field.node.article.field_content
+    - field.field.node.article.field_description
+    - field.field.node.article.field_featured_image
+    - field.field.node.article.field_seo_analysis
+    - field.field.node.article.field_seo_description
+    - field.field.node.article.field_seo_image
+    - field.field.node.article.field_seo_title
+    - node.type.article
+  module:
+    - user
+id: node.article.card
+targetEntityType: node
+bundle: article
+mode: card
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: 16_9_medium
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_author: true
+  field_content: true
+  field_seo_analysis: true
+  field_seo_description: true
+  field_seo_image: true
+  field_seo_title: true

@@ -1,0 +1,69 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 5fcb32a1-46ed-4d71-954f-a6bf6bcecfd0
+  bundle: project
+  default_langcode: en
+  depends:
+    98337317-d527-4dd9-9b7d-ca41f425d813: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'The Oakridge Pavillion'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /oakridge-pavillion
+      langcode: en
+  field_content:
+    -
+      value: '<p>The Oakridge Pavilion is a landmark community space nestled within Sydney''s leafy suburban landscape, designed to bridge the natural environment with the rhythms of everyday life. Commissioned as a focal point for the Oakridge precinct, the pavilion draws people together — for markets, gatherings, quiet reflection, and celebration — through architecture that feels both purposeful and unhurried.</p><h2>The Challenge</h2><p>The site presented a tension familiar to urban infill projects: how to create a building with genuine civic presence without overwhelming the mature tree canopy and low-scale residential character surrounding it. The community had a clear desire for a space that felt welcoming at all hours and across all seasons, yet the brief demanded restraint — no grand gestures, no architecture that announces itself at the expense of its surroundings.</p><h2>Our Approach</h2><p>We began by listening. Extensive consultation with local residents, council stakeholders, and community groups revealed a shared longing for a space that felt genuinely theirs — not a facility, but a place. From those conversations, a clear set of values emerged: openness, durability, and a deep respect for the existing landscape.</p><p>The design response is deliberately simple. A long, sheltering roof form extends generously beyond its supporting walls, creating covered outdoor areas that blur the boundary between inside and out. Structural posts step back from the perimeter, leaving the edges open and the views uninterrupted. Materiality is honest — exposed concrete, recycled hardwood, and raw steel that will weather gracefully and grow more characterful with time.</p><h2>The Result</h2><p>The Oakridge Pavilion has become exactly what its community hoped for: a place that feels like it was always meant to be there. The covered forecourt hosts the weekly Oakridge Farmers'' Market. The open lawn beyond serves weekend sport in the morning and evening picnics by afternoon. Inside, flexible floor space accommodates everything from community meetings to local art exhibitions.</p><p>Most tellingly, the pavilion is used. Every day, in ways its designers did not fully anticipate — which is, for Forma, the truest measure of a building''s success.</p><h2>Details</h2><ul><li data-list-item-id="e29b33e23f1e545a27a812bf93eaf8911"><strong>Completed:</strong> 2024</li><li data-list-item-id="eaebf03bb4662ca31d3a136954b69c587"><strong>Site Area:</strong> 3,200 m²</li><li data-list-item-id="e8cbf49c9a0d8313a5d0c75b24d670220"><strong>GFA:</strong> 680 m²</li><li data-list-item-id="ee306a9540f5964276ed017d1bd8905b3"><strong>Structure:</strong> Exposed concrete and recycled hardwood</li><li data-list-item-id="e536434c2417c8902d452ab14682865a7"><strong>Landscape:</strong> Integrated native planting, existing canopy preserved</li></ul>'
+      format: content_format
+  field_description:
+    -
+      value: "The Oakridge Pavilion is a landmark community space nestled within Sydney's leafy suburban landscape, designed to bridge the natural environment with the rhythms of everyday life. "
+  field_eyebrow:
+    -
+      value: 'Vanguard Properties'
+  field_featured_image:
+    -
+      entity: 98337317-d527-4dd9-9b7d-ca41f425d813
+  field_location:
+    -
+      value: 'Sydney, Australia'
+  field_name:
+    -
+      value: Thando
+  field_position:
+    -
+      value: 'CEO of Evano'
+  field_quote_text:
+    -
+      value: "<p>\"Working with Forma Agency was a dream. \LThey truly captured the essence of our brand \Land brought it to life!\"</p>"
+      format: content_format
+  field_seo_analysis:
+    -
+      status: '0'
+      focus_keyword: ''
+      title: ''
+      description: ''

@@ -1,0 +1,16 @@
+includes:
+  - phar://phpstan.phar/conf/bleedingEdge.neon
+
+parameters:
+  level: 3
+  bootstrapFiles:
+    - phpstan-bootstrap.php
+  paths:
+    - .
+  ignoreErrors:
+    # redirect_delete_by_path() is only deprecated on redirect 8.x-1.x dev, so
+    # this is not reported when CI installs the latest release.
+    -
+      identifier: function.deprecated
+      path: src/Hook/TrashHandler/RedirectTrashHandler.php
+      reportUnmatched: false

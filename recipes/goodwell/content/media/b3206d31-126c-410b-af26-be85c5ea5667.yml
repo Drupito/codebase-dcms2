@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b3206d31-126c-410b-af26-be85c5ea5667
+  bundle: image
+  default_langcode: en
+  depends:
+    4adc48ee-d0bf-4491-9be0-bded2132e5f8: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: family_photo.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Family Photo'
+      title: ''
+      width: 2048
+      height: 1300
+      entity: 4adc48ee-d0bf-4491-9be0-bded2132e5f8

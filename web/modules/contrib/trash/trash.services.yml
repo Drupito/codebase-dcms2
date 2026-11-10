@@ -1,0 +1,126 @@
+services:
+  _defaults:
+    autoconfigure: true
+    autowire: true
+
+  trash.manager:
+    class: Drupal\trash\TrashManager
+  Drupal\trash\TrashManagerInterface: '@trash.manager'
+
+  logger.channel.trash:
+    parent: logger.channel_base
+    arguments: ['trash']
+
+  Drupal\trash\TrashEntityPurger: ~
+
+  Drupal\trash\EventSubscriber\TrashConfigSubscriber:
+    tags:
+      - { name: event_subscriber }
+
+  Drupal\trash\EventSubscriber\TrashEntitySchemaSubscriber:
+    tags:
+      - { name: event_subscriber }
+
+  Drupal\trash\EventSubscriber\TrashLanguageOverviewSubscriber:
+    tags:
+      - { name: event_subscriber }
+
+  Drupal\trash\EventSubscriber\TrashIgnoreSubscriber:
+    tags:
+      - { name: event_subscriber }
+
+  Drupal\trash\Routing\RouteSubscriber:
+    tags:
+      - { name: event_subscriber }
+
+  Drupal\trash\RouteProcessor\TrashRouteProcessor:
+    tags:
+      - { name: route_processor_outbound }
+
+  Drupal\trash\TrashUninstallValidator: ~
+
+  Drupal\trash\TrashViewBuilder: ~
+
+  Drupal\trash\TrashCliActions: ~
+
+  # Inject the undecorated workspace information service (the one the trash
+  # decorator wraps), so the purge access gate can enforce workspace ownership
+  # without the decorator's delete-is-harmless override, no matter how the
+  # service is decorated. Optional: workspaces is not a dependency, so the '@?'
+  # leaves it NULL when workspaces is not installed. Everything else is autowired.
+  Drupal\trash\Hook\TrashEntityAccess:
+    # Retrieved via the container in TrashNodeAccessControlHandler, so it must
+    # stay public like the auto-registered hook service it replaces.
+    public: true
+    arguments:
+      $innerWorkspaceInformation: '@?trash.workspaces.information.inner'
+
+  # Trash handlers.
+  Drupal\trash\Handler\TrashHandlerConfigurator:
+    public: false
+
+  Drupal\trash\Hook\TrashHandler\NodeTrashHandler:
+    tags:
+      - { name: trash_handler, entity_type_id: node }
+  Drupal\trash\Hook\TrashHandler\TaxonomyTermTrashHandler:
+    tags:
+      - { name: trash_handler, entity_type_id: taxonomy_term }
+  Drupal\trash\Hook\TrashHandler\MenuLinkContentTrashHandler:
+    tags:
+      - { name: trash_handler, entity_type_id: menu_link_content }
+      - { name: event_subscriber }
+  Drupal\trash\Hook\TrashHandler\RedirectTrashHandler:
+    tags:
+      - { name: trash_handler, entity_type_id: redirect }
+  Drupal\trash\Hook\TrashHandler\PathAliasTrashHandler:
+    tags:
+      - { name: trash_handler, entity_type_id: path_alias }
+  Drupal\trash\Hook\TrashHandler\FileTrashHandler:
+    tags:
+      - { name: trash_handler, entity_type_id: file }
+
+  Drupal\trash\ParamConverter\TrashEntityConverter:
+    parent: paramconverter.entity
+    tags:
+      - { name: paramconverter }
+
+  Drupal\trash\Access\ContentTranslationManageAccessCheck:
+    tags:
+      - { name: access_check, applies_to: _access_content_translation_manage }
+
+  Drupal\trash\TrashEntityTypeManager:
+    decorates: 'entity_type.manager'
+    # Symfony moves the inner service's tags to the decorator, which puts this
+    # service late in the plugin cache clearer's list. Some plugin managers
+    # read entity types when their cache is cleared, for example the Canvas
+    # block manager rebuilds its components. During a module install they would
+    # get the entity type definitions from before the install, so clear these
+    # first.
+    tags:
+      - { name: plugin_manager_cache_clear, priority: 1000 }
+  # Expose the decorated inner 'entity_type.manager' under a public alias so
+  # ReverseContainer can resolve it when serializing TrashEntityTypeManager via
+  # DependencySerializationTrait. Symfony's DecoratorServicePass forces the
+  # renamed inner to private, hence the workaround.
+  trash.entity_type.manager.inner:
+    public: true
+    alias: Drupal\trash\TrashEntityTypeManager.inner
+
+  Drupal\trash\Cache\TrashEntityCacheBackend:
+    public: false
+    decorates: cache.entity
+
+  Drupal\trash\Cache\TrashEntityMemoryCacheBackend:
+    public: false
+    decorates: entity.memory_cache
+
+  # Register our trash-aware validator with the core class name so that the
+  # class resolver uses it instead of the core validator.
+  # Must be non-shared because validation context is injected via setter.
+  Drupal\trash\Validation\TrashAwareUniqueFieldValueValidator:
+    shared: false
+    calls:
+      - [setTrashManager, ['@trash.manager']]
+  # Alias with leading backslash to match UniqueFieldConstraint::validatedBy().
+  \Drupal\Core\Validation\Plugin\Validation\Constraint\UniqueFieldValueValidator:
+    alias: Drupal\trash\Validation\TrashAwareUniqueFieldValueValidator

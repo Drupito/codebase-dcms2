@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: c382b5e5-f39e-403a-8fd1-6dab5eb5b10d
+  bundle: plans
+  default_langcode: en
+  depends:
+    b3206d31-126c-410b-af26-be85c5ea5667: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Saving Plans'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /saving-plans
+      langcode: en
+  field_body:
+    -
+      value: '<p><strong>About Life Insurance</strong></p><p>Life insurance is about people, not paperwork. It helps protect your family’s future with a payout that covers everyday costs, loans, and long‑term goals if something happens to you. Choose a level that fits now, then adjust as life changes.</p><p>&nbsp;</p><p><strong>What’s included</strong></p><p>• Flexible coverage amounts tailored to your goals<br>• Option to include children or dependents<br>• Simple online setup and easy updates<br>• Clear guidance on choosing the right plan<br>• Support for major life events and changes</p><p><strong>How it works</strong></p><ol><li data-list-item-id="e7aee38d1dcfa0ed2fad8b9391fad3713">Choose the coverage level that fits your life.</li><li data-list-item-id="efeafa95ef1ce7341790f5bdd9d7fb88d">Review the details and adjust any add‑ons.</li><li data-list-item-id="e27101696a41fd166293286b675bc8381">Get covered in minutes — we’ll handle the rest.</li></ol><p>&nbsp;</p><p><strong>Why it matters</strong><br>Insurance should feel simple and supportive. With Midlands, you get clear choices, fair pricing, and quick help when you need it — so you can focus on what’s ahead.<br><br><strong>Get started</strong><br><br>Plan ahead for the people you love. Get started or ask for guidance.</p>'
+      format: content_format
+      summary: 'In this exciting new age, Kaliber Insurance is proud to lead the way, offering innovative solutions and reliable protection for all.'
+  field_button:
+    -
+      uri: 'internal:/'
+      title: 'View Details'
+      options: {  }
+  field_featured_image:
+    -
+      entity: b3206d31-126c-410b-af26-be85c5ea5667

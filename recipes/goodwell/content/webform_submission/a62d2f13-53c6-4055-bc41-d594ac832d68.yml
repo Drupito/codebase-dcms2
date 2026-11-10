@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: webform_submission
+  uuid: a62d2f13-53c6-4055-bc41-d594ac832d68
+  bundle: tell_us_about_you
+  default_langcode: en
+default:
+  serial:
+    -
+      value: 1
+  token:
+    -
+      value: HOLwBt9Ha-TW1Bz4Ph104zRGElYTWzYNaGuz0sYdsDE
+  uri:
+    -
+      value: /get-a-quote
+  completed:
+    -
+      value: 1781501601
+  in_draft:
+    -
+      value: false
+  remote_addr:
+    -
+      value: 172.19.0.2
+  uid:
+    -
+      target_id: 1
+  entity_type:
+    -
+      value: canvas_page
+  entity_id:
+    -
+      value: '3'
+  locked:
+    -
+      value: false
+  sticky:
+    -
+      value: false

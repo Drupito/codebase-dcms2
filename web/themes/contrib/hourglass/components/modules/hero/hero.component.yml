@@ -1,0 +1,53 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Hero
+group: Organisms
+status: stable
+description: "Full-width hero section with background image, optional eyebrow label, headline, description, and ghost pill CTA."
+props:
+  type: object
+  properties:
+    label:
+      type: string
+      title: "Eyebrow Label"
+      examples:
+        - "About Us"
+    heading:
+      type: string
+      title: "Heading"
+      examples:
+        - "Master Your Momentum. Scale Without Friction."
+    heading_tag:
+      type: string
+      title: "Heading Tag"
+      enum: [h1, h2, h3, h4, h5, h6]
+      default: "h1"
+    alignment:
+      type: string
+      title: "Content Alignment"
+      enum: [left, center, right]
+      default: center
+    description:
+      type: string
+      title: "Description"
+      contentMediaType: text/html
+    media:
+      type: object
+      title: "Background Image"
+      $ref: json-schema-definitions://canvas.module/image
+      examples:
+        - src: "https://example.com/hero.jpg"
+          alt: ""
+          width: 1440
+          height: 812
+    cta_text:
+      type: string
+      title: "CTA Button Text"
+    cta_url:
+      type: string
+      title: "CTA Button URL"
+      format: uri-reference
+    tall_image:
+      type: boolean
+      title: "Tall Image (900px)"
+      description: "Enable for Service Detail pages to set image height to 900px."
+      default: false

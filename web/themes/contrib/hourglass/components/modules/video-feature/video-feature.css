@@ -1,0 +1,404 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section wrapper ─────────────────────────────────────────────────────── */
+
+.c-video-feature {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 0;
+}
+
+/* ── Stacked variant: header above + full-width video below ─────────────── */
+
+.c-video-feature--stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.c-video-feature--stacked .c-video-feature__header {
+  padding: 0 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* H3 typography for stacked heading */
+.c-video-feature--stacked .c-video-feature__heading .c-heading,
+.c-video-feature--stacked .c-video-feature__heading h1,
+.c-video-feature--stacked .c-video-feature__heading h2,
+.c-video-feature--stacked .c-video-feature__heading h3,
+.c-video-feature--stacked .c-video-feature__heading h4,
+.c-video-feature--stacked .c-video-feature__heading h5,
+.c-video-feature--stacked .c-video-feature__heading h6,
+.c-video-feature--stacked .c-video-feature__heading p {
+  font-family: var(
+    --Heading-H3-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: -0.3px;
+  color: #000;
+  margin: 0;
+  max-width: 750px;
+}
+
+/* B1 typography for stacked description */
+.c-video-feature--stacked .c-video-feature__description .c-text,
+.c-video-feature--stacked .c-video-feature__description p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 750px;
+}
+
+/* Full-width video with aspect ratio */
+.c-video-feature--stacked .c-video-feature__media {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 754.6;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.c-video-feature--stacked .c-video-feature__media > * {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.c-video-feature--stacked .c-video-feature__thumbnail {
+  position: relative;
+  inset: unset;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* ── Flex row: text left + media right — gap 80px ───────────────────────── */
+
+.c-video-feature__container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* ── Left text column — 430px fixed ─────────────────────────────────────── */
+
+.c-video-feature__text {
+  flex-shrink: 0;
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.c-video-feature__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Heading atom ────────────────────────────────────────────────────────── */
+
+.c-video-feature__heading .c-heading,
+.c-video-feature__heading h1,
+.c-video-feature__heading h2,
+.c-video-feature__heading h3,
+.c-video-feature__heading h4,
+.c-video-feature__heading h5,
+.c-video-feature__heading h6,
+.c-video-feature__heading p {
+  font-family: var(
+    --Heading-H4-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: var(--Heading-H4-fontSize, 32px);
+  font-weight: 400;
+  line-height: var(--Heading-H4-lineHeight, 38px);
+  letter-spacing: var(--Heading-H4-letterSpacing, -0.2px);
+  color: var(--gray-black, #000);
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Text/description atom ───────────────────────────────────────────────── */
+
+.c-video-feature__description .c-text,
+.c-video-feature__description p {
+  font-family: var(--font-geist, "Geist", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: var(--gray-black, #000);
+  margin: 0;
+  padding: 0;
+}
+
+/* ── CTA Button — orange gradient pill ───────────────────────────────────── */
+
+.c-video-feature__cta .c-button,
+.c-video-feature__cta a,
+.c-video-feature__cta button {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  height: 51px;
+  padding: 12px 28px !important;
+  border-radius: 30px !important;
+  background: linear-gradient(90deg, #e8590c 0%, #fd7e14 100%) !important;
+  border: 2px solid #ffa94d !important;
+  box-shadow: 0px 3px 2px rgba(0, 33, 38, 0.2) !important;
+  color: #fff !important;
+  font-family: var(--font-geist, "Geist", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.c-video-feature__cta .c-button:hover,
+.c-video-feature__cta a:hover,
+.c-video-feature__cta button:hover {
+  opacity: 0.88;
+}
+
+.c-video-feature__cta .c-button .c-button__icon {
+  display: none;
+}
+
+/* ── Right media panel — 652×410, Figma: shrink-0 w-[652px] h-[410px] ───── */
+
+.c-video-feature__media {
+  position: relative;
+  flex-shrink: 0;
+  width: 652px;
+  height: 410px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Thumbnail fills the full panel — cover all Canvas-rendered elements */
+
+.c-video-feature__thumbnail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.c-video-feature__thumbnail > *,
+.c-video-feature__thumbnail .c-base-media,
+.c-video-feature__thumbnail .c-base-media__inner,
+.c-video-feature__thumbnail .c-base-media__content,
+.c-video-feature__thumbnail .field,
+.c-video-feature__thumbnail .field__item,
+.c-video-feature__thumbnail picture {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-video-feature__thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c-video-feature__thumbnail video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Click-blocking overlay — above thumbnail, below play button ────────── */
+
+.c-video-feature__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* ── Play overlay — glass pill, centered ─────────────────────────────────── */
+
+.c-video-feature__play-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 48px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.c-video-feature__play-wrap:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Hide play button when video is playing */
+.c-video-feature__media.is-playing .c-video-feature__play-wrap {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.c-video-feature__play-label {
+  font-family: var(--font-geist, "Geist", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #000;
+}
+
+.c-video-feature__play-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Responsive — tablet ─────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-video-feature {
+    padding: 80px 48px;
+  }
+
+  .c-video-feature__media {
+    width: 500px;
+    height: 340px;
+  }
+
+  .c-video-feature--stacked .c-video-feature__header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-video-feature {
+    padding: 80px 32px;
+  }
+
+  .c-video-feature__container {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .c-video-feature__text {
+    width: 100%;
+  }
+
+  .c-video-feature__media {
+    width: 100%;
+    height: 320px;
+    flex-shrink: unset;
+  }
+
+  .c-video-feature--stacked {
+    gap: 60px;
+  }
+
+  .c-video-feature--stacked .c-video-feature__header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .c-video-feature--stacked .c-video-feature__heading .c-heading,
+  .c-video-feature--stacked .c-video-feature__heading h1,
+  .c-video-feature--stacked .c-video-feature__heading h2,
+  .c-video-feature--stacked .c-video-feature__heading h3,
+  .c-video-feature--stacked .c-video-feature__heading h4,
+  .c-video-feature--stacked .c-video-feature__heading h5,
+  .c-video-feature--stacked .c-video-feature__heading h6,
+  .c-video-feature--stacked .c-video-feature__heading p {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+/* ── Responsive — mobile ─────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .c-video-feature {
+    padding: 60px 24px;
+  }
+
+  .c-video-feature--stacked {
+    gap: 40px;
+  }
+
+  .c-video-feature--stacked .c-video-feature__header {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .c-video-feature--stacked .c-video-feature__heading .c-heading,
+  .c-video-feature--stacked .c-video-feature__heading h1,
+  .c-video-feature--stacked .c-video-feature__heading h2,
+  .c-video-feature--stacked .c-video-feature__heading h3,
+  .c-video-feature--stacked .c-video-feature__heading h4,
+  .c-video-feature--stacked .c-video-feature__heading h5,
+  .c-video-feature--stacked .c-video-feature__heading h6,
+  .c-video-feature--stacked .c-video-feature__heading p {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .c-video-feature__media {
+    height: 240px;
+  }
+
+  .c-video-feature__heading .c-heading,
+  .c-video-feature__heading h1,
+  .c-video-feature__heading h2,
+  .c-video-feature__heading h3,
+  .c-video-feature__heading h4,
+  .c-video-feature__heading h5,
+  .c-video-feature__heading h6,
+  .c-video-feature__heading p {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .c-video-feature__play-wrap {
+    padding: 8px 16px;
+  }
+
+  .c-video-feature__play-label {
+    font-size: 14px;
+  }
+}

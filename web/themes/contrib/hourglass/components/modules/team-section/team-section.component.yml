@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Team Section
+group: Organisms
+status: stable
+description: 'Section heading + 4-column grid of Team Member Cards. Place one Team Member Card in the cards slot and duplicate as needed.'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Section Title'
+      examples:
+        - 'Marketing & Sales'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  cards:
+    title: 'Team Member Cards'
+    description: 'Place one Team Member Card atom here and duplicate it as needed.'

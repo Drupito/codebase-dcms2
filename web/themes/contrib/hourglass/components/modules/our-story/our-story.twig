@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Template for the Our Story component.
+ *
+ * Props:
+ * - section_title: Section heading text (CKEditor).
+ * - body_primary: First paragraph — rendered in black.
+ * - body_highlight: Second paragraph — rendered in orange (#d9480f).
+ *
+ * Slots:
+ * - card_1: Photo Card atom, normal vertical position (left column).
+ * - card_2: Photo Card atom, offset 100px down (right column).
+ */
+#}
+{{ attach_library('hourglass/our-story') }}
+
+<section class="c-our-story {{ extra_classes|default('') }}">
+
+  {% if section_title %}
+    <div class="c-our-story__header">
+      <h2 class="c-our-story__title">{{ section_title|raw }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="c-our-story__body">
+
+    {# Staggered photo cards — left side #}
+    <div class="c-our-story__photos">
+      <div class="c-our-story__photo-col c-our-story__photo-col--first">
+        {{ card_1 }}
+      </div>
+      <div class="c-our-story__photo-col c-our-story__photo-col--second">
+        {{ card_2 }}
+      </div>
+    </div>
+
+    {# Rich-text copy — right side #}
+    <div class="c-our-story__content">
+      {% if body_primary %}
+        <div class="c-our-story__text c-our-story__text--primary">{{ body_primary|raw }}</div>
+      {% endif %}
+      {% if body_highlight %}
+        <div class="c-our-story__text c-our-story__text--highlight">{{ body_highlight|raw }}</div>
+      {% endif %}
+    </div>
+
+  </div>
+
+</section>

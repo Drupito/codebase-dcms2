@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: dbd2366a-440f-49b8-9066-1a24a26ea6f3
+  bundle: image
+  default_langcode: en
+  depends:
+    75ed9900-b2c3-49b2-818e-7bf554ca2796: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: hand_shaking_image.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: hand_shake.jpg
+      title: ''
+      width: 5760
+      height: 3840
+      entity: 75ed9900-b2c3-49b2-818e-7bf554ca2796

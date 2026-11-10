@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 3e7ce683-dacd-48f3-b151-fcb83086f5f4
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: tailwind.png
+  uri:
+    -
+      value: 'public://2026-04/tailwind.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 971898
+  status:
+    -
+      value: true

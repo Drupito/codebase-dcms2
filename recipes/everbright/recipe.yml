@@ -1,0 +1,248 @@
+name: 'Everbright'
+type: Site
+description: 'Designed for a portfolio site, this template features a sharp and striking black-and-white design, along with articles and a project portfolio.'
+recipes:
+  - drupal_cms_site_template_base
+  - drupal_cms_forms
+install:
+  - gin_login
+  - node
+  - system
+  - ui_icons_field
+  - ui_icons_menu
+  - ui_icons_picker
+  - ui_icons
+  - everbright_theme
+  - workflows
+config:
+  strict: false
+  actions:
+    field.field.node.page.field_description:
+      setRequired: false
+    gin_login.settings:
+      simpleConfigUpdate:
+        brand_image:
+          use_default: false
+          path: 'public://george-pagan-iii-FBwW4Xu3FTs-unsplash.jpg'
+    node.type.page:
+      setPreviewMode: 0
+    project_browser.admin_settings:
+      simpleConfigUpdate:
+        enabled_sources:
+          recommended:
+            uri: 'https://git.drupalcode.org/api/v4/projects/212223/repository/files/recommended.yml/raw?ref=HEAD'
+            ttl: 86400
+          # This is redundant, but it's necessary so that the Recommended list is first.
+          drupalorg_jsonapi: {}
+        default_source: recommended
+    system.site:
+      simpleConfigUpdate:
+        page:
+          403: /user/login
+          404: /page/2
+          front: /home
+    system.theme:
+      simpleConfigUpdate:
+        admin: gin
+        default: everbright_theme
+    user.role.content_editor:
+      grantPermissions:
+        - create article content
+        - create project content
+        - delete any article content
+        - delete any project content
+        - edit any article content
+        - edit any project content
+    workflows.workflow.basic_editorial:
+      addNodeTypes:
+        - article
+        - project
+
+    canvas.component.theme_page_template.everbright_theme:
+      createIfNotExists:
+        label: 'Everbright theme page template'
+        provider: canvas_page_template_component
+        source: theme_page_template
+        source_local_id: everbright_theme
+        active_version: 15fe1e06320b1035
+        versioned_properties:
+          active:
+            settings: { }
+            fallback_metadata:
+              slot_definitions:
+                content:
+                  title: Content
+                  description: 'The Content region.'
+                  examples:
+                    - ''
+                header:
+                  title: Header
+                  description: 'The Header region.'
+                  examples:
+                    - ''
+                footer:
+                  title: Footer
+                  description: 'The Footer region.'
+                  examples:
+                    - ''
+
+    canvas.page_variant.theme_everbright_theme:
+      create:
+        label: 'Everbright_theme theme'
+        component_tree:
+          - uuid: ae966f03-5f5c-45aa-a1d4-ebc718e2b66d
+            component_id: theme_page_template.everbright_theme
+            component_version: 15fe1e06320b1035
+            inputs: { }
+          - parent_uuid: ae966f03-5f5c-45aa-a1d4-ebc718e2b66d
+            slot: content
+            uuid: 386b636d-a421-4c48-9a37-b3a23cccd4d8
+            component_id: marker.page_content
+            component_version: 3b12c0b99a6caecc
+            inputs: { }
+          - parent_uuid: ae966f03-5f5c-45aa-a1d4-ebc718e2b66d
+            slot: footer
+            uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            component_id: sdc.everbright_theme.footer
+            component_version: 9363930709cf22bc
+            inputs: { }
+          - parent_uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            slot: footer_first
+            uuid: f52b2ced-2907-48c2-bd35-d15b582432e6
+            component_id: block.system_branding_block
+            component_version: 7d528e00f56b3abf
+            inputs:
+              label: 'Site branding'
+              label_display: '0'
+              use_site_logo: true
+              use_site_name: false
+              use_site_slogan: false
+          - parent_uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            slot: footer_first
+            uuid: c893995e-800a-41b0-8c39-94e5bbb300ff
+            component_id: sdc.everbright_theme.text
+            component_version: 8a33edeeb2e4a925
+            inputs:
+              text:
+                value: '<p>We are Everbright, connecting you with top creative talent and innovative marketing solutions.</p>'
+                format: canvas_html_block
+              text_size: text-sm
+              text_color: inverted
+          - parent_uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            slot: footer_second
+            uuid: 626cbbf8-3e63-4d5a-ae7f-de7a3328330d
+            component_id: sdc.everbright_theme.heading
+            component_version: ca71146b4d2d085d
+            inputs:
+              heading_text: 'Contact us'
+              level: 2
+              text_size: heading-responsive-2xl
+              text_color: inverted
+              align: left
+          - parent_uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            slot: footer_second
+            uuid: 44707b9e-c5b5-4ec4-8779-c60295609254
+            component_id: sdc.everbright_theme.text
+            component_version: 8a33edeeb2e4a925
+            inputs:
+              text:
+                value: '<p>+123 456 7890<br><a href="mailto:info@example.com">info@example.com</a></p><p>123 New Street, 09876</p>'
+                format: canvas_html_block
+              text_size: text-sm
+              text_color: inverted
+          - parent_uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            slot: footer_third
+            uuid: 6a69ce9a-90cb-4337-8ee0-7cde41b78934
+            component_id: sdc.everbright_theme.heading
+            component_version: ca71146b4d2d085d
+            inputs:
+              heading_text: 'Follow us'
+              level: 2
+              text_size: heading-responsive-2xl
+              text_color: inverted
+              align: left
+          - parent_uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            slot: footer_third
+            uuid: 416d8426-c653-493a-9f6b-7a0024ad4924
+            component_id: block.system_menu_block.social
+            component_version: 838d76f066aff791
+            inputs:
+              label: 'Social links'
+              label_display: '0'
+              level: 1
+              depth: null
+              expand_all_items: false
+          - parent_uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            slot: footer_utility_first
+            uuid: 8317d037-241c-41ff-835f-50e86b53a8ea
+            component_id: block.system_menu_block.footer
+            component_version: 075503dbc228a45c
+            inputs:
+              label: Footer
+              label_display: '0'
+              level: 1
+              depth: null
+              expand_all_items: false
+          - parent_uuid: 46847aad-03eb-46f3-a75d-8997996cd228
+            slot: footer_utility_last
+            uuid: 63ecfaa9-10c3-4cee-81cc-2cad13f7240f
+            component_id: sdc.everbright_theme.text
+            component_version: 8a33edeeb2e4a925
+            inputs:
+              text:
+                value: '<p><strong>2026 everbright </strong>All rights reserved.</p>'
+                format: canvas_html_block
+              text_size: text-xs
+              text_color: inverted
+          - parent_uuid: ae966f03-5f5c-45aa-a1d4-ebc718e2b66d
+            slot: header
+            uuid: 9d4f46dd-0e77-429f-b63e-e91a7fb7bd12
+            component_id: sdc.everbright_theme.navbar
+            component_version: 9c54b0537f574888
+            inputs: { }
+          - parent_uuid: 9d4f46dd-0e77-429f-b63e-e91a7fb7bd12
+            slot: links
+            uuid: 58aa42af-4489-4574-ae28-85192f5dbfa2
+            component_id: sdc.everbright_theme.button
+            component_version: 640a23e2a2b2db0a
+            inputs:
+              variant: secondary
+              label: "Let's go"
+              mobile_width: false
+              icon_first: false
+              disabled: false
+          - parent_uuid: 9d4f46dd-0e77-429f-b63e-e91a7fb7bd12
+            slot: logo
+            uuid: 344f2633-5910-4dcf-b36e-9f987a0a1922
+            component_id: block.system_branding_block
+            component_version: 7d528e00f56b3abf
+            inputs:
+              label: 'Site branding'
+              label_display: '0'
+              use_site_logo: true
+              use_site_name: false
+              use_site_slogan: false
+          - parent_uuid: 9d4f46dd-0e77-429f-b63e-e91a7fb7bd12
+            slot: navigation
+            uuid: 7a7b27fa-35f2-44da-81e8-f43db578871a
+            component_id: block.system_menu_block.main
+            component_version: 322535c0078cf59c
+            inputs:
+              label: 'Main navigation'
+              label_display: '0'
+              level: 1
+              depth: null
+              expand_all_items: false
+
+    canvas.settings:
+      simpleConfigUpdate:
+        default_page_variant: theme_everbright_theme
+
+extra:
+  drupal_cms_installer:
+    creator: Drupal CMS
+    links:
+      - text: Learn more
+        url: 'https://new.drupal.org/site-template/everbright'
+      - text: Demo
+        url: 'https://simplytest.me/template/everbright'

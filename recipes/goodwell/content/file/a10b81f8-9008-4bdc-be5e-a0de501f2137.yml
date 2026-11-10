@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a10b81f8-9008-4bdc-be5e-a0de501f2137
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: woman_beanie.png
+  uri:
+    -
+      value: 'public://2026-06/woman_beanie.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 2814
+  status:
+    -
+      value: true

@@ -1,0 +1,65 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: "Heading With Description"
+group: Molecules
+status: stable
+description: 'Eyebrow, heading, description, and optional CTA — section intro block.'
+props:
+  type: object
+  properties:
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+    eyebrow_text:
+      type: string
+      title: 'Eyebrow Text'
+      examples:
+        - OVERVIEW
+    tag:
+      type: string
+      title: 'Tag Label'
+      examples:
+        - 'New'
+    heading:
+      type: string
+      title: 'Heading'
+      examples:
+        - 'We build the digital backbone for the world''s most ambitious enterprises.'
+    heading_tag:
+      type: string
+      title: 'Heading Tag'
+      enum: [h1, h2, h3, h4, h5, h6]
+      default: 'h2'
+    description:
+      type: string
+      title: 'Description'
+      contentMediaType: text/html
+      examples:
+        - '<p>From cloud-native SaaS to custom B2B integrations, we ensure your tech stack evolves as fast as the market.</p>'
+    text:
+      type: string
+      title: 'Left Text'
+      contentMediaType: text/html
+    value:
+      type: string
+      title: 'Right Text'
+      contentMediaType: text/html
+    callout:
+      type: string
+      title: 'Callout Text'
+      contentMediaType: text/html
+    cta_text:
+      type: string
+      title: 'CTA Button Text'
+      examples:
+        - 'Learn More'
+    cta_url:
+      type: string
+      title: 'CTA Button URL'
+      format: uri-reference
+      examples:
+        - '/about'
+    heading_nowrap:
+      type: boolean
+      title: 'Single-line heading'
+      description: 'Force the heading to stay on one line (no word wrap).'
+

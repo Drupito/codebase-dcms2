@@ -1,0 +1,44 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 012a9d4e-9fbd-4143-b82f-76518a26b73b
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    012239fc-7293-49f7-a83b-77063b398455: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: '905 Locust Street Redding, CA 96001'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      uri: 'route:<nolink>'
+      title: ''
+      options:
+        container_attributes:
+          class:
+            - footer-address
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:012239fc-7293-49f7-a83b-77063b398455'
+  revision_translation_affected:
+    -
+      value: true

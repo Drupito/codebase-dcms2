@@ -1,0 +1,236 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.forma_theme.button
+    - canvas.component.sdc.forma_theme.grid
+    - canvas.component.sdc.forma_theme.group
+    - canvas.component.sdc.forma_theme.heading
+    - canvas.component.sdc.forma_theme.image
+    - canvas.component.sdc.forma_theme.section
+    - canvas.component.sdc.forma_theme.text
+    - core.entity_view_mode.node.full
+    - field.field.media.image.field_media_image
+    - field.field.node.project.field_content
+    - field.field.node.project.field_description
+    - field.field.node.project.field_eyebrow
+    - field.field.node.project.field_featured_image
+    - field.field.node.project.field_location
+    - filter.format.canvas_html_block
+    - filter.format.content_format
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - node.type.project
+  module:
+    - file
+    - media
+    - node
+    - options
+    - text
+id: node.project.full
+content_entity_type_id: node
+content_entity_type_bundle: project
+content_entity_type_view_mode: full
+component_tree:
+  '0:78245eee-d39d-428a-838a-dfffb304e6a6':
+    uuid: 78245eee-d39d-428a-838a-dfffb304e6a6
+    component_id: sdc.forma_theme.section
+    component_version: 3baf15f9bb4a9aec
+    inputs:
+      width: 100%
+      columns: '1 column'
+      mobile_columns: '1'
+      margin_block_start: small
+      margin_block_end: '0'
+      padding_block_start: '0'
+      padding_block_end: '0'
+      section_header: false
+      center_header: false
+      section_footer: true
+  '0:footer_slot:0:7c3b812a-99c0-4969-a918-a42b3ba4b886':
+    parent_uuid: 78245eee-d39d-428a-838a-dfffb304e6a6
+    slot: footer_slot
+    uuid: 7c3b812a-99c0-4969-a918-a42b3ba4b886
+    component_id: sdc.forma_theme.section
+    component_version: 3baf15f9bb4a9aec
+    inputs:
+      width: 100%
+      columns: '2 columns 75-25'
+      mobile_columns: '1'
+      margin_block_start: small
+      margin_block_end: small
+      padding_block_start: small
+      padding_block_end: small
+      background_color: primary
+      section_header: false
+      section_footer: false
+  '0:footer_slot:0:main_slot:0:07c7ec19-db3a-4fab-b781-f486a91ad211':
+    parent_uuid: 7c3b812a-99c0-4969-a918-a42b3ba4b886
+    slot: main_slot
+    uuid: 07c7ec19-db3a-4fab-b781-f486a91ad211
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: column
+      flex_gap: md
+      items_align: start
+      flex_align: center
+  '0:footer_slot:0:main_slot:0:group_slot:0:f915d4db-a386-439c-936e-224eaab7dc8a':
+    parent_uuid: 07c7ec19-db3a-4fab-b781-f486a91ad211
+    slot: group_slot
+    uuid: f915d4db-a386-439c-936e-224eaab7dc8a
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text: 'Tell us about your project'
+      level: 2
+      text_size: heading-responsive-xl
+      text_color: default
+      align: left
+  '0:footer_slot:0:main_slot:0:group_slot:1:49332124-cb01-4fc8-922f-fa8732d7f481':
+    parent_uuid: 07c7ec19-db3a-4fab-b781-f486a91ad211
+    slot: group_slot
+    uuid: 49332124-cb01-4fc8-922f-fa8732d7f481
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text: 'Every great space begins with a conversation, so reach out today to discuss your vision and see how we can work together.'
+      text_size: heading-responsive-4xl
+      text_color: default
+      align: left
+  '0:footer_slot:0:main_slot:0:group_slot:2:c120b522-4cf0-4d7e-a520-bbe15dafc273':
+    parent_uuid: 07c7ec19-db3a-4fab-b781-f486a91ad211
+    slot: group_slot
+    uuid: c120b522-4cf0-4d7e-a520-bbe15dafc273
+    component_id: sdc.forma_theme.button
+    component_version: f68fb081bb669bbb
+    inputs:
+      variant: primary
+      label: 'Book a meeting'
+      icon: arrow-right
+      mobile_width: false
+      icon_first: false
+      disabled: false
+  '0:main_slot:0:a8b47c5e-f53a-4771-8dd1-9339a111ebbc':
+    parent_uuid: 78245eee-d39d-428a-838a-dfffb304e6a6
+    slot: main_slot
+    uuid: a8b47c5e-f53a-4771-8dd1-9339a111ebbc
+    component_id: sdc.forma_theme.image
+    component_version: 3a90ddcdcf996810
+    inputs:
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_featured_image␞␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      size: '4:1'
+  '0:main_slot:1:ddbef92c-627e-4249-8ade-e90e1fc4cad3':
+    parent_uuid: 78245eee-d39d-428a-838a-dfffb304e6a6
+    slot: main_slot
+    uuid: ddbef92c-627e-4249-8ade-e90e1fc4cad3
+    component_id: sdc.forma_theme.grid
+    component_version: 3532e5b770d9493f
+    inputs:
+      width: 100%
+      columns: '2 columns'
+      mobile_columns: '1'
+      align: center
+  '0:main_slot:1:main_slot:0:6f548da0-19f8-4a9c-a73c-48bf7b61cdd6':
+    parent_uuid: ddbef92c-627e-4249-8ade-e90e1fc4cad3
+    slot: main_slot
+    uuid: 6f548da0-19f8-4a9c-a73c-48bf7b61cdd6
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_eyebrow␞␟value'
+      text_size: heading-responsive-2xl
+      text_color: default
+      align: left
+  '0:main_slot:1:main_slot:1:417ff69d-9c2e-440d-b505-87cd28b31040':
+    parent_uuid: ddbef92c-627e-4249-8ade-e90e1fc4cad3
+    slot: main_slot
+    uuid: 417ff69d-9c2e-440d-b505-87cd28b31040
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: row
+      flex_gap: sm
+      items_align: end
+      flex_align: center
+  '0:main_slot:1:main_slot:1:group_slot:0:a9dfc1a0-bee3-4d71-9663-a0740c1bba6c':
+    parent_uuid: 417ff69d-9c2e-440d-b505-87cd28b31040
+    slot: group_slot
+    uuid: a9dfc1a0-bee3-4d71-9663-a0740c1bba6c
+    component_id: sdc.forma_theme.text
+    component_version: 8a33edeeb2e4a925
+    inputs:
+      text:
+        value: '<p><strong>Location:</strong></p>'
+        format: canvas_html_block
+      text_size: text-sm
+      text_color: default
+  '0:main_slot:1:main_slot:1:group_slot:1:024ba64e-d0c4-47c8-b662-657ed666b515':
+    parent_uuid: 417ff69d-9c2e-440d-b505-87cd28b31040
+    slot: group_slot
+    uuid: 024ba64e-d0c4-47c8-b662-657ed666b515
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_location␞␟value'
+      text_size: heading-responsive-lg
+      text_color: default
+      align: left
+  '0:main_slot:2:5113bc22-9d54-472a-bbb1-75346ac5615b':
+    parent_uuid: 78245eee-d39d-428a-838a-dfffb304e6a6
+    slot: main_slot
+    uuid: 5113bc22-9d54-472a-bbb1-75346ac5615b
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝title␞␟value'
+      level: 1
+      text_size: heading-responsive-7xl
+      text_color: default
+      align: left
+  '0:main_slot:3:e5ceb6d3-2f58-4ce8-938f-698173c10679':
+    parent_uuid: 78245eee-d39d-428a-838a-dfffb304e6a6
+    slot: main_slot
+    uuid: e5ceb6d3-2f58-4ce8-938f-698173c10679
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_description␞␟value'
+      text_size: heading-responsive-4xl
+      text_color: default
+      align: left
+  '0:main_slot:4:a1c26a0a-e5f1-4f3d-a52c-aa7f49e0b2d1':
+    parent_uuid: 78245eee-d39d-428a-838a-dfffb304e6a6
+    slot: main_slot
+    uuid: a1c26a0a-e5f1-4f3d-a52c-aa7f49e0b2d1
+    component_id: sdc.forma_theme.grid
+    component_version: 3532e5b770d9493f
+    inputs:
+      width: 80%
+      columns: '1 column'
+      mobile_columns: '1'
+      align: center
+  '0:main_slot:4:main_slot:0:a4ba8e60-80f1-4a43-a397-3c940fca7a08':
+    parent_uuid: a1c26a0a-e5f1-4f3d-a52c-aa7f49e0b2d1
+    slot: main_slot
+    uuid: a4ba8e60-80f1-4a43-a397-3c940fca7a08
+    component_id: sdc.forma_theme.text
+    component_version: 8a33edeeb2e4a925
+    inputs:
+      text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_content␞␟processed'
+      text_size: normal
+      text_color: default
+exposed_slots: {  }
+page_variant: null

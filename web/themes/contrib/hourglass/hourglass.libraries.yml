@@ -1,0 +1,617 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      dist/css/fonts.min.css: { minified: true }
+      dist/components/base/colors/colors.min.css: { minified: true }
+      dist/components/base/heading/heading.min.css: { minified: true }
+      dist/css/footer.min.css: { minified: true }
+      dist/components/modules/header/site-header.min.css: { minified: true }
+      dist/components/modules/modal/modal.min.css: { minified: true }
+      dist/css/layout.min.css: { minified: true }
+      dist/css/klaro-theme.min.css: { minified: true }
+      dist/components/base/clipboard/clipboard.min.css: { minified: true }
+      dist/css/webform-success-modal.min.css: { minified: true }
+  js:
+    dist/components/modules/header/site-header.min.js: { minified: true }
+    dist/components/modules/modal/modal.min.js: { minified: true }
+    dist/components/base/clipboard/clipboard.min.js: { minified: true }
+    dist/js/webform-success-modal.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/once
+
+webform-success-modal:
+  version: VERSION
+  css:
+    theme:
+      dist/css/webform-success-modal.min.css: { minified: true }
+  js:
+    dist/js/webform-success-modal.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/once
+
+button:
+  version: VERSION
+  css:
+    theme:
+      dist/components/base/button/button.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+media:
+  version: VERSION
+  js:
+    dist/components/base/media/media.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/once
+
+splide:
+  remote: https://splidejs.com/
+  version: 4.1.4
+  license:
+    name: MIT
+    url: https://github.com/Splidejs/splide/blob/master/LICENSE
+    gpl-compatible: true
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css: { type: external, minified: true }
+  js:
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js: { type: external, minified: true }
+    https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js: { type: external, minified: true }
+
+gsap:
+  remote: https://greensock.com/gsap/
+  version: 3.12.5
+  license:
+    name: GreenSock
+    url: https://greensock.com/standard-license/
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js: { type: external, minified: true }
+    https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js: { type: external, minified: true }
+
+notification-banner:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/notification-banner/notification-banner.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+section:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/section/section.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+layout:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/layout/layout.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+heading-with-description:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/heading-with-description/heading-with-description.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+hero:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/hero/hero.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+overview-section:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/overview-section/overview-section.min.css: { minified: true }
+  js:
+    dist/components/modules/overview-section/overview-section.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/gsap
+    - core/drupal
+    - core/once
+
+video-feature:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/video-feature/video-feature.min.css: { minified: true }
+  js:
+    dist/components/modules/video-feature/video-feature.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/once
+    - hourglass/global
+    - hourglass/button
+
+offering-card:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/offering-card/offering-card.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+offerings-slider:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/offerings-slider/offerings-slider.min.css: { minified: true }
+  js:
+    dist/components/modules/offerings-slider/offerings-slider.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/offering-card
+    - core/drupal
+    - core/once
+
+key-feature-slide:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/key-feature-slide/key-feature-slide.min.css: { minified: true }
+  js:
+    dist/components/cards/key-feature-slide/key-feature-slide.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+    - core/drupal
+
+key-features:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/key-features/key-features.min.css: { minified: true }
+  js:
+    dist/components/modules/key-features/key-features.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/key-feature-slide
+    - core/drupal
+    - core/once
+
+mission-vision-item:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/mission-vision-item/mission-vision-item.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+mission-vision:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/mission-vision/mission-vision.min.css: { minified: true }
+  js:
+    dist/components/modules/mission-vision/mission-vision.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/mission-vision-item
+    - core/drupal
+    - core/once
+
+tech-insights-slide:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/tech-insights-slide/tech-insights-slide.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+tech-insights:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/tech-insights/tech-insights.min.css: { minified: true }
+  js:
+    dist/components/modules/tech-insights/tech-insights.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/tech-insights-slide
+    - core/once
+    - core/drupal
+
+logo-item:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/logo-item/logo-item.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+logo-carousel:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/logo-carousel/logo-carousel.min.css: { minified: true }
+  js:
+    dist/components/modules/logo-carousel/logo-carousel.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/logo-item
+    - hourglass/splide
+    - core/drupal
+    - core/once
+
+product-grid:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/product-grid/product-grid.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/offering-card
+
+stat-card:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/stat-card/stat-card.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+stats-section:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/stats-section/stats-section.min.css: { minified: true }
+  js:
+    dist/components/modules/stats-section/stats-section.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/stat-card
+    - hourglass/splide
+    - core/drupal
+    - core/once
+
+photo-card:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/photo-card/photo-card.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+our-story:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/our-story/our-story.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/photo-card
+
+history-timeline-slide:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/history-timeline-slide/history-timeline-slide.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+history-timeline:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/history-timeline/history-timeline.min.css: { minified: true }
+  js:
+    dist/components/modules/history-timeline/history-timeline.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/history-timeline-slide
+    - core/drupal
+    - core/once
+
+team-member-card:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/team-member-card/team-member-card.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+team-section:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/team-section/team-section.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/team-member-card
+
+service-card:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/service-card/service-card.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+services-grid:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/services-grid/services-grid.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/service-card
+
+cta-banner:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/cta-banner/cta-banner.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+expertise-card:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/expertise-card/expertise-card.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+expertise-section:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/expertise-section/expertise-section.min.css: { minified: true }
+  js:
+    dist/components/modules/expertise-section/expertise-section.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/expertise-card
+    - core/drupal
+    - core/once
+
+blog-card:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/blog-card/blog-card.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+blog-listing:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/blog-listing/blog-listing.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/blog-card
+
+blog-detail:
+  version: VERSION
+  css:
+    theme:
+      dist/css/blog-detail.min.css: { minified: true }
+  js:
+    js/blog-detail.js: {}
+  dependencies:
+    - hourglass/global
+    - core/drupal
+    - core/once
+
+blog-search:
+  version: VERSION
+  css:
+    theme:
+      dist/css/blog-search.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/blog-card
+
+article-feature:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/article-feature/article-feature.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/media
+
+not-found:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/not-found/not-found.min.css: { minified: true }
+  js:
+    dist/components/modules/not-found/not-found.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - core/drupal
+    - core/once
+
+news-events:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/news-events/news-events.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+contact-cta:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/contact-cta/contact-cta.min.css: { minified: true }
+  js:
+    dist/components/modules/contact-cta/contact-cta.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/gsap
+    - core/drupal
+    - core/once
+
+benefit-card:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/benefit-card/benefit-card.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+benefits-slider:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/benefits-slider/benefits-slider.min.css: { minified: true }
+  js:
+    dist/components/modules/benefits-slider/benefits-slider.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - core/drupal
+    - core/once
+
+process-step:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/process-step/process-step.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+gallery-item:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/gallery-item/gallery-item.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+image-gallery:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/image-gallery/image-gallery.min.css: { minified: true }
+  js:
+    dist/components/modules/image-gallery/image-gallery.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/gallery-item
+    - core/drupal
+    - core/once
+
+process-steps:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/process-steps/process-steps.min.css: { minified: true }
+  js:
+    dist/components/modules/process-steps/process-steps.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - core/drupal
+    - core/once
+
+faq-item:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/faq-item/faq-item.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+text-list-item:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/text-list-item/text-list-item.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+apply-section:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/apply-section/apply-section.min.css: { minified: true }
+  js:
+    dist/components/modules/apply-section/apply-section.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/text-list-item
+    - core/drupal
+    - core/once
+
+rules-section:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/rules-section/rules-section.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+faq-section:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/faq-section/faq-section.min.css: { minified: true }
+  js:
+    dist/components/modules/faq-section/faq-section.min.js: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/faq-item
+    - core/drupal
+    - core/once
+
+contact-card:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/contact-card/contact-card.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+contact-cards:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/contact-cards/contact-cards.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/contact-card
+
+location-card:
+  version: VERSION
+  css:
+    theme:
+      dist/components/cards/location-card/location-card.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+
+locations-section:
+  version: VERSION
+  css:
+    theme:
+      dist/components/modules/locations-section/locations-section.min.css: { minified: true }
+  dependencies:
+    - hourglass/global
+    - hourglass/location-card

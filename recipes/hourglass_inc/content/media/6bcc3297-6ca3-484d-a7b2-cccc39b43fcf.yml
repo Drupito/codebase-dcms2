@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6bcc3297-6ca3-484d-a7b2-cccc39b43fcf
+  bundle: image
+  default_langcode: en
+  depends:
+    87466759-eb42-4176-a567-73a551c6d650: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: premium_photo-1661374880675-0c79f7b1dad5-3-(4).png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Our Philosophy'
+      title: ''
+      width: 400
+      height: 400
+      entity: 87466759-eb42-4176-a567-73a551c6d650

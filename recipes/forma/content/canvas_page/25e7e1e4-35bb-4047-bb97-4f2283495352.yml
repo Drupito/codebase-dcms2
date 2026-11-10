@@ -1,0 +1,300 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 25e7e1e4-35bb-4047-bb97-4f2283495352
+  default_langcode: en
+  depends:
+    72f642ec-6212-434e-9984-26ec3b4f11d8: file
+    1cdfd186-e197-478f-bc11-d5e72eb3657a: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Projects
+  components:
+    -
+      uuid: e126cd29-2812-4198-b744-6e26b9f0adef
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: default
+        margin_block_end: small
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: false
+        section_footer: true
+    -
+      parent_uuid: e126cd29-2812-4198-b744-6e26b9f0adef
+      slot: main_slot
+      uuid: 1fea7c24-9a10-4e0a-9365-c306b2e5a356
+      component_id: sdc.forma_theme.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+        align: left
+    -
+      parent_uuid: 1fea7c24-9a10-4e0a-9365-c306b2e5a356
+      slot: main_slot
+      uuid: 393c9f04-ca2e-4ca5-89ab-55b2bba23487
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: 393c9f04-ca2e-4ca5-89ab-55b2bba23487
+      slot: group_slot
+      uuid: 87fb18c7-f6db-4b25-94f4-9a5c8addbc8e
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'From Design'
+        level: 1
+        text_size: heading-responsive-7xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 393c9f04-ca2e-4ca5-89ab-55b2bba23487
+      slot: group_slot
+      uuid: 9f105432-2e1c-4fab-8857-9480aca4a319
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'to Reality'
+        level: 1
+        text_size: heading-responsive-7xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1fea7c24-9a10-4e0a-9365-c306b2e5a356
+      slot: main_slot
+      uuid: f8c00e5d-09f2-4c0c-bcc5-4930ba702cb1
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: "<p>We don't chase temporary trends; instead, we focus on timeless architecture that respects both the environment and your resources. By choosing the right materials and focusing on clean lines, we create comfortable, efficient spaces that look timeless and feel welcoming.</p>"
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: e126cd29-2812-4198-b744-6e26b9f0adef
+      slot: main_slot
+      uuid: 388170a9-62aa-4d66-972c-c3d3bc9082bc
+      component_id: block.views_block.projects-projects_all
+      inputs:
+        label: Projects
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+    -
+      uuid: 4f6b1ec1-b9ec-4f05-b34d-6f4bccf82df9
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 80%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: default
+        margin_block_end: default
+        padding_block_start: default
+        padding_block_end: default
+        section_header: true
+        section_footer: true
+        background_color: white
+        background_media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 1cdfd186-e197-478f-bc11-d5e72eb3657a
+            target_type: media
+    -
+      parent_uuid: 4f6b1ec1-b9ec-4f05-b34d-6f4bccf82df9
+      slot: main_slot
+      uuid: 5c912606-e031-4c7a-9634-3726f6576508
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: FAQs
+        text_size: heading-responsive-xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 4f6b1ec1-b9ec-4f05-b34d-6f4bccf82df9
+      slot: main_slot
+      uuid: 65597313-8304-4c0c-986f-88946984071c
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Your Questions, Answered'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 4f6b1ec1-b9ec-4f05-b34d-6f4bccf82df9
+      slot: main_slot
+      uuid: 8c16a795-4ad0-49bd-8a05-fecbcc0dd6c8
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p class="text-align-center">We have put together this quick guide to answer the questions we get asked most often, helping you feel confident and informed before we draw the very first sketch together.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 4f6b1ec1-b9ec-4f05-b34d-6f4bccf82df9
+      slot: main_slot
+      uuid: 525f2457-83ab-4505-ad9c-b2432d9ae18d
+      component_id: sdc.forma_theme.accordion-container
+      inputs: {  }
+    -
+      parent_uuid: 525f2457-83ab-4505-ad9c-b2432d9ae18d
+      slot: accordion_content
+      uuid: 754730f0-bb27-4e39-a795-9ba8cf36d319
+      component_id: sdc.forma_theme.accordion
+      inputs:
+        title: 'How often should we refresh our brand?'
+        heading_level: 3
+        open_by_default: false
+    -
+      parent_uuid: 754730f0-bb27-4e39-a795-9ba8cf36d319
+      slot: accordion_content
+      uuid: 83b9468f-8383-473a-8900-99f71c1c601d
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>Branding firms help businesses create, develop, and manage their brand identity through services such as logo design, brand messaging, and marketing strategies.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 525f2457-83ab-4505-ad9c-b2432d9ae18d
+      slot: accordion_content
+      uuid: 046ef089-2590-4f81-8357-632066d072bf
+      component_id: sdc.forma_theme.accordion
+      inputs:
+        title: 'What services does your agency offer?'
+        heading_level: 3
+        open_by_default: false
+    -
+      parent_uuid: 046ef089-2590-4f81-8357-632066d072bf
+      slot: accordion_content
+      uuid: 4aaadb37-8631-4b4f-a2fa-40fe14ec9ac0
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 525f2457-83ab-4505-ad9c-b2432d9ae18d
+      slot: accordion_content
+      uuid: 82a7e34a-fc28-46dc-a22c-261c88b0acc1
+      component_id: sdc.forma_theme.accordion
+      inputs:
+        title: 'What industries do you specialize in?'
+        heading_level: 3
+        open_by_default: false
+    -
+      parent_uuid: 82a7e34a-fc28-46dc-a22c-261c88b0acc1
+      slot: accordion_content
+      uuid: 7d0b7c62-ae38-4b8b-8b99-f671695e9e0c
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 525f2457-83ab-4505-ad9c-b2432d9ae18d
+      slot: accordion_content
+      uuid: 166b9589-6478-41f4-a4ed-5751fea4d029
+      component_id: sdc.forma_theme.accordion
+      inputs:
+        title: 'How long does the branding process typically take?'
+        heading_level: 3
+        open_by_default: false
+    -
+      parent_uuid: 166b9589-6478-41f4-a4ed-5751fea4d029
+      slot: accordion_content
+      uuid: 616850c4-c941-4b75-bb54-e018c4c66832
+      component_id: sdc.forma_theme.text
+      inputs:
+        text:
+          value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 568bb682-329b-481f-bcc7-818fb3571f2d
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '2 columns 75-25'
+        mobile_columns: '1'
+        margin_block_start: small
+        margin_block_end: small
+        padding_block_start: small
+        padding_block_end: small
+        background_color: primary
+        section_header: false
+        section_footer: false
+    -
+      parent_uuid: 568bb682-329b-481f-bcc7-818fb3571f2d
+      slot: main_slot
+      uuid: a281fdb6-f598-4791-aebd-8928d0b148d6
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: a281fdb6-f598-4791-aebd-8928d0b148d6
+      slot: group_slot
+      uuid: ad7ce23c-072d-4599-878d-de688abff1b6
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Bring your vision to life'
+        level: 2
+        text_size: heading-responsive-xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: a281fdb6-f598-4791-aebd-8928d0b148d6
+      slot: group_slot
+      uuid: 97abaf86-7c88-44fb-a9bb-ca2c99f48f11
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Whether you are planning a modern new home or a functional commercial space, get in touch with us today to learn how our design services can transform your vision into reality.'
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: a281fdb6-f598-4791-aebd-8928d0b148d6
+      slot: group_slot
+      uuid: 9f4367a1-0329-4264-9258-cb3ea583cc2d
+      component_id: sdc.forma_theme.button
+      inputs:
+        variant: primary
+        label: 'Book a meeting'
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+  path:
+    -
+      alias: /projects
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

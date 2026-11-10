@@ -1,0 +1,5 @@
+services:
+  trash_language_override_test.overrider:
+    class: Drupal\trash_language_override_test\LanguageAwareConfigOverride
+    tags:
+      - { name: config.factory.override, priority: -150 }

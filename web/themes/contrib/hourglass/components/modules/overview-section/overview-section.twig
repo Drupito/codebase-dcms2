@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Template for the Overview Section component.
+ *
+ * Available variables:
+ * - media: Canvas image object { src, alt } for the circular image.
+ * - features_label: Sub-label above the features list (e.g. "Why Choose Us").
+ * - show_animation: Boolean — enables GSAP scroll animation.
+ * - features: Slot for Overview Feature components.
+ */
+#}
+{{ attach_library('hourglass/overview-section') }}
+
+<section class="c-overview-section {{ extra_classes|default('') }}">
+  <div class="c-overview-section__container">
+    <div class="c-overview-section__body">
+
+      {% if media %}
+        <div class="c-overview-section__image-wrap">
+          {% include 'hourglass:media' with {
+            background_type: 'media',
+            image: media
+          } %}
+        </div>
+      {% endif %}
+
+      <div class="c-overview-section__features">
+        {% if features_label %}
+          <div class="c-overview-section__features-header">
+            <span class="c-overview-section__features-label">{{ features_label }}</span>
+            <span class="c-overview-section__features-divider" aria-hidden="true"></span>
+          </div>
+        {% endif %}
+
+        <div class="c-overview-section__features-list">
+          {{ features }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

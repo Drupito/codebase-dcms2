@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Template for the Notification Banner component.
+ *
+ * Available variables:
+ * - message: The announcement text.
+ * - tag_label: Optional tag badge text (e.g. EVENT, NEWS).
+ * - url: Optional link wrapping the entire bar.
+ */
+#}
+<div class="c-notification-banner {{ extra_classes|default('') }}">
+  {% set inner %}
+    {% if message %}
+      <span class="c-notification-banner__message">{{ message }}</span>
+    {% endif %}
+    {% if tag_label %}
+      {% if tag_url %}
+        <a href="{{ tag_url }}" class="c-notification-banner__tag">{{ tag_label }}</a>
+      {% else %}
+        <span class="c-notification-banner__tag">{{ tag_label }}</span>
+      {% endif %}
+    {% endif %}
+  {% endset %}
+
+  {% if url %}
+    <a href="{{ url }}" class="c-notification-banner__link">{{ inner }}</a>
+  {% else %}
+    <div class="c-notification-banner__inner">{{ inner }}</div>
+  {% endif %}
+</div>

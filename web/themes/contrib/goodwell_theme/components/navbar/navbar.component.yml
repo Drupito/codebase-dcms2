@@ -1,0 +1,68 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Navbar
+group: Layout
+status: stable
+description: "Site navigation bar. Drop the Site Branding block into the logo slot and the Main Navigation menu block into the navigation slot."
+props:
+  type: object
+  properties:
+
+    # ── Top bar ────────────────────────────────────────
+    show_top_bar:
+      type: boolean
+      title: Show top bar
+      description: "Show the contact strip above the main nav."
+      default: true
+
+    top_bar_phone:
+      type: string
+      title: Top bar — Phone
+      examples:
+        - "(190) 391-740-04"
+
+    top_bar_email:
+      type: string
+      title: Top bar — Email
+      examples:
+        - "mail@goodwell.com"
+
+    # ── CTA button ─────────────────────────────────────
+    cta_label:
+      type: string
+      title: CTA button label
+      default: "Get a Quote"
+      examples:
+        - "Get a Quote"
+
+    cta_url:
+      type: string
+      title: CTA button URL
+      format: uri-reference
+      examples:
+        - "/get-a-quote"
+
+    # ── Appearance ─────────────────────────────────────
+    background:
+      type: string
+      title: Nav background
+      enum:
+        - light
+        - dark
+      meta:enum:
+        light: "Light (white)"
+        dark:  "Dark (teal)"
+      default: light
+
+    sticky:
+      type: boolean
+      title: Sticky
+      description: "Fix the navbar to the top of the viewport when scrolling."
+      default: true
+
+slots:
+  logo:
+    title: Logo
+    description: "Drop the Site Branding block here."
+  navigation:
+    title: Navigation
+    description: "Drop the Main Navigation menu block here."

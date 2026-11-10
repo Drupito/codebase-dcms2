@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Card wrapper ─────────────────────────────────────────────────────────── */
+
+.c-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  cursor: pointer;
+}
+
+/* ── Image ────────────────────────────────────────────────────────────────── */
+
+.c-service-card__image {
+  width: 100%;
+  height: 350px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.c-service-card__image .c-base-media,
+.c-service-card__image .c-base-media__inner,
+.c-service-card__image .c-base-media__content,
+.c-service-card__image picture {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-service-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Content area ─────────────────────────────────────────────────────────── */
+
+.c-service-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Heading ──────────────────────────────────────────────────────────────── */
+
+.c-service-card__heading {
+  font-family: var(--Heading-H2-fontFamily, 'Zalando Sans Expanded', sans-serif);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.15px;
+  color: #000;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+/* ── Description ──────────────────────────────────────────────────────────── */
+
+.c-service-card__description {
+  font-family: var(--Body-B1-fontFamily, 'Geist', 'Zalando Sans', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  margin: 0;
+}
+
+/* ── CTA pill ─────────────────────────────────────────────────────────────── */
+
+.c-service-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 50px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid #000;
+  background: transparent;
+  color: #000;
+  font-family: var(--Body-B1-fontFamily, 'Geist', 'Zalando Sans', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.c-service-card__cta-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+/* ── Hover / active state ─────────────────────────────────────────────────── */
+
+.c-service-card:hover .c-service-card__heading,
+.c-service-card:focus-within .c-service-card__heading,
+.c-service-card.is-active .c-service-card__heading {
+  color: #f76707;
+}
+
+.c-service-card:hover .c-service-card__cta,
+.c-service-card:focus-within .c-service-card__cta,
+.c-service-card.is-active .c-service-card__cta {
+  color: #f76707;
+  border-color: #f76707;
+}

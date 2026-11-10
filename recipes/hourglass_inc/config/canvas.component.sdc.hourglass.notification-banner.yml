@@ -1,0 +1,94 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - hourglass
+active_version: df15a28d9445e021
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        message:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Quarterly Report: 200% Growth in Enterprise Partnerships'
+          expression: ℹ︎string␟value
+        tag_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: EVENT
+          expression: ℹ︎string␟value
+        tag_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+        url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+    fallback_metadata:
+      slot_definitions: {  }
+  f2375d3c55fe9eb4:
+    settings:
+      prop_field_definitions:
+        message:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Quarterly Report: 200% Growth in Enterprise Partnerships'
+          expression: ℹ︎string␟value
+        tag_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: EVENT
+          expression: ℹ︎string␟value
+        url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Notification Banner'
+id: sdc.hourglass.notification-banner
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:notification-banner'

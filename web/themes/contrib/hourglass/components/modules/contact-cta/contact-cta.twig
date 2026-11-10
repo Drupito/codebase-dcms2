@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Template for the Contact CTA component.
+ *
+ * Props:
+ * - section_title: H2 section heading (CKEditor).
+ * - cta_body: Body text for the orange left card (CKEditor).
+ * - cta_button_label: Label for the CTA button.
+ * - cta_button_url: URL for the CTA button.
+ *
+ * Slots:
+ * - form: Contact form content.
+ */
+#}
+{{ attach_library('hourglass/contact-cta') }}
+
+<section class="c-contact-cta {{ extra_classes|default('') }}">
+
+  {% if section_title %}
+    <div class="c-contact-cta__header">
+      <h2 class="c-contact-cta__title">{{ section_title|raw }}</h2>
+    </div>
+    <div class="c-contact-cta__divider" aria-hidden="true"></div>
+  {% endif %}
+
+  <div class="c-contact-cta__grid js-contact-cta-grid">
+
+    <div class="c-contact-cta__info js-contact-cta-info">
+      {% if cta_body %}
+        <div class="c-contact-cta__body">{{ cta_body|raw }}</div>
+      {% endif %}
+
+      {% if cta_button_label %}
+        <a
+          class="c-contact-cta__btn"
+          href="{{ cta_button_url|default('#') }}"
+          {% if not cta_button_url %}aria-disabled="true"{% endif %}
+        >
+          <span>{{ cta_button_label }}</span>
+          <svg class="c-contact-cta__btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="c-contact-cta__form-panel js-contact-cta-form">
+      {{ form }}
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4b7edac8-ce58-413e-aefa-d52a1712c095
+  bundle: image
+  default_langcode: en
+  depends:
+    aeb3fdef-34e7-42a8-b664-346d4a237c48: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: home_icon.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Home '
+      title: ''
+      width: 1199
+      height: 580
+      entity: aeb3fdef-34e7-42a8-b664-346d4a237c48

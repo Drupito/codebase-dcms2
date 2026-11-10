@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 465cf6ca-443f-4627-b7b9-3e93ecab6a31
+  bundle: image
+  default_langcode: en
+  depends:
+    853f690d-069e-420b-a60e-d31ccec2df12: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 74ae273a41b44b7dc5e33a3de61c2c51732b0d8b.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Fundamental Insights'
+      title: ''
+      width: 1136
+      height: 757
+      entity: 853f690d-069e-420b-a60e-d31ccec2df12

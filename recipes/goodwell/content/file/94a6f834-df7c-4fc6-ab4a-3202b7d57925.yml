@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 94a6f834-df7c-4fc6-ab4a-3202b7d57925
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: life_insurance.png
+  uri:
+    -
+      value: 'public://2026-05/life_insurance.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 197349
+  status:
+    -
+      value: true

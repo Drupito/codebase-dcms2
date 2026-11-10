@@ -1,0 +1,58 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Brand Band
+group: Section
+status: stable
+description: "Horizontal strip of partner/brand logos. Fill only the slots you need — empty ones are skipped."
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Eyebrow label
+      description: "Optional text above the logos (e.g. 'Trusted by leading brands')."
+      examples:
+        - "Trusted by leading brands"
+    brand_1:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Brand 1
+      type: object
+    brand_2:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Brand 2
+      type: object
+    brand_3:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Brand 3
+      type: object
+    brand_4:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Brand 4
+      type: object
+    brand_5:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Brand 5
+      type: object
+    brand_6:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Brand 6
+      type: object
+    brand_7:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Brand 7
+      type: object
+    brand_8:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Brand 8
+      type: object
+    gap:
+      type: integer
+      title: Logo gap
+      description: "Space between logos as a multiple of 8px (e.g. 4 = 32px, 6 = 48px, 8 = 64px)."
+      default: 6
+      examples:
+        - 6
+    marquee:
+      type: boolean
+      title: Scrolling marquee
+      description: "If checked, logos scroll continuously left on an infinite loop."
+      default: false

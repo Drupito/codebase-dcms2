@@ -1,0 +1,133 @@
+{% set button_variant = variant|default('primary') %}
+{% set is_disabled = disabled|default(false) %}
+{% set has_icon = icon is not empty %}
+
+{% set button_variants =
+  html_cva(
+    base: [
+      'group flex items-center justify-center leading-none font-semibold transition duration-300 ease-in-out',
+      'gap-3 px-9 py-3',
+      'border border-2',
+      'font-medium',
+      'cursor-pointer no-underline outline-none hover:no-underline',
+      'focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]',
+      'disabled:pointer-events-none disabled:opacity-50'
+    ],
+    variants: {
+      variant: {
+        primary: [
+          'border-primary bg-foreground text-primary-foreground',
+          'hover:bg-transparent hover:text-primary',
+          'active:border-secondary-foreground',
+          'focus:border-secondary-foreground'
+        ],
+        secondary: [
+          'border border-foreground bg-transparent text-foreground',
+          'hover:bg-foreground hover:text-background',
+          'active:border-secondary-foreground active:bg-foreground active:text-background',
+          'focus:border-secondary-foreground focus:bg-foreground focus:text-background'
+        ],
+        'primary-inverted': [
+          'border-background bg-background text-foreground',
+          'hover:bg-transparent hover:text-background',
+          'active:border-secondary-foreground active:bg-transparent',
+          'focus:border-secondary-foreground focus:bg-transparent'
+        ],
+        'secondary-inverted': [
+          'border-background bg-transparent text-background',
+          'hover:bg-background hover:text-foreground',
+          'active:border-secondary-foreground active:bg-transparent',
+          'focus:border-secondary-foreground focus:bg-transparent'
+        ]
+      },
+      width: {
+        full: 'w-full sm:w-fit',
+        fit: 'w-fit'
+      },
+      iconPosition: {
+        first: 'flex-row',
+        last: 'flex-row-reverse'
+      }
+    }
+  )
+%}
+
+{% set button_width = mobile_width|default(false) ? 'full' : 'fit' %}
+{% set icon_position = icon_first|default(false) ? 'first' : 'last' %}
+{% set icon_classes = 'transition duration-300 ease-in-out group-hover:translate-x-1' %}
+
+{# Normalize btn_classes - handle both array and string formats #}
+{% set additional_classes = btn_classes|default('') %}
+{% if additional_classes is iterable %}
+  {% set additional_classes = additional_classes|join(' ') %}
+{% endif %}
+
+{# If href is provided and button is not disabled, present a link; otherwise render a button #}
+{% set disabled_attr = is_disabled ? 'aria-disabled="true"' : '' %}
+{% set button_disabled_attr = is_disabled ? 'disabled' : '' %}
+{% set href = disabled|default(false) ? null : href %}
+
+{% if href %}
+  <a
+    href="{{ href }}"
+    class="{{
+    button_variants.apply(
+      {
+        variant: button_variant,
+        width: button_width,
+        iconPosition: has_icon ? icon_position : 'last'
+      },
+      additional_classes
+    )
+    }}"
+    {{ disabled_attr }}
+  >
+    {% if has_icon %}
+      <span class="{{ icon_classes }}">
+        {{
+          include(
+            '@everbright_theme/components/icon/icon.twig',
+            {
+              weight: 'bold',
+              icon: icon,
+              icon_size: 'extra-small'
+            },
+            with_context: false
+          )
+        }}
+      </span>
+    {% endif %}
+    {{ label }}
+  </a>
+{% else %}
+  <button
+    class="{{
+    button_variants.apply(
+      {
+        variant: button_variant,
+        width: button_width,
+        iconPosition: has_icon ? icon_position : 'last'
+      },
+      additional_classes
+    )
+    }}"
+    {{ button_disabled_attr }}
+  >
+    {% if has_icon %}
+      <span class="{{ icon_classes }}">
+        {{
+          include(
+            '@everbright_theme/components/icon/icon.twig',
+            {
+              weight: 'bold',
+              icon: icon,
+              icon_size: 'extra-small'
+            },
+            with_context: false
+          )
+        }}
+      </span>
+    {% endif %}
+    {{ label }}
+  </button>
+{% endif %}

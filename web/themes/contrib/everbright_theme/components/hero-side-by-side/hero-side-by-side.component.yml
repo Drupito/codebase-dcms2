@@ -1,0 +1,117 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Hero side-by-side
+description: Hero with side-by-side slots for media and content.
+group: Hero
+props:
+  type: object
+  required:
+    - padding_block_start
+    - padding_block_end
+    - justify_content
+  properties:
+    hero_flex_gap:
+      type: string
+      title: Flex gap
+      enum:
+        - normal
+        - large
+        - extra-large
+      meta:enum:
+        normal: Normal
+        large: Large
+        extra-large: Extra large
+      default: medium
+      examples:
+        - "normal"
+    justify_content:
+      type: string
+      title: Justify content
+      enum:
+        - start
+        - center
+        - end
+      meta:enum:
+        start: Start
+        center: Center
+        end: End
+      default: center
+      examples:
+        - "center"
+    hero_flex_direction_mobile:
+      type: string
+      title: Mobile flex direction
+      enum:
+        - vertical
+        - vertical-reverse
+      meta:enum:
+        vertical: Vertical
+        vertical-reverse: Reverse vertical
+      default: vertical
+      examples:
+        - "vertical"
+    padding_block_start:
+      type: string
+      title: Padding top
+      enum:
+        - "0"
+        - "16"
+        - "32"
+        - "64"
+      examples:
+        - "0"
+    padding_block_end:
+      type: string
+      title: Padding bottom
+      enum:
+        - "0"
+        - "16"
+        - "32"
+        - "64"
+      examples:
+        - "0"
+    image_size:
+      type: string
+      title: Aspect ratio
+      enum:
+        - "2:1"
+        - 16:9
+        - 3:2
+        - 4:3
+        - 1:1
+        - 3:4
+        - 2:3
+      meta:enum:
+        2:1: "2×1"
+        16:9: "16×9"
+        3:2: "3×2"
+        4:3: "4×3"
+        1:1: Square
+        3:4: 3x4
+        2:3: 2x3
+      default: "4:3"
+      examples:
+        - "4:3"
+    image_position:
+      type: string
+      title: Image position
+      enum:
+        - left
+        - right
+      meta:enum:
+        left: Left
+        right: Right
+      default: left
+      examples:
+        - "left"
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: "assets/george-pagan-iii-FBwW4Xu3FTs-unsplash.jpg"
+          alt: "Black-and-white striped wallpaper"
+          width: 1920
+          height: 1415
+slots:
+  hero_slot:
+    title: "Content"

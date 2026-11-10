@@ -1,0 +1,85 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Button
+group: Base
+status: stable
+description: "Reusable button or link. Renders as <a> when a URL is provided, <button> otherwise."
+props:
+  type: object
+  properties:
+    label:
+      type: string
+      title: Label
+      default: "Get a Quote"
+      examples:
+        - "Get a Quote"
+        - "Learn More"
+    href:
+      type: string
+      title: URL
+      format: uri-reference
+      description: "When set the component renders as an <a> tag."
+      examples:
+        - "/get-a-quote"
+    variant:
+      type: string
+      title: Variant
+      enum:
+        - primary
+        - dark
+        - secondary
+        - ghost
+        - light
+      meta:enum:
+        primary: "Primary (green)"
+        dark: "Dark (teal)"
+        secondary: "Secondary (outline)"
+        ghost: "Ghost (transparent)"
+        light: "Light (white)"
+      default: primary
+      examples:
+        - primary
+    size:
+      type: string
+      title: Size
+      enum:
+        - sm
+        - md
+        - lg
+      meta:enum:
+        sm: Small
+        md: Medium
+        lg: Large
+      default: md
+      examples:
+        - md
+    rounded:
+      type: string
+      title: Shape
+      enum:
+        - pill
+        - default
+      meta:enum:
+        pill: Pill (fully rounded)
+        default: Default (theme radius)
+      default: pill
+      examples:
+        - pill
+    full_width:
+      type: boolean
+      title: Full width
+      description: "Stretches the button to fill its container."
+      default: false
+    disabled:
+      type: boolean
+      title: Disabled
+      default: false
+    spacing_top:
+      type: integer
+      title: Margin top
+      description: "Top margin as a multiple of 4px (e.g. 4 = 16px / 1rem)."
+      default: 0
+    spacing_bottom:
+      type: integer
+      title: Margin bottom
+      description: "Bottom margin as a multiple of 4px (e.g. 4 = 16px / 1rem)."
+      default: 0

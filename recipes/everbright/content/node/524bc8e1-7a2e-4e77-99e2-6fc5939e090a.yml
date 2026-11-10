@@ -1,0 +1,62 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 524bc8e1-7a2e-4e77-99e2-6fc5939e090a
+  bundle: article
+  default_langcode: en
+  depends:
+    6ada56b7-0271-40f7-a70c-2ee445b524c3: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Nomination for Crestwood Design Excellence Award'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /nomination-crestwood-design-excellence-award
+      langcode: en
+  publish_state:
+    -
+      value: _none
+  unpublish_state:
+    -
+      value: _none
+  field_author:
+    -
+      value: 'Alice Liu'
+  field_content:
+    -
+      value: "<h2>Crestwood Design Excellence Award for Bea Wright</h2><p>When we began conceptualizing the photoshoot for Bae Wright, our objective was to translate their sonic identity into a tangible visual experience. Music is inherently ephemeral, but through this project, we sought to \"freeze\" the rhythm and soul of Bae’s performance into a singular, iconic aesthetic. Being nominated for the Crestwood Design Excellence Award validates our agency’s mission: to create visuals that don't just accompany the music, but amplify it.</p><h2>Behind the Lens: Capturing the Art of the Performer</h2><p>Working with an artist like Bae Wright required a delicate balance of high-fashion editorial precision and raw, backstage intimacy. Our creative team focused on vibrant retro-pop colors to reflect the lyrical depth of Bae’s latest work. Every frame was meticulously composed to ensure that the lighting and silhouette honored Bae's stage presence while pushing the boundaries of traditional artist portraiture. This nomination celebrates the technical craftsmanship required to capture a performer’s true essence.</p><p>ArchiVibe's nomination for the Crestwood Design Excellence Award highlights their inventive use of space and materials in architectural projects. Their designs push the boundaries of conventional architecture, creating environments that are both functional and artistically inspiring.</p>"
+      format: content_format
+  field_description:
+    -
+      value: "We're honored to be nominated for the prestigious Crestwood Design Excellence Award. This nomination recognizes our commitment to innovative design and impactful brand experiences for our clients."
+  field_featured_image:
+    -
+      entity: 6ada56b7-0271-40f7-a70c-2ee445b524c3
+  field_seo_analysis:
+    -
+      status: '0'
+      focus_keyword: ''
+      title: ''
+      description: ''

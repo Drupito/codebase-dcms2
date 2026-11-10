@@ -1,0 +1,116 @@
+{% set button_variant = variant|default('primary') %}
+{% set is_disabled = disabled|default(false) %}
+{% set has_icon = icon is not empty %}
+
+{% set button_variants =
+  html_cva(
+    base: [
+      'group flex items-center justify-center rounded-2xl leading-none font-semibold transition duration-300 ease-in-out',
+      'gap-3 px-9 py-3',
+      'border border-2',
+      'font-medium',
+      'cursor-pointer no-underline outline-none hover:no-underline',
+      'focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]',
+      'disabled:pointer-events-none disabled:opacity-50'
+    ],
+    variants: {
+      variant: {
+        primary: ['border-foreground', 'hover:border-secondary hover:text-secondary', 'active:outline-accent', 'focus:border-accent'],
+        secondary: [
+          'border-secondary text-secondary',
+          'hover:border-secondary/80 hover:text-secondary/80',
+          'active:outline-foreground',
+          'focus:outline-foreground'
+        ]
+      },
+      width: {
+        full: 'w-full sm:w-fit',
+        fit: 'w-fit'
+      },
+      iconPosition: {
+        first: 'flex-row',
+        last: 'flex-row-reverse'
+      }
+    }
+  )
+%}
+
+{% set button_width = mobile_width|default(false) ? 'full' : 'fit' %}
+{% set icon_position = icon_first|default(false) ? 'first' : 'last' %}
+{% set icon_classes = 'transition duration-300 ease-in-out group-hover:translate-x-1' %}
+
+{# Normalize btn_classes - handle both array and string formats #}
+{% set additional_classes = btn_classes|default('') %}
+{% if additional_classes is iterable %}
+  {% set additional_classes = additional_classes|join(' ') %}
+{% endif %}
+
+{# If href is provided and button is not disabled, present a link; otherwise render a button #}
+{% set disabled_attr = is_disabled ? 'aria-disabled="true"' : '' %}
+{% set button_disabled_attr = is_disabled ? 'disabled' : '' %}
+{% set href = disabled|default(false) ? null : href %}
+
+{% if href %}
+  <a
+    href="{{ href }}"
+    class="{{
+    button_variants.apply(
+      {
+        variant: button_variant,
+        width: button_width,
+        iconPosition: has_icon ? icon_position : 'last'
+      },
+      additional_classes
+    )
+    }}"
+    {{ disabled_attr }}
+  >
+    {% if has_icon %}
+      <span class="{{ icon_classes }}">
+        {{
+          include(
+            '@forma_theme/components/icon/icon.twig',
+            {
+              weight: 'bold',
+              icon: icon,
+              icon_size: 'extra-small'
+            },
+            with_context: false
+          )
+        }}
+      </span>
+    {% endif %}
+    {{ label }}
+  </a>
+{% else %}
+  <button
+    class="{{
+    button_variants.apply(
+      {
+        variant: button_variant,
+        width: button_width,
+        iconPosition: has_icon ? icon_position : 'last'
+      },
+      additional_classes
+    )
+    }}"
+    {{ button_disabled_attr }}
+  >
+    {% if has_icon %}
+      <span class="{{ icon_classes }}">
+        {{
+          include(
+            '@forma_theme/components/icon/icon.twig',
+            {
+              weight: 'bold',
+              icon: icon,
+              icon_size: 'extra-small'
+            },
+            with_context: false
+          )
+        }}
+      </span>
+    {% endif %}
+    {{ label }}
+  </button>
+{% endif %}

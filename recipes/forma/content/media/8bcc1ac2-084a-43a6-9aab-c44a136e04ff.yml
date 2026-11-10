@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8bcc1ac2-084a-43a6-9aab-c44a136e04ff
+  bundle: image
+  default_langcode: en
+  depends:
+    500c85a7-2b08-4fb8-b6a9-d69dec9408bd: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: chirayu-trivedi-VdSd8u5N5Ic-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'A black and white headshot of a man smiling'
+      title: ''
+      width: 1000
+      height: 749
+      entity: 500c85a7-2b08-4fb8-b6a9-d69dec9408bd

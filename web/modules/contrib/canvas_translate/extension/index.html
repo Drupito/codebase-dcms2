@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Translate</title>
+    <!-- Radix Themes CSS (bundled from index.tsx by tsup). Same design system
+         Canvas itself runs, so the extension inherits its tokens 1:1. -->
+    <link rel="stylesheet" href="dist/index.css?v=15" />
+    <style>
+      /* Small additions Radix Themes does not cover. */
+      html, body, #root { height: 100%; }
+      body { margin: 0; }
+      .radix-themes { --default-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif; }
+
+      /* Field editor: source/target side by side, auto-stacking to one column
+         when the editor pane is narrow (e.g. with the preview open). */
+      .ct-field { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); column-gap: 24px; row-gap: 8px; }
+      /* Reveal per-field actions on hover/focus, calm at rest. */
+      .ct-field .ct-field__actions { opacity: 0; transition: opacity 0.12s ease; }
+      .ct-field:hover .ct-field__actions,
+      .ct-field:focus-within .ct-field__actions { opacity: 1; }
+
+      /* CKEditor framing — match the Radix TextArea surface + focus treatment. */
+      .ct-rte { border: 1px solid var(--gray-7); border-radius: var(--radius-3); overflow: hidden;
+        transition: border-color 0.12s ease, box-shadow 0.12s ease; }
+      .ct-rte:focus-within { border-color: var(--accent-8); box-shadow: 0 0 0 1px var(--accent-8); }
+      .ck.ck-editor__editable_inline { min-height: 84px; border: none !important; }
+      .ck.ck-toolbar { border: none !important; border-bottom: 1px solid var(--gray-4) !important; background: var(--gray-2) !important; }
+      .ck-focused { box-shadow: none !important; border: none !important; }
+
+      /* Draggable split handle between the field editor and the live preview. */
+      .ct-resize { flex: 0 0 7px; cursor: col-resize; display: flex; align-items: center; justify-content: center;
+        background: var(--gray-3); border-left: 1px solid var(--gray-5); touch-action: none; transition: background 0.12s ease; }
+      .ct-resize:hover, .ct-resize:active { background: var(--accent-4); }
+      .ct-resize__grip { width: 2px; height: 28px; border-radius: 2px; background: var(--gray-7); transition: background 0.12s ease; }
+      .ct-resize:hover .ct-resize__grip, .ct-resize:active .ct-resize__grip { background: var(--accent-9); }
+
+      @keyframes ct-fade-in { from { opacity: 0; transform: translateY(2px); } to { opacity: 1; transform: none; } }
+      .ct-fade-in { animation: ct-fade-in 0.18s ease both; }
+      @media (prefers-reduced-motion: reduce) { .ct-fade-in { animation: none; } }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="dist/index.global.js?v=15"></script>
+  </body>
+</html>

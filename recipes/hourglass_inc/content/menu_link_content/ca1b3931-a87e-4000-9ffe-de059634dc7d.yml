@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: ca1b3931-a87e-4000-9ffe-de059634dc7d
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    972cfc25-cac9-49c7-9e07-7a4f9a0bc8c7: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Imprint
+  menu_name:
+    -
+      value: footer-legal
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 972cfc25-cac9-49c7-9e07-7a4f9a0bc8c7
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 2
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

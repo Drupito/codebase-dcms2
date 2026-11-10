@@ -1,0 +1,60 @@
+diff --git a/core/includes/errors.inc b/core/includes/errors.inc
+index 2fd62580..6d3f51c3 100644
+--- a/core/includes/errors.inc
++++ b/core/includes/errors.inc
+@@ -263,12 +263,32 @@ function _drupal_log_error($error, $fatal = FALSE): void {
+       // generation itself can generate errors.
+       // Should not translate the string to avoid errors producing more errors.
+       $message = 'The website encountered an unexpected error. Try again later.<br />' . $message;
++      $message = $drupito_installer_message = "
++<h1>I have good news and bad news.</h1>
++<p>The bad news: An unexpected error occurred. This happens sometimes - the issue may be a temporary issue related to one of the selected starter's dependencies.</p>
++<p>The good news: You're using Drupito, so recovery is easy! Here's how:</p>
++<ul>
++<li>Visit your <a href='https://app.drupito.com' target='_blank'>Drupito Dashboard</a></li>
++<li>Next to your site, choose the 'Clear Cache' option to attempt to resolve the issue, or, if it failed during installation, choose the 'Delete site' action</li>
++<li>Drupito will take care of the rest!</li>
++<li>If you still have issues after that, please send us an email at <a href='mailto:support@drupito.com'>support@drupito.com</a></li>
++</ul>";
++
++      $drupito_installer_message = "
++<h1>I have good news and bad news.</h1>
++<p>The bad news: Something went wrong with the installation. This happens sometimes - there may have been a hiccup in the connectivity.</p>
++<p>The good news: You're using Drupito, so re-running the installer is easy! Here's how</p>
++<ul>
++<li>Visit your <a href='https://app.drupito.com' target='_blank'>Drupito Dashboard</a></li>
++<li>Next to your site, choose the 'Delete site' action</li>
++<li>The invalid installation will be cleared, and you'll receive a link to re-install your website</li>
++</ul>";
+ 
+       if ($is_installer) {
+         // install_display_output() prints the output and ends script execution.
+         $output = [
+           '#title' => 'Error',
+-          '#markup' => $message,
++          '#markup' => $drupito_installer_message,
+         ];
+         try {
+           install_display_output($output, $GLOBALS['install_state']);
+diff --git a/core/lib/Drupal/Core/EventSubscriber/FinalExceptionSubscriber.php b/core/lib/Drupal/Core/EventSubscriber/FinalExceptionSubscriber.php
+index 3473a1b5..aaf69d41 100644
+--- a/core/lib/Drupal/Core/EventSubscriber/FinalExceptionSubscriber.php
++++ b/core/lib/Drupal/Core/EventSubscriber/FinalExceptionSubscriber.php
+@@ -128,6 +128,17 @@ public function onException(ExceptionEvent $event) {
+ 
+     $content_type = $event->getRequest()->getRequestFormat() == 'html' ? 'text/html' : 'text/plain';
+     $content = $this->t('The website encountered an unexpected error. Try again later.');
++    $content = $drupito_installer_message = "
++<h1>I have good news and bad news.</h1>
++<p>The bad news: An unexpected error occurred. This happens sometimes - the issue may be related to one of the recipes applied, or it can may be a temporary issue related to one of the selected starter's dependencies.</p>
++<p>The good news: You're using Drupito, so recovery is easy! Here's how:</p>
++<ul>
++<li>Visit your <a href='https://app.drupito.com' target='_blank'>Drupito Dashboard</a></li>
++<li>Next to your site, choose the 'Clear Cache' option to attempt to resolve the issue, or, if it failed during installation, choose the 'Delete site' action</li>
++<li>Drupito will take care of the rest!</li>
++<li>If you still have issues after that, please send us an email at <a href='mailto:support@drupito.com'>support@drupito.com</a></li>
++</ul>";
++
+     $content .= $message ? '<br><br>' . $message : '';
+     $response = new Response($content, 500, ['Content-Type' => $content_type]);
+ 

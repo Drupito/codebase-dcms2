@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Apply Section — two-column layout on cream background.
+ *
+ * Props: heading, extra_classes.
+ * Slots: items (Text List Item components), form (Webform block).
+ */
+#}
+{{ attach_library('hourglass/apply-section') }}
+
+<section class="c-apply-section {{ extra_classes|default('') }}" data-apply-section>
+
+  <div class="c-apply-section__left">
+    {% if heading %}
+      <h2 class="c-apply-section__heading">{{ heading }}</h2>
+    {% endif %}
+    {% if items %}
+      <div class="c-apply-section__list">
+        {{ items }}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="c-apply-section__right">
+    <div class="c-apply-section__form-card">
+      {{ form }}
+    </div>
+  </div>
+
+</section>

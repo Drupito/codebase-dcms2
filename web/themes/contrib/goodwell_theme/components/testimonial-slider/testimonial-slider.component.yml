@@ -1,0 +1,103 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Testimonial Slider
+group: Content
+status: stable
+description: "Sliding testimonial card. Add up to 5 quotes — empty ones are skipped automatically."
+props:
+  type: object
+  properties:
+
+    # ── Slide 1 ────────────────────────────────────────
+    quote_1:
+      type: string
+      title: "Quote 1"
+      description: "The testimonial text."
+      examples:
+        - "Choosing Goodwell was the best decision for my family. The process was simple, and their support was outstanding during a tough time."
+    name_1:
+      type: string
+      title: "Name 1"
+      examples:
+        - "Emily R."
+    role_1:
+      type: string
+      title: "Role / Label 1"
+      examples:
+        - "Satisfied Client"
+    avatar_1:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: "Avatar 1"
+
+    # ── Slide 2 ────────────────────────────────────────
+    quote_2:
+      type: string
+      title: "Quote 2"
+    name_2:
+      type: string
+      title: "Name 2"
+    role_2:
+      type: string
+      title: "Role / Label 2"
+    avatar_2:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: "Avatar 2"
+
+    # ── Slide 3 ────────────────────────────────────────
+    quote_3:
+      type: string
+      title: "Quote 3"
+    name_3:
+      type: string
+      title: "Name 3"
+    role_3:
+      type: string
+      title: "Role / Label 3"
+    avatar_3:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: "Avatar 3"
+
+    # ── Slide 4 ────────────────────────────────────────
+    quote_4:
+      type: string
+      title: "Quote 4"
+    name_4:
+      type: string
+      title: "Name 4"
+    role_4:
+      type: string
+      title: "Role / Label 4"
+    avatar_4:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: "Avatar 4"
+
+    # ── Slide 5 ────────────────────────────────────────
+    quote_5:
+      type: string
+      title: "Quote 5"
+    name_5:
+      type: string
+      title: "Name 5"
+    role_5:
+      type: string
+      title: "Role / Label 5"
+    avatar_5:
+      $ref: "json-schema-definitions://canvas.module/image"
+      type: object
+      title: "Avatar 5"
+
+    # ── Options ────────────────────────────────────────
+    autoplay:
+      type: boolean
+      title: Auto-advance slides
+      description: "Automatically move to the next slide every few seconds."
+      default: true
+
+    autoplay_interval:
+      type: integer
+      title: Auto-advance interval (seconds)
+      description: "How long each slide stays visible. Ignored if auto-advance is off."
+      default: 5

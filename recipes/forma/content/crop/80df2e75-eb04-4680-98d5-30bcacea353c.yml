@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 80df2e75-eb04-4680-98d5-30bcacea353c
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    0891be46-84bf-45ce-a45a-eb2cdf8c050c: file
+default:
+  entity_id:
+    -
+      uuid: 0891be46-84bf-45ce-a45a-eb2cdf8c050c
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/kam-idris-_HqHX3LBN18-unsplash.jpg'
+  x:
+    -
+      value: 1700
+  'y':
+    -
+      value: 1500
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

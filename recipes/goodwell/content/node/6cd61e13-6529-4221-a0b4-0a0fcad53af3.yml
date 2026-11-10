@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 6cd61e13-6529-4221-a0b4-0a0fcad53af3
+  bundle: plans
+  default_langcode: en
+  depends:
+    4c3eb31a-4a66-451d-a8ff-158b95fe11df: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Health Insurance'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /health-insurance
+      langcode: en
+  field_body:
+    -
+      value: '<h2>About Health Insurance</h2><p>Health insurance provides financial support for medical treatments, hospital stays, surgeries, and other healthcare expenses. Rising healthcare costs can create significant financial pressure, but the right insurance plan helps ensure you receive quality care without worrying about unexpected bills.</p><p>Goodwell Insurance offers health insurance plans that provide comprehensive coverage for individuals and families. Whether you''re planning for routine healthcare needs or preparing for unexpected medical emergencies, our plans are designed to help protect both your health and your finances.</p><h2>What''s Included</h2><ul><li data-list-item-id="ec0621b91acd3495fd6fd2aa5c480e5b2">Hospitalization coverage</li><li data-list-item-id="ea5fc84764205d2b040d8f24f55ea4da9">Day-care procedure benefits</li><li data-list-item-id="ef9b506bf14b1e8ac420d224e5890b618">Pre- and post-hospitalization expenses</li><li data-list-item-id="e2bc5e7367866d9fff905af6ac8204ab1">Emergency medical treatment</li><li data-list-item-id="e035659ee3f340eb3a392b3042498d949">Cashless treatment at network hospitals</li><li data-list-item-id="ea8fc3b9513c1ec37d296e654078dc1ea">Coverage for surgeries and specialist care</li><li data-list-item-id="e3c7d264a686a689f53dd44d96b7f0059">Preventive health check-up benefits</li><li data-list-item-id="e7c5ed76ecc2ffc36dc10522d8208569e">Family floater plan options</li><li data-list-item-id="eb6a93ebd24c93ae181646304b7d5981e">Maternity and newborn coverage options</li><li data-list-item-id="ef40976aaca21e197ee1b3514b216aec6">Dedicated claims support</li></ul><h2>How It Works</h2><ol><li data-list-item-id="eb976284d4ea5f629a346cdd8a0572caf">Select a health insurance plan that fits your needs.</li><li data-list-item-id="e9075c08639641dcac74068735e0d4a6f">Choose the coverage amount and optional benefits.</li><li data-list-item-id="e27fa1928e17b0a76d87fb8003ff13ba9">Complete a simple application process.</li><li data-list-item-id="e3cceb4fe73969ff7309ef93d1f847aa7">Receive your policy and coverage details.</li><li data-list-item-id="efb405f3b172eacc4bc62ef5c772d91ab">Access healthcare support whenever needed.</li></ol><h2>Why It Matters</h2><p>Medical emergencies can happen without warning and often come with significant expenses. Health insurance helps reduce the financial burden of treatment costs, allowing you to focus on recovery and well-being rather than medical bills.</p><p>Having adequate health coverage provides confidence that you and your loved ones have access to quality healthcare when it matters most.</p><h2>Why Choose Goodwell Insurance</h2><ul><li data-list-item-id="e1c746306d0f26dc69268d5c7e56d209b">Comprehensive healthcare coverage</li><li data-list-item-id="e1637bb809e64f072dc28b0a39443b083">Affordable and flexible plans</li><li data-list-item-id="ecf2463471a26dbe125cd0bbd9046466a">Access to a wide hospital network</li><li data-list-item-id="e492632d6e14c962901363ce80a5732b0">Cashless treatment options</li><li data-list-item-id="e1bcc20da12593a31943a69fa931e5c59">Fast claim processing</li><li data-list-item-id="ee2730d7b09e6aa09fb7b89558d8cd0c9">Family-friendly coverage choices</li><li data-list-item-id="ecf2ddc4832f2f2ae79dfec16d7e2a523">Reliable customer support</li></ul><h2>Get Started</h2><p>Invest in your health and your family''s future with a health insurance plan from Goodwell Insurance. Explore your options and choose coverage that gives you confidence every day.</p><p>&nbsp;</p>'
+      format: content_format
+      summary: "Get the healthcare protection you need with coverage that helps manage medical expenses and supports your family's well-being."
+  field_button:
+    -
+      uri: 'internal:/'
+      title: 'View Details'
+      options: {  }
+  field_featured_image:
+    -
+      entity: 4c3eb31a-4a66-451d-a8ff-158b95fe11df

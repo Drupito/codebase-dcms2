@@ -1,0 +1,81 @@
+include:
+  - project: $_GITLAB_TEMPLATES_REPO
+    ref: $_GITLAB_TEMPLATES_REF
+    file:
+      - '/includes/include.drupalci.main.yml'
+      - '/includes/include.drupalci.variables.yml'
+      - '/includes/include.drupalci.workflows.yml'
+
+variables:
+  OPT_IN_TEST_NEXT_MINOR: 1
+  _CSPELL_WORDS: 'amateescu, Csvg, Cpath, halstead, mago, Unrestorable, trashable'
+
+# Test against the oldest core release the module supports, so the default
+# pipeline catches anything that only works on a newer minor. The 'next minor'
+# jobs cover the other end of the range.
+composer:
+  variables:
+    DRUPAL_CORE: '11.3.3'
+
+composer-lint:
+  allow_failure: false
+
+eslint:
+  allow_failure: false
+
+cspell:
+  allow_failure: false
+
+phpcs:
+  allow_failure: false
+
+# Mago lint with the Drupal rules from amateescu/mago-drupal. The composer job
+# installs both from require-dev, and mago.toml in the module root holds the
+# configuration. The second run writes the GitLab code quality report.
+mago:
+  stage: validate
+  needs: [composer]
+  rules:
+    - if: $SKIP_MAGO == "1"
+      when: never
+    - when: on_success
+  allow_failure: false
+  script:
+    - cd $CI_PROJECT_DIR && pwd
+    # mago.toml expects the site's vendor directory two levels above the
+    # module, as in a core checkout. Here the checkout is the module, so a
+    # symlink two levels up gives the extension worker the same path.
+    - ln -sfn $CI_PROJECT_DIR/vendor "$(dirname "$(dirname "$CI_PROJECT_DIR")")/vendor"
+    - vendor/bin/mago version
+    - vendor/bin/mago extension list
+    - vendor/bin/mago lint || EXIT_CODE=$?
+    - vendor/bin/mago lint --reporting-format gitlab > mago-codequality.json || true
+    - exit ${EXIT_CODE:-0}
+  artifacts:
+    expire_in: 6 mos
+    when: always
+    name: artifacts-$CI_PIPELINE_ID-$CI_JOB_NAME_SLUG
+    paths:
+      - mago-codequality.json
+    reports:
+      codequality: mago-codequality.json
+
+phpstan:
+  allow_failure: false
+
+phpstan (next minor):
+  allow_failure: false
+
+phpunit (next minor):
+  allow_failure: false
+
+phpunit:
+  allow_failure: false
+  parallel:
+    matrix:
+      - _TARGET_DB_TYPE: 'mysql'
+        _TARGET_DB_VERSION: '8'
+      - _TARGET_DB_TYPE: 'pgsql'
+        _TARGET_DB_VERSION: '18'
+      - _TARGET_DB_TYPE: 'sqlite'
+        _TARGET_DB_VERSION: '3'

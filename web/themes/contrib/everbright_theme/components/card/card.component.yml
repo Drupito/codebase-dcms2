@@ -1,0 +1,42 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Card
+group: Card
+props:
+  type: object
+  required:
+    - heading_text
+  properties:
+    heading_text:
+      type: string
+      title: Title
+      examples:
+        - "This is your card title"
+    text:
+      type: string
+      title: Description
+      pattern: "(.|\\r?\\n)*"
+      examples:
+        - "Quaerat laborum rerum dolores dolores dolor qui."
+    author:
+      type: string
+      title: Author
+      examples:
+        - "Jane Doe"
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: "assets/george-pagan-iii-FBwW4Xu3FTs-unsplash.jpg"
+          alt: "Black-and-white striped wallpaper"
+          width: 1920
+          height: 1415
+    url:
+      type: string
+      title: Link
+      format: uri-reference
+    link_label:
+      type: string
+      title: Link label
+      examples:
+        - "Read article"

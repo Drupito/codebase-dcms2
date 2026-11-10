@@ -1,0 +1,110 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.canvas_html_block
+  module:
+    - text
+  theme:
+    - hourglass
+active_version: 1c420cf86016d054
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        question:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'What does Hourglass specialize in?'
+          expression: ℹ︎string␟value
+        answer:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'We provide high-velocity SaaS platforms and bespoke B2B infrastructure designed to simplify complex enterprise operations through intelligent automation and scalable architecture.'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        image:
+          title: 'Inline Image'
+          description: 'Optional image revealed inside the accordion when it is open.'
+  09bb7664a433be06:
+    settings:
+      prop_field_definitions:
+        question:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'What does Hourglass specialize in?'
+          expression: ℹ︎string␟value
+        answer:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'We provide high-velocity SaaS platforms and bespoke B2B infrastructure designed to simplify complex enterprise operations through intelligent automation and scalable architecture.'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        image:
+          title: 'Inline Image'
+          description: 'Optional image revealed inside the accordion when it is open.'
+  c968fc286cb3479d:
+    settings:
+      prop_field_definitions:
+        id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        heading:
+          title: 'Question Heading'
+          description: 'The question as a heading slot.'
+        text:
+          title: 'Answer Text'
+          description: 'The description of the FAQ as a text slot.'
+label: 'FAQ Item'
+id: sdc.hourglass.faq-item
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:faq-item'

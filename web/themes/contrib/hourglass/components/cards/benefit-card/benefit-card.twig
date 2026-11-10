@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Benefit Card — icon + orange H5 title + B2 description.
+ *
+ * Slots:
+ * - media: Icon image (rendered at 100×100px, object-contain).
+ *
+ * Props:
+ * - heading:     Card title (orange H5).
+ * - description: Body text (B2).
+ */
+#}
+{{ attach_library('hourglass/benefit-card') }}
+
+<div class="c-benefit-card {{ extra_classes|default('') }}">
+
+  {% if media %}
+    <div class="c-benefit-card__icon">
+      {{ media }}
+    </div>
+  {% endif %}
+
+  <div class="c-benefit-card__content">
+    {% if heading %}
+      <h5 class="c-benefit-card__heading">{{ heading }}</h5>
+    {% endif %}
+    {% if description %}
+      <p class="c-benefit-card__description">{{ description }}</p>
+    {% endif %}
+  </div>
+
+</div>

@@ -1,0 +1,243 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.forma_theme.divider
+    - canvas.component.sdc.forma_theme.grid
+    - canvas.component.sdc.forma_theme.group
+    - canvas.component.sdc.forma_theme.heading
+    - canvas.component.sdc.forma_theme.text
+    - filter.format.canvas_html_block
+  module:
+    - options
+    - text
+id: principlesgrid
+label: 'Principles grid'
+component_tree:
+  '0:5c6c65fc-2671-49f2-b7d8-4596961f3d88':
+    uuid: 5c6c65fc-2671-49f2-b7d8-4596961f3d88
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: column
+      flex_gap: lg
+      items_align: start
+      flex_align: center
+      padding: md
+      background: primary
+  '0:group_slot:0:d78626ad-6f57-467b-9383-52dcf74475d2':
+    parent_uuid: 5c6c65fc-2671-49f2-b7d8-4596961f3d88
+    slot: group_slot
+    uuid: d78626ad-6f57-467b-9383-52dcf74475d2
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text: 'Our Values'
+      text_size: heading-responsive-xl
+      text_color: default
+      align: left
+  '0:group_slot:1:3d415411-05a3-4533-85f9-32463c6004ad':
+    parent_uuid: 5c6c65fc-2671-49f2-b7d8-4596961f3d88
+    slot: group_slot
+    uuid: 3d415411-05a3-4533-85f9-32463c6004ad
+    component_id: sdc.forma_theme.grid
+    component_version: 3532e5b770d9493f
+    inputs:
+      width: 80%
+      columns: '1 column'
+      mobile_columns: '1'
+      align: left
+  '0:group_slot:1:main_slot:0:48bb2305-f3b0-4f7d-8945-ccc86604d33f':
+    parent_uuid: 3d415411-05a3-4533-85f9-32463c6004ad
+    slot: main_slot
+    uuid: 48bb2305-f3b0-4f7d-8945-ccc86604d33f
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text: 'Architecture should look great, but it must work perfectly for the people who use it every day.'
+      text_size: heading-responsive-4xl
+      text_color: default
+      align: left
+  '0:group_slot:2:10f2ca84-2055-48df-8644-13a624eb4511':
+    parent_uuid: 5c6c65fc-2671-49f2-b7d8-4596961f3d88
+    slot: group_slot
+    uuid: 10f2ca84-2055-48df-8644-13a624eb4511
+    component_id: sdc.forma_theme.grid
+    component_version: 3532e5b770d9493f
+    inputs:
+      width: 100%
+      columns: '4 columns'
+      mobile_columns: '1'
+      align: center
+  '0:group_slot:2:main_slot:0:6375ef86-2fd5-4f9e-a37b-51a02ba1a6aa':
+    parent_uuid: 10f2ca84-2055-48df-8644-13a624eb4511
+    slot: main_slot
+    uuid: 6375ef86-2fd5-4f9e-a37b-51a02ba1a6aa
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: column
+      flex_gap: lg
+      items_align: start
+      flex_align: start
+  '0:group_slot:2:main_slot:0:group_slot:0:3446c303-bb83-488a-ac7f-b6f84a1ef057':
+    parent_uuid: 6375ef86-2fd5-4f9e-a37b-51a02ba1a6aa
+    slot: group_slot
+    uuid: 3446c303-bb83-488a-ac7f-b6f84a1ef057
+    component_id: sdc.forma_theme.divider
+    component_version: 661b2b993a7695d2
+    inputs:
+      color: black
+  '0:group_slot:2:main_slot:0:group_slot:1:b9b9be72-054e-4ecd-afab-6afce859fc4c':
+    parent_uuid: 6375ef86-2fd5-4f9e-a37b-51a02ba1a6aa
+    slot: group_slot
+    uuid: b9b9be72-054e-4ecd-afab-6afce859fc4c
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text: Tenure
+      level: 3
+      text_size: heading-responsive-2xl
+      text_color: default
+      align: left
+  '0:group_slot:2:main_slot:0:group_slot:2:7814ffd1-bf79-4490-aa58-f830a6ecc3eb':
+    parent_uuid: 6375ef86-2fd5-4f9e-a37b-51a02ba1a6aa
+    slot: group_slot
+    uuid: 7814ffd1-bf79-4490-aa58-f830a6ecc3eb
+    component_id: sdc.forma_theme.text
+    component_version: 8a33edeeb2e4a925
+    inputs:
+      text:
+        value: "<p>12+ Years of radical \Ldesign execution.</p>"
+        format: canvas_html_block
+      text_size: normal
+      text_color: default
+  '0:group_slot:2:main_slot:1:3c49e61b-7c64-45cc-85ed-fd75dabeb178':
+    parent_uuid: 10f2ca84-2055-48df-8644-13a624eb4511
+    slot: main_slot
+    uuid: 3c49e61b-7c64-45cc-85ed-fd75dabeb178
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: column
+      flex_gap: lg
+      items_align: start
+      flex_align: start
+  '0:group_slot:2:main_slot:1:group_slot:0:ea2d3acb-cac5-41a2-8820-617fee8639fc':
+    parent_uuid: 3c49e61b-7c64-45cc-85ed-fd75dabeb178
+    slot: group_slot
+    uuid: ea2d3acb-cac5-41a2-8820-617fee8639fc
+    component_id: sdc.forma_theme.divider
+    component_version: 661b2b993a7695d2
+    inputs:
+      color: black
+  '0:group_slot:2:main_slot:1:group_slot:1:6108e29f-4fb0-4baf-9a5a-b9819bcc9e8a':
+    parent_uuid: 3c49e61b-7c64-45cc-85ed-fd75dabeb178
+    slot: group_slot
+    uuid: 6108e29f-4fb0-4baf-9a5a-b9819bcc9e8a
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text: Impact
+      level: 3
+      text_size: heading-responsive-2xl
+      text_color: default
+      align: left
+  '0:group_slot:2:main_slot:1:group_slot:2:80034371-acea-482f-b2bb-36afa35243ab':
+    parent_uuid: 3c49e61b-7c64-45cc-85ed-fd75dabeb178
+    slot: group_slot
+    uuid: 80034371-acea-482f-b2bb-36afa35243ab
+    component_id: sdc.forma_theme.text
+    component_version: 8a33edeeb2e4a925
+    inputs:
+      text:
+        value: '<p>Global reach, specialized<br>local resonance.</p>'
+        format: canvas_html_block
+      text_size: normal
+      text_color: default
+  '0:group_slot:2:main_slot:2:6a2bc966-6b7c-4c1d-a8b7-d9a8bb0386a0':
+    parent_uuid: 10f2ca84-2055-48df-8644-13a624eb4511
+    slot: main_slot
+    uuid: 6a2bc966-6b7c-4c1d-a8b7-d9a8bb0386a0
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: column
+      flex_gap: lg
+      items_align: start
+      flex_align: start
+  '0:group_slot:2:main_slot:2:group_slot:0:0a60ca52-fe9e-45be-8799-2ad6d491c0f8':
+    parent_uuid: 6a2bc966-6b7c-4c1d-a8b7-d9a8bb0386a0
+    slot: group_slot
+    uuid: 0a60ca52-fe9e-45be-8799-2ad6d491c0f8
+    component_id: sdc.forma_theme.divider
+    component_version: 661b2b993a7695d2
+    inputs:
+      color: black
+  '0:group_slot:2:main_slot:2:group_slot:1:9ab3f190-9734-4701-b2c1-e59859aa9633':
+    parent_uuid: 6a2bc966-6b7c-4c1d-a8b7-d9a8bb0386a0
+    slot: group_slot
+    uuid: 9ab3f190-9734-4701-b2c1-e59859aa9633
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text: Core
+      level: 3
+      text_size: heading-responsive-2xl
+      text_color: default
+      align: left
+  '0:group_slot:2:main_slot:2:group_slot:2:8b322a92-3761-48a6-9c5c-f65fed20d078':
+    parent_uuid: 6a2bc966-6b7c-4c1d-a8b7-d9a8bb0386a0
+    slot: group_slot
+    uuid: 8b322a92-3761-48a6-9c5c-f65fed20d078
+    component_id: sdc.forma_theme.text
+    component_version: 8a33edeeb2e4a925
+    inputs:
+      text:
+        value: '<p>Intentional asymmetry.</p>'
+        format: canvas_html_block
+      text_size: normal
+      text_color: default
+  '0:group_slot:2:main_slot:3:e5e9421a-8df4-42f0-b98d-83f7224d9d6c':
+    parent_uuid: 10f2ca84-2055-48df-8644-13a624eb4511
+    slot: main_slot
+    uuid: e5e9421a-8df4-42f0-b98d-83f7224d9d6c
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: column
+      flex_gap: lg
+      items_align: start
+      flex_align: start
+  '0:group_slot:2:main_slot:3:group_slot:0:4c7fb575-0e6e-4ce4-a1c9-276c88876e4c':
+    parent_uuid: e5e9421a-8df4-42f0-b98d-83f7224d9d6c
+    slot: group_slot
+    uuid: 4c7fb575-0e6e-4ce4-a1c9-276c88876e4c
+    component_id: sdc.forma_theme.divider
+    component_version: 661b2b993a7695d2
+    inputs:
+      color: black
+  '0:group_slot:2:main_slot:3:group_slot:1:7935a090-b4c5-47a0-b92f-07506dafd05d':
+    parent_uuid: e5e9421a-8df4-42f0-b98d-83f7224d9d6c
+    slot: group_slot
+    uuid: 7935a090-b4c5-47a0-b92f-07506dafd05d
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text: Perspective
+      level: 3
+      text_size: heading-responsive-2xl
+      text_color: default
+      align: left
+  '0:group_slot:2:main_slot:3:group_slot:2:2f38d1c6-404d-440b-94aa-8329a1120822':
+    parent_uuid: e5e9421a-8df4-42f0-b98d-83f7224d9d6c
+    slot: group_slot
+    uuid: 2f38d1c6-404d-440b-94aa-8329a1120822
+    component_id: sdc.forma_theme.text
+    component_version: 8a33edeeb2e4a925
+    inputs:
+      text:
+        value: '<p>More than just buildings;</p>'
+        format: canvas_html_block
+      text_size: normal
+      text_color: default

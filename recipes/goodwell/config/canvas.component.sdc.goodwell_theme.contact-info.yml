@@ -1,0 +1,115 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - goodwell_theme
+label: 'Contact Info'
+id: sdc.goodwell_theme.contact-info
+source: sdc
+source_local_id: 'goodwell_theme:contact-info'
+provider: goodwell_theme
+active_version: 91fcd5352857a248
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Contact us'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        phone:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '(190) 391-740-04'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        email:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: mail@goodwell.com
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        hours:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '9 AM - 5 PM, Monday - Saturday'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        address:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '905 Locust Street Redding, CA 96001'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        icon_color:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: primary-mid
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        icon_color_custom:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '#1c7e6e'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        icon_style:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: circle
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }

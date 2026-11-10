@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 094dbead-6908-4885-bc6b-f4554508b4c3
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: Canvas-editor.png
+  uri:
+    -
+      value: 'public://2026-04/Canvas-editor.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 622164
+  status:
+    -
+      value: true

@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 242e444a-0be7-4272-a3bb-4455201acb3a
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    2cd7e822-f006-4e9c-8a9c-8b387a5b7053: file
+default:
+  entity_id:
+    -
+      uuid: 2cd7e822-f006-4e9c-8a9c-8b387a5b7053
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/couple_papers.jpg'
+  x:
+    -
+      value: 3000
+  'y':
+    -
+      value: 2000
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,82 @@
+{% set raw_slides = [
+  { quote: quote_1, name: name_1, role: role_1, avatar: avatar_1 },
+  { quote: quote_2, name: name_2, role: role_2, avatar: avatar_2 },
+  { quote: quote_3, name: name_3, role: role_3, avatar: avatar_3 },
+  { quote: quote_4, name: name_4, role: role_4, avatar: avatar_4 },
+  { quote: quote_5, name: name_5, role: role_5, avatar: avatar_5 },
+] %}
+{% set slides = raw_slides | filter(s => s.quote is not empty) %}
+
+{% if slides is not empty %}
+{% set slider_id = 'testimonial-slider' | clean_unique_id %}
+{% set interval_ms = (autoplay_interval | default(5)) * 1000 %}
+
+<div
+  class="dst-testimonial-slider"
+  id="{{ slider_id }}"
+  data-testimonial-slider
+  {% if autoplay | default(true) %}data-autoplay="{{ interval_ms }}"{% endif %}
+  aria-roledescription="carousel"
+  aria-label="Testimonials"
+>
+
+  <span class="dst-testimonial-slider__ring dst-testimonial-slider__ring--1" aria-hidden="true"></span>
+  <span class="dst-testimonial-slider__ring dst-testimonial-slider__ring--2" aria-hidden="true"></span>
+
+  <div class="dst-testimonial-slider__slides" aria-live="polite">
+    {% for slide in slides %}
+      <div
+        class="dst-testimonial-slider__slide"
+        data-testimonial-slide="{{ loop.index0 }}"
+        role="group"
+        aria-roledescription="slide"
+        aria-label="{{ loop.index }} of {{ slides | length }}"
+        {% if not loop.first %}hidden{% endif %}
+      >
+        <blockquote class="dst-testimonial-slider__quote">
+          &ldquo;{{ slide.quote }}&rdquo;
+        </blockquote>
+
+        <footer class="dst-testimonial-slider__author">
+          {% if slide.avatar and slide.avatar.src %}
+            {% include 'canvas:image' ignore missing with {
+              src: slide.avatar.src,
+              alt: slide.avatar.alt | default(slide.name | default('')),
+              class: 'dst-testimonial-slider__avatar',
+              width: 48,
+              height: 48,
+              loading: 'lazy'
+            } only %}
+          {% else %}
+            <span class="dst-testimonial-slider__avatar-placeholder" aria-hidden="true"></span>
+          {% endif %}
+
+          <div class="dst-testimonial-slider__author-text">
+            {% if slide.name %}
+              <span class="dst-testimonial-slider__name">{{ slide.name }}</span>
+            {% endif %}
+            {% if slide.role %}
+              <span class="dst-testimonial-slider__role">{{ slide.role }}</span>
+            {% endif %}
+          </div>
+        </footer>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if slides | length > 1 %}
+    <nav class="dst-testimonial-slider__dots" aria-label="Slide navigation">
+      {% for slide in slides %}
+        <button
+          type="button"
+          class="dst-testimonial-slider__dot{{ loop.first ? ' dst-testimonial-slider__dot--active' : '' }}"
+          data-testimonial-dot="{{ loop.index0 }}"
+          aria-label="Go to slide {{ loop.index }}"
+          {% if loop.first %}aria-current="true"{% endif %}
+        ></button>
+      {% endfor %}
+    </nav>
+  {% endif %}
+
+</div>
+{% endif %}

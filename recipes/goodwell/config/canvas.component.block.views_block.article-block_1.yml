@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.article
+  module:
+    - views
+active_version: 91bda3e0bcf33db6
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:article-block_1'
+        label: Article
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+  2be9b43b1e4b288d:
+    settings:
+      default_settings:
+        id: 'views_block:article-block_1'
+        label: Article
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: Article
+id: block.views_block.article-block_1
+provider: views
+source: block
+source_local_id: 'views_block:article-block_1'

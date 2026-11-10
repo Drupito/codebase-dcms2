@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8c8241d0-26f4-49e5-ab39-4cd27d883618
+  bundle: image
+  default_langcode: en
+  depends:
+    2de48a8b-ebf3-43e6-8b3e-07693c9ee366: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Frame-1261153005.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'A light colored office building photographed from below.'
+      title: ''
+      width: 938
+      height: 704
+      entity: 2de48a8b-ebf3-43e6-8b3e-07693c9ee366

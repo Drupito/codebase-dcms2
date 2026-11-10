@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f687fbe7-1fb7-4a5e-8593-caa9d2d23d57
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: amir-hosseini-3cl6impBd_8-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-06/amir-hosseini-3cl6impBd_8-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 342804
+  status:
+    -
+      value: true

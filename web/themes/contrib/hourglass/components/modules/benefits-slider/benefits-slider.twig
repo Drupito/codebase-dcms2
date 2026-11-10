@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Benefits Slider — "Why Hourglass?" style section.
+ *
+ * Props:
+ * - heading:     H3 section heading.
+ * - extra_classes: Additional CSS classes.
+ *
+ * Slots:
+ * - cards: Place Benefit Card components here (each becomes a slide).
+ */
+#}
+{{ attach_library('hourglass/benefits-slider') }}
+
+<section class="c-benefits-slider {{ extra_classes|default('') }}">
+
+  {% if heading %}
+    <div class="c-benefits-slider__header">
+      <h3 class="c-benefits-slider__heading">{{ heading }}</h3>
+    </div>
+  {% endif %}
+
+  <div class="c-benefits-slider__track-wrapper">
+
+    <button class="c-benefits-slider__nav c-benefits-slider__nav--prev js-benefits-prev" aria-label="{{ 'Previous'|t }}">
+      <svg width="6" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="c-benefits-slider__track js-benefits-track">
+      <div class="c-benefits-slider__edge" aria-hidden="true"></div>
+      {{ cards }}
+      <div class="c-benefits-slider__edge" aria-hidden="true"></div>
+    </div>
+
+    <button class="c-benefits-slider__nav c-benefits-slider__nav--next js-benefits-next" aria-label="{{ 'Next'|t }}">
+      <svg width="6" height="12" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+  </div>
+
+</section>

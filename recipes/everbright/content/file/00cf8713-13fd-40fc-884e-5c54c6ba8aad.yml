@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 00cf8713-13fd-40fc-884e-5c54c6ba8aad
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: jonathan-borba-nwdqWv76-ec-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-05/jonathan-borba-nwdqWv76-ec-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 99546
+  status:
+    -
+      value: true

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 5dbedcf4-ae4c-4157-a375-9fb1dff1fae1
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: university-of-cambridge.png
+  uri:
+    -
+      value: 'public://2026-05/university-of-cambridge.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 54986
+  status:
+    -
+      value: true

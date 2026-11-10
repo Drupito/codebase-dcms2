@@ -1,0 +1,11 @@
+trash_test.node_delete:
+  path: '/trash-test/node-delete/{node}'
+  defaults:
+    _controller: '\Drupal\trash_test\Controller\TrashTestController::deleteNode'
+  methods: [POST]
+  requirements:
+    _entity_access: 'node.delete'
+  options:
+    parameters:
+      node:
+        type: 'entity:node'

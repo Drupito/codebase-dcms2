@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: 991a74c3517b4e35
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Anchor Nav Link'
+id: sdc.hourglass.anchor-nav-link
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:anchor-nav-link'

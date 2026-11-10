@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Template for the Offering Card component.
+ *
+ * Available variables:
+ * - media:       Canvas image entity reference { src, alt, width, height }.
+ * - heading:     Card heading text.
+ * - description: Card description text.
+ * - cta_text:    CTA link label.
+ * - cta_url:     CTA link URL.
+ * - extra_classes: Additional CSS classes.
+ */
+#}
+{{ attach_library('hourglass/offering-card') }}
+
+<article class="c-offering-card {{ extra_classes|default('') }}">
+  {% if media %}
+    {% include 'hourglass:media' with {
+      image: media,
+      extra_classes: 'c-offering-card__bg'
+    } %}
+  {% endif %}
+  <div class="c-offering-card__scrim" aria-hidden="true"></div>
+
+  <div class="c-offering-card__content">
+    {% if heading %}
+      <h3 class="c-offering-card__heading">{{ heading }}</h3>
+    {% endif %}
+    {% if description %}
+      <p class="c-offering-card__description">{{ description }}</p>
+    {% endif %}
+    <hr class="c-offering-card__divider" aria-hidden="true">
+    {% if cta_url %}
+      <a href="{{ cta_url }}" class="c-offering-card__cta">
+        <span>{{ cta_text|default('Explore') }}</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    {% endif %}
+  </div>
+</article>

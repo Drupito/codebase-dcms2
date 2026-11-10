@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b4cd58a4-ff61-4315-99a1-125315a9d0d2
+  bundle: image
+  default_langcode: en
+  depends:
+    ec3811f4-fbf2-47aa-95d8-07ec040e932c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: first_home.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Family First Home Image'
+      title: ''
+      width: 1438
+      height: 2048
+      entity: ec3811f4-fbf2-47aa-95d8-07ec040e932c

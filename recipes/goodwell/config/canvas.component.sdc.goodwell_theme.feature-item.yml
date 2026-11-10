@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - goodwell_theme
+label: 'Feature Item'
+id: sdc.goodwell_theme.feature-item
+source: sdc
+source_local_id: 'goodwell_theme:feature-item'
+provider: goodwell_theme
+active_version: 9400cdd12bc1a44e
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Instant Issuance'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: "Handle life's everyday risks with ease — all managed together with clear, flexible coverage."
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        active:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        icon:
+          title: Icon
+          description: 'SVG or img tag for the feature icon.'

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 78b332ff-5055-4214-ac96-6530bdc6e190
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: sparkle_logo.png
+  uri:
+    -
+      value: 'public://2026-06/sparkle_logo.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1822
+  status:
+    -
+      value: true

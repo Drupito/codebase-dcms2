@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Services Grid
+group: Organisms
+status: stable
+description: '3-column grid of Service Cards. Place one Service Card in the cards slot and duplicate it as needed.'
+props:
+  type: object
+  properties:
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  cards:
+    title: 'Service Cards'
+    description: 'Place one Service Card atom here and duplicate it as needed.'

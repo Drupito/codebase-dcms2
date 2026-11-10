@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Template for the Heading component.
+ *
+ * Available variables:
+ * - level: Heading level (1-6). Defaults to 2.
+ * - tag: Optional HTML tag to use (h1-h6). Defaults to h + level.
+ * - size: Optional size class.
+ * - heading_text: The heading content.
+ * - extra_classes: Additional CSS classes.
+ * - attributes: Drupal attributes.
+ */
+#}
+{% set level = level|default(2) %}
+{% set tag = tag|default('h' ~ level) %}
+{% set size_class = size ? 'text-' ~ size : '' %}
+
+{% if tag != 'none' %}
+  <{{ tag }} {{ attributes.addClass('c-heading', size_class, extra_classes) }}>
+{% endif %}
+{{ heading_text|raw }}
+{% if tag != 'none' %}
+  </{{ tag }}>
+{% endif %}

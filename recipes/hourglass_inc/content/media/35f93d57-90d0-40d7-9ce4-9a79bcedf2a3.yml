@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 35f93d57-90d0-40d7-9ce4-9a79bcedf2a3
+  bundle: image
+  default_langcode: en
+  depends:
+    2d586d43-9d49-4180-8e0a-481a98246be5: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Cloud Services'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Cloud Services'
+      title: ''
+      width: 1200
+      height: 798
+      entity: 2d586d43-9d49-4180-8e0a-481a98246be5

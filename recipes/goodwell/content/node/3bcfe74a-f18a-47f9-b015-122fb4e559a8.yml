@@ -1,0 +1,54 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3bcfe74a-f18a-47f9-b015-122fb4e559a8
+  bundle: team
+  default_langcode: en
+  depends:
+    76624e6b-e1d8-43fe-bed7-9a6d8795b45d: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Anita Rao'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /anita-rao
+      langcode: en
+  field_body:
+    -
+      value: '<p>Oversees service and claims with a focus on efficiency and care.</p>'
+      format: content_format
+      summary: 'Oversees service and claims with a focus on efficiency and care.'
+  field_facebook_link:
+    -
+      value: 'https://m.facebook.com/'
+  field_featured_image:
+    -
+      entity: 76624e6b-e1d8-43fe-bed7-9a6d8795b45d
+  field_linkedin_link:
+    -
+      value: 'https://www.linkedin.com'
+  field_sub_heading:
+    -
+      value: 'Chief Operations Officer'
+  field_twitter_link:
+    -
+      value: 'https://x.com/'

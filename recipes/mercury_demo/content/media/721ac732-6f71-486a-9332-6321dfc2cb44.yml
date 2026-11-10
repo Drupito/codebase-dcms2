@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 721ac732-6f71-486a-9332-6321dfc2cb44
+  bundle: image
+  default_langcode: en
+  depends:
+    3cf6b502-0ede-4daa-b995-1aa8d9bbef4e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: aerial-waves-thumbnail.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Aerial photograph of waves hitting a small cliff'
+      title: ''
+      width: 1200
+      height: 667
+      entity: 3cf6b502-0ede-4daa-b995-1aa8d9bbef4e

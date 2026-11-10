@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: dd3a1e2f-0c0b-4ecb-85d5-a07871e6165e
+  bundle: image
+  default_langcode: en
+  depends:
+    3f66a902-03b3-4e69-badb-29664883036b: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: are_you_covered.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: you_covered.jpg
+      title: ''
+      width: 5000
+      height: 3337
+      entity: 3f66a902-03b3-4e69-badb-29664883036b

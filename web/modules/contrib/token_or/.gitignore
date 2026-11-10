@@ -1,0 +1,7 @@
+/web
+/vendor
+/recipes
+/phpcs.xml.dist
+/phpstan.neon
+/phpstan-baseline.neon
+/.ddev/.env.web

@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ *
+ * The header (site branding + nav) is absolutely positioned inside
+ * .layout-hero-wrapper so it overlays the hero video background.
+ * The hero video extends behind the header via full-bleed CSS.
+ *
+ * Structure:
+ *   .layout-hero-wrapper  (position: relative — positioning context)
+ *     header.site-header  (position: absolute — transparent overlay)
+ *       [region: header — logo + nav + search]
+ *     main
+ *       [region: content — hero video + page components]
+ *
+ * Additional variables:
+ * - rendered_by_canvas: TRUE when the page is a Canvas landing page or
+ *   a node whose content type is managed by a Canvas content template.
+ *   When TRUE the main content area is rendered entirely by Canvas and
+ *   the theme suppresses any duplicate structural chrome (title, breadcrumb).
+ *
+ * @see \corporate_preprocess_page()
+ */
+#}
+<div class="layout-container">
+
+	{% if not rendered_by_canvas %}
+		{{ page.breadcrumb }}
+		{{ page.highlighted }}
+		{{ page.help }}
+	{% endif %}
+
+	<div class="layout-hero-wrapper">
+		{{ page.header }}
+
+		{{ page.primary_menu }}
+		{{ page.secondary_menu }}
+
+		<main role="main">
+			<a id="main-content" tabindex="-1"></a>
+			<div class="layout-content">
+				{{ page.content }}
+			</div>
+
+			{% if page.sidebar_first %}
+				<aside class="layout-sidebar-first" role="complementary">
+					{{ page.sidebar_first }}
+				</aside>
+			{% endif %}
+
+			{% if page.sidebar_second %}
+				<aside class="layout-sidebar-second" role="complementary">
+					{{ page.sidebar_second }}
+				</aside>
+			{% endif %}
+		</main>
+	</div>
+
+	{% if page.footer %}
+		<footer role="contentinfo" class="mmi-footer">
+			{{ page.footer }}
+		</footer>
+	{% endif %}
+</div>

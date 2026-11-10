@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7d5de24c-23f7-43bc-a04c-f260114ab0f9
+  bundle: blog
+  default_langcode: en
+  depends:
+    3dc9df4b-cc7f-4224-8dc4-64f54da03e75: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Migrating to the Cloud: A Practical Guide'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/migrating-cloud-practical-guide
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>Migrating to the cloud is one of the most impactful decisions an organisation can make. But without careful planning, migrations can be costly and disruptive. This guide walks through the key phases of a successful cloud migration.</p>
+
+        <h2>Assessment and Planning</h2>
+        <p>Begin by auditing your existing infrastructure. Identify which workloads are cloud-ready, which need refactoring, and which should remain on-premises. A thorough assessment prevents surprises and sets realistic timelines and budgets.</p>
+
+        <h2>Choosing a Migration Strategy</h2>
+        <p>The "6 R's" framework — Rehost, Replatform, Repurchase, Refactor, Retire, Retain — provides a structured approach to deciding how each application should be handled during migration. Rehosting (lift-and-shift) is the fastest, while refactoring delivers the most cloud-native benefits.</p>
+
+        <h2>Testing and Go-Live</h2>
+        <p>Rigorous testing is non-negotiable before going live. Validate performance, security configurations, and failover procedures. A phased rollout, starting with non-critical workloads, reduces risk and builds confidence in the new environment.</p>
+      format: content_format
+      summary: ''
+  field_featured:
+    -
+      value: false
+  field_hero_image:
+    -
+      entity: 3dc9df4b-cc7f-4224-8dc4-64f54da03e75
+  field_published_date:
+    -
+      value: '2025-07-14'
+  field_read_time:
+    -
+      value: 5

@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 0572ec8e-f54a-4a66-8aa6-adc053c2f382
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    a7cfcd03-0b9e-44eb-8eec-92d2cfb72dde: menu_link_content
+    e6cdfebd-8ae5-49de-b2fb-5ef03d7e0cfa: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Industries Insurance'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: e6cdfebd-8ae5-49de-b2fb-5ef03d7e0cfa
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 2
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:a7cfcd03-0b9e-44eb-8eec-92d2cfb72dde'
+  revision_translation_affected:
+    -
+      value: true

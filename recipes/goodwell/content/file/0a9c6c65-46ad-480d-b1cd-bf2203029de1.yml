@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 0a9c6c65-46ad-480d-b1cd-bf2203029de1
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: young_couple.jpg
+  uri:
+    -
+      value: 'public://2026-06/young_couple.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 14454035
+  status:
+    -
+      value: true

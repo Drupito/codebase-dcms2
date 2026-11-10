@@ -1,0 +1,39 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Offerings Slider
+group: Organisms
+status: stable
+description: 'Gray section with H2 title, two-column subtitle row, horizontal offering card slider with prev/next arrows, and a footer CTA link.'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Section Title'
+      examples:
+        - 'Our Offerings'
+    subtitle_left:
+      type: string
+      title: 'Left Subtitle (H6)'
+      examples:
+        - 'Our facilities are equipped with cutting-edge instruments.'
+    subtitle_right:
+      type: string
+      title: 'Right Subtitle (Body)'
+      examples:
+        - 'We invest in the newest technologies to ensure top-tier data quality for our clients.'
+    cta_text:
+      type: string
+      title: 'Footer CTA Label'
+      default: 'All Products'
+    cta_url:
+      type: string
+      title: 'Footer CTA URL'
+      examples:
+        - '/products'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  cards:
+    title: 'Offering Cards'
+    description: 'Place one Offering Card atom here and duplicate it as needed — each becomes a slide.'

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b616fca4-cdb1-4691-ae8d-78fa272ee569
+  bundle: image
+  default_langcode: en
+  depends:
+    b3f8e37d-a449-4668-87f4-207ca93b87a9: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Rectangle-37-(1).png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'AI-Powered Automation'
+      title: ''
+      width: 379
+      height: 350
+      entity: b3f8e37d-a449-4668-87f4-207ca93b87a9

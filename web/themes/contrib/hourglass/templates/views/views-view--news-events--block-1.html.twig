@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Full-section wrapper for the News & Events block view.
+ */
+#}
+{{ attach_library('hourglass/news-events') }}
+
+<section class="c-news-events">
+
+  <div class="c-news-events__header">
+    <h2 class="c-news-events__title">{{ title|default('News & Events') }}</h2>
+  </div>
+
+  <div class="c-news-events__divider" aria-hidden="true"></div>
+
+  {% if rows %}
+    <div class="c-news-events__body">
+      {{ rows }}
+    </div>
+  {% endif %}
+
+</section>

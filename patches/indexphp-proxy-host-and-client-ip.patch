@@ -1,0 +1,22 @@
+diff --git a/core/assets/scaffold/files/index.php b/core/assets/scaffold/files/index.php
+index a161ad1..c87d6f9 100644
+--- a/core/assets/scaffold/files/index.php
++++ b/core/assets/scaffold/files/index.php
+@@ -1,5 +1,17 @@
+ <?php
+ 
++if (isset($_SERVER['HTTP_APX_INCOMING_HOST'])) {
++  $_SERVER['HTTP_HOST'] = $_SERVER['HTTP_APX_INCOMING_HOST'];
++}
++
++if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
++  $ips = array_map('trim', explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']));
++  $clientIp = filter_var($ips[0], FILTER_VALIDATE_IP);
++  if ($clientIp !== false) {
++    $_SERVER['REMOTE_ADDR'] = $clientIp;
++  }
++}
++
+ /**
+  * @file
+  * The PHP page that serves all page requests on a Drupal installation.

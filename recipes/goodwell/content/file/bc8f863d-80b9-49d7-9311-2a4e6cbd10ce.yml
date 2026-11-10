@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: bc8f863d-80b9-49d7-9311-2a4e6cbd10ce
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: older_woman.png
+  uri:
+    -
+      value: 'public://2026-06/older_woman.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 2866
+  status:
+    -
+      value: true

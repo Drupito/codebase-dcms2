@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 7a9d58f7-75cc-4600-a0e9-d6e888a547bf
+  bundle: image
+  default_langcode: en
+  depends:
+    3ee355fb-7433-4eb2-884e-d05840457d61: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Hero-services-products-(1).png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: Hero-services-products
+      title: ''
+      width: 1440
+      height: 900
+      entity: 3ee355fb-7433-4eb2-884e-d05840457d61

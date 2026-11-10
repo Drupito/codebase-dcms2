@@ -1,0 +1,192 @@
+/**
+ * @file section.css
+ * Full-width page section wrapper.
+ * Controls background, vertical padding and max-width for any content block.
+ */
+
+/* ── Base ────────────────────────────────────────── */
+
+.dst-section {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+/* Non-full-bleed: section background sits within page margins, rounded corners show on all sides */
+.dst-section:not(.dst-section--bleed) {
+  width: auto;
+  margin-inline: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .dst-section:not(.dst-section--bleed) {
+    margin-inline: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dst-section:not(.dst-section--bleed) {
+    margin-inline: 5rem;
+  }
+}
+
+.dst-section__inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Background variants ─────────────────────────── */
+
+.dst-section--bg-none  { background-color: transparent; }
+.dst-section--bg-light { background-color: var(--color-bg); }
+.dst-section--bg-white { background-color: var(--color-surface); }
+
+/* Legacy aliases (Canvas pages created before the enum rename) */
+.dst-section--bg-gray-light { background-color: var(--color-bg-subtle); }
+.dst-section--bg-black      { background-color: var(--color-primary); color: var(--color-text-light); }
+.dst-section--bg-dark-gray  { background-color: var(--color-primary); color: var(--color-text-light); }
+.dst-section--bg-black a:not(.dst-btn),
+.dst-section--bg-dark-gray a:not(.dst-btn) { color: var(--color-accent); }
+.dst-section--bg-black a:not(.dst-btn):hover,
+.dst-section--bg-dark-gray a:not(.dst-btn):hover { color: var(--color-accent-light); }
+
+.dst-section--bg-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.dst-section--bg-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* ── Primary bg — all content reads as light ─────── */
+
+.dst-section--bg-primary h1,
+.dst-section--bg-primary h2,
+.dst-section--bg-primary h3,
+.dst-section--bg-primary h4,
+.dst-section--bg-primary h5,
+.dst-section--bg-primary h6       { color: var(--color-text-light); }
+.dst-section--bg-primary p        { color: var(--overlay-white-80); }
+.dst-section--bg-primary a:not(.dst-btn)        { color: var(--color-accent); }
+.dst-section--bg-primary a:not(.dst-btn):hover  { color: var(--color-accent-light); }
+
+/* DST Text component on primary */
+.dst-section--bg-primary .dst-text__tagline { color: var(--color-accent); }
+.dst-section--bg-primary .dst-text__heading { color: var(--color-text-light); }
+.dst-section--bg-primary .dst-text__body    { color: var(--overlay-white-80); }
+.dst-section--bg-primary .dst-text__body p  { color: var(--overlay-white-80); }
+
+/* DST Heading component on primary */
+.dst-section--bg-primary .dst-heading { color: var(--color-text-light); }
+
+/* ── Teal bg — medium teal, white text ──────────── */
+
+.dst-section--bg-teal {
+  background-color: var(--color-primary-mid);
+  color: var(--color-text-light);
+}
+
+.dst-section--bg-teal h1,
+.dst-section--bg-teal h2,
+.dst-section--bg-teal h3,
+.dst-section--bg-teal h4,
+.dst-section--bg-teal h5,
+.dst-section--bg-teal h6       { color: var(--color-text-light); }
+.dst-section--bg-teal p        { color: var(--overlay-white-80); }
+.dst-section--bg-teal a:not(.dst-btn)        { color: var(--color-accent); }
+.dst-section--bg-teal a:not(.dst-btn):hover  { color: var(--color-accent-light); }
+
+/* DST Text component on teal */
+.dst-section--bg-teal .dst-text__tagline { color: var(--color-accent); }
+.dst-section--bg-teal .dst-text__heading { color: var(--color-text-light); }
+.dst-section--bg-teal .dst-text__body    { color: var(--overlay-white-80); }
+.dst-section--bg-teal .dst-text__body p  { color: var(--overlay-white-80); }
+
+/* DST Heading component on teal */
+.dst-section--bg-teal .dst-heading { color: var(--color-text-light); }
+
+/* ── Accent bg — all content reads as dark teal ──── */
+
+.dst-section--bg-accent h1,
+.dst-section--bg-accent h2,
+.dst-section--bg-accent h3,
+.dst-section--bg-accent h4,
+.dst-section--bg-accent h5,
+.dst-section--bg-accent h6        { color: var(--color-primary); }
+.dst-section--bg-accent p         { color: var(--color-primary); }
+.dst-section--bg-accent a:not(.dst-btn)         { color: var(--color-primary-dark); text-decoration: underline; }
+.dst-section--bg-accent a:not(.dst-btn):hover   { color: var(--color-primary); }
+
+/* DST Text component on accent */
+.dst-section--bg-accent .dst-text__tagline { color: var(--color-primary-dark); }
+.dst-section--bg-accent .dst-text__heading { color: var(--color-primary); }
+.dst-section--bg-accent .dst-text__body    { color: var(--color-primary); }
+.dst-section--bg-accent .dst-text__body p  { color: var(--color-primary); }
+
+/* DST Heading component on accent */
+.dst-section--bg-accent .dst-heading { color: var(--color-primary); }
+
+/* ── Vertical padding ────────────────────────────── */
+
+.dst-section--pad-none { padding-block: 0; }
+.dst-section--pad-sm   { padding-block: 2rem; }
+.dst-section--pad-md   { padding-block: 4rem; }
+.dst-section--pad-lg   { padding-block: 6rem; }
+.dst-section--pad-xl   { padding-block: 8rem; }
+
+@media (min-width: 48rem) {
+  .dst-section--pad-sm   { padding-block: 2.5rem; }
+  .dst-section--pad-md   { padding-block: 5rem; }
+  .dst-section--pad-lg   { padding-block: 7rem; }
+  .dst-section--pad-xl   { padding-block: 10rem; }
+}
+
+/* ── Elevated: negative margin pulls adjacent sections, needs z-index to stay on top ── */
+
+.dst-section--elevated {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Rounded corners variants ────────────────────── */
+
+/* Legacy alias — old Canvas pages stored rounded: true */
+.dst-section--rounded,
+.dst-section--rounded-all {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.dst-section--rounded-top {
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  overflow: hidden;
+}
+
+.dst-section--rounded-bottom {
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  overflow: hidden;
+}
+
+/* Card lift: shadow when rounded on light/white backgrounds */
+.dst-section--rounded.dst-section--bg-light,
+.dst-section--rounded-all.dst-section--bg-light,
+.dst-section--rounded.dst-section--bg-white,
+.dst-section--rounded-all.dst-section--bg-white {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Slightly smaller radius on mobile */
+@media (max-width: 47.9375rem) {
+  .dst-section--rounded,
+  .dst-section--rounded-all {
+    border-radius: var(--radius-lg);
+  }
+  .dst-section--rounded-top {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  .dst-section--rounded-bottom {
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  }
+}

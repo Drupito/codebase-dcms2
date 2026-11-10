@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 9f05ce32-d018-4700-a02e-26092fa2e49e
+  bundle: image
+  default_langcode: en
+  depends:
+    accf7508-2eb8-45e6-9809-8f01a6c34c06: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 04dae08700ba4948e57b0632c3685cb75d478bac.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Uk Office'
+      title: ''
+      width: 773
+      height: 515
+      entity: accf7508-2eb8-45e6-9809-8f01a6c34c06

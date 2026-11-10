@@ -1,0 +1,55 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Image with split color background
+group: Hero
+status: stable
+props:
+  type: object
+  required:
+    - media
+    - width
+    - color_order
+  properties:
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: "assets/luke-chesser-pJadQetzTkI-unsplash.jpg"
+          alt: "Three people laughing together"
+          width: 1920
+          height: 1280
+    width:
+      type: string
+      title: Image width
+      enum:
+        - "100%"
+        - "75%"
+        - "50%"
+      meta:enum:
+        "100%": "100%"
+        "75%": "75%"
+        "50%": "50%"
+      default: "100%"
+      examples:
+        - "100%"
+    height:
+      type: string
+      title: Image height
+      enum:
+        - large
+        - ribbon
+      meta:enum:
+        large: Large (max 600px)
+        ribbon: Ribbon (max 400px)
+    color_order:
+      type: string
+      title: Color order
+      enum:
+        - white-primary
+        - primary-white
+      meta:enum:
+        white-primary: White to primary
+        primary-white: Primary to white
+      default: white-primary
+      examples:
+        - white-primary

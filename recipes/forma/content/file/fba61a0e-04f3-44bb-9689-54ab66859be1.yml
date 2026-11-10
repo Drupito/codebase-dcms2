@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: fba61a0e-04f3-44bb-9689-54ab66859be1
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: arturo-castaneyra-xLyOGT8i1qA-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-06/arturo-castaneyra-xLyOGT8i1qA-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 394130
+  status:
+    -
+      value: true

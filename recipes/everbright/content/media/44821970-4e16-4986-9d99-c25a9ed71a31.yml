@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 44821970-4e16-4986-9d99-c25a9ed71a31
+  bundle: image
+  default_langcode: en
+  depends:
+    65a7ea53-cf61-48e3-9880-73cb5c016790: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: eve-maier-P565kQ7vCaI-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'A black-and-white portrait of a woman wearing a black suit jacket'
+      title: ''
+      width: 1920
+      height: 2688
+      entity: 65a7ea53-cf61-48e3-9880-73cb5c016790

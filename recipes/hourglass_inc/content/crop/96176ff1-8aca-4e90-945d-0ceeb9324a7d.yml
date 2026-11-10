@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 96176ff1-8aca-4e90-945d-0ceeb9324a7d
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    04fac3cb-582b-498e-8de5-986e2159ad4e: file
+default:
+  entity_id:
+    -
+      uuid: 04fac3cb-582b-498e-8de5-986e2159ad4e
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/gradient2-1656698186891.webp'
+  x:
+    -
+      value: 1920
+  'y':
+    -
+      value: 802
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

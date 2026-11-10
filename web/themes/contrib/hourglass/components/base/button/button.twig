@@ -1,0 +1,74 @@
+{#
+/**
+ * @file
+ * Template for the Button component.
+ *
+ * Available variables:
+ * - text: The text to display in the button.
+ * - url: The URL the button points to.
+ * - variant: The style variant of the button (primary, secondary, link, etc.).
+ * - icon_position: Position of the icon (left or right).
+ * - target: The target attribute for the link.
+ * - open_in_new_tab: Boolean to open the link in a new tab.
+ * - is_nolink: Boolean to render as a div instead of an anchor.
+ * - is_download: Boolean to add the download attribute.
+ * - extra_classes: Additional CSS classes.
+ */
+#}
+
+{% set tag = is_nolink ? 'div' : 'a' %}
+{% set resolved_target = target|default('') %}
+{% if open_in_new_tab %}
+  {% set resolved_target = '_blank' %}
+{% endif %}
+{% set classes = [
+  'c-button',
+  variant ? 'c-button--' ~ variant : '',
+  icon_position and variant != 'document' ? 'c-button--icon-' ~ icon_position : 'c-button--icon-left',
+  extra_classes ? extra_classes : '',
+] %}
+
+<{{ tag }}{% if not is_nolink and url %} href="{{ url }}"{% endif %}{% if not is_nolink and resolved_target %} target="{{ resolved_target }}"{% endif %}{% if not is_nolink and is_download %} download{% endif %}{% if not is_nolink and resolved_target == '_blank' %} rel="noopener noreferrer"{% endif %} class="{{ classes|join(' ') }}">
+  {% if variant == 'document' %}
+    <div class="c-button__document-icon-wrapper">
+      <svg class="c-button__document-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="40" viewBox="0 0 32 40" fill="none">
+        <path d="M4 0.75H20C20.1212 0.75 20.2375 0.798088 20.3232 0.883789L31.1162 11.6768C31.2019 11.7625 31.25 11.8788 31.25 12V36C31.25 37.7949 29.7949 39.25 28 39.25H4C2.20507 39.25 0.75 37.7949 0.75 36V4C0.750001 2.20507 2.20508 0.75 4 0.75Z" fill="white" stroke="#D0D5DD" stroke-width="1.5"/>
+        <path d="M20 0.5V8C20 10.2091 21.7909 12 24 12H31.5" stroke="#D0D5DD" stroke-width="1.5"/>
+      </svg>
+      <span class="c-button__ext-badge">{{ document_ext|default('DOC')|upper }}</span>
+    </div>
+    <span>{{ text }}</span>
+    <div class="c-button__download-icon">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="#218A9D"/>
+        <path d="M18.0007 20.9791C17.8895 20.9791 17.7854 20.9617 17.6882 20.927C17.5909 20.8923 17.5007 20.8333 17.4173 20.7499L14.4173 17.7499C14.2507 17.5833 14.1708 17.3888 14.1777 17.1666C14.1847 16.9444 14.2645 16.7499 14.4173 16.5833C14.584 16.4166 14.7819 16.3298 15.0111 16.3228C15.2402 16.3159 15.4382 16.3958 15.6048 16.5624L17.1673 18.1249L17.1673 12.1666C17.1673 11.9305 17.2472 11.7326 17.4069 11.5728C17.5666 11.4131 17.7645 11.3333 18.0007 11.3333C18.2368 11.3333 18.4347 11.4131 18.5944 11.5728C18.7541 11.7326 18.834 11.9305 18.834 12.1666L18.834 18.1249L20.3965 16.5624C20.5632 16.3958 20.7611 16.3159 20.9902 16.3228C21.2194 16.3298 21.4173 16.4166 21.584 16.5833C21.7368 16.7499 21.8166 16.9444 21.8236 17.1666C21.8305 17.3888 21.7507 17.5833 21.584 17.7499L18.584 20.7499C18.5007 20.8333 18.4104 20.8923 18.3132 20.927C18.2159 20.9617 18.1118 20.9791 18.0007 20.9791ZM13.0007 24.6666C12.5423 24.6666 12.15 24.5034 11.8236 24.177C11.4972 23.8506 11.334 23.4583 11.334 22.9999L11.334 21.3333C11.334 21.0971 11.4138 20.8992 11.5736 20.7395C11.7333 20.5798 11.9312 20.4999 12.1673 20.4999C12.4034 20.4999 12.6013 20.5798 12.7611 20.7395C12.9208 20.8992 13.0007 21.0971 13.0007 21.3333L13.0007 22.9999H23.0007L23.0007 21.3333C23.0007 21.0971 23.0805 20.8992 23.2402 20.7395C23.4 20.5798 23.5979 20.4999 23.834 20.4999C24.0701 20.4999 24.268 20.5798 24.4277 20.7395C24.5875 20.8992 24.6673 21.0971 24.6673 21.3333L24.6673 22.9999C24.6673 23.4583 24.5041 23.8506 24.1777 24.177C23.8513 24.5034 23.459 24.6666 23.0007 24.6666H13.0007Z" fill="white"/>
+      </svg>
+    </div>
+  {% else %}
+    {% set icon_content %}{% block icon %}{% endblock %}{% endset %}
+    
+    {% if icon_position != 'right' %}
+      {% if icon_content|trim is not empty %}
+        <span class="c-button__icon">
+          {{ icon_content|raw }}
+        </span>
+      {% endif %}
+    {% endif %}
+
+    <span class="c-button__text">{{ text }}</span>
+
+    {% if icon_position == 'right' %}
+      {% if icon_content|trim is not empty %}
+        <span class="c-button__icon">
+          {{ icon_content|raw }}
+        </span>
+      {% elseif (variant == 'pill' or variant == 'link' or variant == 'outline-pill') and text|trim is not empty %}
+        <span class="c-button__icon" aria-hidden="true">
+          <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.6001 5.1001L8.4001 0.600098M12.6001 5.1001L8.4001 9.6001M12.6001 5.1001H0.600098" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+</{{ tag }}>

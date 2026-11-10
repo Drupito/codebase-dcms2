@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4c3eb31a-4a66-451d-a8ff-158b95fe11df
+  bundle: image
+  default_langcode: en
+  depends:
+    8c03f08d-8135-417a-b118-d484d813ede8: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: health.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Doctor Reading'
+      title: ''
+      width: 840
+      height: 1200
+      entity: 8c03f08d-8135-417a-b118-d484d813ede8

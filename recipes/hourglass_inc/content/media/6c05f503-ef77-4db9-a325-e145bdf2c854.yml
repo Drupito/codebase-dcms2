@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6c05f503-ef77-4db9-a325-e145bdf2c854
+  bundle: image
+  default_langcode: en
+  depends:
+    86cdec79-cbc5-445d-beec-1b8beae9840f: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'DevOps Trends'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'DevOps Trends'
+      title: ''
+      width: 1200
+      height: 801
+      entity: 86cdec79-cbc5-445d-beec-1b8beae9840f

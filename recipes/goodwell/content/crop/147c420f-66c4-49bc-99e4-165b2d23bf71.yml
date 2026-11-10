@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 147c420f-66c4-49bc-99e4-165b2d23bf71
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    0bfef934-018c-42a6-b3d9-7074f44498c4: file
+default:
+  entity_id:
+    -
+      uuid: 0bfef934-018c-42a6-b3d9-7074f44498c4
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/travel.png'
+  x:
+    -
+      value: 452
+  'y':
+    -
+      value: 600
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

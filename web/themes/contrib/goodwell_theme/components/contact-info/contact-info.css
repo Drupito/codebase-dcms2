@@ -1,0 +1,73 @@
+.dst-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Heading ──────────────────────────────────────── */
+
+.dst-contact-info__heading {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-muted);
+  margin: 0 0 0.5rem;
+}
+
+/* ── List ─────────────────────────────────────────── */
+
+.dst-contact-info__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Item row ─────────────────────────────────────── */
+
+.dst-contact-info__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+
+/* ── Icon ─────────────────────────────────────────── */
+
+.dst-contact-info__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--ci-color, var(--color-primary-mid));
+  margin-top: 0.125rem;
+}
+
+/* Plain style — just the coloured icon */
+.dst-contact-info__icon--plain {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Circle style — icon inside a tinted circle badge */
+.dst-contact-info__icon--circle {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--ci-color, var(--color-primary-mid)) 12%, transparent);
+}
+
+/* ── Text / link ──────────────────────────────────── */
+
+.dst-contact-info__text {
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+a.dst-contact-info__text:hover {
+  color: var(--color-primary-mid);
+  text-decoration: underline;
+}

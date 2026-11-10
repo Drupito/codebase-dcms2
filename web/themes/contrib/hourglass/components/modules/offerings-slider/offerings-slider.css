@@ -1,0 +1,274 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section ─────────────────────────────────────────────────────────────── */
+
+.c-offerings-slider {
+  background-color: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 0;
+  /* Full-bleed: span 100vw regardless of parent container width */
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+}
+
+/* ── Title row ───────────────────────────────────────────────────────────── */
+
+.c-offerings-slider__title-row {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 120px;
+  width: 100%;
+}
+
+.c-offerings-slider__title {
+  font-family: var(
+    --Heading-H2-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -0.4px;
+  color: #000;
+  margin: 0;
+}
+
+/* ── Subtitle row — two columns with large gap ───────────────────────────── */
+
+.c-offerings-slider__subtitle-row {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 400px;
+  padding: 0 120px;
+  width: 100%;
+}
+
+.c-offerings-slider__subtitle-left {
+  flex: 1 0 0;
+  min-width: 0;
+  font-family: var(
+    --Heading-H6-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #000;
+  margin: 0;
+  max-width: 750px;
+}
+
+.c-offerings-slider__subtitle-right {
+  flex: 1 0 0;
+  min-width: 0;
+  font-family: var(--Body-B1-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  margin: 0;
+  max-width: 750px;
+}
+
+/* ── Track wrapper ───────────────────────────────────────────────────────── */
+
+.c-offerings-slider__track-wrapper {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.c-offerings-slider__track {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: max(120px, calc((100vw - 1440px) / 2 + 120px));
+  width: 100%;
+  padding: 0;
+}
+
+.c-offerings-slider__track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Left edge spacer — aligns cards with container content edge */
+.c-offerings-slider__edge {
+  flex-shrink: 0;
+  width: max(120px, calc((100vw - 1440px) / 2 + 120px));
+  align-self: stretch;
+}
+
+/* ── Nav buttons — glassmorphism pill ────────────────────────────────────── */
+
+.c-offerings-slider__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 28px;
+  border-radius: 88px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  color: #000;
+  transition: background 0.2s ease;
+}
+
+.c-offerings-slider__nav:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.c-offerings-slider__nav--prev {
+  left: max(20px, calc((100vw - 1440px) / 2 + 10px));
+}
+.c-offerings-slider__nav--next {
+  right: 24px;
+}
+
+/* ── Footer CTA ──────────────────────────────────────────────────────────── */
+
+.c-offerings-slider__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 120px;
+  padding-bottom: 16px;
+}
+
+.c-offerings-slider__cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  color: #000;
+  font-family: var(--Body-B1-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.c-offerings-slider__cta-link:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.c-offerings-slider__cta-link svg {
+  flex-shrink: 0;
+  display: block;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-offerings-slider__title-row,
+  .c-offerings-slider__subtitle-row,
+  .c-offerings-slider__footer {
+    padding: 0 60px;
+  }
+
+  .c-offerings-slider__edge {
+    width: 60px;
+  }
+
+  .c-offerings-slider__track {
+    scroll-padding-left: 60px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .c-offerings-slider__subtitle-row {
+    gap: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-offerings-slider {
+    padding: 80px 0;
+    gap: 40px;
+  }
+
+  .c-offerings-slider__title-row,
+  .c-offerings-slider__subtitle-row,
+  .c-offerings-slider__footer {
+    padding: 0 60px;
+  }
+
+  .c-offerings-slider__subtitle-row {
+    gap: 60px;
+  }
+
+  .c-offerings-slider__title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-offerings-slider {
+    padding: 60px 0;
+    gap: 24px;
+  }
+
+  .c-offerings-slider__title-row,
+  .c-offerings-slider__subtitle-row,
+  .c-offerings-slider__footer {
+    padding: 0 24px;
+  }
+
+  .c-offerings-slider__subtitle-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .c-offerings-slider__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .c-offerings-slider__edge {
+    width: 24px;
+  }
+
+  .c-offerings-slider__track {
+    scroll-padding-left: 24px;
+    gap: 8px;
+  }
+
+  .c-offerings-slider__nav {
+    display: none;
+  }
+}

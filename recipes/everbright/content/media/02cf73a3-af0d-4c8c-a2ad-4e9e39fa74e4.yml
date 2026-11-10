@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 02cf73a3-af0d-4c8c-a2ad-4e9e39fa74e4
+  bundle: image
+  default_langcode: en
+  depends:
+    7253479d-6630-42a4-8ced-fb3f80ea15fa: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: charlesdeluvio-Lks7vei-eAg-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'A photo of two people at a table looking at separate laptops. The photo is taken through a glass pane.'
+      title: ''
+      width: 1920
+      height: 1280
+      entity: 7253479d-6630-42a4-8ced-fb3f80ea15fa

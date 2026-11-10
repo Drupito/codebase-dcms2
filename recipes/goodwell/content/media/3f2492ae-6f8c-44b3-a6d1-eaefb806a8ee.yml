@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 3f2492ae-6f8c-44b3-a6d1-eaefb806a8ee
+  bundle: image
+  default_langcode: en
+  depends:
+    ce84f45a-e7ac-4c83-a249-da8a28babb29: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: father_kid.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Father daugther image'
+      title: ''
+      width: 1200
+      height: 560
+      entity: ce84f45a-e7ac-4c83-a249-da8a28babb29

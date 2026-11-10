@@ -1,0 +1,34 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Expertise Section
+group: Organisms
+status: stable
+description: 'Two-column image-card section with a heading, description, and a glass-pill CTA — "Where Our Expertise is Applied".'
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: 'Section Heading'
+      examples:
+        - 'Where Our Expertise is Applied'
+    description:
+      type: string
+      title: 'Description'
+      examples:
+        - 'To empower organizations by removing the friction of manual processes through intelligent software.'
+    cta_label:
+      type: string
+      title: 'CTA Label'
+      default: 'Our Team'
+    cta_url:
+      type: string
+      title: 'CTA URL'
+      examples:
+        - '/team'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  cards:
+    title: 'Expertise Cards'
+    description: 'Place two Expertise Card components here (one per column).'

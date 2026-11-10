@@ -1,0 +1,42 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Button
+group: Atoms
+status: stable
+description: 'Reusable button component with support for links and non-links.'
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: 'Button Text'
+    url:
+      type: string
+      title: 'URL'
+      format: uri-reference
+    open_in_new_tab:
+      type: boolean
+      title: 'Open In New Tab'
+    is_nolink:
+      type: boolean
+      title: 'Is No Link'
+    is_download:
+      type: boolean
+      title: 'Is Download'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+    variant:
+      type: string
+      title: 'Variant'
+      enum: [primary, secondary, pill, link, outline-pill, outline-large, document, floating]
+      default: primary
+    icon_position:
+      type: string
+      title: 'Icon Position'
+      enum: [left, right]
+      default: left
+slots:
+  icon:
+    title: 'Icon'
+  content:
+    title: 'Text Content'

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 65c58e3c-dc0e-4868-823e-28688b9cc10b
+  bundle: image
+  default_langcode: en
+  depends:
+    9b357db2-731c-4709-bfb1-e04e0250db25: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: contact_email.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Email us directly'
+      title: ''
+      width: 200
+      height: 200
+      entity: 9b357db2-731c-4709-bfb1-e04e0250db25

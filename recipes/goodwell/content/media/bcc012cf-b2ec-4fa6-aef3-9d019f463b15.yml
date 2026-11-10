@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: bcc012cf-b2ec-4fa6-aef3-9d019f463b15
+  bundle: image
+  default_langcode: en
+  depends:
+    44a0312c-b36a-4ef4-b23a-c75f11929fc4: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: insurance_a.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'insurance image'
+      title: ''
+      width: 387
+      height: 241
+      entity: 44a0312c-b36a-4ef4-b23a-c75f11929fc4

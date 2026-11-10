@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Template for the Key Feature Slide atom.
+ *
+ * Available variables:
+ * - heading:     H4 feature title (HTML).
+ * - description: Body/B3 supporting text (HTML).
+ * - stat_label:  Orange stat card text (e.g. "99.99% Core Uptime").
+ * - media:       Canvas image entity reference { src, alt, width, height }.
+ * - extra_classes: Additional CSS classes.
+ */
+#}
+{{ attach_library('hourglass/key-feature-slide') }}
+{{ attach_library('hourglass/key-features') }}
+
+<div class="c-key-feature-slide {{ extra_classes|default('') }}">
+
+  <div class="c-key-feature-slide__text">
+    <hr class="c-key-feature-slide__rule" aria-hidden="true">
+    {% if heading %}
+      <div class="c-key-feature-slide__heading">{{ heading|raw }}</div>
+    {% endif %}
+    {% if description %}
+      <div class="c-key-feature-slide__description">{{ description|raw }}</div>
+    {% endif %}
+  </div>
+
+  <div class="c-key-feature-slide__media-group">
+    {% if stat_label %}
+      <div class="c-key-feature-slide__stat" aria-hidden="true">
+        <p class="c-key-feature-slide__stat-text" lang="en">{{ stat_label }}</p>
+      </div>
+    {% endif %}
+    {% if media %}
+      <div class="c-key-feature-slide__image-wrap">
+        {% include 'hourglass:media' with {
+          image: media,
+          extra_classes: 'c-key-feature-slide__image'
+        } %}
+      </div>
+    {% endif %}
+  </div>
+
+</div>

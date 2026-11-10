@@ -1,0 +1,29 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: FAQ Item
+group: Cards
+status: stable
+description: 'Single accordion entry — question + collapsible answer + optional inline image. Used inside the FAQ Section module.'
+
+props:
+  type: object
+  properties:
+    question:
+      type: string
+      title: 'Question'
+      examples:
+        - 'What does Hourglass specialize in?'
+    answer:
+      type: string
+      title: 'Answer'
+      contentMediaType: text/html
+      examples:
+        - 'We provide high-velocity SaaS platforms and bespoke B2B infrastructure designed to simplify complex enterprise operations through intelligent automation and scalable architecture.'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+
+slots:
+  image:
+    title: 'Inline Image'
+    description: 'Optional image revealed inside the accordion when it is open.'

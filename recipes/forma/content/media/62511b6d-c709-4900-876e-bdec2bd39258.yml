@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 62511b6d-c709-4900-876e-bdec2bd39258
+  bundle: image
+  default_langcode: en
+  depends:
+    3a98a2cf-a791-4c8e-98a2-ad37c1b562f9: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Frame-1261153003_2.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Outdoor spiral staircase photographed from above.'
+      title: ''
+      width: 1472
+      height: 981
+      entity: 3a98a2cf-a791-4c8e-98a2-ad37c1b562f9

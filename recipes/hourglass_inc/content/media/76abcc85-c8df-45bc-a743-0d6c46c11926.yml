@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 76abcc85-c8df-45bc-a743-0d6c46c11926
+  bundle: image
+  default_langcode: en
+  depends:
+    95d1a6a2-eab9-49bc-8b11-558d89a7bf60: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 7b4bd758981b9e116b43fe8fae930fb44ce4688b.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Predictive Risk Mitigation'
+      title: ''
+      width: 1024
+      height: 576
+      entity: 95d1a6a2-eab9-49bc-8b11-558d89a7bf60

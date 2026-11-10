@@ -1,0 +1,14 @@
+forma_theme.settings:
+  type: theme_settings
+  label: "FormaTheme settings"
+  mapping:
+    scheme:
+      type: string
+      label: Color scheme
+      constraints:
+        Choice:
+          # @see forma_theme_form_system_theme_settings_alter()
+          - vanilla-light
+          - vanilla-dark
+          - byte-light
+          - byte-dark

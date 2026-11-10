@@ -1,0 +1,149 @@
+/* ── Slider card ──────────────────────────────────── */
+
+.dst-testimonial-slider {
+  position: relative;
+  background-color: var(--color-primary-mid);
+  border-radius: var(--radius-xl, 1.5rem);
+  padding: 3rem 2rem 2.5rem;
+  overflow: hidden;
+  color: #fff;
+}
+
+@media (min-width: 48rem) {
+  .dst-testimonial-slider {
+    padding: 4rem 3.5rem 3rem;
+  }
+}
+
+/* ── Decorative rings ─────────────────────────────── */
+
+.dst-testimonial-slider__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.dst-testimonial-slider__ring--1 {
+  width: 320px;
+  height: 320px;
+  right: -80px;
+  bottom: -120px;
+}
+
+.dst-testimonial-slider__ring--2 {
+  width: 220px;
+  height: 220px;
+  right: -20px;
+  bottom: -60px;
+}
+
+/* ── Slides container ─────────────────────────────── */
+
+.dst-testimonial-slider__slides {
+  position: relative;
+  min-height: 12rem;
+}
+
+/* ── Individual slide ─────────────────────────────── */
+
+.dst-testimonial-slider__slide {
+  animation: dst-slide-in 0.4s ease;
+}
+
+.dst-testimonial-slider__slide[hidden] {
+  display: none;
+}
+
+@keyframes dst-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Quote ────────────────────────────────────────── */
+
+.dst-testimonial-slider__quote {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: #fff;
+  margin: 0 0 2rem;
+}
+
+/* ── Author row ───────────────────────────────────── */
+
+.dst-testimonial-slider__author {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.dst-testimonial-slider__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.dst-testimonial-slider__avatar-placeholder {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+
+.dst-testimonial-slider__author-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.dst-testimonial-slider__name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.dst-testimonial-slider__role {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ── Dot navigation ───────────────────────────────── */
+
+.dst-testimonial-slider__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dst-testimonial-slider__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.dst-testimonial-slider__dot:hover {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.dst-testimonial-slider__dot--active {
+  background-color: #fff;
+  transform: scale(1.25);
+}

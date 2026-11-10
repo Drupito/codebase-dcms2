@@ -1,0 +1,2073 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 740deece-2a34-4f67-86a7-3b18d6a392e7
+  default_langcode: en
+  depends:
+    3cf6b502-0ede-4daa-b995-1aa8d9bbef4e: file
+    9a1e236d-56d3-472a-88f9-98dc861cf273: file
+    721ac732-6f71-486a-9332-6321dfc2cb44: media
+    ced07865-75d3-47d4-993e-ddce424333e6: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Base components'
+  components:
+    -
+      uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '48'
+        padding_block_start: '64'
+        padding_block_end: '32'
+        section_header: true
+        section_footer: true
+        background_color: muted
+    -
+      parent_uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      slot: header_slot
+      uuid: a553e204-2e45-4a48-91ca-7868df5d275a
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Base components'
+        level: 1
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 56bee64e-b898-4cdd-b500-1dae9d07f40c
+      slot: main_slot
+      uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        items_align: start
+        flex_align: center
+        radius: sm
+        flex_gap: md
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: 88dd5b64-df8b-4134-93e3-17faa114cae5
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Anchor
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#anchor'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: d0b97032-940b-4f45-b25e-4c97df7c94c7
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Badge
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#badge'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: 260fe6fd-0b3f-426b-a227-12de4978c92b
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Blockquote
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#blockquote'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: c6c0fe91-8de5-4aa2-9822-a57a4ca492c4
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Button
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#button'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: 00e1913e-5fe4-47cf-862f-ec9e9f2fb540
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Heading
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#heading'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: 9c29cf86-fa07-4888-9dc9-8e76a27b8724
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Icon
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#icon'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: 9e97779b-1933-49e1-b540-04908416f682
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Image
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#image'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: cfbeafa0-a749-4922-b1ec-3a748203562b
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: Text
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#text'
+          options: {  }
+    -
+      parent_uuid: cd9038ab-1b0c-4aab-ae48-a2141db7ac58
+      slot: group_slot
+      uuid: 0938ba66-4ce3-420f-9771-52b350d4997a
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: false
+        href:
+          uri: '#image'
+          options: {  }
+        label: Video
+    -
+      uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 50-50
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: d1090921-e8f8-431f-9a2a-028748d96b15
+      slot: header_slot
+      uuid: c4b8fd3c-3f60-455b-8fcd-bc43c159562f
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: c4b8fd3c-3f60-455b-8fcd-bc43c159562f
+      slot: main_slot
+      uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 20130bb9-44d1-4817-b8e4-b52433921b5b
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: anchor
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 6ff9f2f6-8bf7-47cf-b809-c7f8d3b27e31
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Anchor
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 0186ed16-3431-483f-8ed3-ee0b730f2db3
+      slot: group_slot
+      uuid: 63800e8d-8ece-47b5-9bee-4ef60c7b1d70
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The anchor component is a simple way to add anchor links to a page. To create an anchor link, drag the component to where you want the link, and enter the ID. You can then use the link anywhere as #{your-id}.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 22e888bd-5906-4347-b9a0-045dfce35565
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 22e888bd-5906-4347-b9a0-045dfce35565
+      slot: header_slot
+      uuid: c2dabc20-d5cf-4db5-b0f2-517e80a17293
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: c2dabc20-d5cf-4db5-b0f2-517e80a17293
+      slot: main_slot
+      uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      slot: group_slot
+      uuid: 4f93b7bc-889b-4ea2-9a32-3bf3d99cd084
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: badge
+    -
+      parent_uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      slot: group_slot
+      uuid: 2f8333ff-98f4-4192-95a2-6b680a6bfe89
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Badge
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 02cd5694-87de-48cb-bf3c-c191b94d759c
+      slot: group_slot
+      uuid: d7c7caa7-35b9-4bce-bda0-53ea95f7055c
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The badge component is a small pill-style component with an optional icon. It has two styles: Primary and secondary. The icon can be placed before or after the text, or omitted.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 22e888bd-5906-4347-b9a0-045dfce35565
+      slot: main_slot
+      uuid: 344346ec-cd9c-4897-9c19-10d0d0925eed
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 344346ec-cd9c-4897-9c19-10d0d0925eed
+      slot: group_slot
+      uuid: e38f7cc8-2675-4b86-babf-9f8327635742
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Primary style'
+        level: 2
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 344346ec-cd9c-4897-9c19-10d0d0925eed
+      slot: group_slot
+      uuid: ceb5249f-95b0-40db-acfa-1868783ebdf7
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: ceb5249f-95b0-40db-acfa-1868783ebdf7
+      slot: group_slot
+      uuid: 90c23abf-4477-4825-803d-d4ad88c4291a
+      component_id: sdc.mercury.badge
+      inputs:
+        label: 'Badge text'
+        style: primary
+        icon: rocket
+        icon_first: true
+    -
+      parent_uuid: ceb5249f-95b0-40db-acfa-1868783ebdf7
+      slot: group_slot
+      uuid: 27f3c7f2-265b-4656-87d7-486d3ea07c49
+      component_id: sdc.mercury.badge
+      inputs:
+        label: 'Badge text'
+        style: primary
+        icon: rocket
+        icon_first: false
+    -
+      parent_uuid: ceb5249f-95b0-40db-acfa-1868783ebdf7
+      slot: group_slot
+      uuid: f51764fb-ad18-4283-8272-24a3afb77cd6
+      component_id: sdc.mercury.badge
+      inputs:
+        label: 'Badge text'
+        style: primary
+        icon_first: false
+        url:
+          uri: 'internal:/testing'
+          options: {  }
+    -
+      parent_uuid: 22e888bd-5906-4347-b9a0-045dfce35565
+      slot: main_slot
+      uuid: 2fa30935-2313-4688-b991-6a9ef44653bd
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 2fa30935-2313-4688-b991-6a9ef44653bd
+      slot: group_slot
+      uuid: 4fc6c532-7d9c-4945-b6b3-4bd97f763ae9
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Secondary style'
+        level: 2
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 2fa30935-2313-4688-b991-6a9ef44653bd
+      slot: group_slot
+      uuid: 21da81a1-4ced-4059-af33-860755425314
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: 21da81a1-4ced-4059-af33-860755425314
+      slot: group_slot
+      uuid: 48ef8863-3a6d-44fe-9113-97c5e90b77de
+      component_id: sdc.mercury.badge
+      inputs:
+        label: 'Badge text'
+        style: secondary
+        icon: rocket
+        icon_first: true
+    -
+      parent_uuid: 21da81a1-4ced-4059-af33-860755425314
+      slot: group_slot
+      uuid: e07ea1df-ca3c-43d4-812e-5971d121a780
+      component_id: sdc.mercury.badge
+      inputs:
+        label: 'Badge text'
+        style: secondary
+        icon: rocket
+        icon_first: false
+    -
+      parent_uuid: 21da81a1-4ced-4059-af33-860755425314
+      slot: group_slot
+      uuid: b55ed1e1-a1e6-46c9-ad15-cbfdfb1a51fc
+      component_id: sdc.mercury.badge
+      inputs:
+        label: 'Badge text'
+        style: secondary
+        icon_first: false
+    -
+      uuid: b036e805-fc18-4299-9a38-b3df09d21a2a
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: b036e805-fc18-4299-9a38-b3df09d21a2a
+      slot: header_slot
+      uuid: 0480db00-db3c-4ca4-99c6-9cf15a6427a3
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 0480db00-db3c-4ca4-99c6-9cf15a6427a3
+      slot: main_slot
+      uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      slot: group_slot
+      uuid: ed18221f-89fd-4057-a3ac-7aecd4f7bd59
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: blockquote
+    -
+      parent_uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      slot: group_slot
+      uuid: 0d6aed63-76f9-4fde-ad20-240580d2c9ad
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Blockquote
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 21d70015-dc50-401b-af6b-01acd14b3044
+      slot: group_slot
+      uuid: f0d00437-9521-46d7-81b3-f5c833cc4de5
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The blockquote component is a simple, text-based way to call out a quotation.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: b036e805-fc18-4299-9a38-b3df09d21a2a
+      slot: main_slot
+      uuid: 225b6c3d-17a2-4728-aa89-7956fed9c864
+      component_id: sdc.mercury.blockquote
+      inputs:
+        text: '“To confine our attention to terrestrial matters would be to limit the human spirit.”'
+        cite_name: 'Isiah Julio'
+        cite_text: 'Engineer, Technical Services'
+    -
+      uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '0'
+        padding_block_start: '64'
+        padding_block_end: '64'
+        section_header: true
+        section_footer: false
+        background_color: muted
+    -
+      parent_uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      slot: header_slot
+      uuid: d4b67c76-47c5-46c3-bb8e-a66ad083ee1b
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: d4b67c76-47c5-46c3-bb8e-a66ad083ee1b
+      slot: main_slot
+      uuid: 295d3853-d018-43b1-9663-1c70192c9171
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 295d3853-d018-43b1-9663-1c70192c9171
+      slot: group_slot
+      uuid: 87911612-c874-4d1e-8a48-a55bc57d6ae9
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: button
+    -
+      parent_uuid: 295d3853-d018-43b1-9663-1c70192c9171
+      slot: group_slot
+      uuid: 4f558af7-0cf2-4cf1-9220-26d161dd1353
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Button
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 295d3853-d018-43b1-9663-1c70192c9171
+      slot: group_slot
+      uuid: fda9468f-115c-4ff0-869c-1e8cd5ddd64f
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The button component is a standard button element. It has four styles: Primary, Secondary, Primary inverted and Secondary inverted, and three sizes: Large, Medium and Small. It comes with a preset list of icons commonly used with buttons. The icon can be placed before or after the text, or omitted. The button can also be disabled.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      slot: main_slot
+      uuid: d4316f92-9965-47d7-924e-a8fdcc52bfec
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: d4316f92-9965-47d7-924e-a8fdcc52bfec
+      slot: group_slot
+      uuid: 79fe5e04-1c78-4f26-958c-ddf839a1470a
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Primary style'
+        level: 2
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: d4316f92-9965-47d7-924e-a8fdcc52bfec
+      slot: group_slot
+      uuid: 69d76d8f-db50-4c46-b8d0-8e7acf6d88a3
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: 69d76d8f-db50-4c46-b8d0-8e7acf6d88a3
+      slot: group_slot
+      uuid: 8b44fd67-aa36-46eb-bb62-b8c175996b07
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary
+        label: 'Button label'
+        size: large
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+    -
+      parent_uuid: 69d76d8f-db50-4c46-b8d0-8e7acf6d88a3
+      slot: group_slot
+      uuid: 2657fd40-bfd9-41e1-8983-5332e1177218
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary
+        label: 'Button label'
+        size: medium
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+    -
+      parent_uuid: 69d76d8f-db50-4c46-b8d0-8e7acf6d88a3
+      slot: group_slot
+      uuid: 21bf5dbf-c767-4039-91eb-56137fb1ab30
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary
+        label: 'Button label'
+        size: small
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+    -
+      parent_uuid: 69d76d8f-db50-4c46-b8d0-8e7acf6d88a3
+      slot: group_slot
+      uuid: 38221d6e-abe9-4069-bbd9-b2c8a6787ce0
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary
+        label: 'Button label'
+        size: small
+        icon: download
+        mobile_width: false
+        icon_first: true
+        disabled: false
+    -
+      parent_uuid: 69d76d8f-db50-4c46-b8d0-8e7acf6d88a3
+      slot: group_slot
+      uuid: 008a5423-8c3a-4c67-be7d-005ca3aaa555
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary
+        label: 'Button label'
+        size: small
+        mobile_width: false
+        icon_first: false
+        disabled: true
+    -
+      parent_uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      slot: main_slot
+      uuid: 13a0cf39-dd82-4de7-98c3-8f9d07aea4a1
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 13a0cf39-dd82-4de7-98c3-8f9d07aea4a1
+      slot: group_slot
+      uuid: 66043144-6bbd-41d2-9e22-bd1da21200f1
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Secondary style'
+        level: 2
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 13a0cf39-dd82-4de7-98c3-8f9d07aea4a1
+      slot: group_slot
+      uuid: ef728305-5536-4532-8a27-b456fe99a94e
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: ef728305-5536-4532-8a27-b456fe99a94e
+      slot: group_slot
+      uuid: 1c95b7f8-01c5-41e4-b04d-7dccc7179868
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary
+        label: 'Button label'
+        size: large
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+    -
+      parent_uuid: ef728305-5536-4532-8a27-b456fe99a94e
+      slot: group_slot
+      uuid: 981f2550-1db2-4db5-9bc8-a37dea376977
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary
+        label: 'Button label'
+        size: medium
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+    -
+      parent_uuid: ef728305-5536-4532-8a27-b456fe99a94e
+      slot: group_slot
+      uuid: 446fc3f2-4f5b-489a-b91d-8987fc9f79b3
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary
+        label: 'Button label'
+        size: small
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+    -
+      parent_uuid: ef728305-5536-4532-8a27-b456fe99a94e
+      slot: group_slot
+      uuid: 1c250fa3-84d8-4283-9088-8f4246066441
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary
+        label: 'Button label'
+        size: small
+        icon: download
+        icon_first: true
+        disabled: false
+        mobile_width: false
+    -
+      parent_uuid: ef728305-5536-4532-8a27-b456fe99a94e
+      slot: group_slot
+      uuid: 5072ce84-bb01-4c53-af60-bae14acc9ba7
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary
+        label: 'Button label'
+        size: small
+        icon: arrow-right
+        icon_first: false
+        disabled: true
+        mobile_width: false
+    -
+      parent_uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      slot: main_slot
+      uuid: a6272a0b-9e29-4a46-bae3-940567b54baa
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: a6272a0b-9e29-4a46-bae3-940567b54baa
+      slot: group_slot
+      uuid: 40a493a3-bc39-4c91-8c4e-448c829fd769
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Primary inverted style'
+        level: 2
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: a6272a0b-9e29-4a46-bae3-940567b54baa
+      slot: group_slot
+      uuid: 91fc39df-812c-4063-966f-0f0c075ed278
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: 91fc39df-812c-4063-966f-0f0c075ed278
+      slot: group_slot
+      uuid: fc5c4829-c3a7-49cc-a482-fb96e202589b
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Button label'
+        size: large
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+    -
+      parent_uuid: 91fc39df-812c-4063-966f-0f0c075ed278
+      slot: group_slot
+      uuid: bc8e1602-0454-4ea9-9e6f-258fcd840a59
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Button label'
+        size: medium
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+    -
+      parent_uuid: 91fc39df-812c-4063-966f-0f0c075ed278
+      slot: group_slot
+      uuid: 3bd4bf51-0727-4656-8d3a-4f2e4dc4bf15
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Button label'
+        size: small
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+    -
+      parent_uuid: 91fc39df-812c-4063-966f-0f0c075ed278
+      slot: group_slot
+      uuid: 2704d058-6c48-417b-8f53-f06c6131d35f
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Button label'
+        size: small
+        icon: download
+        mobile_width: false
+        icon_first: true
+        disabled: false
+    -
+      parent_uuid: 91fc39df-812c-4063-966f-0f0c075ed278
+      slot: group_slot
+      uuid: d57d8a8c-1b0a-4ac7-90fd-caa543ff19af
+      component_id: sdc.mercury.button
+      inputs:
+        variant: primary-inverted
+        label: 'Button label'
+        size: small
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: true
+    -
+      parent_uuid: 2bbcb462-2897-457d-a0bb-9996fe3c673f
+      slot: main_slot
+      uuid: f6372231-2aea-4a65-b86f-f5f8fc5e806b
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: f6372231-2aea-4a65-b86f-f5f8fc5e806b
+      slot: group_slot
+      uuid: 6b382522-0948-4c88-99c7-69cefba15b7f
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Secnodary inverted style'
+        level: 2
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: f6372231-2aea-4a65-b86f-f5f8fc5e806b
+      slot: group_slot
+      uuid: 3cd923da-75e8-4819-953e-a2bf177a2d0c
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: 3cd923da-75e8-4819-953e-a2bf177a2d0c
+      slot: group_slot
+      uuid: 85dc9310-46d8-4ee7-8f54-ec8f131532f5
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary-inverted
+        label: 'Button label'
+        size: large
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+    -
+      parent_uuid: 3cd923da-75e8-4819-953e-a2bf177a2d0c
+      slot: group_slot
+      uuid: 7cef0f13-f7e0-4be8-8b74-e0d49f79f908
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary-inverted
+        label: 'Button label'
+        size: medium
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+    -
+      parent_uuid: 3cd923da-75e8-4819-953e-a2bf177a2d0c
+      slot: group_slot
+      uuid: a195a557-1227-4c6e-8398-2d2fdc59770b
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary-inverted
+        label: 'Button label'
+        size: small
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+    -
+      parent_uuid: 3cd923da-75e8-4819-953e-a2bf177a2d0c
+      slot: group_slot
+      uuid: 84741e03-04ac-415b-a0d1-7c32f9dc839b
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary-inverted
+        label: 'Button label'
+        size: small
+        icon: download
+        mobile_width: false
+        icon_first: true
+        disabled: false
+    -
+      parent_uuid: 3cd923da-75e8-4819-953e-a2bf177a2d0c
+      slot: group_slot
+      uuid: de453de4-7574-4e68-bfb3-f2de804b514a
+      component_id: sdc.mercury.button
+      inputs:
+        variant: secondary-inverted
+        label: 'Button label'
+        size: small
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: true
+    -
+      uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: header_slot
+      uuid: 623e2e7e-a7d1-4a99-ac2a-cdcd7094631d
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 623e2e7e-a7d1-4a99-ac2a-cdcd7094631d
+      slot: main_slot
+      uuid: 0d50d8b6-191e-4fab-a74b-503df255e7fd
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 0d50d8b6-191e-4fab-a74b-503df255e7fd
+      slot: group_slot
+      uuid: 7ff65d7d-a018-452b-bcdd-7eea1cc7a888
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: heading
+    -
+      parent_uuid: 0d50d8b6-191e-4fab-a74b-503df255e7fd
+      slot: group_slot
+      uuid: 5177e807-6ad9-4cc7-a30b-ea2301c8a283
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Heading
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 0d50d8b6-191e-4fab-a74b-503df255e7fd
+      slot: group_slot
+      uuid: f3b3cc1f-b2db-41d3-935c-e3522f7a6311
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The heading component provides a plain text element with size, color, alignment and link options. The heading level and size can be adjusted separately, and if no heading level is provided, the text is wrapped in a span tag instead of a heading tag.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 214afc16-6251-4876-8fda-a80883f43396
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 8XL'
+        level: 2
+        text_size: heading-responsive-8xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 88351fb2-ae42-44bd-9be8-1ce1cdc5dc0e
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 7XL'
+        level: 2
+        text_size: heading-responsive-7xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 01ac5b7f-f519-4972-a1ab-0033443b69c5
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 6XL'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: b0e5aeab-069c-4d76-8639-73b90d4602d7
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 5XL'
+        level: 2
+        text_size: heading-responsive-5xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 81f58dc1-5f19-4a82-8f01-6a5399836c00
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 4XL'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 95ec1841-25ee-43bf-a481-ee01f4c6f641
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 3XL'
+        level: 2
+        text_size: heading-responsive-3xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 9c840e74-4f27-4ce5-a199-5e802b69be49
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 2XL'
+        level: 2
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 4362fc31-205a-4faf-a475-c4026b9a5d28
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading XL'
+        level: 2
+        text_size: heading-responsive-xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 24830ebd-f2a6-4060-a1a6-cbfe51cceda3
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading L'
+        level: 2
+        text_size: heading-responsive-lg
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 588de237-930d-479c-9ab3-e1fb6ada6081
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 4XL no heading level'
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 7e2d3e80-5c2a-4b69-a1b9-02c3f4972126
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 4XL primary'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: primary
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: dcc0f951-c79a-4b93-a559-c097151604e2
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 4XL muted'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: muted
+        align: left
+    -
+      parent_uuid: 1eaf3111-ffc7-43f2-853f-dc0d13f2d161
+      slot: main_slot
+      uuid: 5f4cd6d0-5b1b-4b22-8b40-fa6c1cf5cbaa
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: md
+        background: primary
+        padding: md
+    -
+      parent_uuid: 5f4cd6d0-5b1b-4b22-8b40-fa6c1cf5cbaa
+      slot: group_slot
+      uuid: f72d1393-42af-42a7-b128-9a303252108e
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 4XL inverted'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: inverted
+        align: left
+    -
+      parent_uuid: 5f4cd6d0-5b1b-4b22-8b40-fa6c1cf5cbaa
+      slot: group_slot
+      uuid: c69bc396-09b7-4a3b-b219-280cee53e363
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Heading 4XL accent'
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: accent
+        align: left
+    -
+      uuid: 18de2b9e-e801-42f2-9639-a3fd0ec3db25
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 18de2b9e-e801-42f2-9639-a3fd0ec3db25
+      slot: header_slot
+      uuid: 8ee858c7-f8e1-4e7d-bca6-85890899e5e5
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 8ee858c7-f8e1-4e7d-bca6-85890899e5e5
+      slot: main_slot
+      uuid: b367ea0f-a04b-4157-ab47-f02d5342c2b6
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: b367ea0f-a04b-4157-ab47-f02d5342c2b6
+      slot: group_slot
+      uuid: 38dc0bc7-1301-45f7-8d47-f17785146a63
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: icon
+    -
+      parent_uuid: b367ea0f-a04b-4157-ab47-f02d5342c2b6
+      slot: group_slot
+      uuid: d8f996fd-cc05-4963-8662-10edb66ccee9
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Icon
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: b367ea0f-a04b-4157-ab47-f02d5342c2b6
+      slot: group_slot
+      uuid: 337ec9ac-db03-4423-9cbe-90046bd6cbb6
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The icon component provides size variations for icons using the <a href="https://phosphoricons.com/">Phosphor Icons</a> library.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 18de2b9e-e801-42f2-9639-a3fd0ec3db25
+      slot: main_slot
+      uuid: 1639d0e5-15b5-482a-befc-1a4fceedfe3e
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 1639d0e5-15b5-482a-befc-1a4fceedfe3e
+      slot: group_slot
+      uuid: 7cbc8918-5c55-4096-91d0-aa489139796e
+      component_id: sdc.mercury.icon
+      inputs:
+        icon: rocket
+        icon_size: extra-large
+    -
+      parent_uuid: 1639d0e5-15b5-482a-befc-1a4fceedfe3e
+      slot: group_slot
+      uuid: e01bd021-a549-4f36-ace0-cb3dc0cb4789
+      component_id: sdc.mercury.icon
+      inputs:
+        icon: rocket
+        icon_size: large
+    -
+      parent_uuid: 1639d0e5-15b5-482a-befc-1a4fceedfe3e
+      slot: group_slot
+      uuid: a28b22f6-11f0-49e8-9af7-cf4fc425268f
+      component_id: sdc.mercury.icon
+      inputs:
+        icon: rocket
+        icon_size: medium
+    -
+      parent_uuid: 1639d0e5-15b5-482a-befc-1a4fceedfe3e
+      slot: group_slot
+      uuid: 27c6c18a-cfab-430e-b47e-6a656da1f611
+      component_id: sdc.mercury.icon
+      inputs:
+        icon: rocket
+        icon_size: small
+    -
+      parent_uuid: 1639d0e5-15b5-482a-befc-1a4fceedfe3e
+      slot: group_slot
+      uuid: f3d327ac-7399-4c4f-89c2-0221cfafd466
+      component_id: sdc.mercury.icon
+      inputs:
+        icon: rocket
+        icon_size: extra-small
+    -
+      parent_uuid: 18de2b9e-e801-42f2-9639-a3fd0ec3db25
+      slot: main_slot
+      uuid: e9664dcf-4945-4ad8-b795-74c125781514
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>To place an icon inline text, you can use a <a href="/page/10#group" data-entity-type="canvas_page" data-entity-uuid="32479165-707f-4702-a6c0-7b852648190e" data-entity-substitution="canonical">Group component</a> with Item direction: Horizontal.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 18de2b9e-e801-42f2-9639-a3fd0ec3db25
+      slot: main_slot
+      uuid: 6aa08f0d-31d1-474f-840a-89bc7d20353e
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: row
+        flex_gap: sm
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 6aa08f0d-31d1-474f-840a-89bc7d20353e
+      slot: group_slot
+      uuid: 73bc345b-d414-4fde-9ab2-673de31b59ea
+      component_id: sdc.mercury.icon
+      inputs:
+        icon: rocket
+        icon_size: medium
+    -
+      parent_uuid: 6aa08f0d-31d1-474f-840a-89bc7d20353e
+      slot: group_slot
+      uuid: dc07ceb8-93d4-419b-ac8d-93053d8dcb88
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Text component in a group with an icon</p>'
+          format: canvas_html_block
+        text_size: text-lg
+        text_color: default
+    -
+      uuid: 6baf6ecb-8574-43f2-970c-d44f8c5234f1
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: 33-33-33
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 6baf6ecb-8574-43f2-970c-d44f8c5234f1
+      slot: header_slot
+      uuid: 438a586b-19f3-4f62-80b7-1b2ad1d9193a
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 438a586b-19f3-4f62-80b7-1b2ad1d9193a
+      slot: main_slot
+      uuid: 7692a0d8-10fc-4cc0-b21d-0b1c2ff9ed90
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 7692a0d8-10fc-4cc0-b21d-0b1c2ff9ed90
+      slot: group_slot
+      uuid: 9d4122f4-f201-451f-b262-5ee78a141090
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: image
+    -
+      parent_uuid: 7692a0d8-10fc-4cc0-b21d-0b1c2ff9ed90
+      slot: group_slot
+      uuid: 469fbde2-18dc-4821-b2a3-ff7ae087a342
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Image
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 7692a0d8-10fc-4cc0-b21d-0b1c2ff9ed90
+      slot: group_slot
+      uuid: 3962d5f5-ec11-4d4d-bf40-0d5e3bdcff6b
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The image component provides an element for the media image library, with options for aspect ratio, link, corner radius and caption.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 6baf6ecb-8574-43f2-970c-d44f8c5234f1
+      slot: main_slot
+      uuid: 00a2d471-1607-4ff3-9997-2df0918f8edc
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 00a2d471-1607-4ff3-9997-2df0918f8edc
+      slot: group_slot
+      uuid: 7a4d3868-56e6-4097-b0b1-dcdbee73fcd0
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Square
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 00a2d471-1607-4ff3-9997-2df0918f8edc
+      slot: group_slot
+      uuid: 89045bd7-6856-4500-ba1b-ae16563708c8
+      component_id: sdc.mercury.image
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/pexels-felix-mittermeier-1209650.jpg
+            alt: 'A purple, cloudy sky reflected on a calm lake'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.image
+        size: '1:1'
+        radius: small
+    -
+      parent_uuid: 6baf6ecb-8574-43f2-970c-d44f8c5234f1
+      slot: main_slot
+      uuid: 2964b35f-8107-4999-9af6-18b1b3d638f4
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: 2964b35f-8107-4999-9af6-18b1b3d638f4
+      slot: group_slot
+      uuid: 1572da5f-0c80-4635-b4d1-b7398212c7ae
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: '4 x 3 with caption'
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 2964b35f-8107-4999-9af6-18b1b3d638f4
+      slot: group_slot
+      uuid: fc05d07b-0786-4858-ad79-3c6386ff8887
+      component_id: sdc.mercury.image
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/pexels-felix-mittermeier-1209650.jpg
+            alt: 'A purple, cloudy sky reflected on a calm lake'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.image
+        size: '4:3'
+        radius: small
+        caption: 'Image caption here'
+    -
+      parent_uuid: 6baf6ecb-8574-43f2-970c-d44f8c5234f1
+      slot: main_slot
+      uuid: b831d567-72d1-4fbe-8dcf-1912426f2be0
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: b831d567-72d1-4fbe-8dcf-1912426f2be0
+      slot: group_slot
+      uuid: f739a963-13cf-4ff7-9525-c0ead47a7ff2
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: '3 x 2 with caption'
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: b831d567-72d1-4fbe-8dcf-1912426f2be0
+      slot: group_slot
+      uuid: 4359ea9b-eb5a-47fc-9fcd-8ab36ae6d4d7
+      component_id: sdc.mercury.image
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/pexels-felix-mittermeier-1209650.jpg
+            alt: 'A purple, cloudy sky reflected on a calm lake'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.image
+        size: '3:2'
+        radius: small
+        caption: 'Image caption here'
+    -
+      parent_uuid: 6baf6ecb-8574-43f2-970c-d44f8c5234f1
+      slot: main_slot
+      uuid: 89bf68b5-7ed4-4333-a358-8fc25fbb63cc
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: 89bf68b5-7ed4-4333-a358-8fc25fbb63cc
+      slot: group_slot
+      uuid: 50d8831e-5c00-49fb-9546-01d1a31c4285
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: '16 x 9'
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 89bf68b5-7ed4-4333-a358-8fc25fbb63cc
+      slot: group_slot
+      uuid: a3c4df8e-24ed-4d34-9814-e54ac812a60c
+      component_id: sdc.mercury.image
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/pexels-felix-mittermeier-1209650.jpg
+            alt: 'A purple, cloudy sky reflected on a calm lake'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.image
+        size: '16:9'
+        radius: small
+    -
+      parent_uuid: 6baf6ecb-8574-43f2-970c-d44f8c5234f1
+      slot: main_slot
+      uuid: 4b808a8b-9bb3-43a6-ac85-552ef104117e
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: 4b808a8b-9bb3-43a6-ac85-552ef104117e
+      slot: group_slot
+      uuid: c8219bf9-370c-4cca-b5cf-550153ac69a4
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: '2 x 1'
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 4b808a8b-9bb3-43a6-ac85-552ef104117e
+      slot: group_slot
+      uuid: 30e42d63-55fd-4dc6-b2a9-12f5efe40141
+      component_id: sdc.mercury.image
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/pexels-felix-mittermeier-1209650.jpg
+            alt: 'A purple, cloudy sky reflected on a calm lake'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.image
+        size: '2:1'
+        radius: small
+    -
+      parent_uuid: 6baf6ecb-8574-43f2-970c-d44f8c5234f1
+      slot: main_slot
+      uuid: c75fe3c1-6bc5-4c8d-8847-c8dd44b54cba
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+        radius: sm
+    -
+      parent_uuid: c75fe3c1-6bc5-4c8d-8847-c8dd44b54cba
+      slot: group_slot
+      uuid: 532fa4c1-2df6-4f3d-99a2-9819fbe6af7b
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'None (original image aspect ratio)'
+        text_size: heading-responsive-2xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: c75fe3c1-6bc5-4c8d-8847-c8dd44b54cba
+      slot: group_slot
+      uuid: 4e5693b9-9546-4732-8f0e-16ea7b2991d9
+      component_id: sdc.mercury.image
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/pexels-felix-mittermeier-1209650.jpg
+            alt: 'A purple, cloudy sky reflected on a calm lake'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.image
+        radius: small
+    -
+      parent_uuid: 6baf6ecb-8574-43f2-970c-d44f8c5234f1
+      slot: footer_slot
+      uuid: e4f9c83a-1957-4b33-a764-c336723608c1
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>If you want to use a full width image, place it outside of a section:</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      uuid: 16a021d1-c53f-4478-b801-e5beee259fc9
+      component_id: sdc.mercury.image
+      inputs:
+        media:
+          sourceType: default-relative-url
+          value:
+            src: assets/pexels-felix-mittermeier-1209650.jpg
+            alt: 'A purple, cloudy sky reflected on a calm lake'
+            width: 1920
+            height: 1014
+          jsonSchema:
+            type: object
+            properties:
+              src:
+                type: string
+                contentMediaType: 'image/*'
+                format: uri-reference
+                x-allowed-schemes:
+                  - http
+                  - https
+              alt:
+                type: string
+              width:
+                type: integer
+              height:
+                type: integer
+            required:
+              - src
+          componentId: sdc.mercury.image
+        size: '2:1'
+        radius: small
+    -
+      uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: false
+    -
+      parent_uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      slot: header_slot
+      uuid: 340857d2-6220-4599-85f5-18c7d447084b
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: 340857d2-6220-4599-85f5-18c7d447084b
+      slot: main_slot
+      uuid: 3d245165-c81d-49ac-88e9-5c26e56223e1
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 3d245165-c81d-49ac-88e9-5c26e56223e1
+      slot: group_slot
+      uuid: 6e2a3586-a8dc-444a-8c4e-cecca0c90e5b
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: text
+    -
+      parent_uuid: 3d245165-c81d-49ac-88e9-5c26e56223e1
+      slot: group_slot
+      uuid: 11c9f401-b04a-45b3-a587-14f1cf26dc4c
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Text
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 3d245165-c81d-49ac-88e9-5c26e56223e1
+      slot: group_slot
+      uuid: 7cef4e34-e2b3-4e24-885f-5b1a59acecb0
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The text component provides a formatted text element with inline options for bold, italics, underline, alignment, links, and lists. It also provides options for size and text color.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      slot: main_slot
+      uuid: 284826f2-73cc-4b6c-bfc3-1db44fcb8fb0
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Formatted text element for longer text that needs formatting, <a href="#">links</a> or lists.</p><ul><li class="ck-list-marker-bold" data-list-item-id="e433fa47d31b6f13f82117d1fa13b2b34"><strong>Bold text</strong></li><li class="ck-list-marker-italic" data-list-item-id="e1f3eb3e676cbbd6d92c14026b7adbe0e"><em>Italic text</em></li><li data-list-item-id="e4ac902057282c71f290fc048b40f6ebe"><u>Underlined text</u></li></ul><p>And do ordered lists as well:</p><ol><li data-list-item-id="e7410e955d117c49c68e949d87dd0ea6b">Item 1</li><li data-list-item-id="e0935e5b1e35243ee0170c6be7653c369">Item 2</li><li data-list-item-id="e631817d96b135ddbdac9a2bb80bfe416">Item 3</li></ol>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      slot: main_slot
+      uuid: 9d8e36f4-8abf-4828-93ed-3e02ed885f43
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Text 12px</p>'
+          format: canvas_html_block
+        text_size: text-xs
+        text_color: default
+    -
+      parent_uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      slot: main_slot
+      uuid: 537faacb-4d2f-4b74-a8ab-bbae0f3e4074
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Text 14px</p>'
+          format: canvas_html_block
+        text_size: text-sm
+        text_color: default
+    -
+      parent_uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      slot: main_slot
+      uuid: 1c8c3042-eb8e-4dd7-ab1d-9a1870d9bcdc
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Text 16px (default)</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      slot: main_slot
+      uuid: 5dbfff10-61ff-4081-934a-5d43b7b8cbd7
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Text 18px</p>'
+          format: canvas_html_block
+        text_size: text-lg
+        text_color: default
+    -
+      parent_uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      slot: main_slot
+      uuid: 787cf478-6ed8-4064-a3db-ab16a6a131ea
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Text 20px</p>'
+          format: canvas_html_block
+        text_size: text-xl
+        text_color: default
+    -
+      parent_uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      slot: main_slot
+      uuid: 3f859e7a-737d-4976-a8de-d5bf91e72b6e
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Text 24px</p>'
+          format: canvas_html_block
+        text_size: text-2xl
+        text_color: default
+    -
+      parent_uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      slot: main_slot
+      uuid: 4892001f-c81d-4860-8476-ad0b437e56b6
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Text 32px</p>'
+          format: canvas_html_block
+        text_size: text-3xl
+        text_color: default
+    -
+      parent_uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      slot: main_slot
+      uuid: f081ae86-402f-439f-b096-c4b662113966
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Text with primary color.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: primary
+    -
+      parent_uuid: 933d1a79-fac7-4423-b9f3-766eac59afcb
+      slot: main_slot
+      uuid: 59558c8c-3c23-45e5-b8e5-ddd5b3a529e6
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: md
+        background: primary
+        padding: md
+    -
+      parent_uuid: 59558c8c-3c23-45e5-b8e5-ddd5b3a529e6
+      slot: group_slot
+      uuid: a0e4c5ce-82b4-4a06-8fc1-90b1b84dbc95
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>Text with inverted color.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: inverted
+    -
+      uuid: 48bea2c0-5352-40d8-a7f7-0694fced1feb
+      component_id: sdc.mercury.section
+      inputs:
+        width: 100%
+        columns: '100'
+        mobile_columns: '1'
+        margin_block_start: '48'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 48bea2c0-5352-40d8-a7f7-0694fced1feb
+      slot: header_slot
+      uuid: a2ffcc37-16b7-4071-bcce-8e77d7948867
+      component_id: sdc.mercury.grid
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+    -
+      parent_uuid: a2ffcc37-16b7-4071-bcce-8e77d7948867
+      slot: main_slot
+      uuid: 762a9782-c504-42b0-a103-fb321aab3206
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 762a9782-c504-42b0-a103-fb321aab3206
+      slot: group_slot
+      uuid: d7b07ab5-3d02-4c99-bf81-04a583029964
+      component_id: sdc.mercury.anchor
+      inputs:
+        id: video
+    -
+      parent_uuid: 762a9782-c504-42b0-a103-fb321aab3206
+      slot: group_slot
+      uuid: 1a132845-1870-44f4-ba50-93f2ab2ec7ba
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: Video
+        level: 2
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 762a9782-c504-42b0-a103-fb321aab3206
+      slot: group_slot
+      uuid: 00a410d8-8f32-4534-83c9-6280b33b8ea7
+      component_id: sdc.mercury.text
+      inputs:
+        text:
+          value: '<p>The video component provides an element for displaying a local video, loaded from the media library. The video has options for autoplay, displaying the controls, muting the audio and playing on a loop.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 48bea2c0-5352-40d8-a7f7-0694fced1feb
+      slot: main_slot
+      uuid: 25ba748f-fc31-4d16-ae60-42b59b99cdb1
+      component_id: sdc.mercury.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        radius: sm
+    -
+      parent_uuid: 25ba748f-fc31-4d16-ae60-42b59b99cdb1
+      slot: group_slot
+      uuid: 1e048c1c-8558-47ed-ba85-aac4c29172ae
+      component_id: sdc.mercury.video
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: ced07865-75d3-47d4-993e-ddce424333e6
+            target_type: media
+        autoplay: false
+        controls: true
+        muted: true
+        loop: true
+        caption: 'Aerial view of waves hitting a small cliff'
+        poster:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 721ac732-6f71-486a-9332-6321dfc2cb44
+            target_type: media
+  path:
+    -
+      alias: /base-components
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

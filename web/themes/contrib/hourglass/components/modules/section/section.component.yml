@@ -1,0 +1,45 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Section
+group: Layout
+status: stable
+description: "Layout wrapper that controls section padding, margin, background, and optional max-width container."
+props:
+  type: object
+  properties:
+    padding_top:
+      type: string
+      title: "Padding Top"
+      examples: [none, sm, md, lg, xl]
+      default: lg
+    padding_bottom:
+      type: string
+      title: "Padding Bottom"
+      examples: [none, sm, md, lg, xl]
+      default: lg
+    margin_top:
+      type: string
+      title: "Margin Top"
+      examples: [none, sm, md, lg, xl]
+      default: none
+    margin_bottom:
+      type: string
+      title: "Margin Bottom"
+      examples: [none, sm, md, lg, xl]
+      default: none
+    container:
+      type: boolean
+      title: "Constrain to container (max-width)"
+      default: true
+    background:
+      type: string
+      title: "Background"
+      examples: [none, white, gray, dark, orange-rounded, white-translucent]
+      default: none
+    anchor_id:
+      type: string
+      title: "Anchor ID"
+      description: "HTML id for this section (e.g. how-it-works). Used by Anchor Navigation links."
+slots:
+  content:
+    title: Content
+    description: "Components placed inside this section."

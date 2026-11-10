@@ -1,0 +1,9 @@
+canvas_translate:
+  name: 'Translate'
+  description: 'Translate Canvas pages.'
+  url: extension/index.html
+  icon: extension/icon.svg
+  type: 'page'
+  api_version: '1.0'
+  permissions:
+    - translate canvas content

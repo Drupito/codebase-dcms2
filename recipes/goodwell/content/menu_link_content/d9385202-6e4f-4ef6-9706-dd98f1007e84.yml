@@ -1,0 +1,44 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: d9385202-6e4f-4ef6-9706-dd98f1007e84
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    012239fc-7293-49f7-a83b-77063b398455: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: '(190) 391-740-04'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      uri: 'tel:+19039174004'
+      title: ''
+      options:
+        container_attributes:
+          class:
+            - footer-phone
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:012239fc-7293-49f7-a83b-77063b398455'
+  revision_translation_affected:
+    -
+      value: true

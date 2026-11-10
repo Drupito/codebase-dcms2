@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: af6acb09-54fc-4b40-ba0f-a670bdada387
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    602d4023-5005-4d46-85fc-c6f6ead85a80: file
+default:
+  entity_id:
+    -
+      uuid: 602d4023-5005-4d46-85fc-c6f6ead85a80
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/Sequence-01_1-2.png'
+  x:
+    -
+      value: 750
+  'y':
+    -
+      value: 750
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

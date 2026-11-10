@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 61a11aa3-f437-436b-9d88-f50ac10f880f
+  bundle: blog
+  default_langcode: en
+  depends:
+    35f93d57-90d0-40d7-9ce4-9a79bcedf2a3: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Elevate Your Business with Cloud Services'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/elevate-your-business-cloud-services
+      langcode: en
+  body:
+    -
+      value: "<p>Cloud computing has fundamentally transformed how businesses operate, offering unprecedented scalability, flexibility, and cost efficiency. Whether you're a startup or an enterprise, migrating to the cloud can unlock new opportunities and competitive advantages.</p><h2>Benefits of Cloud Adoption</h2><p>The cloud offers a range of benefits: reduced infrastructure costs, on-demand scalability, improved collaboration, and access to cutting-edge technologies such as AI and machine learning. Organisations that embrace cloud services consistently outperform those relying on legacy on-premises infrastructure.</p><h2>Choosing the Right Cloud Model</h2><p>Public, private, and hybrid cloud models each offer distinct advantages. Public clouds provide cost-effective, scalable resources managed by providers like AWS, Azure, and Google Cloud. Private clouds offer greater control and security for sensitive workloads. Hybrid models combine both approaches for maximum flexibility.</p><h2>Cloud Security Best Practices</h2><p>Security in the cloud is a shared responsibility. Implementing identity and access management, encrypting data at rest and in transit, and monitoring for suspicious activity are all essential practices for maintaining a secure cloud environment.</p>"
+      format: content_format
+      summary: ''
+  field_featured:
+    -
+      value: false
+  field_hero_image:
+    -
+      entity: 35f93d57-90d0-40d7-9ce4-9a79bcedf2a3
+  field_read_time:
+    -
+      value: 5

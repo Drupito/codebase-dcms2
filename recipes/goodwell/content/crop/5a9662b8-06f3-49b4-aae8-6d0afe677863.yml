@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 5a9662b8-06f3-49b4-aae8-6d0afe677863
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    410793dc-00f9-49c3-a107-d58c2e084fc1: file
+default:
+  entity_id:
+    -
+      uuid: 410793dc-00f9-49c3-a107-d58c2e084fc1
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/man_signing.png'
+  x:
+    -
+      value: 194
+  'y':
+    -
+      value: 121
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

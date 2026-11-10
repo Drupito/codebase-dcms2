@@ -1,0 +1,68 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.canvas_html_block
+  module:
+    - text
+  theme:
+    - hourglass
+active_version: eb99e928fb5c4026
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        section_title:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'Trusted by Industry Leaders'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+    fallback_metadata:
+      slot_definitions:
+        logos:
+          title: 'Logo Items'
+          description: 'Place Logo Item atoms here.'
+  3d85e42a8460703b:
+    settings:
+      prop_field_definitions:
+        section_title:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'Trusted by Industry Leaders'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        speed:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '30'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        logos:
+          title: 'Logo Items'
+          description: 'Place Logo Item atoms here. Items are duplicated automatically for seamless looping.'
+label: 'Logo Carousel'
+id: sdc.hourglass.logo-carousel
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:logo-carousel'

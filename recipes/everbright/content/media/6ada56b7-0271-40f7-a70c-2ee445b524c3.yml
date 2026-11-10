@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6ada56b7-0271-40f7-a70c-2ee445b524c3
+  bundle: image
+  default_langcode: en
+  depends:
+    1a9da2d6-a62a-40dc-84d8-d1f04d546515: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: ant-rozetsky-KhmJnxGrlWM-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'An abstract sculpture of a face made out of unusual objects.'
+      title: ''
+      width: 1920
+      height: 1241
+      entity: 1a9da2d6-a62a-40dc-84d8-d1f04d546515

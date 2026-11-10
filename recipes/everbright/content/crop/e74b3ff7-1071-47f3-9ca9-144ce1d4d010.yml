@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: e74b3ff7-1071-47f3-9ca9-144ce1d4d010
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    1a9da2d6-a62a-40dc-84d8-d1f04d546515: file
+default:
+  entity_id:
+    -
+      uuid: 1a9da2d6-a62a-40dc-84d8-d1f04d546515
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/ant-rozetsky-KhmJnxGrlWM-unsplash.jpg'
+  x:
+    -
+      value: 960
+  'y':
+    -
+      value: 621
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,59 @@
+{% set has_social = facebook_url or twitter_url or linkedin_url %}
+
+<div class="dst-card-team">
+
+  {% if photo and photo.src %}
+    <div class="dst-card-team__photo-wrap">
+      {% include 'canvas:image' ignore missing with {
+        src: photo.src,
+        alt: photo.alt | default(name | default('')),
+        class: 'dst-card-team__photo',
+        width: photo.width,
+        height: photo.height,
+        loading: 'lazy'
+      } only %}
+    </div>
+  {% endif %}
+
+  <div class="dst-card-team__body">
+
+    {% if name %}
+      <h3 class="dst-card-team__name">{{ name }}</h3>
+    {% endif %}
+
+    {% if role %}
+      <p class="dst-card-team__role">{{ role }}</p>
+    {% endif %}
+
+    {% if description %}
+      <div class="dst-card-team__description">{{ description | raw }}</div>
+    {% endif %}
+
+    {% if has_social %}
+      <ul class="dst-card-team__social" role="list">
+        {% if facebook_url %}
+          <li>
+            <a href="{{ facebook_url }}" class="dst-card-team__social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </li>
+        {% endif %}
+        {% if twitter_url %}
+          <li>
+            <a href="{{ twitter_url }}" class="dst-card-team__social-link" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </li>
+        {% endif %}
+        {% if linkedin_url %}
+          <li>
+            <a href="{{ linkedin_url }}" class="dst-card-team__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    {% endif %}
+
+  </div>
+</div>

@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.project.field_content
+    - field.field.node.project.field_description
+    - field.field.node.project.field_eyebrow
+    - field.field.node.project.field_featured_image
+    - field.field.node.project.field_location
+    - field.field.node.project.field_name
+    - field.field.node.project.field_position
+    - field.field.node.project.field_quote_text
+    - field.field.node.project.field_seo_analysis
+    - field.field.node.project.field_seo_description
+    - field.field.node.project.field_seo_image
+    - field.field.node.project.field_seo_title
+    - node.type.project
+  module:
+    - user
+id: node.project.teaser
+targetEntityType: node
+bundle: project
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: 4_3_medium
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_content: true
+  field_eyebrow: true
+  field_location: true
+  field_name: true
+  field_position: true
+  field_quote_text: true
+  field_seo_analysis: true
+  field_seo_description: true
+  field_seo_image: true
+  field_seo_title: true

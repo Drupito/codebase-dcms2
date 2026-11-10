@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Process Step
+group: Cards
+status: stable
+description: 'Single step card for the Process Steps module — number badge, icon circle, title, and description.'
+props:
+  type: object
+  properties:
+    step_number:
+      type: string
+      title: 'Step Number'
+      examples:
+        - '01'
+        - '02'
+    title:
+      type: string
+      title: 'Step Title'
+      examples:
+        - 'Data Encryption'
+    description:
+      type: string
+      title: 'Step Description'
+      examples:
+        - 'End-to-end 256-bit AES at rest and in transit'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  icon:
+    title: 'Step Icon'
+    description: 'Place a Media / Image atom here (60×60 px icon).'

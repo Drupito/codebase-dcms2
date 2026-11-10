@@ -1,0 +1,17 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Logo
+group: Base
+status: stable
+description: "Site logo wrapper. Drop the Drupal Site Branding block into the content slot."
+props:
+  type: object
+  properties:
+    tagline:
+      type: string
+      title: Tagline
+      description: "Optional short text shown below the logo."
+      default: ""
+slots:
+  content:
+    title: Logo / Branding
+    description: "Drop the Drupal Site Branding block here."

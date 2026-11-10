@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: News & Events
+group: Organisms
+status: stable
+description: 'News & Events section — one featured post on the left with two scrollable columns of blog cards on the right. Blog posts are loaded dynamically from the news_events View.'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Section Title'
+      examples:
+        - 'News & Events'
+    cta_text:
+      type: string
+      title: 'CTA Button Text'
+      examples:
+        - 'View All Posts'
+    cta_url:
+      type: string
+      title: 'CTA URL'
+      examples:
+        - '/blog'
+    extra_classes:
+      type: string
+      title: 'Extra CSS Classes'

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 3f66a902-03b3-4e69-badb-29664883036b
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: you_covered.jpg
+  uri:
+    -
+      value: 'public://2026-06/you_covered.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 7332625
+  status:
+    -
+      value: true

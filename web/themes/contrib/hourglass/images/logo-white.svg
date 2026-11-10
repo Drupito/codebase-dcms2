@@ -1,0 +1,10 @@
+<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Orange rounded square icon -->
+  <rect width="40" height="40" rx="10" fill="#F4622A"/>
+  <!-- Hourglass icon (white) -->
+  <path d="M13 10h14l-7 10-7-10zM13 30h14l-7-10 7 10z" fill="none" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+  <line x1="13" y1="10" x2="27" y2="10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="13" y1="30" x2="27" y2="30" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <!-- Hourglass text -->
+  <text x="52" y="26" font-family="'Geist', 'Inter', sans-serif" font-size="18" font-weight="600" fill="white" letter-spacing="-0.3">Hourglass</text>
+</svg>

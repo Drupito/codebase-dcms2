@@ -1,0 +1,12 @@
+name: 'Trash language override test'
+type: module
+description: 'Provides a configuration override that negotiates the interface language.'
+package: Testing
+core_version_requirement: ^11.3.3 | ^12
+dependencies:
+  - drupal:language
+
+# Information added by Drupal.org packaging script on 2026-10-24
+version: '3.1.2'
+project: 'trash'
+datestamp: 1792828494

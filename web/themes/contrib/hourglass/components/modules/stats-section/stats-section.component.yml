@@ -1,0 +1,21 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Stats Section
+group: Organisms
+status: stable
+description: 'Stat cards row (≤3 cards = static grid, 4+ cards = Splide loop slider). Place Stat Card atoms in the cards slot and duplicate as needed.'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Section Title'
+      contentMediaType: text/html
+      examples:
+        - 'Hourglass by the Numbers'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  cards:
+    title: 'Stat Cards'
+    description: 'Place Stat Card atoms here. Duplicate as needed — 4 or more will automatically switch to a slider.'

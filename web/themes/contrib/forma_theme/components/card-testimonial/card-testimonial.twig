@@ -1,0 +1,85 @@
+{% set card =
+  html_cva(
+    base: ['flex h-full flex-col rounded-2xl p-4'],
+    variants: {
+      align: {
+        center: 'items-center gap-6 text-center',
+        left: 'items-start gap-4 text-left'
+      },
+      style: {
+        default: '',
+        inverted: 'bg-primary text-primary-foreground'
+      }
+    }
+  )
+%}
+
+{% set svg =
+  html_cva(
+    base: ['absolute'],
+    variants: {
+      style: {
+        default: 'text-card-foreground/10',
+        inverted: 'text-card/10'
+      }
+    }
+  )
+%}
+
+{% set footer =
+  html_cva(
+    base: ['flex flex-row items-center gap-4 border-b pb-4 text-left text-base font-bold'],
+    variants: {
+      align: {
+        center: 'justify-center',
+        left: 'justify-start'
+      },
+      style: {
+        default: 'border-foreground',
+        inverted: 'border-background'
+      }
+    }
+  )
+%}
+
+{% set svg_classes =
+  svg.apply({
+    style: style|default('default')
+  })
+%}
+
+{% set card_classes =
+  card.apply({
+    align: align|default('center'),
+    style: style|default('default')
+  })
+%}
+
+{% set footer_classes =
+  footer.apply({
+    align: align|default('center')
+  })
+%}
+
+<div class="{{ card_classes }} relative">
+  <blockquote class="relative z-10 flex grow flex-col gap-4" cite="{{ cite_url }}">
+    <p class="grow text-2xl text-inherit">
+      {{ text }}
+    </p>
+
+    <footer class="{{ footer_classes }}">
+      <div>
+        {% set citation = cite_name %}
+        {{ citation }}
+        <cite class="font-normal not-italic">
+          <br />
+          {% if cite_url %}
+            <a href="{{ cite_url }}" target="_blank" class="underline underline-offset-2 hover:opacity-80">{{ cite_text }}</a>
+          {% else %}
+            <span class="text-base">{{ cite_text }}</span>
+          {% endif %}
+        </cite>
+      </div>
+    </footer>
+  </blockquote>
+</div>

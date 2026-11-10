@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 35cc5608-a977-4c1e-a816-0337bcbc99ef
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    7987412e-f501-4d30-a472-c7952d69486a: file
+default:
+  entity_id:
+    -
+      uuid: 7987412e-f501-4d30-a472-c7952d69486a
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/dad_daughter.png'
+  x:
+    -
+      value: 1521
+  'y':
+    -
+      value: 717
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

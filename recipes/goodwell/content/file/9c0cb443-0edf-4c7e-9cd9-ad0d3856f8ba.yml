@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 9c0cb443-0edf-4c7e-9cd9-ad0d3856f8ba
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: couple_nature.png
+  uri:
+    -
+      value: 'public://2026-06/couple_nature.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 871463
+  status:
+    -
+      value: true

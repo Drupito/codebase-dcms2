@@ -1,0 +1,70 @@
+.dst-brand-band {
+  padding-block: 2.5rem;
+  overflow: hidden;
+}
+
+.dst-brand-band__heading {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-secondary, #6b7280);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* Static layout — items share the full row equally */
+.dst-brand-band__track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Each item grows to fill its share of the row */
+.dst-brand-band__item {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.dst-brand-band__logo {
+  height: 32px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.55;
+  filter: grayscale(1);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.dst-brand-band__logo:hover {
+  opacity: 1;
+  filter: none;
+}
+
+/* Marquee variant — items must NOT flex-grow, track scrolls as one unit */
+.dst-brand-band__track--marquee {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: dst-brand-scroll 24s linear infinite;
+}
+
+.dst-brand-band__track--marquee .dst-brand-band__item {
+  flex: 0 0 auto;
+}
+
+.dst-brand-band__track--marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes dst-brand-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* -50% works because the track contains two copies of the logo set */
+    transform: translateX(-50%);
+  }
+}

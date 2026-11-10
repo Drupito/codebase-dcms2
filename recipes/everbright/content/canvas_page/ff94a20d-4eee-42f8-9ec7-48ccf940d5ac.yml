@@ -1,0 +1,797 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: ff94a20d-4eee-42f8-9ec7-48ccf940d5ac
+  default_langcode: en
+  depends:
+    29c00bfa-5f97-42f5-9660-8d5feb87c966: file
+    a4b20571-5935-4dd5-8d11-387b974a38bf: media
+    47363581-f988-47de-8b2a-67477e4d48df: file
+    984deeff-17d7-4679-86f5-ae9072152f1d: media
+    60f74077-8c33-4961-a6ed-89a34da2cf06: file
+    006640ee-da91-4821-ad67-3f8973a8695f: media
+    08b9440e-5885-4a4a-8f61-dedbf423a095: file
+    1e07220d-7e65-49be-bbe9-b32499d5de35: media
+    7253479d-6630-42a4-8ced-fb3f80ea15fa: file
+    02cf73a3-af0d-4c8c-a2ad-4e9e39fa74e4: media
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Home
+  description:
+    -
+      value: 'everbright agency is a collective of designers, strategists, and technologists who work with organizations of all sizes to build meaningful brands and digital experiences.'
+  components:
+    -
+      uuid: a849a779-1a6f-4844-878f-22ad09274234
+      component_id: sdc.everbright_theme.hero-billboard
+      inputs:
+        height: full
+        flex_position: bottom-left
+        overlay_opacity: 40%
+        object_position: center
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: a4b20571-5935-4dd5-8d11-387b974a38bf
+            target_type: media
+        overlap_navbar: true
+        invert_navbar: true
+    -
+      parent_uuid: a849a779-1a6f-4844-878f-22ad09274234
+      slot: hero_slot
+      uuid: 53cfb966-9b73-4155-ad30-ed74cd489b74
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>WE ARE A BRAND <em><strong>ACCELERATION</strong></em>&nbsp;<br>AGENCY</p>'
+          format: canvas_html_block
+        text_size: text-6xl
+        text_color: inverted
+    -
+      uuid: d6f59a1c-d467-4a00-9f30-8561bee28aa5
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '2 columns 40-60'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '96'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: d6f59a1c-d467-4a00-9f30-8561bee28aa5
+      slot: main_slot
+      uuid: a46b279e-356e-4cdb-af9f-2196fc62c472
+      component_id: sdc.everbright_theme.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 984deeff-17d7-4679-86f5-ae9072152f1d
+            target_type: media
+    -
+      parent_uuid: d6f59a1c-d467-4a00-9f30-8561bee28aa5
+      slot: main_slot
+      uuid: 6735e7a0-5b35-4588-ae6e-ac42b22e964e
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: xl
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: 6735e7a0-5b35-4588-ae6e-ac42b22e964e
+      slot: group_slot
+      uuid: 7caf40b5-804f-4b87-9c14-10afeefb7ed9
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: 7caf40b5-804f-4b87-9c14-10afeefb7ed9
+      slot: group_slot
+      uuid: a297859b-ea03-42ad-bce4-4b3baf3995b2
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Welcome to <strong>everbright</strong> agency</p>'
+          format: canvas_html_block
+        text_size: text-3xl
+        text_color: default
+    -
+      parent_uuid: 7caf40b5-804f-4b87-9c14-10afeefb7ed9
+      slot: group_slot
+      uuid: 140b760c-728f-47eb-b706-6f4083ab170f
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>We are a collective of designers, strategists, and technologists who work with organizations of all sizes to build meaningful brands and digital experiences. Our approach is collaborative, iterative, and focused on delivering measurable results that drive growth and create lasting value for our clients.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 7caf40b5-804f-4b87-9c14-10afeefb7ed9
+      slot: group_slot
+      uuid: cf2badf1-bfbe-423b-b4ec-564eca4c2f67
+      component_id: sdc.everbright_theme.button
+      inputs:
+        variant: secondary
+        label: 'About us'
+        mobile_width: false
+        icon_first: false
+        disabled: false
+    -
+      parent_uuid: 6735e7a0-5b35-4588-ae6e-ac42b22e964e
+      slot: group_slot
+      uuid: 3cf60a12-6a33-4ed5-82c0-bc37b77fec2c
+      component_id: sdc.everbright_theme.grid
+      inputs:
+        width: 50%
+        columns: '1 column'
+        mobile_columns: '1'
+        use_flex_uneven_items: false
+        align: left
+    -
+      parent_uuid: 3cf60a12-6a33-4ed5-82c0-bc37b77fec2c
+      slot: main_slot
+      uuid: 448c0926-4ce1-402d-805d-2f117dd1912e
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: lg
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: 448c0926-4ce1-402d-805d-2f117dd1912e
+      slot: group_slot
+      uuid: 4e8294dc-b2e7-4a67-8bf9-b60ce58ab93c
+      component_id: sdc.everbright_theme.image
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 006640ee-da91-4821-ad67-3f8973a8695f
+            target_type: media
+        size: '1:1'
+    -
+      parent_uuid: 448c0926-4ce1-402d-805d-2f117dd1912e
+      slot: group_slot
+      uuid: 85a25b0b-9b90-4e8b-8673-442d48f726b3
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Our work is bespoke, meticulous, and driven by passion.'
+        level: 2
+        text_size: heading-responsive-3xl
+        text_color: default
+        align: left
+    -
+      uuid: 36b72d81-f9b0-4852-8143-578dffa3a0a0
+      component_id: sdc.everbright_theme.cta
+      inputs:
+        heading:
+          value: '<p>We believe in <em><strong>less but better</strong></em>. Every detail serves a singular purpose.</p>'
+          format: canvas_html_block
+        background_color: primary
+        eyebrow_text: 'Our philosophy'
+    -
+      parent_uuid: 36b72d81-f9b0-4852-8143-578dffa3a0a0
+      slot: actions
+      uuid: 141ba837-d8fc-4d39-bee7-16d6e511a852
+      component_id: sdc.everbright_theme.grid
+      inputs:
+        width: 100%
+        columns: '3 columns'
+        mobile_columns: '1'
+        align: center
+        use_flex_uneven_items: false
+    -
+      parent_uuid: 141ba837-d8fc-4d39-bee7-16d6e511a852
+      slot: main_slot
+      uuid: ef99f321-54dc-45d8-96ed-4b646fb12f80
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: ef99f321-54dc-45d8-96ed-4b646fb12f80
+      slot: group_slot
+      uuid: fc935635-0c14-4e42-bc23-83f138741afe
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: Tenure
+        text_color: muted
+    -
+      parent_uuid: ef99f321-54dc-45d8-96ed-4b646fb12f80
+      slot: group_slot
+      uuid: e45afee4-1ce6-4980-ab8f-89e9d93e31ec
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: "<p>12+ years of radical \Ldesign execution.</p>"
+          format: canvas_html_block
+        text_size: normal
+        text_color: inverted
+    -
+      parent_uuid: 141ba837-d8fc-4d39-bee7-16d6e511a852
+      slot: main_slot
+      uuid: a96b6715-6779-482a-9e93-6e81af996e94
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: a96b6715-6779-482a-9e93-6e81af996e94
+      slot: group_slot
+      uuid: c51a0a54-5a84-4171-8d4d-d9590d4abc6e
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: Impact
+        text_color: muted
+    -
+      parent_uuid: a96b6715-6779-482a-9e93-6e81af996e94
+      slot: group_slot
+      uuid: 0ba3591f-34a7-496d-a2b4-e6142be4c413
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Global reach, specialized<br>local resonance.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: inverted
+    -
+      parent_uuid: 141ba837-d8fc-4d39-bee7-16d6e511a852
+      slot: main_slot
+      uuid: 4a2a3ecb-a07d-4bb0-893e-f8431e8a44bd
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: 4a2a3ecb-a07d-4bb0-893e-f8431e8a44bd
+      slot: group_slot
+      uuid: 5e004c75-b08b-4b6c-956d-f227b4665f6e
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: Core
+        text_color: muted
+    -
+      parent_uuid: 4a2a3ecb-a07d-4bb0-893e-f8431e8a44bd
+      slot: group_slot
+      uuid: c62a767e-5d5d-4f2b-8f92-bb2a52019362
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p>Radical asymmetry.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: inverted
+    -
+      parent_uuid: 36b72d81-f9b0-4852-8143-578dffa3a0a0
+      slot: actions
+      uuid: 4c411662-5a2d-4b3d-923d-9815494a1410
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: center
+        flex_align: center
+        padding: sm
+    -
+      parent_uuid: 4c411662-5a2d-4b3d-923d-9815494a1410
+      slot: group_slot
+      uuid: 1c1fa348-f207-46f9-876f-3a05cb19a222
+      component_id: sdc.everbright_theme.button
+      inputs:
+        variant: secondary-inverted
+        label: 'View projects'
+        icon: arrow-right
+        icon_first: false
+        disabled: false
+        mobile_width: false
+    -
+      uuid: 5614ac04-e3f3-4b4e-9e7e-1db9612363fb
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '128'
+        margin_block_end: '96'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 5614ac04-e3f3-4b4e-9e7e-1db9612363fb
+      slot: header_slot
+      uuid: 5a0246f3-5dc7-4769-9be3-72f113e18b9d
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: lg
+        items_align: center
+        flex_align: center
+    -
+      parent_uuid: 5a0246f3-5dc7-4769-9be3-72f113e18b9d
+      slot: group_slot
+      uuid: 91783905-63b3-42bf-b97e-41ca7dc2679b
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        text_color: default
+        eyebrow_text: Portfolio
+    -
+      parent_uuid: 5a0246f3-5dc7-4769-9be3-72f113e18b9d
+      slot: group_slot
+      uuid: 02c06ddd-390d-48dc-a355-77924fe58aa6
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Selected collaborations'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 5614ac04-e3f3-4b4e-9e7e-1db9612363fb
+      slot: main_slot
+      uuid: ca2fb6cc-702b-49b0-8d8a-ab9d1ef20473
+      component_id: block.views_block.projects-projects_latest
+      inputs:
+        label: Projects
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+    -
+      uuid: 01b08281-0129-4038-b7ef-c737aae4dd03
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '8'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 01b08281-0129-4038-b7ef-c737aae4dd03
+      slot: header_slot
+      uuid: 1cb7efc4-235a-4c62-97fa-6c0f11163a93
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: Testimonials
+        text_color: default
+    -
+      parent_uuid: 01b08281-0129-4038-b7ef-c737aae4dd03
+      slot: header_slot
+      uuid: 2ef4b833-d0af-453d-9663-d7b94bc4c624
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'What Our Clients Are Saying'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      uuid: c085f8ac-0f00-4649-8849-d2efcbc32b93
+      component_id: sdc.everbright_theme.image-split-section
+      inputs:
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 1e07220d-7e65-49be-bbe9-b32499d5de35
+            target_type: media
+        width: 100%
+        color_order: white-primary
+        height: large
+    -
+      uuid: 85ea60a2-acff-45d1-973f-6b8ca183efca
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '0'
+        margin_block_end: '48'
+        padding_block_start: '32'
+        padding_block_end: '64'
+        section_header: true
+        section_footer: true
+        background_color: primary
+    -
+      parent_uuid: 85ea60a2-acff-45d1-973f-6b8ca183efca
+      slot: main_slot
+      uuid: 1d2b0801-73ee-4e2a-8272-ad5654b799ae
+      component_id: sdc.everbright_theme.grid
+      inputs:
+        width: 70%
+        columns: '1 column'
+        mobile_columns: '1'
+        align: right
+        use_flex_uneven_items: false
+    -
+      parent_uuid: 1d2b0801-73ee-4e2a-8272-ad5654b799ae
+      slot: main_slot
+      uuid: 54eedca0-bdf4-46d6-bb00-699206dd96fb
+      component_id: sdc.everbright_theme.card-testimonial
+      inputs:
+        text: "Everbright didn't just redesign our brand — they helped us understand who we are as a company. Their team took the time to dig into our values, our customers, and our goals, and what came out the other side was a brand identity that genuinely feels like us."
+        cite_name: 'James Stroman'
+        cite_text: 'Head of Branding'
+        align: left
+        style: default
+    -
+      parent_uuid: 1d2b0801-73ee-4e2a-8272-ad5654b799ae
+      slot: main_slot
+      uuid: 1f4edc34-6907-4ed3-af1e-ba5057716615
+      component_id: sdc.everbright_theme.card-testimonial
+      inputs:
+        text: 'Working with Everbright felt less like hiring an agency and more like adding a senior team to our org chart. They challenged our assumptions in the best way, brought clarity to a really complex product positioning problem, and shipped a website that has become our highest-converting marketing channel.'
+        cite_name: 'Geraldine Bradtke'
+        cite_text: 'Chief Marketing Officer'
+        align: left
+        style: default
+    -
+      parent_uuid: 1d2b0801-73ee-4e2a-8272-ad5654b799ae
+      slot: main_slot
+      uuid: fb5e6a93-0b67-44b2-9840-8a5db935107d
+      component_id: sdc.everbright_theme.card-testimonial
+      inputs:
+        text: "We came to Everbright with a vague sense that our digital experience wasn't keeping up with our business, and they helped us turn that instinct into a clear roadmap. The new platform launched on time, on budget, and has already paid for itself in operational savings alone."
+        cite_name: 'Bridhet Hyatt'
+        cite_text: 'Co-founder & CEO'
+        align: left
+        style: default
+    -
+      uuid: 852a5a32-33a9-4f65-b5de-03f959d5aa11
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '96'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 852a5a32-33a9-4f65-b5de-03f959d5aa11
+      slot: header_slot
+      uuid: 446bb1a4-eae9-4db3-9830-085a144bd88e
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: 'Fields of expertise'
+        text_color: default
+    -
+      parent_uuid: 852a5a32-33a9-4f65-b5de-03f959d5aa11
+      slot: header_slot
+      uuid: 997710dd-b1e7-45b1-8f25-de5493bf7b47
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Our services'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 852a5a32-33a9-4f65-b5de-03f959d5aa11
+      slot: header_slot
+      uuid: 7a71fe57-9133-4f0f-9ff1-70039c05e9d0
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p class="text-align-center">Experience top-tier design services. We blend innovation, quality, and a client-focused approach to deliver unparalleled creative solutions. Partner with us and transform your vision into reality.</p>'
+          format: canvas_html_block
+        text_size: normal
+        text_color: default
+    -
+      parent_uuid: 852a5a32-33a9-4f65-b5de-03f959d5aa11
+      slot: main_slot
+      uuid: 3534500a-7c00-4ce1-a770-e6f85cf1844d
+      component_id: sdc.everbright_theme.grid
+      inputs:
+        width: 100%
+        columns: '3 columns'
+        mobile_columns: '1'
+        align: center
+        use_flex_uneven_items: true
+    -
+      parent_uuid: 3534500a-7c00-4ce1-a770-e6f85cf1844d
+      slot: main_slot
+      uuid: 0fc5707c-cb22-486d-b82f-fdb6db90febe
+      component_id: sdc.everbright_theme.card-text
+      inputs:
+        heading: 'brand guidelines'
+        icon: arrow-right
+        text: 'Quaerat laborum rerum dolores. Quaerat laborum rerum dolores dolores dolor qui.'
+    -
+      parent_uuid: 3534500a-7c00-4ce1-a770-e6f85cf1844d
+      slot: main_slot
+      uuid: 3b260290-d257-400a-8fdf-e0d77d139502
+      component_id: sdc.everbright_theme.card-text
+      inputs:
+        heading: 'social media marketing'
+        icon: arrow-right
+        text: 'Quaerat laborum rerum dolores dolor qui. Quaerat laborum rerum dolores dolores dolor qui.  Quaerat laborum rerum dolores dolores dolor qui. '
+    -
+      parent_uuid: 3534500a-7c00-4ce1-a770-e6f85cf1844d
+      slot: main_slot
+      uuid: bef1d46e-8924-4c67-85bc-f67445b4519e
+      component_id: sdc.everbright_theme.card-text
+      inputs:
+        heading: 'brand audit'
+        icon: arrow-right
+        text: 'Quaerat laborum rerum dolores dolor qui.'
+    -
+      parent_uuid: 3534500a-7c00-4ce1-a770-e6f85cf1844d
+      slot: main_slot
+      uuid: 32896709-4994-4c01-816f-e82d57af1b55
+      component_id: sdc.everbright_theme.card-text
+      inputs:
+        heading: photography
+        icon: arrow-right
+        text: 'Quaerat laborum rerum dolores dolor qui.'
+    -
+      parent_uuid: 3534500a-7c00-4ce1-a770-e6f85cf1844d
+      slot: main_slot
+      uuid: 003314ae-f08b-43b0-8905-ee1b88d70092
+      component_id: sdc.everbright_theme.card-text
+      inputs:
+        heading: 'visual identity'
+        icon: arrow-right
+        text: 'Quaerat laborum rerum dolores dolor qui.'
+    -
+      uuid: 61109e7b-9631-4247-8655-9272f172f7af
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '96'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+        views_columns: '2 columns'
+    -
+      parent_uuid: 61109e7b-9631-4247-8655-9272f172f7af
+      slot: header_slot
+      uuid: 28a918a8-5525-4e29-8ccf-d9757ec54892
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: 'News and updates'
+        text_color: default
+    -
+      parent_uuid: 61109e7b-9631-4247-8655-9272f172f7af
+      slot: header_slot
+      uuid: 2488586e-8485-4af5-9bce-92415dfcfebd
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        heading_text: 'Explore Our Stories and Insights'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 61109e7b-9631-4247-8655-9272f172f7af
+      slot: main_slot
+      uuid: 8a990bc8-c89d-4223-abb1-e960002055f7
+      component_id: block.views_block.articles-articles_latest
+      inputs:
+        label: Articles
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+    -
+      uuid: 127acc9a-8acf-4118-a3d5-833d80ffea11
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '96'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 127acc9a-8acf-4118-a3d5-833d80ffea11
+      slot: main_slot
+      uuid: 07cea118-2e52-45be-8e50-1e585e2b4e34
+      component_id: sdc.everbright_theme.hero-billboard
+      inputs:
+        height: large
+        flex_position: hero-center
+        overlay_opacity: 75%
+        object_position: center
+        media:
+          CANVAS_ENTITY_REFERENCE:
+            target_uuid: 02cf73a3-af0d-4c8c-a2ad-4e9e39fa74e4
+            target_type: media
+        overlap_navbar: false
+    -
+      parent_uuid: 07cea118-2e52-45be-8e50-1e585e2b4e34
+      slot: hero_slot
+      uuid: 3119037d-5fc1-40e4-8c97-2b04efa0f61a
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: 'Strategic partnerships'
+        text_color: inverted
+    -
+      parent_uuid: 07cea118-2e52-45be-8e50-1e585e2b4e34
+      slot: hero_slot
+      uuid: 4273f65c-2a02-4397-aed0-6dc5f3084cea
+      component_id: sdc.everbright_theme.heading
+      inputs:
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: inverted
+        align: left
+        heading_text: 'Partner with us'
+    -
+      parent_uuid: 07cea118-2e52-45be-8e50-1e585e2b4e34
+      slot: hero_slot
+      uuid: 6c7ca1ab-2c1d-44ec-888d-e76116ca5327
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: "<p>We're eager to embark on new ventures. Share your aspirations with us, and together, we'll craft something truly remarkable that exceeds all expectations.</p>"
+          format: canvas_html_block
+        text_size: text-xl
+        text_color: inverted
+    -
+      parent_uuid: 07cea118-2e52-45be-8e50-1e585e2b4e34
+      slot: hero_slot
+      uuid: 978589a1-0c18-462a-8c45-1118594f047c
+      component_id: sdc.everbright_theme.button
+      inputs:
+        variant: secondary-inverted
+        label: 'Book a meeting'
+        mobile_width: false
+        icon_first: false
+        disabled: false
+    -
+      uuid: de3e95fe-91f0-4ab5-bfb9-a6bae9ba6c07
+      component_id: sdc.everbright_theme.section
+      inputs:
+        width: 100%
+        columns: '2 columns'
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '96'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: de3e95fe-91f0-4ab5-bfb9-a6bae9ba6c07
+      slot: main_slot
+      uuid: 5a6364fd-dc84-4c72-a338-71a09a1abbeb
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: xl
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: 5a6364fd-dc84-4c72-a338-71a09a1abbeb
+      slot: group_slot
+      uuid: dbe8026c-e493-4220-a334-09521235bb30
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: "<p>Let's start<br>the dialogue.</p>"
+          format: canvas_html_block
+        text_size: text-3xl
+        text_color: default
+    -
+      parent_uuid: 5a6364fd-dc84-4c72-a338-71a09a1abbeb
+      slot: group_slot
+      uuid: ef6327da-62b1-40aa-8fd2-42806e575639
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: ef6327da-62b1-40aa-8fd2-42806e575639
+      slot: group_slot
+      uuid: f1472e6c-dbe3-4715-9ca3-cdbe985bb119
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: Email
+        text_color: muted
+    -
+      parent_uuid: ef6327da-62b1-40aa-8fd2-42806e575639
+      slot: group_slot
+      uuid: 4249b790-4a10-4deb-a7d3-3738168a49a7
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p><a href="mailto:hello@example.com"><strong>hello@example.com</strong></a></p>'
+          format: canvas_html_block
+        text_size: text-lg
+        text_color: default
+    -
+      parent_uuid: 5a6364fd-dc84-4c72-a338-71a09a1abbeb
+      slot: group_slot
+      uuid: 6e5aa4a5-edab-463e-8e20-99b8891a5f46
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: start
+    -
+      parent_uuid: 6e5aa4a5-edab-463e-8e20-99b8891a5f46
+      slot: group_slot
+      uuid: 8e3b6f0a-13ff-4213-950f-d74f4aa2bf3d
+      component_id: sdc.everbright_theme.eyebrow
+      inputs:
+        eyebrow_text: 'Home base'
+        text_color: muted
+    -
+      parent_uuid: 6e5aa4a5-edab-463e-8e20-99b8891a5f46
+      slot: group_slot
+      uuid: 4b2a95e0-4c57-4600-aa8f-1fee3ddacda9
+      component_id: sdc.everbright_theme.text
+      inputs:
+        text:
+          value: '<p><strong>Noosa, QLD, Australia / 4567</strong></p>'
+          format: canvas_html_block
+        text_size: text-lg
+        text_color: default
+    -
+      parent_uuid: de3e95fe-91f0-4ab5-bfb9-a6bae9ba6c07
+      slot: main_slot
+      uuid: 9aa12dcf-87b1-42cc-81db-251922fc9381
+      component_id: sdc.everbright_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+        padding: md
+        background: accent-light
+    -
+      parent_uuid: 9aa12dcf-87b1-42cc-81db-251922fc9381
+      slot: group_slot
+      uuid: 0308158a-ba46-4619-ba71-f108f10bae4e
+      component_id: block.webform_block
+      inputs:
+        label: Webform
+        label_display: '0'
+        webform_id: contact_form
+        default_data: ''
+        redirect: false
+        lazy: false
+  path:
+    -
+      alias: /home
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

@@ -1,0 +1,149 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 972cfc25-cac9-49c7-9e07-7a4f9a0bc8c7
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Imprint
+  description:
+    -
+      value: Imprint
+  components:
+    -
+      uuid: fb1abc91-2cfb-4b92-80e7-57168029fafd
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '96'
+    -
+      parent_uuid: fb1abc91-2cfb-4b92-80e7-57168029fafd
+      slot: content
+      uuid: 59960deb-93f8-4f2e-84f4-702c9d3c86bd
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Hourglass Impressum'
+        heading_tag: h1
+        heading_nowrap: true
+    -
+      uuid: 0b278c3b-372a-4a66-8c45-5330ac5f3c87
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: 0b278c3b-372a-4a66-8c45-5330ac5f3c87
+      slot: content
+      uuid: c8679cc2-0cc9-4d8c-b165-fa59b891314f
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Contact Details'
+        description:
+          value: '<p>Breslauer Strasse 2 | 85386 Eching | Germany</p><p><strong>Email:</strong> <a href="mailto:info@hourglass.com">info@hourglass.com</a></p><p><strong>Phone:</strong> +49 8821 8210</p>'
+          format: canvas_html_block
+        heading_tag: h4
+    -
+      uuid: bf9bf0ab-da8c-4b2e-9a54-f8fb4a773a28
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: bf9bf0ab-da8c-4b2e-9a54-f8fb4a773a28
+      slot: content
+      uuid: 49b37337-7348-4e77-a6a3-f2001236760c
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Commercial Register'
+        description:
+          value: '<p><strong>Registration Court:</strong> Amtsgericht München</p><p><strong>Registration Number:</strong> HRB 150797</p>'
+          format: canvas_html_block
+        heading_tag: h4
+    -
+      uuid: 3f746a29-5b0e-450b-83ef-89932bc32e11
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: 3f746a29-5b0e-450b-83ef-89932bc32e11
+      slot: content
+      uuid: d97d508f-503b-43ec-98f6-6e6f772382aa
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Managing Directors'
+        description:
+          value: '<p><strong>Prof. Dr. Stefan Seeger</strong></p><p><strong>Dr. Stefan Niehren</strong></p>'
+          format: canvas_html_block
+        heading_tag: h4
+    -
+      uuid: e8fbd4db-d53e-4113-93f3-a3af6b28d2c3
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: e8fbd4db-d53e-4113-93f3-a3af6b28d2c3
+      slot: content
+      uuid: 9ed3cb52-b5ac-4767-819a-72b7384a992a
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Responsible for Content'
+        description:
+          value: '<p>Prof. Dr. Stefan Seeger</p>'
+          format: canvas_html_block
+        heading_tag: h4
+    -
+      uuid: 832ec7aa-da02-42a1-b3bb-6ac837a52c84
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: 832ec7aa-da02-42a1-b3bb-6ac837a52c84
+      slot: content
+      uuid: 09c441ba-8ecb-4e74-aba8-4cade57f0856
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Copyright and Image Credits'
+        description:
+          value: '<p>The contents of hourglass.com are, unless otherwise stated, protected by copyright.</p><p>Photographs used are credited where applicable or listed below, provided they were not created in-house.</p><p>The use of photographs on third-party sites is only permitted within the scope of the respective licence of the rights holder.</p>'
+          format: canvas_html_block
+        heading_tag: h4
+  path:
+    -
+      alias: /imprint
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

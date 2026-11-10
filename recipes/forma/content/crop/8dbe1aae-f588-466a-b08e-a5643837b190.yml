@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 8dbe1aae-f588-466a-b08e-a5643837b190
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    769efd47-dce0-4433-a742-57df21764629: file
+default:
+  entity_id:
+    -
+      uuid: 769efd47-dce0-4433-a742-57df21764629
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/pexels-miguel-delima-1419393-12475586.jpg'
+  x:
+    -
+      value: 960
+  'y':
+    -
+      value: 608
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

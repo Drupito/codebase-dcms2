@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: aeb3fdef-34e7-42a8-b664-346d4a237c48
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: home_icon.png
+  uri:
+    -
+      value: 'public://2026-06/home_icon.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1155507
+  status:
+    -
+      value: true

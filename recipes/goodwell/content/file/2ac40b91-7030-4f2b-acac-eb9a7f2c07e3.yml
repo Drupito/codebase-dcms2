@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 2ac40b91-7030-4f2b-acac-eb9a7f2c07e3
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: zenzap_logo.png
+  uri:
+    -
+      value: 'public://2026-06/zenzap_logo.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1997
+  status:
+    -
+      value: true

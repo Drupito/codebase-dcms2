@@ -1,0 +1,47 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Media
+group: Atoms
+status: stable
+description: 'Media component for images and videos — uses Drupal Media Library picker.'
+props:
+  type: object
+  properties:
+    image:
+      type: object
+      title: 'Image'
+      $ref: 'json-schema-definitions://canvas.module/image'
+    video:
+      type: object
+      title: 'Video'
+      $ref: 'json-schema-definitions://canvas.module/video'
+    autoplay_video:
+      type: boolean
+      title: 'Autoplay Video'
+      default: false
+    video_loop:
+      type: boolean
+      title: 'Loop Video'
+      default: false
+    video_muted:
+      type: boolean
+      title: 'Muted Video'
+      default: true
+    show_controls:
+      type: boolean
+      title: 'Show Controls'
+      default: false
+    loading:
+      type: string
+      title: 'Loading'
+      enum: [lazy, eager]
+      default: lazy
+    youtube_url:
+      type: string
+      title: 'YouTube / Remote Video URL'
+      description: 'Paste any YouTube URL (watch, share, or embed). Renders as a responsive iframe.'
+      examples:
+        - 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        - 'https://youtu.be/dQw4w9WgXcQ'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

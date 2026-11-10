@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 1f0d64fb-b7b5-47db-b1fa-3ccca495f1c0
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    c2606d14-05ca-4e16-85db-e2013fca3d75: file
+default:
+  entity_id:
+    -
+      uuid: c2606d14-05ca-4e16-85db-e2013fca3d75
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/caroline-badran-_1tT95nCC3w-unsplash.jpg'
+  x:
+    -
+      value: 3120
+  'y':
+    -
+      value: 2080
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

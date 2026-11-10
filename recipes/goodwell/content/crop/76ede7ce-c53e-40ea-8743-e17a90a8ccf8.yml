@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 76ede7ce-c53e-40ea-8743-e17a90a8ccf8
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    a10b81f8-9008-4bdc-be5e-a0de501f2137: file
+default:
+  entity_id:
+    -
+      uuid: a10b81f8-9008-4bdc-be5e-a0de501f2137
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/woman_beanie.png'
+  x:
+    -
+      value: 16
+  'y':
+    -
+      value: 16
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,28 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Eyebrow
+group: Base
+status: stable
+props:
+  type: object
+  required:
+    - text_color
+  properties:
+    eyebrow_text:
+      type: string
+      title: Eyebrow text
+      examples:
+        - Eyebrow label
+    text_color:
+      type: string
+      title: Text color
+      enum:
+        - default
+        - inverted
+        - muted
+      meta:enum:
+        default: Default
+        inverted: Inverted text
+        muted: Muted text
+      default: default
+      examples:
+        - default

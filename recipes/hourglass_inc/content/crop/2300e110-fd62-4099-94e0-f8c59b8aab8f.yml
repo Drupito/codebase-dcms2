@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 2300e110-fd62-4099-94e0-f8c59b8aab8f
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    8aa7738d-eca6-43fe-8bee-f237f292bb22: file
+default:
+  entity_id:
+    -
+      uuid: 8aa7738d-eca6-43fe-8bee-f237f292bb22
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/Gemini_Generated_Image_8w5li08w5li08w5l-(1)-3-(5).png'
+  x:
+    -
+      value: 100
+  'y':
+    -
+      value: 100
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

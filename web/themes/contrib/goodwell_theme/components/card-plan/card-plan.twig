@@ -1,0 +1,39 @@
+{% set btn_style = button_style|default('outline') %}
+
+<div class="card-plan{{ featured ? ' card-plan--featured' : '' }}">
+
+  {% if media.src %}
+    <div class="card-plan__media">
+      <img
+        src="{{ media.src }}"
+        alt="{{ media.alt|default('') }}"
+        class="card-plan__image"
+        loading="lazy"
+        {% if media.width %}width="{{ media.width }}"{% endif %}
+        {% if media.height %}height="{{ media.height }}"{% endif %}
+      >
+    </div>
+  {% endif %}
+
+  <div class="card-plan__body">
+    {% if title %}
+      <h3 class="card-plan__title{{ title_accent ? ' card-plan__title--accent' : '' }}">
+        {{ title }}
+      </h3>
+    {% endif %}
+
+    {% if description %}
+      <div class="card-plan__description">{{ description|raw }}</div>
+    {% endif %}
+
+    {% if button_label and button_url %}
+      <a
+        href="{{ button_url }}"
+        class="card-plan__btn card-plan__btn--{{ btn_style }}"
+      >
+        {{ button_label }}
+      </a>
+    {% endif %}
+  </div>
+
+</div>

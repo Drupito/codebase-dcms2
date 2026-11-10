@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: a461d7e8-2fba-44c8-a448-b927a791c943
+  bundle: image
+  default_langcode: en
+  depends:
+    3e7ce683-dacd-48f3-b151-fcb83086f5f4: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: tailwind.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Screenshot of code from a Mercury template using Tailwind classes'
+      title: ''
+      width: 1430
+      height: 935
+      entity: 3e7ce683-dacd-48f3-b151-fcb83086f5f4

@@ -1,0 +1,133 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 1d8fdad7-0360-46ce-894f-dd703333aa47
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: Articles
+  components:
+    -
+      uuid: 5000a6da-5465-4258-bf97-20024c1ab184
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '1 column'
+        mobile_columns: '1'
+        margin_block_start: small
+        margin_block_end: default
+        padding_block_start: small
+        padding_block_end: small
+        section_header: true
+        section_footer: true
+        views_columns: '3 columns'
+        background_color: white
+        center_header: true
+    -
+      parent_uuid: 5000a6da-5465-4258-bf97-20024c1ab184
+      slot: header_slot
+      uuid: 526c297c-ed64-47fb-a276-ee642cfde456
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'News & Articles'
+        text_size: heading-responsive-xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 5000a6da-5465-4258-bf97-20024c1ab184
+      slot: header_slot
+      uuid: 6535a851-1e41-4ccc-afee-ff1475884169
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Studio Journal'
+        level: 1
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 5000a6da-5465-4258-bf97-20024c1ab184
+      slot: main_slot
+      uuid: 0a124596-b563-4196-a707-f276ea661136
+      component_id: block.views_block.articles-articles_all
+      inputs:
+        label: Articles
+        label_display: '0'
+        views_label: ''
+        items_per_page: null
+    -
+      uuid: 511bdc63-9ffa-4dbf-84f0-a8383a9156dd
+      component_id: sdc.forma_theme.section
+      inputs:
+        width: 100%
+        columns: '2 columns 75-25'
+        mobile_columns: '1'
+        margin_block_start: small
+        margin_block_end: small
+        padding_block_start: small
+        padding_block_end: small
+        background_color: primary
+        section_header: false
+        section_footer: false
+    -
+      parent_uuid: 511bdc63-9ffa-4dbf-84f0-a8383a9156dd
+      slot: main_slot
+      uuid: 9f5705ba-48eb-4b79-bcb7-2183b18a08f3
+      component_id: sdc.forma_theme.group
+      inputs:
+        flex_direction: column
+        flex_gap: md
+        items_align: start
+        flex_align: center
+    -
+      parent_uuid: 9f5705ba-48eb-4b79-bcb7-2183b18a08f3
+      slot: group_slot
+      uuid: b32e85fe-fbb5-468f-9605-bc84ddc739de
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Tell us about your project'
+        level: 2
+        text_size: heading-responsive-xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 9f5705ba-48eb-4b79-bcb7-2183b18a08f3
+      slot: group_slot
+      uuid: 22e15d5f-5008-43b8-b76a-f467b8681a92
+      component_id: sdc.forma_theme.heading
+      inputs:
+        heading_text: 'Every great space begins with a conversation, so reach out today to discuss your vision and see how we can work together.'
+        text_size: heading-responsive-4xl
+        text_color: default
+        align: left
+    -
+      parent_uuid: 9f5705ba-48eb-4b79-bcb7-2183b18a08f3
+      slot: group_slot
+      uuid: 146afe95-eea3-40f9-9621-d9be5eb776cb
+      component_id: sdc.forma_theme.button
+      inputs:
+        variant: primary
+        label: 'Book a meeting'
+        icon: arrow-right
+        mobile_width: false
+        icon_first: false
+        disabled: false
+  path:
+    -
+      alias: /articles
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true
+  metatags:
+    -
+      value: '{"canonical_url":"[canvas_page:url]","description":"[canvas_page:description]","image_src":"[canvas_page:image:entity:field_media_image:entity:url]","title":"[canvas_page:title] | [site:name]"}'

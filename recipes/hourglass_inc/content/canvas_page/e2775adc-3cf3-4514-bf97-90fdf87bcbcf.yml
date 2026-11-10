@@ -1,0 +1,235 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: e2775adc-3cf3-4514-bf97-90fdf87bcbcf
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Privacy Policy'
+  description:
+    -
+      value: 'Privacy Policy'
+  components:
+    -
+      uuid: fb1abc91-2cfb-4b92-80e7-57168029fafd
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: '120'
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: fb1abc91-2cfb-4b92-80e7-57168029fafd
+      slot: content
+      uuid: 59960deb-93f8-4f2e-84f4-702c9d3c86bd
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Privacy Policy'
+        description:
+          value: '<p>Your Data Integrity is Our Priority</p>'
+          format: canvas_html_block
+        heading_tag: h1
+    -
+      uuid: ee4ffc1a-e0d6-443b-b93e-36d38ba2e6da
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: ee4ffc1a-e0d6-443b-b93e-36d38ba2e6da
+      slot: content
+      uuid: a23c2c73-f89d-4837-a0ff-a2f21a96da41
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: ''
+        description:
+          value: '<p>At Hourglass, we drive innovation in single-cell technologies and enterprise-grade software solutions. This website is operated by Hourglass GmbH, registered at the Local Court of Munich, Germany, under registration number HRB 150797. We believe transparency is the foundation of every successful B2B partnership.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: 0b278c3b-372a-4a66-8c45-5330ac5f3c87
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: 0b278c3b-372a-4a66-8c45-5330ac5f3c87
+      slot: content
+      uuid: c8679cc2-0cc9-4d8c-b165-fa59b891314f
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Who Does This Policy Apply To?'
+        description:
+          value: '<p>This Privacy Policy applies to all visitors, users, and clients who interact with the Hourglass website, platform, or any of our associated services. By accessing our site or using our products, you agree to the collection and use of information in accordance with this policy.</p>'
+          format: canvas_html_block
+        heading_tag: h4
+    -
+      uuid: 3f746a29-5b0e-450b-83ef-89932bc32e11
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: 3f746a29-5b0e-450b-83ef-89932bc32e11
+      slot: content
+      uuid: d97d508f-503b-43ec-98f6-6e6f772382aa
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Our Commitment to Data Protection'
+        description:
+          value: "<p>We understand that navigating data privacy regulations can be complex, from GDPR and CCPA to PIPEDA and Australia's Privacy Act. At Hourglass, compliance is not a checkbox, it is embedded into how we design and operate our platform. We ensure that every data process we run meets or exceeds the requirements of applicable global privacy laws.</p>"
+          format: canvas_html_block
+        heading_tag: h4
+    -
+      uuid: 0fbbe18b-7f42-4063-999f-58601f0211f1
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: 0fbbe18b-7f42-4063-999f-58601f0211f1
+      slot: content
+      uuid: f97b74d0-a419-491d-af56-5e277ef92f1d
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: ''
+        description:
+          value: '<p>We are committed to helping our clients, partners, and users protect their data. Our infrastructure is built to global compliance standards, and we provide clear documentation to support your own regulatory obligations wherever you operate.</p>'
+          format: canvas_html_block
+        heading_tag: h2
+    -
+      uuid: e8fbd4db-d53e-4113-93f3-a3af6b28d2c3
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: e8fbd4db-d53e-4113-93f3-a3af6b28d2c3
+      slot: content
+      uuid: 9ed3cb52-b5ac-4767-819a-72b7384a992a
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'What Data We Collect'
+        description:
+          value: '<p>We may collect the following categories of data when you interact with our website or platform: contact information (name, email, phone number, job title), organizational information (company name, industry, size), usage data (pages visited, session duration, feature interactions), and technical data (IP address, browser type, device information). We do not sell your personal data to third parties under any circumstances.</p>'
+          format: canvas_html_block
+        heading_tag: h4
+    -
+      uuid: 832ec7aa-da02-42a1-b3bb-6ac837a52c84
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: 832ec7aa-da02-42a1-b3bb-6ac837a52c84
+      slot: content
+      uuid: 09c441ba-8ecb-4e74-aba8-4cade57f0856
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'How We Use Your Data'
+        description:
+          value: '<p>We use the data we collect to provide and improve our products and services, respond to enquiries and support requests, send relevant communications about products, updates, or events (with your consent), ensure the security and integrity of our platform, and comply with our legal obligations.</p>'
+          format: canvas_html_block
+        heading_tag: h4
+    -
+      uuid: df3dc8aa-de8e-4260-b76d-a07e2e2ea1c9
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: df3dc8aa-de8e-4260-b76d-a07e2e2ea1c9
+      slot: content
+      uuid: 34e844cb-faad-43ed-9380-781cffdf4d1b
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: 'Data Retention'
+        description:
+          value: '<p>We retain personal data only for as long as necessary to fulfill the purposes for which it was collected, or as required by applicable law. When data is no longer needed, it is securely deleted or anonymized in accordance with our data retention schedule.</p>'
+          format: canvas_html_block
+        heading_tag: h4
+    -
+      uuid: 714be1e3-7966-407d-8590-0d733e9ebc14
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        container: full
+        rounded_top: false
+        padding_bottom: '40'
+    -
+      parent_uuid: 714be1e3-7966-407d-8590-0d733e9ebc14
+      slot: content
+      uuid: a802067b-4551-4707-a5cc-1a63319b57d0
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: Cookies
+        description:
+          value: '<p>We use cookies to improve your browsing experience, analyze site traffic, and deliver relevant content. You can manage your cookie preferences at any time through our cookie consent banner or your browser settings. For more information, please refer to our Cookie Policy."</p>'
+          format: canvas_html_block
+        heading_tag: h4
+    -
+      uuid: 837b89cc-3233-49fb-8c8f-bd85e4ed9e18
+      component_id: sdc.hourglass.layout
+      inputs:
+        hidden: false
+        position: _none
+        container: full
+        background: _none
+        margin_top: _none
+        sticky_top: _none
+        padding_top: _none
+        rounded_top: false
+        padding_left: _none
+        margin_bottom: _none
+        padding_right: _none
+        padding_bottom: '120'
+    -
+      parent_uuid: 837b89cc-3233-49fb-8c8f-bd85e4ed9e18
+      slot: content
+      uuid: 30cce7cc-a2e7-482b-b7c0-95adcf0ce4e2
+      component_id: sdc.hourglass.heading-with-description
+      inputs:
+        heading: Contact
+        description:
+          value: '<p>If you have any questions about this Privacy Policy or how we handle your data, please contact our Data Protection Officer at:</p><p>Email: privacy@hourglass.com Address: Breslauer Strasse 2, 85386 Eching, Germany</p>'
+          format: canvas_html_block
+        heading_tag: h4
+  path:
+    -
+      alias: /privacy-policy
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

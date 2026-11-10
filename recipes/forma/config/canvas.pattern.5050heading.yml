@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.forma_theme.grid
+    - canvas.component.sdc.forma_theme.group
+    - canvas.component.sdc.forma_theme.heading
+    - canvas.component.sdc.forma_theme.text
+    - filter.format.canvas_html_block
+  module:
+    - options
+    - text
+id: 5050heading
+label: '50/50 heading'
+component_tree:
+  '0:6f83ee1b-9022-4791-8a55-163002f0f45c':
+    uuid: 6f83ee1b-9022-4791-8a55-163002f0f45c
+    component_id: sdc.forma_theme.grid
+    component_version: 3532e5b770d9493f
+    inputs:
+      width: 100%
+      columns: '2 columns'
+      mobile_columns: '1'
+      align: left
+  '0:main_slot:0:ecff61e8-7de2-43c0-af0e-a6453dbeee0f':
+    parent_uuid: 6f83ee1b-9022-4791-8a55-163002f0f45c
+    slot: main_slot
+    uuid: ecff61e8-7de2-43c0-af0e-a6453dbeee0f
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: column
+      flex_gap: md
+      items_align: center
+      flex_align: center
+  '0:main_slot:0:group_slot:0:02c06ddd-390d-48dc-a355-77924fe58aa6':
+    parent_uuid: ecff61e8-7de2-43c0-af0e-a6453dbeee0f
+    slot: group_slot
+    uuid: 02c06ddd-390d-48dc-a355-77924fe58aa6
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text: 'Spaces We Created'
+      level: 2
+      text_size: heading-responsive-6xl
+      text_color: default
+      align: left
+  '0:main_slot:1:179f7520-23f4-480e-a966-83b3edfbe6e9':
+    parent_uuid: 6f83ee1b-9022-4791-8a55-163002f0f45c
+    slot: main_slot
+    uuid: 179f7520-23f4-480e-a966-83b3edfbe6e9
+    component_id: sdc.forma_theme.text
+    component_version: 8a33edeeb2e4a925
+    inputs:
+      text:
+        value: "<p>We don't chase temporary trends; instead, we focus on timeless architecture that respects both the environment and your resources. By choosing the right materials and focusing on clean lines, we create comfortable, efficient spaces that look timeless and feel welcoming.</p>"
+        format: canvas_html_block
+      text_size: normal
+      text_color: default

@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Key Features
+group: Organisms
+status: stable
+description: 'Carousel section with H2 heading, Key Feature Slide atoms, and orange pagination dots.'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Section Title'
+      contentMediaType: text/html
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  slides:
+    title: 'Feature Slides'
+    description: 'Place Key Feature Slide atoms here. Each becomes one carousel slide.'

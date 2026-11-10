@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 3cf6b502-0ede-4daa-b995-1aa8d9bbef4e
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: aerial-waves-thumbnail.jpg
+  uri:
+    -
+      value: 'public://2026-04/aerial-waves-thumbnail.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 295427
+  status:
+    -
+      value: true

@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Template for the Anchor Navigation module.
+ *
+ * Slots:
+ * - links: Anchor Nav Link items.
+ */
+#}
+{{ attach_library('hourglass/anchor-navigation') }}
+
+<div class="c-anchor-nav-wrapper js-anchor-nav-wrapper {{ extra_classes|default('') }}">
+  <div class="c-anchor-nav-sentinel js-anchor-nav-sentinel"></div>
+  <nav class="c-anchor-nav js-anchor-nav" aria-label="{{ 'Anchor Navigation'|t }}">
+    <div class="c-anchor-nav__inner">
+      <ul class="c-anchor-nav__list">
+        {{ links }}
+      </ul>
+    </div>
+  </nav>
+</div>

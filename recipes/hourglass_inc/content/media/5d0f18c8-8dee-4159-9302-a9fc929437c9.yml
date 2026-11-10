@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 5d0f18c8-8dee-4159-9302-a9fc929437c9
+  bundle: image
+  default_langcode: en
+  depends:
+    84ad1a36-9705-4220-b86a-480719b31fa5: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Gemini_Generated_Image_8w5li08w5li08w5l-(1)-5.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Predictive Data Analytics'
+      title: ''
+      width: 33
+      height: 31
+      entity: 84ad1a36-9705-4220-b86a-480719b31fa5

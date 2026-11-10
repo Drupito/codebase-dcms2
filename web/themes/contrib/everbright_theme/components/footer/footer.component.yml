@@ -1,0 +1,17 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Footer
+group: Layout
+
+slots:
+  footer_first:
+    title: Column 1
+  footer_second:
+    title: Column 2
+  footer_third:
+    title: Column 3
+  footer_last:
+    title: Column 4
+  footer_utility_first:
+    title: Utility links
+  footer_utility_last:
+    title: Copyright text

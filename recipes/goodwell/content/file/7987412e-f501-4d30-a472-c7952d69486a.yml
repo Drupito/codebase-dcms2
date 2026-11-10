@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 7987412e-f501-4d30-a472-c7952d69486a
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: dad_daughter.png
+  uri:
+    -
+      value: 'public://2026-06/dad_daughter.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 5226609
+  status:
+    -
+      value: true

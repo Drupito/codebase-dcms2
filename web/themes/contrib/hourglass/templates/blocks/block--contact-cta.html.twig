@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Block template for the Contact CTA component.
+ */
+#}
+<div{{ attributes }}>
+  {% set block_entity = elements.content['#block_content'] %}
+  {{ title_prefix }}
+  {% block content %}
+    {% include 'hourglass:contact-cta' with {
+      section_title: content.field_section_title,
+      cta_body: content.field_cta_body,
+      cta_button_label: block_entity.field_cta.0.title|default(''),
+      cta_button_url: block_entity.field_cta.0.url|default(''),
+      form: contact_cta_form
+    } %}
+  {% endblock %}
+  {{ title_suffix }}
+</div>

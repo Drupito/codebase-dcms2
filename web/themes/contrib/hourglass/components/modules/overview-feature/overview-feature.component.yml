@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Overview Feature
+group: Organisms
+status: stable
+description: 'A single feature row (icon + label) for the Overview Section features list.'
+props:
+  type: object
+  properties:
+    label:
+      type: string
+      title: 'Feature Label'
+    icon:
+      title: 'Icon Image'
+      $ref: 'json-schema-definitions://canvas.module/image'
+    extra_classes:
+      type: string
+      title: 'Extra CSS classes'

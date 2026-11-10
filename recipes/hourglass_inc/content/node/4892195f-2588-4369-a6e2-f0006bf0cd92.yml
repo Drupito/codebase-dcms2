@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 4892195f-2588-4369-a6e2-f0006bf0cd92
+  bundle: blog
+  default_langcode: en
+  depends:
+    23a39244-9d5f-40a7-bd1d-d85a2e452cd9: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Unlocking Efficiency with AI Automation'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/unlocking-efficiency-ai-automation
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>Artificial intelligence is no longer a futuristic concept — it's a present-day competitive advantage. Businesses that embrace AI automation are streamlining operations, reducing costs, and delivering better customer experiences.</p>
+
+        <h2>Process Automation with AI</h2>
+        <p>AI-powered robotic process automation (RPA) can handle repetitive, rule-based tasks with speed and accuracy that humans cannot match. From invoice processing to customer onboarding, AI automation frees teams to focus on higher-value work.</p>
+
+        <h2>Predictive Analytics</h2>
+        <p>Machine learning models can analyse historical data to forecast demand, identify risks, and optimise resource allocation. Predictive analytics enables proactive decision-making rather than reactive firefighting.</p>
+
+        <h2>Getting Started with AI</h2>
+        <p>Start small. Identify one high-impact, data-rich process and pilot an AI solution. Measure results rigorously, iterate quickly, and scale what works. Building internal AI literacy alongside technology adoption is essential for long-term success.</p>
+      format: content_format
+      summary: ''
+  field_featured:
+    -
+      value: false
+  field_hero_image:
+    -
+      entity: 23a39244-9d5f-40a7-bd1d-d85a2e452cd9
+  field_published_date:
+    -
+      value: '2025-07-07'
+  field_read_time:
+    -
+      value: 5

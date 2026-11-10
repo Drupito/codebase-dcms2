@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section ────────────────────────────────────────────────────────────── */
+
+.c-tech-insights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 0;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+
+.c-tech-insights__header {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 120px;
+}
+
+.c-tech-insights__title {
+  font-family: var(
+    --Heading-H2-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: var(--Heading-H2-fontSize, 48px);
+  font-style: normal;
+  font-weight: var(--Weights-Regular, 400);
+  line-height: var(--Heading-H2-lineHeight, 58px);
+  letter-spacing: var(--Heading-H2-letterSpacing, -0.4px);
+  color: var(--gray-black, #000);
+  margin: 0;
+  flex: 1;
+}
+
+/* ── Scrollable track ───────────────────────────────────────────────────── */
+
+.c-tech-insights__track {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: max(120px, calc((100vw - 1440px) / 2 + 120px));
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.c-tech-insights__track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Left edge spacer — aligns cards with container content edge */
+.c-tech-insights__edge {
+  width: max(120px, calc((100vw - 1440px) / 2 + 120px));
+  flex-shrink: 0;
+  align-self: stretch;
+  background-color: transparent;
+}
+
+/* ── Pagination dots ────────────────────────────────────────────────────── */
+
+.c-tech-insights__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 16px;
+}
+
+.c-tech-insights__dot {
+  display: block;
+  width: 50px;
+  height: 6px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffc078;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.c-tech-insights__dot.is-active {
+  width: 80px;
+  height: 8px;
+  background-color: #fd7e14;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-tech-insights__header {
+    padding: 0 60px;
+  }
+
+  .c-tech-insights__edge {
+    width: 60px;
+  }
+
+  .c-tech-insights__track {
+    scroll-padding-left: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-tech-insights {
+    gap: 48px;
+  }
+
+  .c-tech-insights__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-tech-insights {
+    gap: 32px;
+  }
+
+  .c-tech-insights__header {
+    padding: 0 24px;
+  }
+
+  .c-tech-insights__track {
+    scroll-padding-left: 24px;
+  }
+
+  .c-tech-insights__edge {
+    width: 24px;
+  }
+
+  .c-tech-insights__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}

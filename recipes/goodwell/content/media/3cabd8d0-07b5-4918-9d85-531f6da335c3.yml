@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 3cabd8d0-07b5-4918-9d85-531f6da335c3
+  bundle: image
+  default_langcode: en
+  depends:
+    7ec02d0e-68c5-4c76-91fb-215fc0bc9458: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: family_shade.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Family Under Shade'
+      title: ''
+      width: 1024
+      height: 650
+      entity: 7ec02d0e-68c5-4c76-91fb-215fc0bc9458

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: 26b4fd90c03d332f
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: 'Mission/Vision Items'
+          description: 'Mission Vision Item atoms'
+label: 'Mission Vision'
+id: sdc.hourglass.mission-vision
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:mission-vision'

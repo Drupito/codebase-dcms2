@@ -1,0 +1,21 @@
+global:
+  css:
+    theme:
+      src/fonts.css:
+        preprocess: false
+      build/main.min.css:
+        preprocess: false
+        minified: true
+      src/theme.css:
+        preprocess: false
+      src/base.css:
+        preprocess: false
+      src/modal.css:
+        preprocess: false
+
+messages:
+  js:
+    lib/messages.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

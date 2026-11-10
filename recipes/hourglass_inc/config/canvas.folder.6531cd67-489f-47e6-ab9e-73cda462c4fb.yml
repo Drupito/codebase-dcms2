@@ -1,0 +1,22 @@
+uuid: 6531cd67-489f-47e6-ab9e-73cda462c4fb
+langcode: en
+status: true
+dependencies: {  }
+name: Atoms
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.hourglass.button
+  - sdc.hourglass.clipboard
+  - sdc.hourglass.contact-card
+  - sdc.hourglass.heading
+  - sdc.hourglass.history-timeline-slide
+  - sdc.hourglass.icon
+  - sdc.hourglass.location-card
+  - sdc.hourglass.logo-item
+  - sdc.hourglass.media
+  - sdc.hourglass.mission-vision-item
+  - sdc.hourglass.photo-card
+  - sdc.hourglass.stat-card
+  - sdc.hourglass.tech-insights-slide
+  - sdc.hourglass.text

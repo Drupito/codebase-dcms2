@@ -1,0 +1,353 @@
+/**
+ * @file footer.css
+ * Dark-background footer.
+ * Figma: dark teal (#1B3A35), logo + tagline + social left, nav columns right,
+ * bottom bar with copyright + legal links.
+ */
+
+/* ── Footer shell ────────────────────────────────── */
+
+.dst-footer {
+  background-color: var(--color-primary);
+  color: var(--overlay-white-85);
+  font-family: var(--font-sans);
+}
+
+.dst-footer__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 48rem) {
+  .dst-footer__inner {
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+  }
+}
+
+/* ── Brand column ────────────────────────────────── */
+
+.dst-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dst-footer__logo img,
+.dst-footer__logo svg {
+  height: 2.5rem;
+  width: auto;
+}
+
+/* ── Drupal system branding block in logo slot ───── */
+
+.dst-footer__logo .site-branding {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.dst-footer__logo .site-branding__logo img,
+.dst-footer__logo .site-branding__logo svg {
+  height: 2.5rem;
+  width: auto;
+  display: block;
+}
+
+.dst-footer__logo .site-branding__name a {
+  font-family: var(--font-sans);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.dst-footer__logo .site-branding__name a:hover {
+  color: var(--overlay-white-85);
+}
+
+.dst-footer__logo .site-branding__slogan {
+  font-size: 0.875rem;
+  color: var(--overlay-white-60);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.dst-footer__tagline {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--overlay-white-70);
+  margin: 0;
+}
+
+/* ── Social icons ────────────────────────────────── */
+
+.dst-footer__social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* Override social-links--default when placed on the dark footer background */
+.dst-footer__social .social-links--default .social-links__link {
+  background: var(--overlay-white-12);
+  color: var(--overlay-white-85);
+}
+
+.dst-footer__social .social-links--default .social-links__link:hover {
+  background: var(--overlay-white-20);
+  color: var(--color-white);
+}
+
+/* Fallback styles when raw <a> tags are used instead of the social-links component */
+.dst-footer__social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--overlay-white-12);
+  color: var(--overlay-white-85);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dst-footer__social a:hover {
+  background: var(--overlay-white-20);
+  color: var(--color-white);
+}
+
+/* ── Nav columns ─────────────────────────────────── */
+
+/*
+ * The Drupal menu block renders a <nav> containing a <ul>.
+ * Top-level <li> items (contact_us, explore_more) become side-by-side columns.
+ */
+
+.dst-footer__columns nav > ul,
+.dst-footer__columns > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem 4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each top-level item is a column */
+.dst-footer__columns nav > ul > li,
+.dst-footer__columns > ul > li {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 10rem;
+}
+
+/* Column heading (the <span> Drupal renders for non-linked parent items) */
+.dst-footer__columns nav > ul > li > span,
+.dst-footer__columns nav > ul > li > a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #bcd7d4;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+/* Sub-list */
+.dst-footer__columns nav > ul > li > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Sub-items — chevron + link */
+.dst-footer__columns nav > ul > li > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dst-footer__columns nav > ul > li > ul > li::before {
+  content: "›";
+  font-size: 1.1em;
+  color: var(--color-surface);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.dst-footer__columns nav > ul > li > ul > li a,
+.dst-footer__columns nav > ul > li > ul > li span {
+  font-size: 0.9375rem;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: text-decoration-color 0.15s ease;
+  line-height: 1.5;
+}
+
+.dst-footer__columns nav > ul > li > ul > li a:hover {
+  text-decoration: underline;
+}
+
+/* ── Bottom bar ──────────────────────────────────── */
+
+.dst-footer__bottom {
+  border-top: 1px solid var(--overlay-white-10);
+  padding: 1.25rem 0;
+}
+
+.dst-footer__bottom-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dst-footer__copyright {
+  font-size: 0.875rem;
+  color: var(--overlay-white-70);
+}
+
+/* ── Legal links ─────────────────────────────────── */
+
+.dst-footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.dst-footer__legal a {
+  font-size: 0.875rem;
+  color: var(--overlay-white-70);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.dst-footer__legal a:hover {
+  color: var(--overlay-white-90);
+}
+
+/* ── Contact icon menu items ─────────────────────── */
+/*
+ * Add these CSS classes to sub-items in Drupal menu admin
+ * (Edit menu item → CSS classes):
+ *   footer-phone    — phone number
+ *   footer-email    — email address
+ *   footer-hours    — business hours
+ *   footer-address  — physical address / location
+ *
+ * Each item gets a green circle (--color-accent) with a dark icon inside.
+ * Icon fill is hardcoded to match --color-primary (#034A46) because
+ * CSS variables cannot be resolved inside SVG data URIs.
+ */
+
+.dst-footer__columns li.footer-phone,
+.dst-footer__columns li.footer-email,
+.dst-footer__columns li.footer-hours,
+.dst-footer__columns li.footer-address {
+  align-items: center;
+}
+
+.dst-footer__columns li.footer-phone::before,
+.dst-footer__columns li.footer-email::before,
+.dst-footer__columns li.footer-hours::before,
+.dst-footer__columns li.footer-address::before {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  background-size: 55%;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 0;
+}
+
+/* Phone handset */
+.dst-footer__columns li.footer-phone::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23034A46' d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.36-.02.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E");
+}
+
+/* Envelope */
+.dst-footer__columns li.footer-email::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23034A46' d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
+}
+
+/* Clock */
+.dst-footer__columns li.footer-hours::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23034A46' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z'/%3E%3C/svg%3E");
+}
+
+/* Map pin */
+.dst-footer__columns li.footer-address::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23034A46' d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/%3E%3C/svg%3E");
+}
+
+/* ── If using section-grid directly (no footer wrapper) ── */
+/*
+ * When the section-grid is placed directly in the footer region without the
+ * footer component wrapper, add class "footer-region" to the page footer
+ * element or the nearest block wrapper to pick up these styles.
+ */
+.region-footer .section-grid__col nav > ul,
+.footer-region .section-grid__col nav > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem 4rem;
+}
+
+.region-footer .section-grid__col nav > ul > li,
+.footer-region .section-grid__col nav > ul > li {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.region-footer .section-grid__col nav > ul > li > span,
+.footer-region .section-grid__col nav > ul > li > span {
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.region-footer .section-grid__col nav > ul > li > ul,
+.footer-region .section-grid__col nav > ul > li > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.region-footer .section-grid__col nav > ul > li > ul > li::before,
+.footer-region .section-grid__col nav > ul > li > ul > li::before {
+  content: "›";
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+.region-footer .section-grid__col nav a,
+.footer-region .section-grid__col nav a {
+  color: var(--overlay-white-75);
+  text-decoration: none;
+}
+
+.region-footer .section-grid__col nav a:hover,
+.footer-region .section-grid__col nav a:hover {
+  color: var(--color-white);
+}
+

@@ -1,0 +1,15 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Clipboard
+group: Atoms
+description: 'Copy-to-clipboard utility component. Attaches JS behaviour to any element with data-clipboard-target.'
+status: stable
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: 'Text to copy'
+    label:
+      type: string
+      title: 'Button label'
+      default: 'Copy'

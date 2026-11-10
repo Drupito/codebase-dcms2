@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 969363a2-c7b0-47cc-998a-71dbd403ee43
+  bundle: image
+  default_langcode: en
+  depends:
+    a747e352-af29-4aad-9602-632e12efc50f: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: university-of-manchester.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: university-of-manchester
+      title: ''
+      width: 200
+      height: 297
+      entity: a747e352-af29-4aad-9602-632e12efc50f

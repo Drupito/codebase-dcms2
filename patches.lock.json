@@ -1,0 +1,63 @@
+{
+    "_hash": "d0bd833f932b0d021eaecb2d4b9b4f93700f8b552bc125a4abc2cb40db9492cc",
+    "patches": {
+        "drupal/core": [
+            {
+                "package": "drupal/core",
+                "description": "Set host and client IP from proxy headers",
+                "url": "patches/indexphp-proxy-host-and-client-ip.patch",
+                "sha256": "ed3f12962c2b04d52a5c5a27652f110860c8a3498be298f6ca4b8df8281d1c15",
+                "depth": 2,
+                "extra": {
+                    "provenance": "root"
+                }
+            },
+            {
+                "package": "drupal/core",
+                "description": "Add Drupito help text to error pages",
+                "url": "patches/installer-error-msg.patch",
+                "sha256": "800c89bc9b728fbe791d28a385e9ea34a92de4ca7bc3ca663dcb8aae1c7dfd36",
+                "depth": 2,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/drupal_cms_installer": [
+            {
+                "package": "drupal/drupal_cms_installer",
+                "description": "Require a stronger password in the installer",
+                "url": "patches/registration-password.patch",
+                "sha256": "5f6584b03b02f2204aa7d9143b712bc5977cd7765086f5b980101d4568fcf7e5",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/caresphere": [
+            {
+                "package": "drupal/caresphere",
+                "description": "Canvas no longer accepts JSON string inputs (#3633493, MR !10)",
+                "url": "patches/caresphere-3633493-canvas-json-string-inputs.patch",
+                "sha256": "191ac90b448d6d1e9a467663ed587b35ffdb1feb171a5b4059c90aa1c415a09e",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/convene": [
+            {
+                "package": "drupal/convene",
+                "description": "Canvas no longer accepts JSON string inputs (#3633590, MR !3)",
+                "url": "patches/convene-3633590-canvas-json-string-inputs.patch",
+                "sha256": "edeec6a9ea0556afe70199e43f88830a88c09b78ae27ff294a0cd67dcb081081",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}

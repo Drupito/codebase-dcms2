@@ -1,0 +1,18 @@
+name: Canvas Translate
+type: module
+description: 'World-class in-house translation of Drupal Canvas content, delivered as a Canvas page extension.'
+package: Canvas
+core_version_requirement: ^11.3
+dependencies:
+  - canvas:canvas (>=1.11.0)
+  - drupal:ckeditor5
+  - drupal:content_translation
+  - drupal:editor
+  - drupal:language
+optional_dependencies:
+  - ai:ai
+
+# Information added by Drupal.org packaging script on 2026-10-07
+version: '1.0.0-beta1'
+project: 'canvas_translate'
+datestamp: 1791359364

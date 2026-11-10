@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 5c0b89bd-8ad8-4306-a3e8-766019431e3f
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    740deece-2a34-4f67-86a7-3b18d6a392e7: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Base
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 740deece-2a34-4f67-86a7-3b18d6a392e7
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

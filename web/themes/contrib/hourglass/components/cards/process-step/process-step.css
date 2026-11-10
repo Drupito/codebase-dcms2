@@ -1,0 +1,231 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Step card ────────────────────────────────────────────────────────────── */
+
+.c-process-step {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+}
+
+/* ── Number ───────────────────────────────────────────────────────────────── */
+
+.c-process-step__number {
+  font-family: var(--Heading-H4-fontFamily, 'Zalando Sans Expanded', sans-serif);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: -0.2px;
+  color: #f76707;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ── Animated progress overlays (positioned absolute by JS) ─────────────── */
+
+.c-process-step__progress {
+  position: absolute;
+  top: var(--circle-top, 127px);
+  height: 2px;
+  width: 0;
+  z-index: 2;
+  pointer-events: none;
+  transition: none;
+}
+
+.c-process-step__progress--after {
+  left: 50%;
+}
+
+.c-process-step__progress--before {
+  left: calc(50% - var(--tail-length, 150px));
+}
+
+/* ── Connector row (line–circle–line) ────────────────────────────────────── */
+
+.c-process-step__connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Horizontal hairline on each side of the circle — static background */
+.c-process-step__line {
+  flex: 1 0 0;
+  min-width: 0;
+  height: 1px;
+  background: rgba(247, 103, 7, 0.2);
+}
+
+/* ── Circle ───────────────────────────────────────────────────────────────── */
+
+.c-process-step__circle {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #f76707;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+/* ── Icon inside circle ───────────────────────────────────────────────────── */
+
+.c-process-step__icon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.c-process-step__icon .c-base-media,
+.c-process-step__icon .c-base-media__inner,
+.c-process-step__icon .c-base-media__content,
+.c-process-step__icon picture {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-process-step__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ── Body (title + description) ──────────────────────────────────────────── */
+
+.c-process-step__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 40px;
+  width: 100%;
+  text-align: center;
+}
+
+/* ── Title ────────────────────────────────────────────────────────────────── */
+
+.c-process-step__title {
+  font-family: var(--Body-B1-fontFamily, 'Geist', 'Zalando Sans', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+  color: #000;
+  margin: 0;
+  width: 100%;
+  transition: color 0.4s ease;
+}
+
+.c-process-step.is-active .c-process-step__title {
+  color: #f76707;
+}
+
+/* ── Description ──────────────────────────────────────────────────────────── */
+
+.c-process-step__description {
+  font-family: var(--Body-B3-fontFamily, 'Geist', 'Zalando Sans', sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #727272;
+  margin: 0;
+  width: 100%;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .c-process-step__number {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .c-process-step__circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .c-process-step__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .c-process-step__body {
+    padding: 0 20px;
+  }
+
+  .c-process-step__title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hide animated progress on mobile — vertical layout handled separately */
+  .c-process-step__progress {
+    display: none;
+  }
+
+  .c-process-step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .c-process-step__connector {
+    flex-direction: column;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .c-process-step__line {
+    width: 1px;
+    height: 40px;
+    flex: 0 0 auto;
+  }
+
+  .c-process-step__circle {
+    width: 72px;
+    height: 72px;
+  }
+
+  .c-process-step__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .c-process-step__body {
+    padding: 0;
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 8px;
+  }
+
+  .c-process-step__number {
+    display: none;
+  }
+
+  /* On mobile (no animation), title is always orange */
+  .c-process-step__title {
+    color: #f76707;
+  }
+}

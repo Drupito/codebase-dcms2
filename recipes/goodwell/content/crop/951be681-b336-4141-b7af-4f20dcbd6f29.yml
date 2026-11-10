@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 951be681-b336-4141-b7af-4f20dcbd6f29
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    395a4b60-5097-419b-abd3-05098c2aa375: file
+default:
+  entity_id:
+    -
+      uuid: 395a4b60-5097-419b-abd3-05098c2aa375
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/man_glasses.png'
+  x:
+    -
+      value: 16
+  'y':
+    -
+      value: 16
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

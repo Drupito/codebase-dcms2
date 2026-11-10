@@ -1,0 +1,21 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Product Grid
+group: Organisms
+status: stable
+description: '2-column grid of Offering Cards with an introductory paragraph. Place one Offering Card in the cards slot and duplicate it as needed.'
+props:
+  type: object
+  properties:
+    body_text:
+      type: string
+      title: 'Introductory Paragraph'
+      contentMediaType: text/html
+      examples:
+        - 'To empower organizations by removing the friction of manual processes through intelligent software.'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  cards:
+    title: 'Product Cards'
+    description: 'Place one Offering Card atom here and duplicate it as needed.'

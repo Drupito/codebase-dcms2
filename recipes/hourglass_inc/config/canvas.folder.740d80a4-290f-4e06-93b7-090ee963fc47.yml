@@ -1,0 +1,39 @@
+uuid: 740d80a4-290f-4e06-93b7-090ee963fc47
+langcode: en
+status: true
+dependencies: {  }
+name: Organisms
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.hourglass.apply-section
+  - sdc.hourglass.article-feature
+  - sdc.hourglass.benefits-slider
+  - sdc.hourglass.blog-listing
+  - sdc.hourglass.contact-cards
+  - sdc.hourglass.contact-cta
+  - sdc.hourglass.cta-banner
+  - sdc.hourglass.expertise-section
+  - sdc.hourglass.faq-section
+  - sdc.hourglass.hero
+  - sdc.hourglass.history-timeline
+  - sdc.hourglass.image-gallery
+  - sdc.hourglass.key-features
+  - sdc.hourglass.locations-section
+  - sdc.hourglass.logo-carousel
+  - sdc.hourglass.mission-vision
+  - sdc.hourglass.modal
+  - sdc.hourglass.news-events
+  - sdc.hourglass.not-found
+  - sdc.hourglass.offerings-slider
+  - sdc.hourglass.our-story
+  - sdc.hourglass.overview-feature
+  - sdc.hourglass.overview-section
+  - sdc.hourglass.process-steps
+  - sdc.hourglass.product-grid
+  - sdc.hourglass.rules-section
+  - sdc.hourglass.services-grid
+  - sdc.hourglass.stats-section
+  - sdc.hourglass.team-section
+  - sdc.hourglass.tech-insights
+  - sdc.hourglass.video-feature

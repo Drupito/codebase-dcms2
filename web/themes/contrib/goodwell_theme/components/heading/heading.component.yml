@@ -1,0 +1,103 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Heading
+group: Base
+status: stable
+description: "Standalone heading with decoupled visual size, weight, color, alignment and spacing controls."
+props:
+  type: object
+  required:
+    - text
+  properties:
+    text:
+      type: string
+      title: Text
+      contentMediaType: text/html
+      x-formatting-context: inline
+      default: "Your heading goes here"
+      examples:
+        - "Secure your family's future today"
+    level:
+      type: number
+      title: HTML level
+      description: "Semantic heading tag (h1–h6). Does not affect visual size."
+      default: 2
+    size:
+      type: string
+      title: Visual size
+      description: "Visual size, decoupled from the HTML level."
+      enum:
+        - xs
+        - sm
+        - md
+        - lg
+        - xl
+        - 2xl
+        - 3xl
+        - 4xl
+        - 5xl
+      meta:enum:
+        xs: XS (14px)
+        sm: SM (16px)
+        md: MD (18px)
+        lg: LG (20px)
+        xl: XL (24px)
+        2xl: 2XL (30px)
+        3xl: 3XL (36px)
+        4xl: 4XL (44px)
+        5xl: 5XL (56px)
+      default: 3xl
+    weight:
+      type: string
+      title: Font weight
+      enum:
+        - normal
+        - semibold
+        - bold
+      meta:enum:
+        normal: Normal (400)
+        semibold: Semibold (600)
+        bold: Bold (700)
+      default: bold
+    color:
+      type: string
+      title: Color
+      enum:
+        - default
+        - primary
+        - muted
+        - accent
+        - light
+      meta:enum:
+        default: Default (foreground)
+        primary: Primary (brand color)
+        muted: Muted (grey)
+        accent: Accent
+        light: Light (white, for dark backgrounds)
+      default: default
+    align:
+      type: string
+      title: Alignment
+      enum:
+        - left
+        - center
+        - right
+      meta:enum:
+        left: Left
+        center: Center
+        right: Right
+      default: left
+    url:
+      type: string
+      title: Link URL
+      format: uri-reference
+      description: "Wraps the heading text in an <a> tag."
+    spacing_top:
+      type: integer
+      title: Margin top
+      description: "Top margin as a multiple of 4px (e.g. 4 = 16px / 1rem)."
+      default: 0
+    spacing_bottom:
+      type: integer
+      title: Margin bottom
+      description: "Bottom margin as a multiple of 4px (e.g. 4 = 16px / 1rem)."
+      default: 0

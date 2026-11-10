@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Views page wrapper for the Blog Listing view (/blog).
+ *
+ * Variables:
+ * - rows:   The rendered list of rows.
+ * - pager:  Pager links.
+ * - title:  View title.
+ */
+#}
+{{ attach_library('hourglass/blog-listing') }}
+
+<div class="c-blog-listing c-blog-listing--views">
+
+  <div class="c-blog-listing__header">
+    <h1 class="c-blog-listing__title">{{ title|default('Blog') }}</h1>
+    {% if header %}
+      <div class="c-blog-listing__view-header">{{ header }}</div>
+    {% endif %}
+  </div>
+
+  {% if rows %}
+    <div class="c-blog-listing__grid">
+      {{ rows }}
+    </div>
+  {% else %}
+    <div class="c-blog-listing__empty">
+      <p>No posts found.</p>
+    </div>
+  {% endif %}
+
+  {% if pager %}
+    <div class="c-blog-listing__pager">
+      {{ pager }}
+    </div>
+  {% endif %}
+
+</div>

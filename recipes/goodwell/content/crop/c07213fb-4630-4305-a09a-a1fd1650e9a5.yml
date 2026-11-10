@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: c07213fb-4630-4305-a09a-a1fd1650e9a5
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    1dcd6a95-9120-45a1-b937-50f7cc048b29: file
+default:
+  entity_id:
+    -
+      uuid: 1dcd6a95-9120-45a1-b937-50f7cc048b29
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/team_cheer.jpg'
+  x:
+    -
+      value: 384
+  'y':
+    -
+      value: 378
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

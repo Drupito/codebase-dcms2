@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: webform_submission
+  uuid: c3a7f329-27c7-4eb8-9516-db237ac6eff6
+  bundle: calculate_premium
+  default_langcode: en
+default:
+  serial:
+    -
+      value: 3
+  token:
+    -
+      value: Gp_n43HcpefXm9u2vW43eXC8JqRzHLU1wHrj80SKQTY
+  uri:
+    -
+      value: /life-insurance
+  completed:
+    -
+      value: 1781267249
+  in_draft:
+    -
+      value: false
+  remote_addr:
+    -
+      value: 172.19.0.2
+  uid:
+    -
+      target_id: 1
+  entity_type:
+    -
+      value: node
+  entity_id:
+    -
+      value: '3'
+  locked:
+    -
+      value: false
+  sticky:
+    -
+      value: false

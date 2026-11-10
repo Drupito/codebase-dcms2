@@ -1,0 +1,45 @@
+{% set id_trigger = 'accordion-trigger'|clean_unique_id %}
+{% set id_panel   = 'accordion-panel'|clean_unique_id %}
+{% set is_open    = (default_state|default('collapsed')) == 'expanded' %}
+
+<div class="accordion__item{{ is_open ? ' accordion__item--open' : '' }}" data-accordion-item {{ is_open ? 'data-accordion-open-default' : '' }}>
+
+  <button
+    type="button"
+    class="accordion__trigger"
+    id="{{ id_trigger }}"
+    aria-expanded="{{ is_open ? 'true' : 'false' }}"
+    aria-controls="{{ id_panel }}"
+    data-accordion-trigger
+  >
+    {% if icon.src %}
+      <span class="accordion__icon" aria-hidden="true">
+        <img src="{{ icon.src }}" alt="{{ icon.alt|default('') }}" class="accordion__icon-img">
+      </span>
+    {% endif %}
+
+    <span class="accordion__question">{{ question|default('Question') }}</span>
+
+    <span class="accordion__chevron" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </button>
+
+  <div
+    class="accordion__panel"
+    id="{{ id_panel }}"
+    role="region"
+    aria-labelledby="{{ id_trigger }}"
+    data-accordion-panel
+    {{ not is_open ? 'hidden' : '' }}
+  >
+    <div class="accordion__content">
+      {% if answer %}
+        <div class="accordion__answer">{{ answer|raw }}</div>
+      {% endif %}
+    </div>
+  </div>
+
+</div>

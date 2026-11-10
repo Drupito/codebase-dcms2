@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - everbright_theme
+label: 'Text card'
+id: sdc.everbright_theme.card-text
+source: sdc
+source_local_id: 'everbright_theme:card-text'
+provider: everbright_theme
+active_version: da898aeebfdd7673
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'This is your card title'
+          expression: ℹ︎string␟value
+        icon:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: arrow-right
+          expression: ℹ︎string␟value
+        url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+        text:
+          required: false
+          field_type: string_long
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textarea
+          default_value:
+            -
+              value: 'Quaerat laborum rerum dolores dolores dolor qui.'
+          expression: ℹ︎string_long␟value
+    fallback_metadata:
+      slot_definitions: {  }

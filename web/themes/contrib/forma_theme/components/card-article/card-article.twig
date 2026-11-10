@@ -1,0 +1,58 @@
+{% set has_media = media is defined and media.src is defined and media.src is not empty ? 'yes' : 'no' %}
+{% set has_link = url is defined and url is not empty ? 'yes' : 'no' %}
+{% set is_clickable = has_link %}
+
+{% set additional_classes = card_classes|default('') %}
+{% if additional_classes is iterable %}
+  {% set additional_classes = additional_classes|join(' ') %}
+{% endif %}
+
+{% set card_link_label = link_label|default('Read article'|t) %}
+{% set card_aria_label = heading_text ~ ' – ' ~ card_link_label %}
+
+{% set card_root =
+  html_cva(
+    base: ['relative flex min-h-[400px] flex-col items-start justify-end gap-2 overflow-hidden rounded-2xl p-8'],
+    variants: {
+      clickable: {
+        yes: 'group cursor-pointer',
+        no: ''
+      }
+    }
+  )
+%}
+
+<div
+  class="{{
+  card_root.apply(
+    {
+      clickable: is_clickable
+    },
+    additional_classes
+  )
+  }}"
+>
+  {% if has_media == 'yes' %}
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      {% include 'canvas:image' ignore missing with {
+        src: media.src,
+        alt: '',
+        class: 'absolute size-full object-cover' ~ (is_clickable == 'yes' ? ' transition duration-300 ease-in-out group-hover:scale-105' : ''),
+        width: media.width,
+        height: media.height,
+        sizes: '(min-width: 1024px) 800px, (min-width: 768px) 50vw, 100vw'
+      } only %}
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
+    </div>
+  {% endif %}
+
+  {% if has_link == 'yes' %}
+    <a href="{{ url }}" class="absolute inset-0 z-0" aria-label="{{ card_aria_label }}"><span class="sr-only">{{ card_link_label }}</span></a>
+  {% endif %}
+
+  {% if author is defined and author is not empty %}
+    <span class="relative z-1 text-lg font-light whitespace-nowrap text-white">{{ author }}</span>
+  {% endif %}
+
+  <h3 class="relative z-1 text-2xl font-semibold text-white">{{ heading_text }}</h3>
+</div>

@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: be19e5cd-7ac5-4040-b1ab-21bb7e044291
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    613a6a92-e97e-4453-b301-68c5b150b3ea: file
+default:
+  entity_id:
+    -
+      uuid: 613a6a92-e97e-4453-b301-68c5b150b3ea
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-05/Frame-1321314552.png'
+  x:
+    -
+      value: 355
+  'y':
+    -
+      value: 210
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

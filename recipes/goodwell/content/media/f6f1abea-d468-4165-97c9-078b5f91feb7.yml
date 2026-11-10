@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: f6f1abea-d468-4165-97c9-078b5f91feb7
+  bundle: image
+  default_langcode: en
+  depends:
+    94a6f834-df7c-4fc6-ab4a-3202b7d57925: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: life_insurance.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: '5 Essential Tips for Choosing the Right Life Insurance Plan'
+      title: ''
+      width: 387
+      height: 241
+      entity: 94a6f834-df7c-4fc6-ab4a-3202b7d57925

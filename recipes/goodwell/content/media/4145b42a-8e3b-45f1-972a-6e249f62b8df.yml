@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 4145b42a-8e3b-45f1-972a-6e249f62b8df
+  bundle: image
+  default_langcode: en
+  depends:
+    a1d337ee-9f03-4338-9457-d3697a59e352: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Half circle image of father and girl'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Half circle image of father and girl'
+      title: ''
+      width: 1200
+      height: 560
+      entity: a1d337ee-9f03-4338-9457-d3697a59e352

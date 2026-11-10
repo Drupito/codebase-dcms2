@@ -1,0 +1,65 @@
+{{ attach_library('hourglass/heading-with-description') }}
+
+<div class="c-heading-with-description {{ extra_classes }}">
+  <div class="c-heading-with-description__container">
+
+    {% if tag or eyebrow_text %}
+      <div class="c-heading-with-description__eyebrow">
+        {% if tag %}
+          <span class="c-eyebrow c-tag">{{ tag }}</span>
+        {% endif %}
+        {% if eyebrow_text %}
+          <span class="c-eyebrow">{{ eyebrow_text }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if heading or cta_text %}
+      <div class="c-heading-with-description__top">
+        {% if heading %}
+          <div class="c-heading-with-description__heading{% if heading_nowrap %} c-heading-with-description__heading--nowrap{% endif %}">
+            {% set h_tag = heading_tag|default('h2') %}
+            <{{ h_tag }}>{{ heading }}</{{ h_tag }}>
+          </div>
+        {% endif %}
+        {% if cta_text %}
+          <div class="c-heading-with-description__cta">
+            {% include 'hourglass:button' with {
+              text: cta_text,
+              url: cta_url,
+              variant: 'outline-large'
+            } %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if description %}
+      <div class="c-heading-with-description__description">
+        {{ description|raw }}
+      </div>
+    {% endif %}
+
+    {% if text or value %}
+      <div class="c-heading-with-description__content">
+        {% if text %}
+          <div class="c-heading-with-description__left">
+            <div class="c-heading-with-description__text">{{ text|raw }}</div>
+          </div>
+        {% endif %}
+        {% if value %}
+          <div class="c-heading-with-description__right">
+            <div class="c-heading-with-description__value">{{ value|raw }}</div>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if callout %}
+      <div class="c-heading-with-description__callout">
+        {{ callout|raw }}
+      </div>
+    {% endif %}
+
+  </div>
+</div>

@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column section layout.
+ *
+ * MMI Section Style: section style classes (padding, background, etc.) are
+ * added by mmi_section_style_preprocess_layout() to `attributes`. The
+ * container_size class is also added directly to the outer wrapper so the
+ * layout grid CSS (which targets direct children) continues to work correctly.
+ *
+ * Available variables:
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div> (includes MMI classes).
+ * - settings: Layout settings (includes mmi_section_style when set).
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set bss = settings.mmi_section_style|default({}) %}
+{% set container_size = bss.container_size|default('') %}
+
+{% if content %}
+  <div{{ attributes.addClass(container_size ?: '') }}>
+
+    {% if content.first %}
+      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first') }}>
+        {{ content.first }}
+      </div>
+    {% endif %}
+
+    {% if content.second %}
+      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>
+        {{ content.second }}
+      </div>
+    {% endif %}
+
+  </div>
+{% endif %}

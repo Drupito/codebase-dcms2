@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c3947987-6c5f-4ef6-a538-3b06be072359
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: george-pagan-iii-FBwW4Xu3FTs-unsplash.jpg
+  uri:
+    -
+      value: 'public://george-pagan-iii-FBwW4Xu3FTs-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 1124990
+  status:
+    -
+      value: false

@@ -1,0 +1,53 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Card
+group: Card
+props:
+  type: object
+  required:
+    - heading_text
+    - background_color
+  properties:
+    index:
+      type: string
+      title: Index
+      examples:
+        - "01"
+    heading_text:
+      type: string
+      title: Title
+      examples:
+        - "This is your card title"
+    text:
+      type: string
+      title: Description
+      pattern: "(.|\\r?\\n)*"
+      examples:
+        - "Quaerat laborum rerum dolores dolores dolor qui."
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Image
+      type: object
+      examples:
+        - src: "assets/frankie-xjosJTK8u-c-unsplash.jpg"
+          alt: "Futuristic white building with curved lines and large, geometric window panes."
+          width: 1500
+          height: 1125
+    background_color:
+      type: string
+      title: Background color
+      enum:
+        - white
+        - primary
+        - muted
+        - accent
+      meta:enum:
+        white: White
+        primary: Primary
+        muted: Muted
+        accent: Accent
+      examples:
+        - white
+    url:
+      type: string
+      title: Link
+      format: uri-reference

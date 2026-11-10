@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9ff976c4-473f-4daf-b2e6-a833e8c3f91f
+  bundle: blog
+  default_langcode: en
+  depends:
+    6c05f503-ef77-4db9-a325-e145bdf2c854: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'The Future of DevOps: Trends for 2025 and Beyond'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog/future-devops-trends-2025-and-beyond
+      langcode: en
+  body:
+    -
+      value: |-
+        <p>DevOps has matured from a niche methodology into the dominant approach for software delivery. As we look ahead, several emerging trends are reshaping how development and operations teams collaborate.</p>
+
+        <h2>Platform Engineering</h2>
+        <p>Platform engineering is becoming the next evolution of DevOps. Internal developer platforms (IDPs) abstract infrastructure complexity, enabling developers to self-serve environments, deployments, and observability tooling without deep ops knowledge.</p>
+
+        <h2>AI-Assisted Development</h2>
+        <p>AI coding assistants, automated code reviews, and intelligent test generation are reducing cognitive load on engineering teams. These tools don't replace developers — they amplify their productivity and improve code quality.</p>
+
+        <h2>Shift-Left Security (DevSecOps)</h2>
+        <p>Security is moving earlier in the development lifecycle. Automated security scanning in CI pipelines, supply chain integrity checks, and security-as-code practices are becoming standard for mature engineering organisations.</p>
+      format: content_format
+      summary: ''
+  field_featured:
+    -
+      value: false
+  field_hero_image:
+    -
+      entity: 6c05f503-ef77-4db9-a325-e145bdf2c854
+  field_published_date:
+    -
+      value: '2025-06-23'
+  field_read_time:
+    -
+      value: 5

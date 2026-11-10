@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 46ac346d-b7ec-41db-ad52-3baadd426770
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    53445d17-807f-497a-a874-90520e4ab28c: file
+default:
+  entity_id:
+    -
+      uuid: 53445d17-807f-497a-a874-90520e4ab28c
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/pulse_logo.png'
+  x:
+    -
+      value: 56
+  'y':
+    -
+      value: 15
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

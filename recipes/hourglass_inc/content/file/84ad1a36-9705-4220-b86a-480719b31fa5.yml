@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 84ad1a36-9705-4220-b86a-480719b31fa5
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: Gemini_Generated_Image_8w5li08w5li08w5l-(1)-5.png
+  uri:
+    -
+      value: 'public://2026-05/Gemini_Generated_Image_8w5li08w5li08w5l-(1)-5.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1694
+  status:
+    -
+      value: true

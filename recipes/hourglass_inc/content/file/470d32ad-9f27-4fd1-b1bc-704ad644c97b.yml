@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 470d32ad-9f27-4fd1-b1bc-704ad644c97b
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: blog-migration.jpg
+  uri:
+    -
+      value: 'public://blog-images/blog-migration.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 186968
+  status:
+    -
+      value: true

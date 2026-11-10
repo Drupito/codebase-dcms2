@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 2077454c-bb58-477d-84d7-5c0f83c65f5d
+  bundle: image
+  default_langcode: en
+  depends:
+    2ac40b91-7030-4f2b-acac-eb9a7f2c07e3: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Zenzep.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'ZenZap Logo'
+      title: ''
+      width: 134
+      height: 41
+      entity: 2ac40b91-7030-4f2b-acac-eb9a7f2c07e3

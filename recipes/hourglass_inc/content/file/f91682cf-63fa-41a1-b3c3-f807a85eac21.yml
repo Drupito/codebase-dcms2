@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f91682cf-63fa-41a1-b3c3-f807a85eac21
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: blog-ai.jpg
+  uri:
+    -
+      value: 'public://blog-images/blog-ai.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 168217
+  status:
+    -
+      value: true

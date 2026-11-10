@@ -1,0 +1,87 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: e577591cd00c5979
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        caption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'We invest in the newest technologies to ensure top-tier data quality for our clients.'
+          expression: ℹ︎string␟value
+        thumb_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Data Quality'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        thumbnail:
+          title: Image
+          description: 'Image shown as thumbnail in the sidebar and full-size in the main view.'
+  e934e4fad8ffb0c1:
+    settings:
+      prop_field_definitions:
+        caption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'We invest in the newest technologies to ensure top-tier data quality for our clients.'
+          expression: ℹ︎string␟value
+        thumb_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Data Quality'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        image:
+          title: 'Main Image'
+          description: 'Full-size image shown in the main view.'
+        thumbnail:
+          title: 'Thumbnail Image'
+          description: 'Smaller image shown in the sidebar strip.'
+label: 'Gallery Item'
+id: sdc.hourglass.gallery-item
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:gallery-item'

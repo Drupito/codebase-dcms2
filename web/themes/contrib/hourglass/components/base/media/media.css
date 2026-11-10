@@ -1,0 +1,42 @@
+/* ── Base media atom ──────────────────────────────────────────────────────── */
+
+.c-base-media,
+.c-base-media__inner,
+.c-base-media__content {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c-base-media__image,
+.c-base-media__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── YouTube / remote video — responsive 16:9 iframe ────────────────────── */
+
+.c-base-media__embed {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* When used outside a fixed-height container, fall back to 16:9 aspect ratio */
+  aspect-ratio: 16 / 9;
+}
+
+/* When inside a fixed-height panel (video-feature, hero, etc.)
+   the parent sets the height so we stretch to fill it */
+.c-base-media__embed:has(> .c-base-media__iframe) {
+  aspect-ratio: unset;
+}
+
+.c-base-media__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}

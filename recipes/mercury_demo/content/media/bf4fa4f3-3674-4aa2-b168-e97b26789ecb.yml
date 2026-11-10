@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: bf4fa4f3-3674-4aa2-b168-e97b26789ecb
+  bundle: image
+  default_langcode: en
+  depends:
+    a7c58081-5fac-47cf-aea0-13c23efe3e8b: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Hero.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Mercury hero image'
+      title: ''
+      width: 2560
+      height: 1408
+      entity: a7c58081-5fac-47cf-aea0-13c23efe3e8b

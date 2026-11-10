@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 7c742ac8-bc9a-4a9f-b7e3-2fadc5363384
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    7d18b911-0bc2-400c-a782-3263d9d480e2: file
+default:
+  entity_id:
+    -
+      uuid: 7d18b911-0bc2-400c-a782-3263d9d480e2
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://media-icons/generic/video.png'
+  x:
+    -
+      value: 90
+  'y':
+    -
+      value: 90
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Template for one History Timeline Slide atom.
+ *
+ * Props:
+ * - year: Year / date label (e.g. "2018").
+ * - description: Rich-text description of the milestone.
+ * - reversed: When true, info is on top and image on bottom (for even slides).
+ *
+ * Slots:
+ * - image: Base Media atom for the milestone image.
+ */
+#}
+{{ attach_library('hourglass/history-timeline-slide') }}
+
+<div class="c-history-timeline-slide {{ reversed ? 'c-history-timeline-slide--reversed' : '' }} {{ extra_classes|default('') }}">
+
+  <div class="c-history-timeline-slide__top">
+    {% if not reversed %}
+      <div class="c-history-timeline-slide__image">{{ image }}</div>
+    {% else %}
+      <div class="c-history-timeline-slide__info">
+        {% if description %}
+          <div class="c-history-timeline-slide__desc">{{ description|raw }}</div>
+        {% endif %}
+        {% if year %}
+          <div class="c-history-timeline-slide__year">{{ year }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="c-history-timeline-slide__marker" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <circle cx="10" cy="10" r="8" fill="#F76707" stroke="white" stroke-width="4"/>
+    </svg>
+  </div>
+
+  <div class="c-history-timeline-slide__bottom">
+    {% if reversed %}
+      <div class="c-history-timeline-slide__image">{{ image }}</div>
+    {% else %}
+      <div class="c-history-timeline-slide__info">
+        {% if year %}
+          <div class="c-history-timeline-slide__year">{{ year }}</div>
+        {% endif %}
+        {% if description %}
+          <div class="c-history-timeline-slide__desc">{{ description|raw }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
+</div>

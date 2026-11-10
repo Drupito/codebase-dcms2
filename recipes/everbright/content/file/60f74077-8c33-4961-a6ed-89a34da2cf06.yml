@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 60f74077-8c33-4961-a6ed-89a34da2cf06
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: right.jpg
+  uri:
+    -
+      value: 'public://2026-05/right.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 172282
+  status:
+    -
+      value: true

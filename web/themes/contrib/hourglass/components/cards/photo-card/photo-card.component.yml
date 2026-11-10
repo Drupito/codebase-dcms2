@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Photo Card
+group: Atoms
+status: stable
+description: 'Square photo card (280 × 280) with an optional caption line below the image.'
+props:
+  type: object
+  properties:
+    media:
+      type: object
+      title: Image
+      $ref: 'json-schema-definitions://canvas.module/image'
+      examples:
+        - src: 'https://example.com/photo.jpg'
+          alt: 'Prof. Dr. Stefan Seeger, CEO'
+          width: 280
+          height: 280
+    caption:
+      type: string
+      title: Caption
+      examples:
+        - 'Prof. Dr. Stefan Seeger, CEO'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

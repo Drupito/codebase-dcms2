@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 226c7703-3cca-4666-828e-f4f79724c8a2
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    ce84f45a-e7ac-4c83-a249-da8a28babb29: file
+default:
+  entity_id:
+    -
+      uuid: ce84f45a-e7ac-4c83-a249-da8a28babb29
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/father_kid.png'
+  x:
+    -
+      value: 600
+  'y':
+    -
+      value: 280
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

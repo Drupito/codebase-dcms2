@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Benefit Card
+group: Cards
+status: stable
+description: 'Icon + orange H5 title + B2 description card. Used in the Benefits Slider.'
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: 'Card Heading'
+      examples:
+        - 'Adaptive Scalability'
+    description:
+      type: string
+      title: 'Card Description'
+      examples:
+        - 'Our platforms grow with you. Whether you are managing 50 users or 50,000, the performance remains consistent.'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  media:
+    title: 'Icon Image'
+    description: 'Place a Media atom here — displayed as a 100×100px icon.'

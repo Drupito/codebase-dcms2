@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Card wrapper ─────────────────────────────────────────────────────────── */
+
+.c-expertise-card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ── Image ────────────────────────────────────────────────────────────────── */
+
+.c-expertise-card__image {
+  width: 100%;
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Cover SDC media component nested wrappers */
+.c-expertise-card__image .c-base-media,
+.c-expertise-card__image .c-base-media__inner,
+.c-expertise-card__image .c-base-media__content,
+.c-expertise-card__image picture {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-expertise-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Content ──────────────────────────────────────────────────────────────── */
+
+.c-expertise-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Heading — orange, Zalando Sans Expanded H5 ──────────────────────────── */
+
+.c-expertise-card__heading {
+  font-family: var(--Heading-H2-fontFamily, 'Zalando Sans Expanded', sans-serif);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.15px;
+  color: #d9480f;
+  margin: 0;
+}
+
+/* ── Description ──────────────────────────────────────────────────────────── */
+
+.c-expertise-card__description {
+  font-family: var(--Body-B1-fontFamily, 'Geist', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  margin: 0;
+}

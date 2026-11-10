@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f6abf53b-9d1a-4d9f-a0c3-d779ffa9cb9e
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: car.png
+  uri:
+    -
+      value: 'public://2026-06/car.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 2050565
+  status:
+    -
+      value: true

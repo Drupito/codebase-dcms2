@@ -1,0 +1,21 @@
+{
+    "name": "drupal/forma",
+    "description": "Designed for a portfolio site, this template features a warm and modern earthy design, along with articles and a project portfolio.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/core": "^11.3.11",
+        "drupal/ui_icons": "^1.1.2",
+        "drupal/forma_theme": "^1",
+        "drupal/drupal_cms_site_template_base": "^2",
+        "drupal/drupal_cms_forms": "^2"
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "file-mapping": {
+                "[project-root]/AGENTS.md": "AGENTS.md"
+            }
+        }
+    },
+    "version": "1.1.0"
+}

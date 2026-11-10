@@ -1,0 +1,64 @@
+{% set transition_classes = 'transition duration-500 ease-in-out' %}
+{% set card_classes = transition_classes
+  ~ ' bg-muted relative p-12 flex flex-row justify-center items-center text-center w-full hover:bg-primary relative group'
+%}
+
+{% set inner_classes = 'flex w-full flex-col items-center p-8 group-hover:text-background' %}
+{% set stack_classes = 'grid w-full max-w-80 place-items-center' %}
+{% set header_classes = transition_classes ~ ' w-full pt-8 group-hover:-translate-y-2 border-t group-hover:border-t-transparent' %}
+{% set text_classes = transition_classes ~ ' col-start-1 row-start-1 w-full px-2 text-center line-clamp-3 opacity-0 group-hover:opacity-100' %}
+{% set icon_classes = transition_classes ~ ' col-start-1 row-start-1 flex flex-row items-center justify-center opacity-100 group-hover:opacity-0' %}
+
+{% if url is not empty %}
+  <a href="{{ url }}">
+    <div class="{{ card_classes }}">
+      <div class="{{ inner_classes }}">
+        <h3 class="{{ header_classes }}">{{ heading }}</h3>
+        <div class="{{ stack_classes }}">
+          <p class="{{ text_classes }}">
+            {{ text }}
+          </p>
+          {% if icon %}
+            <div class="{{ icon_classes }}">
+              {{
+                include(
+                  '@everbright_theme/components/icon/icon.twig',
+                  {
+                    icon: icon,
+                    icon_size: 'extra-extra-small'
+                  },
+                  with_context: false
+                )
+              }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </a>
+{% else %}
+  <div class="{{ card_classes }}">
+    <div class="{{ inner_classes }}">
+      <h3 class="{{ header_classes }}">{{ heading }}</h3>
+      <div class="{{ stack_classes }}">
+        <p class="{{ text_classes }}">
+          {{ text }}
+        </p>
+        {% if icon %}
+          <div class="{{ icon_classes }}">
+            {{
+              include(
+                '@everbright_theme/components/icon/icon.twig',
+                {
+                  icon: icon,
+                  icon_size: 'extra-extra-small'
+                },
+                with_context: false
+              )
+            }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

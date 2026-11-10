@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 500c85a7-2b08-4fb8-b6a9-d69dec9408bd
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: chirayu-trivedi-VdSd8u5N5Ic-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-05/chirayu-trivedi-VdSd8u5N5Ic-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 119464
+  status:
+    -
+      value: true

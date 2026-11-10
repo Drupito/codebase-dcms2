@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Row markup for the header search "type-ahead" suggestions endpoint.
+ *
+ * Fetched as a plain HTML fragment by site-header.js and injected directly
+ * into the suggestions dropdown.
+ */
+#}
+
+{% set title_text = fields.title.content|render|striptags|trim %}
+
+<a href="{{ fields.view_node.content }}" class="site-header__suggestion-item" role="option" data-title="{{ title_text }}">
+  {% if fields.field_hero_image.content %}
+    <span class="site-header__suggestion-thumb">{{ fields.field_hero_image.content }}</span>
+  {% else %}
+    <span class="site-header__suggestion-thumb site-header__suggestion-thumb--empty"></span>
+  {% endif %}
+  <span class="site-header__suggestion-text">
+    <span class="site-header__suggestion-title">{{ title_text }}</span>
+    <span class="site-header__suggestion-date">{{ fields.field_published_date.content }}</span>
+  </span>
+</a>

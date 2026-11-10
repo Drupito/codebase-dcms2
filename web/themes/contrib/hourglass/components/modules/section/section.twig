@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Layout section wrapper — controls padding, margin, background, and container width.
+ *
+ * Available variables:
+ * - padding_top:    Vertical padding above content (none | sm | md | lg | xl).
+ * - padding_bottom: Vertical padding below content (none | sm | md | lg | xl).
+ * - margin_top:     Vertical margin above section (none | sm | md | lg | xl).
+ * - margin_bottom:  Vertical margin below section (none | sm | md | lg | xl).
+ * - container:      Boolean — when true, content is constrained to max-width and centred.
+ * - background:     Section background colour (none | white | gray | dark).
+ * - content:        Slot — child components rendered here.
+ */
+#}
+{{ attach_library('hourglass/section') }}
+
+{% set pt = padding_top|default('lg') %}
+{% set pb = padding_bottom|default('lg') %}
+{% set mt = margin_top|default('none') %}
+{% set mb = margin_bottom|default('none') %}
+{% set bg = background|default('none') %}
+{% set use_container = container is not defined or container %}
+
+<section class="c-section c-section--pt-{{ pt }} c-section--pb-{{ pb }} c-section--mt-{{ mt }} c-section--mb-{{ mb }} c-section--bg-{{ bg }} {{ extra_classes|default('') }}"{% if anchor_id %} id="{{ anchor_id }}"{% endif %}>
+  {% if use_container %}
+    <div class="c-section__container">
+      {{ content }}
+    </div>
+  {% else %}
+    {{ content }}
+  {% endif %}
+</section>

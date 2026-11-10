@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ef6ae75a-eeec-48e3-9e52-4f4d3797fb15
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: family_paper.jpg
+  uri:
+    -
+      value: 'public://2026-06/family_paper.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 14016497
+  status:
+    -
+      value: true

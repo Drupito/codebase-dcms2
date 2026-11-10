@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Notification Banner
+group: Molecules
+status: stable
+description: 'Top-of-page announcement strip with optional tag badge.'
+props:
+  type: object
+  properties:
+    message:
+      type: string
+      title: 'Message'
+      examples:
+        - 'Quarterly Report: 200% Growth in Enterprise Partnerships'
+    tag_label:
+      type: string
+      title: 'CTA Label'
+      examples:
+        - 'EVENT'
+    tag_url:
+      type: string
+      title: 'CTA URL'
+      format: uri-reference
+    url:
+      type: string
+      title: 'URL'
+      format: uri-reference

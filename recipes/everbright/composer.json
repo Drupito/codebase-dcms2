@@ -1,0 +1,17 @@
+{
+    "name": "drupal/everbright",
+    "description": "Designed for a portfolio site, this template features a sharp and striking black-and-white design, along with articles and a project portfolio.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/core": "^11.3.9",
+        "drupal/ui_icons": "^1.1.2",
+        "drupal/everbright_theme": "^1",
+        "drupal/drupal_cms_site_template_base": "^2",
+        "drupal/drupal_cms_forms": "^2"
+    },
+    "require-dev": {
+        "cweagans/composer-patches": "^2"
+    },
+    "version": "1.1.0"
+}

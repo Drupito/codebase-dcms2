@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8a5ccc23-57c3-422a-bb89-caf4d03b14b5
+  bundle: image
+  default_langcode: en
+  depends:
+    0a9c6c65-46ad-480d-b1cd-bf2203029de1: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: young_couple_with_agent.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: young_couple.jpg
+      title: ''
+      width: 6401
+      height: 3991
+      entity: 0a9c6c65-46ad-480d-b1cd-bf2203029de1

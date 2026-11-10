@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 1b7c90aa-1d01-49a1-92cc-ddacefd893b7
+  bundle: svg_image
+  default_langcode: en
+  depends:
+    1ed4efcc-9ddc-4a87-8670-c8f6e5f24a15: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: mobile_icon.svg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_svg_image:
+    -
+      alt: mobile_icon.svg
+      title: ''
+      width: 0
+      height: 0
+      entity: 1ed4efcc-9ddc-4a87-8670-c8f6e5f24a15

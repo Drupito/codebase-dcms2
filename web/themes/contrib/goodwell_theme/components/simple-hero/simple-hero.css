@@ -1,0 +1,59 @@
+/* ── Wrapper ───────────────────────────────────────── */
+
+.dst-simple-hero {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary);
+  background-image: var(--simple-hero-bg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.dst-simple-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+/* ── Inner ─────────────────────────────────────────── */
+
+.dst-simple-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding-block: 5rem;
+  width: 100%;
+}
+
+/* ── Heading ───────────────────────────────────────── */
+
+.dst-simple-hero__heading {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+  max-width: 800px;
+}
+
+/* ── Subheading ────────────────────────────────────── */
+
+.dst-simple-hero__subheading {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  max-width: 600px;
+}

@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section wrapper ──────────────────────────────────────────────────────── */
+
+.c-team-section {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-top: 80px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+
+.c-team-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 120px;
+}
+
+.c-team-section__title {
+  font-family: var(
+    --Heading-H2-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -0.4px;
+  color: #f76707;
+  margin: 0;
+}
+
+/* ── Cards grid ───────────────────────────────────────────────────────────── */
+
+.c-team-section__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 120px;
+}
+
+/* Empty placeholder */
+.c-team-section__cards:not(:has(.c-team-member-card)) {
+  min-height: 300px;
+  border: 2px dashed #e0e0e0;
+  border-radius: 16px;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-team-section__header,
+  .c-team-section__cards {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-team-section {
+    gap: 60px;
+    padding: 60px 0;
+  }
+
+  .c-team-section__header,
+  .c-team-section__cards {
+    padding: 0 40px;
+  }
+
+  .c-team-section__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .c-team-section__title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-team-section {
+    gap: 40px;
+    padding: 48px 0;
+  }
+
+  .c-team-section__header,
+  .c-team-section__cards {
+    padding: 0 24px;
+  }
+
+  .c-team-section__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .c-team-section__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .c-team-section__cards {
+    grid-template-columns: 1fr;
+  }
+}

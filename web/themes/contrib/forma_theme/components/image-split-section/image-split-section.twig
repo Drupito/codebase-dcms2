@@ -1,0 +1,87 @@
+{% set has_media = media is not empty and media.src is not empty %}
+{% set image_width = width|default('100%') %}
+{% set image_height = height|default('') %}
+{% set image_height_variant = image_height is empty ? 'natural' : image_height %}
+{% set split_color_order = color_order|default('white-primary') %}
+
+{% set background_variants =
+  html_cva(
+    base: ['pointer-events-none absolute inset-0 z-[-1] flex flex-col'],
+    variants: {
+      colorOrder: {
+        'white-primary': '',
+        'primary-white': 'flex-col-reverse'
+      }
+    }
+  )
+%}
+
+{% set image_wrapper_variants =
+  html_cva(
+    base: ['mx-auto w-full'],
+    variants: {
+      width: {
+        '100%': 'max-w-full',
+        '75%': 'max-w-3/4',
+        '50%': 'max-w-1/2'
+      },
+      height: {
+        natural: '',
+        large: 'max-h-[600px] overflow-hidden',
+        ribbon: 'max-h-[400px] overflow-hidden'
+      }
+    }
+  )
+%}
+
+{% set image_variants =
+  html_cva(
+    base: ['block w-full'],
+    variants: {
+      height: {
+        natural: 'h-auto',
+        large: 'h-[600px] max-h-[600px] object-cover object-center',
+        ribbon: 'h-[400px] max-h-[400px] object-cover object-center'
+      }
+    }
+  )
+%}
+
+<section class="cq-full relative flex flex-col items-center justify-center py-6">
+  <div
+    class="{{
+    background_variants.apply({
+      colorOrder: split_color_order
+    })
+    }}"
+    aria-hidden="true"
+  >
+    <div class="h-1/2 bg-background"></div>
+    <div class="h-1/2 bg-primary"></div>
+  </div>
+
+  {% if has_media %}
+    <div class="container mx-auto w-full px-4">
+      <figure
+        class="{{
+        image_wrapper_variants.apply({
+          width: image_width,
+          height: image_height_variant
+        })
+        }}"
+      >
+        {% block media %}
+          {% include 'canvas:image' ignore missing with {
+            src: media.src,
+            alt: media.alt,
+            width: media.width,
+            height: media.height,
+            class: image_variants.apply({
+              height: image_height_variant
+            })
+          } only %}
+        {% endblock %}
+      </figure>
+    </div>
+  {% endif %}
+</section>

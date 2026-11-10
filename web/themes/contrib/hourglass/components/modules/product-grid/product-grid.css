@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Grid container ──────────────────────────────────────────────────────── */
+
+.c-product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 120px;
+  padding-top: 0;
+  padding-bottom: 0;
+  align-items: start;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* ── Intro text — row 1, col 1 ───────────────────────────────────────────── */
+
+.c-product-grid__body-text {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  font-family: var(--Body-B1-fontFamily, "Geist", "Zalando Sans", sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--gray-black, #000);
+  max-width: 750px;
+}
+
+.c-product-grid__body-text p {
+  margin: 0;
+}
+
+/* ── Cards slot wrapper ──────────────────────────────────────────────────── */
+
+/*
+ * display:contents removes the wrapper box so every child (offering-card
+ * or its Canvas wrapper div) becomes a direct grid item. They auto-flow
+ * starting at row 1 col 2 because the body-text div already occupies
+ * row 1 col 1 via explicit placement.
+ */
+.c-product-grid__cards {
+  display: contents;
+}
+
+/* Each direct child (Canvas wrapper or bare offering-card) fills its cell */
+.c-product-grid__cards > * {
+  min-height: 200px;
+}
+
+/* ── Offering-card overrides inside the grid ─────────────────────────────── */
+
+.c-product-grid .c-offering-card {
+  width: 100%;
+  height: 568px;
+}
+
+/* Empty slot placeholder — shown when no card has been placed yet */
+.c-product-grid__cards:not(:has(.c-offering-card)) {
+  /* Restore a visible box when the slot is empty */
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  min-height: 200px;
+  border: 2px dashed #e0e0e0;
+  border-radius: 16px;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-product-grid {
+    gap: 48px;
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-product-grid {
+    gap: 32px;
+    padding: 60px 40px;
+  }
+
+  .c-product-grid .c-offering-card {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-product-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 48px 24px;
+  }
+
+  .c-product-grid__body-text {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .c-product-grid__cards:not(:has(.c-offering-card)) {
+    grid-column: 1;
+  }
+
+  .c-product-grid .c-offering-card {
+    height: 360px;
+  }
+}

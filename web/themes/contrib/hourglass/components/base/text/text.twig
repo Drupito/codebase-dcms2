@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Text atom — renders a rich-text string.
+ *
+ * Variables:
+ * - text: HTML string.
+ * - extra_classes: optional additional classes.
+ */
+#}
+{% if text %}
+  <div class="c-text {{ extra_classes|default('') }}">
+    {{ text|raw }}
+  </div>
+{% endif %}

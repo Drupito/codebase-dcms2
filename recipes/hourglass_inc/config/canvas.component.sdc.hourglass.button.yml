@@ -1,0 +1,236 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - hourglass
+active_version: 2b91c5631d648377
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        open_in_new_tab:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        is_nolink:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        is_download:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        variant:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: primary
+                label: Primary
+              -
+                value: secondary
+                label: Secondary
+              -
+                value: pill
+                label: Pill
+              -
+                value: link
+                label: Link
+              -
+                value: outline-pill
+                label: 'Outline Pill'
+              -
+                value: outline-large
+                label: 'Outline Large'
+              -
+                value: document
+                label: Document
+              -
+                value: floating
+                label: Floating
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: primary
+          expression: ℹ︎list_string␟value
+        icon_position:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: left
+                label: Left
+              -
+                value: right
+                label: Right
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: left
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        icon:
+          title: Icon
+          description: 'Place an Icon atom here.'
+        content:
+          title: 'Text Content'
+          description: 'Override the button text via this slot.'
+  51be56bd436cf1a3:
+    settings:
+      prop_field_definitions:
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        open_in_new_tab:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        is_nolink:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        is_download:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value: null
+          expression: ℹ︎boolean␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        variant:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: primary
+                label: Primary
+              -
+                value: secondary
+                label: Secondary
+              -
+                value: pill
+                label: Pill
+              -
+                value: link
+                label: Link
+              -
+                value: outline-pill
+                label: 'Outline Pill'
+              -
+                value: outline-large
+                label: 'Outline Large'
+              -
+                value: document
+                label: Document
+              -
+                value: floating
+                label: Floating
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: primary
+          expression: ℹ︎list_string␟value
+        icon_position:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values:
+              -
+                value: left
+                label: Left
+              -
+                value: right
+                label: Right
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: left
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        icon:
+          title: Icon
+          description: 'Place an Icon atom here.'
+        content:
+          title: 'Text Content'
+          description: 'Override the button text via this slot.'
+label: Button
+id: sdc.hourglass.button
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:button'

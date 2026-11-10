@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Template for the Logo Carousel component.
+ *
+ * Props:
+ * - section_title: Optional heading above the carousel (CKEditor).
+ *
+ * Slots:
+ * - logos: Logo Item atoms. JS clones them into the Splide track.
+ */
+#}
+{{ attach_library('hourglass/logo-carousel') }}
+
+<section class="c-logo-carousel {{ extra_classes|default('') }}">
+
+  {% if section_title %}
+    <div class="c-logo-carousel__header">
+      <h2 class="c-logo-carousel__title">{{ section_title|raw }}</h2>
+    </div>
+  {% endif %}
+
+  {# Flat slot — visible to Canvas editor, hidden after Splide mounts. #}
+  <div class="c-logo-carousel__source js-lc-source">
+    {{ logos }}
+  </div>
+
+  {# Splide viewport — hidden until JS runs. #}
+  <div class="c-logo-carousel__viewport js-lc-viewport" aria-hidden="true">
+    <div class="splide c-logo-carousel__splide js-lc-splide" aria-label="Logo Carousel">
+      <div class="splide__track">
+        <ul class="splide__list c-logo-carousel__list"></ul>
+      </div>
+    </div>
+  </div>
+
+</section>

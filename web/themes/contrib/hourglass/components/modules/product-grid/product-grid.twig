@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Template for the Product Grid component.
+ *
+ * Props:
+ * - body_text: Introductory paragraph (placed in row 1, left column).
+ *
+ * Slots:
+ * - cards: Offering Card atoms. Duplicate as needed — they auto-flow
+ *   into the 2-column grid starting at row 1, right column.
+ */
+#}
+{{ attach_library('hourglass/product-grid') }}
+
+<div class="c-product-grid {{ extra_classes|default('') }}">
+
+  {% if body_text %}
+    <div class="c-product-grid__body-text">{{ body_text|raw }}</div>
+  {% endif %}
+
+  {#
+    display:contents on this wrapper makes the slot's children participate
+    directly in the parent CSS grid, auto-flowing from row 1 col 2 onward.
+  #}
+  <div class="c-product-grid__cards">
+    {{ cards }}
+  </div>
+
+</div>

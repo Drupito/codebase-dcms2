@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: c2606d14-05ca-4e16-85db-e2013fca3d75
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: caroline-badran-_1tT95nCC3w-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-06/caroline-badran-_1tT95nCC3w-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 5141438
+  status:
+    -
+      value: true

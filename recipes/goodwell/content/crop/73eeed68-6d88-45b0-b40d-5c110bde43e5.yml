@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 73eeed68-6d88-45b0-b40d-5c110bde43e5
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    f6abf53b-9d1a-4d9f-a0c3-d779ffa9cb9e: file
+default:
+  entity_id:
+    -
+      uuid: f6abf53b-9d1a-4d9f-a0c3-d779ffa9cb9e
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/car.png'
+  x:
+    -
+      value: 482
+  'y':
+    -
+      value: 600
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

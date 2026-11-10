@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: e4b5ee49-0d52-45ae-b1d8-be3732986d4c
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    c3032d32-5ab1-444f-a3af-9bd9b7d6ffd5: file
+default:
+  entity_id:
+    -
+      uuid: c3032d32-5ab1-444f-a3af-9bd9b7d6ffd5
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/couple_office.png'
+  x:
+    -
+      value: 374
+  'y':
+    -
+      value: 264
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

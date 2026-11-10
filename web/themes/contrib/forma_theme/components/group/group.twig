@@ -1,0 +1,58 @@
+{% set group =
+  html_cva(
+    base: ['flex', 'bg-none', 'group-container', 'rounded-2xl'],
+    variants: {
+      flexDirection: {
+        column: 'flex-col',
+        row: 'flex-row',
+        'column-reverse': 'flex-col-reverse',
+        'row-reverse': 'flex-row-reverse'
+      },
+      groupAlign: {
+        start: 'items-start justify-start',
+        center: 'items-center justify-center',
+        end: 'items-end justify-end'
+      },
+      flexAlign: {
+        start: 'self-start',
+        center: 'self-center',
+        end: 'self-end'
+      },
+      flexGap: {
+        sm: 'gap-2',
+        md: 'gap-4',
+        lg: 'gap-8',
+        xl: 'gap-12'
+      },
+      padding: {
+        sm: 'p-4',
+        md: 'p-8',
+        lg: 'p-16',
+        xl: 'p-32'
+      },
+      background: {
+        primary: 'bg-primary',
+        muted: 'bg-muted',
+        accent: 'bg-accent',
+        'accent-light': 'bg-accent-light'
+      }
+    }
+  )
+%}
+
+{% set group_classes =
+  group.apply({
+    flexDirection: flex_direction,
+    groupAlign: items_align|default('start'),
+    flexAlign: flex_align|default('center'),
+    flexGap: flex_gap,
+    padding: padding,
+    background: background
+  })
+%}
+
+<div class="{{ group_classes }}">
+  {% block group_slot %}
+
+  {% endblock %}
+</div>

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: c913b505-9064-4582-9717-2d83c40ba8b8
+  bundle: image
+  default_langcode: en
+  depends:
+    1eb0b0a3-0092-4bdb-a206-fcc80f81989f: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Component-1.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'SaaS Products'
+      title: ''
+      width: 568
+      height: 568
+      entity: 1eb0b0a3-0092-4bdb-a206-fcc80f81989f

@@ -1,0 +1,422 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.webform_block
+    - canvas.component.sdc.goodwell_theme.accordion
+    - canvas.component.sdc.goodwell_theme.body
+    - canvas.component.sdc.goodwell_theme.brand-band
+    - canvas.component.sdc.goodwell_theme.image
+    - canvas.component.sdc.goodwell_theme.premium-calculator
+    - canvas.component.sdc.goodwell_theme.price-card
+    - canvas.component.sdc.goodwell_theme.section
+    - canvas.component.sdc.goodwell_theme.section-grid
+    - canvas.component.sdc.goodwell_theme.testimonial-slider
+    - canvas.component.sdc.goodwell_theme.text
+    - canvas.component.sdc.goodwell_theme.webform-embed
+    - core.entity_view_mode.node.full
+    - field.field.media.image.field_media_image
+    - field.field.media.svg_image.field_media_svg_image
+    - field.field.node.plans.field_body
+    - field.field.node.plans.field_featured_image
+    - filter.format.canvas_html_inline
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - media.type.svg_image
+    - node.type.plans
+  module:
+    - file
+    - link
+    - media
+    - node
+    - options
+    - text
+id: node.plans.full
+content_entity_type_id: node
+content_entity_type_bundle: plans
+content_entity_type_view_mode: full
+component_tree:
+  '0:0cb56a0f-63a4-42b2-b55f-cfd4918e226f':
+    uuid: 0cb56a0f-63a4-42b2-b55f-cfd4918e226f
+    component_id: sdc.goodwell_theme.section
+    component_version: 2a95989336cfd33a
+    inputs:
+      background: white
+      custom_bg_color: '#f0f7f9'
+      full_bleed: true
+      rounded: none
+  '0:content:0:41b12d28-5662-4c18-8e0e-0559241406b6':
+    parent_uuid: 0cb56a0f-63a4-42b2-b55f-cfd4918e226f
+    slot: content
+    uuid: 41b12d28-5662-4c18-8e0e-0559241406b6
+    component_id: sdc.goodwell_theme.section-grid
+    component_version: 04145a81d752b635
+    inputs:
+      grid_layout: 2_column_66_33
+      is_small_container: false
+  '0:content:0:slot_1:0:b99dc954-b3e3-484f-a37a-7705dc775355':
+    parent_uuid: 41b12d28-5662-4c18-8e0e-0559241406b6
+    slot: slot_1
+    uuid: b99dc954-b3e3-484f-a37a-7705dc775355
+    component_id: sdc.goodwell_theme.section
+    component_version: 2a95989336cfd33a
+    inputs:
+      custom_bg_color: '#f0f7f9'
+      full_bleed: true
+      rounded: none
+      margin_top: -29
+  '0:content:0:slot_1:0:content:0:8408795e-dd73-4c2a-8b6f-10deb1753f31':
+    parent_uuid: b99dc954-b3e3-484f-a37a-7705dc775355
+    slot: content
+    uuid: 8408795e-dd73-4c2a-8b6f-10deb1753f31
+    component_id: sdc.goodwell_theme.image
+    component_version: 2fb53a9e75b5f139
+    inputs:
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:plans␝field_featured_image␞␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      shape: arch
+      size: '1:1'
+      radius: small
+      border_radius: 0
+      badge_position: bottom-right
+  '0:content:0:slot_1:1:e9c99b8c-3afb-4b6f-9a0f-b2fff037f5df':
+    parent_uuid: 41b12d28-5662-4c18-8e0e-0559241406b6
+    slot: slot_1
+    uuid: e9c99b8c-3afb-4b6f-9a0f-b2fff037f5df
+    component_id: sdc.goodwell_theme.body
+    component_version: 9aad40df6fa5a2de
+    inputs:
+      content:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:plans␝field_body␞␟processed'
+      max_width: full
+  '0:content:0:slot_2:0:1b676107-c316-4bf4-bcf1-8d2f4053d69d':
+    parent_uuid: 41b12d28-5662-4c18-8e0e-0559241406b6
+    slot: slot_2
+    uuid: 1b676107-c316-4bf4-bcf1-8d2f4053d69d
+    component_id: sdc.goodwell_theme.text
+    component_version: 5f96dc68441cee38
+    inputs:
+      tagline: INSURANCE
+      heading:
+        value: 'LIFE INSURANCE'
+        format: canvas_html_inline
+      heading_level: 3
+      body:
+        value: 'Life insurance is a financial safety net for your family, offering support during life’s unforeseen events. Our customizable plans ensure peace of mind and future security.'
+        format: canvas_html_inline
+  '0:content:0:slot_2:1:a0b4f157-521b-4941-b998-e248c2072c5e':
+    parent_uuid: 41b12d28-5662-4c18-8e0e-0559241406b6
+    slot: slot_2
+    uuid: a0b4f157-521b-4941-b998-e248c2072c5e
+    component_id: sdc.goodwell_theme.premium-calculator
+    component_version: ca83b44a8803060a
+    inputs:
+      heading: 'Check My Premium'
+      cta_label: 'Get Full Quote'
+      cta_url: /get-a-quote
+  '1:044e6b52-7d43-4ba3-8bec-208fb7d8e904':
+    uuid: 044e6b52-7d43-4ba3-8bec-208fb7d8e904
+    component_id: sdc.goodwell_theme.section
+    component_version: 2a95989336cfd33a
+    inputs:
+      background: white
+      custom_bg_color: '#f0f7f9'
+      full_bleed: true
+      rounded: none
+      margin_top: -8
+  '1:content:0:76653758-d5f9-451e-997b-ea801c8eed7d':
+    parent_uuid: 044e6b52-7d43-4ba3-8bec-208fb7d8e904
+    slot: content
+    uuid: 76653758-d5f9-451e-997b-ea801c8eed7d
+    component_id: sdc.goodwell_theme.testimonial-slider
+    component_version: 178fbec862db2230
+    inputs:
+      quote_1: 'Choosing Goodwell was the best decision for my family. The process was simple, and their support was outstanding during a tough time.'
+      name_1: 'Emily R.'
+      role_1: 'Satisfied Client'
+      avatar_1:
+        target_id: '10'
+      quote_2: "I wasn't sure what to expect, but Goodwell exceeded every expectation. The paperwork was handled quickly, and someone was always available to answer my questions."
+      name_2: 'Kate R'
+      role_2: 'Satisfied Client'
+      avatar_2:
+        target_id: '2'
+      quote_3: 'Goodwell took an overwhelming situation and made it manageable. Their team was compassionate, patient, and incredibly thorough throughout the entire process.'
+      name_3: 'Sandra K.'
+      role_3: 'Satisfied Client'
+      avatar_3:
+        target_id: '8'
+      autoplay: false
+  '2:content:0:7c3630fa-066f-430b-a417-0f6007800886':
+    parent_uuid: fa0d3c3f-6a54-4389-bb08-0170edea7b9c
+    slot: content
+    uuid: 7c3630fa-066f-430b-a417-0f6007800886
+    component_id: sdc.goodwell_theme.section-grid
+    component_version: 04145a81d752b635
+    inputs:
+      grid_layout: 2_column_50_50
+      alignment: center
+      is_small_container: false
+      grid_gap: 4
+      grid_row_gap: 4
+      grid_column_gap: 4
+  '2:content:0:slot_1:0:2d2d847a-60c9-4f6e-9e60-8f8c4ac2a7e5':
+    parent_uuid: 7c3630fa-066f-430b-a417-0f6007800886
+    slot: slot_1
+    uuid: 2d2d847a-60c9-4f6e-9e60-8f8c4ac2a7e5
+    component_id: sdc.goodwell_theme.text
+    component_version: 5f96dc68441cee38
+    inputs:
+      heading:
+        value: 'Trusted by thousands, proven by numbers'
+        format: canvas_html_inline
+      heading_level: 3
+  '2:content:0:slot_2:0:f7e2a2c7-c38a-467e-a836-bd5e6290c19d':
+    parent_uuid: 7c3630fa-066f-430b-a417-0f6007800886
+    slot: slot_2
+    uuid: f7e2a2c7-c38a-467e-a836-bd5e6290c19d
+    component_id: sdc.goodwell_theme.section-grid
+    component_version: 04145a81d752b635
+    inputs:
+      grid_layout: 2_column_50_50
+      is_small_container: false
+      grid_row_gap: 3
+  '2:content:0:slot_2:0:slot_1:0:3ccdfade-bc71-416d-a593-7cb96adf1296':
+    parent_uuid: f7e2a2c7-c38a-467e-a836-bd5e6290c19d
+    slot: slot_1
+    uuid: 3ccdfade-bc71-416d-a593-7cb96adf1296
+    component_id: sdc.goodwell_theme.text
+    component_version: 5f96dc68441cee38
+    inputs:
+      heading:
+        value: 20000+
+        format: canvas_html_inline
+      heading_level: 3
+      body:
+        value: 'Policies Issued'
+        format: canvas_html_inline
+  '2:content:0:slot_2:0:slot_2:0:88707646-a215-467c-b484-6a3b5badc8de':
+    parent_uuid: f7e2a2c7-c38a-467e-a836-bd5e6290c19d
+    slot: slot_2
+    uuid: 88707646-a215-467c-b484-6a3b5badc8de
+    component_id: sdc.goodwell_theme.text
+    component_version: 5f96dc68441cee38
+    inputs:
+      heading:
+        value: 98%
+        format: canvas_html_inline
+      heading_level: 3
+      body:
+        value: 'Claim Approval Rate'
+        format: canvas_html_inline
+  '2:fa0d3c3f-6a54-4389-bb08-0170edea7b9c':
+    uuid: fa0d3c3f-6a54-4389-bb08-0170edea7b9c
+    component_id: sdc.goodwell_theme.section
+    component_version: 2a95989336cfd33a
+    inputs:
+      background: white
+      custom_bg_color: '#f0f7f9'
+      padding: sm
+      full_bleed: true
+      rounded: none
+  '3:ba0b8bb5-389d-4be1-822a-9b7b6150cb95':
+    uuid: ba0b8bb5-389d-4be1-822a-9b7b6150cb95
+    component_id: sdc.goodwell_theme.section
+    component_version: 2a95989336cfd33a
+    inputs:
+      background: white
+      custom_bg_color: '#f0f7f9'
+      padding: sm
+      full_bleed: true
+      rounded: none
+  '3:content:0:a38aaf8c-b6af-4d16-9d47-6725f2f955a5':
+    parent_uuid: ba0b8bb5-389d-4be1-822a-9b7b6150cb95
+    slot: content
+    uuid: a38aaf8c-b6af-4d16-9d47-6725f2f955a5
+    component_id: sdc.goodwell_theme.brand-band
+    component_version: e6a7887b26e403ef
+    inputs:
+      brand_1:
+        target_uuid: 051f3800-935c-4e6d-8ef6-2a1ed06dc76d
+        target_id: '26'
+      brand_2:
+        target_uuid: 2077454c-bb58-477d-84d7-5c0f83c65f5d
+        target_id: '17'
+      brand_3:
+        target_uuid: 98b0ebd0-a065-45a7-a4a0-9e17697892eb
+        target_id: '5'
+      brand_4:
+        target_uuid: 4d22e9f3-56f3-455f-b6c6-bfd6d61c8b4f
+        target_id: '9'
+      brand_5:
+        target_uuid: 051f3800-935c-4e6d-8ef6-2a1ed06dc76d
+        target_id: '26'
+      gap: 6
+      marquee: false
+  '4:9302800e-248f-4152-bccf-1de546c7b0ea':
+    uuid: 9302800e-248f-4152-bccf-1de546c7b0ea
+    component_id: sdc.goodwell_theme.section
+    component_version: 2a95989336cfd33a
+    inputs:
+      custom_bg_color: '#f0f7f9'
+      padding: sm
+      full_bleed: true
+      rounded: none
+  '4:content:0:670ab784-507b-451d-8187-0b6c2543ae2d':
+    parent_uuid: 9302800e-248f-4152-bccf-1de546c7b0ea
+    slot: content
+    uuid: 670ab784-507b-451d-8187-0b6c2543ae2d
+    component_id: sdc.goodwell_theme.text
+    component_version: 5f96dc68441cee38
+    inputs:
+      tagline: 'OUR FAQS'
+      heading:
+        value: 'Frequently Asked Questions'
+        format: canvas_html_inline
+      heading_level: 2
+      alignment: center
+  '5:55ef2c9a-3afd-4fda-b33a-4ecc734fa563':
+    uuid: 55ef2c9a-3afd-4fda-b33a-4ecc734fa563
+    component_id: sdc.goodwell_theme.section
+    component_version: 2a95989336cfd33a
+    inputs:
+      custom_bg_color: '#f0f7f9'
+      padding: sm
+      full_bleed: false
+      rounded: none
+      margin_bottom: 20
+  '5:content:0:aaffbd34-f866-4f25-946f-a340fb04363c':
+    parent_uuid: 55ef2c9a-3afd-4fda-b33a-4ecc734fa563
+    slot: content
+    uuid: aaffbd34-f866-4f25-946f-a340fb04363c
+    component_id: sdc.goodwell_theme.accordion
+    component_version: 6afe8ae2d9111272
+    inputs:
+      question: 'What types of insurance do you offer?'
+      answer: 'Life insurance is a financial protection plan that provides your loved ones with a lump-sum payment in case of your untimely death.'
+      default_state: expanded
+  '5:content:1:27bc7518-63aa-48a2-a694-54ad6368b446':
+    parent_uuid: 55ef2c9a-3afd-4fda-b33a-4ecc734fa563
+    slot: content
+    uuid: 27bc7518-63aa-48a2-a694-54ad6368b446
+    component_id: sdc.goodwell_theme.accordion
+    component_version: 6afe8ae2d9111272
+    inputs:
+      question: 'Why do I need life insurance?'
+      answer: 'Life insurance helps provide financial security for your loved ones by covering living expenses, debts, and future financial needs if something unexpected happens to you'
+      default_state: collapsed
+  '5:content:2:1d3be3aa-00de-473a-abf0-787a017d7104':
+    parent_uuid: 55ef2c9a-3afd-4fda-b33a-4ecc734fa563
+    slot: content
+    uuid: 1d3be3aa-00de-473a-abf0-787a017d7104
+    component_id: sdc.goodwell_theme.accordion
+    component_version: 6afe8ae2d9111272
+    inputs:
+      question: 'How much life insurance coverage do I need?'
+      answer: 'The amount of coverage you need depends on your income, financial obligations, debts, and future family expenses. A good policy should provide enough support to help your loved ones maintain their lifestyle and achieve their long-term goals.'
+      default_state: collapsed
+  '5:content:3:92264d96-9f62-4a05-992a-77a8419ccef4':
+    parent_uuid: 55ef2c9a-3afd-4fda-b33a-4ecc734fa563
+    slot: content
+    uuid: 92264d96-9f62-4a05-992a-77a8419ccef4
+    component_id: sdc.goodwell_theme.accordion
+    component_version: 6afe8ae2d9111272
+    inputs:
+      question: 'How much does life insurance cost?'
+      answer: 'The cost of life insurance varies based on factors such as your age, health, coverage amount, and policy type. Many plans are affordable and can be customized to fit your budget and protection needs.'
+      default_state: collapsed
+  '5:content:4:716f62bc-a0bb-4a86-9dca-13709a3b99b6':
+    parent_uuid: 55ef2c9a-3afd-4fda-b33a-4ecc734fa563
+    slot: content
+    uuid: 716f62bc-a0bb-4a86-9dca-13709a3b99b6
+    component_id: sdc.goodwell_theme.accordion
+    component_version: 6afe8ae2d9111272
+    inputs:
+      question: 'When does the coverage start?'
+      answer: 'Coverage typically begins once your application is approved, the policy is issued, and the first premium payment is received. The exact start date will be outlined in your policy documents.'
+      default_state: collapsed
+  '6:ba2ee795-24dd-46f7-af5c-befcde6a69b5':
+    uuid: ba2ee795-24dd-46f7-af5c-befcde6a69b5
+    component_id: sdc.goodwell_theme.text
+    component_version: 5f96dc68441cee38
+    inputs:
+      tagline: 'OUR FAQS'
+      heading:
+        value: 'See what your insurance could cost'
+        format: canvas_html_inline
+      heading_level: 2
+      alignment: center
+  '7:94c32b22-118c-4bd6-adf1-67a10eec8fab':
+    uuid: 94c32b22-118c-4bd6-adf1-67a10eec8fab
+    component_id: sdc.goodwell_theme.section
+    component_version: 2a95989336cfd33a
+    inputs:
+      custom_bg_color: '#f0f7f9'
+      rounded: none
+  '7:content:0:18d234fe-2c8b-4a90-90c7-622b9a455b09':
+    parent_uuid: 94c32b22-118c-4bd6-adf1-67a10eec8fab
+    slot: content
+    uuid: 18d234fe-2c8b-4a90-90c7-622b9a455b09
+    component_id: sdc.goodwell_theme.section-grid
+    component_version: 04145a81d752b635
+    inputs:
+      grid_layout: 2_column_66_33
+      alignment: center
+      horizontal_alignment: stretch
+      is_small_container: false
+  '7:content:0:slot_1:0:8f133485-181d-44cf-a126-987d38a324ad':
+    parent_uuid: 18d234fe-2c8b-4a90-90c7-622b9a455b09
+    slot: slot_1
+    uuid: 8f133485-181d-44cf-a126-987d38a324ad
+    component_id: sdc.goodwell_theme.webform-embed
+    component_version: c7daf2a95cb4a0a8
+    inputs: {  }
+  '7:content:0:slot_1:0:form:0:ba6c87a1-37f3-430f-bfa1-fc5ac0afca03':
+    parent_uuid: 8f133485-181d-44cf-a126-987d38a324ad
+    slot: form
+    uuid: ba6c87a1-37f3-430f-bfa1-fc5ac0afca03
+    component_id: sdc.goodwell_theme.text
+    component_version: 5f96dc68441cee38
+    inputs:
+      heading:
+        value: 'LIFE INSURANCE'
+        format: canvas_html_inline
+      heading_level: 0
+      body:
+        value: 'Support for people who count on you.'
+        format: canvas_html_inline
+  '7:content:0:slot_1:0:form:1:48c73eee-e7c4-4752-b4d3-28c201f53248':
+    parent_uuid: 8f133485-181d-44cf-a126-987d38a324ad
+    slot: form
+    uuid: 48c73eee-e7c4-4752-b4d3-28c201f53248
+    component_id: block.webform_block
+    component_version: 75298500addde82f
+    inputs:
+      label: Webform
+      label_display: '0'
+      webform_id: insurance
+      default_data: ''
+      redirect: false
+      lazy: false
+  '7:content:0:slot_2:0:aedd96e7-20a5-4ec4-befd-b04de1c4788a':
+    parent_uuid: 18d234fe-2c8b-4a90-90c7-622b9a455b09
+    slot: slot_2
+    uuid: aedd96e7-20a5-4ec4-befd-b04de1c4788a
+    component_id: sdc.goodwell_theme.price-card
+    component_version: 58a2a2061bdc7944
+    inputs:
+      price_label: 'Starting Price'
+      price: $147.00
+      badge_text: '10% off first year'
+      cta_label: 'Start your plan'
+      cta_url:
+        uri: 'internal:/get-a-quote'
+        options: {  }
+      secondary_label: 'Talk to sales'
+      secondary_url:
+        uri: 'internal:/contact'
+        options: {  }
+      background: dark
+exposed_slots: {  }

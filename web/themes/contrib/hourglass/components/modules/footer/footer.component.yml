@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Footer
+group: Layout
+status: stable
+description: "Site footer with navigation, social icons, and legal links."
+props:
+  type: object
+  properties:
+    twitter_url:
+      type: string
+      title: "X (Twitter) URL"
+      default: "#"
+    linkedin_url:
+      type: string
+      title: "LinkedIn URL"
+      default: "#"
+    youtube_url:
+      type: string
+      title: "YouTube URL"
+      default: "#"
+slots:
+  nav_links:
+    title: "Navigation Links"
+    description: "Footer navigation menu block."
+  legal_links:
+    title: "Legal Links"
+    description: "Footer legal menu block."

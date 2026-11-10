@@ -1,0 +1,11 @@
+.dst-logo {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dst-logo__tagline {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}

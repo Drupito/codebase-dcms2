@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build": "rm -rf dist && node build.js"
+  },
+  "dependencies": {
+    "@fontsource/geist-sans": "^5.2.5"
+  },
+  "devDependencies": {
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "esbuild": "^0.27.3",
+    "splide": "^0.0.1-security"
+  }
+}

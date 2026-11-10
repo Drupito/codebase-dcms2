@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 8694ab60-2c00-46aa-8526-285f9998a9ff
+  bundle: image
+  default_langcode: en
+  depends:
+    3d843efb-efe8-4bdd-8db4-3df8171739e7: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: nick-hillier-aQcE3gDSSTY-unsplash.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Photograph of a spiral staircase from below showing the timber underside.'
+      title: ''
+      width: 1920
+      height: 1280
+      entity: 3d843efb-efe8-4bdd-8db4-3df8171739e7

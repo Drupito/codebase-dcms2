@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.team
+    - field.field.node.team.field_body
+    - field.field.node.team.field_facebook_link
+    - field.field.node.team.field_featured_image
+    - field.field.node.team.field_linkedin_link
+    - field.field.node.team.field_sub_heading
+    - field.field.node.team.field_twitter_link
+    - node.type.team
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.team.team
+targetEntityType: node
+bundle: team
+mode: team
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: hero
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sub_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_facebook_link: true
+  field_linkedin_link: true
+  field_twitter_link: true

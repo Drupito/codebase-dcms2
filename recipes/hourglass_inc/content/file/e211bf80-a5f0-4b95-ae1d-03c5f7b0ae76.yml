@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: e211bf80-a5f0-4b95-ae1d-03c5f7b0ae76
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: final_KQFQRuX7.mp4
+  uri:
+    -
+      value: 'public://2026-05/final_KQFQRuX7.mp4'
+  filemime:
+    -
+      value: video/mp4
+  filesize:
+    -
+      value: 5575466
+  status:
+    -
+      value: true

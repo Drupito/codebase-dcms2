@@ -1,0 +1,37 @@
+{% set variant  = variant ?: 'primary' %}
+{% set size     = size ?: 'md' %}
+{% set shape    = rounded ?: 'pill' %}
+{% set is_full  = full_width ?: false %}
+{% set is_disabled = disabled ?: false %}
+{% set mt = spacing_top|default(0) * 0.25 %}
+{% set mb = spacing_bottom|default(0) * 0.25 %}
+{% set inline_style = 'margin-top:' ~ mt ~ 'rem;margin-bottom:' ~ mb ~ 'rem;' %}
+
+{% set classes = [
+  'dst-btn',
+  'dst-btn--' ~ variant,
+  'dst-btn--' ~ size,
+  'dst-btn--' ~ shape,
+  is_full ? 'dst-btn--full' : '',
+  is_disabled ? 'dst-btn--disabled' : '',
+] | join(' ') | trim %}
+
+{% if href and not is_disabled %}
+  <a
+    href="{{ href }}"
+    class="{{ classes }}"
+    style="{{ inline_style }}"
+    {% if is_disabled %}aria-disabled="true"{% endif %}
+  >
+    {{- label -}}
+  </a>
+{% else %}
+  <button
+    class="{{ classes }}"
+    style="{{ inline_style }}"
+    {% if is_disabled %}disabled aria-disabled="true"{% endif %}
+    {% if href %}type="button"{% endif %}
+  >
+    {{- label -}}
+  </button>
+{% endif %}

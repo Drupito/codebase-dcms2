@@ -1,0 +1,49 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Card Article
+group: Card
+status: stable
+description: "Blog / insights article card with image, date, title and a Read More button."
+props:
+  type: object
+  required:
+    - title
+  properties:
+    media:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Image
+      type: object
+    date:
+      type: string
+      title: Date
+      format: date
+      # @todo Restore an example once https://www.drupal.org/project/canvas/issues/3530808
+      #   is fixed; an example for a `format: date` prop currently causes a config
+      #   schema validation error.
+      examples: []
+    title:
+      type: string
+      title: Title
+      examples:
+        - "5 Essential Tips for Choosing the Right Life Insurance Plan"
+    button_label:
+      type: string
+      title: Button label
+      default: "Read More"
+      examples:
+        - "Read More"
+    button_url:
+      type: string
+      title: Button URL
+      format: uri-reference
+      examples:
+        - "/resources/tips-for-choosing-life-insurance"
+    button_style:
+      type: string
+      title: Button style
+      enum:
+        - outline
+        - filled
+      meta:enum:
+        outline: Outline
+        filled: Filled (dark)
+      default: outline

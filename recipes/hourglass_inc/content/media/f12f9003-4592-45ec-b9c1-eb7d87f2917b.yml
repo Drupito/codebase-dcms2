@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: f12f9003-4592-45ec-b9c1-eb7d87f2917b
+  bundle: image
+  default_langcode: en
+  depends:
+    5dbedcf4-ae4c-4157-a375-9fb1dff1fae1: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: university-of-cambridge.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: university-of-cambridge
+      title: ''
+      width: 200
+      height: 234
+      entity: 5dbedcf4-ae4c-4157-a375-9fb1dff1fae1

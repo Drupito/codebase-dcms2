@@ -1,0 +1,156 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.forma_theme.button
+    - canvas.component.sdc.forma_theme.group
+    - canvas.component.sdc.forma_theme.heading
+    - canvas.component.sdc.forma_theme.hero-side-by-side
+    - canvas.component.sdc.forma_theme.text
+    - core.entity_view_mode.node.card
+    - field.field.media.image.field_media_image
+    - field.field.node.project.field_eyebrow
+    - field.field.node.project.field_featured_image
+    - field.field.node.project.field_location
+    - filter.format.canvas_html_block
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - node.type.project
+  module:
+    - file
+    - media
+    - node
+    - options
+    - text
+id: node.project.card
+content_entity_type_id: node
+content_entity_type_bundle: project
+content_entity_type_view_mode: card
+component_tree:
+  '0:477b3036-c1f7-4359-a185-ce5b72706d1e':
+    uuid: 477b3036-c1f7-4359-a185-ce5b72706d1e
+    component_id: sdc.forma_theme.hero-side-by-side
+    component_version: 0853adcbd2d32f83
+    inputs:
+      justify_content: center
+      image_size: '1:1'
+      image_position: left
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_featured_image␞␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+  '0:hero_slot:0:5c10406a-e036-4d10-b409-37aa3ed99727':
+    parent_uuid: 477b3036-c1f7-4359-a185-ce5b72706d1e
+    slot: hero_slot
+    uuid: 5c10406a-e036-4d10-b409-37aa3ed99727
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: column
+      flex_gap: xl
+      items_align: start
+      flex_align: center
+  '0:hero_slot:0:group_slot:0:f0918471-30e7-4846-ad8b-388f05173bf8':
+    parent_uuid: 5c10406a-e036-4d10-b409-37aa3ed99727
+    slot: group_slot
+    uuid: f0918471-30e7-4846-ad8b-388f05173bf8
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: row
+      flex_gap: sm
+      items_align: start
+      flex_align: start
+  '0:hero_slot:0:group_slot:0:group_slot:0:0b3575ea-7255-4e04-b576-24fa5179ef80':
+    parent_uuid: f0918471-30e7-4846-ad8b-388f05173bf8
+    slot: group_slot
+    uuid: 0b3575ea-7255-4e04-b576-24fa5179ef80
+    component_id: sdc.forma_theme.text
+    component_version: 8a33edeeb2e4a925
+    inputs:
+      text:
+        value: '<p><strong>Location:</strong></p>'
+        format: canvas_html_block
+      text_size: text-sm
+      text_color: default
+  '0:hero_slot:0:group_slot:0:group_slot:1:622a0e2d-02bb-42d7-b4ea-5c644939cba8':
+    parent_uuid: f0918471-30e7-4846-ad8b-388f05173bf8
+    slot: group_slot
+    uuid: 622a0e2d-02bb-42d7-b4ea-5c644939cba8
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_location␞␟value'
+      text_size: heading-responsive-lg
+      text_color: default
+      align: left
+  '0:hero_slot:0:group_slot:1:72ae0d7c-4282-4706-9d6a-dce2c22e0802':
+    parent_uuid: 5c10406a-e036-4d10-b409-37aa3ed99727
+    slot: group_slot
+    uuid: 72ae0d7c-4282-4706-9d6a-dce2c22e0802
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: column
+      flex_gap: md
+      items_align: start
+      flex_align: start
+  '0:hero_slot:0:group_slot:1:group_slot:0:ba743d32-df75-4fd0-9bbb-84239df7de3b':
+    parent_uuid: 72ae0d7c-4282-4706-9d6a-dce2c22e0802
+    slot: group_slot
+    uuid: ba743d32-df75-4fd0-9bbb-84239df7de3b
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝field_eyebrow␞␟value'
+      text_size: heading-responsive-2xl
+      text_color: default
+      align: left
+  '0:hero_slot:0:group_slot:1:group_slot:1:7788b4d3-156f-4158-ab53-768321fa51aa':
+    parent_uuid: 72ae0d7c-4282-4706-9d6a-dce2c22e0802
+    slot: group_slot
+    uuid: 7788b4d3-156f-4158-ab53-768321fa51aa
+    component_id: sdc.forma_theme.heading
+    component_version: 07895aa66682e9bd
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:project␝title␞␟value'
+      level: 2
+      text_size: heading-responsive-6xl
+      text_color: default
+      align: left
+      url:
+        sourceType: host-entity-url
+        absolute: false
+  '0:hero_slot:0:group_slot:2:435966e5-474b-490e-83da-277025efb1da':
+    parent_uuid: 5c10406a-e036-4d10-b409-37aa3ed99727
+    slot: group_slot
+    uuid: 435966e5-474b-490e-83da-277025efb1da
+    component_id: sdc.forma_theme.group
+    component_version: 4d9b1f674014176c
+    inputs:
+      flex_direction: row
+      flex_gap: sm
+      items_align: start
+      flex_align: start
+  '0:hero_slot:0:group_slot:2:group_slot:0:37f22e70-9b9e-44ec-9b8a-4403842658dd':
+    parent_uuid: 435966e5-474b-490e-83da-277025efb1da
+    slot: group_slot
+    uuid: 37f22e70-9b9e-44ec-9b8a-4403842658dd
+    component_id: sdc.forma_theme.button
+    component_version: f68fb081bb669bbb
+    inputs:
+      variant: primary
+      label: 'Project details'
+      href:
+        sourceType: host-entity-url
+        absolute: false
+      icon: arrow-right
+      mobile_width: false
+      icon_first: false
+      disabled: false
+exposed_slots: {  }

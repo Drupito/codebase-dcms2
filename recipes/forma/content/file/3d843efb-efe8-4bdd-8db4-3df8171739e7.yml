@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 3d843efb-efe8-4bdd-8db4-3df8171739e7
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: nick-hillier-aQcE3gDSSTY-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-06/nick-hillier-aQcE3gDSSTY-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 278373
+  status:
+    -
+      value: true

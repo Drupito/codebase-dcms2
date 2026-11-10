@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * FAQ Item — single accordion entry used inside the FAQ Section module.
+ *
+ * Props: question, answer, extra_classes.
+ * Slots: image (optional inline image shown when open).
+ *
+ * JS toggles .is-open on this element via [data-faq-item].
+ */
+#}
+{{ attach_library('hourglass/faq-item') }}
+
+<div class="c-faq-item {{ extra_classes|default('') }}" data-faq-item>
+
+  <button
+    class="c-faq-item__trigger"
+    data-faq-trigger
+    aria-expanded="false"
+    type="button"
+  >
+    <span class="c-faq-item__question">{{ question }}</span>
+    <span class="c-faq-item__icon" aria-hidden="true"></span>
+  </button>
+
+  <div class="c-faq-item__body" data-faq-body aria-hidden="true">
+    <div class="c-faq-item__body-inner">
+      {% if answer %}
+        <div class="c-faq-item__answer">{{ answer|raw }}</div>
+      {% endif %}
+      {% if image %}
+        <div class="c-faq-item__image">{{ image }}</div>
+      {% endif %}
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - goodwell_theme
+label: 'Webform Embed'
+id: sdc.goodwell_theme.webform-embed
+source: sdc
+source_local_id: 'goodwell_theme:webform-embed'
+provider: goodwell_theme
+active_version: c7daf2a95cb4a0a8
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        form:
+          title: Form
+          description: 'Drop the Webform block here.'
+  34a24ea69770c59e:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        form:
+          title: Form
+          description: 'Drop the Webform block here (search for your form name in the block picker).'
+        sidebar:
+          title: Sidebar
+          description: 'Optional — drop a contact info block here to show a two-column layout.'
+  52600d002af7ad1c:
+    settings:
+      prop_field_definitions:
+        webform_id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: get_a_quote
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        submit_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Get a Quote'
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        sidebar:
+          title: Sidebar
+          description: 'Optional panel shown to the right of the form (e.g. contact info block).'

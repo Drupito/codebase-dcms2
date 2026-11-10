@@ -1,0 +1,61 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Card Plan
+group: Card
+status: stable
+description: "Insurance plan card with arched image, title, description and CTA button."
+props:
+  type: object
+  required:
+    - title
+  properties:
+    media:
+      $ref: "json-schema-definitions://canvas.module/image"
+      title: Image
+      type: object
+    title:
+      type: string
+      title: Title
+      examples:
+        - "Term Life"
+    title_accent:
+      type: boolean
+      title: Accent title colour
+      description: "When enabled, renders the title in the primary accent colour (e.g. for a featured plan)."
+      default: false
+    description:
+      type: string
+      title: Description
+      description: "Short summary text. Maps to the Drupal body summary field."
+      default: ""
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - "<p>As Kaliber Insurance evolves, we're excited to offer cutting-edge solutions for ypur family</p>"
+    button_label:
+      type: string
+      title: Button label
+      examples:
+        - "View Details"
+    button_url:
+      type: string
+      title: Button URL
+      format: uri-reference
+      examples:
+        - "/plans/term-life"
+    button_style:
+      type: string
+      title: Button style
+      enum:
+        - outline
+        - filled
+      meta:enum:
+        outline: Outline
+        filled: Filled (dark)
+      default: outline
+      examples:
+        - outline
+    featured:
+      type: boolean
+      title: Featured
+      description: "Elevates the card with a shadow and highlights it."
+      default: false

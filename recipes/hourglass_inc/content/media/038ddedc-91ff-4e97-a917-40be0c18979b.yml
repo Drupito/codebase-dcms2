@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 038ddedc-91ff-4e97-a917-40be0c18979b
+  bundle: image
+  default_langcode: en
+  depends:
+    26c0ec40-5657-48b5-bdbe-2ca26173803e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: e477765f2b8a8417d8a918e82c03847b9ef9ba0b.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'US Office'
+      title: ''
+      width: 772
+      height: 515
+      entity: 26c0ec40-5657-48b5-bdbe-2ca26173803e

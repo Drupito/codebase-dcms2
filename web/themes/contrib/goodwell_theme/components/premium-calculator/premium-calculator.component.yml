@@ -1,0 +1,27 @@
+$schema: "https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json"
+name: Premium Calculator
+group: Section
+status: stable
+description: "Interactive premium calculator card with live estimate. Drop into the Hero card slot."
+props:
+  type: object
+  properties:
+
+    heading:
+      type: string
+      title: Card heading
+      examples:
+        - "Check My Premium"
+
+    cta_label:
+      type: string
+      title: Button label
+      examples:
+        - "Get Full Quote"
+
+    cta_url:
+      type: string
+      title: Button URL
+      description: "Page or webform the button links to."
+      examples:
+        - "/get-a-quote"

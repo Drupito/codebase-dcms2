@@ -1,0 +1,54 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: cc2e11fa-0a61-486f-8a77-9db5e2544b3c
+  bundle: team
+  default_langcode: en
+  depends:
+    bab17bf5-ef96-4649-8731-48d8bd6f9dfd: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Mark Ellison'
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /mark-ellison
+      langcode: en
+  field_body:
+    -
+      value: '<p>Designs clear, fair insurance plans that fit real needs.</p>'
+      format: content_format
+      summary: 'Designs clear, fair insurance plans that fit real needs.'
+  field_facebook_link:
+    -
+      value: 'https://m.facebook.com/'
+  field_featured_image:
+    -
+      entity: bab17bf5-ef96-4649-8731-48d8bd6f9dfd
+  field_linkedin_link:
+    -
+      value: 'https://www.linkedin.com'
+  field_sub_heading:
+    -
+      value: 'Head of Product & Underwriting'
+  field_twitter_link:
+    -
+      value: 'https://x.com/'

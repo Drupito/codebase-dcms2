@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 86cdec79-cbc5-445d-beec-1b8beae9840f
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: blog-devops.jpg
+  uri:
+    -
+      value: 'public://blog-images/blog-devops.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 142898
+  status:
+    -
+      value: true

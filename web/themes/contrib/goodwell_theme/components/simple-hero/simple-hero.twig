@@ -1,0 +1,18 @@
+{% set bg_src = image.src | default('') %}
+
+<section
+  class="dst-simple-hero"
+  {% if bg_src %}style="--simple-hero-bg: url('{{ bg_src }}')"{% endif %}
+>
+  <div class="dst-simple-hero__inner custom-container">
+
+    {% if heading %}
+      <h1 class="dst-simple-hero__heading">{{ heading }}</h1>
+    {% endif %}
+
+    {% if subheading %}
+      <p class="dst-simple-hero__subheading">{{ subheading }}</p>
+    {% endif %}
+
+  </div>
+</section>

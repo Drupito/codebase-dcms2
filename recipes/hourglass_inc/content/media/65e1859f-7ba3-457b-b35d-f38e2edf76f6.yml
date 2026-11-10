@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 65e1859f-7ba3-457b-b35d-f38e2edf76f6
+  bundle: image
+  default_langcode: en
+  depends:
+    966480ce-3cce-4690-9c2b-65db1b2d7362: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 96a3f42e469585405043082fe1b87579013985f9.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: Integration
+      title: ''
+      width: 100
+      height: 100
+      entity: 966480ce-3cce-4690-9c2b-65db1b2d7362

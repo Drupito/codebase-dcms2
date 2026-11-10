@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 87a397df-ad28-49ed-97f0-48c3722b2aef
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    4e4b246d-3c9b-4f13-a01b-b258daff1782: file
+default:
+  entity_id:
+    -
+      uuid: 4e4b246d-3c9b-4f13-a01b-b258daff1782
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/woman_bun.png'
+  x:
+    -
+      value: 512
+  'y':
+    -
+      value: 508
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,48 @@
+{# Normalize footer_classes - handle both array and string formats #}
+{% set additional_classes = footer_classes|default('') %}
+{% if additional_classes is iterable %}
+  {% set additional_classes = additional_classes|join(' ') %}
+{% endif %}
+
+{% set footer_variants =
+  html_cva(
+    base: [
+      'px-4 pb-4 md:mb-8 md:p-8',
+      'flex flex-col gap-4 rounded-2xl bg-primary md:gap-10',
+      'md:grid md:grid-cols-[.5fr_3.5fr_1.5fr]',
+      '[&_.cq-full]:mx-0 [&_.cq-full]:w-full [&_h2]:font-medium [&_li]:text-lg'
+    ]
+  )
+%}
+
+{% set footer_col_variants = html_cva(base: ['flex flex-col justify-center gap-4 [&>div]:flex [&>div]:flex-col [&>div]:justify-items-center']) %}
+
+{% set footer_first_col_variants = html_cva(base: ['[&_.branding]:h-5 [&_img]:w-auto']) %}
+
+<section class="container-padding container">
+  <div class="{{ footer_variants.apply({}, additional_classes) }}">
+    {% if block('footer_first') is defined %}
+      <div class="{{ footer_col_variants.apply({}, footer_first_col_variants.apply({})) }}">
+        {% block footer_first %}
+          {# Slot for components. #}
+        {% endblock %}
+      </div>
+    {% endif %}
+
+    {% if block('footer_second') is defined %}
+      <div class="{{ footer_col_variants.apply({}) }}">
+        {% block footer_second %}
+          {# Slot for components. #}
+        {% endblock %}
+      </div>
+    {% endif %}
+
+    {% if block('footer_third') is defined %}
+      <div class="{{ footer_col_variants.apply({}) }}">
+        {% block footer_third %}
+          {# Slot for components. #}
+        {% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</section>

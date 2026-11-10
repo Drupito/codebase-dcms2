@@ -1,0 +1,36 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Our Story
+group: Organisms
+status: stable
+description: 'Two-column editorial section with staggered photo cards on the left and rich-text copy on the right. Cream (#fff4e6) background with top rounded corners.'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Section Title'
+      contentMediaType: text/html
+      examples:
+        - 'Our Story'
+    body_primary:
+      type: string
+      title: 'Primary Body Text'
+      contentMediaType: text/html
+      examples:
+        - 'The Journey: Founded in 2016 by a group of systems architects...'
+    body_highlight:
+      type: string
+      title: 'Highlight Body Text (orange)'
+      contentMediaType: text/html
+      examples:
+        - 'The Name: We chose Hourglass because time is the only resource you cannot buy.'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  card_1:
+    title: 'Photo Card 1 (left, normal position)'
+    description: 'Place a Photo Card atom here.'
+  card_2:
+    title: 'Photo Card 2 (right, offset 100px down)'
+    description: 'Place a Photo Card atom here.'

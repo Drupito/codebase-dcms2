@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Blog Listing
+group: Organisms
+status: stable
+description: 'Dynamic blog listing — embeds the Blog Listing view (featured post + 3-column grid + pager). Place via Canvas.'
+props:
+  type: object
+  properties:
+    section_title:
+      type: string
+      title: 'Intro Text'
+      description: 'Subtitle shown above the listing.'
+      examples:
+        - 'Read the latest articles on research and technology'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

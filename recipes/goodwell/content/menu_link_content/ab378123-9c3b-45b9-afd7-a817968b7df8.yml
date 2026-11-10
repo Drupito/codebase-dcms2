@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: ab378123-9c3b-45b9-afd7-a817968b7df8
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    0b0ada01-cdd0-4c81-9fec-50487d4e05c7: canvas_page
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Make A Claim'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      title: ''
+      options: {  }
+      target_uuid: 0b0ada01-cdd0-4c81-9fec-50487d4e05c7
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

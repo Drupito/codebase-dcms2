@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 7253479d-6630-42a4-8ced-fb3f80ea15fa
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: charlesdeluvio-Lks7vei-eAg-unsplash.jpg
+  uri:
+    -
+      value: 'public://2026-05/charlesdeluvio-Lks7vei-eAg-unsplash.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 472121
+  status:
+    -
+      value: true

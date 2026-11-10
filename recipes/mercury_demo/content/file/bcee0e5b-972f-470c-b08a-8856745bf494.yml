@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: bcee0e5b-972f-470c-b08a-8856745bf494
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: section-component.png
+  uri:
+    -
+      value: 'public://2026-04/section-component.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 39449
+  status:
+    -
+      value: true

@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Template for the Services Grid module.
+ *
+ * Slots:
+ * - cards: Service Card atoms. Duplicate as needed — they auto-flow
+ *   into the 3-column grid.
+ */
+#}
+{{ attach_library('hourglass/services-grid') }}
+
+<div class="c-services-grid {{ extra_classes|default('') }}">
+  <div class="c-services-grid__cards">
+    {{ cards }}
+  </div>
+</div>

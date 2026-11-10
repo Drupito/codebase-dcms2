@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 29b2f415-39f8-4595-b7a4-fa55cf21cd06
+  bundle: image
+  default_langcode: en
+  depends:
+    ac0c2753-a6e9-4631-8e48-3fa2587e666f: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: insurance_policy.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: policy_doc.jpg
+      title: ''
+      width: 5000
+      height: 3337
+      entity: ac0c2753-a6e9-4631-8e48-3fa2587e666f

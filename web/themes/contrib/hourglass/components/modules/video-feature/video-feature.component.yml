@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Video Feature
+group: Organisms
+status: stable
+description: 'Video section — side (text left + video right) or stacked (header above + full-width video below).'
+props:
+  type: object
+  properties:
+    play_button_text:
+      type: string
+      title: 'Watch Video Text'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  heading:
+    title: 'Heading'
+    description: 'Place the Heading atom here.'
+  description:
+    title: 'Description'
+    description: 'Place the Text atom here.'
+  cta:
+    title: 'CTA Button'
+    description: 'Place the Button atom here — styled automatically as the orange gradient CTA.'
+  media:
+    title: 'Video Thumbnail'
+    description: 'Place the Media atom here for the background thumbnail.'

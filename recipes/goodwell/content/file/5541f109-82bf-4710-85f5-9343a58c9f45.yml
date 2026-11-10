@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 5541f109-82bf-4710-85f5-9343a58c9f45
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: life.png
+  uri:
+    -
+      value: 'public://2026-06/life.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 1762055
+  status:
+    -
+      value: true

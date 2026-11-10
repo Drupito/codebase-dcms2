@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Template for the Mission Vision section.
+ *
+ * Props:
+ * - extra_classes: Additional CSS classes.
+ *
+ * Slots:
+ * - items: Mission Vision Item atoms.
+ */
+#}
+{{ attach_library('hourglass/mission-vision') }}
+
+<section class="c-mission-vision {{ extra_classes|default('') }}" data-mission-vision="container">
+  <div class="c-mission-vision__items">
+    {{ items }}
+  </div>
+</section>

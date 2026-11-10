@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Locations Section
+group: Organisms
+status: stable
+description: 'H3 heading + three-column row of Location Card atoms. Shows office locations with photos, addresses, phone, and email.'
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      examples:
+        - 'Connect to One of Our Locations'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  cards:
+    title: 'Location Cards'
+    description: 'Place Location Card atoms here — one per office location.'

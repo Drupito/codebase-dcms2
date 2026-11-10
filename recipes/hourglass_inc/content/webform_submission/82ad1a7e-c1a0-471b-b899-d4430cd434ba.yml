@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: webform_submission
+  uuid: 82ad1a7e-c1a0-471b-b899-d4430cd434ba
+  bundle: contact_cta
+  default_langcode: en
+default:
+  serial:
+    -
+      value: 2
+  token:
+    -
+      value: t9hjd6gTcm91hge3GYPF9TesbYm2w0fst3vkdHZY-kU
+  uri:
+    -
+      value: /home-page
+  completed:
+    -
+      value: 1780066215
+  in_draft:
+    -
+      value: false
+  remote_addr:
+    -
+      value: 172.19.0.2
+  uid:
+    -
+      target_id: 1
+  entity_type:
+    -
+      value: canvas_page
+  entity_id:
+    -
+      value: '9'
+  locked:
+    -
+      value: false
+  sticky:
+    -
+      value: false

@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Install-time and runtime requirements for Canvas Translate.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_requirements().
+ *
+ * Canvas Translate and Canvas Multilingual provide competing translation
+ * workflows for Canvas content and cannot run side by side. Block installation
+ * (and warn at runtime) when canvas_multilingual is present.
+ */
+function canvas_translate_requirements(string $phase): array {
+  // Only relevant while installing this module or on the status report.
+  if ($phase !== 'install' && $phase !== 'runtime') {
+    return [];
+  }
+
+  if (!\Drupal::moduleHandler()->moduleExists('canvas_multilingual')) {
+    return [];
+  }
+
+  return [
+    'canvas_translate_multilingual_conflict' => [
+      'title' => t('Canvas Translate'),
+      'description' => t('Canvas Translate is not compatible with the Canvas Multilingual module. Uninstall canvas_multilingual before using Canvas Translate.'),
+      'severity' => REQUIREMENT_ERROR,
+    ],
+  ];
+}

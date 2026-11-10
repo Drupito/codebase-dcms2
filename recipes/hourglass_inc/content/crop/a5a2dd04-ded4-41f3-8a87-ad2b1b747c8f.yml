@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: a5a2dd04-ded4-41f3-8a87-ad2b1b747c8f
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    c92358f2-55cd-4eee-9bd3-5a7c62b5a7bc: file
+default:
+  entity_id:
+    -
+      uuid: c92358f2-55cd-4eee-9bd3-5a7c62b5a7bc
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://blog-images/sustainable-tech-data-center.jpg'
+  x:
+    -
+      value: 600
+  'y':
+    -
+      value: 400
+  revision_uid:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true

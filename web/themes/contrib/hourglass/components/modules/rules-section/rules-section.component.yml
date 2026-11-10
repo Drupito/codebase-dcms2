@@ -1,0 +1,29 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Rules Section
+group: Organisms
+status: stable
+description: 'Gray-background section with top-rounded corners, an H3 heading, an orange subtitle, and a rich-text body. Used for rules, policies, or informational overviews.'
+
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: 'Heading'
+      examples:
+        - 'Rules and Information'
+    subtitle:
+      type: string
+      title: 'Subtitle (orange)'
+      examples:
+        - 'What is the Lead Program and Who Can Participate?'
+    description:
+      type: string
+      title: 'Description'
+      contentMediaType: text/html
+      examples:
+        - 'The Lead Program is designed for MMI partners to provide new leads from companies or institutions within their territory.'
+    extra_classes:
+      type: string
+      title: 'Extra Classes'

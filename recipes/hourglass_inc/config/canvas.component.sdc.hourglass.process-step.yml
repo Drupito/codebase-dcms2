@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hourglass
+active_version: 8a63b8c0f369b811
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        step_number:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '01'
+          expression: ℹ︎string␟value
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Data Encryption'
+          expression: ℹ︎string␟value
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'End-to-end 256-bit AES at rest and in transit'
+          expression: ℹ︎string␟value
+        extra_classes:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        icon:
+          title: 'Step Icon'
+          description: 'Place a Media / Image atom here (60×60 px icon).'
+label: 'Process Step'
+id: sdc.hourglass.process-step
+provider: hourglass
+source: sdc
+source_local_id: 'hourglass:process-step'

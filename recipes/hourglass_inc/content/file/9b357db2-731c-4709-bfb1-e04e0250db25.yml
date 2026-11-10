@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 9b357db2-731c-4709-bfb1-e04e0250db25
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: contact_email.png
+  uri:
+    -
+      value: 'public://2026-05/contact_email.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 118240
+  status:
+    -
+      value: true

@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 31866c6b-8660-465d-8b40-0821739193b3
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    9c0cb443-0edf-4c7e-9cd9-ad0d3856f8ba: file
+default:
+  entity_id:
+    -
+      uuid: 9c0cb443-0edf-4c7e-9cd9-ad0d3856f8ba
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/couple_nature.png'
+  x:
+    -
+      value: 374
+  'y':
+    -
+      value: 264
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

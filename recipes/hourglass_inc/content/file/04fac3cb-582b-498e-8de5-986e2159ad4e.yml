@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 04fac3cb-582b-498e-8de5-986e2159ad4e
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: gradient2-1656698186891.webp
+  uri:
+    -
+      value: 'public://2026-05/gradient2-1656698186891.webp'
+  filemime:
+    -
+      value: image/webp
+  filesize:
+    -
+      value: 37702
+  status:
+    -
+      value: true

@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Section ────────────────────────────────────────────────────────────── */
+
+.c-logo-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 0;
+  /* Break out of any layout container to go edge-to-edge */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+/* ── Optional header ────────────────────────────────────────────────────── */
+
+.c-logo-carousel__header {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 120px;
+  width: 100%;
+  text-align: center;
+}
+
+.c-logo-carousel__title {
+  font-family: var(
+    --Heading-H2-fontFamily,
+    "Zalando Sans Expanded",
+    sans-serif
+  );
+  font-size: var(--Heading-H2-fontSize, 48px);
+  font-weight: var(--Weights-Regular, 400);
+  line-height: var(--Heading-H2-lineHeight, 58px);
+  letter-spacing: var(--Heading-H2-letterSpacing, -0.4px);
+  color: var(--gray-black, #000);
+  margin: 0;
+}
+
+/* ── Source slot (Canvas editor) ─────────────────────────────────────────── */
+
+.c-logo-carousel__source {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 80px;
+  padding: 0 40px;
+  min-height: 120px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* ── Splide viewport ─────────────────────────────────────────────────────── */
+
+.c-logo-carousel__viewport {
+  display: none;
+  width: 100%;
+}
+
+.c-logo-carousel__viewport[aria-hidden="false"],
+.c-logo-carousel__viewport:not([aria-hidden]) {
+  display: block;
+}
+
+/* Reset Splide defaults that conflict */
+.c-logo-carousel__splide .splide__track {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.c-logo-carousel__list {
+  display: flex;
+  align-items: center;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Splide overrides */
+.c-logo-carousel .splide__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .c-logo-carousel__header {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .c-logo-carousel {
+    padding: 56px 0;
+    gap: 36px;
+  }
+
+  .c-logo-carousel__header {
+    padding: 0 60px;
+  }
+
+  .c-logo-carousel__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-logo-carousel {
+    padding: 40px 0;
+    gap: 28px;
+  }
+
+  .c-logo-carousel__header {
+    padding: 0 24px;
+  }
+
+  .c-logo-carousel__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}

@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: crop
+  uuid: 73b11f80-f558-46c5-9bf0-f1eef7cc64ce
+  bundle: focal_point
+  default_langcode: en
+  depends:
+    5541f109-82bf-4710-85f5-9343a58c9f45: file
+default:
+  entity_id:
+    -
+      uuid: 5541f109-82bf-4710-85f5-9343a58c9f45
+  entity_type:
+    -
+      value: file
+  uri:
+    -
+      value: 'public://2026-06/life.png'
+  x:
+    -
+      value: 600
+  'y':
+    -
+      value: 600
+  revision_uid:
+    -
+      target_id: 1
+  revision_translation_affected:
+    -
+      value: true

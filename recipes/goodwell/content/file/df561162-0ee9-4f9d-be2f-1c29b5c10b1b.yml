@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: df561162-0ee9-4f9d-be2f-1c29b5c10b1b
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: man_shirt.png
+  uri:
+    -
+      value: 'public://2026-06/man_shirt.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 226557
+  status:
+    -
+      value: true

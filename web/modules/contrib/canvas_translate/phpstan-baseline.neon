@@ -1,0 +1,12 @@
+# Both go away with #3620535, which stops naming the deprecated PageRegion
+# class. Delete this file once that is in.
+parameters:
+	ignoreErrors:
+		-
+			identifier: classConstant.deprecatedClass
+			count: 1
+			path: modules/canvas_translate_ai/src/Controller/AiTranslateController.php
+		-
+			identifier: classConstant.deprecatedClass
+			count: 1
+			path: src/Controller/ApiTranslateController.php

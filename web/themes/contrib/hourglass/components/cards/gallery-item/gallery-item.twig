@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Gallery Item — thumbnail entry in the Image Gallery sidebar.
+ *
+ * Props: caption, thumb_label, extra_classes.
+ * Slots: thumbnail (single image — used for both sidebar and main view).
+ *
+ * JS reads [data-gallery-item-thumb] (the VISIBLE thumbnail) and clones
+ * its content into the main view slides, so the image is already loaded.
+ */
+#}
+{{ attach_library('hourglass/gallery-item') }}
+
+<div class="c-gallery-item {{ extra_classes|default('') }}" data-gallery-item role="button" tabindex="0">
+
+  {# Visible thumbnail + active bar #}
+  <div class="c-gallery-item__thumb-wrap">
+    <div class="c-gallery-item__bar" aria-hidden="true"></div>
+    <div class="c-gallery-item__thumb-img" data-gallery-item-thumb>{{ thumbnail }}</div>
+  </div>
+
+  {% set _label = thumb_label|default(caption)|default('') %}
+  {% if _label %}
+    <p class="c-gallery-item__label">{{ _label }}</p>
+  {% endif %}
+
+  {# Hidden caption — JS reads this to populate the caption below the main view #}
+  {% if caption %}
+    <div class="c-gallery-item__caption" data-gallery-item-caption>{{ caption }}</div>
+  {% endif %}
+
+</div>

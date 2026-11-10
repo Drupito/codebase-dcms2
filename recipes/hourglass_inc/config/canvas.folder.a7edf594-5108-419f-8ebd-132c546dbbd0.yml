@@ -1,0 +1,18 @@
+uuid: a7edf594-5108-419f-8ebd-132c546dbbd0
+langcode: en
+status: true
+dependencies: {  }
+name: Cards
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.hourglass.anchor-nav-link
+  - sdc.hourglass.benefit-card
+  - sdc.hourglass.blog-card
+  - sdc.hourglass.expertise-card
+  - sdc.hourglass.faq-item
+  - sdc.hourglass.gallery-item
+  - sdc.hourglass.process-step
+  - sdc.hourglass.service-card
+  - sdc.hourglass.team-member-card
+  - sdc.hourglass.text-list-item

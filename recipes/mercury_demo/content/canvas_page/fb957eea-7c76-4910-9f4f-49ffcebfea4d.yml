@@ -1,0 +1,110 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: fb957eea-7c76-4910-9f4f-49ffcebfea4d
+  default_langcode: en
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  owner:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Component library'
+  components:
+    -
+      uuid: 2231c7db-078a-40cd-b0cd-7f04c5119f4f
+      component_id: sdc.mercury.section
+      inputs:
+        width: 80%
+        columns: 25-25-25-25
+        mobile_columns: '1'
+        margin_block_start: '96'
+        margin_block_end: '48'
+        padding_block_start: '0'
+        padding_block_end: '0'
+        section_header: true
+        section_footer: true
+    -
+      parent_uuid: 2231c7db-078a-40cd-b0cd-7f04c5119f4f
+      slot: header_slot
+      uuid: ba73fa98-92ed-486e-87af-319e2f734e45
+      component_id: sdc.mercury.heading
+      inputs:
+        heading_text: 'Mercury components'
+        level: 2
+        text_size: heading-responsive-6xl
+        text_color: default
+        align: center
+    -
+      parent_uuid: 2231c7db-078a-40cd-b0cd-7f04c5119f4f
+      slot: main_slot
+      uuid: 63c48602-8bdd-4762-a629-254de5f274e2
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: puzzle-piece
+        icon_size: large
+        icon_align: center
+        text: 'Base components'
+        description:
+          value: '<p>This is placeholder text.</p>'
+          format: canvas_html_block
+        text_align: center
+    -
+      parent_uuid: 2231c7db-078a-40cd-b0cd-7f04c5119f4f
+      slot: main_slot
+      uuid: eb28b88a-949c-4fe7-9eb0-4a0a0910c7ba
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: cards
+        icon_size: large
+        icon_align: center
+        text: 'Card components'
+        description:
+          value: '<p>This is placeholder text.</p>'
+          format: canvas_html_block
+        text_align: center
+    -
+      parent_uuid: 2231c7db-078a-40cd-b0cd-7f04c5119f4f
+      slot: main_slot
+      uuid: b58a7e46-2323-4fb6-8534-ddcf98ac7876
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: panorama
+        icon_size: large
+        icon_align: center
+        text: 'Hero components'
+        description:
+          value: '<p>This is placeholder text.</p>'
+          format: canvas_html_block
+        text_align: center
+    -
+      parent_uuid: 2231c7db-078a-40cd-b0cd-7f04c5119f4f
+      slot: main_slot
+      uuid: 00d5adf2-a6cd-4771-8a6e-132df1db7145
+      component_id: sdc.mercury.card-icon
+      inputs:
+        border_radius: medium
+        icon: layout
+        icon_size: large
+        icon_align: center
+        text: 'Layout components'
+        description:
+          value: '<p>This is placeholder text.</p>'
+          format: canvas_html_block
+        text_align: center
+  path:
+    -
+      alias: /components
+      langcode: en
+  revision_translation_affected:
+    -
+      value: true

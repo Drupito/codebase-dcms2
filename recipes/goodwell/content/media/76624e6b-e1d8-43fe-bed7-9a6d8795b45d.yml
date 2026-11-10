@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 76624e6b-e1d8-43fe-bed7-9a6d8795b45d
+  bundle: image
+  default_langcode: en
+  depends:
+    7376ce94-6d96-43bc-9a8e-5c657730a9a8: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Woman in glasses'
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Woman in glasses'
+      title: ''
+      width: 1024
+      height: 959
+      entity: 7376ce94-6d96-43bc-9a8e-5c657730a9a8

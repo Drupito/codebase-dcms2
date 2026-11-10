@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 2f27db00-85d8-4edb-b202-e3d1eedc8d62
+  bundle: image
+  default_langcode: en
+  depends:
+    c70ce27d-439c-49da-8f61-9e3e8280d73f: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Frame-1261153004_1.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Black and white photo of a boxy, industrial-looking building.'
+      title: ''
+      width: 1880
+      height: 1253
+      entity: c70ce27d-439c-49da-8f61-9e3e8280d73f

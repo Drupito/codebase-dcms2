@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 6eb35e8b-1cf1-4582-9932-9a5baa82bc12
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 0
+  filename:
+    -
+      value: blog-ml.jpg
+  uri:
+    -
+      value: 'public://blog-images/blog-ml.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 179483
+  status:
+    -
+      value: true

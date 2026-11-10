@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 051f3800-935c-4e6d-8ef6-2a1ed06dc76d
+  bundle: image
+  default_langcode: en
+  depends:
+    327f360a-7ea2-489a-af5a-5617e07a22c5: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: crafgram_logo.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'Crafgram logo'
+      title: ''
+      width: 166
+      height: 32
+      entity: 327f360a-7ea2-489a-af5a-5617e07a22c5

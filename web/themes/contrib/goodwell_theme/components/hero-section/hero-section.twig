@@ -1,0 +1,89 @@
+{% set opacity = overlay_opacity | default(50) %}
+{% set bg_src  = background.src | default('') %}
+
+<section
+  class="dst-hero"
+  {% if bg_src %}style="--hero-bg: url('{{ bg_src }}'); --hero-overlay: {{ opacity / 100 }}"{% endif %}
+>
+  <div class="dst-hero__inner custom-container">
+
+    {# ── Left column ──────────────────────────────── #}
+    <div class="dst-hero__content">
+
+      {# Customer badge #}
+      {% if customer_count or rating_text %}
+        {% set avatars = [customer_avatar_1, customer_avatar_2, customer_avatar_3] %}
+        <div class="dst-hero__badge">
+          <div class="dst-hero__badge-avatars">
+            {% for avatar in avatars %}
+              {% if avatar and avatar.src %}
+                <img
+                  class="dst-hero__badge-avatar"
+                  src="{{ avatar.src }}"
+                  alt="{{ avatar.alt | default('Customer') }}"
+                  width="28"
+                  height="28"
+                  loading="eager"
+                >
+              {% else %}
+                <span class="dst-hero__badge-avatar dst-hero__badge-avatar--placeholder" aria-hidden="true"></span>
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% if customer_count %}
+            <span class="dst-hero__badge-count">{{ customer_count }}</span>
+          {% endif %}
+          {% if rating_text %}
+            <span class="dst-hero__badge-sep">|</span>
+            <span class="dst-hero__badge-rating">{{ rating_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {# Tagline #}
+      {% if tagline %}
+        <p class="dst-hero__tagline">{{ tagline }}</p>
+      {% endif %}
+
+      {# Heading #}
+      {% if heading %}
+        <h1 class="dst-hero__heading">{{ heading | raw }}</h1>
+      {% endif %}
+
+      {# Award badges #}
+      {% set has_awards = award_1_text or award_2_text or award_3_text %}
+      {% if has_awards %}
+        <div class="dst-hero__awards" aria-label="Industry awards">
+          {% if award_1_text %}
+            <div class="dst-hero__award">
+              <span class="dst-hero__award-label">{{ award_1_text }}</span>
+              {% if award_1_sub %}<span class="dst-hero__award-sub">{{ award_1_sub }}</span>{% endif %}
+              {% if award_1_brand %}<span class="dst-hero__award-brand">{{ award_1_brand }}</span>{% endif %}
+            </div>
+          {% endif %}
+          {% if award_2_text %}
+            <div class="dst-hero__award">
+              <span class="dst-hero__award-label">{{ award_2_text }}</span>
+              {% if award_2_sub %}<span class="dst-hero__award-sub">{{ award_2_sub }}</span>{% endif %}
+              {% if award_2_brand %}<span class="dst-hero__award-brand">{{ award_2_brand }}</span>{% endif %}
+            </div>
+          {% endif %}
+          {% if award_3_text %}
+            <div class="dst-hero__award">
+              <span class="dst-hero__award-label">{{ award_3_text }}</span>
+              {% if award_3_sub %}<span class="dst-hero__award-sub">{{ award_3_sub }}</span>{% endif %}
+              {% if award_3_brand %}<span class="dst-hero__award-brand">{{ award_3_brand }}</span>{% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+    </div>
+
+    {# ── Right column — card slot ─────────────────── #}
+    <div class="dst-hero__card-wrap">
+      {% block card %}{% endblock %}
+    </div>
+
+  </div>
+</section>

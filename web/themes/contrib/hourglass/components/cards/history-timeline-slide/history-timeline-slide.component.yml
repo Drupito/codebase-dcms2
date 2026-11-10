@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: History Timeline Slide
+group: Atoms
+status: stable
+description: 'One milestone card for the History Timeline. Set reversed: true for even-position slides (text on top, image on bottom).'
+props:
+  type: object
+  properties:
+    year:
+      type: string
+      title: Year
+      examples:
+        - '2018'
+    description:
+      type: string
+      title: Description
+      contentMediaType: text/html
+      examples:
+        - 'Company was founded with a vision to transform the industry.'
+    reversed:
+      type: boolean
+      title: 'Reversed layout (text top, image bottom)'
+      default: false
+    extra_classes:
+      type: string
+      title: 'Extra Classes'
+slots:
+  image:
+    title: Image
+    description: 'Place a Base Media atom here.'

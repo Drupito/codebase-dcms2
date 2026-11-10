@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ce84f45a-e7ac-4c83-a249-da8a28babb29
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: father_kid.png
+  uri:
+    -
+      value: 'public://2026-06/father_kid.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 949314
+  status:
+    -
+      value: true

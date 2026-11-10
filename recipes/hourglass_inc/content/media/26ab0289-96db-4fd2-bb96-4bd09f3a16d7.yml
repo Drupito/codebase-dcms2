@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 26ab0289-96db-4fd2-bb96-4bd09f3a16d7
+  bundle: image
+  default_langcode: en
+  depends:
+    602d4023-5005-4d46-85fc-c6f6ead85a80: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Sequence-01_1-2.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: Sequence
+      title: ''
+      width: 1500
+      height: 1500
+      entity: 602d4023-5005-4d46-85fc-c6f6ead85a80

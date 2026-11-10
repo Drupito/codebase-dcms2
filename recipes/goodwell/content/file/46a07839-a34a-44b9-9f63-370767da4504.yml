@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 46a07839-a34a-44b9-9f63-370767da4504
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: bulb_icon.png
+  uri:
+    -
+      value: 'public://2026-06/bulb_icon.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 814
+  status:
+    -
+      value: true
